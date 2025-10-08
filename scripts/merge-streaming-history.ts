@@ -193,6 +193,43 @@ class StreamingHistoryMerger {
   }
 
   /**
+   * Clean up old merged streaming history files, keeping only the 3 most recent ones
+   */
+  cleanupOldFiles(): void {
+    console.log('🧹 Cleaning up old merged streaming history files...');
+    
+    if (!fs.existsSync(this.outputDir)) {
+      return;
+    }
+
+    const files = fs.readdirSync(this.outputDir)
+      .filter(file => file.startsWith('merged-streaming-history-') && file.endsWith('.json'))
+      .map(file => ({
+        name: file,
+        path: path.join(this.outputDir, file),
+        timestamp: parseInt(file.match(/merged-streaming-history-(\d+)\.json/)?.[1] || '0')
+      }))
+      .sort((a, b) => b.timestamp - a.timestamp); // Sort by timestamp descending (newest first)
+
+    // Keep only the 3 most recent files
+    const filesToDelete = files.slice(3);
+    
+    if (filesToDelete.length > 0) {
+      console.log(`🗑️  Deleting ${filesToDelete.length} old files...`);
+      filesToDelete.forEach(file => {
+        try {
+          fs.unlinkSync(file.path);
+          console.log(`   ✅ Deleted ${file.name}`);
+        } catch (error) {
+          console.error(`   ❌ Failed to delete ${file.name}:`, error);
+        }
+      });
+    } else {
+      console.log('✅ No old files to clean up');
+    }
+  }
+
+  /**
    * Merge all streaming history files into a consolidated dataset
    */
   async mergeStreamingHistory(): Promise<void> {
@@ -251,6 +288,9 @@ class StreamingHistoryMerger {
     
     console.log(`💾 Saving consolidated data to ${outputFile}...`);
     fs.writeFileSync(outputFile, JSON.stringify(mergedData, null, 2));
+
+    // Clean up old files
+    this.cleanupOldFiles();
 
     // Summary
     console.log('\n📊 --- MERGE SUMMARY ---');
