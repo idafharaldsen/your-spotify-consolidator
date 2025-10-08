@@ -8,6 +8,10 @@ yarn-error.log*
 dist/
 build/
 
+# Next.js
+.next/
+out/
+
 # Environment variables
 .env
 .env.local
@@ -16,8 +20,13 @@ build/
 .env.production.local
 
 # Data files (generated JSON files)
+top-songs-*.json
 top-albums-*.json
+top-artists-*.json
+cleaned-top-songs-*.json
 cleaned-top-albums-*.json
+cleaned-top-artists-*.json
+recent-plays-*.json
 
 # IDE files
 .vscode/

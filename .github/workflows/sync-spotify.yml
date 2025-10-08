@@ -33,11 +33,17 @@ jobs:
       - name: Merge recent data with merged streaming history
         run: npm run merge-recent-data
         
+      - name: Convert merged history to top data format
+        run: npm run convert-history-to-top-data
+        
+      - name: Clean and consolidate top data
+        run: npm run clean-all-top-data
+        
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add merged-streaming-history/ recent-plays-*.json
+          git add merged-streaming-history/ recent-plays-*.json cleaned-data/
           git diff --staged --quiet || git commit -m "Daily Spotify sync $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           
       - name: Push changes

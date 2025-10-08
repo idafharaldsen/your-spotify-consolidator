@@ -203,8 +203,13 @@ function cleanTopArtists() {
     // Consolidate the artists
     const results = consolidateArtists(data.artists);
     
+    // Ensure cleaned-data directory exists
+    if (!fs.existsSync('cleaned-data')) {
+      fs.mkdirSync('cleaned-data');
+    }
+    
     // Save the cleaned results
-    const outputFile = `cleaned-top-artists-${Date.now()}.json`;
+    const outputFile = `cleaned-data/cleaned-artists-${Date.now()}.json`;
     fs.writeFileSync(outputFile, JSON.stringify(results, null, 2));
     
     console.log(`\n📁 Cleaned data saved to: ${outputFile}`);

@@ -212,8 +212,13 @@ function cleanTopSongs() {
     // Consolidate the songs
     const results = consolidateSongs(data.songs);
     
+    // Ensure cleaned-data directory exists
+    if (!fs.existsSync('cleaned-data')) {
+      fs.mkdirSync('cleaned-data');
+    }
+    
     // Save the cleaned results
-    const outputFile = `cleaned-top-songs-${Date.now()}.json`;
+    const outputFile = `cleaned-data/cleaned-songs-${Date.now()}.json`;
     fs.writeFileSync(outputFile, JSON.stringify(results, null, 2));
     
     console.log(`\n📁 Cleaned data saved to: ${outputFile}`);

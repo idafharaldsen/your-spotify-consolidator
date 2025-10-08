@@ -5,16 +5,18 @@
   "main": "index.js",
   "scripts": {
     "fetch-albums": "tsx fetch-top-albums.ts",
-    "clean-albums": "tsx clean-top-albums.ts",
+    "clean-albums": "tsx scripts-for-api-data/clean-top-albums.ts",
     "clean-albums-interactive": "tsx clean-top-albums-interactive.ts",
     "fetch-songs": "tsx fetch-top-songs.ts",
-    "clean-songs": "tsx clean-top-songs.ts",
+    "clean-songs": "tsx scripts-for-api-data/clean-top-songs.ts",
     "fetch-artists": "tsx fetch-top-artists.ts",
-    "clean-artists": "tsx clean-top-artists.ts",
+    "clean-artists": "tsx scripts-for-api-data/clean-top-artists.ts",
     "setup-ai": "tsx setup-ai-agent.ts",
     "ai-consolidate": "tsx ai-consolidate-albums.ts",
-    "build": "tsc",
-    "dev": "tsx --watch",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
     "consolidate-all": "tsx consolidate-all-mongodb-data.ts",
     "consolidate-albums-with-songs": "tsx consolidate-albums-with-songs.ts",
     "fetch-recent-plays": "tsx fetch-recent-plays.ts",
@@ -24,7 +26,10 @@
     "generate-cleaned-files": "tsx generate-cleaned-files-from-history.ts",
     "merge-streaming-history": "tsx merge-streaming-history.ts",
     "enrich-streaming-history": "tsx enrich-streaming-history.ts",
-    "test-spotify-api": "tsx test-spotify-api.ts"
+    "test-spotify-api": "tsx test-spotify-api.ts",
+    "convert-history-to-top-data": "tsx scripts-for-api-data/convert-history-to-top-data.ts",
+    "clean-all-top-data": "npm run clean-songs && npm run clean-albums && npm run clean-artists",
+    "process-daily-data": "npm run convert-history-to-top-data && npm run clean-all-top-data"
   },
   "keywords": [
     "spotify",
@@ -37,19 +42,49 @@
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^3.4.18",
     "tsx": "^4.0.0",
     "typescript": "^5.0.0"
   },
   "dependencies": {
+    "@radix-ui/react-avatar": "^1.1.10",
+    "@radix-ui/react-dropdown-menu": "^2.1.16",
+    "@radix-ui/react-icons": "^1.3.2",
+    "@radix-ui/react-slot": "^1.2.3",
     "@types/cli-progress": "^3.11.6",
     "@types/commander": "^2.12.0",
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
     "axios": "^1.12.2",
+    "class-variance-authority": "^0.7.1",
     "cli-progress": "^3.12.0",
+    "clsx": "^2.1.1",
     "commander": "^11.1.0",
     "dotenv": "^16.0.0",
-    "glob": "^10.3.10"
+    "glob": "^10.3.10",
+    "lucide-react": "^0.545.0",
+    "next": "^15.5.4",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-icons": "^5.5.0",
+    "tailwind-merge": "^3.3.1",
+    "tailwindcss-animate": "^1.0.7"
   },
   "engines": {
     "node": ">=18.0.0"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tordar/your-spotify-consolidator.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tordar/your-spotify-consolidator/issues"
+  },
+  "homepage": "https://github.com/tordar/your-spotify-consolidator#readme"
 }

@@ -57,13 +57,13 @@ class StreamingHistoryEnricher {
   private apiCallCount = 0;
   private processedCount = 0;
 
-  // Ultra-conservative rate limiting to avoid penalties
-  private readonly BATCH_SIZE = 1; // 1 track = 3 API calls per batch
+  // Optimized batch processing with Get Several Tracks endpoint
+  private readonly BATCH_SIZE = 50; // 50 tracks per API call (max allowed)
   private readonly CONCURRENT_REQUESTS = 1; // Sequential processing
   private readonly RETRY_DELAY = 30000; // 30 seconds (fallback)
   private readonly MAX_RETRIES = 3;
-  private readonly BATCH_DELAY = 5000; // 5 seconds between batches
-  private readonly TRACK_DELAY = 1000; // 1 second between individual API calls
+  private readonly BATCH_DELAY = 2000; // 2 seconds between batches (more aggressive)
+  private readonly TRACK_DELAY = 0; // No delay needed between individual tracks in batch
 
   constructor() {
     this.tokenManager = new SpotifyTokenManager();
@@ -106,33 +106,29 @@ class StreamingHistoryEnricher {
   }
 
   /**
-   * Fetch track metadata from Spotify API with proper rate limit handling
+   * Fetch track metadata for multiple tracks using Get Several Tracks endpoint
    */
-  async fetchTrackMetadata(trackId: string): Promise<any> {
+  async fetchTracksMetadata(trackIds: string[]): Promise<any[]> {
     const accessToken = await this.tokenManager.getValidAccessToken();
     
-    // Fetch track data
-    const trackData = await this.makeApiCall(`https://api.spotify.com/v1/tracks/${trackId}`, accessToken);
+    // Use Get Several Tracks endpoint (up to 50 tracks per request)
+    const idsParam = trackIds.join(',');
+    const url = `https://api.spotify.com/v1/tracks?ids=${idsParam}`;
     
-    // Small delay between API calls
-    await new Promise(resolve => setTimeout(resolve, this.TRACK_DELAY));
+    const response = await this.makeApiCall(url, accessToken);
     
-    // Fetch artist data for genres
-    const artistId = trackData.artists[0].id;
-    const artistData = await this.makeApiCall(`https://api.spotify.com/v1/artists/${artistId}`, accessToken);
+    // Process the response - it returns { tracks: [...] }
+    const tracks = response.tracks || [];
     
-    // Small delay between API calls
-    await new Promise(resolve => setTimeout(resolve, this.TRACK_DELAY));
+    // Filter out null tracks (some tracks might not be available)
+    const validTracks = tracks.filter((track: any) => track !== null);
     
-    // Fetch album data for images
-    const albumId = trackData.album.id;
-    const albumData = await this.makeApiCall(`https://api.spotify.com/v1/albums/${albumId}`, accessToken);
-
-    return {
-      track: trackData,
-      artist: artistData,
-      album: albumData
-    };
+    console.log(`📡 Fetched ${validTracks.length}/${trackIds.length} tracks (${trackIds.length - validTracks.length} unavailable)`);
+    
+    return validTracks.map((track: any) => ({
+      track: track,
+      album: track.album // Album data is included in track response
+    }));
   }
 
   /**
@@ -171,56 +167,61 @@ class StreamingHistoryEnricher {
   }
 
   /**
-   * Process a batch of tracks with retry logic
+   * Process a batch of tracks with retry logic using Get Several Tracks endpoint
    */
   async processBatch(trackIds: string[]): Promise<void> {
-    for (const trackId of trackIds) {
-      let retries = 0;
-      let success = false;
+    let retries = 0;
+    let success = false;
 
-      while (retries < this.MAX_RETRIES && !success) {
-        try {
-          if (this.trackMetadataCache.has(trackId)) {
-            // Skip if already cached
-            success = true;
-            continue;
-          }
-
-          const metadata = await this.fetchTrackMetadata(trackId);
-          this.trackMetadataCache.set(trackId, metadata);
+    while (retries < this.MAX_RETRIES && !success) {
+      try {
+        // Filter out tracks that are already cached
+        const uncachedTrackIds = trackIds.filter(id => !this.trackMetadataCache.has(id));
+        
+        if (uncachedTrackIds.length === 0) {
+          console.log(`✅ All ${trackIds.length} tracks in batch already cached`);
           success = true;
+          break;
+        }
 
-          // Small delay between individual track fetches
-          await new Promise(resolve => setTimeout(resolve, 100));
+        console.log(`📡 Fetching ${uncachedTrackIds.length} uncached tracks...`);
+        const metadataArray = await this.fetchTracksMetadata(uncachedTrackIds);
+        
+        // Cache the results
+        metadataArray.forEach((metadata, index) => {
+          const trackId = uncachedTrackIds[index];
+          this.trackMetadataCache.set(trackId, metadata);
+        });
+        
+        success = true;
+        console.log(`✅ Cached ${metadataArray.length} tracks`);
 
-        } catch (error) {
-          retries++;
-          if (retries >= this.MAX_RETRIES) {
-            console.error(`❌ Failed to fetch metadata for track ${trackId} after ${this.MAX_RETRIES} retries`);
-            // Continue with next track instead of failing completely
-            success = true;
-          } else {
-            console.log(`⏳ Retrying track ${trackId} (attempt ${retries + 1}/${this.MAX_RETRIES})...`);
-            await new Promise(resolve => setTimeout(resolve, this.RETRY_DELAY));
-          }
+      } catch (error) {
+        retries++;
+        if (retries >= this.MAX_RETRIES) {
+          console.error(`❌ Failed to fetch batch after ${this.MAX_RETRIES} retries:`, error);
+          // Continue with next batch instead of failing completely
+          success = true;
+        } else {
+          console.log(`⏳ Retrying batch (attempt ${retries + 1}/${this.MAX_RETRIES})...`);
+          await new Promise(resolve => setTimeout(resolve, this.RETRY_DELAY));
         }
       }
+    }
 
-      this.processedCount++;
-      if (this.processedCount % 100 === 0) {
-        console.log(`📊 Progress: ${this.processedCount}/${trackIds.length} tracks processed`);
-      }
+    this.processedCount += trackIds.length;
+    if (this.processedCount % 500 === 0) {
+      console.log(`📊 Progress: ${this.processedCount} tracks processed, ${this.trackMetadataCache.size} cached`);
     }
   }
 
   /**
-   * Check if a track already has metadata
+   * Check if a track already has metadata (updated to not require genres)
    */
   hasMetadata(song: CompleteSong): boolean {
     return song.duration_ms > 0 && 
            song.album.id !== '' && 
-           song.album.images.length > 0 && 
-           song.artist.genres.length > 0 &&
+           song.album.images.length > 0 &&
            song.external_urls.spotify.startsWith('https://');
   }
 
@@ -250,8 +251,8 @@ class StreamingHistoryEnricher {
       try {
         await this.processBatch(batch);
         
-        // Save progress every 5 batches (100 tracks)
-        if (batchNumber % 5 === 0) {
+        // Save progress every 10 batches (500 tracks with new batch size)
+        if (batchNumber % 10 === 0) {
           console.log(`💾 Saving progress after ${batchNumber} batches (${this.trackMetadataCache.size} tracks enriched)...`);
           await this.saveProgress(originalData, batchNumber);
         }
@@ -314,8 +315,8 @@ class StreamingHistoryEnricher {
             images: metadata.album.images || []
           },
           artist: {
-            name: metadata.artist.name,
-            genres: metadata.artist.genres || []
+            name: metadata.track.artists[0]?.name || 'Unknown Artist',
+            genres: [] // Skipping artist genres for now
           },
           external_urls: {
             spotify: metadata.track.external_urls.spotify,

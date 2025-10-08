@@ -2,7 +2,9 @@
   "compilerOptions": {
     "target": "ES2020",
     "module": "commonjs",
-    "lib": ["ES2020"],
+    "lib": [
+      "ES2020"
+    ],
     "outDir": "./dist",
     "rootDir": "./",
     "strict": true,
@@ -12,11 +14,29 @@
     "resolveJsonModule": true,
     "declaration": true,
     "declarationMap": true,
-    "sourceMap": true
+    "sourceMap": true,
+    "allowJs": true,
+    "noEmit": true,
+    "incremental": true,
+    "moduleResolution": "node",
+    "isolatedModules": true,
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./*"]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
   "include": [
-    "*.ts"
-, "scripts-for-api-data/clean-top-albums-interactive.ts", "scripts-for-api-data/clean-top-albums.ts", "scripts-for-api-data/clean-top-artists.ts", "scripts-for-api-data/clean-top-songs.ts", "fetch-api-scripts/fetch-top-albums.ts", "fetch-api-scripts/fetch-top-artists.ts", "fetch-api-scripts/fetch-top-songs.ts", "previous-mongo-scripts/build-complete-history.ts", "previous-mongo-scripts/consolidate-albums-with-songs.ts", "previous-mongo-scripts/consolidate-all-mongodb-data.ts", "previous-mongo-scripts/generate-cleaned-files-from-history.ts"  ],
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts"
+  ],
   "exclude": [
     "node_modules",
     "dist",
