@@ -195,13 +195,19 @@ export default function Songs() {
 
               {/* Album Art */}
               <div className="flex-shrink-0">
-                <Image
-                  src={song.album.images[0]?.url || '/placeholder-album.png'}
-                  alt={`${song.album.name} album cover`}
-                  width={64}
-                  height={64}
-                  className="rounded-md"
-                />
+                {song.album.images[0]?.url ? (
+                  <Image
+                    src={song.album.images[0].url}
+                    alt={`${song.album.name} album cover`}
+                    width={64}
+                    height={64}
+                    className="rounded-md"
+                  />
+                ) : (
+                  <div className="w-16 h-16 bg-muted rounded-md flex items-center justify-center">
+                    <Music className="h-8 w-8 text-muted-foreground" />
+                  </div>
+                )}
               </div>
 
               {/* Song Info */}

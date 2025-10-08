@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ExternalLink, Clock, Calendar } from 'lucide-react';
+import { ExternalLink, Clock, Calendar, Music } from 'lucide-react';
 
 interface RecentPlayEvent {
   songId: string;
@@ -177,13 +177,19 @@ export default function Recent() {
 
               {/* Album Art */}
               <div className="flex-shrink-0">
-                <Image
-                  src={play.albumImages[0]?.url || '/placeholder-album.png'}
-                  alt={`${play.albumName} album cover`}
-                  width={48}
-                  height={48}
-                  className="rounded-md"
-                />
+                {play.albumImages[0]?.url ? (
+                  <Image
+                    src={play.albumImages[0].url}
+                    alt={`${play.albumName} album cover`}
+                    width={48}
+                    height={48}
+                    className="rounded-md"
+                  />
+                ) : (
+                  <div className="w-12 h-12 bg-muted rounded-md flex items-center justify-center">
+                    <Music className="h-6 w-6 text-muted-foreground" />
+                  </div>
+                )}
               </div>
 
               {/* Song Info */}

@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ExternalLink, Play, Disc } from 'lucide-react';
+import { ExternalLink, Play, Disc, Music } from 'lucide-react';
 
 interface CleanedAlbum {
   duration_ms: number;
@@ -190,13 +190,19 @@ export default function Albums() {
 
               {/* Album Art */}
               <div className="flex-shrink-0">
-                <Image
-                  src={album.album.images[0]?.url || '/placeholder-album.png'}
-                  alt={`${album.album.name} album cover`}
-                  width={64}
-                  height={64}
-                  className="rounded-md"
-                />
+                {album.album.images[0]?.url ? (
+                  <Image
+                    src={album.album.images[0].url}
+                    alt={`${album.album.name} album cover`}
+                    width={64}
+                    height={64}
+                    className="rounded-md"
+                  />
+                ) : (
+                  <div className="w-16 h-16 bg-muted rounded-md flex items-center justify-center">
+                    <Music className="h-8 w-8 text-muted-foreground" />
+                  </div>
+                )}
               </div>
 
               {/* Album Info */}
