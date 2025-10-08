@@ -178,7 +178,9 @@ class HistoryToTopDataConverter {
     const albumMap = new Map<string, TopAlbum>();
 
     songs.forEach(song => {
-      const key = `${song.album.id}`;
+      // Use artist name + album name as key for better consolidation
+      // This handles cases where albumId is empty or inconsistent
+      const key = `${song.artist.name}|||${song.album.name}`.toLowerCase();
       
       if (albumMap.has(key)) {
         const existing = albumMap.get(key)!;
@@ -193,11 +195,16 @@ class HistoryToTopDataConverter {
         if (song.album.images.length > existing.album.images.length) {
           existing.album.images = song.album.images;
         }
+        
+        // Use the non-empty albumId if available
+        if (song.album.id && !existing.albumId) {
+          existing.albumId = song.album.id;
+        }
       } else {
         albumMap.set(key, {
           duration_ms: song.duration_ms,
           count: song.playCount,
-          albumId: song.album.id,
+          albumId: song.album.id || '', // Handle empty albumId
           album: {
             name: song.album.name,
             images: song.album.images

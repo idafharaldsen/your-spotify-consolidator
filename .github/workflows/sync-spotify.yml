@@ -39,9 +39,6 @@ jobs:
       - name: Clean and consolidate top data
         run: npm run clean-all-top-data
         
-      - name: Build web application
-        run: npm run web:build
-        
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"

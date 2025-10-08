@@ -41,9 +41,32 @@ export function NavigationBar() {
           <Button variant="ghost" size="sm" className="rounded-full text-gray-700 hover:bg-gray-100 px-6 py-2 ">
             Artists
           </Button>
-          <Button variant="ghost" size="sm" className="rounded-full text-gray-700 hover:bg-gray-100 px-6 py-2 ">
-            Albums
-          </Button>
+          <Link href="/albums">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className={`rounded-full px-6 py-2  ${
+                pathname === '/albums' 
+                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              Albums
+            </Button>
+          </Link>
+          <Link href="/recent">
+            <Button 
+              variant="ghost" 
+              size="sm" 
+              className={`rounded-full px-6 py-2  ${
+                pathname === '/recent' 
+                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
+                  : 'text-gray-700 hover:bg-gray-100'
+              }`}
+            >
+              Recent
+            </Button>
+          </Link>
           <Button variant="ghost" size="sm" className="rounded-full text-gray-700 hover:bg-gray-100 px-6 py-2 ">
             Analytics
           </Button>
