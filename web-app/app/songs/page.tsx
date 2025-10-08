@@ -145,7 +145,7 @@ export default function Songs() {
         {/* Stats */}
         {metadata && (
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <Music className="h-4 w-4 text-muted-foreground" />
                 <div>
@@ -154,7 +154,7 @@ export default function Songs() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <Play className="h-4 w-4 text-muted-foreground" />
                 <div>
@@ -163,7 +163,7 @@ export default function Songs() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <div className="h-4 w-4 bg-green-500 rounded-full"></div>
                 <div>
@@ -172,7 +172,7 @@ export default function Songs() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <div className="h-4 w-4 bg-blue-500 rounded-full"></div>
                 <div>
@@ -187,7 +187,7 @@ export default function Songs() {
         {/* Songs List */}
         <div className="space-y-4">
           {songs.map((song) => (
-            <div key={song.songId} className="flex items-center space-x-4 rounded-lg border bg-card p-4 hover:bg-muted/50 transition-colors">
+            <div key={song.songId} className="flex items-center space-x-4 rounded-lg border border-card-border bg-card-accent p-4 hover:bg-card transition-colors">
               {/* Rank */}
               <div className="flex-shrink-0 w-8 text-center">
                 <span className="text-lg font-bold text-muted-foreground">#{song.rank}</span>

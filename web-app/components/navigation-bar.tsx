@@ -8,18 +8,18 @@ export function NavigationBar() {
   const pathname = usePathname();
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="w-full">
       <div className="container flex h-16 items-center justify-center px-4">
         {/* Centered Navigation */}
-        <nav className="flex items-center bg-white rounded-full px-2 py-1 shadow-sm border">
+        <nav className="flex items-center bg-dark-surface rounded-full px-2 py-1 shadow-sm border border-dark-border">
           <Link href="/">
             <Button 
               variant="ghost" 
               size="sm" 
               className={`rounded-full px-6 py-2  ${
                 pathname === '/' 
-                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
+                  : 'text-dark-text-primary hover:bg-dark-surfaceHover'
               }`}
             >
               Dashboard
@@ -31,14 +31,14 @@ export function NavigationBar() {
               size="sm" 
               className={`rounded-full px-6 py-2  ${
                 pathname === '/songs' 
-                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
+                  : 'text-dark-text-primary hover:bg-dark-surfaceHover'
               }`}
             >
               Songs
             </Button>
           </Link>
-          <Button variant="ghost" size="sm" className="rounded-full text-gray-700 hover:bg-gray-100 px-6 py-2 ">
+          <Button variant="ghost" size="sm" className="rounded-full text-dark-text-primary hover:bg-dark-surfaceHover px-6 py-2 ">
             Artists
           </Button>
           <Link href="/albums">
@@ -47,8 +47,8 @@ export function NavigationBar() {
               size="sm" 
               className={`rounded-full px-6 py-2  ${
                 pathname === '/albums' 
-                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
+                  : 'text-dark-text-primary hover:bg-dark-surfaceHover'
               }`}
             >
               Albums
@@ -60,14 +60,14 @@ export function NavigationBar() {
               size="sm" 
               className={`rounded-full px-6 py-2  ${
                 pathname === '/recent' 
-                  ? 'bg-green-100 text-green-800 hover:bg-green-200' 
-                  : 'text-gray-700 hover:bg-gray-100'
+                  ? 'bg-primary text-primary-foreground hover:bg-primary/90' 
+                  : 'text-dark-text-primary hover:bg-dark-surfaceHover'
               }`}
             >
               Recent
             </Button>
           </Link>
-          <Button variant="ghost" size="sm" className="rounded-full text-gray-700 hover:bg-gray-100 px-6 py-2 ">
+          <Button variant="ghost" size="sm" className="rounded-full text-dark-text-primary hover:bg-dark-surfaceHover px-6 py-2 ">
             Analytics
           </Button>
         </nav>

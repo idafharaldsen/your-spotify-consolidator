@@ -7,7 +7,7 @@ interface StatsCardProps {
 
 export function StatsCard({ title, value, subtitle, className = "" }: StatsCardProps) {
   return (
-    <div className={`rounded-lg border bg-card p-6 ${className}`}>
+    <div className={`rounded-lg border border-card-border bg-card-accent p-6 ${className}`}>
       <h3 className="text-lg font-semibold">{title}</h3>
       <p className="text-2xl font-bold text-primary">{value}</p>
       {subtitle && (

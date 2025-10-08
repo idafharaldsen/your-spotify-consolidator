@@ -123,7 +123,7 @@ export default function Recent() {
         {/* Stats */}
         {metadata && (
           <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <Clock className="h-4 w-4 text-muted-foreground" />
                 <div>
@@ -132,7 +132,7 @@ export default function Recent() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <Calendar className="h-4 w-4 text-muted-foreground" />
                 <div>
@@ -141,7 +141,7 @@ export default function Recent() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <div className="h-4 w-4 bg-blue-500 rounded-full"></div>
                 <div>
@@ -152,7 +152,7 @@ export default function Recent() {
                 </div>
               </div>
             </div>
-            <div className="rounded-lg border bg-card p-6">
+            <div className="rounded-lg border border-card-border bg-card-accent p-6">
               <div className="flex items-center space-x-2">
                 <div className="h-4 w-4 bg-green-500 rounded-full"></div>
                 <div>
@@ -169,7 +169,7 @@ export default function Recent() {
         {/* Recent Plays List */}
         <div className="space-y-3">
           {recentPlays.map((play, index) => (
-            <div key={`${play.songId}-${play.playedAt}`} className="flex items-center space-x-4 rounded-lg border bg-card p-4 hover:bg-muted/50 transition-colors">
+            <div key={`${play.songId}-${play.playedAt}`} className="flex items-center space-x-4 rounded-lg border border-card-border bg-card-accent p-4 hover:bg-card transition-colors">
               {/* Rank/Index */}
               <div className="flex-shrink-0 w-8 text-center">
                 <span className="text-lg font-bold text-muted-foreground">#{index + 1}</span>
