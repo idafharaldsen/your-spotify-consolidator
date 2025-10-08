@@ -127,7 +127,12 @@ class SpotifyRecentPlaysFetcher {
   async saveRecentPlays(recentPlays: RecentPlayData[]): Promise<void> {
     try {
       const timestamp = Date.now();
-      const filename = `recent-plays-${timestamp}.json`;
+      const filename = `data/recent-plays-${timestamp}.json`;
+      
+      // Ensure data directory exists
+      if (!fs.existsSync('data')) {
+        fs.mkdirSync('data', { recursive: true });
+      }
       
       const data = {
         metadata: {
