@@ -29,7 +29,7 @@ interface StreamingData {
 export async function GET() {
   try {
     // Read the merged streaming history file
-    const dataPath = path.join(process.cwd(), 'merged-streaming-history', 'merged-streaming-history-1759891992689.json');
+    const dataPath = path.join(process.cwd(), '..', '..', 'data', 'merged-streaming-history', 'merged-streaming-history-1759891992689.json');
     
     if (!fs.existsSync(dataPath)) {
       return NextResponse.json({ error: 'Data file not found' }, { status: 404 });

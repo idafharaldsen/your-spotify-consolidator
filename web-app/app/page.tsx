@@ -1,4 +1,4 @@
-import { StatsCard } from "@/components/stats-card";
+import { StatsCard } from "../components/stats-card";
 
 export default function Home() {
   return (

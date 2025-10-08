@@ -94,7 +94,7 @@ class SpotifyRecentPlaysFetcher {
         throw new Error(`Failed to fetch recent plays: ${response.status} ${errorText}`);
       }
 
-      const data: SpotifyRecentPlaysResponse = await response.json();
+      const data = await response.json() as SpotifyRecentPlaysResponse;
       
       console.log(`✅ Fetched ${data.items.length} recent plays`);
       

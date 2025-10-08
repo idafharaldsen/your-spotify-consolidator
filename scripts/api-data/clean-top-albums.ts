@@ -44,16 +44,16 @@ interface CleanResults {
 }
 
 function findLatestJsonFile(): string {
-  const files = fs.readdirSync('.')
+  const files = fs.readdirSync('data')
     .filter(file => file.startsWith('top-albums-') && file.endsWith('.json'))
     .sort()
     .reverse();
   
   if (files.length === 0) {
-    throw new Error('No top-albums JSON files found in current directory');
+    throw new Error('No top-albums JSON files found in data directory');
   }
   
-  return files[0];
+  return `data/${files[0]}`;
 }
 
 function consolidateAlbums(albums: CleanedAlbum[]): CleanResults {
@@ -247,13 +247,13 @@ function cleanTopAlbums() {
     // Consolidate the albums
     const results = consolidateAlbums(data.albums);
     
-    // Ensure cleaned-data directory exists
-    if (!fs.existsSync('cleaned-data')) {
-      fs.mkdirSync('cleaned-data');
+    // Ensure data/cleaned-data directory exists
+    if (!fs.existsSync('data/cleaned-data')) {
+      fs.mkdirSync('data/cleaned-data', { recursive: true });
     }
     
     // Save the cleaned results
-    const outputFile = `cleaned-data/cleaned-albums-${Date.now()}.json`;
+    const outputFile = `data/cleaned-data/cleaned-albums-${Date.now()}.json`;
     fs.writeFileSync(outputFile, JSON.stringify(results, null, 2));
     
     console.log(`\n📁 Cleaned data saved to: ${outputFile}`);

@@ -39,11 +39,14 @@ jobs:
       - name: Clean and consolidate top data
         run: npm run clean-all-top-data
         
+      - name: Build web application
+        run: npm run web:build
+        
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add merged-streaming-history/ recent-plays-*.json cleaned-data/
+          git add data/merged-streaming-history/ data/recent-plays-*.json data/cleaned-data/
           git diff --staged --quiet || git commit -m "Daily Spotify sync $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           
       - name: Push changes

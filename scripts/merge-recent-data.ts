@@ -96,7 +96,7 @@ class DataMerger {
    * Find the most recent recent-plays file
    */
   private findLatestRecentPlaysFile(): string | null {
-    const files = glob.sync('recent-plays-*.json');
+    const files = glob.sync('data/recent-plays-*.json');
     if (files.length === 0) {
       console.log('⚠️  No recent-plays files found');
       return null;
@@ -117,11 +117,11 @@ class DataMerger {
    */
   private findLatestCompleteHistoryFile(): string | null {
     // First check for merged streaming history files (new format)
-    let files = glob.sync('merged-streaming-history/merged-streaming-history-*.json');
+    let files = glob.sync('data/merged-streaming-history/merged-streaming-history-*.json');
     
     if (files.length === 0) {
       // Fallback to old complete listening history format
-      files = glob.sync('complete-listening-history/complete-listening-history-*.json');
+      files = glob.sync('data/complete-listening-history/complete-listening-history-*.json');
     }
     
     if (files.length === 0) {
@@ -277,7 +277,7 @@ class DataMerger {
    */
   private saveMergedData(data: CompleteListeningHistory): void {
     const timestamp = Date.now();
-    const filename = `merged-streaming-history/merged-streaming-history-${timestamp}.json`;
+    const filename = `data/merged-streaming-history/merged-streaming-history-${timestamp}.json`;
     
     // Convert to MergedStreamingHistory format
     const mergedData = {

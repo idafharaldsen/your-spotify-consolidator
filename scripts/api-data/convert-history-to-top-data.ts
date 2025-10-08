@@ -118,7 +118,7 @@ class HistoryToTopDataConverter {
    * Find the most recent merged streaming history file
    */
   private findLatestMergedHistoryFile(): string | null {
-    const files = glob.sync('merged-streaming-history/merged-streaming-history-*.json');
+    const files = glob.sync('data/merged-streaming-history/merged-streaming-history-*.json');
     
     if (files.length === 0) {
       console.log('⚠️  No merged streaming history files found');
@@ -265,18 +265,23 @@ class HistoryToTopDataConverter {
   private saveTopDataFiles(topSongs: TopSong[], topAlbums: TopAlbum[], topArtists: TopArtist[]): void {
     const timestamp = Date.now();
     
+    // Ensure data directory exists
+    if (!fs.existsSync('data')) {
+      fs.mkdirSync('data');
+    }
+    
     // Save top-songs
-    const songsFile = `top-songs-${timestamp}.json`;
+    const songsFile = `data/top-songs-${timestamp}.json`;
     fs.writeFileSync(songsFile, JSON.stringify({ songs: topSongs }, null, 2));
     console.log(`💾 Saved top-songs data to: ${songsFile}`);
     
     // Save top-albums
-    const albumsFile = `top-albums-${timestamp}.json`;
+    const albumsFile = `data/top-albums-${timestamp}.json`;
     fs.writeFileSync(albumsFile, JSON.stringify({ albums: topAlbums }, null, 2));
     console.log(`💾 Saved top-albums data to: ${albumsFile}`);
     
     // Save top-artists
-    const artistsFile = `top-artists-${timestamp}.json`;
+    const artistsFile = `data/top-artists-${timestamp}.json`;
     fs.writeFileSync(artistsFile, JSON.stringify({ artists: topArtists }, null, 2));
     console.log(`💾 Saved top-artists data to: ${artistsFile}`);
   }

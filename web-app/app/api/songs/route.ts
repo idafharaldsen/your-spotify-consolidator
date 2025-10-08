@@ -50,7 +50,7 @@ export async function GET(request: NextRequest) {
   
   try {
     // Find the latest cleaned-songs file
-    const files = glob.sync('cleaned-data/cleaned-songs-*.json');
+    const files = glob.sync('../data/cleaned-data/cleaned-songs-*.json');
     
     if (files.length === 0) {
       return NextResponse.json({ error: 'No cleaned songs data found' }, { status: 404 });
@@ -90,9 +90,9 @@ export async function GET(request: NextRequest) {
         originalTotalSongs: data.metadata.originalTotalSongs,
         duplicatesRemoved: data.metadata.duplicatesRemoved,
         consolidationRate: data.metadata.consolidationRate,
-        totalListeningEvents: data.metadata.totalListeningEvents,
+        totalListeningEvents: data.metadata.totalListeningEvents || 0,
         timestamp: data.metadata.timestamp,
-        source: data.metadata.source
+        source: data.metadata.source || 'unknown'
       }
     });
 
