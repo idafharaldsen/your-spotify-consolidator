@@ -50,7 +50,18 @@ export async function GET(request: NextRequest) {
   
   try {
     // Find the latest cleaned-songs file
-    const files = glob.sync('../data/cleaned-data/cleaned-songs-*.json');
+    // Handle both development and production environments
+    let files: string[] = [];
+    
+    // Try production path first (when deployed from root)
+    const projectRoot = path.resolve(process.cwd(), '..');
+    const dataPath = path.join(projectRoot, 'data', 'cleaned-data');
+    files = glob.sync(path.join(dataPath, 'cleaned-songs-*.json'));
+    
+    // Fallback to development path (when running from web-app directory)
+    if (files.length === 0) {
+      files = glob.sync('../data/cleaned-data/cleaned-songs-*.json');
+    }
     
     if (files.length === 0) {
       return NextResponse.json({ error: 'No cleaned songs data found' }, { status: 404 });
@@ -64,13 +75,12 @@ export async function GET(request: NextRequest) {
     });
     
     const latestFile = files[0];
-    const dataPath = path.join(process.cwd(), latestFile);
     
-    if (!fs.existsSync(dataPath)) {
+    if (!fs.existsSync(latestFile)) {
       return NextResponse.json({ error: 'Data file not found' }, { status: 404 });
     }
 
-    const rawData = fs.readFileSync(dataPath, 'utf8');
+    const rawData = fs.readFileSync(latestFile, 'utf8');
     const data: CleanedSongsData = JSON.parse(rawData);
 
     // Songs are already sorted by count (highest first) in the cleaned data

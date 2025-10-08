@@ -1,0 +1,13 @@
+# Ignore everything except what we need for the web app
+# Include the data folder for the API to work
+!data/
+!web-app/
+!package.json
+!package-lock.json
+!vercel.json
+
+# Ignore build artifacts and other unnecessary files
+.next/
+node_modules/
+*.log
+.DS_Store
