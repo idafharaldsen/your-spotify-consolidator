@@ -153,7 +153,14 @@ class CleanedFilesGenerator {
    * Find the most recent complete listening history file
    */
   private findLatestCompleteHistoryFile(): string | null {
-    const files = glob.sync('complete-listening-history/complete-listening-history-*.json');
+    // First check for merged streaming history files (new format)
+    let files = glob.sync('data/merged-streaming-history/merged-streaming-history-*.json');
+    
+    if (files.length === 0) {
+      // Fallback to old complete listening history format
+      files = glob.sync('data/complete-listening-history/complete-listening-history-*.json');
+    }
+    
     if (files.length === 0) {
       console.log('⚠️  No complete listening history files found');
       return null;
@@ -161,8 +168,8 @@ class CleanedFilesGenerator {
     
     // Sort by timestamp (newest first)
     files.sort((a, b) => {
-      const timestampA = parseInt(a.match(/complete-listening-history-(\d+)\.json/)?.[1] || '0');
-      const timestampB = parseInt(b.match(/complete-listening-history-(\d+)\.json/)?.[1] || '0');
+      const timestampA = parseInt(a.match(/(?:merged-streaming-history-|complete-listening-history-)(\d+)\.json/)?.[1] || '0');
+      const timestampB = parseInt(b.match(/(?:merged-streaming-history-|complete-listening-history-)(\d+)\.json/)?.[1] || '0');
       return timestampB - timestampA;
     });
     
@@ -170,12 +177,31 @@ class CleanedFilesGenerator {
   }
 
   /**
-   * Load complete listening history
+   * Load complete listening history (handles both formats)
    */
   private loadCompleteHistory(filename: string): CompleteListeningHistory {
     try {
       const content = fs.readFileSync(filename, 'utf8');
-      return JSON.parse(content);
+      const data = JSON.parse(content);
+      
+      // Check if it's the new merged streaming history format
+      if (data.metadata && data.metadata.totalPlayEvents !== undefined) {
+        // Convert MergedStreamingHistory to CompleteListeningHistory format
+        return {
+          metadata: {
+            totalSongs: data.metadata.totalSongs,
+            totalListeningEvents: data.metadata.totalPlayEvents,
+            totalListeningTime: data.songs.reduce((sum: number, song: CompleteSong) => sum + song.totalListeningTime, 0),
+            dateRange: data.metadata.dateRange,
+            timestamp: data.metadata.timestamp,
+            source: data.metadata.source
+          },
+          songs: data.songs
+        };
+      }
+      
+      // Return as-is if it's already CompleteListeningHistory format
+      return data;
     } catch (error) {
       throw new Error(`Failed to load complete history file: ${error}`);
     }
@@ -198,7 +224,8 @@ class CleanedFilesGenerator {
         
         existing.count += song.count;
         existing.consolidated_count += song.count;
-        existing.duration_ms += song.duration_ms;
+        // Keep the original track duration (don't sum durations)
+        // existing.duration_ms remains unchanged
         existing.original_songIds.push(song.songId);
         
         duplicatesRemoved++;
@@ -299,13 +326,13 @@ class CleanedFilesGenerator {
   /**
    * Generate cleaned songs from complete history
    */
-  private generateCleanedSongs(history: CompleteListeningHistory): CleanedSong[] {
+  private generateCleanedSongs(history: CompleteListeningHistory): { songs: CleanedSong[], originalCount: number, consolidatedCount: number } {
     console.log('🎵 Generating cleaned songs...');
 
     // Convert complete songs to cleaned format
     const songs: CleanedSong[] = history.songs.map(song => ({
       rank: 0, // Temporary rank, will be updated after sorting
-      duration_ms: song.totalListeningTime, // Total listening time
+      duration_ms: song.duration_ms, // Actual track duration
       count: song.playCount,
       songId: song.songId,
       song: {
@@ -332,16 +359,22 @@ class CleanedFilesGenerator {
     const consolidatedSongs = this.consolidateSongs(songs);
     
     // Take top 500 and add rank
-    return consolidatedSongs.slice(0, 500).map((song, index) => ({
+    const topSongs = consolidatedSongs.slice(0, 500).map((song, index) => ({
       ...song,
       rank: index + 1
     }));
+    
+    return {
+      songs: topSongs,
+      originalCount: songs.length,
+      consolidatedCount: consolidatedSongs.length
+    };
   }
 
   /**
    * Generate cleaned albums from complete history
    */
-  private generateCleanedAlbums(history: CompleteListeningHistory): CleanedAlbum[] {
+  private generateCleanedAlbums(history: CompleteListeningHistory): { albums: CleanedAlbum[], originalCount: number, consolidatedCount: number } {
     console.log('💿 Generating cleaned albums...');
 
     // Group songs by album
@@ -377,7 +410,7 @@ class CleanedFilesGenerator {
       
       return {
         rank: 0, // Temporary rank, will be updated after sorting
-        duration_ms: data.totalListeningTime,
+        duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
         count: data.totalPlayCount,
         differents: data.differentSongs.size,
         primaryAlbumId: albumId,
@@ -406,16 +439,22 @@ class CleanedFilesGenerator {
     const consolidatedAlbums = this.consolidateAlbums(albums);
     
     // Take top 500 and add rank
-    return consolidatedAlbums.slice(0, 500).map((album, index) => ({
+    const topAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => ({
       ...album,
       rank: index + 1
     }));
+    
+    return {
+      albums: topAlbums,
+      originalCount: albums.length,
+      consolidatedCount: consolidatedAlbums.length
+    };
   }
 
   /**
    * Generate cleaned artists from complete history
    */
-  private generateCleanedArtists(history: CompleteListeningHistory): CleanedArtist[] {
+  private generateCleanedArtists(history: CompleteListeningHistory): { artists: CleanedArtist[], originalCount: number, consolidatedCount: number } {
     console.log('👤 Generating cleaned artists...');
 
     // Group songs by artist
@@ -451,7 +490,7 @@ class CleanedFilesGenerator {
       
       return {
         rank: 0, // Temporary rank, will be updated after sorting
-        duration_ms: data.totalListeningTime,
+        duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
         count: data.totalPlayCount,
         differents: data.differentSongs.size,
         primaryArtistId: firstSong.songId, // Use first song ID as artist ID
@@ -479,10 +518,16 @@ class CleanedFilesGenerator {
     const consolidatedArtists = this.consolidateArtists(artists);
     
     // Take top 500 and add rank
-    return consolidatedArtists.slice(0, 500).map((artist, index) => ({
+    const topArtists = consolidatedArtists.slice(0, 500).map((artist, index) => ({
       ...artist,
       rank: index + 1
     }));
+    
+    return {
+      artists: topArtists,
+      originalCount: artists.length,
+      consolidatedCount: consolidatedArtists.length
+    };
   }
 
   /**
@@ -636,67 +681,67 @@ class CleanedFilesGenerator {
    * Save all cleaned files
    */
   private saveCleanedFiles(
-    songs: CleanedSong[],
-    albums: CleanedAlbum[],
-    artists: CleanedArtist[],
+    songsResult: { songs: CleanedSong[], originalCount: number, consolidatedCount: number },
+    albumsResult: { albums: CleanedAlbum[], originalCount: number, consolidatedCount: number },
+    artistsResult: { artists: CleanedArtist[], originalCount: number, consolidatedCount: number },
     albumsWithSongs: AlbumWithSongs[],
     originalAlbumsCount: number,
     history: CompleteListeningHistory
   ): void {
     // Ensure directory exists
-    if (!fs.existsSync('cleaned-data')) {
-      fs.mkdirSync('cleaned-data');
+    if (!fs.existsSync('data/cleaned-data')) {
+      fs.mkdirSync('data/cleaned-data', { recursive: true });
     }
     
     const timestamp = Date.now();
     
     // Save songs
-    const songsFile = `cleaned-data/cleaned-songs-${timestamp}.json`;
+    const songsFile = `data/cleaned-data/cleaned-songs-${timestamp}.json`;
     fs.writeFileSync(songsFile, JSON.stringify({
       metadata: {
-        originalTotalSongs: history.metadata.totalSongs,
-        consolidatedTotalSongs: songs.length,
-        duplicatesRemoved: history.metadata.totalSongs - songs.length,
-        consolidationRate: Math.round(((history.metadata.totalSongs - songs.length) / history.metadata.totalSongs) * 100 * 100) / 100,
+        originalTotalSongs: songsResult.originalCount,
+        consolidatedTotalSongs: songsResult.consolidatedCount,
+        duplicatesRemoved: songsResult.originalCount - songsResult.consolidatedCount,
+        consolidationRate: Math.round(((songsResult.originalCount - songsResult.consolidatedCount) / songsResult.originalCount) * 100 * 100) / 100,
         timestamp: new Date().toISOString(),
-        source: 'Complete Listening History',
+        source: 'Merged Streaming History',
         totalListeningEvents: history.metadata.totalListeningEvents
       },
-      songs: songs.slice(0, 500) // Top 500
+      songs: songsResult.songs.slice(0, 500) // Top 500
     }, null, 2));
 
     // Save albums
-    const albumsFile = `cleaned-data/cleaned-albums-${timestamp}.json`;
+    const albumsFile = `data/cleaned-data/cleaned-albums-${timestamp}.json`;
     fs.writeFileSync(albumsFile, JSON.stringify({
       metadata: {
-        originalTotalAlbums: albums.length,
-        consolidatedTotalAlbums: albums.length,
-        duplicatesRemoved: 0,
-        consolidationRate: 0,
+        originalTotalAlbums: albumsResult.originalCount,
+        consolidatedTotalAlbums: albumsResult.consolidatedCount,
+        duplicatesRemoved: albumsResult.originalCount - albumsResult.consolidatedCount,
+        consolidationRate: Math.round(((albumsResult.originalCount - albumsResult.consolidatedCount) / albumsResult.originalCount) * 100 * 100) / 100,
         timestamp: new Date().toISOString(),
-        source: 'Complete Listening History',
+        source: 'Merged Streaming History',
         totalListeningEvents: history.metadata.totalListeningEvents
       },
-      albums: albums.slice(0, 500) // Top 500
+      albums: albumsResult.albums.slice(0, 500) // Top 500
     }, null, 2));
 
     // Save artists
-    const artistsFile = `cleaned-data/cleaned-artists-${timestamp}.json`;
+    const artistsFile = `data/cleaned-data/cleaned-artists-${timestamp}.json`;
     fs.writeFileSync(artistsFile, JSON.stringify({
       metadata: {
-        originalTotalArtists: artists.length,
-        consolidatedTotalArtists: artists.length,
-        duplicatesRemoved: 0,
-        consolidationRate: 0,
+        originalTotalArtists: artistsResult.originalCount,
+        consolidatedTotalArtists: artistsResult.consolidatedCount,
+        duplicatesRemoved: artistsResult.originalCount - artistsResult.consolidatedCount,
+        consolidationRate: Math.round(((artistsResult.originalCount - artistsResult.consolidatedCount) / artistsResult.originalCount) * 100 * 100) / 100,
         timestamp: new Date().toISOString(),
-        source: 'Complete Listening History',
+        source: 'Merged Streaming History',
         totalListeningEvents: history.metadata.totalListeningEvents
       },
-      artists: artists.slice(0, 500) // Top 500
+      artists: artistsResult.artists.slice(0, 500) // Top 500
     }, null, 2));
 
     // Save albums with songs
-    const albumsWithSongsFile = `cleaned-data/cleaned-albums-with-songs-${timestamp}.json`;
+    const albumsWithSongsFile = `data/cleaned-data/cleaned-albums-with-songs-${timestamp}.json`;
     fs.writeFileSync(albumsWithSongsFile, JSON.stringify({
       metadata: {
         originalTotalAlbums: originalAlbumsCount,
@@ -704,7 +749,7 @@ class CleanedFilesGenerator {
         duplicatesRemoved: originalAlbumsCount - albumsWithSongs.length,
         consolidationRate: Math.round(((originalAlbumsCount - albumsWithSongs.length) / originalAlbumsCount) * 100 * 100) / 100,
         timestamp: new Date().toISOString(),
-        source: 'Complete Listening History with Song Breakdown',
+        source: 'Merged Streaming History with Song Breakdown',
         totalListeningEvents: history.metadata.totalListeningEvents
       },
       albums: albumsWithSongs.slice(0, 100) // Top 100 albums with songs
@@ -738,22 +783,25 @@ class CleanedFilesGenerator {
       const history = this.loadCompleteHistory(historyFile);
       
       // Generate all cleaned files
-      const songs = this.generateCleanedSongs(history);
-      const albums = this.generateCleanedAlbums(history);
-      const artists = this.generateCleanedArtists(history);
+      const songsResult = this.generateCleanedSongs(history);
+      const albumsResult = this.generateCleanedAlbums(history);
+      const artistsResult = this.generateCleanedArtists(history);
       const albumsWithSongsResult = this.generateAlbumsWithSongs(history);
       
       // Save all files
-      this.saveCleanedFiles(songs, albums, artists, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
+      this.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
       
       console.log('');
       console.log('🎉 All cleaned files generated successfully!');
       console.log('');
       console.log('📊 Summary:');
       console.log(`- Total songs in history: ${history.metadata.totalSongs.toLocaleString()}`);
-      console.log(`- Top 500 songs generated: ${Math.min(songs.length, 500)}`);
-      console.log(`- Top 500 albums generated: ${Math.min(albums.length, 500)}`);
-      console.log(`- Top 500 artists generated: ${Math.min(artists.length, 500)}`);
+      console.log(`- Songs consolidated: ${songsResult.originalCount} → ${songsResult.consolidatedCount} (${songsResult.originalCount - songsResult.consolidatedCount} duplicates removed)`);
+      console.log(`- Albums consolidated: ${albumsResult.originalCount} → ${albumsResult.consolidatedCount} (${albumsResult.originalCount - albumsResult.consolidatedCount} duplicates removed)`);
+      console.log(`- Artists consolidated: ${artistsResult.originalCount} → ${artistsResult.consolidatedCount} (${artistsResult.originalCount - artistsResult.consolidatedCount} duplicates removed)`);
+      console.log(`- Top 500 songs generated: ${Math.min(songsResult.songs.length, 500)}`);
+      console.log(`- Top 500 albums generated: ${Math.min(albumsResult.albums.length, 500)}`);
+      console.log(`- Top 500 artists generated: ${Math.min(artistsResult.artists.length, 500)}`);
       console.log(`- Top 100 albums with songs: ${Math.min(albumsWithSongsResult.albums.length, 100)}`);
       console.log(`- Total listening events: ${history.metadata.totalListeningEvents.toLocaleString()}`);
       

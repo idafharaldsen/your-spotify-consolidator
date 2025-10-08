@@ -208,6 +208,10 @@ class DataMerger {
         const existingSong = existingSongsMap.get(key)!;
         existingSong.playCount += 1;
         existingSong.totalListeningTime += play.duration_ms;
+        // Update duration_ms if it was missing (0) and we have it from recent plays
+        if (existingSong.duration_ms === 0 && play.duration_ms > 0) {
+          existingSong.duration_ms = play.duration_ms;
+        }
         existingSong.listeningEvents.push({
           playedAt: play.played_at,
           msPlayed: play.duration_ms
