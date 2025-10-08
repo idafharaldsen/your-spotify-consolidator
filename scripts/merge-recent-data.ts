@@ -93,10 +93,10 @@ interface MergedStreamingHistory {
 
 class DataMerger {
   /**
-   * Find the most recent recent-plays file
+   * Find the most recent temp recent-plays file
    */
   private findLatestRecentPlaysFile(): string | null {
-    const files = glob.sync('data/recent-plays-*.json');
+    const files = glob.sync('temp-recent-plays-*.json');
     if (files.length === 0) {
       console.log('⚠️  No recent-plays files found');
       return null;
@@ -104,8 +104,8 @@ class DataMerger {
     
     // Sort by timestamp (newest first)
     files.sort((a, b) => {
-      const timestampA = parseInt(a.match(/recent-plays-(\d+)\.json/)?.[1] || '0');
-      const timestampB = parseInt(b.match(/recent-plays-(\d+)\.json/)?.[1] || '0');
+      const timestampA = parseInt(a.match(/temp-recent-plays-(\d+)\.json/)?.[1] || '0');
+      const timestampB = parseInt(b.match(/temp-recent-plays-(\d+)\.json/)?.[1] || '0');
       return timestampB - timestampA;
     });
     
@@ -297,6 +297,28 @@ class DataMerger {
   }
 
   /**
+   * Clean up temporary recent-plays files
+   */
+  private cleanupTempFiles(): void {
+    console.log('🧹 Cleaning up temporary recent-plays files...');
+    
+    const tempFiles = glob.sync('temp-recent-plays-*.json');
+    
+    if (tempFiles.length > 0) {
+      tempFiles.forEach(file => {
+        try {
+          fs.unlinkSync(file);
+          console.log(`   ✅ Deleted ${file}`);
+        } catch (error) {
+          console.error(`   ❌ Failed to delete ${file}:`, error);
+        }
+      });
+    } else {
+      console.log('✅ No temporary files to clean up');
+    }
+  }
+
+  /**
    * Main function to merge recent plays with existing data
    */
   async mergeRecentData(): Promise<void> {
@@ -329,6 +351,9 @@ class DataMerger {
       
       // Save merged data
       this.saveMergedData(mergedData);
+      
+      // Clean up temporary files
+      this.cleanupTempFiles();
       
       console.log('🎉 Data merge completed successfully!');
     } catch (error) {

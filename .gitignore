@@ -27,6 +27,7 @@ cleaned-top-songs-*.json
 cleaned-top-albums-*.json
 cleaned-top-artists-*.json
 recent-plays-*.json
+temp-recent-plays-*.json
 
 # Generated data files (keep structure but ignore specific files)
 data/top-songs-*.json

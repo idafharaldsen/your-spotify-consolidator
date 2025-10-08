@@ -122,17 +122,12 @@ class SpotifyRecentPlaysFetcher {
   }
 
   /**
-   * Save recent plays to a JSON file
+   * Save recent plays to a temporary JSON file
    */
-  async saveRecentPlays(recentPlays: RecentPlayData[]): Promise<void> {
+  async saveRecentPlays(recentPlays: RecentPlayData[]): Promise<string> {
     try {
       const timestamp = Date.now();
-      const filename = `data/recent-plays-${timestamp}.json`;
-      
-      // Ensure data directory exists
-      if (!fs.existsSync('data')) {
-        fs.mkdirSync('data', { recursive: true });
-      }
+      const filename = `temp-recent-plays-${timestamp}.json`;
       
       const data = {
         metadata: {
@@ -145,6 +140,7 @@ class SpotifyRecentPlaysFetcher {
 
       fs.writeFileSync(filename, JSON.stringify(data, null, 2));
       console.log(`💾 Saved recent plays to: ${filename}`);
+      return filename;
     } catch (error) {
       console.error('❌ Failed to save recent plays:', error);
       throw error;
@@ -154,11 +150,12 @@ class SpotifyRecentPlaysFetcher {
   /**
    * Main function to fetch and save recent plays
    */
-  async fetchAndSaveRecentPlays(): Promise<void> {
+  async fetchAndSaveRecentPlays(): Promise<string> {
     try {
       const recentPlays = await this.fetchRecentPlays();
-      await this.saveRecentPlays(recentPlays);
+      const filename = await this.saveRecentPlays(recentPlays);
       console.log('🎉 Recent plays fetch completed successfully!');
+      return filename;
     } catch (error) {
       console.error('💥 Recent plays fetch failed:', error);
       process.exit(1);

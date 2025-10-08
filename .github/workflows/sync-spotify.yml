@@ -43,7 +43,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
-          git add data/merged-streaming-history/ data/recent-plays-*.json data/cleaned-data/
+          git add data/merged-streaming-history/ data/cleaned-data/
           git diff --staged --quiet || git commit -m "Daily Spotify sync $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           
       - name: Push changes
