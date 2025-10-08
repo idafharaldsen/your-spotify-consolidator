@@ -386,10 +386,11 @@ class CleanedFilesGenerator {
     }>();
 
     history.songs.forEach(song => {
-      const albumId = song.album.id;
+      // Use album name + first artist as key since many songs have empty album IDs
+      const albumKey = `${song.album.name}|${song.artists[0] || 'Unknown Artist'}`;
       
-      if (!albumMap.has(albumId)) {
-        albumMap.set(albumId, {
+      if (!albumMap.has(albumKey)) {
+        albumMap.set(albumKey, {
           songs: [],
           totalPlayCount: 0,
           totalListeningTime: 0,
@@ -397,7 +398,7 @@ class CleanedFilesGenerator {
         });
       }
       
-      const albumData = albumMap.get(albumId)!;
+      const albumData = albumMap.get(albumKey)!;
       albumData.songs.push(song);
       albumData.totalPlayCount += song.playCount;
       albumData.totalListeningTime += song.totalListeningTime;
@@ -405,7 +406,7 @@ class CleanedFilesGenerator {
     });
 
     // Convert to cleaned album format
-    const albums: CleanedAlbum[] = Array.from(albumMap.entries()).map(([albumId, data]) => {
+    const albums: CleanedAlbum[] = Array.from(albumMap.entries()).map(([albumKey, data]) => {
       const firstSong = data.songs[0];
       
       return {
@@ -413,7 +414,7 @@ class CleanedFilesGenerator {
         duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
         count: data.totalPlayCount,
         differents: data.differentSongs.size,
-        primaryAlbumId: albumId,
+        primaryAlbumId: firstSong.album.id || '', // Use actual album ID if available
         total_count: data.totalPlayCount,
         total_duration_ms: data.totalListeningTime,
         album: {
@@ -428,7 +429,7 @@ class CleanedFilesGenerator {
           genres: firstSong.artist.genres
         },
         consolidated_count: data.totalPlayCount,
-        original_albumIds: [albumId]
+        original_albumIds: data.songs.map(song => song.album.id).filter(id => id !== '') // Collect all non-empty album IDs
       };
     });
 
@@ -605,15 +606,16 @@ class CleanedFilesGenerator {
     // Group songs by album
     const albumMap = new Map<string, CompleteSong[]>();
     history.songs.forEach(song => {
-      const albumId = song.album.id;
-      if (!albumMap.has(albumId)) {
-        albumMap.set(albumId, []);
+      // Use album name + first artist as key since many songs have empty album IDs
+      const albumKey = `${song.album.name}|${song.artists[0] || 'Unknown Artist'}`;
+      if (!albumMap.has(albumKey)) {
+        albumMap.set(albumKey, []);
       }
-      albumMap.get(albumId)!.push(song);
+      albumMap.get(albumKey)!.push(song);
     });
 
     // Convert to albums with songs format
-    const albumsWithSongs: AlbumWithSongs[] = Array.from(albumMap.entries()).map(([albumId, songs]) => {
+    const albumsWithSongs: AlbumWithSongs[] = Array.from(albumMap.entries()).map(([albumKey, songs]) => {
       const firstSong = songs[0];
       const totalPlayCount = songs.reduce((sum, song) => sum + song.playCount, 0);
       const totalListeningTime = songs.reduce((sum, song) => sum + song.totalListeningTime, 0);
@@ -639,7 +641,7 @@ class CleanedFilesGenerator {
         duration_ms: totalListeningTime,
         count: totalPlayCount,
         differents: songs.length,
-        primaryAlbumId: albumId,
+        primaryAlbumId: firstSong.album.id || '', // Use actual album ID if available
         total_count: totalPlayCount,
         total_duration_ms: totalListeningTime,
         album: {
@@ -654,7 +656,7 @@ class CleanedFilesGenerator {
           genres: firstSong.artist.genres
         },
         consolidated_count: totalPlayCount,
-        original_albumIds: [albumId],
+        original_albumIds: songs.map(song => song.album.id).filter(id => id !== ''), // Collect all non-empty album IDs
         total_songs: songs.length,
         played_songs: playedSongs,
         unplayed_songs: songs.length - playedSongs,

@@ -7,22 +7,24 @@ import { ExternalLink, Play, Disc, Music } from 'lucide-react';
 interface CleanedAlbum {
   duration_ms: number;
   count: number;
-  albumId: string;
+  primaryAlbumId: string;
   album: {
     name: string;
+    album_type: string;
+    artists: string[];
+    release_date: string;
+    release_date_precision: string;
+    popularity: number;
     images: Array<{
       height: number;
       url: string;
       width: number;
     }>;
-  };
-  artist: {
-    name: string;
+    external_urls: Record<string, string>;
     genres: string[];
   };
   consolidated_count: number;
   original_albumIds: string[];
-  original_counts: number[];
   rank: number;
 }
 
@@ -182,7 +184,7 @@ export default function Albums() {
         {/* Albums List */}
         <div className="space-y-4">
           {albums.map((album) => (
-            <div key={album.albumId || `${album.artist.name}-${album.album.name}`} className="flex items-center space-x-4 rounded-lg border border-card-border bg-card-accent p-4 hover:bg-card transition-colors">
+            <div key={album.primaryAlbumId || `${album.album.artists[0]}-${album.album.name}`} className="flex items-center space-x-4 rounded-lg border border-card-border bg-card-accent p-4 hover:bg-card transition-colors">
               {/* Rank */}
               <div className="flex-shrink-0 w-8 text-center">
                 <span className="text-lg font-bold text-muted-foreground">#{album.rank}</span>
@@ -208,7 +210,7 @@ export default function Albums() {
               {/* Album Info */}
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-lg truncate">{album.album.name}</h3>
-                <p className="text-muted-foreground truncate">{album.artist.name}</p>
+                <p className="text-muted-foreground truncate">{album.album.artists[0] || 'Unknown Artist'}</p>
                 {album.consolidated_count > 1 && (
                   <p className="text-xs text-blue-600">
                     Consolidated from {album.consolidated_count} versions
@@ -226,7 +228,7 @@ export default function Albums() {
               {/* Actions */}
               <div className="flex-shrink-0">
                 <a
-                  href={`https://open.spotify.com/album/${album.albumId}`}
+                  href={`https://open.spotify.com/album/${album.primaryAlbumId}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center space-x-1 text-sm text-muted-foreground hover:text-foreground transition-colors"
