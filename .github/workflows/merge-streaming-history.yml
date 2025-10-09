@@ -3,10 +3,10 @@ name: Merge Streaming History
 on:
   push:
     paths:
-      - 'spotify-history/**'
+      - 'data/spotify-history/**'
   pull_request:
     paths:
-      - 'spotify-history/**'
+      - 'data/spotify-history/**'
 
 jobs:
   merge-history:
@@ -28,10 +28,10 @@ jobs:
       - name: Check for spotify-history files
         id: check-files
         run: |
-          if [ -d "spotify-history" ] && [ "$(ls -A spotify-history/*.json 2>/dev/null)" ]; then
+          if [ -d "data/spotify-history" ] && [ "$(ls -A data/spotify-history/*.json 2>/dev/null)" ]; then
             echo "files_exist=true" >> $GITHUB_OUTPUT
             echo "Found Spotify history files"
-            ls -la spotify-history/
+            ls -la data/spotify-history/
           else
             echo "files_exist=false" >> $GITHUB_OUTPUT
             echo "No Spotify history files found"
@@ -46,7 +46,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: merged-streaming-history
-          path: merged-streaming-history/
+          path: data/merged-streaming-history/
           retention-days: 30
           
       - name: Commit merged data
@@ -55,8 +55,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           
-          if [ -d "merged-streaming-history" ]; then
-            git add merged-streaming-history/
+          if [ -d "data/merged-streaming-history" ]; then
+            git add data/merged-streaming-history/
             if git diff --staged --quiet; then
               echo "No changes to commit"
             else
