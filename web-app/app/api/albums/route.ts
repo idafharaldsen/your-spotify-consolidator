@@ -6,22 +6,24 @@ import { glob } from 'glob';
 interface CleanedAlbum {
   duration_ms: number;
   count: number;
-  albumId: string;
+  primaryAlbumId: string;
   album: {
     name: string;
+    album_type: string;
+    artists: string[];
+    release_date: string;
+    release_date_precision: string;
+    popularity: number;
     images: Array<{
       height: number;
       url: string;
       width: number;
     }>;
-  };
-  artist: {
-    name: string;
+    external_urls: Record<string, string>;
     genres: string[];
   };
   consolidated_count: number;
   original_albumIds: string[];
-  original_counts: number[];
   rank: number;
 }
 

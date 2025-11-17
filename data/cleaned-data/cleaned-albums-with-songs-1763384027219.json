@@ -4,7 +4,7 @@
     "consolidatedTotalAlbums": 100,
     "duplicatesRemoved": 23335,
     "consolidationRate": 99.57,
-    "timestamp": "2025-11-17T11:36:30.066Z",
+    "timestamp": "2025-11-17T12:53:47.229Z",
     "source": "Merged Streaming History with Song Breakdown",
     "totalListeningEvents": 178144
   },
@@ -18,10 +18,10 @@
       "total_count": 678,
       "total_duration_ms": 129677501,
       "album": {
-        "name": "Blonde",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Frank Ocean"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -591,10 +591,10 @@
       "total_count": 281,
       "total_duration_ms": 84110146,
       "album": {
-        "name": "In The Aeroplane Over The Sea",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Neutral Milk Hotel"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -892,10 +892,10 @@
       "total_count": 438,
       "total_duration_ms": 52745346,
       "album": {
-        "name": "Last Summer",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Barnes Blvd."
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -1108,10 +1108,10 @@
       "total_count": 423,
       "total_duration_ms": 63899263,
       "album": {
-        "name": "I Wish I Could Stay Here",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Basement"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -1681,10 +1681,10 @@
       "total_count": 410,
       "total_duration_ms": 66736056,
       "album": {
-        "name": "Salad Days",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Mac DeMarco"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -2084,10 +2084,10 @@
       "total_count": 399,
       "total_duration_ms": 69063230,
       "album": {
-        "name": "Shallow Grave",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Tallest Man On Earth"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -2555,10 +2555,10 @@
       "total_count": 397,
       "total_duration_ms": 71800740,
       "album": {
-        "name": "The Wild Hunt",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Tallest Man On Earth"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -3332,10 +3332,10 @@
       "total_count": 316,
       "total_duration_ms": 33515524,
       "album": {
-        "name": "Parting the Sea Between Brightness and Me",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Touché Amoré"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -3582,10 +3582,10 @@
       "total_count": 386,
       "total_duration_ms": 43102463,
       "album": {
-        "name": "Time & Space",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Turnstile"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -3832,10 +3832,10 @@
       "total_count": 376,
       "total_duration_ms": 55185705,
       "album": {
-        "name": "Joyless",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "JOYLESS"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -4031,10 +4031,10 @@
       "total_count": 375,
       "total_duration_ms": 79639196,
       "album": {
-        "name": "Bon Iver",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Bon Iver"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -4655,10 +4655,10 @@
       "total_count": 367,
       "total_duration_ms": 47297141,
       "album": {
-        "name": "GLOW ON",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Turnstile"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -4939,10 +4939,10 @@
       "total_count": 362,
       "total_duration_ms": 59487116,
       "album": {
-        "name": "Colourmeinkindness",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Basement"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -5614,10 +5614,10 @@
       "total_count": 362,
       "total_duration_ms": 64102029,
       "album": {
-        "name": "London Calling (Remastered)",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Clash"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -5966,7 +5966,7 @@
       "total_count": 349,
       "total_duration_ms": 67161019,
       "album": {
-        "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -6369,10 +6369,10 @@
       "total_count": 331,
       "total_duration_ms": 56961632,
       "album": {
-        "name": "On The Impossible Past",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Menzingers"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -6806,10 +6806,10 @@
       "total_count": 330,
       "total_duration_ms": 53852717,
       "album": {
-        "name": "The Life Of Pablo",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kanye West"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -7515,10 +7515,10 @@
       "total_count": 318,
       "total_duration_ms": 32647884,
       "album": {
-        "name": "Never Hungover Again",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Joyce Manor"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -7884,10 +7884,10 @@
       "total_count": 314,
       "total_duration_ms": 69204208,
       "album": {
-        "name": "To Pimp A Butterfly",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kendrick Lamar"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -8457,10 +8457,10 @@
       "total_count": 305,
       "total_duration_ms": 56108180,
       "album": {
-        "name": "22, A Million",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Bon Iver"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -8826,10 +8826,10 @@
       "total_count": 304,
       "total_duration_ms": 52223018,
       "album": {
-        "name": "Wide Awake!",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Parquet Courts"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -9297,10 +9297,10 @@
       "total_count": 295,
       "total_duration_ms": 61162763,
       "album": {
-        "name": "Malibu",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Anderson .Paak"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -9649,10 +9649,10 @@
       "total_count": 290,
       "total_duration_ms": 55896422,
       "album": {
-        "name": "DAMN.",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kendrick Lamar"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -10154,10 +10154,10 @@
       "total_count": 284,
       "total_duration_ms": 46229653,
       "album": {
-        "name": "The Story So Far",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Story So Far"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -10523,10 +10523,10 @@
       "total_count": 153,
       "total_duration_ms": 55777765,
       "album": {
-        "name": "Hung at Heart",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Growlers"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -10807,10 +10807,10 @@
       "total_count": 279,
       "total_duration_ms": 63042276,
       "album": {
-        "name": "Swimming",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Mac Miller"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -11057,10 +11057,10 @@
       "total_count": 274,
       "total_duration_ms": 35693015,
       "album": {
-        "name": "Is Survived By",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Touché Amoré"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -11511,10 +11511,10 @@
       "total_count": 273,
       "total_duration_ms": 56216942,
       "album": {
-        "name": "I Love You. It's a Fever Dream.",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Tallest Man On Earth"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -11880,10 +11880,10 @@
       "total_count": 269,
       "total_duration_ms": 49384178,
       "album": {
-        "name": "Meir",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kvelertak"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -12266,10 +12266,10 @@
       "total_count": 269,
       "total_duration_ms": 57444251,
       "album": {
-        "name": "Discovery",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Daft Punk"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -12533,10 +12533,10 @@
       "total_count": 203,
       "total_duration_ms": 37070347,
       "album": {
-        "name": "FIDLAR",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "FIDLAR"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -12851,10 +12851,10 @@
       "total_count": 266,
       "total_duration_ms": 40412968,
       "album": {
-        "name": "Into The Wild",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Eddie Vedder"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -13407,10 +13407,10 @@
       "total_count": 262,
       "total_duration_ms": 54149576,
       "album": {
-        "name": "For Emma, Forever Ago",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Bon Iver"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -13946,10 +13946,10 @@
       "total_count": 260,
       "total_duration_ms": 50003316,
       "album": {
-        "name": "Peripheral Vision",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Turnover"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -14774,10 +14774,10 @@
       "total_count": 256,
       "total_duration_ms": 35649325,
       "album": {
-        "name": "The Death Of Randy Fitzsimmons",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Hives"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -15007,10 +15007,10 @@
       "total_count": 251,
       "total_duration_ms": 48116110,
       "album": {
-        "name": "Skin",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Flume"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -15580,10 +15580,10 @@
       "total_count": 223,
       "total_duration_ms": 48388746,
       "album": {
-        "name": "Ompa Til Du Dør",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kaizers Orchestra"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -15864,10 +15864,10 @@
       "total_count": 242,
       "total_duration_ms": 22856973,
       "album": {
-        "name": "Collection 2",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Misfits"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -16233,10 +16233,10 @@
       "total_count": 241,
       "total_duration_ms": 39144167,
       "album": {
-        "name": "2",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Mac DeMarco"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -16823,10 +16823,10 @@
       "total_count": 233,
       "total_duration_ms": 38702795,
       "album": {
-        "name": "Animorphs",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Honningbarna"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -17056,10 +17056,10 @@
       "total_count": 232,
       "total_duration_ms": 44424157,
       "album": {
-        "name": "Demon Days",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Gorillaz"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -17357,10 +17357,10 @@
       "total_count": 228,
       "total_duration_ms": 35440011,
       "album": {
-        "name": "Floral Green",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Title Fight"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -17845,10 +17845,10 @@
       "total_count": 227,
       "total_duration_ms": 41991468,
       "album": {
-        "name": "channel ORANGE",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Frank Ocean"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -18452,10 +18452,10 @@
       "total_count": 225,
       "total_duration_ms": 38090065,
       "album": {
-        "name": "Shapeshifter",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Knuckle Puck"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -18770,10 +18770,10 @@
       "total_count": 224,
       "total_duration_ms": 48344810,
       "album": {
-        "name": "The Very Best Of Nina Simone 1967-1972 - Sugar In My Bowl",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Nina Simone"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -19479,10 +19479,10 @@
       "total_count": 224,
       "total_duration_ms": 38184625,
       "album": {
-        "name": "Soft Spot",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Honningbarna"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -19729,10 +19729,10 @@
       "total_count": 223,
       "total_duration_ms": 42355793,
       "album": {
-        "name": "180",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Palma Violets"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -20115,10 +20115,10 @@
       "total_count": 222,
       "total_duration_ms": 39101379,
       "album": {
-        "name": "Is This It",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Strokes"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -20348,10 +20348,10 @@
       "total_count": 222,
       "total_duration_ms": 35068909,
       "album": {
-        "name": "Tigers Jaw",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Tigers Jaw"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -20870,10 +20870,10 @@
       "total_count": 222,
       "total_duration_ms": 51809793,
       "album": {
-        "name": "In Rainbows",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Radiohead"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -21239,10 +21239,10 @@
       "total_count": 221,
       "total_duration_ms": 36663491,
       "album": {
-        "name": "IGOR",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Tyler, The Creator"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -21472,10 +21472,10 @@
       "total_count": 220,
       "total_duration_ms": 38807708,
       "album": {
-        "name": "SATURATION",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "BROCKHAMPTON"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -21790,10 +21790,10 @@
       "total_count": 219,
       "total_duration_ms": 38777410,
       "album": {
-        "name": "Graduation",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kanye West"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -22431,10 +22431,10 @@
       "total_count": 214,
       "total_duration_ms": 38491676,
       "album": {
-        "name": "Thunder, Lightning, Strike",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Go! Team"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -22902,10 +22902,10 @@
       "total_count": 212,
       "total_duration_ms": 38766359,
       "album": {
-        "name": "Chinese Fountain",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Growlers"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -23679,10 +23679,10 @@
       "total_count": 207,
       "total_duration_ms": 38509814,
       "album": {
-        "name": "Maestro",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kaizers Orchestra"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -24456,10 +24456,10 @@
       "total_count": 198,
       "total_duration_ms": 44542192,
       "album": {
-        "name": "Hounds Of Love",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kate Bush"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -24774,10 +24774,10 @@
       "total_count": 204,
       "total_duration_ms": 37552915,
       "album": {
-        "name": "Flower Boy",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Tyler, The Creator"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -25041,10 +25041,10 @@
       "total_count": 202,
       "total_duration_ms": 40274267,
       "album": {
-        "name": "The Gulag Orkestar",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Beirut"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -25342,10 +25342,10 @@
       "total_count": 201,
       "total_duration_ms": 44420670,
       "album": {
-        "name": "Lust For Life",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Iggy Pop"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -25762,10 +25762,10 @@
       "total_count": 201,
       "total_duration_ms": 37951222,
       "album": {
-        "name": "The College Dropout",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kanye West"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -26471,10 +26471,10 @@
       "total_count": 201,
       "total_duration_ms": 30237415,
       "album": {
-        "name": "Youth",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Citizen"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -27027,10 +27027,10 @@
       "total_count": 201,
       "total_duration_ms": 32596494,
       "album": {
-        "name": "i,i",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Bon Iver"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -27498,10 +27498,10 @@
       "total_count": 200,
       "total_duration_ms": 25491299,
       "album": {
-        "name": "Verden er enkel",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Honningbarna"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -28122,10 +28122,10 @@
       "total_count": 200,
       "total_duration_ms": 37690097,
       "album": {
-        "name": "Borders",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Fay Wildhagen"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -28338,10 +28338,10 @@
       "total_count": 196,
       "total_duration_ms": 30690186,
       "album": {
-        "name": "Veneer",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "José González"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -28639,10 +28639,10 @@
       "total_count": 194,
       "total_duration_ms": 41193135,
       "album": {
-        "name": "Geography",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Tom Misch"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -28889,10 +28889,10 @@
       "total_count": 189,
       "total_duration_ms": 34917623,
       "album": {
-        "name": "Afraid of Heights",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Wavves"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -29326,10 +29326,10 @@
       "total_count": 189,
       "total_duration_ms": 38001942,
       "album": {
-        "name": "Noen ganger og andre",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Cezinando"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -29712,10 +29712,10 @@
       "total_count": 187,
       "total_duration_ms": 43705837,
       "album": {
-        "name": "My Beautiful Dark Twisted Fantasy",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kanye West"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -30183,10 +30183,10 @@
       "total_count": 187,
       "total_duration_ms": 47490987,
       "album": {
-        "name": "II",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Moderat"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -30603,10 +30603,10 @@
       "total_count": 186,
       "total_duration_ms": 48497999,
       "album": {
-        "name": "Kill 'Em All",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Metallica"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -31006,10 +31006,10 @@
       "total_count": 186,
       "total_duration_ms": 44614774,
       "album": {
-        "name": "III (Deluxe Edition)",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Moderat"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -31239,10 +31239,10 @@
       "total_count": 185,
       "total_duration_ms": 34725638,
       "album": {
-        "name": "Rumours",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Fleetwood Mac"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -31591,10 +31591,10 @@
       "total_count": 185,
       "total_duration_ms": 34885459,
       "album": {
-        "name": "Sempiternal",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Bring Me The Horizon"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -31790,10 +31790,10 @@
       "total_count": 185,
       "total_duration_ms": 23041482,
       "album": {
-        "name": "Songs To Scream At The Sun",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Have Heart"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -32159,7 +32159,7 @@
       "total_count": 185,
       "total_duration_ms": 37406465,
       "album": {
-        "name": "Hunky Dory",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -32562,10 +32562,10 @@
       "total_count": 184,
       "total_duration_ms": 22112149,
       "album": {
-        "name": "The Last Thing You Forget",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Title Fight"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -33118,10 +33118,10 @@
       "total_count": 184,
       "total_duration_ms": 26950861,
       "album": {
-        "name": "Alle Hjerter Deler Seg",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Oslo Ess"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -33623,10 +33623,10 @@
       "total_count": 182,
       "total_duration_ms": 41010230,
       "album": {
-        "name": "Carrie & Lowell",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Sufjan Stevens"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -34332,10 +34332,10 @@
       "total_count": 180,
       "total_duration_ms": 47409221,
       "album": {
-        "name": "good kid, m.A.A.d city",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kendrick Lamar"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -34718,10 +34718,10 @@
       "total_count": 180,
       "total_duration_ms": 38781259,
       "album": {
-        "name": "Circles",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Mac Miller"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -35036,10 +35036,10 @@
       "total_count": 179,
       "total_duration_ms": 31927185,
       "album": {
-        "name": "Late Registration",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Kanye West"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -35779,10 +35779,10 @@
       "total_count": 179,
       "total_duration_ms": 31636074,
       "album": {
-        "name": "RARE",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Hundredth"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -36216,10 +36216,10 @@
       "total_count": 178,
       "total_duration_ms": 36734783,
       "album": {
-        "name": "Coloring Book",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Chance the Rapper"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -36483,10 +36483,10 @@
       "total_count": 177,
       "total_duration_ms": 20136816,
       "album": {
-        "name": "Collection",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Misfits"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -36852,10 +36852,10 @@
       "total_count": 89,
       "total_duration_ms": 26246978,
       "album": {
-        "name": "Feast Of Love",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Pity Sex"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -37051,10 +37051,10 @@
       "total_count": 174,
       "total_duration_ms": 37339349,
       "album": {
-        "name": "Life Without Sound",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Cloud Nothings"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -37369,10 +37369,10 @@
       "total_count": 173,
       "total_duration_ms": 33204684,
       "album": {
-        "name": "Apocalypse Dudes",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Turbonegro"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -38027,10 +38027,10 @@
       "total_count": 172,
       "total_duration_ms": 23077567,
       "album": {
-        "name": "You're Gonna Miss It All",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Modern Baseball"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -38481,10 +38481,10 @@
       "total_count": 171,
       "total_duration_ms": 26883976,
       "album": {
-        "name": "Uleste Bøker Og Utgåtte Sko",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Oslo Ess"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -39122,10 +39122,10 @@
       "total_count": 170,
       "total_duration_ms": 35903093,
       "album": {
-        "name": "Sadnecessary",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Milky Chance"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -39576,10 +39576,10 @@
       "total_count": 135,
       "total_duration_ms": 21887876,
       "album": {
-        "name": "Everything So Far",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Pinegrove"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -39962,10 +39962,10 @@
       "total_count": 169,
       "total_duration_ms": 33232458,
       "album": {
-        "name": "Gulag Orkestar",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Beirut"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -40331,10 +40331,10 @@
       "total_count": 169,
       "total_duration_ms": 22180370,
       "album": {
-        "name": "RMCM",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Richy Mitch & The Coal Miners"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -40598,10 +40598,10 @@
       "total_count": 168,
       "total_duration_ms": 26971598,
       "album": {
-        "name": "We Will Always Love You",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Avalanches"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -41052,10 +41052,10 @@
       "total_count": 167,
       "total_duration_ms": 30793949,
       "album": {
-        "name": "Mellon Collie And The Infinite Sadness",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "The Smashing Pumpkins"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -41574,10 +41574,10 @@
       "total_count": 167,
       "total_duration_ms": 39342587,
       "album": {
-        "name": "Every Kingdom",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "Ben Howard"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
@@ -41943,10 +41943,10 @@
       "total_count": 167,
       "total_duration_ms": 30812635,
       "album": {
-        "name": "LONG.LIVE.A$AP (Deluxe Version)",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
-          "A$AP Rocky"
+          "David Bowie"
         ],
         "release_date": "",
         "release_date_precision": "day",
