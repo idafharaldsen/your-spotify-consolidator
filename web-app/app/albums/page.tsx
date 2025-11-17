@@ -6,7 +6,10 @@ import { ExternalLink, Play, Disc, Music } from 'lucide-react';
 
 interface CleanedAlbum {
   duration_ms: number;
+  total_duration_ms: number;
   count: number;
+  total_count: number;
+  differents: number;
   primaryAlbumId: string;
   album: {
     name: string;
@@ -37,7 +40,7 @@ interface AlbumsResponse {
     hasMore: boolean;
   };
   metadata: {
-    totalAlbums: number;
+    consolidatedTotalAlbums: number;
     originalTotalAlbums: number;
     duplicatesRemoved: number;
     consolidationRate: number;
@@ -82,9 +85,14 @@ export default function Albums() {
   }, [currentPage, pageSize]);
 
   const formatDuration = (ms: number) => {
-    const minutes = Math.floor(ms / 60000);
-    const seconds = Math.floor((ms % 60000) / 1000);
-    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+    const totalMinutes = Math.floor(ms / 60000);
+    const hours = Math.floor(totalMinutes / 60);
+    const minutes = totalMinutes % 60;
+    
+    if (hours > 0) {
+      return `${hours}h ${minutes}m`;
+    }
+    return `${minutes}m`;
   };
 
   const formatPlayCount = (count: number) => {
@@ -147,7 +155,7 @@ export default function Albums() {
                 <Disc className="h-4 w-4 text-muted-foreground" />
                 <div>
                   <p className="text-sm font-medium text-muted-foreground">Total Albums</p>
-                  <p className="text-2xl font-bold">{metadata.totalAlbums?.toLocaleString() || '0'}</p>
+                  <p className="text-2xl font-bold">{metadata.consolidatedTotalAlbums?.toLocaleString() || '0'}</p>
                 </div>
               </div>
             </div>
@@ -211,18 +219,13 @@ export default function Albums() {
               <div className="flex-1 min-w-0">
                 <h3 className="font-semibold text-lg truncate">{album.album.name}</h3>
                 <p className="text-muted-foreground truncate">{album.album.artists[0] || 'Unknown Artist'}</p>
-                {album.consolidated_count > 1 && (
-                  <p className="text-xs text-blue-600">
-                    Consolidated from {album.consolidated_count} versions
-                  </p>
-                )}
               </div>
 
               {/* Stats */}
               <div className="flex-shrink-0 text-right space-y-1">
                 <div className="text-lg font-bold">{formatPlayCount(album.count)}</div>
                 <div className="text-sm text-muted-foreground">plays</div>
-                <div className="text-sm text-muted-foreground">{formatDuration(album.duration_ms)}</div>
+                <div className="text-sm text-muted-foreground">{formatDuration(album.total_duration_ms)}</div>
               </div>
 
               {/* Actions */}
