@@ -325,6 +325,37 @@ class DataMerger {
   }
 
   /**
+   * Clean up old merged streaming history files (keep only the latest)
+   */
+  private cleanupOldMergedFiles(keepFile: string): void {
+    try {
+      if (!fs.existsSync(this.mergedDir)) {
+        return;
+      }
+
+      const files = fs.readdirSync(this.mergedDir)
+        .filter(file => file.startsWith('merged-streaming-history-') && file.endsWith('.json'));
+
+      const keepFileName = path.basename(keepFile);
+      let deletedCount = 0;
+
+      files.forEach(file => {
+        if (file !== keepFileName) {
+          const filePath = path.join(this.mergedDir, file);
+          fs.unlinkSync(filePath);
+          deletedCount++;
+        }
+      });
+
+      if (deletedCount > 0) {
+        console.log(`🧹 Cleaned up ${deletedCount} old merged streaming history file(s)`);
+      }
+    } catch (error) {
+      console.error('⚠️  Error cleaning up old merged files:', error);
+    }
+  }
+
+  /**
    * Main merge process
    */
   public async merge(): Promise<void> {
@@ -357,7 +388,10 @@ class DataMerger {
       const mergedData = this.mergeData(existingData, recentPlays);
 
       // Save merged data
-      this.saveMergedData(mergedData);
+      const savedFilePath = this.saveMergedData(mergedData);
+
+      // Clean up old merged files (keep only the new one)
+      this.cleanupOldMergedFiles(savedFilePath);
 
       // Clean up temp files
       this.cleanupTempFiles();
