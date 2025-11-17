@@ -245,9 +245,25 @@ class DataMerger {
 
     // Calculate updated metadata
     const totalListeningTime = allSongs.reduce((sum, song) => sum + song.totalListeningTime, 0);
-    const allPlayedAtTimes = allSongs.flatMap(song => song.listeningEvents.map(event => event.playedAt));
-    const earliest = allPlayedAtTimes.length > 0 ? new Date(Math.min(...allPlayedAtTimes.map(time => new Date(time).getTime()))).toISOString() : existingData.metadata.dateRange.earliest;
-    const latest = allPlayedAtTimes.length > 0 ? new Date(Math.max(...allPlayedAtTimes.map(time => new Date(time).getTime()))).toISOString() : existingData.metadata.dateRange.latest;
+    
+    // Calculate earliest and latest dates efficiently without spreading large arrays
+    let earliestTime: number | null = null;
+    let latestTime: number | null = null;
+    
+    for (const song of allSongs) {
+      for (const event of song.listeningEvents) {
+        const time = new Date(event.playedAt).getTime();
+        if (earliestTime === null || time < earliestTime) {
+          earliestTime = time;
+        }
+        if (latestTime === null || time > latestTime) {
+          latestTime = time;
+        }
+      }
+    }
+    
+    const earliest = earliestTime !== null ? new Date(earliestTime).toISOString() : existingData.metadata.dateRange.earliest;
+    const latest = latestTime !== null ? new Date(latestTime).toISOString() : existingData.metadata.dateRange.latest;
 
     console.log(`📊 Merge summary:`);
     console.log(`- Existing songs updated: ${existingSongsUpdated}`);
