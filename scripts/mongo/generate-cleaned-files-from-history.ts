@@ -796,8 +796,9 @@ class CleanedFilesGenerator {
         }
         console.log('✅ Spotify token initialized');
       } catch (error) {
-        console.warn('⚠️  Could not initialize Spotify token. Metadata fetching will be skipped.');
-        console.warn('   Make sure SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN are set.');
+        console.log('ℹ️  Spotify tokens not available. Continuing without metadata enrichment.');
+        console.log('   (This is optional - all cleaned files will still be generated successfully)');
+        console.log('   To enable metadata enrichment, set SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET, and SPOTIFY_REFRESH_TOKEN.');
         this.tokenManager = null;
       }
     }
@@ -1094,7 +1095,7 @@ class CleanedFilesGenerator {
    */
   private async enrichSongsWithMetadata(songs: CleanedSong[], existingSongs: Map<string, CleanedSong>): Promise<CleanedSong[]> {
     if (!this.tokenManager) {
-      console.log('⚠️  Skipping song metadata enrichment (no Spotify token)');
+      console.log('ℹ️  Skipping song metadata enrichment (Spotify tokens not available)');
       return songs;
     }
 
@@ -1158,7 +1159,7 @@ class CleanedFilesGenerator {
    */
   private async enrichAlbumsWithMetadata(albums: CleanedAlbum[], existingAlbums: Map<string, CleanedAlbum>): Promise<CleanedAlbum[]> {
     if (!this.tokenManager) {
-      console.log('⚠️  Skipping album metadata enrichment (no Spotify token)');
+      console.log('ℹ️  Skipping album metadata enrichment (Spotify tokens not available)');
       return albums;
     }
 
@@ -1285,7 +1286,7 @@ class CleanedFilesGenerator {
    */
   private async enrichAlbumsWithSongsMetadata(albums: AlbumWithSongs[], existingAlbums: Map<string, AlbumWithSongs>): Promise<AlbumWithSongs[]> {
     if (!this.tokenManager) {
-      console.log('⚠️  Skipping albums with songs metadata enrichment (no Spotify token)');
+      console.log('ℹ️  Skipping albums with songs metadata enrichment (Spotify tokens not available)');
       return albums;
     }
 
@@ -1357,7 +1358,7 @@ class CleanedFilesGenerator {
    */
   private async enrichArtistsWithMetadata(artists: CleanedArtist[], existingArtists: Map<string, CleanedArtist>): Promise<CleanedArtist[]> {
     if (!this.tokenManager) {
-      console.log('⚠️  Skipping artist metadata enrichment (no Spotify token)');
+      console.log('ℹ️  Skipping artist metadata enrichment (Spotify tokens not available)');
       return artists;
     }
 
