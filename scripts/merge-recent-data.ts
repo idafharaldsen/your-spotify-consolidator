@@ -120,7 +120,16 @@ class DataMerger {
   private loadRecentPlays(filePath: string): RecentPlayData[] {
     try {
       const data = fs.readFileSync(filePath, 'utf8');
-      return JSON.parse(data);
+      const parsed = JSON.parse(data);
+      
+      // Handle both formats: direct array or wrapped with metadata
+      if (Array.isArray(parsed)) {
+        return parsed;
+      } else if (parsed.plays && Array.isArray(parsed.plays)) {
+        return parsed.plays;
+      } else {
+        throw new Error('Invalid recent plays file format');
+      }
     } catch (error) {
       console.error(`❌ Error loading recent plays from ${filePath}:`, error);
       throw error;

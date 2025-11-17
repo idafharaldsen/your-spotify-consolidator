@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import * as path from 'path';
 import { SpotifyTokenManager } from './spotify-token-manager';
 
 interface SpotifyTrack {
@@ -126,8 +127,16 @@ class SpotifyRecentPlaysFetcher {
    */
   async saveRecentPlays(recentPlays: RecentPlayData[]): Promise<string> {
     try {
+      const tempDir = 'temp';
+      
+      // Ensure temp directory exists
+      if (!fs.existsSync(tempDir)) {
+        fs.mkdirSync(tempDir, { recursive: true });
+      }
+      
       const timestamp = Date.now();
       const filename = `temp-recent-plays-${timestamp}.json`;
+      const filePath = path.join(tempDir, filename);
       
       const data = {
         metadata: {
@@ -138,9 +147,9 @@ class SpotifyRecentPlaysFetcher {
         plays: recentPlays
       };
 
-      fs.writeFileSync(filename, JSON.stringify(data, null, 2));
-      console.log(`💾 Saved recent plays to: ${filename}`);
-      return filename;
+      fs.writeFileSync(filePath, JSON.stringify(data, null, 2));
+      console.log(`💾 Saved recent plays to: ${filePath}`);
+      return filePath;
     } catch (error) {
       console.error('❌ Failed to save recent plays:', error);
       throw error;

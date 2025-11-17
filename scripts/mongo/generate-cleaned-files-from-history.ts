@@ -200,6 +200,18 @@ class CleanedFilesGenerator {
         };
       }
       
+      // If it's already CompleteListeningHistory format but missing totalListeningEvents, calculate it
+      if (data.metadata && data.metadata.totalListeningEvents === undefined && data.songs) {
+        const totalListeningEvents = data.songs.reduce((sum: number, song: CompleteSong) => sum + (song.listeningEvents?.length || 0), 0);
+        return {
+          ...data,
+          metadata: {
+            ...data.metadata,
+            totalListeningEvents
+          }
+        };
+      }
+      
       // Return as-is if it's already CompleteListeningHistory format
       return data;
     } catch (error) {
@@ -680,6 +692,41 @@ class CleanedFilesGenerator {
   }
 
   /**
+   * Clean up old cleaned data files
+   */
+  private cleanupOldCleanedFiles(): void {
+    try {
+      const cleanedDataDir = 'data/cleaned-data';
+      if (!fs.existsSync(cleanedDataDir)) {
+        return;
+      }
+
+      const files = fs.readdirSync(cleanedDataDir);
+      const patterns = [
+        /^cleaned-songs-\d+\.json$/,
+        /^cleaned-albums-\d+\.json$/,
+        /^cleaned-artists-\d+\.json$/,
+        /^cleaned-albums-with-songs-\d+\.json$/
+      ];
+
+      let deletedCount = 0;
+      files.forEach(file => {
+        if (patterns.some(pattern => pattern.test(file))) {
+          const filePath = `${cleanedDataDir}/${file}`;
+          fs.unlinkSync(filePath);
+          deletedCount++;
+        }
+      });
+
+      if (deletedCount > 0) {
+        console.log(`🧹 Cleaned up ${deletedCount} old cleaned data file(s)`);
+      }
+    } catch (error) {
+      console.error('⚠️  Error cleaning up old files:', error);
+    }
+  }
+
+  /**
    * Save all cleaned files
    */
   private saveCleanedFiles(
@@ -694,6 +741,9 @@ class CleanedFilesGenerator {
     if (!fs.existsSync('data/cleaned-data')) {
       fs.mkdirSync('data/cleaned-data', { recursive: true });
     }
+    
+    // Clean up old files before saving new ones
+    this.cleanupOldCleanedFiles();
     
     const timestamp = Date.now();
     
