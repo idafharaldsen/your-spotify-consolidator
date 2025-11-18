@@ -4,7 +4,7 @@
     "consolidatedTotalArtists": 8981,
     "duplicatesRemoved": 6,
     "consolidationRate": 0.07,
-    "timestamp": "2025-11-18T03:07:19.172Z",
+    "timestamp": "2025-11-18T13:29:05.482Z",
     "source": "Merged Streaming History",
     "totalListeningEvents": 178193
   },
@@ -26,7 +26,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 11800341
+          "total": 11802101
         },
         "images": [
           {
@@ -70,7 +70,7 @@
         "popularity": 90,
         "followers": {
           "href": null,
-          "total": 31180546
+          "total": 31188357
         },
         "images": [
           {
@@ -112,7 +112,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 3950337
+          "total": 3950761
         },
         "images": [
           {
@@ -157,7 +157,7 @@
         "popularity": 49,
         "followers": {
           "href": null,
-          "total": 637830
+          "total": 637815
         },
         "images": [
           {
@@ -201,7 +201,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 663131
+          "total": 663231
         },
         "images": [
           {
@@ -243,7 +243,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 12211810
+          "total": 12213905
         },
         "images": [
           {
@@ -288,7 +288,7 @@
         "popularity": 80,
         "followers": {
           "href": null,
-          "total": 8052427
+          "total": 8055736
         },
         "images": [
           {
@@ -334,7 +334,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 472067
+          "total": 472332
         },
         "images": [
           {
@@ -379,7 +379,7 @@
         "popularity": 90,
         "followers": {
           "href": null,
-          "total": 44853078
+          "total": 44867672
         },
         "images": [
           {
@@ -421,7 +421,7 @@
         "popularity": 84,
         "followers": {
           "href": null,
-          "total": 20416581
+          "total": 20424342
         },
         "images": [
           {
@@ -467,7 +467,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 35248
+          "total": 35258
         },
         "images": [
           {
@@ -515,7 +515,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 194817
+          "total": 194839
         },
         "images": [
           {
@@ -560,7 +560,7 @@
         "popularity": 67,
         "followers": {
           "href": null,
-          "total": 834746
+          "total": 835738
         },
         "images": [
           {
@@ -605,7 +605,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 148341
+          "total": 148346
         },
         "images": [
           {
@@ -653,7 +653,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 265178
+          "total": 265254
         },
         "images": [
           {
@@ -699,7 +699,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 25269
+          "total": 25273
         },
         "images": [
           {
@@ -746,7 +746,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 249262
+          "total": 249255
         },
         "images": [
           {
@@ -811,10 +811,10 @@
           "britpop",
           "madchester"
         ],
-        "popularity": 81,
+        "popularity": 82,
         "followers": {
           "href": null,
-          "total": 12487036
+          "total": 12493688
         },
         "images": [
           {
@@ -862,7 +862,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 1385697
+          "total": 1385835
         },
         "images": [
           {
@@ -907,7 +907,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 1031084
+          "total": 1031125
         },
         "images": [
           {
@@ -952,10 +952,10 @@
           "hardcore punk",
           "skate punk"
         ],
-        "popularity": 65,
+        "popularity": 64,
         "followers": {
           "href": null,
-          "total": 1674694
+          "total": 1675119
         },
         "images": [
           {
@@ -997,7 +997,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 2273407
+          "total": 2273492
         },
         "images": [
           {
@@ -1039,7 +1039,7 @@
         "popularity": 83,
         "followers": {
           "href": null,
-          "total": 14637828
+          "total": 14645289
         },
         "images": [
           {
@@ -1084,7 +1084,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 873034
+          "total": 872999
         },
         "images": [
           {
@@ -1126,7 +1126,7 @@
         "popularity": 87,
         "followers": {
           "href": null,
-          "total": 24619759
+          "total": 24631855
         },
         "images": [
           {
@@ -1171,7 +1171,7 @@
         "popularity": 85,
         "followers": {
           "href": null,
-          "total": 32242258
+          "total": 32252299
         },
         "images": [
           {
@@ -1261,7 +1261,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 165171
+          "total": 165194
         },
         "images": [
           {
@@ -1305,7 +1305,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 2369895
+          "total": 2370518
         },
         "images": [
           {
@@ -1350,7 +1350,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 21054
+          "total": 21067
         },
         "images": [
           {
@@ -1398,7 +1398,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 636779
+          "total": 637248
         },
         "images": [
           {
@@ -1446,7 +1446,7 @@
         "popularity": 51,
         "followers": {
           "href": null,
-          "total": 247051
+          "total": 247188
         },
         "images": [
           {
@@ -1491,7 +1491,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 764376
+          "total": 764444
         },
         "images": [
           {
@@ -1537,7 +1537,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 166250
+          "total": 166278
         },
         "images": [
           {
@@ -1580,10 +1580,10 @@
           "indie rock",
           "alternative rock"
         ],
-        "popularity": 75,
+        "popularity": 76,
         "followers": {
           "href": null,
-          "total": 6466283
+          "total": 6467426
         },
         "images": [
           {
@@ -1628,7 +1628,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 27880
+          "total": 27884
         },
         "images": [
           {
@@ -1672,7 +1672,7 @@
         "popularity": 36,
         "followers": {
           "href": null,
-          "total": 48620
+          "total": 48628
         },
         "images": [
           {
@@ -1714,7 +1714,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 3579895
+          "total": 3582004
         },
         "images": [
           {
@@ -1758,7 +1758,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 2510502
+          "total": 2510636
         },
         "images": [
           {
@@ -1805,7 +1805,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 522306
+          "total": 522424
         },
         "images": [
           {
@@ -1849,7 +1849,7 @@
         "popularity": 12,
         "followers": {
           "href": null,
-          "total": 4809
+          "total": 4807
         },
         "images": [
           {
@@ -1895,7 +1895,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 374783
+          "total": 374836
         },
         "images": [
           {
@@ -1940,7 +1940,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 29852
+          "total": 29855
         },
         "images": [
           {
@@ -1984,7 +1984,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 35933
+          "total": 35935
         },
         "images": [
           {
@@ -2029,7 +2029,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 312199
+          "total": 312223
         },
         "images": [
           {
@@ -2073,10 +2073,10 @@
           "alternative rock",
           "grunge"
         ],
-        "popularity": 76,
+        "popularity": 77,
         "followers": {
           "href": null,
-          "total": 13001681
+          "total": 13004358
         },
         "images": [
           {
@@ -2121,7 +2121,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 792952
+          "total": 793172
         },
         "images": [
           {
@@ -2170,7 +2170,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 1155878
+          "total": 1156011
         },
         "images": [
           {
@@ -2221,7 +2221,7 @@
         "popularity": 36,
         "followers": {
           "href": null,
-          "total": 172207
+          "total": 172202
         },
         "images": [
           {
@@ -2315,7 +2315,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 191414
+          "total": 191435
         },
         "images": [
           {
@@ -2361,7 +2361,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 10921056
+          "total": 10923304
         },
         "images": [
           {
@@ -2407,7 +2407,7 @@
         "popularity": 44,
         "followers": {
           "href": null,
-          "total": 296132
+          "total": 296131
         },
         "images": [
           {
@@ -2454,7 +2454,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 290738
+          "total": 290776
         },
         "images": [
           {
@@ -2500,7 +2500,7 @@
         "popularity": 84,
         "followers": {
           "href": null,
-          "total": 23313053
+          "total": 23318462
         },
         "images": [
           {
@@ -2545,7 +2545,7 @@
         "popularity": 86,
         "followers": {
           "href": null,
-          "total": 14011888
+          "total": 14022337
         },
         "images": [
           {
@@ -2587,7 +2587,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 7363255
+          "total": 7365173
         },
         "images": [
           {
@@ -2629,7 +2629,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 2709401
+          "total": 2709616
         },
         "images": [
           {
@@ -2691,10 +2691,10 @@
       "artist": {
         "name": "Eddie Vedder",
         "genres": [],
-        "popularity": 61,
+        "popularity": 62,
         "followers": {
           "href": null,
-          "total": 1681583
+          "total": 1681689
         },
         "images": [
           {
@@ -2741,7 +2741,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 2479768
+          "total": 2480292
         },
         "images": [
           {
@@ -2785,7 +2785,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 898160
+          "total": 898272
         },
         "images": [
           {
@@ -2831,7 +2831,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 32089
+          "total": 32094
         },
         "images": [
           {
@@ -2878,7 +2878,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 16023401
+          "total": 16026121
         },
         "images": [
           {
@@ -2924,7 +2924,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 7786216
+          "total": 7789343
         },
         "images": [
           {
@@ -2968,10 +2968,10 @@
       "artist": {
         "name": "Richy Mitch & The Coal Miners",
         "genres": [],
-        "popularity": 67,
+        "popularity": 68,
         "followers": {
           "href": null,
-          "total": 317789
+          "total": 317992
         },
         "images": [
           {
@@ -3020,7 +3020,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 9831620
+          "total": 9834865
         },
         "images": [
           {
@@ -3064,7 +3064,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 526624
+          "total": 526678
         },
         "images": [
           {
@@ -3113,7 +3113,7 @@
         "popularity": 24,
         "followers": {
           "href": null,
-          "total": 60143
+          "total": 60140
         },
         "images": [
           {
@@ -3166,7 +3166,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 7387822
+          "total": 7389017
         },
         "images": [
           {
@@ -3214,7 +3214,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 6654982
+          "total": 6656368
         },
         "images": [
           {
@@ -3258,7 +3258,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 1154541
+          "total": 1155449
         },
         "images": [
           {
@@ -3303,7 +3303,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 23528041
+          "total": 23535981
         },
         "images": [
           {
@@ -3354,7 +3354,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 722644
+          "total": 722682
         },
         "images": [
           {
@@ -3400,7 +3400,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 247013
+          "total": 247086
         },
         "images": [
           {
@@ -3448,7 +3448,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 1312759
+          "total": 1312990
         },
         "images": [
           {
@@ -3495,7 +3495,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 1568000
+          "total": 1568212
         },
         "images": [
           {
@@ -3541,7 +3541,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 2535698
+          "total": 2536910
         },
         "images": [
           {
@@ -3585,7 +3585,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 3565839
+          "total": 3567120
         },
         "images": [
           {
@@ -3632,7 +3632,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 693572
+          "total": 693665
         },
         "images": [
           {
@@ -3677,7 +3677,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 15757642
+          "total": 15760044
         },
         "images": [
           {
@@ -3721,7 +3721,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 6651199
+          "total": 6652320
         },
         "images": [
           {
@@ -3763,7 +3763,7 @@
         "popularity": 81,
         "followers": {
           "href": null,
-          "total": 12699720
+          "total": 12707968
         },
         "images": [
           {
@@ -3812,7 +3812,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 3242394
+          "total": 3242946
         },
         "images": [
           {
@@ -3857,7 +3857,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 59395
+          "total": 59397
         },
         "images": [
           {
@@ -3901,7 +3901,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 1232972
+          "total": 1233106
         },
         "images": [
           {
@@ -3947,7 +3947,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1808986
+          "total": 1809992
         },
         "images": [
           {
@@ -3994,7 +3994,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 1294649
+          "total": 1294852
         },
         "images": [
           {
@@ -4042,7 +4042,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 970885
+          "total": 971000
         },
         "images": [
           {
@@ -4090,7 +4090,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 662028
+          "total": 662418
         },
         "images": [
           {
@@ -4139,7 +4139,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 2788464
+          "total": 2789041
         },
         "images": [
           {
@@ -4190,7 +4190,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 1772514
+          "total": 1772725
         },
         "images": [
           {
@@ -4236,7 +4236,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 113298
+          "total": 113301
         },
         "images": [
           {
@@ -4278,7 +4278,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 45775408
+          "total": 45779746
         },
         "images": [
           {
@@ -4323,7 +4323,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 5909196
+          "total": 5909948
         },
         "images": [
           {
@@ -4374,7 +4374,7 @@
         "popularity": 84,
         "followers": {
           "href": null,
-          "total": 14052124
+          "total": 14056980
         },
         "images": [
           {
@@ -4419,7 +4419,7 @@
         "popularity": 86,
         "followers": {
           "href": null,
-          "total": 9629795
+          "total": 9636076
         },
         "images": [
           {
@@ -4463,7 +4463,7 @@
         "popularity": 96,
         "followers": {
           "href": null,
-          "total": 103623329
+          "total": 103654256
         },
         "images": [
           {
@@ -4505,7 +4505,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 1338459
+          "total": 1339090
         },
         "images": [
           {
@@ -4550,7 +4550,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 906251
+          "total": 906490
         },
         "images": [
           {
@@ -4592,7 +4592,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 14607209
+          "total": 14610261
         },
         "images": [
           {
@@ -4681,7 +4681,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 75167
+          "total": 75210
         },
         "images": [
           {
@@ -4727,7 +4727,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 101559
+          "total": 101564
         },
         "images": [
           {
@@ -4772,7 +4772,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 6110661
+          "total": 6112390
         },
         "images": [
           {
@@ -4817,7 +4817,7 @@
         "popularity": 81,
         "followers": {
           "href": null,
-          "total": 17402286
+          "total": 17406562
         },
         "images": [
           {
@@ -4861,7 +4861,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1358550
+          "total": 1358678
         },
         "images": [
           {
@@ -4908,7 +4908,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 6692719
+          "total": 6694690
         },
         "images": [
           {
@@ -4955,7 +4955,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 3354569
+          "total": 3355315
         },
         "images": [
           {
@@ -5000,7 +5000,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 2863781
+          "total": 2864402
         },
         "images": [
           {
@@ -5045,7 +5045,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 59166
+          "total": 59174
         },
         "images": [
           {
@@ -5092,7 +5092,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 965614
+          "total": 965908
         },
         "images": [
           {
@@ -5137,7 +5137,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1791650
+          "total": 1791978
         },
         "images": [
           {
@@ -5184,7 +5184,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 549437
+          "total": 549768
         },
         "images": [
           {
@@ -5229,7 +5229,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 250577
+          "total": 250616
         },
         "images": [
           {
@@ -5274,7 +5274,7 @@
         "popularity": 32,
         "followers": {
           "href": null,
-          "total": 11362
+          "total": 11361
         },
         "images": [
           {
@@ -5321,7 +5321,7 @@
         "popularity": 67,
         "followers": {
           "href": null,
-          "total": 7385549
+          "total": 7386609
         },
         "images": [
           {
@@ -5366,7 +5366,7 @@
         "popularity": 89,
         "followers": {
           "href": null,
-          "total": 104949702
+          "total": 104972131
         },
         "images": [
           {
@@ -5437,7 +5437,7 @@
         "popularity": 83,
         "followers": {
           "href": null,
-          "total": 32333343
+          "total": 32342894
         },
         "images": [
           {
@@ -5485,7 +5485,7 @@
         "popularity": 80,
         "followers": {
           "href": null,
-          "total": 22792161
+          "total": 22796074
         },
         "images": [
           {
@@ -5529,7 +5529,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 529320
+          "total": 529440
         },
         "images": [
           {
@@ -5574,7 +5574,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 41906
+          "total": 41914
         },
         "images": [
           {
@@ -5626,7 +5626,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 688321
+          "total": 688548
         },
         "images": [
           {
@@ -5668,7 +5668,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 6032291
+          "total": 6032229
         },
         "images": [
           {
@@ -5713,7 +5713,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 1463129
+          "total": 1463252
         },
         "images": [
           {
@@ -5759,7 +5759,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 9954611
+          "total": 9956700
         },
         "images": [
           {
@@ -5801,7 +5801,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 282823
+          "total": 282875
         },
         "images": [
           {
@@ -5849,7 +5849,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 188969
+          "total": 189012
         },
         "images": [
           {
@@ -5896,7 +5896,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 32429323
+          "total": 32436320
         },
         "images": [
           {
@@ -5938,7 +5938,7 @@
         "popularity": 91,
         "followers": {
           "href": null,
-          "total": 119340642
+          "total": 119372958
         },
         "images": [
           {
@@ -5982,7 +5982,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 8812735
+          "total": 8815156
         },
         "images": [
           {
@@ -6029,7 +6029,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 282746
+          "total": 282767
         },
         "images": [
           {
@@ -6074,7 +6074,7 @@
         "popularity": 44,
         "followers": {
           "href": null,
-          "total": 87888
+          "total": 87921
         },
         "images": [
           {
@@ -6116,7 +6116,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 724402
+          "total": 724557
         },
         "images": [
           {
@@ -6161,7 +6161,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 11042961
+          "total": 11045485
         },
         "images": [
           {
@@ -6205,7 +6205,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 94393
+          "total": 94404
         },
         "images": [
           {
@@ -6251,7 +6251,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 102969
+          "total": 102996
         },
         "images": [
           {
@@ -6296,7 +6296,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 3413838
+          "total": 3415701
         },
         "images": [
           {
@@ -6338,10 +6338,10 @@
           "ambient folk",
           "downtempo"
         ],
-        "popularity": 51,
+        "popularity": 52,
         "followers": {
           "href": null,
-          "total": 275675
+          "total": 275710
         },
         "images": [
           {
@@ -6383,7 +6383,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 2076924
+          "total": 2077160
         },
         "images": [
           {
@@ -6425,7 +6425,7 @@
         "popularity": 86,
         "followers": {
           "href": null,
-          "total": 47788354
+          "total": 47792198
         },
         "images": [
           {
@@ -6470,7 +6470,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 37076
+          "total": 37090
         },
         "images": [
           {
@@ -6519,7 +6519,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 225572
+          "total": 225605
         },
         "images": [
           {
@@ -6567,7 +6567,7 @@
         "popularity": 37,
         "followers": {
           "href": null,
-          "total": 85456
+          "total": 85458
         },
         "images": [
           {
@@ -6609,7 +6609,7 @@
         "popularity": 73,
         "followers": {
           "href": null,
-          "total": 4309093
+          "total": 4309767
         },
         "images": [
           {
@@ -6657,7 +6657,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 6000267
+          "total": 6001550
         },
         "images": [
           {
@@ -6704,10 +6704,10 @@
           "folk",
           "singer-songwriter"
         ],
-        "popularity": 61,
+        "popularity": 62,
         "followers": {
           "href": null,
-          "total": 954092
+          "total": 954359
         },
         "images": [
           {
@@ -6758,7 +6758,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 121006
+          "total": 121024
         },
         "images": [
           {
@@ -6804,7 +6804,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 7978739
+          "total": 7980660
         },
         "images": [
           {
@@ -6845,10 +6845,10 @@
         "genres": [
           "indie"
         ],
-        "popularity": 73,
+        "popularity": 74,
         "followers": {
           "href": null,
-          "total": 3584104
+          "total": 3584951
         },
         "images": [
           {
@@ -6892,7 +6892,7 @@
         "popularity": 83,
         "followers": {
           "href": null,
-          "total": 17400439
+          "total": 17404837
         },
         "images": [
           {
@@ -6936,7 +6936,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 1356186
+          "total": 1356670
         },
         "images": [
           {
@@ -6983,7 +6983,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 628028
+          "total": 628121
         },
         "images": [
           {
@@ -7025,7 +7025,7 @@
         "popularity": 89,
         "followers": {
           "href": null,
-          "total": 52231989
+          "total": 52256252
         },
         "images": [
           {
@@ -7072,7 +7072,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3314976
+          "total": 3316597
         },
         "images": [
           {
@@ -7125,7 +7125,7 @@
         "popularity": 36,
         "followers": {
           "href": null,
-          "total": 117357
+          "total": 117359
         },
         "images": [
           {
@@ -7173,7 +7173,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 582290
+          "total": 582507
         },
         "images": [
           {
@@ -7218,7 +7218,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3846162
+          "total": 3846720
         },
         "images": [
           {
@@ -7266,7 +7266,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 703000
+          "total": 703122
         },
         "images": [
           {
@@ -7311,7 +7311,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 1050240
+          "total": 1050389
         },
         "images": [
           {
@@ -7355,7 +7355,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 317925
+          "total": 317939
         },
         "images": [
           {
@@ -7400,7 +7400,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 438311
+          "total": 438498
         },
         "images": [
           {
@@ -7444,7 +7444,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 109302
+          "total": 109307
         },
         "images": [
           {
@@ -7489,7 +7489,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 2245880
+          "total": 2247878
         },
         "images": [
           {
@@ -7534,7 +7534,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 6475
+          "total": 6478
         },
         "images": [
           {
@@ -7580,7 +7580,7 @@
         "popularity": 33,
         "followers": {
           "href": null,
-          "total": 76095
+          "total": 76099
         },
         "images": [
           {
@@ -7624,7 +7624,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 415554
+          "total": 415549
         },
         "images": [
           {
@@ -7669,7 +7669,7 @@
         "popularity": 24,
         "followers": {
           "href": null,
-          "total": 7415
+          "total": 7421
         },
         "images": [
           {
@@ -7711,7 +7711,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 367240
+          "total": 367374
         },
         "images": [
           {
@@ -7753,7 +7753,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 5773375
+          "total": 5774375
         },
         "images": [
           {
@@ -7799,7 +7799,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 3184092
+          "total": 3184182
         },
         "images": [
           {
@@ -7869,7 +7869,7 @@
         "popularity": 68,
         "followers": {
           "href": null,
-          "total": 3171201
+          "total": 3171767
         },
         "images": [
           {
@@ -7919,7 +7919,7 @@
         "popularity": 34,
         "followers": {
           "href": null,
-          "total": 13081
+          "total": 13083
         },
         "images": [
           {
@@ -7961,10 +7961,10 @@
           "indie folk",
           "folk pop"
         ],
-        "popularity": 63,
+        "popularity": 64,
         "followers": {
           "href": null,
-          "total": 2001881
+          "total": 2001926
         },
         "images": [
           {
@@ -8006,7 +8006,7 @@
         "popularity": 80,
         "followers": {
           "href": null,
-          "total": 7721025
+          "total": 7722895
         },
         "images": [
           {
@@ -8074,7 +8074,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 5915087
+          "total": 5915822
         },
         "images": [
           {
@@ -8119,7 +8119,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 166592
+          "total": 166600
         },
         "images": [
           {
@@ -8165,7 +8165,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 842201
+          "total": 842373
         },
         "images": [
           {
@@ -8207,7 +8207,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 625068
+          "total": 625169
         },
         "images": [
           {
@@ -8253,7 +8253,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 333840
+          "total": 333892
         },
         "images": [
           {
@@ -8298,7 +8298,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 9623
+          "total": 9624
         },
         "images": [
           {
@@ -8340,7 +8340,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 15617094
+          "total": 15621002
         },
         "images": [
           {
@@ -8382,7 +8382,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 5653964
+          "total": 5655197
         },
         "images": [
           {
@@ -8429,7 +8429,7 @@
         "popularity": 89,
         "followers": {
           "href": null,
-          "total": 31995561
+          "total": 32007459
         },
         "images": [
           {
@@ -8468,10 +8468,10 @@
       "artist": {
         "name": "The xx",
         "genres": [],
-        "popularity": 64,
+        "popularity": 65,
         "followers": {
           "href": null,
-          "total": 3788823
+          "total": 3788882
         },
         "images": [
           {
@@ -8514,10 +8514,10 @@
           "folk",
           "indie"
         ],
-        "popularity": 63,
+        "popularity": 64,
         "followers": {
           "href": null,
-          "total": 1450112
+          "total": 1450298
         },
         "images": [
           {
@@ -8561,7 +8561,7 @@
         "popularity": 67,
         "followers": {
           "href": null,
-          "total": 2555607
+          "total": 2555918
         },
         "images": [
           {
@@ -8610,7 +8610,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 1248382
+          "total": 1248763
         },
         "images": [
           {
@@ -8652,7 +8652,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 638993
+          "total": 639037
         },
         "images": [
           {
@@ -8697,7 +8697,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3823406
+          "total": 3823696
         },
         "images": [
           {
@@ -8742,7 +8742,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 1638816
+          "total": 1639358
         },
         "images": [
           {
@@ -8784,7 +8784,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 313384
+          "total": 313444
         },
         "images": [
           {
@@ -8830,7 +8830,7 @@
         "popularity": 83,
         "followers": {
           "href": null,
-          "total": 10432753
+          "total": 10436157
         },
         "images": [
           {
@@ -8872,7 +8872,7 @@
         "popularity": 30,
         "followers": {
           "href": null,
-          "total": 84151
+          "total": 84148
         },
         "images": [
           {
@@ -8918,7 +8918,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 8880168
+          "total": 8881647
         },
         "images": [
           {
@@ -8960,7 +8960,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 171848
+          "total": 171853
         },
         "images": [
           {
@@ -9005,7 +9005,7 @@
         "popularity": 44,
         "followers": {
           "href": null,
-          "total": 134887
+          "total": 134903
         },
         "images": [
           {
@@ -9074,7 +9074,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 488454
+          "total": 488556
         },
         "images": [
           {
@@ -9119,7 +9119,7 @@
         "popularity": 28,
         "followers": {
           "href": null,
-          "total": 60344
+          "total": 60357
         },
         "images": [
           {
@@ -9165,7 +9165,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 301327
+          "total": 301460
         },
         "images": [
           {
@@ -9207,7 +9207,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 958401
+          "total": 958503
         },
         "images": [
           {
@@ -9253,7 +9253,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 17789
+          "total": 17794
         },
         "images": [
           {
@@ -9298,7 +9298,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 1494467
+          "total": 1494866
         },
         "images": [
           {
@@ -9344,7 +9344,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 72919
+          "total": 72956
         },
         "images": [
           {
@@ -9389,7 +9389,7 @@
         "popularity": 32,
         "followers": {
           "href": null,
-          "total": 23960
+          "total": 23959
         },
         "images": [
           {
@@ -9434,7 +9434,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 10345972
+          "total": 10348809
         },
         "images": [
           {
@@ -9502,7 +9502,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 35104
+          "total": 35110
         },
         "images": [
           {
@@ -9547,7 +9547,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 1261990
+          "total": 1262061
         },
         "images": [
           {
@@ -9617,7 +9617,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 238508
+          "total": 238578
         },
         "images": [
           {
@@ -9663,7 +9663,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 4306349
+          "total": 4307167
         },
         "images": [
           {
@@ -9709,7 +9709,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 884912
+          "total": 885153
         },
         "images": [
           {
@@ -9753,7 +9753,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 1015723
+          "total": 1015829
         },
         "images": [
           {
@@ -9798,7 +9798,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 139055
+          "total": 139241
         },
         "images": [
           {
@@ -9844,7 +9844,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 157094
+          "total": 157109
         },
         "images": [
           {
@@ -9914,7 +9914,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 69683
+          "total": 69686
         },
         "images": [
           {
@@ -9956,7 +9956,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 647938
+          "total": 647992
         },
         "images": [
           {
@@ -10030,7 +10030,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 1640911
+          "total": 1641162
         },
         "images": [
           {
@@ -10079,7 +10079,7 @@
         "popularity": 22,
         "followers": {
           "href": null,
-          "total": 11722
+          "total": 11724
         },
         "images": [
           {
@@ -10124,7 +10124,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 67729
+          "total": 67739
         },
         "images": [
           {
@@ -10173,7 +10173,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 160366
+          "total": 160394
         },
         "images": [
           {
@@ -10219,7 +10219,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 141623
+          "total": 141647
         },
         "images": [
           {
@@ -10288,7 +10288,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 95855
+          "total": 95887
         },
         "images": [
           {
@@ -10334,7 +10334,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 7156792
+          "total": 7157943
         },
         "images": [
           {
@@ -10387,7 +10387,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 4490668
+          "total": 4491339
         },
         "images": [
           {
@@ -10429,7 +10429,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 144206
+          "total": 144211
         },
         "images": [
           {
@@ -10473,7 +10473,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 4811072
+          "total": 4812891
         },
         "images": [
           {
@@ -10518,7 +10518,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 69511
+          "total": 69508
         },
         "images": [
           {
@@ -10564,7 +10564,7 @@
         "popularity": 34,
         "followers": {
           "href": null,
-          "total": 93727
+          "total": 93725
         },
         "images": [
           {
@@ -10609,7 +10609,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 382462
+          "total": 382527
         },
         "images": [
           {
@@ -10651,7 +10651,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 116354
+          "total": 116357
         },
         "images": [
           {
@@ -10696,7 +10696,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 6686942
+          "total": 6689278
         },
         "images": [
           {
@@ -10741,7 +10741,7 @@
         "popularity": 68,
         "followers": {
           "href": null,
-          "total": 2395503
+          "total": 2395658
         },
         "images": [
           {
@@ -10785,7 +10785,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 401103
+          "total": 401153
         },
         "images": [
           {
@@ -10830,7 +10830,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 567459
+          "total": 567815
         },
         "images": [
           {
@@ -10873,10 +10873,10 @@
           "rock",
           "glam rock"
         ],
-        "popularity": 83,
+        "popularity": 84,
         "followers": {
           "href": null,
-          "total": 55351678
+          "total": 55359991
         },
         "images": [
           {
@@ -10927,7 +10927,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 4809644
+          "total": 4811557
         },
         "images": [
           {
@@ -10976,7 +10976,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 1060924
+          "total": 1061240
         },
         "images": [
           {
@@ -11071,7 +11071,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 6646591
+          "total": 6648871
         },
         "images": [
           {
@@ -11120,7 +11120,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 2033738
+          "total": 2034104
         },
         "images": [
           {
@@ -11162,7 +11162,7 @@
         "popularity": 49,
         "followers": {
           "href": null,
-          "total": 354404
+          "total": 354427
         },
         "images": [
           {
@@ -11206,7 +11206,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 1463075
+          "total": 1463134
         },
         "images": [
           {
@@ -11250,7 +11250,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 180669
+          "total": 180811
         },
         "images": [
           {
@@ -11294,10 +11294,10 @@
       "artist": {
         "name": "Jocko Willink",
         "genres": [],
-        "popularity": 29,
+        "popularity": 30,
         "followers": {
           "href": null,
-          "total": 66279
+          "total": 66281
         },
         "images": [
           {
@@ -11343,7 +11343,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 104066
+          "total": 104081
         },
         "images": [
           {
@@ -11385,7 +11385,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 5257606
+          "total": 5258456
         },
         "images": [
           {
@@ -11427,7 +11427,7 @@
         "popularity": 89,
         "followers": {
           "href": null,
-          "total": 61078133
+          "total": 61093144
         },
         "images": [
           {
@@ -11472,7 +11472,7 @@
         "popularity": 27,
         "followers": {
           "href": null,
-          "total": 1613
+          "total": 1614
         },
         "images": [
           {
@@ -11519,7 +11519,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 4141413
+          "total": 4141540
         },
         "images": [
           {
@@ -11566,7 +11566,7 @@
         "popularity": 68,
         "followers": {
           "href": null,
-          "total": 2546120
+          "total": 2546617
         },
         "images": [
           {
@@ -11613,7 +11613,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 2033566
+          "total": 2033765
         },
         "images": [
           {
@@ -11655,7 +11655,7 @@
         "popularity": 100,
         "followers": {
           "href": null,
-          "total": 146327316
+          "total": 146376498
         },
         "images": [
           {
@@ -11705,7 +11705,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 2742653
+          "total": 2742986
         },
         "images": [
           {
@@ -11758,7 +11758,7 @@
         "popularity": 27,
         "followers": {
           "href": null,
-          "total": 34063
+          "total": 34069
         },
         "images": [
           {
@@ -11801,10 +11801,10 @@
           "melodic hardcore",
           "post-hardcore"
         ],
-        "popularity": 28,
+        "popularity": 27,
         "followers": {
           "href": null,
-          "total": 47641
+          "total": 47642
         },
         "images": [
           {
@@ -11848,7 +11848,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 4633515
+          "total": 4635263
         },
         "images": [
           {
@@ -11890,7 +11890,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 171251
+          "total": 171270
         },
         "images": [
           {
@@ -11935,7 +11935,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 166542
+          "total": 166554
         },
         "images": [
           {
@@ -11980,7 +11980,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 1420050
+          "total": 1420162
         },
         "images": [
           {
@@ -12025,7 +12025,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 2933103
+          "total": 2934333
         },
         "images": [
           {
@@ -12070,7 +12070,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 974890
+          "total": 975087
         },
         "images": [
           {
@@ -12115,7 +12115,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 87265
+          "total": 87286
         },
         "images": [
           {
@@ -12159,7 +12159,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 285033
+          "total": 285253
         },
         "images": [
           {
@@ -12204,7 +12204,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 8488363
+          "total": 8489651
         },
         "images": [
           {
@@ -12248,7 +12248,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 150173
+          "total": 150203
         },
         "images": [
           {
@@ -12292,7 +12292,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 324222
+          "total": 324210
         },
         "images": [
           {
@@ -12337,7 +12337,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 7859436
+          "total": 7860208
         },
         "images": [
           {
@@ -12384,7 +12384,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 400408
+          "total": 400466
         },
         "images": [
           {
@@ -12449,7 +12449,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 3024045
+          "total": 3024991
         },
         "images": [
           {
@@ -12543,7 +12543,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 418531
+          "total": 418606
         },
         "images": [
           {
@@ -12586,10 +12586,10 @@
           "math rock",
           "emo"
         ],
-        "popularity": 54,
+        "popularity": 55,
         "followers": {
           "href": null,
-          "total": 466215
+          "total": 466415
         },
         "images": [
           {
@@ -12631,7 +12631,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 1838290
+          "total": 1838791
         },
         "images": [
           {
@@ -12676,7 +12676,7 @@
         "popularity": 67,
         "followers": {
           "href": null,
-          "total": 5841131
+          "total": 5841857
         },
         "images": [
           {
@@ -12726,7 +12726,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 6285865
+          "total": 6288298
         },
         "images": [
           {
@@ -12772,7 +12772,7 @@
         "popularity": 26,
         "followers": {
           "href": null,
-          "total": 13725
+          "total": 13723
         },
         "images": [
           {
@@ -12816,7 +12816,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 6229679
+          "total": 6230209
         },
         "images": [
           {
@@ -12862,7 +12862,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 3408933
+          "total": 3409767
         },
         "images": [
           {
@@ -12908,7 +12908,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 2031644
+          "total": 2031908
         },
         "images": [
           {
@@ -12955,7 +12955,7 @@
         "popularity": 94,
         "followers": {
           "href": null,
-          "total": 113728378
+          "total": 113773228
         },
         "images": [
           {
@@ -12999,7 +12999,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 1149504
+          "total": 1149539
         },
         "images": [
           {
@@ -13045,7 +13045,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 1157522
+          "total": 1157962
         },
         "images": [
           {
@@ -13091,7 +13091,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1379962
+          "total": 1380624
         },
         "images": [
           {
@@ -13140,7 +13140,7 @@
         "popularity": 33,
         "followers": {
           "href": null,
-          "total": 60375
+          "total": 60386
         },
         "images": [
           {
@@ -13186,7 +13186,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 409088
+          "total": 409077
         },
         "images": [
           {
@@ -13231,7 +13231,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 1246167
+          "total": 1246415
         },
         "images": [
           {
@@ -13273,10 +13273,10 @@
           "idm",
           "ambient"
         ],
-        "popularity": 49,
+        "popularity": 50,
         "followers": {
           "href": null,
-          "total": 515842
+          "total": 515943
         },
         "images": [
           {
@@ -13322,7 +13322,7 @@
         "popularity": 74,
         "followers": {
           "href": null,
-          "total": 6920789
+          "total": 6921702
         },
         "images": [
           {
@@ -13369,7 +13369,7 @@
         "popularity": 38,
         "followers": {
           "href": null,
-          "total": 63604
+          "total": 63608
         },
         "images": [
           {
@@ -13411,7 +13411,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 1534836
+          "total": 1535125
         },
         "images": [
           {
@@ -13453,7 +13453,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 26628573
+          "total": 26632217
         },
         "images": [
           {
@@ -13520,7 +13520,7 @@
         "popularity": 85,
         "followers": {
           "href": null,
-          "total": 23098066
+          "total": 23099246
         },
         "images": [
           {
@@ -13564,7 +13564,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 633529
+          "total": 633575
         },
         "images": [
           {
@@ -13634,7 +13634,7 @@
         "popularity": 33,
         "followers": {
           "href": null,
-          "total": 67714
+          "total": 67717
         },
         "images": [
           {
@@ -13679,7 +13679,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 801855
+          "total": 801947
         },
         "images": [
           {
@@ -13722,10 +13722,10 @@
           "synthpop",
           "darkwave"
         ],
-        "popularity": 74,
+        "popularity": 75,
         "followers": {
           "href": null,
-          "total": 7410112
+          "total": 7411651
         },
         "images": [
           {
@@ -13767,7 +13767,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 651004
+          "total": 651237
         },
         "images": [
           {
@@ -13811,7 +13811,7 @@
         "popularity": 68,
         "followers": {
           "href": null,
-          "total": 3005132
+          "total": 3005276
         },
         "images": [
           {
@@ -13855,7 +13855,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 3495054
+          "total": 3496019
         },
         "images": [
           {
@@ -13928,7 +13928,7 @@
         "popularity": 51,
         "followers": {
           "href": null,
-          "total": 324506
+          "total": 324547
         },
         "images": [
           {
@@ -13975,7 +13975,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 886972
+          "total": 887089
         },
         "images": [
           {
@@ -14020,7 +14020,7 @@
         "popularity": 28,
         "followers": {
           "href": null,
-          "total": 4787
+          "total": 4789
         },
         "images": [
           {
@@ -14068,7 +14068,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 954897
+          "total": 955098
         },
         "images": [
           {
@@ -14115,7 +14115,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 1143615
+          "total": 1143883
         },
         "images": [
           {
@@ -14206,7 +14206,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 591894
+          "total": 591966
         },
         "images": [
           {
@@ -14253,7 +14253,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 2202989
+          "total": 2203509
         },
         "images": [
           {
@@ -14297,7 +14297,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 1008127
+          "total": 1008219
         },
         "images": [
           {
@@ -14347,7 +14347,7 @@
         "popularity": 61,
         "followers": {
           "href": null,
-          "total": 832688
+          "total": 832862
         },
         "images": [
           {
@@ -14389,7 +14389,7 @@
         "popularity": 17,
         "followers": {
           "href": null,
-          "total": 33541
+          "total": 33540
         },
         "images": [
           {
@@ -14433,7 +14433,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 690465
+          "total": 690680
         },
         "images": [
           {
@@ -14478,7 +14478,7 @@
         "popularity": 64,
         "followers": {
           "href": null,
-          "total": 2913054
+          "total": 2913372
         },
         "images": [
           {
@@ -14520,7 +14520,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 1555348
+          "total": 1555532
         },
         "images": [
           {
@@ -14564,7 +14564,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 345419
+          "total": 345509
         },
         "images": [
           {
@@ -14610,7 +14610,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 66822
+          "total": 66832
         },
         "images": [
           {
@@ -14657,7 +14657,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 399882
+          "total": 399969
         },
         "images": [
           {
@@ -14699,7 +14699,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 1081342
+          "total": 1081426
         },
         "images": [
           {
@@ -14743,7 +14743,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 715300
+          "total": 715384
         },
         "images": [
           {
@@ -14787,7 +14787,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 146321
+          "total": 146333
         },
         "images": [
           {
@@ -14835,7 +14835,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 713975
+          "total": 714019
         },
         "images": [
           {
@@ -14880,7 +14880,7 @@
         "popularity": 87,
         "followers": {
           "href": null,
-          "total": 18038763
+          "total": 18044900
         },
         "images": [
           {
@@ -14925,7 +14925,7 @@
         "popularity": 80,
         "followers": {
           "href": null,
-          "total": 9839850
+          "total": 9842340
         },
         "images": [
           {
@@ -14967,7 +14967,7 @@
         "popularity": 81,
         "followers": {
           "href": null,
-          "total": 34191531
+          "total": 34194949
         },
         "images": [
           {
@@ -15006,10 +15006,10 @@
       "artist": {
         "name": "Justin Timberlake",
         "genres": [],
-        "popularity": 82,
+        "popularity": 83,
         "followers": {
           "href": null,
-          "total": 15894645
+          "total": 15898792
         },
         "images": [
           {
@@ -15101,7 +15101,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 1575295
+          "total": 1575457
         },
         "images": [
           {
@@ -15149,7 +15149,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 493677
+          "total": 493729
         },
         "images": [
           {
@@ -15193,7 +15193,7 @@
         "popularity": 22,
         "followers": {
           "href": null,
-          "total": 8572
+          "total": 8577
         },
         "images": [
           {
@@ -15237,7 +15237,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 404192
+          "total": 404185
         },
         "images": [
           {
@@ -15284,7 +15284,7 @@
         "popularity": 49,
         "followers": {
           "href": null,
-          "total": 433357
+          "total": 433484
         },
         "images": [
           {
@@ -15330,10 +15330,10 @@
         "genres": [
           "soul"
         ],
-        "popularity": 66,
+        "popularity": 67,
         "followers": {
           "href": null,
-          "total": 1666700
+          "total": 1666974
         },
         "images": [
           {
@@ -15381,7 +15381,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 2008037
+          "total": 2008629
         },
         "images": [
           {
@@ -15426,7 +15426,7 @@
         "popularity": 78,
         "followers": {
           "href": null,
-          "total": 4013798
+          "total": 4014825
         },
         "images": [
           {
@@ -15494,7 +15494,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 413244
+          "total": 413263
         },
         "images": [
           {
@@ -15539,7 +15539,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 460005
+          "total": 460454
         },
         "images": [
           {
@@ -15584,7 +15584,7 @@
         "popularity": 33,
         "followers": {
           "href": null,
-          "total": 1321507
+          "total": 1321539
         },
         "images": [
           {
@@ -15626,7 +15626,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 223434
+          "total": 223600
         },
         "images": [
           {
@@ -15671,7 +15671,7 @@
         "popularity": 68,
         "followers": {
           "href": null,
-          "total": 3427363
+          "total": 3427460
         },
         "images": [
           {
@@ -15715,7 +15715,7 @@
         "popularity": 67,
         "followers": {
           "href": null,
-          "total": 1479149
+          "total": 1479364
         },
         "images": [
           {
@@ -15761,7 +15761,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 300116
+          "total": 300125
         },
         "images": [
           {
@@ -15806,7 +15806,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 742378
+          "total": 742535
         },
         "images": [
           {
@@ -15848,7 +15848,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1246143
+          "total": 1246326
         },
         "images": [
           {
@@ -15893,7 +15893,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 417047
+          "total": 417101
         },
         "images": [
           {
@@ -15938,7 +15938,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 21221
+          "total": 21239
         },
         "images": [
           {
@@ -15984,7 +15984,7 @@
         "popularity": 4,
         "followers": {
           "href": null,
-          "total": 1759
+          "total": 1760
         },
         "images": [
           {
@@ -16031,7 +16031,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3550331
+          "total": 3551197
         },
         "images": [
           {
@@ -16075,7 +16075,7 @@
         "popularity": 28,
         "followers": {
           "href": null,
-          "total": 56368
+          "total": 56365
         },
         "images": [
           {
@@ -16119,7 +16119,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 1215899
+          "total": 1216050
         },
         "images": [
           {
@@ -16161,7 +16161,7 @@
         "popularity": 86,
         "followers": {
           "href": null,
-          "total": 37764462
+          "total": 37783128
         },
         "images": [
           {
@@ -16207,7 +16207,7 @@
         "popularity": 32,
         "followers": {
           "href": null,
-          "total": 69986
+          "total": 69997
         },
         "images": [
           {
@@ -16249,7 +16249,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 662684
+          "total": 662699
         },
         "images": [
           {
@@ -16295,7 +16295,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 599926
+          "total": 599984
         },
         "images": [
           {
@@ -16341,7 +16341,7 @@
         "popularity": 33,
         "followers": {
           "href": null,
-          "total": 76216
+          "total": 76221
         },
         "images": [
           {
@@ -16389,7 +16389,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 262842
+          "total": 262971
         },
         "images": [
           {
@@ -16438,7 +16438,7 @@
         "popularity": 73,
         "followers": {
           "href": null,
-          "total": 2822662
+          "total": 2823792
         },
         "images": [
           {
@@ -16484,7 +16484,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 9015
+          "total": 9014
         },
         "images": [
           {
@@ -16556,7 +16556,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 214843
+          "total": 214859
         },
         "images": [
           {
@@ -16601,7 +16601,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 694861
+          "total": 694883
         },
         "images": [
           {
@@ -16645,7 +16645,7 @@
         "popularity": 83,
         "followers": {
           "href": null,
-          "total": 27153156
+          "total": 27157745
         },
         "images": [
           {
@@ -16691,7 +16691,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 762334
+          "total": 762387
         },
         "images": [
           {
@@ -16737,10 +16737,10 @@
           "jazz",
           "vocal jazz"
         ],
-        "popularity": 79,
+        "popularity": 80,
         "followers": {
           "href": null,
-          "total": 8426500
+          "total": 8428982
         },
         "images": [
           {
@@ -16788,10 +16788,10 @@
           "baroque pop",
           "indie rock"
         ],
-        "popularity": 54,
+        "popularity": 55,
         "followers": {
           "href": null,
-          "total": 859824
+          "total": 859861
         },
         "images": [
           {
@@ -16837,7 +16837,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 36036
+          "total": 36037
         },
         "images": [
           {
@@ -16908,7 +16908,7 @@
         "popularity": 25,
         "followers": {
           "href": null,
-          "total": 27123
+          "total": 27125
         },
         "images": [
           {
@@ -16952,7 +16952,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 730754
+          "total": 730812
         },
         "images": [
           {
@@ -16996,7 +16996,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 71348
+          "total": 71420
         },
         "images": [
           {
@@ -17038,7 +17038,7 @@
         "popularity": 50,
         "followers": {
           "href": null,
-          "total": 277929
+          "total": 277960
         },
         "images": [
           {
@@ -17083,7 +17083,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 204760
+          "total": 204772
         },
         "images": [
           {
@@ -17125,7 +17125,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 540450
+          "total": 540461
         },
         "images": [
           {
@@ -17170,7 +17170,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 531951
+          "total": 531955
         },
         "images": [
           {
@@ -17216,7 +17216,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 5172552
+          "total": 5174138
         },
         "images": [
           {
@@ -17258,7 +17258,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 1005133
+          "total": 1005161
         },
         "images": [
           {
@@ -17300,7 +17300,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 490035
+          "total": 490147
         },
         "images": [
           {
@@ -17345,7 +17345,7 @@
         "popularity": 26,
         "followers": {
           "href": null,
-          "total": 5632
+          "total": 5636
         },
         "images": [
           {
@@ -17390,7 +17390,7 @@
         "popularity": 69,
         "followers": {
           "href": null,
-          "total": 2943844
+          "total": 2944160
         },
         "images": [
           {
@@ -17435,7 +17435,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 282550
+          "total": 282650
         },
         "images": [
           {
@@ -17482,7 +17482,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 200974
+          "total": 200985
         },
         "images": [
           {
@@ -17526,7 +17526,7 @@
         "popularity": 72,
         "followers": {
           "href": null,
-          "total": 1354237
+          "total": 1355015
         },
         "images": [
           {
@@ -17571,7 +17571,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 7880671
+          "total": 7882685
         },
         "images": [
           {
@@ -17615,7 +17615,7 @@
         "popularity": 35,
         "followers": {
           "href": null,
-          "total": 50191
+          "total": 50197
         },
         "images": [
           {
@@ -17660,7 +17660,7 @@
         "popularity": 62,
         "followers": {
           "href": null,
-          "total": 2034033
+          "total": 2034155
         },
         "images": [
           {
@@ -17702,7 +17702,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 8829659
+          "total": 8831753
         },
         "images": [
           {
@@ -17748,7 +17748,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 579594
+          "total": 579592
         },
         "images": [
           {
@@ -17794,7 +17794,7 @@
         "popularity": 31,
         "followers": {
           "href": null,
-          "total": 20505
+          "total": 20504
         },
         "images": [
           {
@@ -17840,7 +17840,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 993581
+          "total": 993695
         },
         "images": [
           {
@@ -17933,7 +17933,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 291919
+          "total": 291985
         },
         "images": [
           {
@@ -17975,7 +17975,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 946613
+          "total": 946698
         },
         "images": [
           {
@@ -18021,7 +18021,7 @@
         "popularity": 56,
         "followers": {
           "href": null,
-          "total": 841111
+          "total": 841190
         },
         "images": [
           {
@@ -18065,7 +18065,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 1683839
+          "total": 1683921
         },
         "images": [
           {
@@ -18110,7 +18110,7 @@
         "popularity": 73,
         "followers": {
           "href": null,
-          "total": 4722381
+          "total": 4724259
         },
         "images": [
           {
@@ -18155,7 +18155,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 408758
+          "total": 408794
         },
         "images": [
           {
@@ -18199,7 +18199,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 191131
+          "total": 191174
         },
         "images": [
           {
@@ -18269,7 +18269,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 921131
+          "total": 921167
         },
         "images": [
           {
@@ -18313,7 +18313,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 3490113
+          "total": 3490608
         },
         "images": [
           {
@@ -18360,7 +18360,7 @@
         "popularity": 51,
         "followers": {
           "href": null,
-          "total": 47389
+          "total": 47391
         },
         "images": [
           {
@@ -18403,10 +18403,10 @@
           "ska punk",
           "rocksteady"
         ],
-        "popularity": 37,
+        "popularity": 38,
         "followers": {
           "href": null,
-          "total": 95073
+          "total": 95082
         },
         "images": [
           {
@@ -18456,7 +18456,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3751275
+          "total": 3751876
         },
         "images": [
           {
@@ -18546,7 +18546,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 709495
+          "total": 709596
         },
         "images": [
           {
@@ -18639,7 +18639,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 8251279
+          "total": 8256248
         },
         "images": [
           {
@@ -18691,7 +18691,7 @@
         "popularity": 39,
         "followers": {
           "href": null,
-          "total": 223277
+          "total": 223280
         },
         "images": [
           {
@@ -18735,7 +18735,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 1264885
+          "total": 1265168
         },
         "images": [
           {
@@ -18782,7 +18782,7 @@
         "popularity": 80,
         "followers": {
           "href": null,
-          "total": 10563098
+          "total": 10564758
         },
         "images": [
           {
@@ -18826,7 +18826,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 25675
+          "total": 25674
         },
         "images": [
           {
@@ -18868,7 +18868,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 159842
+          "total": 159869
         },
         "images": [
           {
@@ -18910,7 +18910,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 636640
+          "total": 636689
         },
         "images": [
           {
@@ -18961,7 +18961,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 339102
+          "total": 339101
         },
         "images": [
           {
@@ -19009,7 +19009,7 @@
         "popularity": 31,
         "followers": {
           "href": null,
-          "total": 84254
+          "total": 84260
         },
         "images": [
           {
@@ -19051,10 +19051,10 @@
           "art pop",
           "minimalism"
         ],
-        "popularity": 45,
+        "popularity": 46,
         "followers": {
           "href": null,
-          "total": 156377
+          "total": 156413
         },
         "images": [
           {
@@ -19101,7 +19101,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 454807
+          "total": 454833
         },
         "images": [
           {
@@ -19146,7 +19146,7 @@
         "popularity": 14,
         "followers": {
           "href": null,
-          "total": 16944
+          "total": 16942
         },
         "images": [
           {
@@ -19190,7 +19190,7 @@
         "popularity": 54,
         "followers": {
           "href": null,
-          "total": 373642
+          "total": 373649
         },
         "images": [
           {
@@ -19238,7 +19238,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 169182
+          "total": 169190
         },
         "images": [
           {
@@ -19283,7 +19283,7 @@
         "popularity": 73,
         "followers": {
           "href": null,
-          "total": 9567628
+          "total": 9569475
         },
         "images": [
           {
@@ -19331,7 +19331,7 @@
         "popularity": 79,
         "followers": {
           "href": null,
-          "total": 22669063
+          "total": 22675532
         },
         "images": [
           {
@@ -19379,7 +19379,7 @@
         "popularity": 82,
         "followers": {
           "href": null,
-          "total": 7793346
+          "total": 7799368
         },
         "images": [
           {
@@ -19427,7 +19427,7 @@
         "popularity": 59,
         "followers": {
           "href": null,
-          "total": 658051
+          "total": 658151
         },
         "images": [
           {
@@ -19476,7 +19476,7 @@
         "popularity": 57,
         "followers": {
           "href": null,
-          "total": 897997
+          "total": 898070
         },
         "images": [
           {
@@ -19523,7 +19523,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 94444
+          "total": 94534
         },
         "images": [
           {
@@ -19593,7 +19593,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 952445
+          "total": 952634
         },
         "images": [
           {
@@ -19663,7 +19663,7 @@
         "popularity": 5,
         "followers": {
           "href": null,
-          "total": 3079
+          "total": 3080
         },
         "images": [
           {
@@ -19707,7 +19707,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 308054
+          "total": 308077
         },
         "images": [
           {
@@ -19751,7 +19751,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 121788
+          "total": 121826
         },
         "images": [
           {
@@ -19797,7 +19797,7 @@
         "popularity": 40,
         "followers": {
           "href": null,
-          "total": 185971
+          "total": 186013
         },
         "images": [
           {
@@ -19841,7 +19841,7 @@
         "popularity": 37,
         "followers": {
           "href": null,
-          "total": 145900
+          "total": 145903
         },
         "images": [
           {
@@ -19888,7 +19888,7 @@
         "popularity": 73,
         "followers": {
           "href": null,
-          "total": 3058029
+          "total": 3058203
         },
         "images": [
           {
@@ -19930,7 +19930,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 300053
+          "total": 300068
         },
         "images": [
           {
@@ -19974,7 +19974,7 @@
         "popularity": 49,
         "followers": {
           "href": null,
-          "total": 441283
+          "total": 441282
         },
         "images": [
           {
@@ -20021,7 +20021,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 98930
+          "total": 98964
         },
         "images": [
           {
@@ -20063,7 +20063,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 136811
+          "total": 136817
         },
         "images": [
           {
@@ -20107,7 +20107,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 136792
+          "total": 136809
         },
         "images": [
           {
@@ -20153,7 +20153,7 @@
         "popularity": 48,
         "followers": {
           "href": null,
-          "total": 260706
+          "total": 260740
         },
         "images": [
           {
@@ -20197,7 +20197,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 47347
+          "total": 47356
         },
         "images": [
           {
@@ -20284,7 +20284,7 @@
         "popularity": 47,
         "followers": {
           "href": null,
-          "total": 372872
+          "total": 372883
         },
         "images": [
           {
@@ -20326,7 +20326,7 @@
         "popularity": 41,
         "followers": {
           "href": null,
-          "total": 219061
+          "total": 219076
         },
         "images": [
           {
@@ -20372,7 +20372,7 @@
         "popularity": 24,
         "followers": {
           "href": null,
-          "total": 13737
+          "total": 13741
         },
         "images": [
           {
@@ -20420,7 +20420,7 @@
         "popularity": 51,
         "followers": {
           "href": null,
-          "total": 547168
+          "total": 547262
         },
         "images": [
           {
@@ -20464,7 +20464,7 @@
         "popularity": 71,
         "followers": {
           "href": null,
-          "total": 1995877
+          "total": 1996159
         },
         "images": [
           {
@@ -20503,10 +20503,10 @@
       "artist": {
         "name": "Dominic Fike",
         "genres": [],
-        "popularity": 75,
+        "popularity": 76,
         "followers": {
           "href": null,
-          "total": 2236050
+          "total": 2237131
         },
         "images": [
           {
@@ -20551,7 +20551,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 69235
+          "total": 69236
         },
         "images": [
           {
@@ -20595,7 +20595,7 @@
         "popularity": 63,
         "followers": {
           "href": null,
-          "total": 1335331
+          "total": 1335440
         },
         "images": [
           {
@@ -20643,7 +20643,7 @@
         "popularity": 75,
         "followers": {
           "href": null,
-          "total": 7675295
+          "total": 7676920
         },
         "images": [
           {
@@ -20688,7 +20688,7 @@
         "popularity": 53,
         "followers": {
           "href": null,
-          "total": 790766
+          "total": 790901
         },
         "images": [
           {
@@ -20732,7 +20732,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 1072249
+          "total": 1072423
         },
         "images": [
           {
@@ -20782,7 +20782,7 @@
         "popularity": 34,
         "followers": {
           "href": null,
-          "total": 128641
+          "total": 128645
         },
         "images": [
           {
@@ -20827,7 +20827,7 @@
         "popularity": 37,
         "followers": {
           "href": null,
-          "total": 38925
+          "total": 38926
         },
         "images": [
           {
@@ -20869,7 +20869,7 @@
         "popularity": 91,
         "followers": {
           "href": null,
-          "total": 69380611
+          "total": 69401689
         },
         "images": [
           {
@@ -20914,7 +20914,7 @@
         "popularity": 76,
         "followers": {
           "href": null,
-          "total": 16102314
+          "total": 16105756
         },
         "images": [
           {
@@ -20956,7 +20956,7 @@
         "popularity": 70,
         "followers": {
           "href": null,
-          "total": 3609647
+          "total": 3610312
         },
         "images": [
           {
@@ -21000,7 +21000,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 97084
+          "total": 97091
         },
         "images": [
           {
@@ -21050,7 +21050,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 258516
+          "total": 258553
         },
         "images": [
           {
@@ -21094,7 +21094,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 412534
+          "total": 412576
         },
         "images": [
           {
@@ -21138,7 +21138,7 @@
         "popularity": 43,
         "followers": {
           "href": null,
-          "total": 96473
+          "total": 96481
         },
         "images": [
           {
@@ -21181,10 +21181,10 @@
           "classic soul",
           "motown"
         ],
-        "popularity": 72,
+        "popularity": 73,
         "followers": {
           "href": null,
-          "total": 2017052
+          "total": 2017648
         },
         "images": [
           {
@@ -21234,7 +21234,7 @@
         "popularity": 29,
         "followers": {
           "href": null,
-          "total": 88192
+          "total": 88197
         },
         "images": [
           {
@@ -21280,7 +21280,7 @@
         "popularity": 34,
         "followers": {
           "href": null,
-          "total": 23093
+          "total": 23096
         },
         "images": [
           {
@@ -21325,7 +21325,7 @@
         "popularity": 65,
         "followers": {
           "href": null,
-          "total": 1165385
+          "total": 1165664
         },
         "images": [
           {
@@ -21367,7 +21367,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 107957
+          "total": 107969
         },
         "images": [
           {
@@ -21413,7 +21413,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 1635965
+          "total": 1636216
         },
         "images": [
           {
@@ -21463,7 +21463,7 @@
         "popularity": 34,
         "followers": {
           "href": null,
-          "total": 18419
+          "total": 18417
         },
         "images": [
           {
@@ -21510,7 +21510,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 831126
+          "total": 831164
         },
         "images": [
           {
@@ -21555,7 +21555,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 1224565
+          "total": 1224599
         },
         "images": [
           {
@@ -21622,7 +21622,7 @@
         "popularity": 55,
         "followers": {
           "href": null,
-          "total": 947874
+          "total": 947895
         },
         "images": [
           {
@@ -21666,7 +21666,7 @@
         "popularity": 45,
         "followers": {
           "href": null,
-          "total": 474465
+          "total": 474488
         },
         "images": [
           {
@@ -21710,7 +21710,7 @@
         "popularity": 58,
         "followers": {
           "href": null,
-          "total": 724165
+          "total": 724223
         },
         "images": [
           {
@@ -21780,7 +21780,7 @@
         "popularity": 77,
         "followers": {
           "href": null,
-          "total": 12836147
+          "total": 12840383
         },
         "images": [
           {
@@ -21829,7 +21829,7 @@
         "popularity": 84,
         "followers": {
           "href": null,
-          "total": 67027553
+          "total": 67044953
         },
         "images": [
           {
@@ -21871,7 +21871,7 @@
         "popularity": 46,
         "followers": {
           "href": null,
-          "total": 200114
+          "total": 200141
         },
         "images": [
           {
@@ -21917,7 +21917,7 @@
         "popularity": 17,
         "followers": {
           "href": null,
-          "total": 18552
+          "total": 18553
         },
         "images": [
           {
@@ -21968,7 +21968,7 @@
         "popularity": 52,
         "followers": {
           "href": null,
-          "total": 586738
+          "total": 586785
         },
         "images": [
           {
@@ -22015,7 +22015,7 @@
         "popularity": 42,
         "followers": {
           "href": null,
-          "total": 273677
+          "total": 273696
         },
         "images": [
           {
@@ -22057,7 +22057,7 @@
         "popularity": 66,
         "followers": {
           "href": null,
-          "total": 1546520
+          "total": 1546688
         },
         "images": [
           {
@@ -22099,7 +22099,7 @@
         "popularity": 60,
         "followers": {
           "href": null,
-          "total": 684807
+          "total": 684840
         },
         "images": [
           {

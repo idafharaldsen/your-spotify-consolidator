@@ -37,6 +37,14 @@ BATCH_SIZE=20
 TOTAL_CALLS=50
 ```
 
+5. (Optional) Set up Vercel Blob Storage for cloud file storage:
+   - Install Vercel CLI: `npm i -g vercel`
+   - Link your project: `vercel link`
+   - Get your Blob Store token from [Vercel Dashboard](https://vercel.com/dashboard) → Your Project → Settings → Environment Variables
+   - Add `BLOB_READ_WRITE_TOKEN` to your `.env` file (or set it in Vercel Dashboard for production)
+   - Files will automatically upload to Vercel Blob Storage after generation
+   - To disable uploads, set `UPLOAD_TO_VERCEL_BLOB=false` in your `.env`
+
 ## Usage
 
 ### Fetch Data
@@ -62,6 +70,20 @@ This will:
 - Remove redundant entries
 - Save cleaned data to a new timestamped file
 - Display consolidation statistics
+
+### Generate Cleaned Files and Upload to Vercel Blob Storage
+To generate cleaned files from complete listening history and upload to Vercel Blob Storage:
+```bash
+npm run generate-cleaned-files
+```
+
+This will:
+- Generate cleaned songs, albums, artists, and albums-with-songs files
+- Save files locally to `data/cleaned-data/`
+- Automatically upload files to Vercel Blob Storage (if `BLOB_READ_WRITE_TOKEN` is configured)
+- Display upload URLs for each file
+
+**Note:** Files are always saved locally first, then uploaded to blob storage. If upload fails, files remain available locally.
 
 ## Example Output
 
@@ -93,6 +115,8 @@ After running the cleaner script, you'll see a summary like this, and receive a 
 | `END_DATE` | End date for data collection | `2025-12-12T00:00:00.000Z` |
 | `BATCH_SIZE` | Number of albums per API call | `20` |
 | `TOTAL_CALLS` | Total number of API calls to make | `50` |
+| `BLOB_READ_WRITE_TOKEN` | Vercel Blob Storage token for uploading files | Optional |
+| `UPLOAD_TO_VERCEL_BLOB` | Enable/disable automatic uploads to Vercel Blob | `true` (if token is set) |
 
 ### Data Structure
 

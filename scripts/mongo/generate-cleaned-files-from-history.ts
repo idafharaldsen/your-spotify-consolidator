@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import { glob } from 'glob';
 import { SpotifyTokenManager } from '../spotify-token-manager';
+import { uploadMultipleToVercelBlob, cleanupOldBlobFiles } from '../utils/vercel-blob-uploader';
 
 interface CompleteSong {
   songId: string;
@@ -1494,16 +1495,16 @@ class CleanedFilesGenerator {
   }
 
   /**
-   * Save all cleaned files
+   * Save all cleaned files and upload to Vercel Blob Storage
    */
-  private saveCleanedFiles(
+  private async saveCleanedFiles(
     songsResult: { songs: CleanedSong[], originalCount: number, consolidatedCount: number },
     albumsResult: { albums: CleanedAlbum[], originalCount: number, consolidatedCount: number },
     artistsResult: { artists: CleanedArtist[], originalCount: number, consolidatedCount: number },
     albumsWithSongs: AlbumWithSongs[],
     originalAlbumsCount: number,
     history: CompleteListeningHistory
-  ): void {
+  ): Promise<void> {
     // Ensure directory exists
     if (!fs.existsSync('data/cleaned-data')) {
       fs.mkdirSync('data/cleaned-data', { recursive: true });
@@ -1579,6 +1580,48 @@ class CleanedFilesGenerator {
     console.log(`- Albums: ${albumsFile}`);
     console.log(`- Artists: ${artistsFile}`);
     console.log(`- Albums with Songs: ${albumsWithSongsFile}`);
+
+    // Upload files to Vercel Blob Storage
+    const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
+    if (shouldUpload) {
+      try {
+        console.log('\n☁️  Uploading files to Vercel Blob Storage...');
+        
+        // Clean up old files first to ensure we only have 4 files
+        await cleanupOldBlobFiles();
+        
+        // Upload with fixed filenames (no timestamp) to root of blob storage
+        const blobUrls = await uploadMultipleToVercelBlob([
+          {
+            filePath: songsFile,
+            blobPath: 'cleaned-songs.json'
+          },
+          {
+            filePath: albumsFile,
+            blobPath: 'cleaned-albums.json'
+          },
+          {
+            filePath: artistsFile,
+            blobPath: 'cleaned-artists.json'
+          },
+          {
+            filePath: albumsWithSongsFile,
+            blobPath: 'cleaned-albums-with-songs.json'
+          }
+        ]);
+
+        console.log('\n✅ All files uploaded to Vercel Blob Storage:');
+        blobUrls.forEach((url, index) => {
+          const fileNames = ['Songs', 'Albums', 'Artists', 'Albums with Songs'];
+          console.log(`- ${fileNames[index]}: ${url}`);
+        });
+      } catch (error) {
+        console.error('\n⚠️  Failed to upload files to Vercel Blob Storage:', error);
+        console.error('Files are still saved locally. Set UPLOAD_TO_VERCEL_BLOB=false to skip upload.');
+      }
+    } else {
+      console.log('\n⏭️  Skipping Vercel Blob Storage upload (UPLOAD_TO_VERCEL_BLOB=false)');
+    }
   }
 
   /**
@@ -1622,8 +1665,8 @@ class CleanedFilesGenerator {
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
       }
       
-      // Save all files
-      this.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
+      // Save all files and upload to Vercel Blob Storage
+      await this.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
       
       console.log('');
       console.log('🎉 All cleaned files generated successfully!');
