@@ -4,7 +4,7 @@
     "consolidatedTotalAlbums": 100,
     "duplicatesRemoved": 23139,
     "consolidationRate": 99.57,
-    "timestamp": "2025-11-19T09:20:07.244Z",
+    "timestamp": "2025-11-19T11:16:29.480Z",
     "source": "Merged Streaming History with Song Breakdown",
     "totalListeningEvents": 178201
   },
@@ -2925,6 +2925,342 @@
     },
     {
       "rank": 12,
+      "duration_ms": 40274267,
+      "count": 371,
+      "differents": 16,
+      "primaryAlbumId": "1VvyRNSVBKuvENwpyiVlBU",
+      "total_count": 202,
+      "total_duration_ms": 73506725,
+      "album": {
+        "name": "The Gulag Orkestar",
+        "album_type": "album",
+        "artists": [
+          "Beirut"
+        ],
+        "release_date": "2006-11-06",
+        "release_date_precision": "day",
+        "popularity": 0,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733e6978b321908e26e871c9d0",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e023e6978b321908e26e871c9d0",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513e6978b321908e26e871c9d0",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/5N82AYJ3FG1znFz3EqJNMm"
+        },
+        "genres": []
+      },
+      "consolidated_count": 371,
+      "original_albumIds": [],
+      "total_songs": 17,
+      "played_songs": 17,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "3gNwlim5qMcVg7HJelghRc",
+          "name": "The Gulag Orkestar",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3gNwlim5qMcVg7HJelghRc"
+          },
+          "play_count": 17,
+          "total_listening_time_ms": 4023549,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "4mp1w2OclyziuzMZ8bXzOf",
+          "name": "Prenzlauerberg",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4mp1w2OclyziuzMZ8bXzOf"
+          },
+          "play_count": 16,
+          "total_listening_time_ms": 3298925,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "5fOvIva2Z0Vq83zeKpyIfe",
+          "name": "Brandenburg",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5fOvIva2Z0Vq83zeKpyIfe"
+          },
+          "play_count": 23,
+          "total_listening_time_ms": 4771387,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "5YAhKEMTGMh6SxTSYcUJl6",
+          "name": "Postcards From Italy",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5YAhKEMTGMh6SxTSYcUJl6"
+          },
+          "play_count": 84,
+          "total_listening_time_ms": 19682942,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "4hFMXOpyU9cgg3mZcNbEHr",
+          "name": "Mount Wrociai (Idle Days)",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4hFMXOpyU9cgg3mZcNbEHr"
+          },
+          "play_count": 34,
+          "total_listening_time_ms": 6438125,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "3SonaciCiY2VGnQpEkKdEv",
+          "name": "Mount Wroclai (Idle Days)",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3SonaciCiY2VGnQpEkKdEv"
+          },
+          "play_count": 16,
+          "total_listening_time_ms": 2976971,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "7kRP6EsaRaLbYV6GctJ3f2",
+          "name": "Rhineland (Heartland)",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7kRP6EsaRaLbYV6GctJ3f2"
+          },
+          "play_count": 29,
+          "total_listening_time_ms": 6318960,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "7KkVnlkYzgnYEMffzNiHg3",
+          "name": "Scenic World",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7KkVnlkYzgnYEMffzNiHg3"
+          },
+          "play_count": 30,
+          "total_listening_time_ms": 3248236,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "3xaXG6Hd20E654hTq0ARD6",
+          "name": "Bratislava",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3xaXG6Hd20E654hTq0ARD6"
+          },
+          "play_count": 13,
+          "total_listening_time_ms": 1552130,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "1vGFPX0rE5c0h8XJ7qfr5G",
+          "name": "The Bunker",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1vGFPX0rE5c0h8XJ7qfr5G"
+          },
+          "play_count": 12,
+          "total_listening_time_ms": 2079818,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "1wHLpGMJgRTejM3E3vBSGs",
+          "name": "The Canals of Our City",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1wHLpGMJgRTejM3E3vBSGs"
+          },
+          "play_count": 12,
+          "total_listening_time_ms": 1593236,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "1Th0UtpLijzkuX7gDueXum",
+          "name": "After The Curtain",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1Th0UtpLijzkuX7gDueXum"
+          },
+          "play_count": 10,
+          "total_listening_time_ms": 1373655,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "1VvyRNSVBKuvENwpyiVlBU",
+          "name": "Elephant Gun",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1VvyRNSVBKuvENwpyiVlBU"
+          },
+          "play_count": 30,
+          "total_listening_time_ms": 9185708,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "3WoriCf3f0aqUmEGFYja1C",
+          "name": "My Family's Role in the World Revolution",
+          "duration_ms": 0,
+          "track_number": 13,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3WoriCf3f0aqUmEGFYja1C"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 638865,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "6fMUkYIDWG7rz4gVDBeao5",
+          "name": "Scenic World (Version)",
+          "duration_ms": 0,
+          "track_number": 14,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6fMUkYIDWG7rz4gVDBeao5"
+          },
+          "play_count": 25,
+          "total_listening_time_ms": 4032632,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "7zSksDE133D8RuSWr6NRoJ",
+          "name": "The Long Island Sound",
+          "duration_ms": 0,
+          "track_number": 15,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7zSksDE133D8RuSWr6NRoJ"
+          },
+          "play_count": 7,
+          "total_listening_time_ms": 552811,
+          "artists": [
+            "Beirut"
+          ]
+        },
+        {
+          "songId": "4H16UevCLGiD0AugCDgjk5",
+          "name": "Carousels",
+          "duration_ms": 0,
+          "track_number": 16,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4H16UevCLGiD0AugCDgjk5"
+          },
+          "play_count": 8,
+          "total_listening_time_ms": 1738775,
+          "artists": [
+            "Beirut"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 13,
       "duration_ms": 47297141,
       "count": 367,
       "differents": 15,
@@ -3226,7 +3562,7 @@
       ]
     },
     {
-      "rank": 13,
+      "rank": 14,
       "duration_ms": 59487116,
       "count": 362,
       "differents": 38,
@@ -3494,7 +3830,7 @@
       ]
     },
     {
-      "rank": 14,
+      "rank": 15,
       "duration_ms": 64102029,
       "count": 362,
       "differents": 19,
@@ -3864,7 +4200,7 @@
       ]
     },
     {
-      "rank": 15,
+      "rank": 16,
       "duration_ms": 67161019,
       "count": 349,
       "differents": 22,
@@ -4285,7 +4621,7 @@
       ]
     },
     {
-      "rank": 16,
+      "rank": 17,
       "duration_ms": 56961632,
       "count": 331,
       "differents": 24,
@@ -4553,7 +4889,7 @@
       ]
     },
     {
-      "rank": 17,
+      "rank": 18,
       "duration_ms": 53852717,
       "count": 330,
       "differents": 40,
@@ -4940,7 +5276,7 @@
       ]
     },
     {
-      "rank": 18,
+      "rank": 19,
       "duration_ms": 32647884,
       "count": 318,
       "differents": 20,
@@ -5157,7 +5493,7 @@
       ]
     },
     {
-      "rank": 19,
+      "rank": 20,
       "duration_ms": 69204208,
       "count": 314,
       "differents": 32,
@@ -5476,7 +5812,394 @@
       ]
     },
     {
-      "rank": 20,
+      "rank": 21,
+      "duration_ms": 21137605,
+      "count": 310,
+      "differents": 20,
+      "primaryAlbumId": "4eiF0SvfWi0Y78HyIOaQCZ",
+      "total_count": 161,
+      "total_duration_ms": 40496164,
+      "album": {
+        "name": "Joyce Manor",
+        "album_type": "album",
+        "artists": [
+          "Joyce Manor"
+        ],
+        "release_date": "2011-01-11",
+        "release_date_precision": "day",
+        "popularity": 0,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2739df4f5d82dedadd8a1327dbe",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e029df4f5d82dedadd8a1327dbe",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048519df4f5d82dedadd8a1327dbe",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6QPou2e8WCSHa24mBIOoaa"
+        },
+        "genres": []
+      },
+      "consolidated_count": 310,
+      "original_albumIds": [],
+      "total_songs": 20,
+      "played_songs": 20,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "1rnZLW5PqSYSINVqaDGoXo",
+          "name": "Orange Julius",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1rnZLW5PqSYSINVqaDGoXo"
+          },
+          "play_count": 13,
+          "total_listening_time_ms": 1000570,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "2VW8Dcnresc5PfT9P5hoTm",
+          "name": "Orange Julius - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2VW8Dcnresc5PfT9P5hoTm"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 168136,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "3SLSOu3Ycle93Zcv21bhSY",
+          "name": "Call Out",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3SLSOu3Ycle93Zcv21bhSY"
+          },
+          "play_count": 32,
+          "total_listening_time_ms": 3666447,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "1talDdKusCGOl4ebbqf6G4",
+          "name": "Call Out - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1talDdKusCGOl4ebbqf6G4"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 125007,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "10kdMb4xAdOSgaQa7YMD4b",
+          "name": "Beach Community",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/10kdMb4xAdOSgaQa7YMD4b"
+          },
+          "play_count": 37,
+          "total_listening_time_ms": 3688643,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "1AkHMP10vkIAkxUGIkrr9A",
+          "name": "Beach Community - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1AkHMP10vkIAkxUGIkrr9A"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 101874,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "6dBiFS1DsiG5hW4x70hvpE",
+          "name": "Derailed",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6dBiFS1DsiG5hW4x70hvpE"
+          },
+          "play_count": 13,
+          "total_listening_time_ms": 1348948,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "46RzVcVjoK3raRLl6rM1hD",
+          "name": "Derailed - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/46RzVcVjoK3raRLl6rM1hD"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 102850,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "0u3OX69jed1srpPsrt6z6b",
+          "name": "Famous Friend",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0u3OX69jed1srpPsrt6z6b"
+          },
+          "play_count": 11,
+          "total_listening_time_ms": 1003418,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "4XlwkXDjjRruFksppSB1GX",
+          "name": "Famous Friend - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4XlwkXDjjRruFksppSB1GX"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 91226,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "5UW3KdhnRVGdACm0SvW6mw",
+          "name": "Leather Jacket",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5UW3KdhnRVGdACm0SvW6mw"
+          },
+          "play_count": 53,
+          "total_listening_time_ms": 6374430,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "0ng7O3UCFkXzGWYysf2pIX",
+          "name": "Leather Jacket - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0ng7O3UCFkXzGWYysf2pIX"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 135783,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "14fq1vABZ9ZzUJnTrCc6tJ",
+          "name": "21st Dead Rats",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/14fq1vABZ9ZzUJnTrCc6tJ"
+          },
+          "play_count": 11,
+          "total_listening_time_ms": 889929,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "4Ktcqm6ipx09fyJRUKJFTS",
+          "name": "21st Dead Rats - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4Ktcqm6ipx09fyJRUKJFTS"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 95113,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "55ppl97gTWfM1Ji0WY0Zxs",
+          "name": "Constant Nothing",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/55ppl97gTWfM1Ji0WY0Zxs"
+          },
+          "play_count": 12,
+          "total_listening_time_ms": 925550,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "2VTwDqSRNv6BMBvO9WXr7B",
+          "name": "Constant Nothing - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2VTwDqSRNv6BMBvO9WXr7B"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 85492,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "3k4wVLRNd4NKTmS5BzRuIj",
+          "name": "Ashtray Petting Zoo",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3k4wVLRNd4NKTmS5BzRuIj"
+          },
+          "play_count": 9,
+          "total_listening_time_ms": 1029747,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "3B7D7yCzAXMXEoZxHEOQ8n",
+          "name": "Ashtray Petting Zoo - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3B7D7yCzAXMXEoZxHEOQ8n"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 138942,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "4eiF0SvfWi0Y78HyIOaQCZ",
+          "name": "Constant Headache",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4eiF0SvfWi0Y78HyIOaQCZ"
+          },
+          "play_count": 108,
+          "total_listening_time_ms": 19337198,
+          "artists": [
+            "Joyce Manor"
+          ]
+        },
+        {
+          "songId": "62RbPZmJ3WcRlphQ8Ox3ca",
+          "name": "Constant Headache - 2021 Remaster",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/62RbPZmJ3WcRlphQ8Ox3ca"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 186861,
+          "artists": [
+            "Joyce Manor"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 22,
       "duration_ms": 56108180,
       "count": 305,
       "differents": 20,
@@ -5693,7 +6416,7 @@
       ]
     },
     {
-      "rank": 21,
+      "rank": 23,
       "duration_ms": 52223018,
       "count": 304,
       "differents": 26,
@@ -5961,7 +6684,7 @@
       ]
     },
     {
-      "rank": 22,
+      "rank": 24,
       "duration_ms": 61162763,
       "count": 295,
       "differents": 19,
@@ -6280,7 +7003,7 @@
       ]
     },
     {
-      "rank": 23,
+      "rank": 25,
       "duration_ms": 55896422,
       "count": 290,
       "differents": 28,
@@ -6565,7 +7288,7 @@
       ]
     },
     {
-      "rank": 24,
+      "rank": 26,
       "duration_ms": 46229653,
       "count": 284,
       "differents": 20,
@@ -6799,7 +7522,7 @@
       ]
     },
     {
-      "rank": 25,
+      "rank": 27,
       "duration_ms": 55777765,
       "count": 280,
       "differents": 64,
@@ -7101,7 +7824,7 @@
       ]
     },
     {
-      "rank": 26,
+      "rank": 28,
       "duration_ms": 63042276,
       "count": 279,
       "differents": 13,
@@ -7369,7 +8092,7 @@
       ]
     },
     {
-      "rank": 27,
+      "rank": 29,
       "duration_ms": 35693015,
       "count": 274,
       "differents": 25,
@@ -7637,7 +8360,7 @@
       ]
     },
     {
-      "rank": 28,
+      "rank": 30,
       "duration_ms": 56216942,
       "count": 273,
       "differents": 20,
@@ -7854,7 +8577,7 @@
       ]
     },
     {
-      "rank": 29,
+      "rank": 31,
       "duration_ms": 49384178,
       "count": 269,
       "differents": 21,
@@ -8088,7 +8811,7 @@
       ]
     },
     {
-      "rank": 30,
+      "rank": 32,
       "duration_ms": 57444251,
       "count": 269,
       "differents": 14,
@@ -8373,7 +9096,7 @@
       ]
     },
     {
-      "rank": 31,
+      "rank": 33,
       "duration_ms": 37070347,
       "count": 268,
       "differents": 31,
@@ -8709,7 +9432,7 @@
       ]
     },
     {
-      "rank": 32,
+      "rank": 34,
       "duration_ms": 40412968,
       "count": 266,
       "differents": 31,
@@ -9028,7 +9751,7 @@
       ]
     },
     {
-      "rank": 33,
+      "rank": 35,
       "duration_ms": 54149576,
       "count": 262,
       "differents": 30,
@@ -9245,7 +9968,7 @@
       ]
     },
     {
-      "rank": 34,
+      "rank": 36,
       "duration_ms": 50003316,
       "count": 260,
       "differents": 47,
@@ -9649,7 +10372,7 @@
       ]
     },
     {
-      "rank": 35,
+      "rank": 37,
       "duration_ms": 35649325,
       "count": 256,
       "differents": 12,
@@ -9900,7 +10623,7 @@
       ]
     },
     {
-      "rank": 36,
+      "rank": 38,
       "duration_ms": 48116110,
       "count": 251,
       "differents": 32,
@@ -10219,7 +10942,7 @@
       ]
     },
     {
-      "rank": 37,
+      "rank": 39,
       "duration_ms": 48388746,
       "count": 250,
       "differents": 34,
@@ -10521,7 +11244,564 @@
       ]
     },
     {
-      "rank": 38,
+      "rank": 40,
+      "duration_ms": 15510926,
+      "count": 248,
+      "differents": 14,
+      "primaryAlbumId": "4PGjRto9ziwnhqBbxxhRht",
+      "total_count": 108,
+      "total_duration_ms": 38670400,
+      "album": {
+        "name": "The Bronx (IV)",
+        "album_type": "album",
+        "artists": [
+          "The Bronx"
+        ],
+        "release_date": "2013-02-04",
+        "release_date_precision": "day",
+        "popularity": 0,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273c25ad21fd53eaec25ababaab",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02c25ad21fd53eaec25ababaab",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851c25ad21fd53eaec25ababaab",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/0HEgil8bkBzQqC0usE30iG"
+        },
+        "genres": []
+      },
+      "consolidated_count": 248,
+      "original_albumIds": [],
+      "total_songs": 30,
+      "played_songs": 30,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "3jGUd86f3hLJixceqMxHWi",
+          "name": "Knifeman",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3jGUd86f3hLJixceqMxHWi"
+          },
+          "play_count": 32,
+          "total_listening_time_ms": 5796162,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "0k483dcMGE6ylstRbUss1p",
+          "name": "Heart Attack American",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0k483dcMGE6ylstRbUss1p"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 580907,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "0dznpo335I5BZywwSBNSG4",
+          "name": "The Unholy Hand",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0dznpo335I5BZywwSBNSG4"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 178353,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "57Kx2iTWslJz4wC9Y2CouL",
+          "name": "False Alarm",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/57Kx2iTWslJz4wC9Y2CouL"
+          },
+          "play_count": 19,
+          "total_listening_time_ms": 2457217,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "6jLUbPzIx5qmckXXR4R2Qx",
+          "name": "Inveigh",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6jLUbPzIx5qmckXXR4R2Qx"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 748621,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2vjSVNdB757zA7X3k05XpR",
+          "name": "Along for the Ride",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2vjSVNdB757zA7X3k05XpR"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 240571,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2cWiWAKg9Dn7MEUPv11SW8",
+          "name": "Style Over Everything",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2cWiWAKg9Dn7MEUPv11SW8"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 223840,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2ScBjEjMsD4hY5HxTQpJwK",
+          "name": "Sh*tty Future",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2ScBjEjMsD4hY5HxTQpJwK"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 129093,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2TSV76YQGNJYbZNIkDmrPB",
+          "name": "Shitty Future",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2TSV76YQGNJYbZNIkDmrPB"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 129093,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "5o1LZx9KpDnlPxR02NZLy8",
+          "name": "History's Stranglers",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5o1LZx9KpDnlPxR02NZLy8"
+          },
+          "play_count": 12,
+          "total_listening_time_ms": 1563662,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "3KvYPQuaDelWKzSd0mQtBi",
+          "name": "Youth Wasted",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3KvYPQuaDelWKzSd0mQtBi"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 738678,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "7LCbpoYD79aktDVioYw927",
+          "name": "They Will Kills Us All (Without Mercy)",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7LCbpoYD79aktDVioYw927"
+          },
+          "play_count": 22,
+          "total_listening_time_ms": 4475235,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "43LesRkqOSdubckyVYSTgf",
+          "name": "Too Many Devils",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/43LesRkqOSdubckyVYSTgf"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 159173,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "5yf95HFMnmtS7jcKVyNu94",
+          "name": "Pleasure Seekers",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5yf95HFMnmtS7jcKVyNu94"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 182413,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "3QGox2owFqVhU8RdBzD4Fp",
+          "name": "Six Days a Week",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3QGox2owFqVhU8RdBzD4Fp"
+          },
+          "play_count": 7,
+          "total_listening_time_ms": 474898,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2p7Y9RbKa8Sm5pFc9BUvlo",
+          "name": "Pilot Light",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2p7Y9RbKa8Sm5pFc9BUvlo"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 10126,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "5gOxhAevSHTC5LVEQ9ebnv",
+          "name": "Dirty Leaves",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5gOxhAevSHTC5LVEQ9ebnv"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 176332,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "0U1Foyr8PdztHZcPtq4XFs",
+          "name": "Young Bloods",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0U1Foyr8PdztHZcPtq4XFs"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 173906,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2YqdkgkTNPJZyveKkNHpQz",
+          "name": "Notice of Eviction",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2YqdkgkTNPJZyveKkNHpQz"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 544372,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2WJ1hzDp86Gw6yDspGzOYY",
+          "name": "Under the Rabbit",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2WJ1hzDp86Gw6yDspGzOYY"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 181497,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "4kXNLIG8V5bOHzv3vyQPfq",
+          "name": "Mouth Money",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4kXNLIG8V5bOHzv3vyQPfq"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 155146,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "2HHV3an0E7NOAlPTLbTY3x",
+          "name": "Ribcage",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2HHV3an0E7NOAlPTLbTY3x"
+          },
+          "play_count": 29,
+          "total_listening_time_ms": 3847656,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "307LzFRXZqAzRGiOYNa0m1",
+          "name": "Kill My Friends",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/307LzFRXZqAzRGiOYNa0m1"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 259944,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "3uwsM6HBpdTX9im3Pqt62s",
+          "name": "Strobe Life",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3uwsM6HBpdTX9im3Pqt62s"
+          },
+          "play_count": 22,
+          "total_listening_time_ms": 5071187,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "3z2w0B7scy65Z1qnFaoM15",
+          "name": "Around The Horn",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3z2w0B7scy65Z1qnFaoM15"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 129592,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "1nxxhB7TUKVO8GFXKh3RLN",
+          "name": "Valley Heat",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1nxxhB7TUKVO8GFXKh3RLN"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 175466,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "3qNW3L0pvJGVNhnbOSyDye",
+          "name": "Spanish Handshake",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3qNW3L0pvJGVNhnbOSyDye"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 88803,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "31vtlHPcoxijnlXBdKZcEG",
+          "name": "Life Less Ordinary",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/31vtlHPcoxijnlXBdKZcEG"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 246162,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "6dtfTAfYkJw8EIgqXb2aeq",
+          "name": "Last Revelation",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6dtfTAfYkJw8EIgqXb2aeq"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 61662,
+          "artists": [
+            "The Bronx"
+          ]
+        },
+        {
+          "songId": "5z1UEMrU0fIpmiEcGaTvaK",
+          "name": "White Guilt",
+          "duration_ms": 0,
+          "track_number": 13,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5z1UEMrU0fIpmiEcGaTvaK"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 22891,
+          "artists": [
+            "The Bronx"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 41,
       "duration_ms": 22856973,
       "count": 242,
       "differents": 20,
@@ -10908,7 +12188,7 @@
       ]
     },
     {
-      "rank": 39,
+      "rank": 42,
       "duration_ms": 39144167,
       "count": 241,
       "differents": 33,
@@ -11142,7 +12422,7 @@
       ]
     },
     {
-      "rank": 40,
+      "rank": 43,
       "duration_ms": 38702795,
       "count": 233,
       "differents": 12,
@@ -11393,7 +12673,7 @@
       ]
     },
     {
-      "rank": 41,
+      "rank": 44,
       "duration_ms": 44424157,
       "count": 232,
       "differents": 16,
@@ -11712,7 +12992,7 @@
       ]
     },
     {
-      "rank": 42,
+      "rank": 45,
       "duration_ms": 35440011,
       "count": 228,
       "differents": 27,
@@ -11946,7 +13226,7 @@
       ]
     },
     {
-      "rank": 43,
+      "rank": 46,
       "duration_ms": 41991468,
       "count": 227,
       "differents": 34,
@@ -12282,7 +13562,7 @@
       ]
     },
     {
-      "rank": 44,
+      "rank": 47,
       "duration_ms": 38090065,
       "count": 225,
       "differents": 17,
@@ -12499,7 +13779,7 @@
       ]
     },
     {
-      "rank": 45,
+      "rank": 48,
       "duration_ms": 48344810,
       "count": 224,
       "differents": 40,
@@ -13226,7 +14506,7 @@
       ]
     },
     {
-      "rank": 46,
+      "rank": 49,
       "duration_ms": 38184625,
       "count": 224,
       "differents": 13,
@@ -13494,7 +14774,7 @@
       ]
     },
     {
-      "rank": 47,
+      "rank": 50,
       "duration_ms": 42355793,
       "count": 223,
       "differents": 21,
@@ -13728,7 +15008,7 @@
       ]
     },
     {
-      "rank": 48,
+      "rank": 51,
       "duration_ms": 39101379,
       "count": 222,
       "differents": 12,
@@ -13962,7 +15242,7 @@
       ]
     },
     {
-      "rank": 49,
+      "rank": 52,
       "duration_ms": 35068909,
       "count": 222,
       "differents": 29,
@@ -14264,7 +15544,7 @@
       ]
     },
     {
-      "rank": 50,
+      "rank": 53,
       "duration_ms": 51809793,
       "count": 222,
       "differents": 20,
@@ -14481,7 +15761,7 @@
       ]
     },
     {
-      "rank": 51,
+      "rank": 54,
       "duration_ms": 36663491,
       "count": 221,
       "differents": 12,
@@ -14732,7 +16012,7 @@
       ]
     },
     {
-      "rank": 52,
+      "rank": 55,
       "duration_ms": 38807708,
       "count": 220,
       "differents": 17,
@@ -15068,7 +16348,7 @@
       ]
     },
     {
-      "rank": 53,
+      "rank": 56,
       "duration_ms": 38777410,
       "count": 219,
       "differents": 36,
@@ -15353,7 +16633,7 @@
       ]
     },
     {
-      "rank": 54,
+      "rank": 57,
       "duration_ms": 38491676,
       "count": 214,
       "differents": 26,
@@ -15621,7 +16901,7 @@
       ]
     },
     {
-      "rank": 55,
+      "rank": 58,
       "duration_ms": 38937759,
       "count": 213,
       "differents": 44,
@@ -15855,7 +17135,7 @@
       ]
     },
     {
-      "rank": 56,
+      "rank": 59,
       "duration_ms": 38509814,
       "count": 207,
       "differents": 44,
@@ -16259,7 +17539,7 @@
       ]
     },
     {
-      "rank": 57,
+      "rank": 60,
       "duration_ms": 44542192,
       "count": 205,
       "differents": 30,
@@ -16595,7 +17875,7 @@
       ]
     },
     {
-      "rank": 58,
+      "rank": 61,
       "duration_ms": 37552915,
       "count": 204,
       "differents": 14,
@@ -16880,326 +18160,7 @@
       ]
     },
     {
-      "rank": 59,
-      "duration_ms": 40274267,
-      "count": 202,
-      "differents": 16,
-      "primaryAlbumId": "1VvyRNSVBKuvENwpyiVlBU",
-      "total_count": 202,
-      "total_duration_ms": 40274267,
-      "album": {
-        "name": "The Gulag Orkestar",
-        "album_type": "album",
-        "artists": [
-          "Beirut"
-        ],
-        "release_date": "2006-11-06",
-        "release_date_precision": "day",
-        "popularity": 0,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2730539c9985a36d4ab1d7b61d0",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e020539c9985a36d4ab1d7b61d0",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048510539c9985a36d4ab1d7b61d0",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/5N82AYJ3FG1znFz3EqJNMm"
-        },
-        "genres": []
-      },
-      "consolidated_count": 202,
-      "original_albumIds": [],
-      "total_songs": 16,
-      "played_songs": 16,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "3gNwlim5qMcVg7HJelghRc",
-          "name": "The Gulag Orkestar",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3gNwlim5qMcVg7HJelghRc"
-          },
-          "play_count": 10,
-          "total_listening_time_ms": 2300520,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "4mp1w2OclyziuzMZ8bXzOf",
-          "name": "Prenzlauerberg",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4mp1w2OclyziuzMZ8bXzOf"
-          },
-          "play_count": 6,
-          "total_listening_time_ms": 1156575,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "5fOvIva2Z0Vq83zeKpyIfe",
-          "name": "Brandenburg",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5fOvIva2Z0Vq83zeKpyIfe"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 1586364,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "5YAhKEMTGMh6SxTSYcUJl6",
-          "name": "Postcards From Italy",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5YAhKEMTGMh6SxTSYcUJl6"
-          },
-          "play_count": 34,
-          "total_listening_time_ms": 7986386,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "3SonaciCiY2VGnQpEkKdEv",
-          "name": "Mount Wroclai (Idle Days)",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3SonaciCiY2VGnQpEkKdEv"
-          },
-          "play_count": 16,
-          "total_listening_time_ms": 2976971,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "7kRP6EsaRaLbYV6GctJ3f2",
-          "name": "Rhineland (Heartland)",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7kRP6EsaRaLbYV6GctJ3f2"
-          },
-          "play_count": 10,
-          "total_listening_time_ms": 2149677,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "7KkVnlkYzgnYEMffzNiHg3",
-          "name": "Scenic World",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7KkVnlkYzgnYEMffzNiHg3"
-          },
-          "play_count": 13,
-          "total_listening_time_ms": 1551970,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "3xaXG6Hd20E654hTq0ARD6",
-          "name": "Bratislava",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3xaXG6Hd20E654hTq0ARD6"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 1053800,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "1vGFPX0rE5c0h8XJ7qfr5G",
-          "name": "The Bunker",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1vGFPX0rE5c0h8XJ7qfr5G"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 1324146,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "1wHLpGMJgRTejM3E3vBSGs",
-          "name": "The Canals of Our City",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1wHLpGMJgRTejM3E3vBSGs"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 987840,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "1Th0UtpLijzkuX7gDueXum",
-          "name": "After The Curtain",
-          "duration_ms": 0,
-          "track_number": 11,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1Th0UtpLijzkuX7gDueXum"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 1051227,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "1VvyRNSVBKuvENwpyiVlBU",
-          "name": "Elephant Gun",
-          "duration_ms": 0,
-          "track_number": 12,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1VvyRNSVBKuvENwpyiVlBU"
-          },
-          "play_count": 30,
-          "total_listening_time_ms": 9185708,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "3WoriCf3f0aqUmEGFYja1C",
-          "name": "My Family's Role in the World Revolution",
-          "duration_ms": 0,
-          "track_number": 13,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3WoriCf3f0aqUmEGFYja1C"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 638865,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "6fMUkYIDWG7rz4gVDBeao5",
-          "name": "Scenic World (Version)",
-          "duration_ms": 0,
-          "track_number": 14,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6fMUkYIDWG7rz4gVDBeao5"
-          },
-          "play_count": 25,
-          "total_listening_time_ms": 4032632,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "7zSksDE133D8RuSWr6NRoJ",
-          "name": "The Long Island Sound",
-          "duration_ms": 0,
-          "track_number": 15,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7zSksDE133D8RuSWr6NRoJ"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 552811,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "4H16UevCLGiD0AugCDgjk5",
-          "name": "Carousels",
-          "duration_ms": 0,
-          "track_number": 16,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4H16UevCLGiD0AugCDgjk5"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 1738775,
-          "artists": [
-            "Beirut"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 60,
+      "rank": 62,
       "duration_ms": 44420670,
       "count": 201,
       "differents": 23,
@@ -17399,7 +18360,7 @@
       ]
     },
     {
-      "rank": 61,
+      "rank": 63,
       "duration_ms": 37951222,
       "count": 201,
       "differents": 40,
@@ -17786,7 +18747,7 @@
       ]
     },
     {
-      "rank": 62,
+      "rank": 64,
       "duration_ms": 30237415,
       "count": 201,
       "differents": 31,
@@ -18020,7 +18981,7 @@
       ]
     },
     {
-      "rank": 63,
+      "rank": 65,
       "duration_ms": 32596494,
       "count": 201,
       "differents": 26,
@@ -18288,7 +19249,428 @@
       ]
     },
     {
-      "rank": 64,
+      "rank": 66,
+      "duration_ms": 47490987,
+      "count": 201,
+      "differents": 23,
+      "primaryAlbumId": "6vIMQB4hBD6ERSOCghGQkj",
+      "total_count": 187,
+      "total_duration_ms": 50211366,
+      "album": {
+        "name": "II",
+        "album_type": "album",
+        "artists": [
+          "Moderat"
+        ],
+        "release_date": "2013-07-31",
+        "release_date_precision": "day",
+        "popularity": 0,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2733d9a8f6b2706a6b36895f6dd",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e023d9a8f6b2706a6b36895f6dd",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048513d9a8f6b2706a6b36895f6dd",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/4QNlqYSMYCPiKZfzUfH7jK"
+        },
+        "genres": []
+      },
+      "consolidated_count": 201,
+      "original_albumIds": [],
+      "total_songs": 22,
+      "played_songs": 22,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "0FEDgmoxAcsxt8nwkjw2vg",
+          "name": "The Mark - Interlude",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0FEDgmoxAcsxt8nwkjw2vg"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 288318,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4Q9hosh7Slit7prFC4DTvJ",
+          "name": "The Mark - Interlude - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4Q9hosh7Slit7prFC4DTvJ"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 153960,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "52XjrfqvrxaMtjCDYEKkXN",
+          "name": "Bad Kingdom",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/52XjrfqvrxaMtjCDYEKkXN"
+          },
+          "play_count": 10,
+          "total_listening_time_ms": 2402814,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "7IBUPCeB9WIygOJKESrFeK",
+          "name": "Bad Kingdom - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7IBUPCeB9WIygOJKESrFeK"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 210317,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "6464Kei2DHVbKn39cTN5BG",
+          "name": "Versions",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6464Kei2DHVbKn39cTN5BG"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 664779,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "27Q6CMc0gMqApvGLvehOxv",
+          "name": "Versions - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/27Q6CMc0gMqApvGLvehOxv"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 248181,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "5mvjQa0Pt07biTEYY3mleq",
+          "name": "Let In The Light - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5mvjQa0Pt07biTEYY3mleq"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 456040,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "0WxS9Vw4649veGUtOrOPO1",
+          "name": "Let in the Light",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0WxS9Vw4649veGUtOrOPO1"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 510004,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "7G1RSGqXpfp9ZtAHF9lPXx",
+          "name": "Milk",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7G1RSGqXpfp9ZtAHF9lPXx"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 1366738,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "0Vtke6FnUMbytdNPAjH4Xv",
+          "name": "Milk - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Vtke6FnUMbytdNPAjH4Xv"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 483040,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4gT1faTjrtFRFTsr2bqqYV",
+          "name": "Therapy",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4gT1faTjrtFRFTsr2bqqYV"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 1748940,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4ZKe4P1ScfsXThgPehmP9G",
+          "name": "Therapy - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4ZKe4P1ScfsXThgPehmP9G"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 276427,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4iAV74zwJ9Rw9tgCIRtPc6",
+          "name": "Gita",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4iAV74zwJ9Rw9tgCIRtPc6"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 948597,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "1JWrzLVN7frfWdwR7dCybM",
+          "name": "Gita - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1JWrzLVN7frfWdwR7dCybM"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 209952,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4TNzbWdfgkrMj10FLcT1mv",
+          "name": "Clouded - Interlude",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4TNzbWdfgkrMj10FLcT1mv"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 280080,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "37cBAw64OSqK0aySQbcGiJ",
+          "name": "Clouded - Interlude - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/37cBAw64OSqK0aySQbcGiJ"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 74368,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "60KDx0WbhlNATMuv2EDGZZ",
+          "name": "Ilona",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/60KDx0WbhlNATMuv2EDGZZ"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 684995,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "2ryoLuNffp7soVF8EI1MQY",
+          "name": "Ilona - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2ryoLuNffp7soVF8EI1MQY"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 241824,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "2YRTNzRnWft7iv3vR4TW70",
+          "name": "Damage Done",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2YRTNzRnWft7iv3vR4TW70"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 978840,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "5IaRW9Cgmx0rtfqwSSGynL",
+          "name": "Damage Done - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5IaRW9Cgmx0rtfqwSSGynL"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 259627,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "3FhR8O5xTQWvBCtBxKxVX7",
+          "name": "This Time",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3FhR8O5xTQWvBCtBxKxVX7"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 930375,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "6dElFmaLfsolaX4Q4iOBHw",
+          "name": "This Time - Sped up Version",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6dElFmaLfsolaX4Q4iOBHw"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 106643,
+          "artists": [
+            "Moderat"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 67,
       "duration_ms": 25491299,
       "count": 200,
       "differents": 35,
@@ -18573,7 +19955,7 @@
       ]
     },
     {
-      "rank": 65,
+      "rank": 68,
       "duration_ms": 37690097,
       "count": 200,
       "differents": 11,
@@ -18807,7 +20189,632 @@
       ]
     },
     {
-      "rank": 66,
+      "rank": 69,
+      "duration_ms": 24084714,
+      "count": 197,
+      "differents": 25,
+      "primaryAlbumId": "2VVRmrgSmyYnEZsBTsnIRz",
+      "total_count": 106,
+      "total_duration_ms": 45707112,
+      "album": {
+        "name": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+        "album_type": "album",
+        "artists": [
+          "Oasis"
+        ],
+        "release_date": "1995",
+        "release_date_precision": "year",
+        "popularity": 73,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b2737a4c8c59851c88f6794c3cbf",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e027a4c8c59851c88f6794c3cbf",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d000048517a4c8c59851c88f6794c3cbf",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/6tOe4eAF8xNhEkl9WyvsE4"
+        },
+        "genres": []
+      },
+      "consolidated_count": 197,
+      "original_albumIds": [],
+      "total_songs": 34,
+      "played_songs": 34,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "1KcFLmFGCfkkAsooF6FJBr",
+          "name": "Hello - Remastered",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1KcFLmFGCfkkAsooF6FJBr"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 835580,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "3czgcbI4YZ4Gg29DOYFAnd",
+          "name": "Roll With It - Remastered",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3czgcbI4YZ4Gg29DOYFAnd"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 955981,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "3UNAMgNHKl0fWzbZaU0fDM",
+          "name": "Wonderwall",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3UNAMgNHKl0fWzbZaU0fDM"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 65049,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "7ygpwy2qP3NbrxVkHvUhXY",
+          "name": "Wonderwall - Remastered",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7ygpwy2qP3NbrxVkHvUhXY"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 536336,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "12dU3vAh6AFoJkisorfoUl",
+          "name": "Don't Look Back In Anger - Remastered",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/12dU3vAh6AFoJkisorfoUl"
+          },
+          "play_count": 11,
+          "total_listening_time_ms": 2838705,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "698mT3CTx8JEnp7twwJrGG",
+          "name": "Don't Look Back in Anger",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/698mT3CTx8JEnp7twwJrGG"
+          },
+          "play_count": 9,
+          "total_listening_time_ms": 1891769,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "4FDEDR99kqoGZOV88Wpnpg",
+          "name": "Hey Now! - Remastered",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4FDEDR99kqoGZOV88Wpnpg"
+          },
+          "play_count": 7,
+          "total_listening_time_ms": 1492165,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2GO3EslyJxvhd8p4EC4rIY",
+          "name": "(Untitled) - Remastered",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2GO3EslyJxvhd8p4EC4rIY"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 134361,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "0C5sWHmcl8725KPaVJj1td",
+          "name": "The Swamp Song (Excerpt 1) - Remastered",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0C5sWHmcl8725KPaVJj1td"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 89253,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "1xxPQaR29dAf3yxaafByeD",
+          "name": "Some Might Say - Remastered",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1xxPQaR29dAf3yxaafByeD"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 1406990,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "6CpEUxOlhcynZpIvPY08iv",
+          "name": "Some Might Say",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6CpEUxOlhcynZpIvPY08iv"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 655840,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "3NRf3hwlsoUWe0YnN3jqWL",
+          "name": "Cast No Shadow - Remastered",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3NRf3hwlsoUWe0YnN3jqWL"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 1484427,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "60QLLec3yKDwloXCyummPy",
+          "name": "She's Electric - Remastered",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/60QLLec3yKDwloXCyummPy"
+          },
+          "play_count": 7,
+          "total_listening_time_ms": 1222055,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "26rpQdizcvPeDQCIvd4WzJ",
+          "name": "She's Electric",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/26rpQdizcvPeDQCIvd4WzJ"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 441066,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "1H0K1GVwLteCZrPquy7qkM",
+          "name": "Morning Glory - Remastered",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1H0K1GVwLteCZrPquy7qkM"
+          },
+          "play_count": 14,
+          "total_listening_time_ms": 3846000,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "672CEQaP9MHRVZomlW0IY7",
+          "name": "Morning Glory",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/672CEQaP9MHRVZomlW0IY7"
+          },
+          "play_count": 13,
+          "total_listening_time_ms": 3066696,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2m7VqwOg21AirxmNOxeaKB",
+          "name": "The Swamp Song (Excerpt 2) - Remastered",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2m7VqwOg21AirxmNOxeaKB"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 196794,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2aZAlamIg7VRhvJxaF5iiJ",
+          "name": "Untitled - Remastered",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2aZAlamIg7VRhvJxaF5iiJ"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 80482,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "4pl3KL59qGPUUeNeYwPrOn",
+          "name": "Champagne Supernova",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4pl3KL59qGPUUeNeYwPrOn"
+          },
+          "play_count": 13,
+          "total_listening_time_ms": 4512923,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2A7GGXmTlXuH9LOvBXgOX4",
+          "name": "Champagne Supernova - Remastered",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2A7GGXmTlXuH9LOvBXgOX4"
+          },
+          "play_count": 12,
+          "total_listening_time_ms": 4805654,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2LNV0347QKt4AHxRSfCBij",
+          "name": "Talk Tonight - Remastered",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2LNV0347QKt4AHxRSfCBij"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 1350991,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2VVRmrgSmyYnEZsBTsnIRz",
+          "name": "Acquiesce - Remastered",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2VVRmrgSmyYnEZsBTsnIRz"
+          },
+          "play_count": 34,
+          "total_listening_time_ms": 8151131,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "32drzZQvRLJ5oEVYQgIfJC",
+          "name": "Headshrinker - Remastered",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/32drzZQvRLJ5oEVYQgIfJC"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 1067331,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2oa8YXhCiMbfBEc9Fpm28g",
+          "name": "It's Better People - Remastered",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2oa8YXhCiMbfBEc9Fpm28g"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 277829,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "3RQlPnPdfHkVLHOx6C4ijN",
+          "name": "Rockin' Chair - Remastered",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3RQlPnPdfHkVLHOx6C4ijN"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 279200,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "4SeE8Yh2EMcKbNosy9aKXj",
+          "name": "Step Out - Remastered",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4SeE8Yh2EMcKbNosy9aKXj"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 109619,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "1PCOqZEbrCvjmPFL6QtYiU",
+          "name": "The Swamp Song - Remastered",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1PCOqZEbrCvjmPFL6QtYiU"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 38111,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "0QRF5DfHjWxd4MHoQk2rgO",
+          "name": "The Masterplan - Remastered",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0QRF5DfHjWxd4MHoQk2rgO"
+          },
+          "play_count": 9,
+          "total_listening_time_ms": 2706984,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "122rube9BowhtWkplkNxbp",
+          "name": "Bonehead's Bank Holiday - Remastered",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/122rube9BowhtWkplkNxbp"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 78778,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "3V72Wm33JpZZjzCnU1FPHm",
+          "name": "Champagne Supernova - Brendan Lynch Mix [Remastered]",
+          "duration_ms": 0,
+          "track_number": 13,
+          "disc_number": 2,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3V72Wm33JpZZjzCnU1FPHm"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 103453,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "0PX1IWTfmySHgReeT47RVe",
+          "name": "Acquiesce - Live at Earls Court",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 3,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0PX1IWTfmySHgReeT47RVe"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 234440,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "5KGHUFVxujYmO77id7cC7z",
+          "name": "Some Might Say - Demo",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 3,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5KGHUFVxujYmO77id7cC7z"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 243866,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "6rp0jbLsZiTk9ciC9Z3QgB",
+          "name": "Some Might Say - Live at Roskilde",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 3,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6rp0jbLsZiTk9ciC9Z3QgB"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 212093,
+          "artists": [
+            "Oasis"
+          ]
+        },
+        {
+          "songId": "2uKHEDZofqO6kmurxm4qtF",
+          "name": "The Masterplan - Live at Knebworth Park",
+          "duration_ms": 0,
+          "track_number": 14,
+          "disc_number": 3,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2uKHEDZofqO6kmurxm4qtF"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 295160,
+          "artists": [
+            "Oasis"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 70,
       "duration_ms": 30690186,
       "count": 196,
       "differents": 16,
@@ -19041,7 +21048,275 @@
       ]
     },
     {
-      "rank": 67,
+      "rank": 71,
+      "duration_ms": 44614774,
+      "count": 195,
+      "differents": 12,
+      "primaryAlbumId": "4NSNSGjEMy4DPPrRoTB9XP",
+      "total_count": 186,
+      "total_duration_ms": 47146756,
+      "album": {
+        "name": "III (Deluxe Edition)",
+        "album_type": "album",
+        "artists": [
+          "Moderat"
+        ],
+        "release_date": "2016-04-01",
+        "release_date_precision": "day",
+        "popularity": 0,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273b4a9148a73a4c433a3035451",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02b4a9148a73a4c433a3035451",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851b4a9148a73a4c433a3035451",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/7BmMOUo8nrmYHB2EHBGkSt"
+        },
+        "genres": []
+      },
+      "consolidated_count": 195,
+      "original_albumIds": [],
+      "total_songs": 13,
+      "played_songs": 13,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "7BDI0iAUGkdR7OZD5chgEk",
+          "name": "Eating Hooks",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/7BDI0iAUGkdR7OZD5chgEk"
+          },
+          "play_count": 19,
+          "total_listening_time_ms": 4910851,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "63mwz5lVc5En9LyQIMdpzN",
+          "name": "Eating Hooks - Instrumental Version",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/63mwz5lVc5En9LyQIMdpzN"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 208590,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "1kVYlBIzz561CShPpzm19f",
+          "name": "Running",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1kVYlBIzz561CShPpzm19f"
+          },
+          "play_count": 43,
+          "total_listening_time_ms": 9243481,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "57uZEXxfTXLPQ0OMOXORKF",
+          "name": "Finder",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/57uZEXxfTXLPQ0OMOXORKF"
+          },
+          "play_count": 22,
+          "total_listening_time_ms": 6067407,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "1Dkz8Iqes5umuhmX3cB6Xx",
+          "name": "Ghostmother",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1Dkz8Iqes5umuhmX3cB6Xx"
+          },
+          "play_count": 20,
+          "total_listening_time_ms": 6265155,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "4NSNSGjEMy4DPPrRoTB9XP",
+          "name": "Reminder",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4NSNSGjEMy4DPPrRoTB9XP"
+          },
+          "play_count": 23,
+          "total_listening_time_ms": 4767380,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "3U4KuguRkeLuhsZAl24ik3",
+          "name": "The Fool",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3U4KuguRkeLuhsZAl24ik3"
+          },
+          "play_count": 17,
+          "total_listening_time_ms": 3815883,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "1mjca2TjG15PPX9tSDk0mi",
+          "name": "Intruder",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1mjca2TjG15PPX9tSDk0mi"
+          },
+          "play_count": 24,
+          "total_listening_time_ms": 5472552,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "2tyluyZ6MAUZxC2DkPvNAJ",
+          "name": "Animal Trails",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2tyluyZ6MAUZxC2DkPvNAJ"
+          },
+          "play_count": 7,
+          "total_listening_time_ms": 1681917,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "0XLboO7y80vWe7eMzxY8vo",
+          "name": "Ethereal",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0XLboO7y80vWe7eMzxY8vo"
+          },
+          "play_count": 6,
+          "total_listening_time_ms": 1680706,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "0OIUQvPUpcTYIAUS8IUVyK",
+          "name": "Fondle - Bonus Track",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0OIUQvPUpcTYIAUS8IUVyK"
+          },
+          "play_count": 5,
+          "total_listening_time_ms": 1117815,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "0Dwo4UnhTPXBZIJmhr3z3Z",
+          "name": "Reminder - Special Request Remix [Bonus Track]",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0Dwo4UnhTPXBZIJmhr3z3Z"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 1083442,
+          "artists": [
+            "Moderat"
+          ]
+        },
+        {
+          "songId": "2mOP2aahsDl07TuNXspUr4",
+          "name": "Reminder - Answer Code Request [Bonus Track]",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2mOP2aahsDl07TuNXspUr4"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 831577,
+          "artists": [
+            "Moderat"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 72,
       "duration_ms": 41193135,
       "count": 194,
       "differents": 13,
@@ -19309,7 +21584,7 @@
       ]
     },
     {
-      "rank": 68,
+      "rank": 73,
       "duration_ms": 34917623,
       "count": 189,
       "differents": 24,
@@ -19577,7 +21852,7 @@
       ]
     },
     {
-      "rank": 69,
+      "rank": 74,
       "duration_ms": 38001942,
       "count": 189,
       "differents": 21,
@@ -19845,7 +22120,7 @@
       ]
     },
     {
-      "rank": 70,
+      "rank": 75,
       "duration_ms": 43705837,
       "count": 187,
       "differents": 26,
@@ -20113,241 +22388,7 @@
       ]
     },
     {
-      "rank": 71,
-      "duration_ms": 47490987,
-      "count": 187,
-      "differents": 23,
-      "primaryAlbumId": "6vIMQB4hBD6ERSOCghGQkj",
-      "total_count": 187,
-      "total_duration_ms": 47490987,
-      "album": {
-        "name": "II",
-        "album_type": "album",
-        "artists": [
-          "Moderat"
-        ],
-        "release_date": "2013-07-31",
-        "release_date_precision": "day",
-        "popularity": 0,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2733d9a8f6b2706a6b36895f6dd",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e023d9a8f6b2706a6b36895f6dd",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048513d9a8f6b2706a6b36895f6dd",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4QNlqYSMYCPiKZfzUfH7jK"
-        },
-        "genres": []
-      },
-      "consolidated_count": 187,
-      "original_albumIds": [],
-      "total_songs": 11,
-      "played_songs": 11,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "1IYNHCRKW9V6fNUMHvU4eI",
-          "name": "The Mark - Interlude",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1IYNHCRKW9V6fNUMHvU4eI"
-          },
-          "play_count": 15,
-          "total_listening_time_ms": 1307305,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "1mCmHiSivRYNDghiq1lfnz",
-          "name": "Bad Kingdom",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1mCmHiSivRYNDghiq1lfnz"
-          },
-          "play_count": 69,
-          "total_listening_time_ms": 14458180,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "1O3TGC8h1pqCoSLN77DfX9",
-          "name": "Versions",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1O3TGC8h1pqCoSLN77DfX9"
-          },
-          "play_count": 13,
-          "total_listening_time_ms": 3491152,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "3tPaCziFdHU7tkMEOspYgl",
-          "name": "Let in the Light",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3tPaCziFdHU7tkMEOspYgl"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 2040016,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "22ptkkmOVKtBfGIuNXZiKO",
-          "name": "Milk",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/22ptkkmOVKtBfGIuNXZiKO"
-          },
-          "play_count": 12,
-          "total_listening_time_ms": 7214326,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "52pduFPbWVQ4zqBVhCj9z2",
-          "name": "Therapy",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/52pduFPbWVQ4zqBVhCj9z2"
-          },
-          "play_count": 26,
-          "total_listening_time_ms": 8211264,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "49tob6o3UytNLgtzk7pl0T",
-          "name": "Gita",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/49tob6o3UytNLgtzk7pl0T"
-          },
-          "play_count": 13,
-          "total_listening_time_ms": 3150974,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "75PbiV7LaP11kJqUs0UfS4",
-          "name": "Clouded - Interlude",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/75PbiV7LaP11kJqUs0UfS4"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 653520,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "0Tgs8loi0kni694TXHlyfW",
-          "name": "Ilona",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0Tgs8loi0kni694TXHlyfW"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 1645507,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "4zZN2PdZeGy3gBNItiVogT",
-          "name": "Damage Done",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4zZN2PdZeGy3gBNItiVogT"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 2313730,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "2rmH1mzEI7k2vxu5NdQhSC",
-          "name": "This Time",
-          "duration_ms": 0,
-          "track_number": 11,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2rmH1mzEI7k2vxu5NdQhSC"
-          },
-          "play_count": 9,
-          "total_listening_time_ms": 3005013,
-          "artists": [
-            "Moderat"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 72,
+      "rank": 76,
       "duration_ms": 48497999,
       "count": 186,
       "differents": 22,
@@ -20734,258 +22775,7 @@
       ]
     },
     {
-      "rank": 73,
-      "duration_ms": 44614774,
-      "count": 186,
-      "differents": 12,
-      "primaryAlbumId": "4NSNSGjEMy4DPPrRoTB9XP",
-      "total_count": 186,
-      "total_duration_ms": 44614774,
-      "album": {
-        "name": "III (Deluxe Edition)",
-        "album_type": "album",
-        "artists": [
-          "Moderat"
-        ],
-        "release_date": "2016-04-01",
-        "release_date_precision": "day",
-        "popularity": 0,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273b4a9148a73a4c433a3035451",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02b4a9148a73a4c433a3035451",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851b4a9148a73a4c433a3035451",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/7BmMOUo8nrmYHB2EHBGkSt"
-        },
-        "genres": []
-      },
-      "consolidated_count": 186,
-      "original_albumIds": [],
-      "total_songs": 12,
-      "played_songs": 12,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "7BDI0iAUGkdR7OZD5chgEk",
-          "name": "Eating Hooks",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7BDI0iAUGkdR7OZD5chgEk"
-          },
-          "play_count": 19,
-          "total_listening_time_ms": 4910851,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "1kVYlBIzz561CShPpzm19f",
-          "name": "Running",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1kVYlBIzz561CShPpzm19f"
-          },
-          "play_count": 43,
-          "total_listening_time_ms": 9243481,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "57uZEXxfTXLPQ0OMOXORKF",
-          "name": "Finder",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/57uZEXxfTXLPQ0OMOXORKF"
-          },
-          "play_count": 14,
-          "total_listening_time_ms": 3744015,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "1Dkz8Iqes5umuhmX3cB6Xx",
-          "name": "Ghostmother",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1Dkz8Iqes5umuhmX3cB6Xx"
-          },
-          "play_count": 20,
-          "total_listening_time_ms": 6265155,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "4NSNSGjEMy4DPPrRoTB9XP",
-          "name": "Reminder",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4NSNSGjEMy4DPPrRoTB9XP"
-          },
-          "play_count": 23,
-          "total_listening_time_ms": 4767380,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "3U4KuguRkeLuhsZAl24ik3",
-          "name": "The Fool",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3U4KuguRkeLuhsZAl24ik3"
-          },
-          "play_count": 17,
-          "total_listening_time_ms": 3815883,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "1mjca2TjG15PPX9tSDk0mi",
-          "name": "Intruder",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1mjca2TjG15PPX9tSDk0mi"
-          },
-          "play_count": 24,
-          "total_listening_time_ms": 5472552,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "2tyluyZ6MAUZxC2DkPvNAJ",
-          "name": "Animal Trails",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2tyluyZ6MAUZxC2DkPvNAJ"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 1681917,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "0XLboO7y80vWe7eMzxY8vo",
-          "name": "Ethereal",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0XLboO7y80vWe7eMzxY8vo"
-          },
-          "play_count": 6,
-          "total_listening_time_ms": 1680706,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "0OIUQvPUpcTYIAUS8IUVyK",
-          "name": "Fondle - Bonus Track",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0OIUQvPUpcTYIAUS8IUVyK"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 1117815,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "0Dwo4UnhTPXBZIJmhr3z3Z",
-          "name": "Reminder - Special Request Remix [Bonus Track]",
-          "duration_ms": 0,
-          "track_number": 11,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0Dwo4UnhTPXBZIJmhr3z3Z"
-          },
-          "play_count": 4,
-          "total_listening_time_ms": 1083442,
-          "artists": [
-            "Moderat"
-          ]
-        },
-        {
-          "songId": "2mOP2aahsDl07TuNXspUr4",
-          "name": "Reminder - Answer Code Request [Bonus Track]",
-          "duration_ms": 0,
-          "track_number": 12,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2mOP2aahsDl07TuNXspUr4"
-          },
-          "play_count": 4,
-          "total_listening_time_ms": 831577,
-          "artists": [
-            "Moderat"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 74,
+      "rank": 77,
       "duration_ms": 34725638,
       "count": 185,
       "differents": 19,
@@ -21270,7 +23060,7 @@
       ]
     },
     {
-      "rank": 75,
+      "rank": 78,
       "duration_ms": 34885459,
       "count": 185,
       "differents": 10,
@@ -21487,7 +23277,7 @@
       ]
     },
     {
-      "rank": 76,
+      "rank": 79,
       "duration_ms": 23041482,
       "count": 185,
       "differents": 20,
@@ -21704,7 +23494,7 @@
       ]
     },
     {
-      "rank": 77,
+      "rank": 80,
       "duration_ms": 37406465,
       "count": 185,
       "differents": 22,
@@ -22125,7 +23915,7 @@
       ]
     },
     {
-      "rank": 78,
+      "rank": 81,
       "duration_ms": 22112149,
       "count": 184,
       "differents": 31,
@@ -22376,7 +24166,7 @@
       ]
     },
     {
-      "rank": 79,
+      "rank": 82,
       "duration_ms": 26950861,
       "count": 184,
       "differents": 28,
@@ -22610,7 +24400,7 @@
       ]
     },
     {
-      "rank": 80,
+      "rank": 83,
       "duration_ms": 41010230,
       "count": 182,
       "differents": 40,
@@ -22963,7 +24753,7 @@
       ]
     },
     {
-      "rank": 81,
+      "rank": 84,
       "duration_ms": 47409221,
       "count": 180,
       "differents": 21,
@@ -23282,7 +25072,7 @@
       ]
     },
     {
-      "rank": 82,
+      "rank": 85,
       "duration_ms": 38781259,
       "count": 180,
       "differents": 17,
@@ -23567,7 +25357,7 @@
       ]
     },
     {
-      "rank": 83,
+      "rank": 86,
       "duration_ms": 31927185,
       "count": 179,
       "differents": 42,
@@ -24073,7 +25863,7 @@
       ]
     },
     {
-      "rank": 84,
+      "rank": 87,
       "duration_ms": 31636074,
       "count": 179,
       "differents": 24,
@@ -24324,7 +26114,7 @@
       ]
     },
     {
-      "rank": 85,
+      "rank": 88,
       "duration_ms": 36734783,
       "count": 178,
       "differents": 14,
@@ -24609,7 +26399,7 @@
       ]
     },
     {
-      "rank": 86,
+      "rank": 89,
       "duration_ms": 20136816,
       "count": 177,
       "differents": 20,
@@ -24996,7 +26786,7 @@
       ]
     },
     {
-      "rank": 87,
+      "rank": 90,
       "duration_ms": 26246978,
       "count": 175,
       "differents": 29,
@@ -25213,7 +27003,326 @@
       ]
     },
     {
-      "rank": 88,
+      "rank": 91,
+      "duration_ms": 16193105,
+      "count": 175,
+      "differents": 30,
+      "primaryAlbumId": "0BlNkCzdgYi9eJXwnYUho9",
+      "total_count": 154,
+      "total_duration_ms": 18582681,
+      "album": {
+        "name": "No Control",
+        "album_type": "album",
+        "artists": [
+          "Bad Religion"
+        ],
+        "release_date": "1989",
+        "release_date_precision": "year",
+        "popularity": 53,
+        "images": [
+          {
+            "url": "https://i.scdn.co/image/ab67616d0000b273e78b00ce2d5f0f7f437e61a0",
+            "height": 640,
+            "width": 640
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00001e02e78b00ce2d5f0f7f437e61a0",
+            "height": 300,
+            "width": 300
+          },
+          {
+            "url": "https://i.scdn.co/image/ab67616d00004851e78b00ce2d5f0f7f437e61a0",
+            "height": 64,
+            "width": 64
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/3efgo1fUo21py17Z7jGsle"
+        },
+        "genres": []
+      },
+      "consolidated_count": 175,
+      "original_albumIds": [],
+      "total_songs": 16,
+      "played_songs": 16,
+      "unplayed_songs": 0,
+      "songs": [
+        {
+          "songId": "49JFc1gTebqwGrHzS9NmS5",
+          "name": "Change of Ideas",
+          "duration_ms": 0,
+          "track_number": 1,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/49JFc1gTebqwGrHzS9NmS5"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 87218,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "2niTDpL7epiYXoUEANGpUp",
+          "name": "Big Bang",
+          "duration_ms": 0,
+          "track_number": 2,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2niTDpL7epiYXoUEANGpUp"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 204320,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "6XD92oUadmiMjD9oEYnJCW",
+          "name": "No Control",
+          "duration_ms": 0,
+          "track_number": 3,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6XD92oUadmiMjD9oEYnJCW"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 207973,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "4IByS65YF2NasCpkv2kwi2",
+          "name": "Sometimes I Feel Like",
+          "duration_ms": 0,
+          "track_number": 4,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4IByS65YF2NasCpkv2kwi2"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 189652,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "2XodGEIRP7xxn0SSlzxE8Q",
+          "name": "Automatic Man",
+          "duration_ms": 0,
+          "track_number": 5,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/2XodGEIRP7xxn0SSlzxE8Q"
+          },
+          "play_count": 3,
+          "total_listening_time_ms": 302199,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "6yu4VDB0JyTf1JLF4bCsql",
+          "name": "I Want to Conquer the World",
+          "duration_ms": 0,
+          "track_number": 6,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6yu4VDB0JyTf1JLF4bCsql"
+          },
+          "play_count": 19,
+          "total_listening_time_ms": 2270295,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "4PmL8Bx7igQuYdHsdHqfMx",
+          "name": "Sanity",
+          "duration_ms": 0,
+          "track_number": 7,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4PmL8Bx7igQuYdHsdHqfMx"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 330720,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "0QLyUTq9lJoMOGY7yumvql",
+          "name": "Henchman",
+          "duration_ms": 0,
+          "track_number": 8,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/0QLyUTq9lJoMOGY7yumvql"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 135412,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "5Cb4bhlIgmGSjJACdgp7xS",
+          "name": "It Must Look Pretty Appealing",
+          "duration_ms": 0,
+          "track_number": 9,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5Cb4bhlIgmGSjJACdgp7xS"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 164132,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "6Z8Uj65H0HTL1dTd4GEhgT",
+          "name": "You",
+          "duration_ms": 0,
+          "track_number": 10,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6Z8Uj65H0HTL1dTd4GEhgT"
+          },
+          "play_count": 9,
+          "total_listening_time_ms": 971786,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "6H12nfM8hBufUCIkxLU6bF",
+          "name": "Progress",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": true,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/6H12nfM8hBufUCIkxLU6bF"
+          },
+          "play_count": 4,
+          "total_listening_time_ms": 538664,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "4b5xoX4ue4hB6ZiX7CVQZR",
+          "name": "Progess",
+          "duration_ms": 0,
+          "track_number": 11,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4b5xoX4ue4hB6ZiX7CVQZR"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 269332,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "3mE72Ge5IDPQK5IBD7gcYl",
+          "name": "I Want Something More",
+          "duration_ms": 0,
+          "track_number": 12,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/3mE72Ge5IDPQK5IBD7gcYl"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 95466,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "1FbO03NZLoIhROwd2koy5W",
+          "name": "Anxiety",
+          "duration_ms": 0,
+          "track_number": 13,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/1FbO03NZLoIhROwd2koy5W"
+          },
+          "play_count": 1,
+          "total_listening_time_ms": 128493,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "5EIRod4WKvCbrZjfIQiiXj",
+          "name": "Billy",
+          "duration_ms": 0,
+          "track_number": 14,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/5EIRod4WKvCbrZjfIQiiXj"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 229946,
+          "artists": [
+            "Bad Religion"
+          ]
+        },
+        {
+          "songId": "4PG1BEYVwMtXlY5OMWvN4b",
+          "name": "The World Won't Stop",
+          "duration_ms": 0,
+          "track_number": 15,
+          "disc_number": 1,
+          "explicit": false,
+          "preview_url": null,
+          "external_urls": {
+            "spotify": "https://open.spotify.com/track/4PG1BEYVwMtXlY5OMWvN4b"
+          },
+          "play_count": 2,
+          "total_listening_time_ms": 227631,
+          "artists": [
+            "Bad Religion"
+          ]
+        }
+      ]
+    },
+    {
+      "rank": 92,
       "duration_ms": 37339349,
       "count": 174,
       "differents": 17,
@@ -25413,7 +27522,7 @@
       ]
     },
     {
-      "rank": 89,
+      "rank": 93,
       "duration_ms": 33204684,
       "count": 173,
       "differents": 37,
@@ -25732,7 +27841,7 @@
       ]
     },
     {
-      "rank": 90,
+      "rank": 94,
       "duration_ms": 23077567,
       "count": 172,
       "differents": 25,
@@ -25983,7 +28092,7 @@
       ]
     },
     {
-      "rank": 91,
+      "rank": 95,
       "duration_ms": 26883976,
       "count": 171,
       "differents": 36,
@@ -26200,7 +28309,7 @@
       ]
     },
     {
-      "rank": 92,
+      "rank": 96,
       "duration_ms": 35903093,
       "count": 170,
       "differents": 25,
@@ -26485,7 +28594,7 @@
       ]
     },
     {
-      "rank": 93,
+      "rank": 97,
       "duration_ms": 21887876,
       "count": 170,
       "differents": 27,
@@ -26889,241 +28998,7 @@
       ]
     },
     {
-      "rank": 94,
-      "duration_ms": 33232458,
-      "count": 169,
-      "differents": 20,
-      "primaryAlbumId": "4qBHDoJFUUSvTa4aZJfEuw",
-      "total_count": 169,
-      "total_duration_ms": 33232458,
-      "album": {
-        "name": "Gulag Orkestar",
-        "album_type": "album",
-        "artists": [
-          "Beirut"
-        ],
-        "release_date": "2006-05-06",
-        "release_date_precision": "day",
-        "popularity": 0,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2733e6978b321908e26e871c9d0",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e023e6978b321908e26e871c9d0",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048513e6978b321908e26e871c9d0",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/6MQXgLKSXLb8SwZ4m7STNc"
-        },
-        "genres": []
-      },
-      "consolidated_count": 169,
-      "original_albumIds": [],
-      "total_songs": 11,
-      "played_songs": 11,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "4q7DbTHsoUtkiAyelQsfh9",
-          "name": "The Gulag Orkestar",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4q7DbTHsoUtkiAyelQsfh9"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 1723029,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "43gcr2I2dOaOpKrUJJ22Ix",
-          "name": "Prenzlauerberg",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/43gcr2I2dOaOpKrUJJ22Ix"
-          },
-          "play_count": 10,
-          "total_listening_time_ms": 2142350,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "0MdNuVwk6cnPHvGvKPmOpx",
-          "name": "Brandenburg",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0MdNuVwk6cnPHvGvKPmOpx"
-          },
-          "play_count": 15,
-          "total_listening_time_ms": 3185023,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "4qBHDoJFUUSvTa4aZJfEuw",
-          "name": "Postcards from Italy",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4qBHDoJFUUSvTa4aZJfEuw"
-          },
-          "play_count": 50,
-          "total_listening_time_ms": 11696556,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "4hFMXOpyU9cgg3mZcNbEHr",
-          "name": "Mount Wrociai (Idle Days)",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4hFMXOpyU9cgg3mZcNbEHr"
-          },
-          "play_count": 34,
-          "total_listening_time_ms": 6438125,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "3GHMOfKEl0W5nW8E6sm7Vu",
-          "name": "Rhineland (Heartland)",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3GHMOfKEl0W5nW8E6sm7Vu"
-          },
-          "play_count": 19,
-          "total_listening_time_ms": 4169283,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "1YHIllgp5ifQdoyaUElGnT",
-          "name": "Scenic World",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1YHIllgp5ifQdoyaUElGnT"
-          },
-          "play_count": 17,
-          "total_listening_time_ms": 1696266,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "3SwJVDCm9Yqy5CouExjWze",
-          "name": "Bratislava",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3SwJVDCm9Yqy5CouExjWze"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 498330,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "0npkCOaalZOKncymwerX5I",
-          "name": "The Bunker",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0npkCOaalZOKncymwerX5I"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 755672,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "7lzEGogY7GBg4ikqeFreDd",
-          "name": "The Canals of Our City",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7lzEGogY7GBg4ikqeFreDd"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 605396,
-          "artists": [
-            "Beirut"
-          ]
-        },
-        {
-          "songId": "5y576Sqb2Z6F0zdGG2abX9",
-          "name": "After the Curtain",
-          "duration_ms": 0,
-          "track_number": 11,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5y576Sqb2Z6F0zdGG2abX9"
-          },
-          "play_count": 2,
-          "total_listening_time_ms": 322428,
-          "artists": [
-            "Beirut"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 95,
+      "rank": 98,
       "duration_ms": 22180370,
       "count": 169,
       "differents": 14,
@@ -27408,7 +29283,7 @@
       ]
     },
     {
-      "rank": 96,
+      "rank": 99,
       "duration_ms": 26971598,
       "count": 168,
       "differents": 25,
@@ -27880,7 +29755,7 @@
       ]
     },
     {
-      "rank": 97,
+      "rank": 100,
       "duration_ms": 30793949,
       "count": 167,
       "differents": 29,
@@ -28228,776 +30103,6 @@
           "total_listening_time_ms": 35775,
           "artists": [
             "The Smashing Pumpkins"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 98,
-      "duration_ms": 39342587,
-      "count": 167,
-      "differents": 20,
-      "primaryAlbumId": "3gqP2hxwgi6mb8FhtEe4zU",
-      "total_count": 167,
-      "total_duration_ms": 39342587,
-      "album": {
-        "name": "Every Kingdom (Deluxe Version)",
-        "album_type": "album",
-        "artists": [
-          "Ben Howard"
-        ],
-        "release_date": "2011-01-01",
-        "release_date_precision": "day",
-        "popularity": 0,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273ad5bfd61585db777e1886c95",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02ad5bfd61585db777e1886c95",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851ad5bfd61585db777e1886c95",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/2MxcbOGFi99D9JACvj74AH"
-        },
-        "genres": []
-      },
-      "consolidated_count": 167,
-      "original_albumIds": [],
-      "total_songs": 11,
-      "played_songs": 11,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "0Qw7qGuXlVBZLcfoQ17yZn",
-          "name": "Old Pine",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0Qw7qGuXlVBZLcfoQ17yZn"
-          },
-          "play_count": 22,
-          "total_listening_time_ms": 5491417,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "1lS4gwrIdt27IpKD7PdVP4",
-          "name": "Diamonds",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1lS4gwrIdt27IpKD7PdVP4"
-          },
-          "play_count": 3,
-          "total_listening_time_ms": 427068,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "3gqP2hxwgi6mb8FhtEe4zU",
-          "name": "The Wolves",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3gqP2hxwgi6mb8FhtEe4zU"
-          },
-          "play_count": 49,
-          "total_listening_time_ms": 11822317,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "0WZ0sCWOXINYNpBtmfyd6C",
-          "name": "Everything",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/0WZ0sCWOXINYNpBtmfyd6C"
-          },
-          "play_count": 2,
-          "total_listening_time_ms": 225544,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "3MdYFBIzPf7lSJnI8wi3Ka",
-          "name": "Only Love",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3MdYFBIzPf7lSJnI8wi3Ka"
-          },
-          "play_count": 20,
-          "total_listening_time_ms": 4250587,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "17bpxYmEJLHVdptkxtjHbh",
-          "name": "The Fear",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/17bpxYmEJLHVdptkxtjHbh"
-          },
-          "play_count": 1,
-          "total_listening_time_ms": 260342,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "5fpEDGQX0Ah3utGnFYulQZ",
-          "name": "Keep Your Head Up",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5fpEDGQX0Ah3utGnFYulQZ"
-          },
-          "play_count": 6,
-          "total_listening_time_ms": 1587276,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "3JhNsyNQSyrsHcnFRHZN1e",
-          "name": "Black Flies",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3JhNsyNQSyrsHcnFRHZN1e"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 1144272,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "16dLSIZMlfeH0RP6csLjip",
-          "name": "Gracious",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/16dLSIZMlfeH0RP6csLjip"
-          },
-          "play_count": 55,
-          "total_listening_time_ms": 13580135,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "4qyfir5Yr7nfo05g6cyFMT",
-          "name": "Promise",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4qyfir5Yr7nfo05g6cyFMT"
-          },
-          "play_count": 3,
-          "total_listening_time_ms": 227563,
-          "artists": [
-            "Ben Howard"
-          ]
-        },
-        {
-          "songId": "1poYgV2T1E488kAgofhHZM",
-          "name": "Empty Corridors - Live",
-          "duration_ms": 0,
-          "track_number": 13,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1poYgV2T1E488kAgofhHZM"
-          },
-          "play_count": 1,
-          "total_listening_time_ms": 326066,
-          "artists": [
-            "Ben Howard"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 99,
-      "duration_ms": 30812635,
-      "count": 167,
-      "differents": 25,
-      "primaryAlbumId": "22Mme5vsZ688TMUieIHdx3",
-      "total_count": 167,
-      "total_duration_ms": 30812635,
-      "album": {
-        "name": "LONG.LIVE.A$AP (Deluxe Version)",
-        "album_type": "album",
-        "artists": [
-          "A$AP Rocky"
-        ],
-        "release_date": "2013-01-11",
-        "release_date_precision": "day",
-        "popularity": 2,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b2733265ed162fa2dd5ec6434ee4",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e023265ed162fa2dd5ec6434ee4",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d000048513265ed162fa2dd5ec6434ee4",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/1E1eyI5uGllppJZCxNoF9w"
-        },
-        "genres": []
-      },
-      "consolidated_count": 167,
-      "original_albumIds": [],
-      "total_songs": 16,
-      "played_songs": 16,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "2JPavCWYtpCSnyLwnLBvXZ",
-          "name": "Long Live A$AP",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2JPavCWYtpCSnyLwnLBvXZ"
-          },
-          "play_count": 7,
-          "total_listening_time_ms": 1483267,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "4go2hxLM6ijk0K76ZY0Nhd",
-          "name": "Goldie",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4go2hxLM6ijk0K76ZY0Nhd"
-          },
-          "play_count": 34,
-          "total_listening_time_ms": 5646726,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "3IvVQ1qmekCQ4LRwGCyIJA",
-          "name": "PMW (All I Really Need) (feat. ScHoolboy Q)",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3IvVQ1qmekCQ4LRwGCyIJA"
-          },
-          "play_count": 8,
-          "total_listening_time_ms": 1279085,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "787rCZF9i4L1cXGMkdyIk4",
-          "name": "LVL",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/787rCZF9i4L1cXGMkdyIk4"
-          },
-          "play_count": 3,
-          "total_listening_time_ms": 520524,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "793xe74Xm4VFkkAOI6eZvy",
-          "name": "Hell (feat. Santigold)",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/793xe74Xm4VFkkAOI6eZvy"
-          },
-          "play_count": 2,
-          "total_listening_time_ms": 463572,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "4paWhLk6dHX5NLoTAqG3dM",
-          "name": "Pain (feat. OverDoz.)",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4paWhLk6dHX5NLoTAqG3dM"
-          },
-          "play_count": 2,
-          "total_listening_time_ms": 432299,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "4XoP1AkbOurU9CeZ2rMEz2",
-          "name": "F**kin' Problems (feat. Drake, 2 Chainz & Kendrick Lamar)",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4XoP1AkbOurU9CeZ2rMEz2"
-          },
-          "play_count": 26,
-          "total_listening_time_ms": 5006413,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "22Mme5vsZ688TMUieIHdx3",
-          "name": "Wild for the Night (feat. Skrillex & Birdy Nam Nam)",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/22Mme5vsZ688TMUieIHdx3"
-          },
-          "play_count": 16,
-          "total_listening_time_ms": 2582806,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "7AijU6oTPGmG64uWf63Qvc",
-          "name": "1Train",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7AijU6oTPGmG64uWf63Qvc"
-          },
-          "play_count": 3,
-          "total_listening_time_ms": 759647,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "40H5libEZWrbkc8HTlXGbt",
-          "name": "Fashion Killa",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/40H5libEZWrbkc8HTlXGbt"
-          },
-          "play_count": 5,
-          "total_listening_time_ms": 1015701,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "6BYVAEPmqWVUSqtrQpvLTT",
-          "name": "Phoenix",
-          "duration_ms": 0,
-          "track_number": 11,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6BYVAEPmqWVUSqtrQpvLTT"
-          },
-          "play_count": 34,
-          "total_listening_time_ms": 6723439,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "5oJ6pSfpV5HH9QBeXyNMjJ",
-          "name": "Suddenly",
-          "duration_ms": 0,
-          "track_number": 12,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5oJ6pSfpV5HH9QBeXyNMjJ"
-          },
-          "play_count": 2,
-          "total_listening_time_ms": 281436,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "35gDUOhgx0usvu8OqVsMnU",
-          "name": "Jodye",
-          "duration_ms": 0,
-          "track_number": 13,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/35gDUOhgx0usvu8OqVsMnU"
-          },
-          "play_count": 1,
-          "total_listening_time_ms": 59422,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "7ujbNS6fmb82EcZfiDsUd5",
-          "name": "Ghetto Symphony",
-          "duration_ms": 0,
-          "track_number": 14,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7ujbNS6fmb82EcZfiDsUd5"
-          },
-          "play_count": 1,
-          "total_listening_time_ms": 237733,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "6KM0MPPSPGjBlQgdwIeJLc",
-          "name": "Angels",
-          "duration_ms": 0,
-          "track_number": 15,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6KM0MPPSPGjBlQgdwIeJLc"
-          },
-          "play_count": 1,
-          "total_listening_time_ms": 227080,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        },
-        {
-          "songId": "6hP8N6hD4j9zwspKHXoJWW",
-          "name": "I Come Apart (feat. Florence Welch)",
-          "duration_ms": 0,
-          "track_number": 16,
-          "disc_number": 1,
-          "explicit": true,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6hP8N6hD4j9zwspKHXoJWW"
-          },
-          "play_count": 22,
-          "total_listening_time_ms": 4093485,
-          "artists": [
-            "A$AP Rocky"
-          ]
-        }
-      ]
-    },
-    {
-      "rank": 100,
-      "duration_ms": 34522698,
-      "count": 166,
-      "differents": 10,
-      "primaryAlbumId": "7Jh1bpe76CNTCgdgAdBw4Z",
-      "total_count": 166,
-      "total_duration_ms": 34522698,
-      "album": {
-        "name": "\"Heroes\" (2017 Remaster)",
-        "album_type": "album",
-        "artists": [
-          "David Bowie"
-        ],
-        "release_date": "1977",
-        "release_date_precision": "year",
-        "popularity": 64,
-        "images": [
-          {
-            "url": "https://i.scdn.co/image/ab67616d0000b273204f41d52743c6a9efd62985",
-            "height": 640,
-            "width": 640
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00001e02204f41d52743c6a9efd62985",
-            "height": 300,
-            "width": 300
-          },
-          {
-            "url": "https://i.scdn.co/image/ab67616d00004851204f41d52743c6a9efd62985",
-            "height": 64,
-            "width": 64
-          }
-        ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/album/4I5zzKYd2SKDgZ9DRf5LVk"
-        },
-        "genres": []
-      },
-      "consolidated_count": 166,
-      "original_albumIds": [],
-      "total_songs": 10,
-      "played_songs": 10,
-      "unplayed_songs": 0,
-      "songs": [
-        {
-          "songId": "56von762XlyEtT3qQhm47H",
-          "name": "Beauty and the Beast - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 1,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/56von762XlyEtT3qQhm47H"
-          },
-          "play_count": 10,
-          "total_listening_time_ms": 1960038,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "1HLbeCJcoW6Bo9xNgWXlSO",
-          "name": "Joe the Lion - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 2,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1HLbeCJcoW6Bo9xNgWXlSO"
-          },
-          "play_count": 15,
-          "total_listening_time_ms": 2184626,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "7Jh1bpe76CNTCgdgAdBw4Z",
-          "name": "Heroes - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 3,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/7Jh1bpe76CNTCgdgAdBw4Z"
-          },
-          "play_count": 35,
-          "total_listening_time_ms": 9310808,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "3O85NMbjKkbcCi44UAwOx4",
-          "name": "Sons of the Silent Age - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 4,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/3O85NMbjKkbcCi44UAwOx4"
-          },
-          "play_count": 12,
-          "total_listening_time_ms": 2371324,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "5p3dakY9xb0ArzIHUBshm6",
-          "name": "Blackout - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 5,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5p3dakY9xb0ArzIHUBshm6"
-          },
-          "play_count": 30,
-          "total_listening_time_ms": 5925972,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "6PRZIYPOPMt5y8wGofp44d",
-          "name": "V-2 Schneider - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 6,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/6PRZIYPOPMt5y8wGofp44d"
-          },
-          "play_count": 16,
-          "total_listening_time_ms": 2742723,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "1d89lSLqTpMMpcKBWzVWcm",
-          "name": "Sense of Doubt - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 7,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/1d89lSLqTpMMpcKBWzVWcm"
-          },
-          "play_count": 14,
-          "total_listening_time_ms": 2673795,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "2hBsekQsE7bxL4lNGpG1tL",
-          "name": "Moss Garden - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 8,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/2hBsekQsE7bxL4lNGpG1tL"
-          },
-          "play_count": 12,
-          "total_listening_time_ms": 3361698,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "5ZOitdISR9foFR6QrcZFCa",
-          "name": "Neuköln - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 9,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/5ZOitdISR9foFR6QrcZFCa"
-          },
-          "play_count": 13,
-          "total_listening_time_ms": 2537267,
-          "artists": [
-            "David Bowie"
-          ]
-        },
-        {
-          "songId": "4F1V29ygbAKbKCQDgt4z9f",
-          "name": "The Secret Life of Arabia - 2017 Remaster",
-          "duration_ms": 0,
-          "track_number": 10,
-          "disc_number": 1,
-          "explicit": false,
-          "preview_url": null,
-          "external_urls": {
-            "spotify": "https://open.spotify.com/track/4F1V29ygbAKbKCQDgt4z9f"
-          },
-          "play_count": 9,
-          "total_listening_time_ms": 1454447,
-          "artists": [
-            "David Bowie"
           ]
         }
       ]

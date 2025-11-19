@@ -238,8 +238,20 @@ interface SpotifyArtistsResponse {
   artists: SpotifyArtist[];
 }
 
+interface ConsolidationRule {
+  artistName: string;
+  baseAlbumName: string;
+  variations: string[];
+}
+
+interface ConsolidationRules {
+  rules: ConsolidationRule[];
+}
+
 class CleanedFilesGenerator {
   private tokenManager: SpotifyTokenManager | null = null;
+  private consolidationRules: Map<string, string> | null = null; // Map<"artist|album", "baseAlbumName">
+  private consolidationRulesData: ConsolidationRules | null = null; // Store full rules data for casing lookup
   /**
    * Find the most recent complete listening history file
    */
@@ -348,7 +360,84 @@ class CleanedFilesGenerator {
   }
 
   /**
-   * Consolidate albums by name and first artist
+   * Load consolidation rules from JSON file
+   */
+  private loadConsolidationRules(): Map<string, string> {
+    if (this.consolidationRules) {
+      return this.consolidationRules;
+    }
+
+    const rulesMap = new Map<string, string>();
+    
+    try {
+      if (fs.existsSync('album-consolidation-rules.json')) {
+        const rulesData = JSON.parse(fs.readFileSync('album-consolidation-rules.json', 'utf8')) as ConsolidationRules;
+        this.consolidationRulesData = rulesData; // Store for later casing lookup
+        
+        rulesData.rules.forEach(rule => {
+          const artistKey = rule.artistName.toLowerCase().trim();
+          const baseAlbumName = rule.baseAlbumName.toLowerCase().trim();
+          
+          // Map each variation to the base album name
+          rule.variations.forEach(variation => {
+            const variationKey = variation.toLowerCase().trim();
+            const mapKey = `${artistKey}|${variationKey}`;
+            rulesMap.set(mapKey, baseAlbumName);
+          });
+          
+          // Also map the base album name to itself
+          const baseKey = `${artistKey}|${baseAlbumName}`;
+          rulesMap.set(baseKey, baseAlbumName);
+        });
+        
+        console.log(`📋 Loaded ${rulesData.rules.length} consolidation rules`);
+      } else {
+        console.log('ℹ️  No consolidation rules file found (album-consolidation-rules.json)');
+      }
+    } catch (error) {
+      console.error('⚠️  Failed to load consolidation rules:', error);
+    }
+    
+    this.consolidationRules = rulesMap;
+    return rulesMap;
+  }
+
+  /**
+   * Normalize album name using consolidation rules (returns lowercase for comparison only)
+   * This is used to create consolidation keys - it does NOT modify the actual album name.
+   * The actual album name casing is preserved unless a rule exists (see getBaseAlbumName).
+   */
+  private normalizeAlbumName(albumName: string, artistName: string): string {
+    const rules = this.loadConsolidationRules();
+    const key = `${artistName.toLowerCase().trim()}|${albumName.toLowerCase().trim()}`;
+    const normalized = rules.get(key);
+    
+    if (normalized) {
+      return normalized; // Return lowercase normalized name for comparison key only
+    }
+    
+    return albumName.toLowerCase().trim(); // Return lowercase for comparison key only
+  }
+
+  /**
+   * Get the base album name with correct casing from consolidation rules
+   */
+  private getBaseAlbumName(albumName: string, artistName: string): string | null {
+    if (!this.consolidationRulesData) {
+      return null;
+    }
+    
+    const normalized = this.normalizeAlbumName(albumName, artistName);
+    const rule = this.consolidationRulesData.rules.find(r => 
+      r.artistName.toLowerCase().trim() === artistName.toLowerCase().trim() &&
+      r.baseAlbumName.toLowerCase().trim() === normalized
+    );
+    
+    return rule ? rule.baseAlbumName : null;
+  }
+
+  /**
+   * Consolidate albums by name and first artist, using consolidation rules
    */
   private consolidateAlbums(albums: CleanedAlbum[]): CleanedAlbum[] {
     console.log('🔄 Consolidating albums...');
@@ -358,7 +447,9 @@ class CleanedFilesGenerator {
     
     albums.forEach(album => {
       const firstArtist = album.album.artists[0] || 'Unknown Artist';
-      const key = `${album.album.name.toLowerCase().trim()}|${firstArtist.toLowerCase().trim()}`;
+      // Normalize album name using consolidation rules
+      const normalizedAlbumName = this.normalizeAlbumName(album.album.name, firstArtist);
+      const key = `${normalizedAlbumName}|${firstArtist.toLowerCase().trim()}`;
       
       if (consolidationMap.has(key)) {
         const existing = consolidationMap.get(key)!;
@@ -371,12 +462,37 @@ class CleanedFilesGenerator {
         existing.consolidated_count += album.count;
         existing.original_albumIds.push(album.primaryAlbumId);
         
+        // Update album name to use the normalized/base name if it's better
+        const normalizedBaseName = this.normalizeAlbumName(album.album.name, firstArtist);
+        if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
+            normalizedBaseName === existing.album.name.toLowerCase().trim()) {
+          // Keep existing (already normalized)
+        } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
+          // Use the one with more plays or better metadata
+          if (album.count > existing.count || 
+              (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
+            existing.album.name = album.album.name;
+            existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
+            existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
+          }
+        }
+        
         duplicatesRemoved++;
       } else {
-        consolidationMap.set(key, {
+        // Create new entry - preserve original album name casing unless a rule exists
+        const finalAlbum = {
           ...album,
           consolidated_count: album.count
-        });
+        };
+        
+        // Only update album name if a consolidation rule exists (preserves original casing otherwise)
+        const baseName = this.getBaseAlbumName(album.album.name, firstArtist);
+        if (baseName) {
+          finalAlbum.album.name = baseName; // Use rule's base name with correct casing
+        }
+        // If no rule exists, finalAlbum.album.name keeps its original casing from ...album
+        
+        consolidationMap.set(key, finalAlbum);
       }
     });
     
@@ -639,7 +755,7 @@ class CleanedFilesGenerator {
   }
 
   /**
-   * Consolidate albums with songs (same logic as consolidate-albums-with-songs.ts)
+   * Consolidate albums with songs, using consolidation rules
    */
   private consolidateAlbumsWithSongs(albums: AlbumWithSongs[]): AlbumWithSongs[] {
     console.log('🔄 Consolidating albums with songs...');
@@ -649,7 +765,9 @@ class CleanedFilesGenerator {
     
     albums.forEach(album => {
       const firstArtist = album.album.artists[0] || 'Unknown Artist';
-      const key = `${album.album.name.toLowerCase().trim()}|${firstArtist.toLowerCase().trim()}`;
+      // Normalize album name using consolidation rules
+      const normalizedAlbumName = this.normalizeAlbumName(album.album.name, firstArtist);
+      const key = `${normalizedAlbumName}|${firstArtist.toLowerCase().trim()}`;
       
       if (consolidationMap.has(key)) {
         const existing = consolidationMap.get(key)!;
@@ -689,11 +807,36 @@ class CleanedFilesGenerator {
         existing.played_songs = existing.songs.filter(song => song.play_count > 0).length;
         existing.unplayed_songs = existing.songs.filter(song => song.play_count === 0).length;
         
+        // Update album name to use normalized/base name if better
+        const normalizedBaseName = this.normalizeAlbumName(album.album.name, firstArtist);
+        if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
+            normalizedBaseName === existing.album.name.toLowerCase().trim()) {
+          // Keep existing (already normalized)
+        } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
+          // Use the one with more plays or better metadata
+          if (album.count > existing.count || 
+              (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
+            existing.album.name = album.album.name;
+            existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
+            existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
+          }
+        }
+        
         duplicatesRemoved++;
       } else {
+        // Create new entry - preserve original album name casing unless a rule exists
+        const finalAlbum = { ...album };
+        
+        // Only update album name if a consolidation rule exists (preserves original casing otherwise)
+        const baseName = this.getBaseAlbumName(album.album.name, firstArtist);
+        if (baseName) {
+          finalAlbum.album.name = baseName; // Use rule's base name with correct casing
+        }
+        // If no rule exists, finalAlbum.album.name keeps its original casing from ...album
+        
         // Sort songs by play count
-        album.songs = album.songs.sort((a, b) => b.play_count - a.play_count);
-        consolidationMap.set(key, album);
+        finalAlbum.songs = finalAlbum.songs.sort((a, b) => b.play_count - a.play_count);
+        consolidationMap.set(key, finalAlbum);
       }
     });
     

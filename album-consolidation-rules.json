@@ -612,14 +612,6 @@
     },
     {
       "artistName": "Beirut",
-      "baseAlbumName": "Gulag Orkestar",
-      "variations": [
-        "gulag orkestar",
-        "gulag orkestar"
-      ]
-    },
-    {
-      "artistName": "Beirut",
       "baseAlbumName": "The Rip Tide",
       "variations": [
         "the rip tide",
@@ -682,14 +674,6 @@
       "variations": [
         "never hungover again",
         "never hungover again"
-      ]
-    },
-    {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "S/T",
-      "variations": [
-        "s/t",
-        "s/t"
       ]
     },
     {
@@ -5327,14 +5311,6 @@
     },
     {
       "artistName": "Beirut",
-      "baseAlbumName": "Gulag Orkestar",
-      "variations": [
-        "gulag orkestar",
-        "gulag orkestar"
-      ]
-    },
-    {
-      "artistName": "Beirut",
       "baseAlbumName": "The Rip Tide",
       "variations": [
         "the rip tide",
@@ -5414,14 +5390,6 @@
       "variations": [
         "never hungover again",
         "never hungover again"
-      ]
-    },
-    {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "S/T",
-      "variations": [
-        "s/t",
-        "s/t"
       ]
     },
     {
@@ -9984,14 +9952,6 @@
       ]
     },
     {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "Joyce Manor",
-      "variations": [
-        "joyce manor",
-        "joyce manor (remastered)"
-      ]
-    },
-    {
       "artistName": "Kate Bush",
       "baseAlbumName": "Aerial (2018 Remaster)",
       "variations": [
@@ -12051,14 +12011,6 @@
     },
     {
       "artistName": "Beirut",
-      "baseAlbumName": "Gulag Orkestar",
-      "variations": [
-        "gulag orkestar",
-        "gulag orkestar"
-      ]
-    },
-    {
-      "artistName": "Beirut",
       "baseAlbumName": "The Rip Tide",
       "variations": [
         "the rip tide",
@@ -12138,14 +12090,6 @@
       "variations": [
         "never hungover again",
         "never hungover again"
-      ]
-    },
-    {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "S/T",
-      "variations": [
-        "s/t",
-        "s/t"
       ]
     },
     {
@@ -16733,14 +16677,6 @@
       ]
     },
     {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "Joyce Manor",
-      "variations": [
-        "joyce manor",
-        "joyce manor (remastered)"
-      ]
-    },
-    {
       "artistName": "Kate Bush",
       "baseAlbumName": "Aerial",
       "variations": [
@@ -18836,14 +18772,6 @@
       "variations": [
         "never hungover again",
         "never hungover again"
-      ]
-    },
-    {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "S/T",
-      "variations": [
-        "s/t",
-        "s/t"
       ]
     },
     {
@@ -23481,14 +23409,6 @@
     },
     {
       "artistName": "Beirut",
-      "baseAlbumName": "Gulag Orkestar",
-      "variations": [
-        "gulag orkestar",
-        "gulag orkestar"
-      ]
-    },
-    {
-      "artistName": "Beirut",
       "baseAlbumName": "The Rip Tide",
       "variations": [
         "the rip tide",
@@ -23568,14 +23488,6 @@
       "variations": [
         "never hungover again",
         "never hungover again"
-      ]
-    },
-    {
-      "artistName": "Joyce Manor",
-      "baseAlbumName": "S/T",
-      "variations": [
-        "s/t",
-        "s/t"
       ]
     },
     {
@@ -28142,7 +28054,8 @@
       "baseAlbumName": "Joyce Manor",
       "variations": [
         "joyce manor",
-        "joyce manor (remastered)"
+        "joyce manor (remastered)",
+        "s/t"
       ]
     },
     {
