@@ -154,6 +154,9 @@ interface AlbumWithSongs extends CleanedAlbum {
 interface SpotifyTrack {
   id: string;
   name: string;
+  track_number: number;
+  disc_number: number;
+  explicit: boolean;
   album: {
     id: string;
     name: string;
@@ -707,11 +710,23 @@ class CleanedFilesGenerator {
   private generateAlbumsWithSongs(history: CompleteListeningHistory): { albums: AlbumWithSongs[], originalCount: number } {
     console.log('💿🎵 Generating albums with songs...');
 
-    // Group songs by album
+    // Group songs by album - use a more reliable key
+    // Group by album name + the song's actual artist (not just first artist in the group)
     const albumMap = new Map<string, CompleteSong[]>();
     history.songs.forEach(song => {
-      // Use album name + first artist as key since many songs have empty album IDs
-      const albumKey = `${song.album.name}|${song.artists[0] || 'Unknown Artist'}`;
+      // Skip songs with empty album names - they can't be reliably grouped
+      if (!song.album.name || song.album.name.trim() === '') {
+        return;
+      }
+      
+      // Use album name + the song's actual artist as key
+      // This ensures songs are grouped by what they actually are, not by what the first song says
+      const albumName = song.album.name.trim();
+      const songArtist = (song.artists[0] || song.artist.name || 'Unknown Artist').trim();
+      
+      // Create a normalized key using the song's own artist
+      const albumKey = `${albumName.toLowerCase()}|${songArtist.toLowerCase()}`;
+      
       if (!albumMap.has(albumKey)) {
         albumMap.set(albumKey, []);
       }
@@ -720,13 +735,48 @@ class CleanedFilesGenerator {
 
     // Convert to albums with songs format
     const albumsWithSongs: AlbumWithSongs[] = Array.from(albumMap.entries()).map(([albumKey, songs]) => {
-      const firstSong = songs[0];
-      const totalPlayCount = songs.reduce((sum, song) => sum + song.playCount, 0);
-      const totalListeningTime = songs.reduce((sum, song) => sum + song.totalListeningTime, 0);
-      const playedSongs = songs.filter(song => song.playCount > 0).length;
+      // Validate that all songs in this group actually belong to the same album/artist
+      // Find the most common artist among the songs
+      const artistCounts = new Map<string, number>();
+      songs.forEach(song => {
+        const artist = (song.artists[0] || song.artist.name || '').trim();
+        if (artist) {
+          artistCounts.set(artist.toLowerCase(), (artistCounts.get(artist.toLowerCase()) || 0) + 1);
+        }
+      });
+      
+      // Get the most common artist
+      let mostCommonArtist = '';
+      let maxCount = 0;
+      artistCounts.forEach((count, artist) => {
+        if (count > maxCount) {
+          maxCount = count;
+          mostCommonArtist = artist;
+        }
+      });
+      
+      // Find the first song that matches the most common artist
+      const representativeSong = songs.find(song => 
+        (song.artists[0] || song.artist.name || '').toLowerCase().trim() === mostCommonArtist
+      ) || songs[0];
+      
+      // Filter songs to only include those that match the representative artist
+      // This prevents songs from different artists being grouped together
+      const matchingSongs = songs.filter(song => {
+        const songArtist = (song.artists[0] || song.artist.name || '').toLowerCase().trim();
+        return songArtist === mostCommonArtist || songArtist === '';
+      });
+      
+      // Use the filtered songs
+      const validSongs = matchingSongs.length > 0 ? matchingSongs : songs;
+      const firstSong = representativeSong;
+      
+      const totalPlayCount = validSongs.reduce((sum, song) => sum + song.playCount, 0);
+      const totalListeningTime = validSongs.reduce((sum, song) => sum + song.totalListeningTime, 0);
+      const playedSongs = validSongs.filter(song => song.playCount > 0).length;
 
       // Convert songs to album song format
-      const albumSongs: AlbumSong[] = songs.map(song => ({
+      const albumSongs: AlbumSong[] = validSongs.map(song => ({
         songId: song.songId,
         name: song.name,
         duration_ms: song.duration_ms,
@@ -740,30 +790,74 @@ class CleanedFilesGenerator {
         artists: song.artists
       }));
 
+      // Determine the album artists from the songs
+      const albumArtists = validSongs
+        .map(s => s.artists[0] || s.artist.name)
+        .filter((artist, index, arr) => arr.indexOf(artist) === index && artist)
+        .slice(0, 1); // Take the first unique artist
+
+      // Find the most common album name among songs that match the most common artist
+      // This helps fix cases where the source data has incorrect album names
+      const albumNameCounts = new Map<string, number>();
+      validSongs.forEach(song => {
+        const albumName = (song.album.name || '').trim();
+        if (albumName) {
+          albumNameCounts.set(albumName.toLowerCase(), (albumNameCounts.get(albumName.toLowerCase()) || 0) + 1);
+        }
+      });
+      
+      // Get the most common album name
+      let mostCommonAlbumName = '';
+      let maxAlbumCount = 0;
+      albumNameCounts.forEach((count, albumName) => {
+        if (count > maxAlbumCount) {
+          maxAlbumCount = count;
+          mostCommonAlbumName = albumName;
+        }
+      });
+      
+      // If all songs have the same album name but it seems wrong (like a generic name),
+      // and we have a consistent artist, try to infer a better album name
+      // For now, we'll use the most common album name, but if it's suspiciously generic
+      // and all songs are by the same artist, we might want to use a placeholder
+      // However, since we can't determine the actual album name from the data,
+      // we'll use the most common one but ensure the artist is correct
+      
+      // Find a representative song with the most common album name
+      const representativeSongForAlbum = validSongs.find(song => 
+        (song.album.name || '').toLowerCase().trim() === mostCommonAlbumName
+      ) || representativeSong;
+      
+      // Use the most common album name, preserving the original casing from a song that has it
+      const finalAlbumName = mostCommonAlbumName 
+        ? validSongs.find(s => (s.album.name || '').toLowerCase().trim() === mostCommonAlbumName)?.album.name || representativeSongForAlbum.album.name
+        : representativeSongForAlbum.album.name;
+
       return {
         rank: 0, // Temporary rank, will be updated after sorting
         duration_ms: totalListeningTime,
         count: totalPlayCount,
-        differents: songs.length,
-        primaryAlbumId: firstSong.album.id || '', // Use actual album ID if available
+        differents: validSongs.length,
+        // Use song ID (not album ID) because enrichment needs song ID to fetch track data and get album ID
+        primaryAlbumId: representativeSongForAlbum.songId || validSongs[0]?.songId || '',
         total_count: totalPlayCount,
         total_duration_ms: totalListeningTime,
         album: {
-          name: firstSong.album.name,
+          name: finalAlbumName.trim(),
           album_type: 'album',
-          artists: firstSong.artists,
+          artists: albumArtists.length > 0 ? albumArtists : [representativeSong.artists[0] || representativeSong.artist.name || 'Unknown Artist'],
           release_date: '',
           release_date_precision: 'day',
           popularity: 0,
-          images: firstSong.album.images,
+          images: representativeSongForAlbum.album.images,
           external_urls: {},
-          genres: firstSong.artist.genres
+          genres: representativeSong.artist.genres
         },
         consolidated_count: totalPlayCount,
-        original_albumIds: songs.map(song => song.album.id).filter(id => id !== ''), // Collect all non-empty album IDs
-        total_songs: songs.length,
+        original_albumIds: validSongs.map(song => song.album.id).filter(id => id !== ''), // Collect all non-empty album IDs
+        total_songs: validSongs.length,
         played_songs: playedSongs,
-        unplayed_songs: songs.length - playedSongs,
+        unplayed_songs: validSongs.length - playedSongs,
         songs: albumSongs.sort((a, b) => b.play_count - a.play_count)
       };
     });
@@ -1247,6 +1341,9 @@ class CleanedFilesGenerator {
 
         // Update album metadata
         if (spotifyAlbum) {
+          // Update album name and artists from Spotify API (this fixes incorrect source data)
+          album.album.name = spotifyAlbum.name;
+          album.album.artists = spotifyAlbum.artists.map(a => a.name);
           album.album.album_type = spotifyAlbum.album_type;
           album.album.release_date = spotifyAlbum.release_date;
           album.album.release_date_precision = spotifyAlbum.release_date_precision;
@@ -1259,6 +1356,9 @@ class CleanedFilesGenerator {
           album.album.genres = spotifyAlbum.genres;
         } else if (track) {
           // Fallback to track album data
+          // Update album name and artists from track (this fixes incorrect source data)
+          album.album.name = track.album.name;
+          album.album.artists = track.album.artists.map(a => a.name);
           album.album.album_type = track.album.album_type;
           album.album.release_date = track.album.release_date;
           album.album.release_date_precision = track.album.release_date_precision;
@@ -1340,7 +1440,7 @@ class CleanedFilesGenerator {
     });
 
     // Map back to AlbumWithSongs format, preserving the songs and other properties
-    return albums.map(album => {
+    const albumsWithEnrichedMetadata = albums.map(album => {
       const enriched = enrichedMap.get(album.primaryAlbumId);
       if (enriched) {
         return {
@@ -1351,6 +1451,131 @@ class CleanedFilesGenerator {
         };
       }
       return album;
+    });
+
+    // Now enrich and consolidate songs within each album
+    return await this.enrichAndConsolidateAlbumSongs(albumsWithEnrichedMetadata);
+  }
+
+  /**
+   * Consolidate duplicate songs within an album
+   */
+  private consolidateSongsInAlbum(songs: AlbumSong[]): AlbumSong[] {
+    const songMap = new Map<string, AlbumSong>();
+    
+    songs.forEach(song => {
+      // Create a key from song name + artists
+      const songKey = `${song.name.toLowerCase().trim()}|${song.artists.join(', ').toLowerCase().trim()}`;
+      
+      if (songMap.has(songKey)) {
+        const existing = songMap.get(songKey)!;
+        // Store original play count before merging
+        const existingOriginalPlays = existing.play_count;
+        // Merge play counts and listening times
+        existing.play_count += song.play_count;
+        existing.total_listening_time_ms += song.total_listening_time_ms;
+        // Keep the songId with the highest original play count
+        if (song.play_count > existingOriginalPlays) {
+          existing.songId = song.songId;
+          existing.external_urls = song.external_urls;
+          existing.preview_url = song.preview_url;
+        }
+      } else {
+        songMap.set(songKey, { ...song });
+      }
+    });
+    
+    return Array.from(songMap.values());
+  }
+
+  /**
+   * Enrich songs within albums with track numbers and consolidate duplicates
+   */
+  private async enrichAndConsolidateAlbumSongs(albums: AlbumWithSongs[]): Promise<AlbumWithSongs[]> {
+    if (!this.tokenManager) {
+      // Still consolidate even without API access
+      return albums.map(album => ({
+        ...album,
+        songs: this.consolidateSongsInAlbum(album.songs)
+      }));
+    }
+
+    console.log('\n📥 Fetching track metadata for album songs...');
+    
+    // Collect all unique song IDs from all albums
+    const allSongIds = new Set<string>();
+    albums.forEach(album => {
+      album.songs.forEach(song => {
+        if (song.songId) {
+          allSongIds.add(song.songId);
+        }
+      });
+    });
+
+    const accessToken = await this.tokenManager.getValidAccessToken();
+    const uniqueSongIds = Array.from(allSongIds);
+    
+    console.log(`   Fetching ${uniqueSongIds.length} unique tracks for track numbers...`);
+    
+    // Fetch tracks in batches
+    const trackMap = new Map<string, SpotifyTrack>();
+    const batchSize = 50;
+    for (let i = 0; i < uniqueSongIds.length; i += batchSize) {
+      const batch = uniqueSongIds.slice(i, i + batchSize);
+      const tracks = await this.fetchTracks(accessToken, batch);
+      tracks.forEach(track => trackMap.set(track.id, track));
+      
+      // Rate limiting
+      if (i + batchSize < uniqueSongIds.length) {
+        await this.sleep(100);
+      }
+    }
+    
+    console.log(`✅ Fetched ${trackMap.size} tracks`);
+
+    // Process each album
+    return albums.map(album => {
+      // First consolidate duplicate songs
+      const consolidatedSongs = this.consolidateSongsInAlbum(album.songs);
+      
+      // Then enrich with track metadata
+      const enrichedSongs = consolidatedSongs.map(song => {
+        const track = trackMap.get(song.songId);
+        if (track) {
+          return {
+            ...song,
+            track_number: track.track_number,
+            disc_number: track.disc_number,
+            explicit: track.explicit,
+            preview_url: track.preview_url || song.preview_url,
+            external_urls: track.external_urls || song.external_urls
+          };
+        }
+        return song;
+      });
+      
+      // Sort by track number, then by disc number
+      enrichedSongs.sort((a, b) => {
+        if (a.disc_number !== b.disc_number) {
+          return a.disc_number - b.disc_number;
+        }
+        if (a.track_number !== b.track_number) {
+          return a.track_number - b.track_number;
+        }
+        // Fallback to play count if track numbers are the same
+        return b.play_count - a.play_count;
+      });
+
+      // Recalculate song counts after consolidation
+      const playedSongs = enrichedSongs.filter(song => song.play_count > 0).length;
+      
+      return {
+        ...album,
+        songs: enrichedSongs,
+        total_songs: enrichedSongs.length,
+        played_songs: playedSongs,
+        unplayed_songs: enrichedSongs.length - playedSongs
+      };
     });
   }
 
