@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import * as path from 'path';
 import type { CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, AlbumSong, ConsolidationRules, ConsolidationRule } from './types';
 
 /**
@@ -19,15 +20,17 @@ export class ConsolidationRulesManager {
     const rulesMap = new Map<string, string>();
     
     try {
-      if (fs.existsSync('album-consolidation-rules.json')) {
-        const rulesData = JSON.parse(fs.readFileSync('album-consolidation-rules.json', 'utf8')) as ConsolidationRules;
+      // Path relative to this file's directory (both files are in scripts/cleaner/utils/)
+      const rulesPath = path.join(__dirname, 'album-consolidation-rules.json');
+      if (fs.existsSync(rulesPath)) {
+        const rulesData = JSON.parse(fs.readFileSync(rulesPath, 'utf8')) as ConsolidationRules;
         this.consolidationRulesData = rulesData;
         
-        rulesData.rules.forEach(rule => {
+        rulesData.rules.forEach((rule: ConsolidationRule) => {
           const artistKey = rule.artistName.toLowerCase().trim();
           const baseAlbumName = rule.baseAlbumName.toLowerCase().trim();
           
-          rule.variations.forEach(variation => {
+          rule.variations.forEach((variation: string) => {
             const variationKey = variation.toLowerCase().trim();
             const mapKey = `${artistKey}|${variationKey}`;
             rulesMap.set(mapKey, baseAlbumName);
@@ -39,7 +42,7 @@ export class ConsolidationRulesManager {
         
         console.log(`📋 Loaded ${rulesData.rules.length} consolidation rules`);
       } else {
-        console.log('ℹ️  No consolidation rules file found (album-consolidation-rules.json)');
+        console.log('ℹ️  No consolidation rules file found (scripts/cleaner/utils/album-consolidation-rules.json)');
       }
     } catch (error) {
       console.error('⚠️  Failed to load consolidation rules:', error);
@@ -73,7 +76,7 @@ export class ConsolidationRulesManager {
     }
     
     const normalized = this.normalizeAlbumName(albumName, artistName);
-    const rule = this.consolidationRulesData.rules.find(r => 
+    const rule = this.consolidationRulesData.rules.find((r: ConsolidationRule) => 
       r.artistName.toLowerCase().trim() === artistName.toLowerCase().trim() &&
       r.baseAlbumName.toLowerCase().trim() === normalized
     );
@@ -240,12 +243,12 @@ export class Consolidator {
         existing.original_albumIds.push(...album.original_albumIds);
         
         const songMap = new Map<string, AlbumSong>();
-        existing.songs.forEach(song => {
+        existing.songs.forEach((song: AlbumSong) => {
           const songKey = `${song.name.toLowerCase().trim()}|${song.artists.join(', ').toLowerCase()}`;
           songMap.set(songKey, song);
         });
         
-        album.songs.forEach(song => {
+        album.songs.forEach((song: AlbumSong) => {
           const songKey = `${song.name.toLowerCase().trim()}|${song.artists.join(', ').toLowerCase()}`;
           if (songMap.has(songKey)) {
             const existingSong = songMap.get(songKey)!;
@@ -256,10 +259,10 @@ export class Consolidator {
           }
         });
         
-        existing.songs = Array.from(songMap.values()).sort((a, b) => b.play_count - a.play_count);
+        existing.songs = Array.from(songMap.values()).sort((a: AlbumSong, b: AlbumSong) => b.play_count - a.play_count);
         existing.total_songs = existing.songs.length;
-        existing.played_songs = existing.songs.filter(song => song.play_count > 0).length;
-        existing.unplayed_songs = existing.songs.filter(song => song.play_count === 0).length;
+        existing.played_songs = existing.songs.filter((song: AlbumSong) => song.play_count > 0).length;
+        existing.unplayed_songs = existing.songs.filter((song: AlbumSong) => song.play_count === 0).length;
         
         const normalizedBaseName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
         if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
@@ -280,7 +283,7 @@ export class Consolidator {
         if (baseName) {
           finalAlbum.album.name = baseName;
         }
-        finalAlbum.songs = finalAlbum.songs.sort((a, b) => b.play_count - a.play_count);
+        finalAlbum.songs = finalAlbum.songs.sort((a: AlbumSong, b: AlbumSong) => b.play_count - a.play_count);
         consolidationMap.set(key, finalAlbum);
       }
     });
