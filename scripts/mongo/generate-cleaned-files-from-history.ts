@@ -339,8 +339,8 @@ class CleanedFilesGenerator {
         
         existing.count += song.count;
         existing.consolidated_count += song.count;
-        // Keep the original track duration (don't sum durations)
-        // existing.duration_ms remains unchanged
+        // Sum total listening time when consolidating
+        existing.duration_ms += song.duration_ms;
         existing.original_songIds.push(song.songId);
         
         duplicatesRemoved++;
@@ -551,7 +551,7 @@ class CleanedFilesGenerator {
     // Convert complete songs to cleaned format
     const songs: CleanedSong[] = history.songs.map(song => ({
       rank: 0, // Temporary rank, will be updated after sorting
-      duration_ms: song.duration_ms, // Actual track duration
+      duration_ms: song.totalListeningTime, // Total listening time (sum of all msPlayed)
       count: song.playCount,
       songId: song.songId,
       song: {

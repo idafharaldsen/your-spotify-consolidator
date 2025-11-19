@@ -4,14 +4,14 @@
     "consolidatedTotalSongs": 46192,
     "duplicatesRemoved": 10500,
     "consolidationRate": 18.52,
-    "timestamp": "2025-11-19T11:41:22.693Z",
+    "timestamp": "2025-11-19T11:59:29.985Z",
     "source": "Merged Streaming History",
     "totalListeningEvents": 178211
   },
   "songs": [
     {
       "rank": 1,
-      "duration_ms": 0,
+      "duration_ms": 19521504,
       "count": 109,
       "songId": "6baeAT0jVAxvnLn8rIN50X",
       "song": {
@@ -54,7 +54,7 @@
     },
     {
       "rank": 2,
-      "duration_ms": 0,
+      "duration_ms": 15023053,
       "count": 106,
       "songId": "5Meo01ojbetCChXhjWKXwJ",
       "song": {
@@ -96,7 +96,7 @@
     },
     {
       "rank": 3,
-      "duration_ms": 0,
+      "duration_ms": 8903534,
       "count": 103,
       "songId": "3yFqqMZNWAYxZU1hFrt6tv",
       "song": {
@@ -139,7 +139,7 @@
     },
     {
       "rank": 4,
-      "duration_ms": 0,
+      "duration_ms": 17754137,
       "count": 96,
       "songId": "2PiQfbqUmOfRf3vQbrHKVj",
       "song": {
@@ -183,7 +183,7 @@
     },
     {
       "rank": 5,
-      "duration_ms": 0,
+      "duration_ms": 20627296,
       "count": 95,
       "songId": "5GUYJTQap5F3RDQiCOJhrS",
       "song": {
@@ -225,7 +225,7 @@
     },
     {
       "rank": 6,
-      "duration_ms": 0,
+      "duration_ms": 13264574,
       "count": 86,
       "songId": "2VcAgFuGEly1AYUEvHzy0w",
       "song": {
@@ -268,7 +268,7 @@
     },
     {
       "rank": 7,
-      "duration_ms": 0,
+      "duration_ms": 18392223,
       "count": 85,
       "songId": "7AYoXqCtME90flUOpBJM7i",
       "song": {
@@ -313,7 +313,7 @@
     },
     {
       "rank": 8,
-      "duration_ms": 0,
+      "duration_ms": 14848875,
       "count": 84,
       "songId": "1zPq6vX5yI96dBx7AVBtn4",
       "song": {
@@ -358,7 +358,7 @@
     },
     {
       "rank": 9,
-      "duration_ms": 0,
+      "duration_ms": 12035372,
       "count": 84,
       "songId": "02fQ5vOKXgaX3Paj359DdR",
       "song": {
@@ -400,7 +400,7 @@
     },
     {
       "rank": 10,
-      "duration_ms": 0,
+      "duration_ms": 19682942,
       "count": 84,
       "songId": "5YAhKEMTGMh6SxTSYcUJl6",
       "song": {
@@ -443,7 +443,7 @@
     },
     {
       "rank": 11,
-      "duration_ms": 0,
+      "duration_ms": 17622214,
       "count": 82,
       "songId": "2ZWlPOoWh0626oTaHrnl2a",
       "song": {
@@ -485,7 +485,7 @@
     },
     {
       "rank": 12,
-      "duration_ms": 0,
+      "duration_ms": 19716976,
       "count": 82,
       "songId": "0rYDR7DUXGa9Snc1sO5mgT",
       "song": {
@@ -530,7 +530,7 @@
     },
     {
       "rank": 13,
-      "duration_ms": 0,
+      "duration_ms": 5305424,
       "count": 80,
       "songId": "3bl3KWkXdMhf6exbIu0FtA",
       "song": {
@@ -573,7 +573,7 @@
     },
     {
       "rank": 14,
-      "duration_ms": 0,
+      "duration_ms": 14074237,
       "count": 80,
       "songId": "6idBMe9Ih8c6OZj1nJWyGo",
       "song": {
@@ -617,7 +617,7 @@
     },
     {
       "rank": 15,
-      "duration_ms": 0,
+      "duration_ms": 9403383,
       "count": 78,
       "songId": "4keAoywVf4jxRvXU7ON0hV",
       "song": {
@@ -660,7 +660,7 @@
     },
     {
       "rank": 16,
-      "duration_ms": 0,
+      "duration_ms": 13783793,
       "count": 78,
       "songId": "1LfWibYjk0TD8YNPtzym9A",
       "song": {
@@ -703,7 +703,7 @@
     },
     {
       "rank": 17,
-      "duration_ms": 0,
+      "duration_ms": 12454081,
       "count": 75,
       "songId": "5mMV6EaKeZWkGFvE1xg13n",
       "song": {
@@ -747,7 +747,7 @@
     },
     {
       "rank": 18,
-      "duration_ms": 0,
+      "duration_ms": 6075941,
       "count": 73,
       "songId": "3t1qLIMFtxht25p6IkLy8b",
       "song": {
@@ -788,7 +788,7 @@
     },
     {
       "rank": 19,
-      "duration_ms": 0,
+      "duration_ms": 16580785,
       "count": 71,
       "songId": "2EEinN4Zk8MUv4OQuLsTBj",
       "song": {
@@ -829,7 +829,7 @@
     },
     {
       "rank": 20,
-      "duration_ms": 0,
+      "duration_ms": 12753714,
       "count": 71,
       "songId": "2m2dgHoAEZUkmxamsOwyQg",
       "song": {
@@ -872,7 +872,7 @@
     },
     {
       "rank": 21,
-      "duration_ms": 0,
+      "duration_ms": 8337138,
       "count": 71,
       "songId": "4hy5k1o1c1zH8upY4Qh3Rb",
       "song": {
@@ -916,7 +916,7 @@
     },
     {
       "rank": 22,
-      "duration_ms": 0,
+      "duration_ms": 8896510,
       "count": 70,
       "songId": "64C00gcYOfCw2RWC28iW7B",
       "song": {
@@ -960,7 +960,7 @@
     },
     {
       "rank": 23,
-      "duration_ms": 0,
+      "duration_ms": 14501562,
       "count": 70,
       "songId": "1mCmHiSivRYNDghiq1lfnz",
       "song": {
@@ -1004,7 +1004,7 @@
     },
     {
       "rank": 24,
-      "duration_ms": 0,
+      "duration_ms": 9364764,
       "count": 69,
       "songId": "5Tut5b28KogrTdaAJwCzoR",
       "song": {
@@ -1047,7 +1047,7 @@
     },
     {
       "rank": 25,
-      "duration_ms": 0,
+      "duration_ms": 10496079,
       "count": 69,
       "songId": "52vA3CYKZqZVdQnzRrdZt6",
       "song": {
@@ -1089,7 +1089,7 @@
     },
     {
       "rank": 26,
-      "duration_ms": 0,
+      "duration_ms": 10009111,
       "count": 66,
       "songId": "0bGImSqDB2ebdeoCidUC8o",
       "song": {
@@ -1130,7 +1130,7 @@
     },
     {
       "rank": 27,
-      "duration_ms": 0,
+      "duration_ms": 14623218,
       "count": 66,
       "songId": "4VZM71F8XAoLRuNyNLxwWS",
       "song": {
@@ -1172,7 +1172,7 @@
     },
     {
       "rank": 28,
-      "duration_ms": 0,
+      "duration_ms": 4165003,
       "count": 66,
       "songId": "2TqfK2N1kFoX7OySPCB7pQ",
       "song": {
@@ -1214,7 +1214,7 @@
     },
     {
       "rank": 29,
-      "duration_ms": 0,
+      "duration_ms": 12302759,
       "count": 65,
       "songId": "6zxbwOmk5LiQdBN7lsETjB",
       "song": {
@@ -1259,7 +1259,7 @@
     },
     {
       "rank": 30,
-      "duration_ms": 0,
+      "duration_ms": 17317716,
       "count": 64,
       "songId": "05lBuZWQ2OhQuzoCSIkvUF",
       "song": {
@@ -1303,7 +1303,7 @@
     },
     {
       "rank": 31,
-      "duration_ms": 0,
+      "duration_ms": 14445076,
       "count": 63,
       "songId": "3yP0cohcr97BUNJcgvmSVg",
       "song": {
@@ -1348,7 +1348,7 @@
     },
     {
       "rank": 32,
-      "duration_ms": 0,
+      "duration_ms": 15049699,
       "count": 62,
       "songId": "7eqoqGkKwgOaWNNHx90uEZ",
       "song": {
@@ -1390,7 +1390,7 @@
     },
     {
       "rank": 33,
-      "duration_ms": 0,
+      "duration_ms": 9923006,
       "count": 62,
       "songId": "3xKsf9qdS1CyvXSMEid6g8",
       "song": {
@@ -1432,7 +1432,7 @@
     },
     {
       "rank": 34,
-      "duration_ms": 0,
+      "duration_ms": 17056067,
       "count": 62,
       "songId": "0fzCtVM9D5UEwiLqcY8Ouq",
       "song": {
@@ -1477,7 +1477,7 @@
     },
     {
       "rank": 35,
-      "duration_ms": 0,
+      "duration_ms": 8281317,
       "count": 61,
       "songId": "00hgtJwONC7jG6X0GUMXvv",
       "song": {
@@ -1519,7 +1519,7 @@
     },
     {
       "rank": 36,
-      "duration_ms": 0,
+      "duration_ms": 10594893,
       "count": 61,
       "songId": "5hmsSEVtqCEhmAu11poR5t",
       "song": {
@@ -1561,7 +1561,7 @@
     },
     {
       "rank": 37,
-      "duration_ms": 0,
+      "duration_ms": 11780269,
       "count": 61,
       "songId": "477iuAE0pemT2ET3fHW2qb",
       "song": {
@@ -1604,7 +1604,7 @@
     },
     {
       "rank": 38,
-      "duration_ms": 0,
+      "duration_ms": 10767198,
       "count": 61,
       "songId": "3d9DChrdc6BOeFsbrZ3Is0",
       "song": {
@@ -1649,7 +1649,7 @@
     },
     {
       "rank": 39,
-      "duration_ms": 0,
+      "duration_ms": 10245688,
       "count": 60,
       "songId": "2JO3HwMRPeya8bXbtbyPcf",
       "song": {
@@ -1691,7 +1691,7 @@
     },
     {
       "rank": 40,
-      "duration_ms": 0,
+      "duration_ms": 14300228,
       "count": 60,
       "songId": "0peGfIV0h1VpIpxdISGIvU",
       "song": {
@@ -1735,7 +1735,7 @@
     },
     {
       "rank": 41,
-      "duration_ms": 0,
+      "duration_ms": 8858062,
       "count": 60,
       "songId": "5YESYAHcr5GpjheBegwFd4",
       "song": {
@@ -1777,7 +1777,7 @@
     },
     {
       "rank": 42,
-      "duration_ms": 0,
+      "duration_ms": 7220675,
       "count": 60,
       "songId": "34204TEDsGFT2H1lYp3YL5",
       "song": {
@@ -1820,7 +1820,7 @@
     },
     {
       "rank": 43,
-      "duration_ms": 0,
+      "duration_ms": 10224207,
       "count": 60,
       "songId": "1r5uZGrPb4IB9NTOWfeqta",
       "song": {
@@ -1864,7 +1864,7 @@
     },
     {
       "rank": 44,
-      "duration_ms": 0,
+      "duration_ms": 8465765,
       "count": 60,
       "songId": "2LawezPeJhN4AWuSB0GtAU",
       "song": {
@@ -1910,7 +1910,7 @@
     },
     {
       "rank": 45,
-      "duration_ms": 0,
+      "duration_ms": 10667062,
       "count": 60,
       "songId": "1vwKYda2ZIBiak3e7NCQMe",
       "song": {
@@ -1954,7 +1954,7 @@
     },
     {
       "rank": 46,
-      "duration_ms": 0,
+      "duration_ms": 12322130,
       "count": 59,
       "songId": "75RzhKxxJN7jzmigmu9U5a",
       "song": {
@@ -1997,7 +1997,7 @@
     },
     {
       "rank": 47,
-      "duration_ms": 0,
+      "duration_ms": 11405167,
       "count": 59,
       "songId": "504yxKmdlppRhTK3SwSrsg",
       "song": {
@@ -2040,7 +2040,7 @@
     },
     {
       "rank": 48,
-      "duration_ms": 0,
+      "duration_ms": 9622093,
       "count": 59,
       "songId": "2F3INZgLaTgRhaT5mUaI2i",
       "song": {
@@ -2087,7 +2087,7 @@
     },
     {
       "rank": 49,
-      "duration_ms": 0,
+      "duration_ms": 8240075,
       "count": 58,
       "songId": "1tLrzF59CpMBHLrGB21sFN",
       "song": {
@@ -2128,7 +2128,7 @@
     },
     {
       "rank": 50,
-      "duration_ms": 0,
+      "duration_ms": 15863335,
       "count": 58,
       "songId": "19YKaevk2bce4odJkP5L22",
       "song": {
@@ -2170,7 +2170,7 @@
     },
     {
       "rank": 51,
-      "duration_ms": 0,
+      "duration_ms": 6939678,
       "count": 58,
       "songId": "5UW3KdhnRVGdACm0SvW6mw",
       "song": {
@@ -2215,7 +2215,7 @@
     },
     {
       "rank": 52,
-      "duration_ms": 0,
+      "duration_ms": 10003062,
       "count": 58,
       "songId": "3ZFAbKzV6oQFz5k3Rzn0Os",
       "song": {
@@ -2260,7 +2260,7 @@
     },
     {
       "rank": 53,
-      "duration_ms": 0,
+      "duration_ms": 8275451,
       "count": 58,
       "songId": "0yJRFXw1kFWH7IdMDnf577",
       "song": {
@@ -2303,7 +2303,7 @@
     },
     {
       "rank": 54,
-      "duration_ms": 0,
+      "duration_ms": 9653710,
       "count": 57,
       "songId": "6GgUYuCp1Gac8ECGODmL7R",
       "song": {
@@ -2345,7 +2345,7 @@
     },
     {
       "rank": 55,
-      "duration_ms": 0,
+      "duration_ms": 11964640,
       "count": 57,
       "songId": "7nxi8DUA9Iw6nnpGN3M9Zd",
       "song": {
@@ -2390,7 +2390,7 @@
     },
     {
       "rank": 56,
-      "duration_ms": 0,
+      "duration_ms": 11781594,
       "count": 57,
       "songId": "2qppEPX84bYQmgBjCeF8FO",
       "song": {
@@ -2435,7 +2435,7 @@
     },
     {
       "rank": 57,
-      "duration_ms": 0,
+      "duration_ms": 11481884,
       "count": 57,
       "songId": "5fzt0lAasFeHwC7FpOdKA1",
       "song": {
@@ -2479,7 +2479,7 @@
     },
     {
       "rank": 58,
-      "duration_ms": 0,
+      "duration_ms": 9301259,
       "count": 56,
       "songId": "2MyUIH6eOOfzgxAEw8qz5R",
       "song": {
@@ -2522,7 +2522,7 @@
     },
     {
       "rank": 59,
-      "duration_ms": 0,
+      "duration_ms": 9878154,
       "count": 56,
       "songId": "5ft1GmMZA4uNX7afvQfDLn",
       "song": {
@@ -2567,7 +2567,7 @@
     },
     {
       "rank": 60,
-      "duration_ms": 0,
+      "duration_ms": 8601841,
       "count": 56,
       "songId": "4CjSIhFpTYKVLyw2vDTS6n",
       "song": {
@@ -2609,7 +2609,7 @@
     },
     {
       "rank": 61,
-      "duration_ms": 0,
+      "duration_ms": 6199725,
       "count": 56,
       "songId": "6PoUOHwDVSOAcEE9glHL2s",
       "song": {
@@ -2651,7 +2651,7 @@
     },
     {
       "rank": 62,
-      "duration_ms": 0,
+      "duration_ms": 11932869,
       "count": 56,
       "songId": "6lZadw4xVrq6bfYmPsNaUC",
       "song": {
@@ -2693,7 +2693,7 @@
     },
     {
       "rank": 63,
-      "duration_ms": 0,
+      "duration_ms": 8033668,
       "count": 56,
       "songId": "1bhpBRCLsVg3p7BWARbaDS",
       "song": {
@@ -2737,7 +2737,7 @@
     },
     {
       "rank": 64,
-      "duration_ms": 0,
+      "duration_ms": 7175798,
       "count": 56,
       "songId": "4wkebzi80euZ2TcSfxEjpc",
       "song": {
@@ -2782,7 +2782,7 @@
     },
     {
       "rank": 65,
-      "duration_ms": 0,
+      "duration_ms": 8845283,
       "count": 56,
       "songId": "6ITuEsxEy2qPhqMowdDAeI",
       "song": {
@@ -2824,7 +2824,7 @@
     },
     {
       "rank": 66,
-      "duration_ms": 0,
+      "duration_ms": 6169180,
       "count": 56,
       "songId": "7DHX06mXYXQMgzMVelvX0Y",
       "song": {
@@ -2869,7 +2869,7 @@
     },
     {
       "rank": 67,
-      "duration_ms": 0,
+      "duration_ms": 6398389,
       "count": 56,
       "songId": "3o5hCrL9DDTwd9vkbdgR8P",
       "song": {
@@ -2913,7 +2913,7 @@
     },
     {
       "rank": 68,
-      "duration_ms": 0,
+      "duration_ms": 10321489,
       "count": 55,
       "songId": "6UeEGCX2f5pjCvJk3hoUU9",
       "song": {
@@ -2956,7 +2956,7 @@
     },
     {
       "rank": 69,
-      "duration_ms": 0,
+      "duration_ms": 9528470,
       "count": 55,
       "songId": "1DlT3Udf11689ezYr6R8aA",
       "song": {
@@ -2998,7 +2998,7 @@
     },
     {
       "rank": 70,
-      "duration_ms": 0,
+      "duration_ms": 13580135,
       "count": 55,
       "songId": "16dLSIZMlfeH0RP6csLjip",
       "song": {
@@ -3040,7 +3040,7 @@
     },
     {
       "rank": 71,
-      "duration_ms": 0,
+      "duration_ms": 10963210,
       "count": 55,
       "songId": "7ixZRwMBlfDiE4N1Fz6HAK",
       "song": {
@@ -3084,7 +3084,7 @@
     },
     {
       "rank": 72,
-      "duration_ms": 0,
+      "duration_ms": 9955102,
       "count": 55,
       "songId": "0RpzT6xIqxzc9xht3QUqeB",
       "song": {
@@ -3126,7 +3126,7 @@
     },
     {
       "rank": 73,
-      "duration_ms": 0,
+      "duration_ms": 6517545,
       "count": 55,
       "songId": "3dOYfnK4ZIL9YFlKdHpGce",
       "song": {
@@ -3169,7 +3169,7 @@
     },
     {
       "rank": 74,
-      "duration_ms": 0,
+      "duration_ms": 10458080,
       "count": 54,
       "songId": "0HeedAQEX16nGmdLJhO5k3",
       "song": {
@@ -3211,7 +3211,7 @@
     },
     {
       "rank": 75,
-      "duration_ms": 0,
+      "duration_ms": 7893063,
       "count": 54,
       "songId": "43e6WC2I0U1UeuK0cZzUvO",
       "song": {
@@ -3254,7 +3254,7 @@
     },
     {
       "rank": 76,
-      "duration_ms": 0,
+      "duration_ms": 7246884,
       "count": 54,
       "songId": "5bxythiVpxTD2nHZMmD8m1",
       "song": {
@@ -3297,7 +3297,7 @@
     },
     {
       "rank": 77,
-      "duration_ms": 0,
+      "duration_ms": 12546984,
       "count": 54,
       "songId": "7qUoDTmVj07qUf6ZBDhWKl",
       "song": {
@@ -3342,7 +3342,7 @@
     },
     {
       "rank": 78,
-      "duration_ms": 0,
+      "duration_ms": 6284541,
       "count": 54,
       "songId": "18X4vn1UHaLRsmqDR24EVf",
       "song": {
@@ -3386,7 +3386,7 @@
     },
     {
       "rank": 79,
-      "duration_ms": 0,
+      "duration_ms": 8503355,
       "count": 53,
       "songId": "56NkIxSZZiMpFP5ZNSxtnT",
       "song": {
@@ -3427,7 +3427,7 @@
     },
     {
       "rank": 80,
-      "duration_ms": 0,
+      "duration_ms": 13234316,
       "count": 53,
       "songId": "6aBUnkXuCEQQHAlTokv9or",
       "song": {
@@ -3468,7 +3468,7 @@
     },
     {
       "rank": 81,
-      "duration_ms": 0,
+      "duration_ms": 5547930,
       "count": 53,
       "songId": "2Ux9gG55sIt1CcIKAVt0Lg",
       "song": {
@@ -3509,7 +3509,7 @@
     },
     {
       "rank": 82,
-      "duration_ms": 0,
+      "duration_ms": 6363390,
       "count": 53,
       "songId": "29UWtqmB3932yPMxbUMBrS",
       "song": {
@@ -3552,7 +3552,7 @@
     },
     {
       "rank": 83,
-      "duration_ms": 0,
+      "duration_ms": 7944872,
       "count": 53,
       "songId": "4G6E84lvx8jJh4lWv7Fecm",
       "song": {
@@ -3594,7 +3594,7 @@
     },
     {
       "rank": 84,
-      "duration_ms": 0,
+      "duration_ms": 9914198,
       "count": 53,
       "songId": "1b290AIMVdg5AOlXRen3Wt",
       "song": {
@@ -3636,7 +3636,7 @@
     },
     {
       "rank": 85,
-      "duration_ms": 0,
+      "duration_ms": 9281040,
       "count": 53,
       "songId": "5FMu7ZbfPXmGeOU7FnGijE",
       "song": {
@@ -3679,7 +3679,7 @@
     },
     {
       "rank": 86,
-      "duration_ms": 0,
+      "duration_ms": 6473572,
       "count": 53,
       "songId": "6SRXOZPXrtM9KHCBY1EDob",
       "song": {
@@ -3723,7 +3723,7 @@
     },
     {
       "rank": 87,
-      "duration_ms": 0,
+      "duration_ms": 5029844,
       "count": 53,
       "songId": "31vq16jWWP6UriQUl7cTRg",
       "song": {
@@ -3767,7 +3767,7 @@
     },
     {
       "rank": 88,
-      "duration_ms": 0,
+      "duration_ms": 10824394,
       "count": 52,
       "songId": "6ELapy2KKGdQZRFOvZ5ZRY",
       "song": {
@@ -3808,7 +3808,7 @@
     },
     {
       "rank": 89,
-      "duration_ms": 0,
+      "duration_ms": 4318790,
       "count": 52,
       "songId": "6mHSCQ8OvdQ5MnuTNGsnOu",
       "song": {
@@ -3849,7 +3849,7 @@
     },
     {
       "rank": 90,
-      "duration_ms": 0,
+      "duration_ms": 7946947,
       "count": 52,
       "songId": "6okflAl3X7elXPx7MgJMi6",
       "song": {
@@ -3890,7 +3890,7 @@
     },
     {
       "rank": 91,
-      "duration_ms": 0,
+      "duration_ms": 4253172,
       "count": 52,
       "songId": "6me7F0aaZjwDo6RJ5MrfBD",
       "song": {
@@ -3931,7 +3931,7 @@
     },
     {
       "rank": 92,
-      "duration_ms": 0,
+      "duration_ms": 7264284,
       "count": 52,
       "songId": "35UO6dWrEPLmeSVXtAysS4",
       "song": {
@@ -3973,7 +3973,7 @@
     },
     {
       "rank": 93,
-      "duration_ms": 0,
+      "duration_ms": 11444162,
       "count": 52,
       "songId": "5NtoPBmhY7WGdpsHmpy9Xh",
       "song": {
@@ -4016,7 +4016,7 @@
     },
     {
       "rank": 94,
-      "duration_ms": 0,
+      "duration_ms": 11140069,
       "count": 52,
       "songId": "3JeT6Xcv6MlEHHylk8SKQ1",
       "song": {
@@ -4059,7 +4059,7 @@
     },
     {
       "rank": 95,
-      "duration_ms": 0,
+      "duration_ms": 6824221,
       "count": 52,
       "songId": "4NRqcM1lB2L6qxvxKvu1xU",
       "song": {
@@ -4102,7 +4102,7 @@
     },
     {
       "rank": 96,
-      "duration_ms": 0,
+      "duration_ms": 6332018,
       "count": 52,
       "songId": "7bGAj4dM5v8OnKAQi9Qobj",
       "song": {
@@ -4144,7 +4144,7 @@
     },
     {
       "rank": 97,
-      "duration_ms": 0,
+      "duration_ms": 14534077,
       "count": 52,
       "songId": "2pAho4WqtK5hQtgImHzT74",
       "song": {
@@ -4187,7 +4187,7 @@
     },
     {
       "rank": 98,
-      "duration_ms": 0,
+      "duration_ms": 10408312,
       "count": 52,
       "songId": "6J2Gg6h1pnLi6kijjXOXCs",
       "song": {
@@ -4216,7 +4216,7 @@
     },
     {
       "rank": 99,
-      "duration_ms": 0,
+      "duration_ms": 10373289,
       "count": 52,
       "songId": "69x16JmnJxuLVP9ELBoY03",
       "song": {
@@ -4261,7 +4261,7 @@
     },
     {
       "rank": 100,
-      "duration_ms": 258342,
+      "duration_ms": 13281400,
       "count": 51,
       "songId": "3bidbhpOYeV4knp8AIu8Xn",
       "song": {
@@ -4302,7 +4302,7 @@
     },
     {
       "rank": 101,
-      "duration_ms": 0,
+      "duration_ms": 5883081,
       "count": 51,
       "songId": "4DlIEw0mtIPJjPizMjHP1e",
       "song": {
@@ -4343,7 +4343,7 @@
     },
     {
       "rank": 102,
-      "duration_ms": 0,
+      "duration_ms": 10691222,
       "count": 51,
       "songId": "2rSWcMbuxjJsUmGrIKFiZT",
       "song": {
@@ -4387,7 +4387,7 @@
     },
     {
       "rank": 103,
-      "duration_ms": 0,
+      "duration_ms": 10584253,
       "count": 51,
       "songId": "1vffte5WTHIik37ePfJdo4",
       "song": {
@@ -4429,7 +4429,7 @@
     },
     {
       "rank": 104,
-      "duration_ms": 0,
+      "duration_ms": 9226981,
       "count": 51,
       "songId": "5o3MYjeTaMAeLvEsCqXQdc",
       "song": {
@@ -4471,7 +4471,7 @@
     },
     {
       "rank": 105,
-      "duration_ms": 0,
+      "duration_ms": 8570260,
       "count": 51,
       "songId": "7wH9OVoKhETiy1jFEzfFA8",
       "song": {
@@ -4515,7 +4515,7 @@
     },
     {
       "rank": 106,
-      "duration_ms": 0,
+      "duration_ms": 6729936,
       "count": 51,
       "songId": "2vJCF3ol9kO6TukAdKQ2dG",
       "song": {
@@ -4561,7 +4561,7 @@
     },
     {
       "rank": 107,
-      "duration_ms": 0,
+      "duration_ms": 11119839,
       "count": 51,
       "songId": "72k7h4RRSBg6xvJE9z3zS5",
       "song": {
@@ -4604,7 +4604,7 @@
     },
     {
       "rank": 108,
-      "duration_ms": 0,
+      "duration_ms": 11400875,
       "count": 51,
       "songId": "2SbIONplUQ0BvXyRgGDgCz",
       "song": {
@@ -4649,7 +4649,7 @@
     },
     {
       "rank": 109,
-      "duration_ms": 0,
+      "duration_ms": 4165606,
       "count": 50,
       "songId": "1wTHo38ADjchjd2UFZal3h",
       "song": {
@@ -4690,7 +4690,7 @@
     },
     {
       "rank": 110,
-      "duration_ms": 0,
+      "duration_ms": 5487627,
       "count": 50,
       "songId": "3qM3ZhhYCYwXwCsnslbg7k",
       "song": {
@@ -4734,7 +4734,7 @@
     },
     {
       "rank": 111,
-      "duration_ms": 0,
+      "duration_ms": 7839348,
       "count": 50,
       "songId": "5x0Jn9gZDKu0IO6pXaQrKr",
       "song": {
@@ -4776,7 +4776,7 @@
     },
     {
       "rank": 112,
-      "duration_ms": 0,
+      "duration_ms": 8071910,
       "count": 50,
       "songId": "7ppLY1sy152KulKq7KCqyt",
       "song": {
@@ -4819,7 +4819,7 @@
     },
     {
       "rank": 113,
-      "duration_ms": 0,
+      "duration_ms": 3770054,
       "count": 50,
       "songId": "4GL8caVDQrE22nppcSiUCe",
       "song": {
@@ -4861,7 +4861,7 @@
     },
     {
       "rank": 114,
-      "duration_ms": 0,
+      "duration_ms": 8758336,
       "count": 50,
       "songId": "3NThq9BqYtKYBfsHIogjM6",
       "song": {
@@ -4908,7 +4908,7 @@
     },
     {
       "rank": 115,
-      "duration_ms": 0,
+      "duration_ms": 7088112,
       "count": 50,
       "songId": "5EbdjHxKhH3NXZ9QixwtSV",
       "song": {
@@ -4952,7 +4952,7 @@
     },
     {
       "rank": 116,
-      "duration_ms": 0,
+      "duration_ms": 6481931,
       "count": 50,
       "songId": "7KkVnlkYzgnYEMffzNiHg3",
       "song": {
@@ -4998,7 +4998,7 @@
     },
     {
       "rank": 117,
-      "duration_ms": 0,
+      "duration_ms": 7250275,
       "count": 49,
       "songId": "1zuKjpp4t7BS8JPKi6mkQr",
       "song": {
@@ -5040,7 +5040,7 @@
     },
     {
       "rank": 118,
-      "duration_ms": 0,
+      "duration_ms": 10430792,
       "count": 49,
       "songId": "1CLmFKW99S8eJrebO3GB04",
       "song": {
@@ -5082,7 +5082,7 @@
     },
     {
       "rank": 119,
-      "duration_ms": 0,
+      "duration_ms": 11822317,
       "count": 49,
       "songId": "3gqP2hxwgi6mb8FhtEe4zU",
       "song": {
@@ -5124,7 +5124,7 @@
     },
     {
       "rank": 120,
-      "duration_ms": 0,
+      "duration_ms": 13712131,
       "count": 49,
       "songId": "7KfYLvSzNAy7iJEisQS0Ma",
       "song": {
@@ -5166,7 +5166,7 @@
     },
     {
       "rank": 121,
-      "duration_ms": 0,
+      "duration_ms": 14153599,
       "count": 49,
       "songId": "1VvyRNSVBKuvENwpyiVlBU",
       "song": {
@@ -5211,7 +5211,7 @@
     },
     {
       "rank": 122,
-      "duration_ms": 0,
+      "duration_ms": 11345113,
       "count": 49,
       "songId": "50G4hXVcFnIoVx5jvOhNLq",
       "song": {
@@ -5255,7 +5255,7 @@
     },
     {
       "rank": 123,
-      "duration_ms": 0,
+      "duration_ms": 6261479,
       "count": 49,
       "songId": "1mq756cRNyVTnykm4mHOgx",
       "song": {
@@ -5300,7 +5300,7 @@
     },
     {
       "rank": 124,
-      "duration_ms": 0,
+      "duration_ms": 13009107,
       "count": 49,
       "songId": "2U251IRExvlUvri5awaJEz",
       "song": {
@@ -5345,7 +5345,7 @@
     },
     {
       "rank": 125,
-      "duration_ms": 0,
+      "duration_ms": 9175717,
       "count": 49,
       "songId": "5xncn9EFy7lQBI8hsCQlIJ",
       "song": {
@@ -5390,7 +5390,7 @@
     },
     {
       "rank": 126,
-      "duration_ms": 0,
+      "duration_ms": 6475508,
       "count": 48,
       "songId": "4kFfFe38CRVnTsakUTL4E4",
       "song": {
@@ -5431,7 +5431,7 @@
     },
     {
       "rank": 127,
-      "duration_ms": 0,
+      "duration_ms": 7862986,
       "count": 48,
       "songId": "4kCvpSVa2XQUiarE7EE5Fs",
       "song": {
@@ -5473,7 +5473,7 @@
     },
     {
       "rank": 128,
-      "duration_ms": 0,
+      "duration_ms": 8579339,
       "count": 48,
       "songId": "08SywyCNDoU2oQ1sFD0SIq",
       "song": {
@@ -5516,7 +5516,7 @@
     },
     {
       "rank": 129,
-      "duration_ms": 0,
+      "duration_ms": 11571220,
       "count": 48,
       "songId": "10ViidwjGLCfVtGPfdcszR",
       "song": {
@@ -5559,7 +5559,7 @@
     },
     {
       "rank": 130,
-      "duration_ms": 0,
+      "duration_ms": 9465773,
       "count": 48,
       "songId": "3XKljNIWyiO0d8o8CpnVBo",
       "song": {
@@ -5601,7 +5601,7 @@
     },
     {
       "rank": 131,
-      "duration_ms": 0,
+      "duration_ms": 6732214,
       "count": 48,
       "songId": "0Sr6zS7LQdKvjzEdbikBRB",
       "song": {
@@ -5644,7 +5644,7 @@
     },
     {
       "rank": 132,
-      "duration_ms": 0,
+      "duration_ms": 6293595,
       "count": 48,
       "songId": "3VIVHPg3lqLMPMHe1Bt9sx",
       "song": {
@@ -5688,7 +5688,7 @@
     },
     {
       "rank": 133,
-      "duration_ms": 0,
+      "duration_ms": 9411849,
       "count": 48,
       "songId": "1qb2qxvGlVwkFtERC6G1zx",
       "song": {
@@ -5732,7 +5732,7 @@
     },
     {
       "rank": 134,
-      "duration_ms": 0,
+      "duration_ms": 8497360,
       "count": 48,
       "songId": "2wF5p2dfUbEiqAnCRVNwmK",
       "song": {
@@ -5774,7 +5774,7 @@
     },
     {
       "rank": 135,
-      "duration_ms": 0,
+      "duration_ms": 7874459,
       "count": 48,
       "songId": "7rpOMXI6V8VXJuo04re39Y",
       "song": {
@@ -5816,7 +5816,7 @@
     },
     {
       "rank": 136,
-      "duration_ms": 0,
+      "duration_ms": 6330884,
       "count": 48,
       "songId": "1FY269ESdQGtLSg0bLqYe1",
       "song": {
@@ -5859,7 +5859,7 @@
     },
     {
       "rank": 137,
-      "duration_ms": 0,
+      "duration_ms": 6128134,
       "count": 48,
       "songId": "0BlNkCzdgYi9eJXwnYUho9",
       "song": {
@@ -5904,7 +5904,7 @@
     },
     {
       "rank": 138,
-      "duration_ms": 0,
+      "duration_ms": 10402744,
       "count": 48,
       "songId": "6oI3Inlpzlik5e7cy4Sdi8",
       "song": {
@@ -5947,7 +5947,7 @@
     },
     {
       "rank": 139,
-      "duration_ms": 0,
+      "duration_ms": 7833022,
       "count": 48,
       "songId": "1HkOPLwAJH3kE8UnqgxF4s",
       "song": {
@@ -5991,7 +5991,7 @@
     },
     {
       "rank": 140,
-      "duration_ms": 0,
+      "duration_ms": 7707752,
       "count": 48,
       "songId": "2OFrAsP5Vrcb0DtsPNsm54",
       "song": {
@@ -6034,7 +6034,7 @@
     },
     {
       "rank": 141,
-      "duration_ms": 0,
+      "duration_ms": 6746121,
       "count": 48,
       "songId": "1yaBZv6K9ayNZ5VpWOz3Qh",
       "song": {
@@ -6080,7 +6080,7 @@
     },
     {
       "rank": 142,
-      "duration_ms": 0,
+      "duration_ms": 4137152,
       "count": 47,
       "songId": "5h5reMGNpL19vdn5wMkbNn",
       "song": {
@@ -6121,7 +6121,7 @@
     },
     {
       "rank": 143,
-      "duration_ms": 0,
+      "duration_ms": 4237879,
       "count": 47,
       "songId": "3TQ4GxL3oghmLVpUD1oKmb",
       "song": {
@@ -6162,7 +6162,7 @@
     },
     {
       "rank": 144,
-      "duration_ms": 0,
+      "duration_ms": 6026714,
       "count": 47,
       "songId": "5iXnD2VizcAbErpkcuNQ6I",
       "song": {
@@ -6204,7 +6204,7 @@
     },
     {
       "rank": 145,
-      "duration_ms": 0,
+      "duration_ms": 6994493,
       "count": 47,
       "songId": "62wk9WOLxInVcRgDN3DNye",
       "song": {
@@ -6246,7 +6246,7 @@
     },
     {
       "rank": 146,
-      "duration_ms": 0,
+      "duration_ms": 6549187,
       "count": 47,
       "songId": "1Eolhana7nKHYpcYpdVcT5",
       "song": {
@@ -6288,7 +6288,7 @@
     },
     {
       "rank": 147,
-      "duration_ms": 0,
+      "duration_ms": 6755326,
       "count": 47,
       "songId": "6GIo0Ayw4jSdYxrT69giPN",
       "song": {
@@ -6332,7 +6332,7 @@
     },
     {
       "rank": 148,
-      "duration_ms": 0,
+      "duration_ms": 7931026,
       "count": 47,
       "songId": "458jTlaoleWTGRV4QTdQNZ",
       "song": {
@@ -6376,7 +6376,7 @@
     },
     {
       "rank": 149,
-      "duration_ms": 0,
+      "duration_ms": 6373871,
       "count": 47,
       "songId": "2vzqn9qu53acSPrZW3F9j5",
       "song": {
@@ -6420,7 +6420,7 @@
     },
     {
       "rank": 150,
-      "duration_ms": 0,
+      "duration_ms": 8380499,
       "count": 47,
       "songId": "4JvclO8lNugobD1afavcYS",
       "song": {
@@ -6463,7 +6463,7 @@
     },
     {
       "rank": 151,
-      "duration_ms": 0,
+      "duration_ms": 8844098,
       "count": 47,
       "songId": "4klWWWcWjHiRil6EqLLq5u",
       "song": {
@@ -6507,7 +6507,7 @@
     },
     {
       "rank": 152,
-      "duration_ms": 0,
+      "duration_ms": 5356313,
       "count": 46,
       "songId": "7exckrvIzQrsl6USYjtpCW",
       "song": {
@@ -6548,7 +6548,7 @@
     },
     {
       "rank": 153,
-      "duration_ms": 0,
+      "duration_ms": 8546894,
       "count": 46,
       "songId": "1KqlVt63Q4bl1VdSlymr5C",
       "song": {
@@ -6592,7 +6592,7 @@
     },
     {
       "rank": 154,
-      "duration_ms": 0,
+      "duration_ms": 7510835,
       "count": 46,
       "songId": "6RBAJlxHY9Ulvw2y7yk4aX",
       "song": {
@@ -6634,7 +6634,7 @@
     },
     {
       "rank": 155,
-      "duration_ms": 0,
+      "duration_ms": 10998194,
       "count": 46,
       "songId": "35xSkNIXi504fcEwz9USRB",
       "song": {
@@ -6676,7 +6676,7 @@
     },
     {
       "rank": 156,
-      "duration_ms": 0,
+      "duration_ms": 7359769,
       "count": 46,
       "songId": "6tmmw08YHR0kyTtCE19Pqd",
       "song": {
@@ -6719,7 +6719,7 @@
     },
     {
       "rank": 157,
-      "duration_ms": 0,
+      "duration_ms": 8512186,
       "count": 46,
       "songId": "1cTZMwcBJT0Ka3UJPXOeeN",
       "song": {
@@ -6762,7 +6762,7 @@
     },
     {
       "rank": 158,
-      "duration_ms": 0,
+      "duration_ms": 4717357,
       "count": 46,
       "songId": "1j8IFITb0LvgzpLWk6rtM6",
       "song": {
@@ -6804,7 +6804,7 @@
     },
     {
       "rank": 159,
-      "duration_ms": 0,
+      "duration_ms": 7539930,
       "count": 46,
       "songId": "45x1BJkcJG2Lz2qxVjeUvX",
       "song": {
@@ -6846,7 +6846,7 @@
     },
     {
       "rank": 160,
-      "duration_ms": 0,
+      "duration_ms": 6885548,
       "count": 45,
       "songId": "1dB0NylVkpjdOe8DiekIs7",
       "song": {
@@ -6887,7 +6887,7 @@
     },
     {
       "rank": 161,
-      "duration_ms": 0,
+      "duration_ms": 6733005,
       "count": 45,
       "songId": "5ZCykEFjuNLooxeQCFfv9T",
       "song": {
@@ -6928,7 +6928,7 @@
     },
     {
       "rank": 162,
-      "duration_ms": 0,
+      "duration_ms": 6359393,
       "count": 45,
       "songId": "1Pc6C80mq5QPbgbDo1pZ2o",
       "song": {
@@ -6970,7 +6970,7 @@
     },
     {
       "rank": 163,
-      "duration_ms": 0,
+      "duration_ms": 9612452,
       "count": 45,
       "songId": "1kVYlBIzz561CShPpzm19f",
       "song": {
@@ -7012,7 +7012,7 @@
     },
     {
       "rank": 164,
-      "duration_ms": 0,
+      "duration_ms": 11685480,
       "count": 45,
       "songId": "7vOMNtyH09vL4Vv54RfZuG",
       "song": {
@@ -7056,7 +7056,7 @@
     },
     {
       "rank": 165,
-      "duration_ms": 0,
+      "duration_ms": 9264402,
       "count": 45,
       "songId": "59j4k21fP6SfrCwurmLHZZ",
       "song": {
@@ -7099,7 +7099,7 @@
     },
     {
       "rank": 166,
-      "duration_ms": 0,
+      "duration_ms": 4756503,
       "count": 45,
       "songId": "6ZiAJt2mzBh09DJdFhSGFp",
       "song": {
@@ -7143,7 +7143,7 @@
     },
     {
       "rank": 167,
-      "duration_ms": 0,
+      "duration_ms": 10128558,
       "count": 45,
       "songId": "7km8eBZqlTKiqlgdl2Zk5u",
       "song": {
@@ -7187,7 +7187,7 @@
     },
     {
       "rank": 168,
-      "duration_ms": 0,
+      "duration_ms": 8478302,
       "count": 45,
       "songId": "1O6AHqdsD6MljiTHcmKkUB",
       "song": {
@@ -7231,7 +7231,7 @@
     },
     {
       "rank": 169,
-      "duration_ms": 0,
+      "duration_ms": 8618103,
       "count": 45,
       "songId": "3jGUd86f3hLJixceqMxHWi",
       "song": {
@@ -7275,7 +7275,7 @@
     },
     {
       "rank": 170,
-      "duration_ms": 0,
+      "duration_ms": 3137041,
       "count": 44,
       "songId": "5MaCCAHlmylUq2AjuQxTLc",
       "song": {
@@ -7316,7 +7316,7 @@
     },
     {
       "rank": 171,
-      "duration_ms": 0,
+      "duration_ms": 6962560,
       "count": 44,
       "songId": "64gpgh5jBMxyh7iVJll23t",
       "song": {
@@ -7358,7 +7358,7 @@
     },
     {
       "rank": 172,
-      "duration_ms": 0,
+      "duration_ms": 7381451,
       "count": 44,
       "songId": "5IyL3XOaRPpTgxVjRIAxXU",
       "song": {
@@ -7400,7 +7400,7 @@
     },
     {
       "rank": 173,
-      "duration_ms": 0,
+      "duration_ms": 7235296,
       "count": 44,
       "songId": "7AaKNExGC48W5tY1vtFXfC",
       "song": {
@@ -7442,7 +7442,7 @@
     },
     {
       "rank": 174,
-      "duration_ms": 0,
+      "duration_ms": 10743232,
       "count": 44,
       "songId": "6mib3N4E8PZHAGQ3xy7bho",
       "song": {
@@ -7485,7 +7485,7 @@
     },
     {
       "rank": 175,
-      "duration_ms": 0,
+      "duration_ms": 8212932,
       "count": 44,
       "songId": "2jcnIJ3b2O2rWDjAA2AVPs",
       "song": {
@@ -7527,7 +7527,7 @@
     },
     {
       "rank": 176,
-      "duration_ms": 225466,
+      "duration_ms": 7491195,
       "count": 44,
       "songId": "4c2uuAEgxnZ4dmmANSluld",
       "song": {
@@ -7571,7 +7571,7 @@
     },
     {
       "rank": 177,
-      "duration_ms": 0,
+      "duration_ms": 6872290,
       "count": 44,
       "songId": "4juq76lIar8YWOLpYMXUAG",
       "song": {
@@ -7615,7 +7615,7 @@
     },
     {
       "rank": 178,
-      "duration_ms": 0,
+      "duration_ms": 13235713,
       "count": 44,
       "songId": "1fmoCZ6mtMiqA5GHWPcZz9",
       "song": {
@@ -7657,7 +7657,7 @@
     },
     {
       "rank": 179,
-      "duration_ms": 0,
+      "duration_ms": 8905763,
       "count": 44,
       "songId": "60yAKwBX4c3hm4uubwzvD2",
       "song": {
@@ -7699,7 +7699,7 @@
     },
     {
       "rank": 180,
-      "duration_ms": 0,
+      "duration_ms": 3141579,
       "count": 44,
       "songId": "611NKimGpk26QjiMSxFWg1",
       "song": {
@@ -7742,7 +7742,7 @@
     },
     {
       "rank": 181,
-      "duration_ms": 0,
+      "duration_ms": 8205105,
       "count": 44,
       "songId": "5sM2GI0vMNZL7tvfPQfByV",
       "song": {
@@ -7787,7 +7787,7 @@
     },
     {
       "rank": 182,
-      "duration_ms": 0,
+      "duration_ms": 8341692,
       "count": 44,
       "songId": "5dulWCZyRqio1YhzwCc4P4",
       "song": {
@@ -7832,7 +7832,7 @@
     },
     {
       "rank": 183,
-      "duration_ms": 0,
+      "duration_ms": 6472001,
       "count": 43,
       "songId": "0Wl42CUb1phIU9O2aR1wXI",
       "song": {
@@ -7873,7 +7873,7 @@
     },
     {
       "rank": 184,
-      "duration_ms": 317426,
+      "duration_ms": 11887861,
       "count": 43,
       "songId": "0C80GCp0mMuBzLf3EAXqxv",
       "song": {
@@ -7914,7 +7914,7 @@
     },
     {
       "rank": 185,
-      "duration_ms": 0,
+      "duration_ms": 7261040,
       "count": 43,
       "songId": "7JJmb5XwzOO8jgpou264Ml",
       "song": {
@@ -7955,7 +7955,7 @@
     },
     {
       "rank": 186,
-      "duration_ms": 116453,
+      "duration_ms": 4607779,
       "count": 43,
       "songId": "1Rz1CTinAymBA4dcMPGijY",
       "song": {
@@ -7996,7 +7996,7 @@
     },
     {
       "rank": 187,
-      "duration_ms": 0,
+      "duration_ms": 6711556,
       "count": 43,
       "songId": "04vAjpZ2ppNIFcxq9bqj39",
       "song": {
@@ -8037,7 +8037,7 @@
     },
     {
       "rank": 188,
-      "duration_ms": 0,
+      "duration_ms": 7644656,
       "count": 43,
       "songId": "48gsLPdOUEDjr7P8Wvykne",
       "song": {
@@ -8079,7 +8079,7 @@
     },
     {
       "rank": 189,
-      "duration_ms": 0,
+      "duration_ms": 5961071,
       "count": 43,
       "songId": "3tchJ8gDgMdaSxpaLxlr1F",
       "song": {
@@ -8121,7 +8121,7 @@
     },
     {
       "rank": 190,
-      "duration_ms": 0,
+      "duration_ms": 6765131,
       "count": 43,
       "songId": "7kzKAuUzOITUauHAhoMoxA",
       "song": {
@@ -8164,7 +8164,7 @@
     },
     {
       "rank": 191,
-      "duration_ms": 0,
+      "duration_ms": 7020243,
       "count": 43,
       "songId": "1otmhZinn0A8kzh3bEQUY7",
       "song": {
@@ -8207,7 +8207,7 @@
     },
     {
       "rank": 192,
-      "duration_ms": 0,
+      "duration_ms": 4494440,
       "count": 43,
       "songId": "0S8LgLoseDB6W2HWd1ym6P",
       "song": {
@@ -8249,7 +8249,7 @@
     },
     {
       "rank": 193,
-      "duration_ms": 0,
+      "duration_ms": 5417134,
       "count": 43,
       "songId": "6wnp0gNPSHOsolIMnbqBSi",
       "song": {
@@ -8292,7 +8292,7 @@
     },
     {
       "rank": 194,
-      "duration_ms": 0,
+      "duration_ms": 7298563,
       "count": 43,
       "songId": "1mDWtUizjJrqHOOwBNAoSh",
       "song": {
@@ -8335,7 +8335,7 @@
     },
     {
       "rank": 195,
-      "duration_ms": 0,
+      "duration_ms": 4611373,
       "count": 43,
       "songId": "0Ko737UNjXO17LK4Urdlwo",
       "song": {
@@ -8380,7 +8380,7 @@
     },
     {
       "rank": 196,
-      "duration_ms": 0,
+      "duration_ms": 6247753,
       "count": 43,
       "songId": "2J9Ifw8YVBQ13JTdTlvsQc",
       "song": {
@@ -8407,7 +8407,7 @@
     },
     {
       "rank": 197,
-      "duration_ms": 0,
+      "duration_ms": 11432388,
       "count": 43,
       "songId": "4Iyo50UoYhuuYORMLrGDci",
       "song": {
@@ -8449,7 +8449,7 @@
     },
     {
       "rank": 198,
-      "duration_ms": 0,
+      "duration_ms": 6280874,
       "count": 43,
       "songId": "5jclmAX2XQp5G3b6K30UJl",
       "song": {
@@ -8493,7 +8493,7 @@
     },
     {
       "rank": 199,
-      "duration_ms": 0,
+      "duration_ms": 4334073,
       "count": 43,
       "songId": "5CvCsInJLFJxLZwXWRKDDm",
       "song": {
@@ -8536,7 +8536,7 @@
     },
     {
       "rank": 200,
-      "duration_ms": 0,
+      "duration_ms": 9585555,
       "count": 43,
       "songId": "1x3Zttz0DooSwAOIDiDcq0",
       "song": {
@@ -8582,7 +8582,7 @@
     },
     {
       "rank": 201,
-      "duration_ms": 0,
+      "duration_ms": 10653100,
       "count": 43,
       "songId": "1Krtfh550kyhfWPcRp6SnD",
       "song": {
@@ -8630,7 +8630,7 @@
     },
     {
       "rank": 202,
-      "duration_ms": 0,
+      "duration_ms": 6854026,
       "count": 42,
       "songId": "54fqY96OinUP9z4QugYiJI",
       "song": {
@@ -8671,7 +8671,7 @@
     },
     {
       "rank": 203,
-      "duration_ms": 0,
+      "duration_ms": 6186806,
       "count": 42,
       "songId": "5TIMKLDtSuKWpW4R6JGH4m",
       "song": {
@@ -8712,7 +8712,7 @@
     },
     {
       "rank": 204,
-      "duration_ms": 0,
+      "duration_ms": 5104559,
       "count": 42,
       "songId": "4S4Mfvv03M1cHgIOJcbUCL",
       "song": {
@@ -8753,7 +8753,7 @@
     },
     {
       "rank": 205,
-      "duration_ms": 0,
+      "duration_ms": 6311824,
       "count": 42,
       "songId": "2Uk9xgODpiHEB5TCxI04c4",
       "song": {
@@ -8794,7 +8794,7 @@
     },
     {
       "rank": 206,
-      "duration_ms": 0,
+      "duration_ms": 13326545,
       "count": 42,
       "songId": "0WIbzDVEpmOyBnqqdtqIL9",
       "song": {
@@ -8836,7 +8836,7 @@
     },
     {
       "rank": 207,
-      "duration_ms": 0,
+      "duration_ms": 6511775,
       "count": 42,
       "songId": "11X4Gw3T4hoktVruLgTnm1",
       "song": {
@@ -8879,7 +8879,7 @@
     },
     {
       "rank": 208,
-      "duration_ms": 0,
+      "duration_ms": 9864800,
       "count": 42,
       "songId": "0zX0w7ybJfmk5mo8kKuXlC",
       "song": {
@@ -8921,7 +8921,7 @@
     },
     {
       "rank": 209,
-      "duration_ms": 0,
+      "duration_ms": 9397188,
       "count": 42,
       "songId": "5DJTYOAHZEKjNqXpOwnomi",
       "song": {
@@ -8963,7 +8963,7 @@
     },
     {
       "rank": 210,
-      "duration_ms": 0,
+      "duration_ms": 6609335,
       "count": 42,
       "songId": "7KmawNv6JUgZ54gSyVF6VQ",
       "song": {
@@ -9005,7 +9005,7 @@
     },
     {
       "rank": 211,
-      "duration_ms": 0,
+      "duration_ms": 6936201,
       "count": 42,
       "songId": "259j5EvuFDiXzbMYSteBXw",
       "song": {
@@ -9049,7 +9049,7 @@
     },
     {
       "rank": 212,
-      "duration_ms": 0,
+      "duration_ms": 4888190,
       "count": 42,
       "songId": "6wVEvjEZgSgBvda4WErEv2",
       "song": {
@@ -9091,7 +9091,7 @@
     },
     {
       "rank": 213,
-      "duration_ms": 0,
+      "duration_ms": 6936433,
       "count": 42,
       "songId": "23S3phgpAoR5YgNrjG25gS",
       "song": {
@@ -9120,7 +9120,7 @@
     },
     {
       "rank": 214,
-      "duration_ms": 0,
+      "duration_ms": 4967013,
       "count": 42,
       "songId": "19sE4iai4WPMNNsWxMHvi1",
       "song": {
@@ -9164,7 +9164,7 @@
     },
     {
       "rank": 215,
-      "duration_ms": 0,
+      "duration_ms": 12763431,
       "count": 42,
       "songId": "4UXo4oJsOAFRCtSnyPqB4X",
       "song": {
@@ -9209,7 +9209,7 @@
     },
     {
       "rank": 216,
-      "duration_ms": 0,
+      "duration_ms": 5218799,
       "count": 42,
       "songId": "47KVHb6cOVBZbmXQweE5p7",
       "song": {
@@ -9254,7 +9254,7 @@
     },
     {
       "rank": 217,
-      "duration_ms": 0,
+      "duration_ms": 6182844,
       "count": 42,
       "songId": "34PLpJWhWw4IFFAd2PWgo5",
       "song": {
@@ -9297,7 +9297,7 @@
     },
     {
       "rank": 218,
-      "duration_ms": 0,
+      "duration_ms": 7175860,
       "count": 41,
       "songId": "5J20VvoZSXa8g0xfJ43q66",
       "song": {
@@ -9338,7 +9338,7 @@
     },
     {
       "rank": 219,
-      "duration_ms": 0,
+      "duration_ms": 4738242,
       "count": 41,
       "songId": "30gtuczW6s6jj2OUVj5rat",
       "song": {
@@ -9379,7 +9379,7 @@
     },
     {
       "rank": 220,
-      "duration_ms": 0,
+      "duration_ms": 10420201,
       "count": 41,
       "songId": "6koWevx9MqN6efQ6qreIbm",
       "song": {
@@ -9421,7 +9421,7 @@
     },
     {
       "rank": 221,
-      "duration_ms": 0,
+      "duration_ms": 6122238,
       "count": 41,
       "songId": "3PzsbWSQdLCKDLxn7YZfkM",
       "song": {
@@ -9463,7 +9463,7 @@
     },
     {
       "rank": 222,
-      "duration_ms": 0,
+      "duration_ms": 10581572,
       "count": 41,
       "songId": "46pW0poQYEb2bVaqozGO59",
       "song": {
@@ -9505,7 +9505,7 @@
     },
     {
       "rank": 223,
-      "duration_ms": 0,
+      "duration_ms": 6802941,
       "count": 41,
       "songId": "2QZ7WLBE8h2y1Y5Fb8RYbH",
       "song": {
@@ -9547,7 +9547,7 @@
     },
     {
       "rank": 224,
-      "duration_ms": 0,
+      "duration_ms": 6187702,
       "count": 41,
       "songId": "2WckX8hC0GUyACTuFeabwt",
       "song": {
@@ -9589,7 +9589,7 @@
     },
     {
       "rank": 225,
-      "duration_ms": 0,
+      "duration_ms": 5177878,
       "count": 41,
       "songId": "1QlZT6ouIrxKsWkg1p7oTJ",
       "song": {
@@ -9631,7 +9631,7 @@
     },
     {
       "rank": 226,
-      "duration_ms": 0,
+      "duration_ms": 10170854,
       "count": 41,
       "songId": "75FEaRjZTKLhTrFGsfMUXR",
       "song": {
@@ -9673,7 +9673,7 @@
     },
     {
       "rank": 227,
-      "duration_ms": 0,
+      "duration_ms": 6250824,
       "count": 41,
       "songId": "08ZsI74y3P6mQw8En1c6tQ",
       "song": {
@@ -9716,7 +9716,7 @@
     },
     {
       "rank": 228,
-      "duration_ms": 0,
+      "duration_ms": 5919743,
       "count": 41,
       "songId": "7v5L1WQWYnUvnG8LkA6Fxv",
       "song": {
@@ -9759,7 +9759,7 @@
     },
     {
       "rank": 229,
-      "duration_ms": 0,
+      "duration_ms": 7933012,
       "count": 41,
       "songId": "5r9LyVW7mKuLaGN0ofWU7c",
       "song": {
@@ -9801,7 +9801,7 @@
     },
     {
       "rank": 230,
-      "duration_ms": 0,
+      "duration_ms": 12534842,
       "count": 41,
       "songId": "6EhAIEtuOABhRJ17NjDVjL",
       "song": {
@@ -9844,7 +9844,7 @@
     },
     {
       "rank": 231,
-      "duration_ms": 0,
+      "duration_ms": 10013823,
       "count": 41,
       "songId": "2UxXVVfBiGZa0l2Nhi6WbW",
       "song": {
@@ -9886,7 +9886,7 @@
     },
     {
       "rank": 232,
-      "duration_ms": 0,
+      "duration_ms": 8899377,
       "count": 41,
       "songId": "0pxVWo0sFtffiizPFEQabe",
       "song": {
@@ -9928,7 +9928,7 @@
     },
     {
       "rank": 233,
-      "duration_ms": 0,
+      "duration_ms": 7092962,
       "count": 41,
       "songId": "6XDdmCAuodZfXtEgJcxpS2",
       "song": {
@@ -9973,7 +9973,7 @@
     },
     {
       "rank": 234,
-      "duration_ms": 0,
+      "duration_ms": 8936695,
       "count": 41,
       "songId": "2k7DN6UlsT72bFysvCj1RB",
       "song": {
@@ -10016,7 +10016,7 @@
     },
     {
       "rank": 235,
-      "duration_ms": 0,
+      "duration_ms": 6481847,
       "count": 41,
       "songId": "2W2J1ZwcqZL0ug37sRUoqH",
       "song": {
@@ -10058,7 +10058,7 @@
     },
     {
       "rank": 236,
-      "duration_ms": 0,
+      "duration_ms": 5730317,
       "count": 41,
       "songId": "2CT3r93YuSHtm57mjxvjhH",
       "song": {
@@ -10104,7 +10104,7 @@
     },
     {
       "rank": 237,
-      "duration_ms": 0,
+      "duration_ms": 6138096,
       "count": 41,
       "songId": "4r9FfsM0ScLb5GM9gsJwI7",
       "song": {
@@ -10147,7 +10147,7 @@
     },
     {
       "rank": 238,
-      "duration_ms": 0,
+      "duration_ms": 5099060,
       "count": 41,
       "songId": "3Iek82ZiZLXt53Lkm6wjsJ",
       "song": {
@@ -10191,7 +10191,7 @@
     },
     {
       "rank": 239,
-      "duration_ms": 0,
+      "duration_ms": 9179150,
       "count": 41,
       "songId": "0LLKJL3tEm6UqcqY0t2oJa",
       "song": {
@@ -10235,7 +10235,7 @@
     },
     {
       "rank": 240,
-      "duration_ms": 0,
+      "duration_ms": 4474793,
       "count": 40,
       "songId": "5LgiqEgpK54OfXC6947wbU",
       "song": {
@@ -10276,7 +10276,7 @@
     },
     {
       "rank": 241,
-      "duration_ms": 0,
+      "duration_ms": 6672941,
       "count": 40,
       "songId": "26ldiX3y5I9dtLdGm6ekV5",
       "song": {
@@ -10317,7 +10317,7 @@
     },
     {
       "rank": 242,
-      "duration_ms": 0,
+      "duration_ms": 9021867,
       "count": 40,
       "songId": "0DiWol3AO6WpXZgp0goxAV",
       "song": {
@@ -10358,7 +10358,7 @@
     },
     {
       "rank": 243,
-      "duration_ms": 0,
+      "duration_ms": 5956137,
       "count": 40,
       "songId": "0zNbESoBnTTYHlWWdSnC5N",
       "song": {
@@ -10399,7 +10399,7 @@
     },
     {
       "rank": 244,
-      "duration_ms": 0,
+      "duration_ms": 10744885,
       "count": 40,
       "songId": "2uki1VRt9gZs2za2VUoBIC",
       "song": {
@@ -10440,7 +10440,7 @@
     },
     {
       "rank": 245,
-      "duration_ms": 0,
+      "duration_ms": 6336903,
       "count": 40,
       "songId": "53378Pv5che6eFMVtSsR2d",
       "song": {
@@ -10481,7 +10481,7 @@
     },
     {
       "rank": 246,
-      "duration_ms": 0,
+      "duration_ms": 6510268,
       "count": 40,
       "songId": "2DrrxuNOhnpqJXLH36eR1S",
       "song": {
@@ -10522,7 +10522,7 @@
     },
     {
       "rank": 247,
-      "duration_ms": 0,
+      "duration_ms": 8301317,
       "count": 40,
       "songId": "6UFivO2zqqPFPoQYsEMuCc",
       "song": {
@@ -10563,7 +10563,7 @@
     },
     {
       "rank": 248,
-      "duration_ms": 0,
+      "duration_ms": 7615693,
       "count": 40,
       "songId": "5zRnZVyjj4N394bZAJPDxS",
       "song": {
@@ -10604,7 +10604,7 @@
     },
     {
       "rank": 249,
-      "duration_ms": 0,
+      "duration_ms": 14952747,
       "count": 40,
       "songId": "4vLYewWIvqHfKtJDk8c8tq",
       "song": {
@@ -10646,7 +10646,7 @@
     },
     {
       "rank": 250,
-      "duration_ms": 0,
+      "duration_ms": 8379107,
       "count": 40,
       "songId": "3VTNVsTTu05dmTsVFrmGpK",
       "song": {
@@ -10688,7 +10688,7 @@
     },
     {
       "rank": 251,
-      "duration_ms": 0,
+      "duration_ms": 6978577,
       "count": 40,
       "songId": "5Pj1SBeGuV8YPVOq1hmm6h",
       "song": {
@@ -10730,7 +10730,7 @@
     },
     {
       "rank": 252,
-      "duration_ms": 0,
+      "duration_ms": 4299052,
       "count": 40,
       "songId": "0EX5KOdVnR4kFqcTYKyyrH",
       "song": {
@@ -10772,7 +10772,7 @@
     },
     {
       "rank": 253,
-      "duration_ms": 0,
+      "duration_ms": 6851581,
       "count": 40,
       "songId": "3hzhzyiwnhVYc4IjKbsPxC",
       "song": {
@@ -10814,7 +10814,7 @@
     },
     {
       "rank": 254,
-      "duration_ms": 0,
+      "duration_ms": 5717208,
       "count": 40,
       "songId": "5gcR6BvHcgbCZ7PBhMgcMA",
       "song": {
@@ -10857,7 +10857,7 @@
     },
     {
       "rank": 255,
-      "duration_ms": 0,
+      "duration_ms": 2309914,
       "count": 40,
       "songId": "1A8DwHJSNibbVTqPLN0zlc",
       "song": {
@@ -10899,7 +10899,7 @@
     },
     {
       "rank": 256,
-      "duration_ms": 0,
+      "duration_ms": 6318201,
       "count": 40,
       "songId": "65FoykW7RKZb5axCEC6pZj",
       "song": {
@@ -10941,7 +10941,7 @@
     },
     {
       "rank": 257,
-      "duration_ms": 0,
+      "duration_ms": 7057687,
       "count": 40,
       "songId": "3pZZrFZEN1pcOUiPGDqcjd",
       "song": {
@@ -10984,7 +10984,7 @@
     },
     {
       "rank": 258,
-      "duration_ms": 0,
+      "duration_ms": 9933901,
       "count": 40,
       "songId": "4otHnPszGCLCH6zB5yq5lw",
       "song": {
@@ -11028,7 +11028,7 @@
     },
     {
       "rank": 259,
-      "duration_ms": 0,
+      "duration_ms": 6653543,
       "count": 40,
       "songId": "7akg8bGIvS1YXma6jWhHoM",
       "song": {
@@ -11071,7 +11071,7 @@
     },
     {
       "rank": 260,
-      "duration_ms": 0,
+      "duration_ms": 3958292,
       "count": 40,
       "songId": "1YlSlxcKloeGlBuPh3vRUx",
       "song": {
@@ -11115,7 +11115,7 @@
     },
     {
       "rank": 261,
-      "duration_ms": 0,
+      "duration_ms": 4094352,
       "count": 40,
       "songId": "23GDOl0H4WjfgZyraoms6v",
       "song": {
@@ -11158,7 +11158,7 @@
     },
     {
       "rank": 262,
-      "duration_ms": 0,
+      "duration_ms": 7207265,
       "count": 40,
       "songId": "3KsatAMRt1a7iryhWt5I8U",
       "song": {
@@ -11200,7 +11200,7 @@
     },
     {
       "rank": 263,
-      "duration_ms": 0,
+      "duration_ms": 3744867,
       "count": 40,
       "songId": "00iRrTR44lOvAPN9whrPI2",
       "song": {
@@ -11227,7 +11227,7 @@
     },
     {
       "rank": 264,
-      "duration_ms": 0,
+      "duration_ms": 11864691,
       "count": 39,
       "songId": "0UtnpKaReKUg2GquaSxCyD",
       "song": {
@@ -11269,7 +11269,7 @@
     },
     {
       "rank": 265,
-      "duration_ms": 0,
+      "duration_ms": 6121886,
       "count": 39,
       "songId": "0Ziohm1Ku8E2yUDYoclfhO",
       "song": {
@@ -11311,7 +11311,7 @@
     },
     {
       "rank": 266,
-      "duration_ms": 0,
+      "duration_ms": 4819038,
       "count": 39,
       "songId": "4nlvKIIetOWGIMyhjQXgOZ",
       "song": {
@@ -11353,7 +11353,7 @@
     },
     {
       "rank": 267,
-      "duration_ms": 0,
+      "duration_ms": 5615138,
       "count": 39,
       "songId": "2J1t2b8xPBqZzj5znx0C7C",
       "song": {
@@ -11395,7 +11395,7 @@
     },
     {
       "rank": 268,
-      "duration_ms": 0,
+      "duration_ms": 5079890,
       "count": 39,
       "songId": "6pb5BBnIM5IM7R1cqag6rE",
       "song": {
@@ -11437,7 +11437,7 @@
     },
     {
       "rank": 269,
-      "duration_ms": 0,
+      "duration_ms": 6161689,
       "count": 39,
       "songId": "7zEDmEGVQNIJ5M8SU3fpIM",
       "song": {
@@ -11479,7 +11479,7 @@
     },
     {
       "rank": 270,
-      "duration_ms": 0,
+      "duration_ms": 10302143,
       "count": 39,
       "songId": "6oS1bbrll1iITnC2EG4odP",
       "song": {
@@ -11521,7 +11521,7 @@
     },
     {
       "rank": 271,
-      "duration_ms": 0,
+      "duration_ms": 10899789,
       "count": 39,
       "songId": "0Wi7iEDGFY7I7NkYU6gS4n",
       "song": {
@@ -11563,7 +11563,7 @@
     },
     {
       "rank": 272,
-      "duration_ms": 0,
+      "duration_ms": 6296456,
       "count": 39,
       "songId": "4ARFxlWIWb7ALHG4nfnnLA",
       "song": {
@@ -11606,7 +11606,7 @@
     },
     {
       "rank": 273,
-      "duration_ms": 0,
+      "duration_ms": 5655509,
       "count": 39,
       "songId": "0pLnwwsKnpJASayXOYWfoo",
       "song": {
@@ -11651,7 +11651,7 @@
     },
     {
       "rank": 274,
-      "duration_ms": 0,
+      "duration_ms": 4078523,
       "count": 39,
       "songId": "6PvAGVrBOBlVNdvdi0A7Xt",
       "song": {
@@ -11693,7 +11693,7 @@
     },
     {
       "rank": 275,
-      "duration_ms": 0,
+      "duration_ms": 9417059,
       "count": 39,
       "songId": "2W3EgJst61RLZtPPm3EQim",
       "song": {
@@ -11735,7 +11735,7 @@
     },
     {
       "rank": 276,
-      "duration_ms": 0,
+      "duration_ms": 4513312,
       "count": 39,
       "songId": "2KplRWNP1j9lLMnKCNuGVn",
       "song": {
@@ -11777,7 +11777,7 @@
     },
     {
       "rank": 277,
-      "duration_ms": 0,
+      "duration_ms": 5241774,
       "count": 39,
       "songId": "4lxGVzcUaSF5HW5jtWnShV",
       "song": {
@@ -11821,7 +11821,7 @@
     },
     {
       "rank": 278,
-      "duration_ms": 0,
+      "duration_ms": 6849486,
       "count": 39,
       "songId": "2aGI6026jt9do6XgCd7YED",
       "song": {
@@ -11866,7 +11866,7 @@
     },
     {
       "rank": 279,
-      "duration_ms": 0,
+      "duration_ms": 7041639,
       "count": 39,
       "songId": "59WN2psjkt1tyaxjspN8fp",
       "song": {
@@ -11910,7 +11910,7 @@
     },
     {
       "rank": 280,
-      "duration_ms": 0,
+      "duration_ms": 7064587,
       "count": 39,
       "songId": "1IV6Rd2goqq4e3agbpqZN3",
       "song": {
@@ -11956,7 +11956,7 @@
     },
     {
       "rank": 281,
-      "duration_ms": 0,
+      "duration_ms": 6650343,
       "count": 39,
       "songId": "7baZG24FVLXytqd4ut2PZO",
       "song": {
@@ -12001,7 +12001,7 @@
     },
     {
       "rank": 282,
-      "duration_ms": 0,
+      "duration_ms": 5424433,
       "count": 39,
       "songId": "4jXyX02SNH9Oprbr3tpvVu",
       "song": {
@@ -12046,7 +12046,7 @@
     },
     {
       "rank": 283,
-      "duration_ms": 0,
+      "duration_ms": 7087425,
       "count": 38,
       "songId": "0gchQwxmBWj5no8NJ8b2yH",
       "song": {
@@ -12087,7 +12087,7 @@
     },
     {
       "rank": 284,
-      "duration_ms": 0,
+      "duration_ms": 7193890,
       "count": 38,
       "songId": "68osIGtVjM7QWVe6pazLHj",
       "song": {
@@ -12128,7 +12128,7 @@
     },
     {
       "rank": 285,
-      "duration_ms": 0,
+      "duration_ms": 3123374,
       "count": 38,
       "songId": "0WqkZk9htG7ncE3DMxweGV",
       "song": {
@@ -12170,7 +12170,7 @@
     },
     {
       "rank": 286,
-      "duration_ms": 0,
+      "duration_ms": 7453601,
       "count": 38,
       "songId": "1MJ5f5EYBC92ADD6xcz7nb",
       "song": {
@@ -12212,7 +12212,7 @@
     },
     {
       "rank": 287,
-      "duration_ms": 0,
+      "duration_ms": 4848442,
       "count": 38,
       "songId": "7hqboBA08HiOvLPd3Ahjod",
       "song": {
@@ -12255,7 +12255,7 @@
     },
     {
       "rank": 288,
-      "duration_ms": 0,
+      "duration_ms": 4863854,
       "count": 38,
       "songId": "6ivzLSDw82LpxXfToyb0He",
       "song": {
@@ -12297,7 +12297,7 @@
     },
     {
       "rank": 289,
-      "duration_ms": 0,
+      "duration_ms": 7987099,
       "count": 38,
       "songId": "6smJr4cmKlPE7EQrN8XItq",
       "song": {
@@ -12342,7 +12342,7 @@
     },
     {
       "rank": 290,
-      "duration_ms": 0,
+      "duration_ms": 6910901,
       "count": 38,
       "songId": "1Ae7ySOOpQSiODX1zfaCXq",
       "song": {
@@ -12385,7 +12385,7 @@
     },
     {
       "rank": 291,
-      "duration_ms": 0,
+      "duration_ms": 8727048,
       "count": 38,
       "songId": "6Bg7MznA9X0dIhlAsLyBYj",
       "song": {
@@ -12427,7 +12427,7 @@
     },
     {
       "rank": 292,
-      "duration_ms": 0,
+      "duration_ms": 3789429,
       "count": 38,
       "songId": "10kdMb4xAdOSgaQa7YMD4b",
       "song": {
@@ -12470,7 +12470,7 @@
     },
     {
       "rank": 293,
-      "duration_ms": 0,
+      "duration_ms": 7002640,
       "count": 37,
       "songId": "5lnOifvD9NZKbvB0g7VfcR",
       "song": {
@@ -12511,7 +12511,7 @@
     },
     {
       "rank": 294,
-      "duration_ms": 0,
+      "duration_ms": 3753648,
       "count": 37,
       "songId": "2z8DyBmKiGtobhKwnMVCyj",
       "song": {
@@ -12552,7 +12552,7 @@
     },
     {
       "rank": 295,
-      "duration_ms": 0,
+      "duration_ms": 6737745,
       "count": 37,
       "songId": "2yz5IaQLnO8WBCIWMXoRBS",
       "song": {
@@ -12593,7 +12593,7 @@
     },
     {
       "rank": 296,
-      "duration_ms": 0,
+      "duration_ms": 5567126,
       "count": 37,
       "songId": "1eijsmCG81EUB5YGGAz6Yv",
       "song": {
@@ -12634,7 +12634,7 @@
     },
     {
       "rank": 297,
-      "duration_ms": 0,
+      "duration_ms": 8869935,
       "count": 37,
       "songId": "61Ivix5DTnDPVjp1dgLyov",
       "song": {
@@ -12675,7 +12675,7 @@
     },
     {
       "rank": 298,
-      "duration_ms": 0,
+      "duration_ms": 7267477,
       "count": 37,
       "songId": "1knbAQeG852S5ebxsfYIao",
       "song": {
@@ -12716,7 +12716,7 @@
     },
     {
       "rank": 299,
-      "duration_ms": 0,
+      "duration_ms": 8099082,
       "count": 37,
       "songId": "3MwHZDGwAR8RjZZBriBqmx",
       "song": {
@@ -12757,7 +12757,7 @@
     },
     {
       "rank": 300,
-      "duration_ms": 0,
+      "duration_ms": 3705543,
       "count": 37,
       "songId": "4x1dWc1GgAfC04GcTlllax",
       "song": {
@@ -12798,7 +12798,7 @@
     },
     {
       "rank": 301,
-      "duration_ms": 0,
+      "duration_ms": 7129742,
       "count": 37,
       "songId": "1hWlZxzZWiXRkQy7ywSAmh",
       "song": {
@@ -12840,7 +12840,7 @@
     },
     {
       "rank": 302,
-      "duration_ms": 0,
+      "duration_ms": 8638433,
       "count": 37,
       "songId": "3pXv6E1m7E64EDX5s8FUMn",
       "song": {
@@ -12882,7 +12882,7 @@
     },
     {
       "rank": 303,
-      "duration_ms": 0,
+      "duration_ms": 7135957,
       "count": 37,
       "songId": "5BP0oaQ1VhuaznT77CBXQp",
       "song": {
@@ -12924,7 +12924,7 @@
     },
     {
       "rank": 304,
-      "duration_ms": 0,
+      "duration_ms": 3977860,
       "count": 37,
       "songId": "3ZbvdEDmVXpPgdBCef9gFe",
       "song": {
@@ -12966,7 +12966,7 @@
     },
     {
       "rank": 305,
-      "duration_ms": 0,
+      "duration_ms": 5861829,
       "count": 37,
       "songId": "2FeUZsmNGWc3No6v9GCdST",
       "song": {
@@ -13008,7 +13008,7 @@
     },
     {
       "rank": 306,
-      "duration_ms": 0,
+      "duration_ms": 4207530,
       "count": 37,
       "songId": "6ZR2HOk1tTRtLwBWmHviP4",
       "song": {
@@ -13051,7 +13051,7 @@
     },
     {
       "rank": 307,
-      "duration_ms": 0,
+      "duration_ms": 7962668,
       "count": 37,
       "songId": "2LMkwUfqC6S6s6qDVlEuzV",
       "song": {
@@ -13093,7 +13093,7 @@
     },
     {
       "rank": 308,
-      "duration_ms": 0,
+      "duration_ms": 8967146,
       "count": 37,
       "songId": "1JIzFhI9Lt5FyslawmHCBi",
       "song": {
@@ -13135,7 +13135,7 @@
     },
     {
       "rank": 309,
-      "duration_ms": 0,
+      "duration_ms": 12914633,
       "count": 37,
       "songId": "0Arho21onY1yo49so5Cam3",
       "song": {
@@ -13177,7 +13177,7 @@
     },
     {
       "rank": 310,
-      "duration_ms": 0,
+      "duration_ms": 5357469,
       "count": 37,
       "songId": "3ufbsUF0fpOjHmBOGjYSQ0",
       "song": {
@@ -13219,7 +13219,7 @@
     },
     {
       "rank": 311,
-      "duration_ms": 0,
+      "duration_ms": 8181565,
       "count": 37,
       "songId": "5fsfk1Oogb99koL8wyzomw",
       "song": {
@@ -13261,7 +13261,7 @@
     },
     {
       "rank": 312,
-      "duration_ms": 0,
+      "duration_ms": 6512941,
       "count": 37,
       "songId": "50W9PJjr1Euo9FFoqw90eL",
       "song": {
@@ -13304,7 +13304,7 @@
     },
     {
       "rank": 313,
-      "duration_ms": 0,
+      "duration_ms": 3590731,
       "count": 37,
       "songId": "71dRBSmaKMdaFZPeZlVzf5",
       "song": {
@@ -13348,7 +13348,7 @@
     },
     {
       "rank": 314,
-      "duration_ms": 0,
+      "duration_ms": 5113430,
       "count": 37,
       "songId": "63eqzh8NNPnxJLzuUCibTZ",
       "song": {
@@ -13390,7 +13390,7 @@
     },
     {
       "rank": 315,
-      "duration_ms": 0,
+      "duration_ms": 7075670,
       "count": 37,
       "songId": "2hxV5yGCr1nIp5bQBxXL13",
       "song": {
@@ -13434,7 +13434,7 @@
     },
     {
       "rank": 316,
-      "duration_ms": 0,
+      "duration_ms": 7458522,
       "count": 37,
       "songId": "7lLJ35wRNyPZrocjhDfCBq",
       "song": {
@@ -13478,7 +13478,7 @@
     },
     {
       "rank": 317,
-      "duration_ms": 0,
+      "duration_ms": 7830217,
       "count": 37,
       "songId": "6WZjjf4mKurHPC5BhdGwet",
       "song": {
@@ -13521,7 +13521,7 @@
     },
     {
       "rank": 318,
-      "duration_ms": 0,
+      "duration_ms": 4016818,
       "count": 37,
       "songId": "1j2UsaqnPbHOBDnVhrFply",
       "song": {
@@ -13566,7 +13566,7 @@
     },
     {
       "rank": 319,
-      "duration_ms": 0,
+      "duration_ms": 4938063,
       "count": 37,
       "songId": "51ayJ1r626si5LUBuOV5GR",
       "song": {
@@ -13613,7 +13613,7 @@
     },
     {
       "rank": 320,
-      "duration_ms": 0,
+      "duration_ms": 8316045,
       "count": 36,
       "songId": "3WS7spXVlbeC5kjePmHMQW",
       "song": {
@@ -13654,7 +13654,7 @@
     },
     {
       "rank": 321,
-      "duration_ms": 0,
+      "duration_ms": 6505760,
       "count": 36,
       "songId": "2ThdB23G9Rgf1ExndFGEEg",
       "song": {
@@ -13695,7 +13695,7 @@
     },
     {
       "rank": 322,
-      "duration_ms": 0,
+      "duration_ms": 4688227,
       "count": 36,
       "songId": "4uLBtoq7CX8pRyETqbN2rm",
       "song": {
@@ -13736,7 +13736,7 @@
     },
     {
       "rank": 323,
-      "duration_ms": 0,
+      "duration_ms": 7707504,
       "count": 36,
       "songId": "4KC2Z9dL4jL61Ys35N6srg",
       "song": {
@@ -13777,7 +13777,7 @@
     },
     {
       "rank": 324,
-      "duration_ms": 0,
+      "duration_ms": 7306068,
       "count": 36,
       "songId": "1BDJnPvVT3KYRyvU8rdtSi",
       "song": {
@@ -13818,7 +13818,7 @@
     },
     {
       "rank": 325,
-      "duration_ms": 0,
+      "duration_ms": 6118960,
       "count": 36,
       "songId": "5hLAvGak6o4xLKNbTmh2fp",
       "song": {
@@ -13859,7 +13859,7 @@
     },
     {
       "rank": 326,
-      "duration_ms": 0,
+      "duration_ms": 5966040,
       "count": 36,
       "songId": "7KA4W4McWYRpgf0fWsJZWB",
       "song": {
@@ -13900,7 +13900,7 @@
     },
     {
       "rank": 327,
-      "duration_ms": 0,
+      "duration_ms": 4797758,
       "count": 36,
       "songId": "01z2fBGB8Hl3Jd3zXe4IXR",
       "song": {
@@ -13941,7 +13941,7 @@
     },
     {
       "rank": 328,
-      "duration_ms": 0,
+      "duration_ms": 7300003,
       "count": 36,
       "songId": "09OpntwPHuNICsyEt1ETpE",
       "song": {
@@ -13983,7 +13983,7 @@
     },
     {
       "rank": 329,
-      "duration_ms": 0,
+      "duration_ms": 6424975,
       "count": 36,
       "songId": "4wVziiCDtgX39cglWWQDqm",
       "song": {
@@ -14025,7 +14025,7 @@
     },
     {
       "rank": 330,
-      "duration_ms": 0,
+      "duration_ms": 4650199,
       "count": 36,
       "songId": "74xaQZzGBf7JsjgMLFo8Mc",
       "song": {
@@ -14068,7 +14068,7 @@
     },
     {
       "rank": 331,
-      "duration_ms": 0,
+      "duration_ms": 8475470,
       "count": 36,
       "songId": "0AaTVshXKguAAkDc1MwOdK",
       "song": {
@@ -14111,7 +14111,7 @@
     },
     {
       "rank": 332,
-      "duration_ms": 0,
+      "duration_ms": 9705174,
       "count": 36,
       "songId": "1SL6gnpIajQXb78pw3uDy9",
       "song": {
@@ -14153,7 +14153,7 @@
     },
     {
       "rank": 333,
-      "duration_ms": 0,
+      "duration_ms": 5338251,
       "count": 36,
       "songId": "2Wk8vEamlVBBalBi24NnU1",
       "song": {
@@ -14195,7 +14195,7 @@
     },
     {
       "rank": 334,
-      "duration_ms": 0,
+      "duration_ms": 9914353,
       "count": 36,
       "songId": "0aWMVrwxPNYkKmFthzmpRi",
       "song": {
@@ -14237,7 +14237,7 @@
     },
     {
       "rank": 335,
-      "duration_ms": 0,
+      "duration_ms": 7731737,
       "count": 36,
       "songId": "5ijr4mcVJokrKmtBy1XRPY",
       "song": {
@@ -14281,7 +14281,7 @@
     },
     {
       "rank": 336,
-      "duration_ms": 0,
+      "duration_ms": 6438854,
       "count": 36,
       "songId": "5mphdlILgAq3vh1MSvAJTS",
       "song": {
@@ -14325,7 +14325,7 @@
     },
     {
       "rank": 337,
-      "duration_ms": 0,
+      "duration_ms": 6643621,
       "count": 36,
       "songId": "5SV9eLf1g4T4ARDNiXo2R3",
       "song": {
@@ -14368,7 +14368,7 @@
     },
     {
       "rank": 338,
-      "duration_ms": 0,
+      "duration_ms": 6061578,
       "count": 36,
       "songId": "4xR3MAscflQ262kMeiKshQ",
       "song": {
@@ -14410,7 +14410,7 @@
     },
     {
       "rank": 339,
-      "duration_ms": 0,
+      "duration_ms": 4095697,
       "count": 36,
       "songId": "35uUmRMQB7flOVQKlvwlEV",
       "song": {
@@ -14454,7 +14454,7 @@
     },
     {
       "rank": 340,
-      "duration_ms": 0,
+      "duration_ms": 7415395,
       "count": 36,
       "songId": "0iTpQYzJnYgh7kIxyq8A2O",
       "song": {
@@ -14496,7 +14496,7 @@
     },
     {
       "rank": 341,
-      "duration_ms": 0,
+      "duration_ms": 6070365,
       "count": 36,
       "songId": "1C2sct19lmZuWwUkgprNCj",
       "song": {
@@ -14539,7 +14539,7 @@
     },
     {
       "rank": 342,
-      "duration_ms": 0,
+      "duration_ms": 7403666,
       "count": 36,
       "songId": "6Js3o59wygqJjx45nyFYEc",
       "song": {
@@ -14584,7 +14584,7 @@
     },
     {
       "rank": 343,
-      "duration_ms": 0,
+      "duration_ms": 7113867,
       "count": 36,
       "songId": "4fpEuKIzTLmMJnYwFU0oqr",
       "song": {
@@ -14627,7 +14627,7 @@
     },
     {
       "rank": 344,
-      "duration_ms": 0,
+      "duration_ms": 6374595,
       "count": 36,
       "songId": "4wg7q2hOC6PZgEmyyJHkVY",
       "song": {
@@ -14672,7 +14672,7 @@
     },
     {
       "rank": 345,
-      "duration_ms": 0,
+      "duration_ms": 6909514,
       "count": 36,
       "songId": "32fQTgM2Cfxubtt6CNA1uX",
       "song": {
@@ -14716,7 +14716,7 @@
     },
     {
       "rank": 346,
-      "duration_ms": 0,
+      "duration_ms": 3643640,
       "count": 36,
       "songId": "5XfxcDwsWnXc1UgW7hKk2d",
       "song": {
@@ -14759,7 +14759,7 @@
     },
     {
       "rank": 347,
-      "duration_ms": 0,
+      "duration_ms": 9133673,
       "count": 36,
       "songId": "18tYYEfmaaGvohk8Gv3q7B",
       "song": {
@@ -14803,7 +14803,7 @@
     },
     {
       "rank": 348,
-      "duration_ms": 0,
+      "duration_ms": 4558177,
       "count": 36,
       "songId": "2qL89nCVt9DAHTiEr2SLi6",
       "song": {
@@ -14850,7 +14850,7 @@
     },
     {
       "rank": 349,
-      "duration_ms": 0,
+      "duration_ms": 3069725,
       "count": 36,
       "songId": "3g2DjAIgYHJHuvFaZ2zkiG",
       "song": {
@@ -14896,7 +14896,7 @@
     },
     {
       "rank": 350,
-      "duration_ms": 0,
+      "duration_ms": 2924839,
       "count": 36,
       "songId": "075r3o31GQML6olv5G0XPa",
       "song": {
@@ -14942,7 +14942,7 @@
     },
     {
       "rank": 351,
-      "duration_ms": 0,
+      "duration_ms": 7506775,
       "count": 36,
       "songId": "7Fruf2e0JApJma17sGX8Xq",
       "song": {
@@ -14985,7 +14985,7 @@
     },
     {
       "rank": 352,
-      "duration_ms": 0,
+      "duration_ms": 7113166,
       "count": 36,
       "songId": "564qvXssjJM1BkMm4FgPzA",
       "song": {
@@ -15028,7 +15028,7 @@
     },
     {
       "rank": 353,
-      "duration_ms": 0,
+      "duration_ms": 5143072,
       "count": 36,
       "songId": "2fCOgrM5x9RhUC72ha3tHx",
       "song": {
@@ -15074,7 +15074,7 @@
     },
     {
       "rank": 354,
-      "duration_ms": 0,
+      "duration_ms": 5829069,
       "count": 35,
       "songId": "4iG2gAwKXsOcijVaVXzRPW",
       "song": {
@@ -15115,7 +15115,7 @@
     },
     {
       "rank": 355,
-      "duration_ms": 0,
+      "duration_ms": 11965677,
       "count": 35,
       "songId": "3teQ8pkzhuw4JILPFUADIu",
       "song": {
@@ -15156,7 +15156,7 @@
     },
     {
       "rank": 356,
-      "duration_ms": 0,
+      "duration_ms": 7693642,
       "count": 35,
       "songId": "3SjXx3rbNGk8nCho8YEoz5",
       "song": {
@@ -15197,7 +15197,7 @@
     },
     {
       "rank": 357,
-      "duration_ms": 0,
+      "duration_ms": 3596531,
       "count": 35,
       "songId": "3ucXlBK1egY16SgkvdngzE",
       "song": {
@@ -15238,7 +15238,7 @@
     },
     {
       "rank": 358,
-      "duration_ms": 0,
+      "duration_ms": 6423847,
       "count": 35,
       "songId": "6Nle9hKrkL1wQpwNfEkxjh",
       "song": {
@@ -15279,7 +15279,7 @@
     },
     {
       "rank": 359,
-      "duration_ms": 0,
+      "duration_ms": 9310808,
       "count": 35,
       "songId": "7Jh1bpe76CNTCgdgAdBw4Z",
       "song": {
@@ -15320,7 +15320,7 @@
     },
     {
       "rank": 360,
-      "duration_ms": 0,
+      "duration_ms": 3092158,
       "count": 35,
       "songId": "0OK2cjonTMoF8PLRup3MAM",
       "song": {
@@ -15361,7 +15361,7 @@
     },
     {
       "rank": 361,
-      "duration_ms": 0,
+      "duration_ms": 7175623,
       "count": 35,
       "songId": "43NZ8GkyhcDwbAl3vLuO3u",
       "song": {
@@ -15402,7 +15402,7 @@
     },
     {
       "rank": 362,
-      "duration_ms": 0,
+      "duration_ms": 4594694,
       "count": 35,
       "songId": "0yp6ui2sosUjCUro1rRk2Q",
       "song": {
@@ -15444,7 +15444,7 @@
     },
     {
       "rank": 363,
-      "duration_ms": 0,
+      "duration_ms": 6588544,
       "count": 35,
       "songId": "4tPFEWRuNQhibDQSGB2PVE",
       "song": {
@@ -15486,7 +15486,7 @@
     },
     {
       "rank": 364,
-      "duration_ms": 0,
+      "duration_ms": 5432644,
       "count": 35,
       "songId": "3SVXhtxFCNJnA4MkWF7sJp",
       "song": {
@@ -15528,7 +15528,7 @@
     },
     {
       "rank": 365,
-      "duration_ms": 0,
+      "duration_ms": 8051528,
       "count": 35,
       "songId": "7G934pV1tSJ6UohJSOxpRF",
       "song": {
@@ -15571,7 +15571,7 @@
     },
     {
       "rank": 366,
-      "duration_ms": 0,
+      "duration_ms": 6547344,
       "count": 35,
       "songId": "4AQ4tIKGLXeBQQsybOKTmv",
       "song": {
@@ -15613,7 +15613,7 @@
     },
     {
       "rank": 367,
-      "duration_ms": 0,
+      "duration_ms": 8798011,
       "count": 35,
       "songId": "7bvpr3Hk4NV4EAmbYid5ds",
       "song": {
@@ -15655,7 +15655,7 @@
     },
     {
       "rank": 368,
-      "duration_ms": 0,
+      "duration_ms": 5483639,
       "count": 35,
       "songId": "2RO4CbCaSq8vjrUOegjhyg",
       "song": {
@@ -15697,7 +15697,7 @@
     },
     {
       "rank": 369,
-      "duration_ms": 0,
+      "duration_ms": 5458771,
       "count": 35,
       "songId": "65Zb3B9bTFC0N8Fni50sCU",
       "song": {
@@ -15740,7 +15740,7 @@
     },
     {
       "rank": 370,
-      "duration_ms": 0,
+      "duration_ms": 3201797,
       "count": 35,
       "songId": "69R6lyJjb3WLpBNWcC528k",
       "song": {
@@ -15782,7 +15782,7 @@
     },
     {
       "rank": 371,
-      "duration_ms": 0,
+      "duration_ms": 5124377,
       "count": 35,
       "songId": "6Pr9rKp3Y63aXROEH1dfDZ",
       "song": {
@@ -15824,7 +15824,7 @@
     },
     {
       "rank": 372,
-      "duration_ms": 0,
+      "duration_ms": 4733908,
       "count": 35,
       "songId": "2D5mZ7nEYqRA3bDZSdGNWL",
       "song": {
@@ -15866,7 +15866,7 @@
     },
     {
       "rank": 373,
-      "duration_ms": 0,
+      "duration_ms": 4114002,
       "count": 35,
       "songId": "1CKm95B5JmaSCnZLquInM4",
       "song": {
@@ -15908,7 +15908,7 @@
     },
     {
       "rank": 374,
-      "duration_ms": 0,
+      "duration_ms": 7004914,
       "count": 35,
       "songId": "56IfNKMJOQmJ5wSOsQNfhB",
       "song": {
@@ -15950,7 +15950,7 @@
     },
     {
       "rank": 375,
-      "duration_ms": 0,
+      "duration_ms": 5395420,
       "count": 35,
       "songId": "2N4idqj9TT3HnH2OFT9j0v",
       "song": {
@@ -15992,7 +15992,7 @@
     },
     {
       "rank": 376,
-      "duration_ms": 0,
+      "duration_ms": 4517767,
       "count": 35,
       "songId": "5W11qN7fdJM8lxKkl08aRR",
       "song": {
@@ -16035,7 +16035,7 @@
     },
     {
       "rank": 377,
-      "duration_ms": 0,
+      "duration_ms": 6615619,
       "count": 35,
       "songId": "2xcRTNxhhCL5HbCp4UGkjh",
       "song": {
@@ -16078,7 +16078,7 @@
     },
     {
       "rank": 378,
-      "duration_ms": 0,
+      "duration_ms": 6486800,
       "count": 35,
       "songId": "4Sk2yL5WAjmM1nihhnVW5P",
       "song": {
@@ -16120,7 +16120,7 @@
     },
     {
       "rank": 379,
-      "duration_ms": 0,
+      "duration_ms": 6589574,
       "count": 35,
       "songId": "2PYv7xYgHVszEN6qkVWnbG",
       "song": {
@@ -16162,7 +16162,7 @@
     },
     {
       "rank": 380,
-      "duration_ms": 0,
+      "duration_ms": 3644662,
       "count": 35,
       "songId": "2dBV6BocyNSQTnPlPB0zYh",
       "song": {
@@ -16204,7 +16204,7 @@
     },
     {
       "rank": 381,
-      "duration_ms": 0,
+      "duration_ms": 6402227,
       "count": 35,
       "songId": "2RimI4QqnJ3399wQ5qPITh",
       "song": {
@@ -16247,7 +16247,7 @@
     },
     {
       "rank": 382,
-      "duration_ms": 0,
+      "duration_ms": 7306230,
       "count": 35,
       "songId": "12REd1n8PeiHHWOh066tpr",
       "song": {
@@ -16289,7 +16289,7 @@
     },
     {
       "rank": 383,
-      "duration_ms": 0,
+      "duration_ms": 5579221,
       "count": 35,
       "songId": "299lFlaAsNQdgbIZNPmIA0",
       "song": {
@@ -16333,7 +16333,7 @@
     },
     {
       "rank": 384,
-      "duration_ms": 0,
+      "duration_ms": 5233861,
       "count": 35,
       "songId": "0waMJXxhuGuyTt8epERx7m",
       "song": {
@@ -16375,7 +16375,7 @@
     },
     {
       "rank": 385,
-      "duration_ms": 0,
+      "duration_ms": 3749726,
       "count": 35,
       "songId": "3jNyatJv1JxuIlwKoYlo7Y",
       "song": {
@@ -16419,7 +16419,7 @@
     },
     {
       "rank": 386,
-      "duration_ms": 0,
+      "duration_ms": 4068807,
       "count": 35,
       "songId": "42fydRlFBEEc5hsU661Zgz",
       "song": {
@@ -16463,7 +16463,7 @@
     },
     {
       "rank": 387,
-      "duration_ms": 0,
+      "duration_ms": 5717608,
       "count": 35,
       "songId": "6lySuXHrQb7CofO6iMkIak",
       "song": {
@@ -16507,7 +16507,7 @@
     },
     {
       "rank": 388,
-      "duration_ms": 0,
+      "duration_ms": 6126257,
       "count": 35,
       "songId": "30HnHU2jOtRO3dtLLqxxAX",
       "song": {
@@ -16549,7 +16549,7 @@
     },
     {
       "rank": 389,
-      "duration_ms": 0,
+      "duration_ms": 3811910,
       "count": 35,
       "songId": "1CbPLR6Xjo2nc0Pf13N0RS",
       "song": {
@@ -16592,7 +16592,7 @@
     },
     {
       "rank": 390,
-      "duration_ms": 0,
+      "duration_ms": 7276934,
       "count": 35,
       "songId": "2QRk4N7GObZRGyhKjUHZhP",
       "song": {
@@ -16636,7 +16636,7 @@
     },
     {
       "rank": 391,
-      "duration_ms": 0,
+      "duration_ms": 7464663,
       "count": 35,
       "songId": "7F71G52m5ONsUpytzoZFBy",
       "song": {
@@ -16679,7 +16679,7 @@
     },
     {
       "rank": 392,
-      "duration_ms": 0,
+      "duration_ms": 6405157,
       "count": 35,
       "songId": "59Xo3BICqRNDdvNquirBot",
       "song": {
@@ -16722,7 +16722,7 @@
     },
     {
       "rank": 393,
-      "duration_ms": 0,
+      "duration_ms": 6787497,
       "count": 35,
       "songId": "72wdyMXmB7cw11nURyEPKH",
       "song": {
@@ -16767,7 +16767,7 @@
     },
     {
       "rank": 394,
-      "duration_ms": 0,
+      "duration_ms": 4084441,
       "count": 34,
       "songId": "6Y4l6sSTtIkd7bw7LiilB8",
       "song": {
@@ -16808,7 +16808,7 @@
     },
     {
       "rank": 395,
-      "duration_ms": 0,
+      "duration_ms": 6057938,
       "count": 34,
       "songId": "5N9mMU54JKw76sKLX3ubHW",
       "song": {
@@ -16849,7 +16849,7 @@
     },
     {
       "rank": 396,
-      "duration_ms": 0,
+      "duration_ms": 4727701,
       "count": 34,
       "songId": "1FvDJ9KGxcqwv1utyPL3JZ",
       "song": {
@@ -16890,7 +16890,7 @@
     },
     {
       "rank": 397,
-      "duration_ms": 0,
+      "duration_ms": 5861510,
       "count": 34,
       "songId": "1eN42Q7IWRzRBq8eW2Y2TE",
       "song": {
@@ -16931,7 +16931,7 @@
     },
     {
       "rank": 398,
-      "duration_ms": 0,
+      "duration_ms": 7958994,
       "count": 34,
       "songId": "2vrUEPFeTnkeLqmG1JXiaZ",
       "song": {
@@ -16972,7 +16972,7 @@
     },
     {
       "rank": 399,
-      "duration_ms": 0,
+      "duration_ms": 5458114,
       "count": 34,
       "songId": "7xCYaDqhAOs5TfeDvY9Dqn",
       "song": {
@@ -17013,7 +17013,7 @@
     },
     {
       "rank": 400,
-      "duration_ms": 0,
+      "duration_ms": 6426354,
       "count": 34,
       "songId": "7wmYgsLNRB9EpqpvR3hkvN",
       "song": {
@@ -17054,7 +17054,7 @@
     },
     {
       "rank": 401,
-      "duration_ms": 0,
+      "duration_ms": 7882824,
       "count": 34,
       "songId": "2nGgvKTQd3NwhWrsVVVC5n",
       "song": {
@@ -17095,7 +17095,7 @@
     },
     {
       "rank": 402,
-      "duration_ms": 0,
+      "duration_ms": 5188740,
       "count": 34,
       "songId": "6ZafWRCiEOaPXZornPnQkC",
       "song": {
@@ -17136,7 +17136,7 @@
     },
     {
       "rank": 403,
-      "duration_ms": 0,
+      "duration_ms": 4182368,
       "count": 34,
       "songId": "2KZC69vFLr3G0KRoBkNuxK",
       "song": {
@@ -17178,7 +17178,7 @@
     },
     {
       "rank": 404,
-      "duration_ms": 0,
+      "duration_ms": 6321485,
       "count": 34,
       "songId": "3hffCKdLCnm0NRbMwrI4Wu",
       "song": {
@@ -17220,7 +17220,7 @@
     },
     {
       "rank": 405,
-      "duration_ms": 0,
+      "duration_ms": 7569120,
       "count": 34,
       "songId": "0pQskrTITgmCMyr85tb9qq",
       "song": {
@@ -17262,7 +17262,7 @@
     },
     {
       "rank": 406,
-      "duration_ms": 0,
+      "duration_ms": 9329333,
       "count": 34,
       "songId": "6bUNEbXT7HovLW6BgPCBsb",
       "song": {
@@ -17304,7 +17304,7 @@
     },
     {
       "rank": 407,
-      "duration_ms": 0,
+      "duration_ms": 5646726,
       "count": 34,
       "songId": "4go2hxLM6ijk0K76ZY0Nhd",
       "song": {
@@ -17346,7 +17346,7 @@
     },
     {
       "rank": 408,
-      "duration_ms": 0,
+      "duration_ms": 6723439,
       "count": 34,
       "songId": "6BYVAEPmqWVUSqtrQpvLTT",
       "song": {
@@ -17388,7 +17388,7 @@
     },
     {
       "rank": 409,
-      "duration_ms": 0,
+      "duration_ms": 6217506,
       "count": 34,
       "songId": "6CEDpkN0KzoJ4Gsi03gtms",
       "song": {
@@ -17431,7 +17431,7 @@
     },
     {
       "rank": 410,
-      "duration_ms": 0,
+      "duration_ms": 10566306,
       "count": 34,
       "songId": "4XoDdGtXBIkDLaGT0t8RbI",
       "song": {
@@ -17473,7 +17473,7 @@
     },
     {
       "rank": 411,
-      "duration_ms": 0,
+      "duration_ms": 6158664,
       "count": 34,
       "songId": "072NO26vkENZYhMeaD07ar",
       "song": {
@@ -17516,7 +17516,7 @@
     },
     {
       "rank": 412,
-      "duration_ms": 0,
+      "duration_ms": 5116825,
       "count": 34,
       "songId": "3gs07rQObBdUS5p7PaxZEH",
       "song": {
@@ -17559,7 +17559,7 @@
     },
     {
       "rank": 413,
-      "duration_ms": 0,
+      "duration_ms": 8147766,
       "count": 34,
       "songId": "1bKQdPJ9lid6Yg26HAx8Tf",
       "song": {
@@ -17601,7 +17601,7 @@
     },
     {
       "rank": 414,
-      "duration_ms": 0,
+      "duration_ms": 4600023,
       "count": 34,
       "songId": "3pOSTi5yh2krttjdNddRLl",
       "song": {
@@ -17645,7 +17645,7 @@
     },
     {
       "rank": 415,
-      "duration_ms": 0,
+      "duration_ms": 9763833,
       "count": 34,
       "songId": "3aQg2ZIMI8EbUGA0lE3brn",
       "song": {
@@ -17687,7 +17687,7 @@
     },
     {
       "rank": 416,
-      "duration_ms": 0,
+      "duration_ms": 7852251,
       "count": 34,
       "songId": "1t9BnujwI2T9YUJmPMtxsa",
       "song": {
@@ -17731,7 +17731,7 @@
     },
     {
       "rank": 417,
-      "duration_ms": 0,
+      "duration_ms": 7223450,
       "count": 34,
       "songId": "3A7T0XxubhI3H4MHSSLW2H",
       "song": {
@@ -17774,7 +17774,7 @@
     },
     {
       "rank": 418,
-      "duration_ms": 0,
+      "duration_ms": 6908307,
       "count": 34,
       "songId": "3Usq5W072WYXwwAu9DcsQF",
       "song": {
@@ -17818,7 +17818,7 @@
     },
     {
       "rank": 419,
-      "duration_ms": 0,
+      "duration_ms": 6220058,
       "count": 34,
       "songId": "185h2QnJwGDXQuGw4SEWze",
       "song": {
@@ -17862,7 +17862,7 @@
     },
     {
       "rank": 420,
-      "duration_ms": 0,
+      "duration_ms": 8403438,
       "count": 34,
       "songId": "6Rt6KwuF7I8ZkdZG2G0bYr",
       "song": {
@@ -17905,7 +17905,7 @@
     },
     {
       "rank": 421,
-      "duration_ms": 0,
+      "duration_ms": 7263083,
       "count": 34,
       "songId": "6BRg8FpfpKUbXeE4Jv7U5u",
       "song": {
@@ -17948,7 +17948,7 @@
     },
     {
       "rank": 422,
-      "duration_ms": 0,
+      "duration_ms": 5755472,
       "count": 34,
       "songId": "1q0H9MKAG0Sh6tXrkEZKtc",
       "song": {
@@ -17991,7 +17991,7 @@
     },
     {
       "rank": 423,
-      "duration_ms": 0,
+      "duration_ms": 6009378,
       "count": 34,
       "songId": "298kZlqIGfhiHsmui7x5SN",
       "song": {
@@ -18034,7 +18034,7 @@
     },
     {
       "rank": 424,
-      "duration_ms": 0,
+      "duration_ms": 5815262,
       "count": 34,
       "songId": "3EAUSlUzVTLhxLn8Fhpz5V",
       "song": {
@@ -18076,7 +18076,7 @@
     },
     {
       "rank": 425,
-      "duration_ms": 0,
+      "duration_ms": 6438125,
       "count": 34,
       "songId": "4hFMXOpyU9cgg3mZcNbEHr",
       "song": {
@@ -18118,7 +18118,7 @@
     },
     {
       "rank": 426,
-      "duration_ms": 0,
+      "duration_ms": 7691597,
       "count": 34,
       "songId": "2CapjhGjXOU0uVB1l1zzkG",
       "song": {
@@ -18160,7 +18160,7 @@
     },
     {
       "rank": 427,
-      "duration_ms": 0,
+      "duration_ms": 6524124,
       "count": 34,
       "songId": "6Gcr0v9WVP57pWCphoU7FY",
       "song": {
@@ -18202,7 +18202,7 @@
     },
     {
       "rank": 428,
-      "duration_ms": 0,
+      "duration_ms": 8196622,
       "count": 34,
       "songId": "698i0Mjj052Gkgh62UoVAU",
       "song": {
@@ -18244,7 +18244,7 @@
     },
     {
       "rank": 429,
-      "duration_ms": 0,
+      "duration_ms": 6065106,
       "count": 34,
       "songId": "6LxcPUqx6noURdA5qc4BAT",
       "song": {
@@ -18286,7 +18286,7 @@
     },
     {
       "rank": 430,
-      "duration_ms": 0,
+      "duration_ms": 8977195,
       "count": 34,
       "songId": "5I6y1KWmUoV5YCaIEcs1qs",
       "song": {
@@ -18330,7 +18330,7 @@
     },
     {
       "rank": 431,
-      "duration_ms": 0,
+      "duration_ms": 8151131,
       "count": 34,
       "songId": "5YdWO3bUt39h9ccLpKoWCP",
       "song": {
@@ -18372,7 +18372,7 @@
     },
     {
       "rank": 432,
-      "duration_ms": 0,
+      "duration_ms": 4965043,
       "count": 34,
       "songId": "3g4BQQ1icPpH1Evll2kbec",
       "song": {
@@ -18416,7 +18416,7 @@
     },
     {
       "rank": 433,
-      "duration_ms": 0,
+      "duration_ms": 6389196,
       "count": 34,
       "songId": "10k6TiDS50mtvYD1bItWvt",
       "song": {
@@ -18458,7 +18458,7 @@
     },
     {
       "rank": 434,
-      "duration_ms": 0,
+      "duration_ms": 3542490,
       "count": 34,
       "songId": "1JEf4u1KcZLyK9qjWc13GX",
       "song": {
@@ -18501,7 +18501,7 @@
     },
     {
       "rank": 435,
-      "duration_ms": 0,
+      "duration_ms": 7494903,
       "count": 34,
       "songId": "1dv3ePjze9tPq2pk8eWJdR",
       "song": {
@@ -18546,7 +18546,7 @@
     },
     {
       "rank": 436,
-      "duration_ms": 0,
+      "duration_ms": 9369346,
       "count": 34,
       "songId": "2QOwhm3MkT3jceVTssZ3K6",
       "song": {
@@ -18592,7 +18592,7 @@
     },
     {
       "rank": 437,
-      "duration_ms": 0,
+      "duration_ms": 6834347,
       "count": 34,
       "songId": "54DfWSu3aH8Z8nyckQdGNq",
       "song": {
@@ -18636,7 +18636,7 @@
     },
     {
       "rank": 438,
-      "duration_ms": 0,
+      "duration_ms": 8207392,
       "count": 34,
       "songId": "40HsyP1bujEhU2HtdlGRtj",
       "song": {
@@ -18681,7 +18681,7 @@
     },
     {
       "rank": 439,
-      "duration_ms": 0,
+      "duration_ms": 2781164,
       "count": 33,
       "songId": "0EOiGNc7nsKk8oO7ICXJG0",
       "song": {
@@ -18722,7 +18722,7 @@
     },
     {
       "rank": 440,
-      "duration_ms": 0,
+      "duration_ms": 5315023,
       "count": 33,
       "songId": "6SdAztAqklk1zAmUHhU4N7",
       "song": {
@@ -18763,7 +18763,7 @@
     },
     {
       "rank": 441,
-      "duration_ms": 0,
+      "duration_ms": 7221481,
       "count": 33,
       "songId": "5YpZh8wfS4moRBk0ijNcXr",
       "song": {
@@ -18804,7 +18804,7 @@
     },
     {
       "rank": 442,
-      "duration_ms": 0,
+      "duration_ms": 6691416,
       "count": 33,
       "songId": "2H30WL3exSctlDC9GyRbD4",
       "song": {
@@ -18845,7 +18845,7 @@
     },
     {
       "rank": 443,
-      "duration_ms": 0,
+      "duration_ms": 6673872,
       "count": 33,
       "songId": "2K6Zk9lKbzAGjjfZbg59Ia",
       "song": {
@@ -18887,7 +18887,7 @@
     },
     {
       "rank": 444,
-      "duration_ms": 0,
+      "duration_ms": 9418964,
       "count": 33,
       "songId": "5dnAki4SIAcedhAPdF5l2h",
       "song": {
@@ -18929,7 +18929,7 @@
     },
     {
       "rank": 445,
-      "duration_ms": 0,
+      "duration_ms": 10609253,
       "count": 33,
       "songId": "28WmNsclKsrVmdv3tDmoYU",
       "song": {
@@ -18971,7 +18971,7 @@
     },
     {
       "rank": 446,
-      "duration_ms": 0,
+      "duration_ms": 4906759,
       "count": 33,
       "songId": "2orEAY64lRTc3cphdMyxBv",
       "song": {
@@ -19013,7 +19013,7 @@
     },
     {
       "rank": 447,
-      "duration_ms": 0,
+      "duration_ms": 2974323,
       "count": 33,
       "songId": "2N0mtHm4GstV9ltktz6RBS",
       "song": {
@@ -19040,7 +19040,7 @@
     },
     {
       "rank": 448,
-      "duration_ms": 0,
+      "duration_ms": 5686006,
       "count": 33,
       "songId": "4JL0q6uudrljI1qvnWIXGq",
       "song": {
@@ -19082,7 +19082,7 @@
     },
     {
       "rank": 449,
-      "duration_ms": 0,
+      "duration_ms": 7671470,
       "count": 33,
       "songId": "73HCBO1XCKxNMTZLTFgs8A",
       "song": {
@@ -19125,7 +19125,7 @@
     },
     {
       "rank": 450,
-      "duration_ms": 0,
+      "duration_ms": 4646613,
       "count": 33,
       "songId": "2bdh8ALxBeuvpnuoh37BDn",
       "song": {
@@ -19168,7 +19168,7 @@
     },
     {
       "rank": 451,
-      "duration_ms": 0,
+      "duration_ms": 5370440,
       "count": 33,
       "songId": "2PuHTAsydUqeRS91zxBHCH",
       "song": {
@@ -19210,7 +19210,7 @@
     },
     {
       "rank": 452,
-      "duration_ms": 0,
+      "duration_ms": 6687333,
       "count": 33,
       "songId": "4ms5iozKkRN7xCwujtXRTk",
       "song": {
@@ -19253,7 +19253,7 @@
     },
     {
       "rank": 453,
-      "duration_ms": 0,
+      "duration_ms": 6809115,
       "count": 33,
       "songId": "6vzIg1Hi45I3l5c0UxJ7jG",
       "song": {
@@ -19296,7 +19296,7 @@
     },
     {
       "rank": 454,
-      "duration_ms": 0,
+      "duration_ms": 2070525,
       "count": 33,
       "songId": "2JUqYobT8NvARdPmc4ES2x",
       "song": {
@@ -19338,7 +19338,7 @@
     },
     {
       "rank": 455,
-      "duration_ms": 0,
+      "duration_ms": 5530546,
       "count": 33,
       "songId": "5JygmlX9C0F8ReQ2CWgpfC",
       "song": {
@@ -19380,7 +19380,7 @@
     },
     {
       "rank": 456,
-      "duration_ms": 0,
+      "duration_ms": 5738445,
       "count": 33,
       "songId": "4hy4fb5D1KL50b3sng9cjw",
       "song": {
@@ -19424,7 +19424,7 @@
     },
     {
       "rank": 457,
-      "duration_ms": 0,
+      "duration_ms": 7580847,
       "count": 33,
       "songId": "4r9MqJ7MG26TFyxqr7PK01",
       "song": {
@@ -19467,7 +19467,7 @@
     },
     {
       "rank": 458,
-      "duration_ms": 0,
+      "duration_ms": 7547469,
       "count": 33,
       "songId": "2FgkwIXC52sHCbqVL8jE41",
       "song": {
@@ -19509,7 +19509,7 @@
     },
     {
       "rank": 459,
-      "duration_ms": 0,
+      "duration_ms": 6108977,
       "count": 33,
       "songId": "0zLuS0SReMA9QcyYp79rby",
       "song": {
@@ -19551,7 +19551,7 @@
     },
     {
       "rank": 460,
-      "duration_ms": 0,
+      "duration_ms": 6879046,
       "count": 33,
       "songId": "5EauMVTXVoQOkax03XXVaV",
       "song": {
@@ -19594,7 +19594,7 @@
     },
     {
       "rank": 461,
-      "duration_ms": 0,
+      "duration_ms": 5557705,
       "count": 33,
       "songId": "57XHBbh5lCsIdgStesXI4k",
       "song": {
@@ -19637,7 +19637,7 @@
     },
     {
       "rank": 462,
-      "duration_ms": 0,
+      "duration_ms": 4594087,
       "count": 33,
       "songId": "5r5VR6xtYPsUI3ZkO53MJz",
       "song": {
@@ -19679,7 +19679,7 @@
     },
     {
       "rank": 463,
-      "duration_ms": 0,
+      "duration_ms": 7026378,
       "count": 33,
       "songId": "1Bi5t0q9j3nYXIZuZgSGvr",
       "song": {
@@ -19721,7 +19721,7 @@
     },
     {
       "rank": 464,
-      "duration_ms": 0,
+      "duration_ms": 6060868,
       "count": 33,
       "songId": "1mm5UjkZn1ftI6jHKZaixM",
       "song": {
@@ -19763,7 +19763,7 @@
     },
     {
       "rank": 465,
-      "duration_ms": 0,
+      "duration_ms": 6513793,
       "count": 33,
       "songId": "0tRvyeMtk2ENN9wnuCxuPf",
       "song": {
@@ -19806,7 +19806,7 @@
     },
     {
       "rank": 466,
-      "duration_ms": 0,
+      "duration_ms": 5675413,
       "count": 33,
       "songId": "2WRh5NjSCLdaynh890QGLb",
       "song": {
@@ -19849,7 +19849,7 @@
     },
     {
       "rank": 467,
-      "duration_ms": 0,
+      "duration_ms": 6762149,
       "count": 33,
       "songId": "5fbQCQt91LsVgXusFS0CCD",
       "song": {
@@ -19891,7 +19891,7 @@
     },
     {
       "rank": 468,
-      "duration_ms": 0,
+      "duration_ms": 4766985,
       "count": 33,
       "songId": "7v6LdEZiV1Xyo0ikjMh8Ca",
       "song": {
@@ -19934,7 +19934,7 @@
     },
     {
       "rank": 469,
-      "duration_ms": 0,
+      "duration_ms": 10143166,
       "count": 33,
       "songId": "1DCeBMEXMOZr3OEGIbViiV",
       "song": {
@@ -19976,7 +19976,7 @@
     },
     {
       "rank": 470,
-      "duration_ms": 0,
+      "duration_ms": 4570043,
       "count": 33,
       "songId": "3WJLYE8Y6VM1jmdVpSYQ4G",
       "song": {
@@ -20019,7 +20019,7 @@
     },
     {
       "rank": 471,
-      "duration_ms": 0,
+      "duration_ms": 3606844,
       "count": 33,
       "songId": "1IIHp3xelpVnUdtrZeyZje",
       "song": {
@@ -20046,7 +20046,7 @@
     },
     {
       "rank": 472,
-      "duration_ms": 0,
+      "duration_ms": 5707138,
       "count": 33,
       "songId": "72aCha2Meq7txnk451hz7k",
       "song": {
@@ -20089,7 +20089,7 @@
     },
     {
       "rank": 473,
-      "duration_ms": 0,
+      "duration_ms": 3787113,
       "count": 33,
       "songId": "3SLSOu3Ycle93Zcv21bhSY",
       "song": {
@@ -20132,7 +20132,7 @@
     },
     {
       "rank": 474,
-      "duration_ms": 0,
+      "duration_ms": 6001962,
       "count": 33,
       "songId": "6U5hUX40OWY6l0HaPUWElZ",
       "song": {
@@ -20175,7 +20175,7 @@
     },
     {
       "rank": 475,
-      "duration_ms": 0,
+      "duration_ms": 4701946,
       "count": 33,
       "songId": "54NVaVCiL3uNaQeenvGq0r",
       "song": {
@@ -20220,7 +20220,7 @@
     },
     {
       "rank": 476,
-      "duration_ms": 0,
+      "duration_ms": 5629628,
       "count": 33,
       "songId": "3T39EhrrrHe9PD00GN37qJ",
       "song": {
@@ -20263,7 +20263,7 @@
     },
     {
       "rank": 477,
-      "duration_ms": 0,
+      "duration_ms": 9658390,
       "count": 33,
       "songId": "1DWZUa5Mzf2BwzpHtgbHPY",
       "song": {
@@ -20305,7 +20305,7 @@
     },
     {
       "rank": 478,
-      "duration_ms": 0,
+      "duration_ms": 6698417,
       "count": 33,
       "songId": "34uKquOrQLgzBsUbFTkMTc",
       "song": {
@@ -20351,7 +20351,7 @@
     },
     {
       "rank": 479,
-      "duration_ms": 0,
+      "duration_ms": 4231273,
       "count": 33,
       "songId": "6c0iatDEIeJBrzrRrS4vOe",
       "song": {
@@ -20394,7 +20394,7 @@
     },
     {
       "rank": 480,
-      "duration_ms": 0,
+      "duration_ms": 4920448,
       "count": 32,
       "songId": "5tQzwLj3WIEMFf7vForYx5",
       "song": {
@@ -20435,7 +20435,7 @@
     },
     {
       "rank": 481,
-      "duration_ms": 0,
+      "duration_ms": 4670525,
       "count": 32,
       "songId": "29yCqXXDp6PE6nq59Ke0I8",
       "song": {
@@ -20476,7 +20476,7 @@
     },
     {
       "rank": 482,
-      "duration_ms": 0,
+      "duration_ms": 3390511,
       "count": 32,
       "songId": "6xRjCoIDMlGLfykzfi9oPO",
       "song": {
@@ -20517,7 +20517,7 @@
     },
     {
       "rank": 483,
-      "duration_ms": 0,
+      "duration_ms": 8931160,
       "count": 32,
       "songId": "4LKlmGTWGY8SHfIw0c9jQu",
       "song": {
@@ -20558,7 +20558,7 @@
     },
     {
       "rank": 484,
-      "duration_ms": 0,
+      "duration_ms": 5543902,
       "count": 32,
       "songId": "5jzma6gCzYtKB1DbEwFZKH",
       "song": {
@@ -20599,7 +20599,7 @@
     },
     {
       "rank": 485,
-      "duration_ms": 0,
+      "duration_ms": 4050876,
       "count": 32,
       "songId": "781V2Y5LPtcpgONEOadadE",
       "song": {
@@ -20640,7 +20640,7 @@
     },
     {
       "rank": 486,
-      "duration_ms": 0,
+      "duration_ms": 7787528,
       "count": 32,
       "songId": "6Y9TU1WiogwHVaaWSVjRa3",
       "song": {
@@ -20681,7 +20681,7 @@
     },
     {
       "rank": 487,
-      "duration_ms": 0,
+      "duration_ms": 6279212,
       "count": 32,
       "songId": "0UV5zxRMz6AO4ZwUOZNIKI",
       "song": {
@@ -20722,7 +20722,7 @@
     },
     {
       "rank": 488,
-      "duration_ms": 0,
+      "duration_ms": 7038552,
       "count": 32,
       "songId": "0qkm99RLAyoLBqWDc4fCF1",
       "song": {
@@ -20763,7 +20763,7 @@
     },
     {
       "rank": 489,
-      "duration_ms": 0,
+      "duration_ms": 3751365,
       "count": 32,
       "songId": "599ljpYOZ6Tk1mL3W9fl1s",
       "song": {
@@ -20804,7 +20804,7 @@
     },
     {
       "rank": 490,
-      "duration_ms": 0,
+      "duration_ms": 5415425,
       "count": 32,
       "songId": "7kZTiEjLMPFJEbemC4Euk4",
       "song": {
@@ -20845,7 +20845,7 @@
     },
     {
       "rank": 491,
-      "duration_ms": 0,
+      "duration_ms": 5490329,
       "count": 32,
       "songId": "3FccT79TCAS5AnYFg4nQUQ",
       "song": {
@@ -20886,7 +20886,7 @@
     },
     {
       "rank": 492,
-      "duration_ms": 0,
+      "duration_ms": 6781247,
       "count": 32,
       "songId": "74vF2AJsJr4Bz5gJivquDS",
       "song": {
@@ -20927,7 +20927,7 @@
     },
     {
       "rank": 493,
-      "duration_ms": 0,
+      "duration_ms": 5634536,
       "count": 32,
       "songId": "77bHrxVX3E2SWopfaoWrTw",
       "song": {
@@ -20969,7 +20969,7 @@
     },
     {
       "rank": 494,
-      "duration_ms": 0,
+      "duration_ms": 7016190,
       "count": 32,
       "songId": "4FYzK9ham6nSOOYvX69Vx8",
       "song": {
@@ -21011,7 +21011,7 @@
     },
     {
       "rank": 495,
-      "duration_ms": 0,
+      "duration_ms": 5855234,
       "count": 32,
       "songId": "4ztx0lpE5Vx3yg7FereOtS",
       "song": {
@@ -21053,7 +21053,7 @@
     },
     {
       "rank": 496,
-      "duration_ms": 0,
+      "duration_ms": 5510574,
       "count": 32,
       "songId": "7wXSx2HtnGycXpUguk3N1O",
       "song": {
@@ -21095,7 +21095,7 @@
     },
     {
       "rank": 497,
-      "duration_ms": 0,
+      "duration_ms": 3794346,
       "count": 32,
       "songId": "5dKBaysNJtfpyNTRa5lqDb",
       "song": {
@@ -21137,7 +21137,7 @@
     },
     {
       "rank": 498,
-      "duration_ms": 0,
+      "duration_ms": 4561335,
       "count": 32,
       "songId": "4xwXmREv0GIKGUxhN3lycv",
       "song": {
@@ -21164,7 +21164,7 @@
     },
     {
       "rank": 499,
-      "duration_ms": 0,
+      "duration_ms": 5535164,
       "count": 32,
       "songId": "4S5RQJ9UmpkS61bSmMPjEi",
       "song": {
@@ -21207,7 +21207,7 @@
     },
     {
       "rank": 500,
-      "duration_ms": 0,
+      "duration_ms": 4736818,
       "count": 32,
       "songId": "2n0EDWSAL70IcaEv5nBDZl",
       "song": {
