@@ -4,7 +4,7 @@
     "consolidatedTotalArtists": 8981,
     "duplicatesRemoved": 6,
     "consolidationRate": 0.07,
-    "timestamp": "2025-11-19T12:03:54.426Z",
+    "timestamp": "2025-11-19T13:04:34.296Z",
     "source": "Merged Streaming History",
     "totalListeningEvents": 178215
   },
@@ -17740,7 +17740,7 @@
           "americana",
           "singer-songwriter"
         ],
-        "popularity": 53,
+        "popularity": 54,
         "followers": {
           "href": null,
           "total": 579605
