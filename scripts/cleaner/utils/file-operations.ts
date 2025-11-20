@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { glob } from 'glob';
 import { uploadMultipleToVercelBlob, cleanupOldBlobFiles } from './vercel-blob-uploader';
-import type { CompleteListeningHistory, CompleteSong, CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs } from './types';
+import type { CompleteListeningHistory, CompleteSong, CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, DetailedStats } from './types';
 
 /**
  * File operations for loading and saving cleaned data files
@@ -181,7 +181,8 @@ export class FileOperations {
         /^cleaned-songs-\d+\.json$/,
         /^cleaned-albums-\d+\.json$/,
         /^cleaned-artists-\d+\.json$/,
-        /^cleaned-albums-with-songs-\d+\.json$/
+        /^cleaned-albums-with-songs-\d+\.json$/,
+        /^detailed-stats-\d+\.json$/
       ];
 
       let deletedCount = 0;
@@ -210,17 +211,18 @@ export class FileOperations {
     artistsResult: { artists: CleanedArtist[], originalCount: number, consolidatedCount: number },
     albumsWithSongs: AlbumWithSongs[],
     originalAlbumsCount: number,
-    history: CompleteListeningHistory
-  ): Promise<void> {
+    history: CompleteListeningHistory,
+    timestamp?: number
+  ): Promise<number> {
     if (!fs.existsSync('data/cleaned-data')) {
       fs.mkdirSync('data/cleaned-data', { recursive: true });
     }
     
     this.cleanupOldCleanedFiles();
     
-    const timestamp = Date.now();
+    const fileTimestamp = timestamp || Date.now();
     
-    const songsFile = `data/cleaned-data/cleaned-songs-${timestamp}.json`;
+    const songsFile = `data/cleaned-data/cleaned-songs-${fileTimestamp}.json`;
     fs.writeFileSync(songsFile, JSON.stringify({
       metadata: {
         originalTotalSongs: songsResult.originalCount,
@@ -234,7 +236,7 @@ export class FileOperations {
       songs: songsResult.songs.slice(0, 500)
     }, null, 2));
 
-    const albumsFile = `data/cleaned-data/cleaned-albums-${timestamp}.json`;
+    const albumsFile = `data/cleaned-data/cleaned-albums-${fileTimestamp}.json`;
     fs.writeFileSync(albumsFile, JSON.stringify({
       metadata: {
         originalTotalAlbums: albumsResult.originalCount,
@@ -248,7 +250,7 @@ export class FileOperations {
       albums: albumsResult.albums.slice(0, 500)
     }, null, 2));
 
-    const artistsFile = `data/cleaned-data/cleaned-artists-${timestamp}.json`;
+    const artistsFile = `data/cleaned-data/cleaned-artists-${fileTimestamp}.json`;
     fs.writeFileSync(artistsFile, JSON.stringify({
       metadata: {
         originalTotalArtists: artistsResult.originalCount,
@@ -262,7 +264,7 @@ export class FileOperations {
       artists: artistsResult.artists.slice(0, 500)
     }, null, 2));
 
-    const albumsWithSongsFile = `data/cleaned-data/cleaned-albums-with-songs-${timestamp}.json`;
+    const albumsWithSongsFile = `data/cleaned-data/cleaned-albums-with-songs-${fileTimestamp}.json`;
     fs.writeFileSync(albumsWithSongsFile, JSON.stringify({
       metadata: {
         originalTotalAlbums: originalAlbumsCount,
@@ -307,6 +309,41 @@ export class FileOperations {
     } else {
       console.log('\n⏭️  Skipping Vercel Blob Storage upload (UPLOAD_TO_VERCEL_BLOB=false)');
     }
+    
+    return fileTimestamp;
+  }
+
+  /**
+   * Save detailed statistics to JSON file
+   */
+  async saveDetailedStats(detailedStats: DetailedStats, timestamp: number): Promise<string> {
+    if (!fs.existsSync('data/cleaned-data')) {
+      fs.mkdirSync('data/cleaned-data', { recursive: true });
+    }
+    
+    const statsFile = `data/cleaned-data/detailed-stats-${timestamp}.json`;
+    fs.writeFileSync(statsFile, JSON.stringify({
+      metadata: {
+        timestamp: new Date().toISOString(),
+        source: 'Merged Streaming History'
+      },
+      stats: detailedStats
+    }, null, 2));
+    
+    console.log(`- Detailed Stats: ${statsFile}`);
+    
+    const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
+    if (shouldUpload) {
+      try {
+        await uploadMultipleToVercelBlob([
+          { filePath: statsFile, blobPath: 'detailed-stats.json' }
+        ]);
+      } catch (error) {
+        console.error('⚠️  Failed to upload detailed stats to Vercel Blob Storage:', error);
+      }
+    }
+    
+    return statsFile;
   }
 }
 

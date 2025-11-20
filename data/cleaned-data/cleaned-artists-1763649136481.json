@@ -4,7 +4,7 @@
     "consolidatedTotalArtists": 9023,
     "duplicatesRemoved": 6,
     "consolidationRate": 0.07,
-    "timestamp": "2025-11-20T08:29:23.600Z",
+    "timestamp": "2025-11-20T14:32:16.491Z",
     "source": "Merged Streaming History",
     "totalListeningEvents": 179702
   },
@@ -696,7 +696,7 @@
           "norwegian pop",
           "norwegian hip hop"
         ],
-        "popularity": 35,
+        "popularity": 36,
         "followers": {
           "href": null,
           "total": 25278
@@ -2828,7 +2828,7 @@
           "lo-fi",
           "lo-fi hip hop"
         ],
-        "popularity": 41,
+        "popularity": 42,
         "followers": {
           "href": null,
           "total": 32097
@@ -3628,7 +3628,7 @@
         "genres": [
           "alternative rock"
         ],
-        "popularity": 69,
+        "popularity": 70,
         "followers": {
           "href": null,
           "total": 3570175
@@ -3999,7 +3999,7 @@
           "norwegian hip hop",
           "norwegian pop"
         ],
-        "popularity": 47,
+        "popularity": 48,
         "followers": {
           "href": null,
           "total": 59412
@@ -4135,7 +4135,7 @@
           "folk rock",
           "folk"
         ],
-        "popularity": 69,
+        "popularity": 70,
         "followers": {
           "href": null,
           "total": 5911702
@@ -5618,7 +5618,7 @@
           "norsk rock",
           "norwegian pop"
         ],
-        "popularity": 38,
+        "popularity": 39,
         "followers": {
           "href": null,
           "total": 41928
@@ -6113,7 +6113,7 @@
           "egg punk",
           "garage rock"
         ],
-        "popularity": 44,
+        "popularity": 45,
         "followers": {
           "href": null,
           "total": 88071
@@ -6380,7 +6380,7 @@
       "artist": {
         "name": "Milky Chance",
         "genres": [],
-        "popularity": 70,
+        "popularity": 71,
         "followers": {
           "href": null,
           "total": 2077673
@@ -6467,7 +6467,7 @@
           "norsk rock",
           "punk"
         ],
-        "popularity": 35,
+        "popularity": 36,
         "followers": {
           "href": null,
           "total": 37117
@@ -6564,7 +6564,7 @@
           "post-hardcore",
           "metalcore"
         ],
-        "popularity": 37,
+        "popularity": 38,
         "followers": {
           "href": null,
           "total": 85469
@@ -7848,7 +7848,7 @@
           "uk grime",
           "uk drill"
         ],
-        "popularity": 69,
+        "popularity": 70,
         "followers": {
           "href": null,
           "total": 3184933
@@ -8826,7 +8826,7 @@
       "artist": {
         "name": "Nick Mulvey",
         "genres": [],
-        "popularity": 58,
+        "popularity": 59,
         "followers": {
           "href": null,
           "total": 313609
@@ -9162,7 +9162,7 @@
           "experimental hip hop",
           "alternative hip hop"
         ],
-        "popularity": 57,
+        "popularity": 58,
         "followers": {
           "href": null,
           "total": 488729
@@ -9386,7 +9386,7 @@
           "norsk rock",
           "norwegian pop"
         ],
-        "popularity": 35,
+        "popularity": 36,
         "followers": {
           "href": null,
           "total": 17802
@@ -9887,7 +9887,7 @@
           "soundtrack",
           "synthwave"
         ],
-        "popularity": 57,
+        "popularity": 58,
         "followers": {
           "href": null,
           "total": 139573
@@ -10048,7 +10048,7 @@
       "artist": {
         "name": "John Frusciante",
         "genres": [],
-        "popularity": 50,
+        "popularity": 51,
         "followers": {
           "href": null,
           "total": 648100
@@ -11381,7 +11381,7 @@
         "genres": [
           "christmas"
         ],
-        "popularity": 65,
+        "popularity": 66,
         "followers": {
           "href": null,
           "total": 181056
@@ -11652,7 +11652,7 @@
           "classic soul",
           "soul blues"
         ],
-        "popularity": 68,
+        "popularity": 69,
         "followers": {
           "href": null,
           "total": 2547732
@@ -11791,7 +11791,7 @@
           "free jazz",
           "jazz blues"
         ],
-        "popularity": 63,
+        "popularity": 64,
         "followers": {
           "href": null,
           "total": 2743772
@@ -12384,7 +12384,7 @@
           "alternative rock",
           "rock"
         ],
-        "popularity": 76,
+        "popularity": 77,
         "followers": {
           "href": null,
           "total": 8492918
@@ -13135,7 +13135,7 @@
       "artist": {
         "name": "The Weeknd",
         "genres": [],
-        "popularity": 94,
+        "popularity": 95,
         "followers": {
           "href": null,
           "total": 113879173
@@ -16022,7 +16022,7 @@
         "genres": [
           "riot grrrl"
         ],
-        "popularity": 28,
+        "popularity": 29,
         "followers": {
           "href": null,
           "total": 56382
@@ -16113,7 +16113,7 @@
           "melodic hardcore",
           "hardcore punk"
         ],
-        "popularity": 4,
+        "popularity": 5,
         "followers": {
           "href": null,
           "total": 1759
@@ -17294,7 +17294,7 @@
       "artist": {
         "name": "KIDS SEE GHOSTS",
         "genres": [],
-        "popularity": 55,
+        "popularity": 56,
         "followers": {
           "href": null,
           "total": 1005228
@@ -17381,7 +17381,7 @@
           "norsk rock",
           "norwegian pop"
         ],
-        "popularity": 26,
+        "popularity": 27,
         "followers": {
           "href": null,
           "total": 5645
@@ -18190,7 +18190,7 @@
           "norwegian pop",
           "art pop"
         ],
-        "popularity": 73,
+        "popularity": 74,
         "followers": {
           "href": null,
           "total": 4728025
@@ -18581,7 +18581,7 @@
           "rocksteady",
           "ska punk"
         ],
-        "popularity": 57,
+        "popularity": 56,
         "followers": {
           "href": null,
           "total": 709806
@@ -19138,7 +19138,7 @@
           "deathrock",
           "cold wave"
         ],
-        "popularity": 59,
+        "popularity": 60,
         "followers": {
           "href": null,
           "total": 1354051
@@ -20147,7 +20147,7 @@
         "genres": [
           "midwest emo"
         ],
-        "popularity": 39,
+        "popularity": 40,
         "followers": {
           "href": null,
           "total": 63734
@@ -21925,7 +21925,7 @@
         "genres": [
           "bedroom pop"
         ],
-        "popularity": 45,
+        "popularity": 46,
         "followers": {
           "href": null,
           "total": 474547

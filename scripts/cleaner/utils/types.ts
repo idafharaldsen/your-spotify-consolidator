@@ -245,3 +245,39 @@ export interface ConsolidationRules {
   rules: ConsolidationRule[];
 }
 
+// Detailed statistics interface
+export interface YearlyListeningTime {
+  year: string;
+  totalListeningTimeMs: number;
+  totalListeningHours: number;
+  playCount: number;
+}
+
+export interface TopSong {
+  songId: string;
+  name: string;
+  artist: string;
+  playCount: number;
+  totalListeningTimeMs: number;
+}
+
+export interface TopArtist {
+  artistName: string;
+  playCount: number;
+  totalListeningTimeMs: number;
+  uniqueSongs: number;
+}
+
+export interface YearlyTopItems {
+  year: string;
+  topSongs: TopSong[];
+  topArtists: TopArtist[];
+}
+
+export interface DetailedStats {
+  yearlyListeningTime: YearlyListeningTime[];
+  yearlyTopItems: YearlyTopItems[];
+  totalListeningHours: number;
+  totalListeningDays: number;
+}
+

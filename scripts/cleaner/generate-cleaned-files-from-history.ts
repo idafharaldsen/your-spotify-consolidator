@@ -10,7 +10,12 @@ import type {
   CleanedArtist,
   AlbumWithSongs,
   AlbumSong,
-  SpotifyTrack
+  SpotifyTrack,
+  DetailedStats,
+  YearlyListeningTime,
+  YearlyTopItems,
+  TopSong,
+  TopArtist
 } from './utils/types';
 
 class CleanedFilesGenerator {
@@ -780,6 +785,125 @@ class CleanedFilesGenerator {
   }
 
   /**
+   * Calculate detailed statistics from listening history
+   */
+  private calculateDetailedStats(history: CompleteListeningHistory): DetailedStats {
+    console.log('📊 Calculating detailed statistics...');
+    
+    // Maps to track yearly data
+    const yearlyMap = new Map<string, { totalMs: number; playCount: number }>();
+    const yearlySongsMap = new Map<string, Map<string, { playCount: number; totalMs: number; name: string; artist: string }>>();
+    const yearlyArtistsMap = new Map<string, Map<string, { playCount: number; totalMs: number; uniqueSongs: Set<string> }>>();
+    
+    history.songs.forEach(song => {
+      song.listeningEvents.forEach(event => {
+        const year = new Date(event.playedAt).getFullYear().toString();
+        
+        // Update yearly totals
+        if (!yearlyMap.has(year)) {
+          yearlyMap.set(year, { totalMs: 0, playCount: 0 });
+        }
+        const yearData = yearlyMap.get(year)!;
+        yearData.totalMs += event.msPlayed;
+        yearData.playCount += 1;
+        
+        // Track songs per year
+        if (!yearlySongsMap.has(year)) {
+          yearlySongsMap.set(year, new Map());
+        }
+        const yearSongsMap = yearlySongsMap.get(year)!;
+        if (!yearSongsMap.has(song.songId)) {
+          yearSongsMap.set(song.songId, {
+            playCount: 0,
+            totalMs: 0,
+            name: song.name,
+            artist: song.artist.name || song.artists[0] || 'Unknown Artist'
+          });
+        }
+        const songData = yearSongsMap.get(song.songId)!;
+        songData.playCount += 1;
+        songData.totalMs += event.msPlayed;
+        
+        // Track artists per year
+        if (!yearlyArtistsMap.has(year)) {
+          yearlyArtistsMap.set(year, new Map());
+        }
+        const yearArtistsMap = yearlyArtistsMap.get(year)!;
+        const artistName = song.artist.name || song.artists[0] || 'Unknown Artist';
+        if (!yearArtistsMap.has(artistName)) {
+          yearArtistsMap.set(artistName, {
+            playCount: 0,
+            totalMs: 0,
+            uniqueSongs: new Set()
+          });
+        }
+        const artistData = yearArtistsMap.get(artistName)!;
+        artistData.playCount += 1;
+        artistData.totalMs += event.msPlayed;
+        artistData.uniqueSongs.add(song.songId);
+      });
+    });
+    
+    // Convert to array and sort by year
+    const yearlyListeningTime: YearlyListeningTime[] = Array.from(yearlyMap.entries())
+      .map(([year, data]) => ({
+        year,
+        totalListeningTimeMs: data.totalMs,
+        totalListeningHours: Math.round((data.totalMs / (1000 * 60 * 60)) * 100) / 100,
+        playCount: data.playCount
+      }))
+      .sort((a, b) => a.year.localeCompare(b.year));
+    
+    // Calculate top songs and artists per year
+    const yearlyTopItems: YearlyTopItems[] = Array.from(yearlySongsMap.keys())
+      .sort()
+      .map(year => {
+        // Get top 5 songs for this year
+        const songsMap = yearlySongsMap.get(year)!;
+        const topSongs: TopSong[] = Array.from(songsMap.entries())
+          .map(([songId, data]) => ({
+            songId,
+            name: data.name,
+            artist: data.artist,
+            playCount: data.playCount,
+            totalListeningTimeMs: data.totalMs
+          }))
+          .sort((a, b) => b.playCount - a.playCount)
+          .slice(0, 5);
+        
+        // Get top 5 artists for this year
+        const artistsMap = yearlyArtistsMap.get(year)!;
+        const topArtists: TopArtist[] = Array.from(artistsMap.entries())
+          .map(([artistName, data]) => ({
+            artistName,
+            playCount: data.playCount,
+            totalListeningTimeMs: data.totalMs,
+            uniqueSongs: data.uniqueSongs.size
+          }))
+          .sort((a, b) => b.playCount - a.playCount)
+          .slice(0, 5);
+        
+        return {
+          year,
+          topSongs,
+          topArtists
+        };
+      });
+    
+    // Calculate totals
+    const totalListeningTimeMs = yearlyListeningTime.reduce((sum, year) => sum + year.totalListeningTimeMs, 0);
+    const totalListeningHours = Math.round((totalListeningTimeMs / (1000 * 60 * 60)) * 100) / 100;
+    const totalListeningDays = Math.round((totalListeningHours / 24) * 100) / 100;
+    
+    return {
+      yearlyListeningTime,
+      yearlyTopItems,
+      totalListeningHours,
+      totalListeningDays
+    };
+  }
+
+  /**
    * Main function to generate all cleaned files
    */
   async generateCleanedFiles(): Promise<void> {
@@ -795,6 +919,9 @@ class CleanedFilesGenerator {
       
       console.log(`📁 Loading complete history from: ${historyFile}`);
       const history = this.fileOps.loadCompleteHistory(historyFile);
+      
+      // Calculate detailed statistics
+      const detailedStats = this.calculateDetailedStats(history);
       
       const songsResult = this.generateCleanedSongs(history);
       const albumsResult = this.generateCleanedAlbums(history);
@@ -813,7 +940,8 @@ class CleanedFilesGenerator {
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
       }
       
-      await this.fileOps.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
+      const timestamp = await this.fileOps.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
+      await this.fileOps.saveDetailedStats(detailedStats, timestamp);
       
       console.log('');
       console.log('🎉 All cleaned files generated successfully!');
@@ -828,6 +956,26 @@ class CleanedFilesGenerator {
       console.log(`- Top 500 artists generated: ${Math.min(artistsResult.artists.length, 500)}`);
       console.log(`- Top 100 albums with songs: ${Math.min(albumsWithSongsResult.albums.length, 100)}`);
       console.log(`- Total listening events: ${history.metadata.totalListeningEvents.toLocaleString()}`);
+      console.log('');
+      console.log('📈 Detailed Statistics:');
+      console.log(`- Total listening time: ${detailedStats.totalListeningHours.toLocaleString()} hours (${detailedStats.totalListeningDays.toLocaleString()} days)`);
+      console.log('- Listening time by year:');
+      detailedStats.yearlyListeningTime.forEach(year => {
+        console.log(`  • ${year.year}: ${year.totalListeningHours.toLocaleString()} hours (${year.playCount.toLocaleString()} plays)`);
+      });
+      console.log('');
+      console.log('🎵 Top Songs & Artists by Year:');
+      detailedStats.yearlyTopItems.forEach(yearData => {
+        console.log(`\n  📅 ${yearData.year}:`);
+        console.log('    Top 5 Songs:');
+        yearData.topSongs.forEach((song, index) => {
+          console.log(`      ${index + 1}. "${song.name}" by ${song.artist} (${song.playCount} plays)`);
+        });
+        console.log('    Top 5 Artists:');
+        yearData.topArtists.forEach((artist, index) => {
+          console.log(`      ${index + 1}. ${artist.artistName} (${artist.playCount} plays, ${artist.uniqueSongs} unique songs)`);
+        });
+      });
       
     } catch (error) {
       console.error('💥 Failed to generate cleaned files:', error);

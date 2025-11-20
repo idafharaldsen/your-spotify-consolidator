@@ -1,0 +1,1340 @@
+{
+  "metadata": {
+    "timestamp": "2025-11-20T14:32:19.284Z",
+    "source": "Merged Streaming History"
+  },
+  "stats": {
+    "yearlyListeningTime": [
+      {
+        "year": "2009",
+        "totalListeningTimeMs": 1220628,
+        "totalListeningHours": 0.34,
+        "playCount": 20
+      },
+      {
+        "year": "2010",
+        "totalListeningTimeMs": 252346242,
+        "totalListeningHours": 70.1,
+        "playCount": 2676
+      },
+      {
+        "year": "2011",
+        "totalListeningTimeMs": 320262360,
+        "totalListeningHours": 88.96,
+        "playCount": 2495
+      },
+      {
+        "year": "2012",
+        "totalListeningTimeMs": 459853368,
+        "totalListeningHours": 127.74,
+        "playCount": 2985
+      },
+      {
+        "year": "2013",
+        "totalListeningTimeMs": 1838426007,
+        "totalListeningHours": 510.67,
+        "playCount": 11185
+      },
+      {
+        "year": "2014",
+        "totalListeningTimeMs": 2273782340,
+        "totalListeningHours": 631.61,
+        "playCount": 13827
+      },
+      {
+        "year": "2015",
+        "totalListeningTimeMs": 1830316153,
+        "totalListeningHours": 508.42,
+        "playCount": 10904
+      },
+      {
+        "year": "2016",
+        "totalListeningTimeMs": 1284932605,
+        "totalListeningHours": 356.93,
+        "playCount": 7017
+      },
+      {
+        "year": "2017",
+        "totalListeningTimeMs": 3256549968,
+        "totalListeningHours": 904.6,
+        "playCount": 17835
+      },
+      {
+        "year": "2018",
+        "totalListeningTimeMs": 3041267191,
+        "totalListeningHours": 844.8,
+        "playCount": 16827
+      },
+      {
+        "year": "2019",
+        "totalListeningTimeMs": 2884425209,
+        "totalListeningHours": 801.23,
+        "playCount": 15424
+      },
+      {
+        "year": "2020",
+        "totalListeningTimeMs": 2635141538,
+        "totalListeningHours": 731.98,
+        "playCount": 13824
+      },
+      {
+        "year": "2021",
+        "totalListeningTimeMs": 1995850286,
+        "totalListeningHours": 554.4,
+        "playCount": 11420
+      },
+      {
+        "year": "2022",
+        "totalListeningTimeMs": 2206552811,
+        "totalListeningHours": 612.93,
+        "playCount": 13302
+      },
+      {
+        "year": "2023",
+        "totalListeningTimeMs": 2727260528,
+        "totalListeningHours": 757.57,
+        "playCount": 16384
+      },
+      {
+        "year": "2024",
+        "totalListeningTimeMs": 1979480635,
+        "totalListeningHours": 549.86,
+        "playCount": 11678
+      },
+      {
+        "year": "2025",
+        "totalListeningTimeMs": 2192593439,
+        "totalListeningHours": 609.05,
+        "playCount": 11899
+      }
+    ],
+    "yearlyTopItems": [
+      {
+        "year": "2009",
+        "topSongs": [
+          {
+            "songId": "06UfBBDISthj1ZJAtX4xjj",
+            "name": "Wonderwall",
+            "artist": "Oasis",
+            "playCount": 2,
+            "totalListeningTimeMs": 478224
+          },
+          {
+            "songId": "4fzqKvmAjGOcbecxnQ0D6j",
+            "name": "Sliabh League / The Mug of Brown Ale",
+            "artist": "Denise Shiels",
+            "playCount": 1,
+            "totalListeningTimeMs": 24013
+          },
+          {
+            "songId": "1sCneZd0MSH67FmaUctULt",
+            "name": "God with an Ipod",
+            "artist": "Milk Kan",
+            "playCount": 1,
+            "totalListeningTimeMs": 46193
+          },
+          {
+            "songId": "1yvhy4SKXjcLQGsXnODvIu",
+            "name": "Icing Sugar",
+            "artist": "The Airfields",
+            "playCount": 1,
+            "totalListeningTimeMs": 34290
+          },
+          {
+            "songId": "7JyjJ8ZkVTd769Bx0C4UuY",
+            "name": "La Vita È Bella",
+            "artist": "Cinema Serenade Ensemble",
+            "playCount": 1,
+            "totalListeningTimeMs": 40150
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Arctic Monkeys",
+            "playCount": 2,
+            "totalListeningTimeMs": 48799,
+            "uniqueSongs": 2
+          },
+          {
+            "artistName": "Bjølsen Valsemølle",
+            "playCount": 2,
+            "totalListeningTimeMs": 45288,
+            "uniqueSongs": 2
+          },
+          {
+            "artistName": "Oasis",
+            "playCount": 2,
+            "totalListeningTimeMs": 478224,
+            "uniqueSongs": 1
+          },
+          {
+            "artistName": "Denise Shiels",
+            "playCount": 1,
+            "totalListeningTimeMs": 24013,
+            "uniqueSongs": 1
+          },
+          {
+            "artistName": "Milk Kan",
+            "playCount": 1,
+            "totalListeningTimeMs": 46193,
+            "uniqueSongs": 1
+          }
+        ]
+      },
+      {
+        "year": "2010",
+        "topSongs": [
+          {
+            "songId": "3t1qLIMFtxht25p6IkLy8b",
+            "name": "Hun er fri",
+            "artist": "Raga Rockers",
+            "playCount": 41,
+            "totalListeningTimeMs": 3360070
+          },
+          {
+            "songId": "7C3fJ1q01IQ137IQTRwmVZ",
+            "name": "Under The Bridge",
+            "artist": "Red Hot Chili Peppers",
+            "playCount": 19,
+            "totalListeningTimeMs": 2450398
+          },
+          {
+            "songId": "5S9edTU6BpUmp0enwiYoZ6",
+            "name": "Prosessen",
+            "artist": "Kaizers Orchestra",
+            "playCount": 18,
+            "totalListeningTimeMs": 2599280
+          },
+          {
+            "songId": "29UWtqmB3932yPMxbUMBrS",
+            "name": "Slakt",
+            "artist": "Raga Rockers",
+            "playCount": 17,
+            "totalListeningTimeMs": 1678684
+          },
+          {
+            "songId": "74xaQZzGBf7JsjgMLFo8Mc",
+            "name": "Hvis jeg var deg",
+            "artist": "Jokke & Valentinerne",
+            "playCount": 16,
+            "totalListeningTimeMs": 1760169
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Jokke & Valentinerne",
+            "playCount": 161,
+            "totalListeningTimeMs": 18720958,
+            "uniqueSongs": 50
+          },
+          {
+            "artistName": "Raga Rockers",
+            "playCount": 126,
+            "totalListeningTimeMs": 13052481,
+            "uniqueSongs": 26
+          },
+          {
+            "artistName": "Green Day",
+            "playCount": 76,
+            "totalListeningTimeMs": 8869818,
+            "uniqueSongs": 37
+          },
+          {
+            "artistName": "Misfits",
+            "playCount": 61,
+            "totalListeningTimeMs": 5237696,
+            "uniqueSongs": 12
+          },
+          {
+            "artistName": "Bare Egil Band",
+            "playCount": 53,
+            "totalListeningTimeMs": 2185196,
+            "uniqueSongs": 17
+          }
+        ]
+      },
+      {
+        "year": "2011",
+        "topSongs": [
+          {
+            "songId": "0Cll7d8lmNn05ZOVm5l5va",
+            "name": "Over The Rainbow/What A Wonderful World",
+            "artist": "Israel \"IZ\" Kamakawiwoole",
+            "playCount": 24,
+            "totalListeningTimeMs": 4868256
+          },
+          {
+            "songId": "2WckX8hC0GUyACTuFeabwt",
+            "name": "Slow Motion - 2006 Remaster",
+            "artist": "Third Eye Blind",
+            "playCount": 16,
+            "totalListeningTimeMs": 2759463
+          },
+          {
+            "songId": "0Ko737UNjXO17LK4Urdlwo",
+            "name": "Fortunate Son",
+            "artist": "Creedence Clearwater Revival",
+            "playCount": 15,
+            "totalListeningTimeMs": 1392455
+          },
+          {
+            "songId": "7H0b25DAZ0UQdxH2wEyEIq",
+            "name": "Philemon Arthur & the Dung",
+            "artist": "Kaizers Orchestra",
+            "playCount": 15,
+            "totalListeningTimeMs": 2432244
+          },
+          {
+            "songId": "2CT3r93YuSHtm57mjxvjhH",
+            "name": "Wonderwall",
+            "artist": "Oasis",
+            "playCount": 15,
+            "totalListeningTimeMs": 2441296
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Descendents",
+            "playCount": 92,
+            "totalListeningTimeMs": 8476931,
+            "uniqueSongs": 39
+          },
+          {
+            "artistName": "NOFX",
+            "playCount": 76,
+            "totalListeningTimeMs": 8802736,
+            "uniqueSongs": 33
+          },
+          {
+            "artistName": "Kaizers Orchestra",
+            "playCount": 74,
+            "totalListeningTimeMs": 13153931,
+            "uniqueSongs": 27
+          },
+          {
+            "artistName": "Nirvana",
+            "playCount": 60,
+            "totalListeningTimeMs": 9128280,
+            "uniqueSongs": 31
+          },
+          {
+            "artistName": "Bad Religion",
+            "playCount": 58,
+            "totalListeningTimeMs": 6907295,
+            "uniqueSongs": 24
+          }
+        ]
+      },
+      {
+        "year": "2012",
+        "topSongs": [
+          {
+            "songId": "7AYoXqCtME90flUOpBJM7i",
+            "name": "Society",
+            "artist": "Eddie Vedder",
+            "playCount": 20,
+            "totalListeningTimeMs": 4553443
+          },
+          {
+            "songId": "64C00gcYOfCw2RWC28iW7B",
+            "name": "A New England",
+            "artist": "Billy Bragg",
+            "playCount": 19,
+            "totalListeningTimeMs": 2975000
+          },
+          {
+            "songId": "2m2dgHoAEZUkmxamsOwyQg",
+            "name": "Just Breathe",
+            "artist": "Pearl Jam",
+            "playCount": 17,
+            "totalListeningTimeMs": 2986873
+          },
+          {
+            "songId": "4CnJZQPFfJRoTHC4Huz5TU",
+            "name": "Kids Of The Black Hole",
+            "artist": "Adolescents",
+            "playCount": 14,
+            "totalListeningTimeMs": 3360542
+          },
+          {
+            "songId": "2Ik27B9tbkatJMLVMbtBKc",
+            "name": "Liar",
+            "artist": "The Dogs",
+            "playCount": 14,
+            "totalListeningTimeMs": 1795500
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Raga Rockers",
+            "playCount": 75,
+            "totalListeningTimeMs": 10804983,
+            "uniqueSongs": 38
+          },
+          {
+            "artistName": "The Bouncing Souls",
+            "playCount": 60,
+            "totalListeningTimeMs": 7894055,
+            "uniqueSongs": 32
+          },
+          {
+            "artistName": "Eddie Vedder",
+            "playCount": 56,
+            "totalListeningTimeMs": 11119776,
+            "uniqueSongs": 15
+          },
+          {
+            "artistName": "Dropkick Murphys",
+            "playCount": 51,
+            "totalListeningTimeMs": 6537092,
+            "uniqueSongs": 29
+          },
+          {
+            "artistName": "NOFX",
+            "playCount": 51,
+            "totalListeningTimeMs": 5820187,
+            "uniqueSongs": 40
+          }
+        ]
+      },
+      {
+        "year": "2013",
+        "topSongs": [
+          {
+            "songId": "3XKljNIWyiO0d8o8CpnVBo",
+            "name": "Two Headed Boy",
+            "artist": "Neutral Milk Hotel",
+            "playCount": 27,
+            "totalListeningTimeMs": 4759477
+          },
+          {
+            "songId": "2rSWcMbuxjJsUmGrIKFiZT",
+            "name": "170",
+            "artist": "Kaizers Orchestra",
+            "playCount": 25,
+            "totalListeningTimeMs": 5069211
+          },
+          {
+            "songId": "7DHX06mXYXQMgzMVelvX0Y",
+            "name": "Symmetry",
+            "artist": "Title Fight",
+            "playCount": 25,
+            "totalListeningTimeMs": 2149700
+          },
+          {
+            "songId": "1zuKjpp4t7BS8JPKi6mkQr",
+            "name": "Angels",
+            "artist": "The xx",
+            "playCount": 24,
+            "totalListeningTimeMs": 3934086
+          },
+          {
+            "songId": "1SL6gnpIajQXb78pw3uDy9",
+            "name": "14",
+            "artist": "Palma Violets",
+            "playCount": 24,
+            "totalListeningTimeMs": 5428339
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Wavves",
+            "playCount": 213,
+            "totalListeningTimeMs": 35642524,
+            "uniqueSongs": 48
+          },
+          {
+            "artistName": "Touché Amoré",
+            "playCount": 208,
+            "totalListeningTimeMs": 21810437,
+            "uniqueSongs": 45
+          },
+          {
+            "artistName": "Neutral Milk Hotel",
+            "playCount": 149,
+            "totalListeningTimeMs": 23861464,
+            "uniqueSongs": 19
+          },
+          {
+            "artistName": "Arctic Monkeys",
+            "playCount": 146,
+            "totalListeningTimeMs": 24436139,
+            "uniqueSongs": 31
+          },
+          {
+            "artistName": "Gorillaz",
+            "playCount": 142,
+            "totalListeningTimeMs": 27410421,
+            "uniqueSongs": 29
+          }
+        ]
+      },
+      {
+        "year": "2014",
+        "topSongs": [
+          {
+            "songId": "43e6WC2I0U1UeuK0cZzUvO",
+            "name": "Never Saw It Coming",
+            "artist": "Tigers Jaw",
+            "playCount": 34,
+            "totalListeningTimeMs": 4785257
+          },
+          {
+            "songId": "5bxythiVpxTD2nHZMmD8m1",
+            "name": "I've Given Up on You",
+            "artist": "Real Friends",
+            "playCount": 34,
+            "totalListeningTimeMs": 4920940
+          },
+          {
+            "songId": "7ppLY1sy152KulKq7KCqyt",
+            "name": "Stormen",
+            "artist": "Oslo Ess",
+            "playCount": 32,
+            "totalListeningTimeMs": 5816321
+          },
+          {
+            "songId": "4DlIEw0mtIPJjPizMjHP1e",
+            "name": "Dui",
+            "artist": "Basement",
+            "playCount": 30,
+            "totalListeningTimeMs": 3463582
+          },
+          {
+            "songId": "48gsLPdOUEDjr7P8Wvykne",
+            "name": "Budapest",
+            "artist": "George Ezra",
+            "playCount": 27,
+            "totalListeningTimeMs": 4844571
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Basement",
+            "playCount": 464,
+            "totalListeningTimeMs": 68642133,
+            "uniqueSongs": 44
+          },
+          {
+            "artistName": "Tigers Jaw",
+            "playCount": 269,
+            "totalListeningTimeMs": 40149337,
+            "uniqueSongs": 54
+          },
+          {
+            "artistName": "Joyce Manor",
+            "playCount": 248,
+            "totalListeningTimeMs": 27130180,
+            "uniqueSongs": 41
+          },
+          {
+            "artistName": "Touché Amoré",
+            "playCount": 246,
+            "totalListeningTimeMs": 26786251,
+            "uniqueSongs": 49
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 164,
+            "totalListeningTimeMs": 32170584,
+            "uniqueSongs": 68
+          }
+        ]
+      },
+      {
+        "year": "2015",
+        "topSongs": [
+          {
+            "songId": "08SywyCNDoU2oQ1sFD0SIq",
+            "name": "Everything I Am",
+            "artist": "Kanye West",
+            "playCount": 27,
+            "totalListeningTimeMs": 4727627
+          },
+          {
+            "songId": "1zPq6vX5yI96dBx7AVBtn4",
+            "name": "Going Gets Tough",
+            "artist": "The Growlers",
+            "playCount": 25,
+            "totalListeningTimeMs": 4430219
+          },
+          {
+            "songId": "6vzIg1Hi45I3l5c0UxJ7jG",
+            "name": "40oz. On Repeat",
+            "artist": "FIDLAR",
+            "playCount": 24,
+            "totalListeningTimeMs": 5322908
+          },
+          {
+            "songId": "5FMu7ZbfPXmGeOU7FnGijE",
+            "name": "Go Easy",
+            "artist": "Mac DeMarco",
+            "playCount": 23,
+            "totalListeningTimeMs": 3681156
+          },
+          {
+            "songId": "2yz5IaQLnO8WBCIWMXoRBS",
+            "name": "Känn ingen sorg för mig Göteborg",
+            "artist": "Håkan Hellström",
+            "playCount": 22,
+            "totalListeningTimeMs": 4443203
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Mac DeMarco",
+            "playCount": 250,
+            "totalListeningTimeMs": 36670883,
+            "uniqueSongs": 78
+          },
+          {
+            "artistName": "Kanye West",
+            "playCount": 210,
+            "totalListeningTimeMs": 41940365,
+            "uniqueSongs": 55
+          },
+          {
+            "artistName": "Kendrick Lamar",
+            "playCount": 156,
+            "totalListeningTimeMs": 34848320,
+            "uniqueSongs": 37
+          },
+          {
+            "artistName": "Title Fight",
+            "playCount": 150,
+            "totalListeningTimeMs": 22332251,
+            "uniqueSongs": 49
+          },
+          {
+            "artistName": "The Growlers",
+            "playCount": 131,
+            "totalListeningTimeMs": 23634916,
+            "uniqueSongs": 40
+          }
+        ]
+      },
+      {
+        "year": "2016",
+        "topSongs": [
+          {
+            "songId": "2k7DN6UlsT72bFysvCj1RB",
+            "name": "Aquasun",
+            "artist": "Basement",
+            "playCount": 27,
+            "totalListeningTimeMs": 6068935
+          },
+          {
+            "songId": "7KfYLvSzNAy7iJEisQS0Ma",
+            "name": "Advanced Falconry",
+            "artist": "Mutual Benefit",
+            "playCount": 22,
+            "totalListeningTimeMs": 5660011
+          },
+          {
+            "songId": "66wg8mmkyOHQwLKHj4ghdi",
+            "name": "Fly Me To The Moon",
+            "artist": "Frank Sinatra",
+            "playCount": 22,
+            "totalListeningTimeMs": 2848281
+          },
+          {
+            "songId": "2FeUZsmNGWc3No6v9GCdST",
+            "name": "Piazza, New York Catcher",
+            "artist": "Belle and Sebastian",
+            "playCount": 20,
+            "totalListeningTimeMs": 3456443
+          },
+          {
+            "songId": "2HDwGSgOBJD9lE3BF5JEec",
+            "name": "Sinnerman - Live In New York/1965",
+            "artist": "Nina Simone",
+            "playCount": 20,
+            "totalListeningTimeMs": 10062201
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Kanye West",
+            "playCount": 198,
+            "totalListeningTimeMs": 33726901,
+            "uniqueSongs": 50
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 197,
+            "totalListeningTimeMs": 42391650,
+            "uniqueSongs": 108
+          },
+          {
+            "artistName": "Kendrick Lamar",
+            "playCount": 126,
+            "totalListeningTimeMs": 27544140,
+            "uniqueSongs": 31
+          },
+          {
+            "artistName": "Tom Waits",
+            "playCount": 117,
+            "totalListeningTimeMs": 24235512,
+            "uniqueSongs": 73
+          },
+          {
+            "artistName": "Frank Ocean",
+            "playCount": 113,
+            "totalListeningTimeMs": 22544118,
+            "uniqueSongs": 31
+          }
+        ]
+      },
+      {
+        "year": "2017",
+        "topSongs": [
+          {
+            "songId": "5YAhKEMTGMh6SxTSYcUJl6",
+            "name": "Postcards From Italy",
+            "artist": "Beirut",
+            "playCount": 31,
+            "totalListeningTimeMs": 7327370
+          },
+          {
+            "songId": "73HCBO1XCKxNMTZLTFgs8A",
+            "name": "XXX. FEAT. U2.",
+            "artist": "Kendrick Lamar",
+            "playCount": 28,
+            "totalListeningTimeMs": 6400520
+          },
+          {
+            "songId": "2ZWlPOoWh0626oTaHrnl2a",
+            "name": "Ivy",
+            "artist": "Frank Ocean",
+            "playCount": 25,
+            "totalListeningTimeMs": 5250395
+          },
+          {
+            "songId": "1Bi5t0q9j3nYXIZuZgSGvr",
+            "name": "White Iverson",
+            "artist": "Post Malone",
+            "playCount": 24,
+            "totalListeningTimeMs": 5002393
+          },
+          {
+            "songId": "3dOYfnK4ZIL9YFlKdHpGce",
+            "name": "Our Song",
+            "artist": "Radiator Hospital",
+            "playCount": 24,
+            "totalListeningTimeMs": 2989011
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Kendrick Lamar",
+            "playCount": 460,
+            "totalListeningTimeMs": 98136530,
+            "uniqueSongs": 85
+          },
+          {
+            "artistName": "Kanye West",
+            "playCount": 319,
+            "totalListeningTimeMs": 64424130,
+            "uniqueSongs": 112
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 281,
+            "totalListeningTimeMs": 53575299,
+            "uniqueSongs": 83
+          },
+          {
+            "artistName": "Bad Religion",
+            "playCount": 257,
+            "totalListeningTimeMs": 31853041,
+            "uniqueSongs": 159
+          },
+          {
+            "artistName": "Frank Ocean",
+            "playCount": 256,
+            "totalListeningTimeMs": 49306070,
+            "uniqueSongs": 39
+          }
+        ]
+      },
+      {
+        "year": "2018",
+        "topSongs": [
+          {
+            "songId": "4VZM71F8XAoLRuNyNLxwWS",
+            "name": "29 #Strafford APTS",
+            "artist": "Bon Iver",
+            "playCount": 35,
+            "totalListeningTimeMs": 7761276
+          },
+          {
+            "songId": "2Ux9gG55sIt1CcIKAVt0Lg",
+            "name": "I Still Don't Know Who I Am.",
+            "artist": "Barnes Blvd.",
+            "playCount": 35,
+            "totalListeningTimeMs": 3671781
+          },
+          {
+            "songId": "5mMV6EaKeZWkGFvE1xg13n",
+            "name": "Towers",
+            "artist": "Bon Iver",
+            "playCount": 33,
+            "totalListeningTimeMs": 5124304
+          },
+          {
+            "songId": "7qUoDTmVj07qUf6ZBDhWKl",
+            "name": "Blood Bank",
+            "artist": "Bon Iver",
+            "playCount": 32,
+            "totalListeningTimeMs": 7783431
+          },
+          {
+            "songId": "1cTZMwcBJT0Ka3UJPXOeeN",
+            "name": "Nice For What",
+            "artist": "Drake",
+            "playCount": 32,
+            "totalListeningTimeMs": 5939147
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Bon Iver",
+            "playCount": 453,
+            "totalListeningTimeMs": 89808392,
+            "uniqueSongs": 37
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 441,
+            "totalListeningTimeMs": 96087405,
+            "uniqueSongs": 178
+          },
+          {
+            "artistName": "Kanye West",
+            "playCount": 357,
+            "totalListeningTimeMs": 61942440,
+            "uniqueSongs": 135
+          },
+          {
+            "artistName": "BROCKHAMPTON",
+            "playCount": 306,
+            "totalListeningTimeMs": 55051005,
+            "uniqueSongs": 76
+          },
+          {
+            "artistName": "Mac Miller",
+            "playCount": 299,
+            "totalListeningTimeMs": 63678739,
+            "uniqueSongs": 74
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "topSongs": [
+          {
+            "songId": "1b290AIMVdg5AOlXRen3Wt",
+            "name": "What I’ve Been Kicking Around",
+            "artist": "The Tallest Man On Earth",
+            "playCount": 27,
+            "totalListeningTimeMs": 4851076
+          },
+          {
+            "songId": "0rlfGg5Ym6J9AA97ah7voH",
+            "name": "Suspirium",
+            "artist": "Thom Yorke",
+            "playCount": 26,
+            "totalListeningTimeMs": 4574390
+          },
+          {
+            "songId": "5SjLRpgI7LWFzy9ggSqlkO",
+            "name": "Eulogy",
+            "artist": "Kyle Dixon & Michael Stein",
+            "playCount": 25,
+            "totalListeningTimeMs": 5098078
+          },
+          {
+            "songId": "11dUk8E2z8Oj1JURwl7GJd",
+            "name": "Carey",
+            "artist": "Joni Mitchell",
+            "playCount": 25,
+            "totalListeningTimeMs": 3919635
+          },
+          {
+            "songId": "3pXv6E1m7E64EDX5s8FUMn",
+            "name": "Hotel Bar",
+            "artist": "The Tallest Man On Earth",
+            "playCount": 24,
+            "totalListeningTimeMs": 5437285
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "David Bowie",
+            "playCount": 369,
+            "totalListeningTimeMs": 82507220,
+            "uniqueSongs": 150
+          },
+          {
+            "artistName": "Bon Iver",
+            "playCount": 289,
+            "totalListeningTimeMs": 54632754,
+            "uniqueSongs": 55
+          },
+          {
+            "artistName": "The Tallest Man On Earth",
+            "playCount": 247,
+            "totalListeningTimeMs": 47357764,
+            "uniqueSongs": 46
+          },
+          {
+            "artistName": "Tyler, The Creator",
+            "playCount": 195,
+            "totalListeningTimeMs": 33558930,
+            "uniqueSongs": 24
+          },
+          {
+            "artistName": "kent",
+            "playCount": 168,
+            "totalListeningTimeMs": 41252666,
+            "uniqueSongs": 68
+          }
+        ]
+      },
+      {
+        "year": "2020",
+        "topSongs": [
+          {
+            "songId": "4nlvKIIetOWGIMyhjQXgOZ",
+            "name": "The Difference",
+            "artist": "Flume",
+            "playCount": 28,
+            "totalListeningTimeMs": 3479755
+          },
+          {
+            "songId": "1YhEhUs3qCp60jWERzJwnO",
+            "name": "Summer Forgive Me",
+            "artist": "British India",
+            "playCount": 22,
+            "totalListeningTimeMs": 4381811
+          },
+          {
+            "songId": "3nrEWp6yteht5wzOssn7JF",
+            "name": "Long Hot Night (Halfway to Certain)",
+            "artist": "The Growlers",
+            "playCount": 21,
+            "totalListeningTimeMs": 4133366
+          },
+          {
+            "songId": "3aQg2ZIMI8EbUGA0lE3brn",
+            "name": "Rogaland",
+            "artist": "Kvelertak",
+            "playCount": 21,
+            "totalListeningTimeMs": 5581660
+          },
+          {
+            "songId": "4S4Mfvv03M1cHgIOJcbUCL",
+            "name": "In My Room",
+            "artist": "Frank Ocean",
+            "playCount": 20,
+            "totalListeningTimeMs": 2384427
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Mac Miller",
+            "playCount": 300,
+            "totalListeningTimeMs": 69642689,
+            "uniqueSongs": 88
+          },
+          {
+            "artistName": "The Growlers",
+            "playCount": 293,
+            "totalListeningTimeMs": 57200828,
+            "uniqueSongs": 88
+          },
+          {
+            "artistName": "Nina Simone",
+            "playCount": 221,
+            "totalListeningTimeMs": 47523565,
+            "uniqueSongs": 48
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 195,
+            "totalListeningTimeMs": 40095112,
+            "uniqueSongs": 121
+          },
+          {
+            "artistName": "Bombay Bicycle Club",
+            "playCount": 195,
+            "totalListeningTimeMs": 40066040,
+            "uniqueSongs": 47
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "topSongs": [
+          {
+            "songId": "7xicCU6csGCCgJgNjkckbU",
+            "name": "Closure",
+            "artist": "JOYLESS",
+            "playCount": 42,
+            "totalListeningTimeMs": 6895803
+          },
+          {
+            "songId": "02fQ5vOKXgaX3Paj359DdR",
+            "name": "Bristol",
+            "artist": "JOYLESS",
+            "playCount": 36,
+            "totalListeningTimeMs": 5363113
+          },
+          {
+            "songId": "5Meo01ojbetCChXhjWKXwJ",
+            "name": "Closure",
+            "artist": "JOYLESS",
+            "playCount": 23,
+            "totalListeningTimeMs": 2239164
+          },
+          {
+            "songId": "2nGgvKTQd3NwhWrsVVVC5n",
+            "name": "Kalla mig",
+            "artist": "Vapnet",
+            "playCount": 22,
+            "totalListeningTimeMs": 5077000
+          },
+          {
+            "songId": "0bGImSqDB2ebdeoCidUC8o",
+            "name": "BLACKOUT",
+            "artist": "Turnstile",
+            "playCount": 21,
+            "totalListeningTimeMs": 3023268
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "JOYLESS",
+            "playCount": 230,
+            "totalListeningTimeMs": 34573513,
+            "uniqueSongs": 13
+          },
+          {
+            "artistName": "The Beatles",
+            "playCount": 167,
+            "totalListeningTimeMs": 25737540,
+            "uniqueSongs": 95
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 158,
+            "totalListeningTimeMs": 36311675,
+            "uniqueSongs": 78
+          },
+          {
+            "artistName": "Turnstile",
+            "playCount": 154,
+            "totalListeningTimeMs": 18889839,
+            "uniqueSongs": 41
+          },
+          {
+            "artistName": "Oslo Ess",
+            "playCount": 119,
+            "totalListeningTimeMs": 18142605,
+            "uniqueSongs": 34
+          }
+        ]
+      },
+      {
+        "year": "2022",
+        "topSongs": [
+          {
+            "songId": "7zEDmEGVQNIJ5M8SU3fpIM",
+            "name": "S01E02.Return.Of.The.Arsonist.720p.HDTV.x264",
+            "artist": "Blood Command",
+            "playCount": 29,
+            "totalListeningTimeMs": 4661911
+          },
+          {
+            "songId": "04vAjpZ2ppNIFcxq9bqj39",
+            "name": "Generator",
+            "artist": "Turnstile",
+            "playCount": 27,
+            "totalListeningTimeMs": 4237945
+          },
+          {
+            "songId": "7AaKNExGC48W5tY1vtFXfC",
+            "name": "Ctrl + Art + Delete",
+            "artist": "Blood Command",
+            "playCount": 26,
+            "totalListeningTimeMs": 4585101
+          },
+          {
+            "songId": "1Rz1CTinAymBA4dcMPGijY",
+            "name": "Real Thing",
+            "artist": "Turnstile",
+            "playCount": 24,
+            "totalListeningTimeMs": 2637008
+          },
+          {
+            "songId": "6ijCFLbgda06G8PXMkQmLl",
+            "name": "No Thank You, I'm More in to Fake Grindcore",
+            "artist": "Blood Command",
+            "playCount": 24,
+            "totalListeningTimeMs": 2816910
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Turnstile",
+            "playCount": 474,
+            "totalListeningTimeMs": 59802278,
+            "uniqueSongs": 60
+          },
+          {
+            "artistName": "Blood Command",
+            "playCount": 379,
+            "totalListeningTimeMs": 63602647,
+            "uniqueSongs": 64
+          },
+          {
+            "artistName": "JOYLESS",
+            "playCount": 196,
+            "totalListeningTimeMs": 28793153,
+            "uniqueSongs": 16
+          },
+          {
+            "artistName": "Nick Mulvey",
+            "playCount": 175,
+            "totalListeningTimeMs": 41352762,
+            "uniqueSongs": 100
+          },
+          {
+            "artistName": "Kate Bush",
+            "playCount": 167,
+            "totalListeningTimeMs": 46402081,
+            "uniqueSongs": 123
+          }
+        ]
+      },
+      {
+        "year": "2023",
+        "topSongs": [
+          {
+            "songId": "6me7F0aaZjwDo6RJ5MrfBD",
+            "name": "Evergreen",
+            "artist": "Richy Mitch & The Coal Miners",
+            "playCount": 27,
+            "totalListeningTimeMs": 2268972
+          },
+          {
+            "songId": "2Wk8vEamlVBBalBi24NnU1",
+            "name": "Sarah",
+            "artist": "Alex G",
+            "playCount": 21,
+            "totalListeningTimeMs": 2698002
+          },
+          {
+            "songId": "0H7Wdgn1C7vFy4z0o2kBUZ",
+            "name": "japan",
+            "artist": "Yot Club",
+            "playCount": 21,
+            "totalListeningTimeMs": 3309068
+          },
+          {
+            "songId": "4x1dWc1GgAfC04GcTlllax",
+            "name": "Lake Missoula",
+            "artist": "Richy Mitch & The Coal Miners",
+            "playCount": 20,
+            "totalListeningTimeMs": 2091851
+          },
+          {
+            "songId": "6fLvsD8uWsCRow8PfOpMav",
+            "name": "Our Song",
+            "artist": "Radiator Hospital",
+            "playCount": 18,
+            "totalListeningTimeMs": 2119860
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "David Bowie",
+            "playCount": 236,
+            "totalListeningTimeMs": 49321332,
+            "uniqueSongs": 143
+          },
+          {
+            "artistName": "The Growlers",
+            "playCount": 233,
+            "totalListeningTimeMs": 40992093,
+            "uniqueSongs": 101
+          },
+          {
+            "artistName": "The Avalanches",
+            "playCount": 180,
+            "totalListeningTimeMs": 27984289,
+            "uniqueSongs": 49
+          },
+          {
+            "artistName": "Bon Iver",
+            "playCount": 170,
+            "totalListeningTimeMs": 32714807,
+            "uniqueSongs": 52
+          },
+          {
+            "artistName": "Alex G",
+            "playCount": 164,
+            "totalListeningTimeMs": 24017763,
+            "uniqueSongs": 50
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "topSongs": [
+          {
+            "songId": "5MaCCAHlmylUq2AjuQxTLc",
+            "name": "Trapdoor Solution",
+            "artist": "The Hives",
+            "playCount": 25,
+            "totalListeningTimeMs": 1802975
+          },
+          {
+            "songId": "0Lm3loChnSsNS37nxvLYcN",
+            "name": "Cutting Branches For A Temporary Shelter - Remastered 2008",
+            "artist": "Penguin Cafe Orchestra",
+            "playCount": 22,
+            "totalListeningTimeMs": 3914926
+          },
+          {
+            "songId": "6me7F0aaZjwDo6RJ5MrfBD",
+            "name": "Evergreen",
+            "artist": "Richy Mitch & The Coal Miners",
+            "playCount": 20,
+            "totalListeningTimeMs": 1633312
+          },
+          {
+            "songId": "74vF2AJsJr4Bz5gJivquDS",
+            "name": "Bogus Operandi",
+            "artist": "The Hives",
+            "playCount": 16,
+            "totalListeningTimeMs": 3227330
+          },
+          {
+            "songId": "1LRRrxiPJFNdIKAdjPMvc6",
+            "name": "Old Shoes",
+            "artist": "JOYLESS",
+            "playCount": 16,
+            "totalListeningTimeMs": 2544900
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Richy Mitch & The Coal Miners",
+            "playCount": 185,
+            "totalListeningTimeMs": 30463275,
+            "uniqueSongs": 50
+          },
+          {
+            "artistName": "The Hives",
+            "playCount": 169,
+            "totalListeningTimeMs": 22555161,
+            "uniqueSongs": 36
+          },
+          {
+            "artistName": "JOYLESS",
+            "playCount": 132,
+            "totalListeningTimeMs": 18018542,
+            "uniqueSongs": 23
+          },
+          {
+            "artistName": "Bon Iver",
+            "playCount": 131,
+            "totalListeningTimeMs": 26635513,
+            "uniqueSongs": 60
+          },
+          {
+            "artistName": "Big Thief",
+            "playCount": 116,
+            "totalListeningTimeMs": 25180240,
+            "uniqueSongs": 46
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "topSongs": [
+          {
+            "songId": "0SwT5GTfvOaQwOVrzWXQY8",
+            "name": "Festen som aldri stopper",
+            "artist": "Honningbarna",
+            "playCount": 25,
+            "totalListeningTimeMs": 5281467
+          },
+          {
+            "songId": "5HS4TGVPy0J747XOHHfy2D",
+            "name": "God gutt",
+            "artist": "Honningbarna",
+            "playCount": 22,
+            "totalListeningTimeMs": 4485368
+          },
+          {
+            "songId": "2f92Skm1T7FGKaVrVroQxF",
+            "name": "Hvilke splinter",
+            "artist": "Honningbarna",
+            "playCount": 20,
+            "totalListeningTimeMs": 3214669
+          },
+          {
+            "songId": "5voazWuGyU38QjjpP3Wixi",
+            "name": "Amor fati",
+            "artist": "Honningbarna",
+            "playCount": 19,
+            "totalListeningTimeMs": 3441730
+          },
+          {
+            "songId": "5IVcvAMaYxQDKjNe9wIAgP",
+            "name": "Av liv treffer",
+            "artist": "Honningbarna",
+            "playCount": 19,
+            "totalListeningTimeMs": 871136
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Honningbarna",
+            "playCount": 337,
+            "totalListeningTimeMs": 55403345,
+            "uniqueSongs": 45
+          },
+          {
+            "artistName": "Alex G",
+            "playCount": 235,
+            "totalListeningTimeMs": 33683437,
+            "uniqueSongs": 84
+          },
+          {
+            "artistName": "Turnstile",
+            "playCount": 201,
+            "totalListeningTimeMs": 30984459,
+            "uniqueSongs": 78
+          },
+          {
+            "artistName": "TV Girl",
+            "playCount": 183,
+            "totalListeningTimeMs": 34641507,
+            "uniqueSongs": 51
+          },
+          {
+            "artistName": "David Bowie",
+            "playCount": 168,
+            "totalListeningTimeMs": 38687694,
+            "uniqueSongs": 120
+          }
+        ]
+      }
+    ],
+    "totalListeningHours": 8661.18,
+    "totalListeningDays": 360.88
+  }
+}
