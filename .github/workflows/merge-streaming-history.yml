@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'data/spotify-history/**'
+  workflow_dispatch: # Allow manual triggers
 
 jobs:
   merge-history:
