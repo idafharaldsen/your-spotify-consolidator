@@ -111,10 +111,18 @@ export class Consolidator {
         existing.original_songIds.push(song.songId);
         duplicatesRemoved++;
       } else {
-        consolidationMap.set(key, {
+        const finalSong = {
           ...song,
           consolidated_count: song.count
-        });
+        };
+        
+        // Normalize album name using consolidation rules
+        const baseAlbumName = this.rulesManager.getBaseAlbumName(song.album.name, song.artist.name);
+        if (baseAlbumName) {
+          finalSong.album.name = baseAlbumName;
+        }
+        
+        consolidationMap.set(key, finalSong);
       }
     });
     
