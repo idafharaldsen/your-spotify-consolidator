@@ -4,9 +4,9 @@
     "consolidatedTotalAlbums": 100,
     "duplicatesRemoved": 23271,
     "consolidationRate": 99.57,
-    "timestamp": "2025-11-21T12:53:17.459Z",
+    "timestamp": "2025-11-21T13:30:22.688Z",
     "source": "Merged Streaming History with Song Breakdown",
-    "totalListeningEvents": 179783
+    "totalListeningEvents": 179780
   },
   "albums": [
     {
@@ -23292,7 +23292,7 @@
         ],
         "release_date": "2008-07-08",
         "release_date_precision": "day",
-        "popularity": 29,
+        "popularity": 30,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273356342a8a7d325855f03eb6c",
@@ -28324,7 +28324,7 @@
         ],
         "release_date": "2017-05-17",
         "release_date_precision": "day",
-        "popularity": 71,
+        "popularity": 72,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731cc17bae5ee17cce117e198a",
@@ -29298,7 +29298,7 @@
         ],
         "release_date": "2020-12-11",
         "release_date_precision": "day",
-        "popularity": 50,
+        "popularity": 51,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b0b3bd1a5f3967705579e6f1",

@@ -284,10 +284,18 @@ export interface YearlyTopItems {
   topArtists: TopArtist[];
 }
 
+export interface HourlyListeningDistribution {
+  hour: number; // 0-23
+  totalListeningTimeMs: number;
+  totalListeningHours: number;
+  playCount: number;
+}
+
 export interface DetailedStats {
   yearlyListeningTime: YearlyListeningTime[];
   yearlyTopItems: YearlyTopItems[];
   totalListeningHours: number;
   totalListeningDays: number;
+  hourlyListeningDistribution: HourlyListeningDistribution[];
 }
 

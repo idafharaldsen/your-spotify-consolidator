@@ -4,9 +4,9 @@
     "consolidatedTotalAlbums": 23328,
     "duplicatesRemoved": 256,
     "consolidationRate": 1.09,
-    "timestamp": "2025-11-21T12:53:17.453Z",
+    "timestamp": "2025-11-21T13:30:22.681Z",
     "source": "Merged Streaming History",
-    "totalListeningEvents": 179783
+    "totalListeningEvents": 179780
   },
   "albums": [
     {
@@ -3457,7 +3457,7 @@
         ],
         "release_date": "2008-07-08",
         "release_date_precision": "day",
-        "popularity": 29,
+        "popularity": 30,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273356342a8a7d325855f03eb6c",
@@ -4205,7 +4205,7 @@
         ],
         "release_date": "2017-05-17",
         "release_date_precision": "day",
-        "popularity": 71,
+        "popularity": 72,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731cc17bae5ee17cce117e198a",
@@ -4337,7 +4337,7 @@
         ],
         "release_date": "2020-12-11",
         "release_date_precision": "day",
-        "popularity": 50,
+        "popularity": 51,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b0b3bd1a5f3967705579e6f1",
@@ -5701,7 +5701,7 @@
         ],
         "release_date": "2017-08-25",
         "release_date_precision": "day",
-        "popularity": 55,
+        "popularity": 56,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2737d15fb20303a589acc1ab98b",
@@ -5877,7 +5877,7 @@
         ],
         "release_date": "2020-11-20",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 44,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b4eef77cb2fe4b49eeb43950",
@@ -6669,7 +6669,7 @@
         ],
         "release_date": "1971-06-22",
         "release_date_precision": "day",
-        "popularity": 60,
+        "popularity": 61,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e79dc1438d650f426b5e99a7",
@@ -7858,7 +7858,7 @@
         ],
         "release_date": "2015-05-29",
         "release_date_precision": "day",
-        "popularity": 31,
+        "popularity": 32,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735dfb897bb4acf678b9d5fcc3",
@@ -9354,7 +9354,7 @@
         ],
         "release_date": "2017-02-24",
         "release_date_precision": "day",
-        "popularity": 65,
+        "popularity": 66,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27385c5e6c686ced3e43bae2748",
@@ -10347,7 +10347,7 @@
         ],
         "release_date": "2007-01-01",
         "release_date_precision": "day",
-        "popularity": 46,
+        "popularity": 47,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2737e57062cc57739dbaae3ceeb",
@@ -11227,7 +11227,7 @@
         ],
         "release_date": "2020-09-25",
         "release_date_precision": "day",
-        "popularity": 70,
+        "popularity": 71,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d4d4929a3a86fe2f9fadbd42",
@@ -11315,7 +11315,7 @@
         ],
         "release_date": "2005",
         "release_date_precision": "year",
-        "popularity": 23,
+        "popularity": 24,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e38879dd5254a050953c4065",
@@ -11403,7 +11403,7 @@
         ],
         "release_date": "2020-02-21",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 44,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dbf9e906fe08a375c307b65f",
@@ -11623,7 +11623,7 @@
         ],
         "release_date": "2012-04-23",
         "release_date_precision": "day",
-        "popularity": 57,
+        "popularity": 58,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b4f8459b0f719f8a97ee1c8c",
@@ -12617,7 +12617,7 @@
         ],
         "release_date": "2019-10-04",
         "release_date_precision": "day",
-        "popularity": 42,
+        "popularity": 43,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735833ba28cd7988a92baaed12",
@@ -13345,7 +13345,7 @@
         ],
         "release_date": "2016-09-16",
         "release_date_precision": "day",
-        "popularity": 73,
+        "popularity": 74,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732e92f776279eaf45d14a33fd",
@@ -15369,7 +15369,7 @@
         ],
         "release_date": "2018-09-21",
         "release_date_precision": "day",
-        "popularity": 47,
+        "popularity": 48,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739f53f611acdab5215dd672ce",
@@ -15904,7 +15904,7 @@
         ],
         "release_date": "1988-01-01",
         "release_date_precision": "day",
-        "popularity": 33,
+        "popularity": 34,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27319329cd3ecae9c93507c09ed",
@@ -16608,7 +16608,7 @@
         ],
         "release_date": "2014-05-27",
         "release_date_precision": "day",
-        "popularity": 30,
+        "popularity": 31,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c03588434bc3d6b5ba2c4119",
@@ -16784,7 +16784,7 @@
         ],
         "release_date": "2021-08-20",
         "release_date_precision": "day",
-        "popularity": 31,
+        "popularity": 32,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f5c6742fcfd9dd98ffd397ba",
@@ -16916,7 +16916,7 @@
         ],
         "release_date": "1996-07-30",
         "release_date_precision": "day",
-        "popularity": 48,
+        "popularity": 49,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c4cb3ab94558b3893b1ccbd9",
@@ -19208,7 +19208,7 @@
         ],
         "release_date": "2009-01-26",
         "release_date_precision": "day",
-        "popularity": 28,
+        "popularity": 29,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273457bb3ff9cf7cb4adec045c3",
@@ -19341,7 +19341,7 @@
         ],
         "release_date": "2013-05-28",
         "release_date_precision": "day",
-        "popularity": 42,
+        "popularity": 43,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739ad23cad3ef037b00c1d2a20",
@@ -19915,7 +19915,7 @@
         ],
         "release_date": "2019-06-17",
         "release_date_precision": "day",
-        "popularity": 59,
+        "popularity": 60,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d9577b938f4ff10f5b136fe9",
@@ -19959,7 +19959,7 @@
         ],
         "release_date": "2022-10-07",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 64,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273be8e67d6db7bb17c437092fa",
@@ -21611,7 +21611,7 @@
         ],
         "release_date": "1982",
         "release_date_precision": "year",
-        "popularity": 71,
+        "popularity": 72,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273280b72ca76b4734debfc190e",
@@ -21787,7 +21787,7 @@
         ],
         "release_date": "1994-02-01",
         "release_date_precision": "day",
-        "popularity": 76,
+        "popularity": 77,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273db89b08034de626ebee6823d",

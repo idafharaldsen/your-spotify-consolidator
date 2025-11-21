@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-21T12:53:20.720Z",
+    "timestamp": "2025-11-21T13:30:26.813Z",
     "source": "Merged Streaming History"
   },
   "stats": {
@@ -85,15 +85,15 @@
       },
       {
         "year": "2022",
-        "totalListeningTimeMs": 2207107128,
-        "totalListeningHours": 613.09,
-        "playCount": 13304
+        "totalListeningTimeMs": 2206552811,
+        "totalListeningHours": 612.93,
+        "playCount": 13302
       },
       {
         "year": "2023",
-        "totalListeningTimeMs": 2726706211,
-        "totalListeningHours": 757.42,
-        "playCount": 16382
+        "totalListeningTimeMs": 2727260528,
+        "totalListeningHours": 757.57,
+        "playCount": 16384
       },
       {
         "year": "2024",
@@ -103,9 +103,9 @@
       },
       {
         "year": "2025",
-        "totalListeningTimeMs": 2209153093,
-        "totalListeningHours": 613.65,
-        "playCount": 11980
+        "totalListeningTimeMs": 2208626701,
+        "totalListeningHours": 613.51,
+        "playCount": 11977
       }
     ],
     "yearlyTopItems": [
@@ -4228,7 +4228,153 @@
         ]
       }
     ],
-    "totalListeningHours": 8665.78,
-    "totalListeningDays": 361.07
+    "totalListeningHours": 8665.64,
+    "totalListeningDays": 361.07,
+    "hourlyListeningDistribution": [
+      {
+        "hour": 0,
+        "totalListeningTimeMs": 961599058,
+        "totalListeningHours": 267.11,
+        "playCount": 5785
+      },
+      {
+        "hour": 1,
+        "totalListeningTimeMs": 660486176,
+        "totalListeningHours": 183.47,
+        "playCount": 4145
+      },
+      {
+        "hour": 2,
+        "totalListeningTimeMs": 361215127,
+        "totalListeningHours": 100.34,
+        "playCount": 2246
+      },
+      {
+        "hour": 3,
+        "totalListeningTimeMs": 242869253,
+        "totalListeningHours": 67.46,
+        "playCount": 1406
+      },
+      {
+        "hour": 4,
+        "totalListeningTimeMs": 177290719,
+        "totalListeningHours": 49.25,
+        "playCount": 1123
+      },
+      {
+        "hour": 5,
+        "totalListeningTimeMs": 195136696,
+        "totalListeningHours": 54.2,
+        "playCount": 1068
+      },
+      {
+        "hour": 6,
+        "totalListeningTimeMs": 262595963,
+        "totalListeningHours": 72.94,
+        "playCount": 1459
+      },
+      {
+        "hour": 7,
+        "totalListeningTimeMs": 544997846,
+        "totalListeningHours": 151.39,
+        "playCount": 3126
+      },
+      {
+        "hour": 8,
+        "totalListeningTimeMs": 754893964,
+        "totalListeningHours": 209.69,
+        "playCount": 4450
+      },
+      {
+        "hour": 9,
+        "totalListeningTimeMs": 1156185995,
+        "totalListeningHours": 321.16,
+        "playCount": 6786
+      },
+      {
+        "hour": 10,
+        "totalListeningTimeMs": 1501765241,
+        "totalListeningHours": 417.16,
+        "playCount": 8716
+      },
+      {
+        "hour": 11,
+        "totalListeningTimeMs": 1610353514,
+        "totalListeningHours": 447.32,
+        "playCount": 9230
+      },
+      {
+        "hour": 12,
+        "totalListeningTimeMs": 1897287564,
+        "totalListeningHours": 527.02,
+        "playCount": 10770
+      },
+      {
+        "hour": 13,
+        "totalListeningTimeMs": 2255228029,
+        "totalListeningHours": 626.45,
+        "playCount": 13000
+      },
+      {
+        "hour": 14,
+        "totalListeningTimeMs": 2366854087,
+        "totalListeningHours": 657.46,
+        "playCount": 13540
+      },
+      {
+        "hour": 15,
+        "totalListeningTimeMs": 2333904084,
+        "totalListeningHours": 648.31,
+        "playCount": 13447
+      },
+      {
+        "hour": 16,
+        "totalListeningTimeMs": 2130133854,
+        "totalListeningHours": 591.7,
+        "playCount": 12465
+      },
+      {
+        "hour": 17,
+        "totalListeningTimeMs": 2080563026,
+        "totalListeningHours": 577.93,
+        "playCount": 11835
+      },
+      {
+        "hour": 18,
+        "totalListeningTimeMs": 1834206540,
+        "totalListeningHours": 509.5,
+        "playCount": 10463
+      },
+      {
+        "hour": 19,
+        "totalListeningTimeMs": 1804109501,
+        "totalListeningHours": 501.14,
+        "playCount": 10214
+      },
+      {
+        "hour": 20,
+        "totalListeningTimeMs": 1692347427,
+        "totalListeningHours": 470.1,
+        "playCount": 9539
+      },
+      {
+        "hour": 21,
+        "totalListeningTimeMs": 1614972899,
+        "totalListeningHours": 448.6,
+        "playCount": 9146
+      },
+      {
+        "hour": 22,
+        "totalListeningTimeMs": 1445358402,
+        "totalListeningHours": 401.49,
+        "playCount": 8278
+      },
+      {
+        "hour": 23,
+        "totalListeningTimeMs": 1311939605,
+        "totalListeningHours": 364.43,
+        "playCount": 7543
+      }
+    ]
   }
 }

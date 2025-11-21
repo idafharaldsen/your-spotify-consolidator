@@ -15,7 +15,8 @@ import type {
   YearlyListeningTime,
   YearlyTopItems,
   TopSong,
-  TopArtist
+  TopArtist,
+  HourlyListeningDistribution
 } from './utils/types';
 
 class CleanedFilesGenerator {
@@ -795,9 +796,23 @@ class CleanedFilesGenerator {
     const yearlySongsMap = new Map<string, Map<string, { playCount: number; totalMs: number; name: string; artist: string; images: Array<{ height: number; url: string; width: number }> }>>();
     const yearlyArtistsMap = new Map<string, Map<string, { playCount: number; totalMs: number; uniqueSongs: Set<string>; images: Array<{ height: number; url: string; width: number }>; representativeSongId: string | null }>>();
     
+    // Array to track hourly listening distribution (0-23 hours)
+    const hourlyMap = new Map<number, { totalMs: number; playCount: number }>();
+    // Initialize all 24 hours
+    for (let hour = 0; hour < 24; hour++) {
+      hourlyMap.set(hour, { totalMs: 0, playCount: 0 });
+    }
+    
     history.songs.forEach(song => {
       song.listeningEvents.forEach(event => {
-        const year = new Date(event.playedAt).getFullYear().toString();
+        const eventDate = new Date(event.playedAt);
+        const year = eventDate.getFullYear().toString();
+        const hour = eventDate.getHours();
+        
+        // Update hourly totals
+        const hourData = hourlyMap.get(hour)!;
+        hourData.totalMs += event.msPlayed;
+        hourData.playCount += 1;
         
         // Update yearly totals
         if (!yearlyMap.has(year)) {
@@ -922,11 +937,22 @@ class CleanedFilesGenerator {
     const totalListeningHours = Math.round((totalListeningTimeMs / (1000 * 60 * 60)) * 100) / 100;
     const totalListeningDays = Math.round((totalListeningHours / 24) * 100) / 100;
     
+    // Convert hourly map to array sorted by hour (0-23)
+    const hourlyListeningDistribution: HourlyListeningDistribution[] = Array.from(hourlyMap.entries())
+      .map(([hour, data]) => ({
+        hour,
+        totalListeningTimeMs: data.totalMs,
+        totalListeningHours: Math.round((data.totalMs / (1000 * 60 * 60)) * 100) / 100,
+        playCount: data.playCount
+      }))
+      .sort((a, b) => a.hour - b.hour);
+    
     return {
       yearlyListeningTime,
       yearlyTopItems,
       totalListeningHours,
-      totalListeningDays
+      totalListeningDays,
+      hourlyListeningDistribution
     };
   }
 
