@@ -326,21 +326,21 @@ export class FileOperations {
     // Verify we have enriched data before saving
     let songsWithImages = 0;
     let artistsWithImages = 0;
-    detailedStats.yearlyTopItems.forEach(yearData => {
-      yearData.topSongs.forEach(song => {
+    detailedStats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
+      yearData.topSongs.forEach((song: TopSong) => {
         if (song.images && song.images.length > 0) {
           songsWithImages++;
         }
       });
-      yearData.topArtists.forEach(artist => {
+      yearData.topArtists.forEach((artist: TopArtist) => {
         if (artist.images && artist.images.length > 0) {
           artistsWithImages++;
         }
       });
     });
     
-    const totalSongs = detailedStats.yearlyTopItems.reduce((sum: number, year) => sum + year.topSongs.length, 0);
-    const totalArtists = detailedStats.yearlyTopItems.reduce((sum: number, year) => sum + year.topArtists.length, 0);
+    const totalSongs = detailedStats.yearlyTopItems.reduce((sum: number, year: YearlyTopItems) => sum + year.topSongs.length, 0);
+    const totalArtists = detailedStats.yearlyTopItems.reduce((sum: number, year: YearlyTopItems) => sum + year.topArtists.length, 0);
     
     console.log(`\n📊 Detailed Stats Summary:`);
     console.log(`   Songs with images: ${songsWithImages} / ${totalSongs}`);
