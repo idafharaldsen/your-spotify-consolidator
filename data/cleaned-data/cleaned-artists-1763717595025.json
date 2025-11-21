@@ -4,7 +4,11 @@
     "consolidatedTotalArtists": 9024,
     "duplicatesRemoved": 6,
     "consolidationRate": 0.07,
+<<<<<<<< HEAD:data/cleaned-data/cleaned-artists-1763717595025.json
     "timestamp": "2025-11-21T09:33:15.034Z",
+========
+    "timestamp": "2025-11-21T09:30:37.583Z",
+>>>>>>>> e367ea1921e84b03a6bb5459d2577a78efb6b107:data/cleaned-data/cleaned-artists-1763717437576.json
     "source": "Merged Streaming History",
     "totalListeningEvents": 179754
   },
