@@ -1278,17 +1278,6 @@ class CleanedFilesGenerator {
       console.log('🚀 Generating All Cleaned Files from Complete Listening History');
       console.log('================================================================');
       
-      // Check if there are new recent plays - exit early if not
-      const hasNewPlays = await this.checkForNewRecentPlays();
-      if (!hasNewPlays) {
-        console.log('');
-        console.log('⏭️  No new tracks to process. Exiting early to save resources.');
-        console.log('💡 To force processing, run the merge step first or manually add recent plays.');
-        console.log('');
-        return; // Exit early - no need to process
-      }
-      
-      console.log('');
       const historyFile = this.fileOps.findLatestCompleteHistoryFile();
       if (!historyFile) {
         console.log('⚠️  No complete listening history found');
