@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-21T09:26:34.768Z",
+    "timestamp": "2025-11-21T09:33:17.875Z",
     "source": "Merged Streaming History"
   },
   "stats": {
@@ -85,15 +85,15 @@
       },
       {
         "year": "2022",
-        "totalListeningTimeMs": 2207107128,
-        "totalListeningHours": 613.09,
-        "playCount": 13304
+        "totalListeningTimeMs": 2206552811,
+        "totalListeningHours": 612.93,
+        "playCount": 13302
       },
       {
         "year": "2023",
-        "totalListeningTimeMs": 2726706211,
-        "totalListeningHours": 757.42,
-        "playCount": 16382
+        "totalListeningTimeMs": 2727260528,
+        "totalListeningHours": 757.57,
+        "playCount": 16384
       },
       {
         "year": "2024",

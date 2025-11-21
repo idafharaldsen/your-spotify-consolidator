@@ -1098,19 +1098,30 @@ class CleanedFilesGenerator {
 
     const totalSongs = allSongIds.size;
     console.log(`   Processing ${totalSongs} unique songs from top items`);
+    console.log(`   Available songs in map: ${existingSongs.size}`);
 
     // First, try to match with existing cleaned songs
     const songIdToImages = new Map<string, Array<{ height: number; url: string; width: number }>>();
     const songsNeedingLookup = new Set<string>();
+    let foundInMap = 0;
+    let foundWithoutImages = 0;
 
     allSongIds.forEach(songId => {
       const existingSong = existingSongs.get(songId);
-      if (existingSong && existingSong.album && existingSong.album.images && existingSong.album.images.length > 0) {
-        songIdToImages.set(songId, existingSong.album.images);
+      if (existingSong) {
+        foundInMap++;
+        if (existingSong.album && existingSong.album.images && existingSong.album.images.length > 0) {
+          songIdToImages.set(songId, existingSong.album.images);
+        } else {
+          foundWithoutImages++;
+          songsNeedingLookup.add(songId);
+        }
       } else {
         songsNeedingLookup.add(songId);
       }
     });
+
+    console.log(`   Found ${foundInMap} songs in map, ${foundWithoutImages} without images`);
 
     console.log(`   Found ${songIdToImages.size} songs in existing cleaned data`);
     console.log(`   Need to lookup ${songsNeedingLookup.size} songs from Spotify API`);
@@ -1125,18 +1136,33 @@ class CleanedFilesGenerator {
 
       // Extract album images from tracks
       let tracksWithImages = 0;
+      let tracksWithoutImages = 0;
       tracks.forEach(track => {
         if (track && track.album && track.album.images && track.album.images.length > 0) {
           songIdToImages.set(track.id, track.album.images);
           tracksWithImages++;
+        } else {
+          tracksWithoutImages++;
+          // Log some examples of tracks without images for debugging
+          if (tracksWithoutImages <= 3) {
+            console.log(`   ⚠️  Track ${track?.id || 'unknown'} has no album images`);
+          }
         }
       });
-      console.log(`   Found images for ${tracksWithImages} tracks`);
+      console.log(`   Found images for ${tracksWithImages} tracks, ${tracksWithoutImages} without images`);
+      
+      // Check if we're missing any songs (API might return null for some tracks)
+      const fetchedTrackIds = new Set(tracks.map(t => t.id));
+      const missingTrackIds = songIdsArray.filter(id => !fetchedTrackIds.has(id));
+      if (missingTrackIds.length > 0) {
+        console.log(`   ⚠️  ${missingTrackIds.length} track IDs were not returned by API (may be invalid or unavailable)`);
+      }
     }
 
     // Update detailed stats with enriched images
     let enrichedCount = 0;
     let missingCount = 0;
+    const missingSongIds: string[] = [];
     detailedStats.yearlyTopItems.forEach(yearData => {
       yearData.topSongs.forEach(song => {
         const images = songIdToImages.get(song.songId);
@@ -1145,6 +1171,7 @@ class CleanedFilesGenerator {
           enrichedCount++;
         } else {
           missingCount++;
+          missingSongIds.push(song.songId);
           // Keep empty array if no images found
           if (!song.images) {
             song.images = [];
@@ -1156,6 +1183,10 @@ class CleanedFilesGenerator {
     console.log(`✅ Enriched ${enrichedCount} songs with images`);
     if (missingCount > 0) {
       console.log(`⚠️  ${missingCount} songs still missing images`);
+      // Log first few missing song IDs for debugging
+      if (missingSongIds.length > 0) {
+        console.log(`   Example missing song IDs: ${missingSongIds.slice(0, 5).join(', ')}`);
+      }
     }
     return detailedStats;
   }
