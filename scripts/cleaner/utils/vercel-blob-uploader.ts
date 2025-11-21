@@ -102,7 +102,8 @@ export async function uploadMultipleToVercelBlob(
 
 /**
  * Clean up old cleaned data files from blob storage
- * Deletes all files with 'cleaned-' prefix and 'detailed-stats.json'
+ * Deletes all files with 'cleaned-' prefix
+ * Note: detailed-stats.json is handled separately in saveDetailedStats()
  * The fixed filenames will be re-uploaded immediately after cleanup
  */
 export async function cleanupOldBlobFiles(): Promise<void> {
@@ -110,17 +111,13 @@ export async function cleanupOldBlobFiles(): Promise<void> {
     console.log('🧹 Cleaning up old files from Vercel Blob Storage...');
     
     // List all files that start with 'cleaned-' (our pattern)
+    // Note: detailed-stats.json is NOT included here - it's handled separately
     const cleanedBlobs = await listBlobsByPrefix('cleaned-');
     
-    // Also check for detailed-stats.json
-    const detailedStatsBlobs = await listBlobsByPrefix('detailed-stats');
-    
-    const allBlobs = [...cleanedBlobs, ...detailedStatsBlobs];
-    
-    if (allBlobs.length > 0) {
-      console.log(`Found ${allBlobs.length} file(s) to delete:`);
-      allBlobs.forEach(file => console.log(`  - ${file}`));
-      await deleteMultipleFromVercelBlob(allBlobs);
+    if (cleanedBlobs.length > 0) {
+      console.log(`Found ${cleanedBlobs.length} file(s) to delete:`);
+      cleanedBlobs.forEach(file => console.log(`  - ${file}`));
+      await deleteMultipleFromVercelBlob(cleanedBlobs);
       console.log('✅ Cleanup complete');
     } else {
       console.log('✅ No old files to clean up');

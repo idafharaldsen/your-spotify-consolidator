@@ -396,13 +396,20 @@ export class FileOperations {
         console.log('   Cleaning up old detailed-stats.json from blob storage...');
         try {
           await deleteFromVercelBlob('detailed-stats.json');
-        } catch (error) {
-          // Ignore errors - file might not exist
-          console.log('   (Old detailed-stats.json not found or already deleted)');
+          console.log('   ✅ Old file deleted successfully');
+          // Wait a bit for deletion to propagate
+          await new Promise(resolve => setTimeout(resolve, 1000));
+        } catch (error: any) {
+          // Check if it's a 404 (file doesn't exist) - that's fine
+          if (error?.status === 404 || error?.message?.includes('not found')) {
+            console.log('   ℹ️  Old detailed-stats.json not found (will upload new one)');
+          } else {
+            console.error('   ⚠️  Failed to delete old file, but continuing with upload:', error);
+          }
         }
         
         // Small delay to ensure file is fully flushed to disk
-        await new Promise(resolve => setTimeout(resolve, 100));
+        await new Promise(resolve => setTimeout(resolve, 200));
         
         // Verify file still exists and has content before uploading
         if (!fs.existsSync(statsFile)) {
@@ -436,14 +443,19 @@ export class FileOperations {
         console.log(`   File contains: ${uploadSongsWithImages} songs and ${uploadArtistsWithImages} artists with images`);
         
         if (uploadSongsWithImages === 0 && uploadArtistsWithImages === 0) {
-          console.error('⚠️  WARNING: File being uploaded has NO images! This should not happen.');
-          console.error('   This might indicate enrichment did not complete or failed.');
+          console.error('⚠️  ERROR: File being uploaded has NO images! Aborting upload.');
+          console.error('   This indicates enrichment did not complete or failed.');
+          throw new Error('Cannot upload file without images - enrichment may have failed');
         }
         
+        // Upload the file - this should overwrite any existing file
         await uploadMultipleToVercelBlob([
           { filePath: statsFile, blobPath: 'detailed-stats.json' }
         ]);
+        
+        // Verify upload succeeded
         console.log('✅ Detailed stats uploaded to Vercel Blob Storage');
+        console.log(`   Successfully uploaded: ${uploadSongsWithImages} songs and ${uploadArtistsWithImages} artists with images`);
       } catch (error) {
         console.error('⚠️  Failed to upload detailed stats to Vercel Blob Storage:', error);
       }
