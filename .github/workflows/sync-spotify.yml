@@ -1,9 +1,9 @@
-name: Daily Spotify Data Sync
+name: Spotify Data Sync
 
 on:
   schedule:
-    # Run daily at 2 AM UTC
-    - cron: '0 2 * * *'
+    # Run every 2 hours
+    - cron: '0 */2 * * *'
   workflow_dispatch: # Allow manual triggers
 
 jobs:
@@ -23,7 +23,24 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      - name: Pull latest changes
+        run: |
+          git fetch origin master
+          git pull --rebase origin master || git pull --no-edit origin master || echo "No remote changes to pull"
+        
+      - name: Check for new tracks
+        id: check-tracks
+        env:
+          SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
+          SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
+          SPOTIFY_REFRESH_TOKEN: ${{ secrets.SPOTIFY_REFRESH_TOKEN }}
+        run: |
+          npm run check-for-new-tracks
+          echo "has_new_tracks=true" >> $GITHUB_OUTPUT
+        continue-on-error: true
+        
       - name: Fetch recent Spotify plays
+        if: steps.check-tracks.outcome == 'success'
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
@@ -31,9 +48,11 @@ jobs:
         run: npm run fetch-recent-plays
         
       - name: Merge recent data with merged streaming history
+        if: steps.check-tracks.outcome == 'success'
         run: npm run merge-recent-data
         
       - name: Generate cleaned and consolidated data files
+        if: steps.check-tracks.outcome == 'success'
         env:
           SPOTIFY_CLIENT_ID: ${{ secrets.SPOTIFY_CLIENT_ID }}
           SPOTIFY_CLIENT_SECRET: ${{ secrets.SPOTIFY_CLIENT_SECRET }}
@@ -42,23 +61,26 @@ jobs:
         run: npm run generate-cleaned-files
         
       - name: Pull latest changes
+        if: steps.check-tracks.outcome == 'success'
         run: |
           git fetch origin master
           git pull --rebase origin master || git pull --no-edit origin master || echo "No remote changes to pull"
           
       - name: Commit changes
+        if: steps.check-tracks.outcome == 'success'
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add data/merged-streaming-history/ data/cleaned-data/
-          git diff --staged --quiet || git commit -m "Daily Spotify sync $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          git diff --staged --quiet || git commit -m "Spotify sync $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
           
       - name: Push changes
+        if: steps.check-tracks.outcome == 'success'
         run: |
           git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}@github.com/${{ github.repository }}.git master
           
       - name: Trigger Vercel deployment
-        if: success()
+        if: steps.check-tracks.outcome == 'success'  # Only deploy if new tracks were processed
         run: |
           if [ -n "${{ secrets.VERCEL_DEPLOY_HOOK }}" ]; then
             curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
