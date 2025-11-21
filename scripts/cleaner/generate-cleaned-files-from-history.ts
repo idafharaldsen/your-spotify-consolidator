@@ -1075,6 +1075,81 @@ class CleanedFilesGenerator {
   }
 
   /**
+   * Enrich detailed stats with song images from Spotify API
+   */
+  private async enrichDetailedStatsWithSongImages(
+    detailedStats: DetailedStats,
+    existingSongs: Map<string, CleanedSong>
+  ): Promise<DetailedStats> {
+    if (!this.tokenManager) {
+      console.log('ℹ️  Skipping song image enrichment for detailed stats (Spotify tokens not available)');
+      return detailedStats;
+    }
+
+    console.log('\n📥 Enriching detailed stats with song images from Spotify API...');
+    
+    // Collect all unique song IDs from yearly top items
+    const songIdsToEnrich = new Set<string>();
+    detailedStats.yearlyTopItems.forEach(yearData => {
+      yearData.topSongs.forEach(song => {
+        // Only enrich if images are missing or empty
+        if (!song.images || song.images.length === 0) {
+          songIdsToEnrich.add(song.songId);
+        }
+      });
+    });
+
+    console.log(`   Found ${songIdsToEnrich.size} songs needing images (out of ${detailedStats.yearlyTopItems.reduce((sum, year) => sum + year.topSongs.length, 0)} total)`);
+
+    // First, try to match with existing cleaned songs
+    const songIdToImages = new Map<string, Array<{ height: number; url: string; width: number }>>();
+    const songsNeedingLookup = new Set<string>();
+
+    songIdsToEnrich.forEach(songId => {
+      const existingSong = existingSongs.get(songId);
+      if (existingSong && existingSong.album.images && existingSong.album.images.length > 0) {
+        songIdToImages.set(songId, existingSong.album.images);
+      } else {
+        songsNeedingLookup.add(songId);
+      }
+    });
+
+    console.log(`   Found ${songIdToImages.size} songs in existing cleaned data`);
+    console.log(`   Need to lookup ${songsNeedingLookup.size} songs from Spotify API`);
+
+    // For songs not found, fetch from Spotify API
+    if (songsNeedingLookup.size > 0) {
+      const accessToken = await this.tokenManager.getValidAccessToken();
+      const songIdsArray = Array.from(songsNeedingLookup);
+      console.log(`   Fetching ${songIdsArray.length} tracks from Spotify API...`);
+      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, songIdsArray);
+      console.log(`✅ Fetched ${tracks.length} tracks`);
+
+      // Extract album images from tracks
+      tracks.forEach(track => {
+        if (track.album && track.album.images && track.album.images.length > 0) {
+          songIdToImages.set(track.id, track.album.images);
+        }
+      });
+    }
+
+    // Update detailed stats with enriched images
+    let enrichedCount = 0;
+    detailedStats.yearlyTopItems.forEach(yearData => {
+      yearData.topSongs.forEach(song => {
+        const images = songIdToImages.get(song.songId);
+        if (images && images.length > 0) {
+          song.images = images;
+          enrichedCount++;
+        }
+      });
+    });
+
+    console.log(`✅ Enriched ${enrichedCount} songs with images from Spotify API`);
+    return detailedStats;
+  }
+
+  /**
    * Main function to generate all cleaned files
    */
   async generateCleanedFiles(): Promise<void> {
@@ -1110,8 +1185,9 @@ class CleanedFilesGenerator {
         artistsResult.artists = await this.enrichArtistsWithMetadata(artistsResult.artists, existingFiles.artists);
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
         
-        // Enrich detailed stats with actual artist images
-        const enrichedStats = await this.enrichDetailedStatsWithArtistImages(detailedStats, existingFiles.artists, history);
+        // Enrich detailed stats with actual artist and song images
+        let enrichedStats = await this.enrichDetailedStatsWithArtistImages(detailedStats, existingFiles.artists, history);
+        enrichedStats = await this.enrichDetailedStatsWithSongImages(enrichedStats, existingFiles.songs);
         detailedStats = enrichedStats;
       }
       
