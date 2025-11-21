@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import { glob } from 'glob';
-import { uploadMultipleToVercelBlob, cleanupOldBlobFiles } from './vercel-blob-uploader';
+import { uploadMultipleToVercelBlob, cleanupOldBlobFiles, deleteFromVercelBlob } from './vercel-blob-uploader';
 import type { CompleteListeningHistory, CompleteSong, CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, DetailedStats, YearlyTopItems, TopSong, TopArtist } from './types';
 
 /**
@@ -392,6 +392,15 @@ export class FileOperations {
     const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
     if (shouldUpload) {
       try {
+        // Delete old detailed-stats.json from blob storage before uploading new one
+        console.log('   Cleaning up old detailed-stats.json from blob storage...');
+        try {
+          await deleteFromVercelBlob('detailed-stats.json');
+        } catch (error) {
+          // Ignore errors - file might not exist
+          console.log('   (Old detailed-stats.json not found or already deleted)');
+        }
+        
         // Small delay to ensure file is fully flushed to disk
         await new Promise(resolve => setTimeout(resolve, 100));
         
