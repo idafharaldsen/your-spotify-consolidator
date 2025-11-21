@@ -792,8 +792,8 @@ class CleanedFilesGenerator {
     
     // Maps to track yearly data
     const yearlyMap = new Map<string, { totalMs: number; playCount: number }>();
-    const yearlySongsMap = new Map<string, Map<string, { playCount: number; totalMs: number; name: string; artist: string }>>();
-    const yearlyArtistsMap = new Map<string, Map<string, { playCount: number; totalMs: number; uniqueSongs: Set<string> }>>();
+    const yearlySongsMap = new Map<string, Map<string, { playCount: number; totalMs: number; name: string; artist: string; images: Array<{ height: number; url: string; width: number }> }>>();
+    const yearlyArtistsMap = new Map<string, Map<string, { playCount: number; totalMs: number; uniqueSongs: Set<string>; images: Array<{ height: number; url: string; width: number }>; representativeSongId: string | null }>>();
     
     history.songs.forEach(song => {
       song.listeningEvents.forEach(event => {
@@ -817,12 +817,17 @@ class CleanedFilesGenerator {
             playCount: 0,
             totalMs: 0,
             name: song.name,
-            artist: song.artist.name || song.artists[0] || 'Unknown Artist'
+            artist: song.artist.name || song.artists[0] || 'Unknown Artist',
+            images: song.album.images || []
           });
         }
         const songData = yearSongsMap.get(song.songId)!;
         songData.playCount += 1;
         songData.totalMs += event.msPlayed;
+        // Update images if we get better ones (non-empty images)
+        if (song.album.images && song.album.images.length > 0 && (!songData.images || songData.images.length === 0)) {
+          songData.images = song.album.images;
+        }
         
         // Track artists per year
         if (!yearlyArtistsMap.has(year)) {
@@ -834,13 +839,33 @@ class CleanedFilesGenerator {
           yearArtistsMap.set(artistName, {
             playCount: 0,
             totalMs: 0,
-            uniqueSongs: new Set()
+            uniqueSongs: new Set(),
+            images: [],
+            representativeSongId: null
           });
         }
         const artistData = yearArtistsMap.get(artistName)!;
         artistData.playCount += 1;
         artistData.totalMs += event.msPlayed;
         artistData.uniqueSongs.add(song.songId);
+        // Store a representative song ID for later artist lookup
+        if (!artistData.representativeSongId && song.songId) {
+          artistData.representativeSongId = song.songId;
+        }
+        // Use album images from the artist's songs (prefer images with higher resolution)
+        if (song.album.images && song.album.images.length > 0) {
+          // If we don't have images yet, or if this song's album has better images, update
+          if (artistData.images.length === 0) {
+            artistData.images = song.album.images;
+          } else {
+            // Prefer images with higher resolution (larger height)
+            const currentMaxHeight = Math.max(...artistData.images.map(img => img.height));
+            const newMaxHeight = Math.max(...song.album.images.map(img => img.height));
+            if (newMaxHeight > currentMaxHeight) {
+              artistData.images = song.album.images;
+            }
+          }
+        }
       });
     });
     
@@ -866,7 +891,8 @@ class CleanedFilesGenerator {
             name: data.name,
             artist: data.artist,
             playCount: data.playCount,
-            totalListeningTimeMs: data.totalMs
+            totalListeningTimeMs: data.totalMs,
+            images: data.images || []
           }))
           .sort((a, b) => b.playCount - a.playCount)
           .slice(0, 5);
@@ -878,7 +904,8 @@ class CleanedFilesGenerator {
             artistName,
             playCount: data.playCount,
             totalListeningTimeMs: data.totalMs,
-            uniqueSongs: data.uniqueSongs.size
+            uniqueSongs: data.uniqueSongs.size,
+            images: data.images || []
           }))
           .sort((a, b) => b.playCount - a.playCount)
           .slice(0, 5);
@@ -904,6 +931,150 @@ class CleanedFilesGenerator {
   }
 
   /**
+   * Enrich detailed stats with actual artist images from Spotify API
+   */
+  private async enrichDetailedStatsWithArtistImages(
+    detailedStats: DetailedStats,
+    existingArtists: Map<string, CleanedArtist>,
+    history: CompleteListeningHistory
+  ): Promise<DetailedStats> {
+    if (!this.tokenManager) {
+      console.log('ℹ️  Skipping artist image enrichment for detailed stats (Spotify tokens not available)');
+      return detailedStats;
+    }
+
+    console.log('\n📥 Enriching detailed stats with artist images from Spotify API...');
+    
+    // Collect all unique artist names from yearly top items
+    const artistNameToYearlyData = new Map<string, { year: string; artist: TopArtist }>();
+    detailedStats.yearlyTopItems.forEach(yearData => {
+      yearData.topArtists.forEach(artist => {
+        const key = artist.artistName.toLowerCase().trim();
+        if (!artistNameToYearlyData.has(key)) {
+          artistNameToYearlyData.set(key, { year: yearData.year, artist });
+        }
+      });
+    });
+
+    // First, try to match with existing cleaned artists
+    const artistNameToImages = new Map<string, Array<{ height: number; url: string; width: number }>>();
+    const artistsNeedingLookup = new Map<string, { year: string; artist: TopArtist; representativeSongId?: string }>();
+
+    artistNameToYearlyData.forEach((data, artistNameKey) => {
+      // Try to find in existing cleaned artists
+      let found = existingArtists.get(artistNameKey);
+      if (!found) {
+        // Try exact match
+        for (const [key, artist] of existingArtists.entries()) {
+          if (key.toLowerCase().trim() === artistNameKey) {
+            found = artist;
+            break;
+          }
+        }
+      }
+
+      if (found && found.artist.images && found.artist.images.length > 0) {
+        artistNameToImages.set(artistNameKey, found.artist.images);
+      } else {
+        // Need to look up this artist
+        artistsNeedingLookup.set(artistNameKey, data);
+      }
+    });
+
+    console.log(`   Found ${artistNameToImages.size} artists in existing cleaned data`);
+    console.log(`   Need to lookup ${artistsNeedingLookup.size} artists from Spotify API`);
+
+    // For artists not found, we need to get their artist IDs
+    // We'll need to find a representative song for each artist and get the artist ID from the track
+    if (artistsNeedingLookup.size > 0) {
+      // Create a map of artist name to song IDs from history
+      const artistToSongIds = new Map<string, string[]>();
+      history.songs.forEach(song => {
+        const artistName = (song.artist.name || song.artists[0] || '').toLowerCase().trim();
+        if (artistName && artistsNeedingLookup.has(artistName)) {
+          if (!artistToSongIds.has(artistName)) {
+            artistToSongIds.set(artistName, []);
+          }
+          if (song.songId) {
+            artistToSongIds.get(artistName)!.push(song.songId);
+          }
+        }
+      });
+
+      // Get representative song IDs for each artist
+      const songIdsToFetch = new Set<string>();
+      const artistNameToSongId = new Map<string, string>();
+      
+      artistsNeedingLookup.forEach((data, artistNameKey) => {
+        const songIds = artistToSongIds.get(artistNameKey);
+        if (songIds && songIds.length > 0) {
+          const songId = songIds[0]; // Use first available song
+          songIdsToFetch.add(songId);
+          artistNameToSongId.set(artistNameKey, songId);
+        }
+      });
+
+      if (songIdsToFetch.size > 0) {
+        const accessToken = await this.tokenManager.getValidAccessToken();
+        console.log(`   Fetching ${songIdsToFetch.size} tracks to get artist IDs...`);
+        const tracks = await this.spotifyApiClient.fetchTracks(accessToken, Array.from(songIdsToFetch));
+        console.log(`✅ Fetched ${tracks.length} tracks`);
+
+        // Extract artist IDs from tracks
+        const artistIds = new Set<string>();
+        const artistNameToArtistId = new Map<string, string>();
+        
+        tracks.forEach(track => {
+          if (track.artists && track.artists.length > 0) {
+            const artistId = track.artists[0].id;
+            const artistName = track.artists[0].name.toLowerCase().trim();
+            if (artistId) {
+              artistIds.add(artistId);
+              // Find which artist name this corresponds to
+              for (const [nameKey, songId] of artistNameToSongId.entries()) {
+                if (songId === track.id) {
+                  artistNameToArtistId.set(nameKey, artistId);
+                  break;
+                }
+              }
+            }
+          }
+        });
+
+        if (artistIds.size > 0) {
+          console.log(`   Found ${artistIds.size} unique artist IDs, fetching artist metadata...`);
+          const artistsMap = await this.spotifyApiClient.fetchArtists(accessToken, Array.from(artistIds));
+          console.log(`✅ Fetched ${artistsMap.size} artists`);
+
+          // Map artist IDs back to artist names and store images
+          artistNameToArtistId.forEach((artistId, artistNameKey) => {
+            const spotifyArtist = artistsMap.get(artistId);
+            if (spotifyArtist && spotifyArtist.images && spotifyArtist.images.length > 0) {
+              artistNameToImages.set(artistNameKey, spotifyArtist.images);
+            }
+          });
+        }
+      }
+    }
+
+    // Update detailed stats with enriched images
+    let enrichedCount = 0;
+    detailedStats.yearlyTopItems.forEach(yearData => {
+      yearData.topArtists.forEach(artist => {
+        const artistNameKey = artist.artistName.toLowerCase().trim();
+        const images = artistNameToImages.get(artistNameKey);
+        if (images && images.length > 0) {
+          artist.images = images;
+          enrichedCount++;
+        }
+      });
+    });
+
+    console.log(`✅ Enriched ${enrichedCount} artists with images from Spotify API`);
+    return detailedStats;
+  }
+
+  /**
    * Main function to generate all cleaned files
    */
   async generateCleanedFiles(): Promise<void> {
@@ -921,7 +1092,7 @@ class CleanedFilesGenerator {
       const history = this.fileOps.loadCompleteHistory(historyFile);
       
       // Calculate detailed statistics
-      const detailedStats = this.calculateDetailedStats(history);
+      let detailedStats = this.calculateDetailedStats(history);
       
       const songsResult = this.generateCleanedSongs(history);
       const albumsResult = this.generateCleanedAlbums(history);
@@ -938,6 +1109,10 @@ class CleanedFilesGenerator {
         albumsResult.albums = await this.enrichAlbumsWithMetadata(albumsResult.albums, existingFiles.albums);
         artistsResult.artists = await this.enrichArtistsWithMetadata(artistsResult.artists, existingFiles.artists);
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
+        
+        // Enrich detailed stats with actual artist images
+        const enrichedStats = await this.enrichDetailedStatsWithArtistImages(detailedStats, existingFiles.artists, history);
+        detailedStats = enrichedStats;
       }
       
       const timestamp = await this.fileOps.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);

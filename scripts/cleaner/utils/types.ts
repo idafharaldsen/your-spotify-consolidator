@@ -259,6 +259,11 @@ export interface TopSong {
   artist: string;
   playCount: number;
   totalListeningTimeMs: number;
+  images: Array<{
+    height: number;
+    url: string;
+    width: number;
+  }>;
 }
 
 export interface TopArtist {
@@ -266,6 +271,11 @@ export interface TopArtist {
   playCount: number;
   totalListeningTimeMs: number;
   uniqueSongs: number;
+  images: Array<{
+    height: number;
+    url: string;
+    width: number;
+  }>;
 }
 
 export interface YearlyTopItems {
