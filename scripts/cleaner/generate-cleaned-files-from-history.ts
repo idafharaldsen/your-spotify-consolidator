@@ -1089,25 +1089,23 @@ class CleanedFilesGenerator {
     console.log('\n📥 Enriching detailed stats with song images from Spotify API...');
     
     // Collect all unique song IDs from yearly top items
-    const songIdsToEnrich = new Set<string>();
+    const allSongIds = new Set<string>();
     detailedStats.yearlyTopItems.forEach(yearData => {
       yearData.topSongs.forEach(song => {
-        // Only enrich if images are missing or empty
-        if (!song.images || song.images.length === 0) {
-          songIdsToEnrich.add(song.songId);
-        }
+        allSongIds.add(song.songId);
       });
     });
 
-    console.log(`   Found ${songIdsToEnrich.size} songs needing images (out of ${detailedStats.yearlyTopItems.reduce((sum, year) => sum + year.topSongs.length, 0)} total)`);
+    const totalSongs = allSongIds.size;
+    console.log(`   Processing ${totalSongs} unique songs from top items`);
 
     // First, try to match with existing cleaned songs
     const songIdToImages = new Map<string, Array<{ height: number; url: string; width: number }>>();
     const songsNeedingLookup = new Set<string>();
 
-    songIdsToEnrich.forEach(songId => {
+    allSongIds.forEach(songId => {
       const existingSong = existingSongs.get(songId);
-      if (existingSong && existingSong.album.images && existingSong.album.images.length > 0) {
+      if (existingSong && existingSong.album && existingSong.album.images && existingSong.album.images.length > 0) {
         songIdToImages.set(songId, existingSong.album.images);
       } else {
         songsNeedingLookup.add(songId);
@@ -1126,26 +1124,39 @@ class CleanedFilesGenerator {
       console.log(`✅ Fetched ${tracks.length} tracks`);
 
       // Extract album images from tracks
+      let tracksWithImages = 0;
       tracks.forEach(track => {
-        if (track.album && track.album.images && track.album.images.length > 0) {
+        if (track && track.album && track.album.images && track.album.images.length > 0) {
           songIdToImages.set(track.id, track.album.images);
+          tracksWithImages++;
         }
       });
+      console.log(`   Found images for ${tracksWithImages} tracks`);
     }
 
     // Update detailed stats with enriched images
     let enrichedCount = 0;
+    let missingCount = 0;
     detailedStats.yearlyTopItems.forEach(yearData => {
       yearData.topSongs.forEach(song => {
         const images = songIdToImages.get(song.songId);
         if (images && images.length > 0) {
           song.images = images;
           enrichedCount++;
+        } else {
+          missingCount++;
+          // Keep empty array if no images found
+          if (!song.images) {
+            song.images = [];
+          }
         }
       });
     });
 
-    console.log(`✅ Enriched ${enrichedCount} songs with images from Spotify API`);
+    console.log(`✅ Enriched ${enrichedCount} songs with images`);
+    if (missingCount > 0) {
+      console.log(`⚠️  ${missingCount} songs still missing images`);
+    }
     return detailedStats;
   }
 
@@ -1186,8 +1197,39 @@ class CleanedFilesGenerator {
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
         
         // Enrich detailed stats with actual artist and song images
-        let enrichedStats = await this.enrichDetailedStatsWithArtistImages(detailedStats, existingFiles.artists, history);
-        enrichedStats = await this.enrichDetailedStatsWithSongImages(enrichedStats, existingFiles.songs);
+        // Use the newly enriched songs/artists, not just the existing files
+        
+        // Create a map of enriched artists for lookup
+        const enrichedArtistsMap = new Map<string, CleanedArtist>();
+        artistsResult.artists.forEach(artist => {
+          const nameKey = artist.artist.name.toLowerCase().trim();
+          enrichedArtistsMap.set(nameKey, artist);
+          if (artist.primaryArtistId) {
+            enrichedArtistsMap.set(artist.primaryArtistId, artist);
+          }
+        });
+        // Also include existing artists as fallback
+        existingFiles.artists.forEach((artist, key) => {
+          if (!enrichedArtistsMap.has(key)) {
+            enrichedArtistsMap.set(key, artist);
+          }
+        });
+        
+        let enrichedStats = await this.enrichDetailedStatsWithArtistImages(detailedStats, enrichedArtistsMap, history);
+        
+        // Create a map of enriched songs for lookup
+        const enrichedSongsMap = new Map<string, CleanedSong>();
+        songsResult.songs.forEach(song => {
+          enrichedSongsMap.set(song.songId, song);
+        });
+        // Also include existing songs as fallback
+        existingFiles.songs.forEach((song, songId) => {
+          if (!enrichedSongsMap.has(songId)) {
+            enrichedSongsMap.set(songId, song);
+          }
+        });
+        
+        enrichedStats = await this.enrichDetailedStatsWithSongImages(enrichedStats, enrichedSongsMap);
         detailedStats = enrichedStats;
       }
       
