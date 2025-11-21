@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { glob } from 'glob';
 import { uploadMultipleToVercelBlob, cleanupOldBlobFiles } from './vercel-blob-uploader';
-import type { CompleteListeningHistory, CompleteSong, CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, DetailedStats } from './types';
+import type { CompleteListeningHistory, CompleteSong, CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, DetailedStats, YearlyTopItems, TopSong, TopArtist } from './types';
 
 /**
  * File operations for loading and saving cleaned data files
@@ -322,22 +322,119 @@ export class FileOperations {
     }
     
     const statsFile = `data/cleaned-data/detailed-stats-${timestamp}.json`;
-    fs.writeFileSync(statsFile, JSON.stringify({
+    
+    // Verify we have enriched data before saving
+    let songsWithImages = 0;
+    let artistsWithImages = 0;
+    detailedStats.yearlyTopItems.forEach(yearData => {
+      yearData.topSongs.forEach(song => {
+        if (song.images && song.images.length > 0) {
+          songsWithImages++;
+        }
+      });
+      yearData.topArtists.forEach(artist => {
+        if (artist.images && artist.images.length > 0) {
+          artistsWithImages++;
+        }
+      });
+    });
+    
+    const totalSongs = detailedStats.yearlyTopItems.reduce((sum: number, year) => sum + year.topSongs.length, 0);
+    const totalArtists = detailedStats.yearlyTopItems.reduce((sum: number, year) => sum + year.topArtists.length, 0);
+    
+    console.log(`\n📊 Detailed Stats Summary:`);
+    console.log(`   Songs with images: ${songsWithImages} / ${totalSongs}`);
+    console.log(`   Artists with images: ${artistsWithImages} / ${totalArtists}`);
+    
+    const fileContent = JSON.stringify({
       metadata: {
         timestamp: new Date().toISOString(),
         source: 'Merged Streaming History'
       },
       stats: detailedStats
-    }, null, 2));
+    }, null, 2);
     
-    console.log(`- Detailed Stats: ${statsFile}`);
+    fs.writeFileSync(statsFile, fileContent);
+    
+    // Verify file was written correctly by checking it exists and has content
+    if (!fs.existsSync(statsFile)) {
+      throw new Error(`Failed to write detailed stats file: ${statsFile}`);
+    }
+    
+    // Verify the written file contains the enriched data
+    const writtenContent = fs.readFileSync(statsFile, 'utf8');
+    const writtenData = JSON.parse(writtenContent) as { stats?: DetailedStats };
+    let writtenSongsWithImages = 0;
+    let writtenArtistsWithImages = 0;
+    if (writtenData.stats && writtenData.stats.yearlyTopItems) {
+      writtenData.stats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
+        if (yearData.topSongs) {
+          yearData.topSongs.forEach((song: TopSong) => {
+            if (song.images && song.images.length > 0) {
+              writtenSongsWithImages++;
+            }
+          });
+        }
+        if (yearData.topArtists) {
+          yearData.topArtists.forEach((artist: TopArtist) => {
+            if (artist.images && artist.images.length > 0) {
+              writtenArtistsWithImages++;
+            }
+          });
+        }
+      });
+    }
+    
+    const fileSize = fs.statSync(statsFile).size;
+    console.log(`- Detailed Stats: ${statsFile} (${(fileSize / 1024).toFixed(2)} KB)`);
+    console.log(`   Verified: ${writtenSongsWithImages} songs and ${writtenArtistsWithImages} artists with images in saved file`);
     
     const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
     if (shouldUpload) {
       try {
+        // Small delay to ensure file is fully flushed to disk
+        await new Promise(resolve => setTimeout(resolve, 100));
+        
+        // Verify file still exists and has content before uploading
+        if (!fs.existsSync(statsFile)) {
+          throw new Error(`Stats file disappeared before upload: ${statsFile}`);
+        }
+        
+        // Read the file again right before upload to ensure we're uploading the correct content
+        const fileToUpload = fs.readFileSync(statsFile, 'utf8');
+        const uploadData = JSON.parse(fileToUpload) as { metadata?: { timestamp?: string }, stats?: DetailedStats };
+        const uploadTimestamp = uploadData.metadata?.timestamp;
+        
+        // Verify the file we're about to upload has enriched data
+        let uploadSongsWithImages = 0;
+        let uploadArtistsWithImages = 0;
+        if (uploadData.stats && uploadData.stats.yearlyTopItems) {
+          uploadData.stats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
+            yearData.topSongs.forEach((song: TopSong) => {
+              if (song.images && song.images.length > 0) {
+                uploadSongsWithImages++;
+              }
+            });
+            yearData.topArtists.forEach((artist: TopArtist) => {
+              if (artist.images && artist.images.length > 0) {
+                uploadArtistsWithImages++;
+              }
+            });
+          });
+        }
+        
+        console.log(`   Uploading file with timestamp: ${uploadTimestamp}`);
+        console.log(`   File contains: ${uploadSongsWithImages} songs and ${uploadArtistsWithImages} artists with images`);
+        
+        if (uploadSongsWithImages === 0 && uploadArtistsWithImages === 0) {
+          console.error('⚠️  WARNING: File being uploaded has NO images! This should not happen.');
+          console.error('   This might indicate enrichment did not complete or failed.');
+        }
+        
         await uploadMultipleToVercelBlob([
           { filePath: statsFile, blobPath: 'detailed-stats.json' }
         ]);
+        console.log('✅ Detailed stats uploaded to Vercel Blob Storage');
       } catch (error) {
         console.error('⚠️  Failed to upload detailed stats to Vercel Blob Storage:', error);
       }
