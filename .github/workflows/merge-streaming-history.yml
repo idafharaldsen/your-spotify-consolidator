@@ -50,6 +50,12 @@ jobs:
           path: data/merged-streaming-history/
           retention-days: 30
           
+      - name: Pull latest changes
+        if: steps.check-files.outputs.files_exist == 'true' && github.event_name == 'push'
+        run: |
+          git fetch origin master
+          git pull --rebase origin master || git pull --no-edit origin master || echo "No remote changes to pull"
+          
       - name: Commit merged data
         if: steps.check-files.outputs.files_exist == 'true' && github.event_name == 'push'
         run: |
