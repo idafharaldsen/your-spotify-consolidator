@@ -48,12 +48,6 @@ async function checkForNewTracks(): Promise<void> {
     // Check API for latest track
     const tokenManager = new SpotifyTokenManager();
     const accessToken = await tokenManager.getValidAccessToken();
-    const isValid = await tokenManager.testToken(accessToken);
-    
-    if (!isValid) {
-      console.log('⚠️  Invalid token, cannot check for new tracks. Proceeding with processing...');
-      process.exit(0); // If we can't check, proceed to be safe
-    }
 
     // Fetch the last 10 tracks to check timestamps
     const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=10', {
