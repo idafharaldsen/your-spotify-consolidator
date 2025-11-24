@@ -236,7 +236,9 @@ class CleanedFilesGenerator {
       
       const albumName = song.album.name.trim();
       const songArtist = (song.artists[0] || song.artist.name || 'Unknown Artist').trim();
-      const albumKey = `${albumName.toLowerCase()}|${songArtist.toLowerCase()}`;
+      // Normalize album name using consolidation rules before grouping
+      const normalizedAlbumName = this.consolidator.normalizeAlbumNameForGrouping(albumName, songArtist);
+      const albumKey = `${normalizedAlbumName}|${songArtist.toLowerCase()}`;
       
       if (!albumMap.has(albumKey)) {
         albumMap.set(albumKey, []);

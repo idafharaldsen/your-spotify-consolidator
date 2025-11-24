@@ -90,6 +90,13 @@ export class ConsolidationRulesManager {
  */
 export class Consolidator {
   constructor(private rulesManager: ConsolidationRulesManager) {}
+  
+  /**
+   * Normalize album name for grouping (public wrapper)
+   */
+  normalizeAlbumNameForGrouping(albumName: string, artistName: string): string {
+    return this.rulesManager.normalizeAlbumName(albumName, artistName);
+  }
 
   /**
    * Consolidate songs by name and artist
