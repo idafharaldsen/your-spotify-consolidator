@@ -213,7 +213,7 @@ export default function TopAlbumsPage() {
   return (
     <SpotifyStatsLayout
       title="My Top Albums"
-      description={loading ? 'Loading...' : `From ${albumsData?.metadata.consolidatedTotalAlbums} different albums from the past 15 years`}
+      description={loading ? 'Loading...' : `From ${albumsData?.metadata.originalTotalAlbums} different albums from the past 15 years`}
       currentPage="albums"
       additionalControls={<ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />}
     >
