@@ -272,6 +272,13 @@ export class Consolidator {
         existing.played_songs = existing.songs.filter((song: AlbumSong) => song.play_count > 0).length;
         existing.unplayed_songs = existing.songs.filter((song: AlbumSong) => song.play_count === 0).length;
         
+        // Update earliest_played_at to be the earliest between existing and new album
+        if (album.earliest_played_at) {
+          if (!existing.earliest_played_at || album.earliest_played_at < existing.earliest_played_at) {
+            existing.earliest_played_at = album.earliest_played_at;
+          }
+        }
+        
         const normalizedBaseName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
         if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
             normalizedBaseName === existing.album.name.toLowerCase().trim()) {

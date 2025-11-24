@@ -275,6 +275,20 @@ class CleanedFilesGenerator {
       const totalPlayCount = validSongs.reduce((sum, song) => sum + song.playCount, 0);
       const totalListeningTime = validSongs.reduce((sum, song) => sum + song.totalListeningTime, 0);
       const playedSongs = validSongs.filter(song => song.playCount > 0).length;
+      
+      // Find the earliest play time across all listening events for this album
+      let earliestPlayedAt: string | undefined;
+      validSongs.forEach(song => {
+        if (song.listeningEvents && song.listeningEvents.length > 0) {
+          song.listeningEvents.forEach(event => {
+            if (event.playedAt) {
+              if (!earliestPlayedAt || event.playedAt < earliestPlayedAt) {
+                earliestPlayedAt = event.playedAt;
+              }
+            }
+          });
+        }
+      });
 
       const albumSongs: AlbumSong[] = validSongs.map(song => ({
         songId: song.songId,
@@ -344,7 +358,8 @@ class CleanedFilesGenerator {
         total_songs: validSongs.length,
         played_songs: playedSongs,
         unplayed_songs: validSongs.length - playedSongs,
-        songs: albumSongs.sort((a, b) => b.play_count - a.play_count)
+        songs: albumSongs.sort((a, b) => b.play_count - a.play_count),
+        earliest_played_at: earliestPlayedAt
       };
     });
 

@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Search, Music, Play, X, Disc, Clock, ExternalLink } from 'lucide-react'
+import { Search, Music, Play, X, Disc, Clock, ExternalLink, Calendar } from 'lucide-react'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 
@@ -61,6 +61,7 @@ interface AlbumData {
   played_songs?: number
   unplayed_songs?: number
   songs?: Song[]
+  earliest_played_at?: string
 }
 
 interface AlbumsData {
@@ -90,6 +91,20 @@ const formatSongDuration = (durationMs: number) => {
   const minutes = Math.floor(durationMs / 60000)
   const seconds = Math.floor((durationMs % 60000) / 1000)
   return `${minutes}:${seconds.toString().padStart(2, '0')}`
+}
+
+// Format date helper
+const formatDate = (dateString: string) => {
+  try {
+    const date = new Date(dateString)
+    return date.toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'short', 
+      day: 'numeric' 
+    })
+  } catch {
+    return dateString
+  }
 }
 
 // Lazy loading image component
@@ -480,6 +495,12 @@ export default function TopAlbumsPage() {
                           <div className="flex items-center gap-1">
                             <Music className="w-4 h-4" />
                             <span>{selectedAlbum.played_songs}/{selectedAlbum.total_songs} played</span>
+                          </div>
+                        )}
+                        {selectedAlbum.earliest_played_at && (
+                          <div className="flex items-center gap-1">
+                            <Calendar className="w-4 h-4" />
+                            <span>First played {formatDate(selectedAlbum.earliest_played_at)}</span>
                           </div>
                         )}
                       </div>
