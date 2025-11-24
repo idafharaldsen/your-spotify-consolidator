@@ -425,12 +425,12 @@ export default function TopAlbumsPage() {
       
       {/* Album Details Modal */}
       <Dialog open={!!selectedAlbum} onOpenChange={(open) => !open && setSelectedAlbum(null)}>
-        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col overflow-hidden">
           {selectedAlbum && (
-            <>
-              <DialogHeader>
-                <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
-                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted mx-auto sm:mx-0">
+            <div className="flex flex-col overflow-hidden h-full">
+              <DialogHeader className="flex-shrink-0">
+                <div className="flex flex-col items-center gap-4 mb-2">
+                  <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted">
                     {selectedAlbum.album.images?.[0]?.url ? (
                       <Image
                         src={selectedAlbum.album.images[0].url}
@@ -445,12 +445,12 @@ export default function TopAlbumsPage() {
                       </div>
                     )}
                   </div>
-                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                  <div className="flex-1 min-w-0 text-center w-full">
                     <DialogTitle className="text-xl sm:text-2xl font-bold mb-2">
                       {selectedAlbum.album.name}
                     </DialogTitle>
                     <div className="space-y-2">
-                      <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                      <div className="flex items-center justify-center gap-2 flex-wrap">
                         <span className="text-muted-foreground">
                           {selectedAlbum.album.artists.join(', ')}
                         </span>
@@ -467,7 +467,7 @@ export default function TopAlbumsPage() {
                           </>
                         )}
                       </div>
-                      <div className="flex items-center justify-center sm:justify-start gap-4 text-sm flex-wrap">
+                      <div className="flex items-center justify-center gap-4 text-sm flex-wrap">
                         <div className="flex items-center gap-1">
                           <Play className="w-4 h-4" />
                           <span>{selectedAlbum.total_count} plays</span>
@@ -484,7 +484,7 @@ export default function TopAlbumsPage() {
                         )}
                       </div>
                       {selectedAlbum.album.external_urls?.spotify && (
-                        <div className="flex justify-center sm:justify-start">
+                        <div className="flex justify-center">
                           <a
                             href={selectedAlbum.album.external_urls.spotify}
                             target="_blank"
@@ -503,43 +503,43 @@ export default function TopAlbumsPage() {
               </DialogHeader>
               
               {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
-                <div className="mt-6">
-                  <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                <div className="mt-2 flex-1 min-h-0 flex flex-col overflow-hidden">
+                  <h4 className="font-medium text-sm text-muted-foreground mb-3 flex-shrink-0">
                     Songs ({selectedAlbum.songs.length})
                   </h4>
-                  <div className="space-y-2 max-h-[400px] overflow-y-auto">
+                  <div className="space-y-2 flex-1 overflow-y-auto min-h-0">
                     {selectedAlbum.songs
                       .sort((a, b) => b.play_count - a.play_count)
                       .map((song, index) => (
                         <div
                           key={song.songId}
-                          className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors"
+                          className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
                         >
                           <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
                             {index + 1}
                           </div>
                           
-                          <div className="flex-1 min-w-0">
-                            <div className="flex items-center gap-2">
-                              <span className="font-medium text-sm truncate">{song.name}</span>
+                          <div className="flex-1 min-w-0 overflow-hidden">
+                            <div className="flex items-center gap-2 min-w-0 w-full">
+                              <span className="font-medium text-sm truncate min-w-0 flex-1 whitespace-nowrap">{song.name}</span>
                               {song.explicit && (
-                                <Badge variant="outline" className="text-xs px-1 py-0">
+                                <Badge variant="outline" className="text-xs px-1 py-0 flex-shrink-0">
                                   E
                                 </Badge>
                               )}
                             </div>
-                            <div className="text-xs text-muted-foreground">
+                            <div className="text-xs text-muted-foreground truncate whitespace-nowrap">
                               Track {song.track_number}
                               {song.duration_ms > 0 ? ` • ${formatSongDuration(song.duration_ms)}` : ''}
                             </div>
                           </div>
                           
-                          <div className="flex items-center gap-3 text-xs text-muted-foreground">
-                            <div className="flex items-center gap-1">
+                          <div className="flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                            <div className="flex items-center gap-1 whitespace-nowrap">
                               <Play className="w-3 h-3" />
                               <span>{song.play_count}</span>
                             </div>
-                            <div className="flex items-center gap-1">
+                            <div className="flex items-center gap-1 whitespace-nowrap">
                               <Clock className="w-3 h-3" />
                               <span>{formatDuration(song.total_listening_time_ms)}</span>
                             </div>
@@ -549,7 +549,7 @@ export default function TopAlbumsPage() {
                   </div>
                 </div>
               )}
-            </>
+            </div>
           )}
         </DialogContent>
       </Dialog>
