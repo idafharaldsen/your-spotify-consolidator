@@ -61,32 +61,14 @@ async function checkForNewTracks(): Promise<void> {
       process.exit(0); // If API fails, proceed to be safe
     }
 
-    const data = await response.json() as { items: Array<{ track: { name: string; artists: Array<{ name: string }> }; played_at: string }> };
+    const data = await response.json() as { items: Array<{ played_at: string }> };
     
     if (data.items && data.items.length > 0) {
-      console.log(`\n📋 Last ${data.items.length} tracks from Spotify API:`);
-      console.log('='.repeat(60));
-      
-      let hasNewTracks = false;
-      
-      data.items.forEach((item, index) => {
-        const playedAt = item.played_at;
-        const playedAtTime = new Date(playedAt).getTime();
-        const isNewer = playedAtTime > latestHistoryTime;
-        
-        if (isNewer) {
-          hasNewTracks = true;
-        }
-        
-        const status = isNewer ? '🆕 NEW' : '✅ OLD';
-        console.log(`${(index + 1).toString().padStart(2, ' ')}. ${status}`);
-        console.log(`    "${item.track.name}" by ${item.track.artists.map(a => a.name).join(', ')}`);
-        console.log(`    Played at: ${playedAt}`);
-        console.log('');
+      // Check if any tracks are newer than the latest in history
+      const hasNewTracks = data.items.some(item => {
+        const playedAtTime = new Date(item.played_at).getTime();
+        return playedAtTime > latestHistoryTime;
       });
-      
-      console.log('='.repeat(60));
-      console.log(`📅 Latest track from Spotify API: ${data.items[0].played_at}`);
       
       if (hasNewTracks) {
         console.log('✅ New tracks found since last run!');

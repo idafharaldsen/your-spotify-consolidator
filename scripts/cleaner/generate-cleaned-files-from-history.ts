@@ -1376,35 +1376,17 @@ class CleanedFilesGenerator {
       console.log('🎉 All cleaned files generated successfully!');
       console.log('');
       console.log('📊 Summary:');
-      console.log(`- Total songs in history: ${history.metadata.totalSongs.toLocaleString()}`);
-      console.log(`- Songs consolidated: ${songsResult.originalCount} → ${songsResult.consolidatedCount} (${songsResult.originalCount - songsResult.consolidatedCount} duplicates removed)`);
-      console.log(`- Albums consolidated: ${albumsResult.originalCount} → ${albumsResult.consolidatedCount} (${albumsResult.originalCount - albumsResult.consolidatedCount} duplicates removed)`);
-      console.log(`- Artists consolidated: ${artistsResult.originalCount} → ${artistsResult.consolidatedCount} (${artistsResult.originalCount - artistsResult.consolidatedCount} duplicates removed)`);
-      console.log(`- Top 500 songs generated: ${Math.min(songsResult.songs.length, 500)}`);
-      console.log(`- Top 500 albums generated: ${Math.min(albumsResult.albums.length, 500)}`);
-      console.log(`- Top 500 artists generated: ${Math.min(artistsResult.artists.length, 500)}`);
-      console.log(`- Top 100 albums with songs: ${Math.min(albumsWithSongsResult.albums.length, 100)}`);
-      console.log(`- Total listening events: ${history.metadata.totalListeningEvents.toLocaleString()}`);
-      console.log('');
-      console.log('📈 Detailed Statistics:');
+      console.log(`- Generated ${songsResult.songs.length} top songs (${songsResult.originalCount} → ${songsResult.consolidatedCount} consolidated)`);
+      console.log(`- Generated ${albumsResult.albums.length} top albums (${albumsResult.originalCount} → ${albumsResult.consolidatedCount} consolidated)`);
+      console.log(`- Generated ${artistsResult.artists.length} top artists (${artistsResult.originalCount} → ${artistsResult.consolidatedCount} consolidated)`);
+      console.log(`- Generated ${albumsWithSongsResult.albums.length} albums with songs`);
       console.log(`- Total listening time: ${detailedStats.totalListeningHours.toLocaleString()} hours (${detailedStats.totalListeningDays.toLocaleString()} days)`);
-      console.log('- Listening time by year:');
-      detailedStats.yearlyListeningTime.forEach(year => {
-        console.log(`  • ${year.year}: ${year.totalListeningHours.toLocaleString()} hours (${year.playCount.toLocaleString()} plays)`);
-      });
-      console.log('');
-      console.log('🎵 Top Songs & Artists by Year:');
-      detailedStats.yearlyTopItems.forEach(yearData => {
-        console.log(`\n  📅 ${yearData.year}:`);
-        console.log('    Top 5 Songs:');
-        yearData.topSongs.forEach((song, index) => {
-          console.log(`      ${index + 1}. "${song.name}" by ${song.artist} (${song.playCount} plays)`);
-        });
-        console.log('    Top 5 Artists:');
-        yearData.topArtists.forEach((artist, index) => {
-          console.log(`      ${index + 1}. ${artist.artistName} (${artist.playCount} plays, ${artist.uniqueSongs} unique songs)`);
-        });
-      });
+      console.log(`- Processed ${history.metadata.totalListeningEvents.toLocaleString()} listening events`);
+      
+      const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
+      if (shouldUpload) {
+        console.log(`- Uploaded to Vercel Blob: cleaned-songs.json, cleaned-albums.json, cleaned-artists.json, cleaned-albums-with-songs.json, detailed-stats.json`);
+      }
       
     } catch (error) {
       console.error('💥 Failed to generate cleaned files:', error);
