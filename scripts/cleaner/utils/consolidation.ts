@@ -97,6 +97,13 @@ export class Consolidator {
   normalizeAlbumNameForGrouping(albumName: string, artistName: string): string {
     return this.rulesManager.normalizeAlbumName(albumName, artistName);
   }
+  
+  /**
+   * Get base album name for grouping (public wrapper)
+   */
+  getBaseAlbumNameForGrouping(albumName: string, artistName: string): string | null {
+    return this.rulesManager.getBaseAlbumName(albumName, artistName);
+  }
 
   /**
    * Consolidate songs by name and artist

@@ -311,30 +311,47 @@ class CleanedFilesGenerator {
         .filter((artist, index, arr) => arr.indexOf(artist) === index && artist)
         .slice(0, 1);
 
-      const albumNameCounts = new Map<string, number>();
-      validSongs.forEach(song => {
-        const albumName = (song.album.name || '').trim();
-        if (albumName) {
-          albumNameCounts.set(albumName.toLowerCase(), (albumNameCounts.get(albumName.toLowerCase()) || 0) + 1);
-        }
-      });
+      // Get the base album name from consolidation rules if available
+      const firstSongArtist = validSongs[0]?.artists[0] || validSongs[0]?.artist.name || 'Unknown Artist';
+      const baseAlbumName = this.consolidator.getBaseAlbumNameForGrouping(
+        validSongs[0]?.album.name || '', 
+        firstSongArtist
+      );
       
-      let mostCommonAlbumName = '';
-      let maxAlbumCount = 0;
-      albumNameCounts.forEach((count, albumName) => {
-        if (count > maxAlbumCount) {
-          maxAlbumCount = count;
-          mostCommonAlbumName = albumName;
-        }
-      });
+      // If we have a base name from rules, use it; otherwise use most common name
+      let finalAlbumName: string;
+      if (baseAlbumName) {
+        finalAlbumName = baseAlbumName;
+      } else {
+        const albumNameCounts = new Map<string, number>();
+        validSongs.forEach(song => {
+          const albumName = (song.album.name || '').trim();
+          if (albumName) {
+            albumNameCounts.set(albumName.toLowerCase(), (albumNameCounts.get(albumName.toLowerCase()) || 0) + 1);
+          }
+        });
+        
+        let mostCommonAlbumName = '';
+        let maxAlbumCount = 0;
+        albumNameCounts.forEach((count, albumName) => {
+          if (count > maxAlbumCount) {
+            maxAlbumCount = count;
+            mostCommonAlbumName = albumName;
+          }
+        });
+        
+        const representativeSongForAlbum = validSongs.find(song => 
+          (song.album.name || '').toLowerCase().trim() === mostCommonAlbumName
+        ) || representativeSong;
+        
+        finalAlbumName = mostCommonAlbumName 
+          ? validSongs.find(s => (s.album.name || '').toLowerCase().trim() === mostCommonAlbumName)?.album.name || representativeSongForAlbum.album.name
+          : representativeSongForAlbum.album.name;
+      }
       
       const representativeSongForAlbum = validSongs.find(song => 
-        (song.album.name || '').toLowerCase().trim() === mostCommonAlbumName
-      ) || representativeSong;
-      
-      const finalAlbumName = mostCommonAlbumName 
-        ? validSongs.find(s => (s.album.name || '').toLowerCase().trim() === mostCommonAlbumName)?.album.name || representativeSongForAlbum.album.name
-        : representativeSongForAlbum.album.name;
+        (song.album.name || '').toLowerCase().trim() === finalAlbumName.toLowerCase().trim()
+      ) || validSongs[0] || representativeSong;
 
       return {
         rank: 0,
