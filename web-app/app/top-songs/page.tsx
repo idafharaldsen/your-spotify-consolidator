@@ -58,7 +58,7 @@ const LazySongImage = ({ album, rank, size = 'default' }: { album: Album; rank: 
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
-  const imageUrl = album.images[0]?.url || ''
+  const imageUrl = album.images?.[0]?.url
   
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -86,7 +86,7 @@ const LazySongImage = ({ album, rank, size = 'default' }: { album: Album; rank: 
         size === 'mobile' ? 'w-16 h-16' : 'aspect-square'
       }`}
     >
-      {isInView && (
+      {isInView && imageUrl ? (
         <Image
           src={imageUrl}
           alt={`${album.name} album cover`}
@@ -97,9 +97,8 @@ const LazySongImage = ({ album, rank, size = 'default' }: { album: Album; rank: 
           onLoad={() => setIsLoaded(true)}
           sizes={size === 'mobile' ? '64px' : "(max-width: 768px) 150px, (max-width: 1024px) 200px, 250px"}
         />
-      )}
-      {!isLoaded && isInView && (
-        <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+      ) : (
+        <div className="absolute inset-0 bg-muted flex items-center justify-center">
           <Music className={`${size === 'mobile' ? 'w-6 h-6' : 'w-8 h-8'} text-muted-foreground`} />
         </div>
       )}

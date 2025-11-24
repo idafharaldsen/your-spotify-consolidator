@@ -110,7 +110,7 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; r
     )
   }
   
-  const imageUrl = album.images?.[0]?.url || ''
+  const imageUrl = album.images?.[0]?.url
   
   return (
     <div 
@@ -119,7 +119,7 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; r
         size === 'mobile' ? 'w-16 h-16' : 'w-20 h-20'
       }`}
     >
-      {isInView && imageUrl && (
+      {isInView && imageUrl ? (
         <>
           <Image
             src={imageUrl}
@@ -143,9 +143,8 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; r
             </div>
           )}
         </>
-      )}
-      {!imageUrl && isInView && (
-        <div className="absolute inset-0 bg-muted animate-pulse flex items-center justify-center">
+      ) : (
+        <div className="absolute inset-0 bg-muted flex items-center justify-center">
           <Music className={`${size === 'mobile' ? 'w-6 h-6' : 'w-8 h-8'} text-muted-foreground`} />
         </div>
       )}
