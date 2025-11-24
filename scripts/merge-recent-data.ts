@@ -184,6 +184,7 @@ class DataMerger {
 
     let existingSongsUpdated = 0;
     let newSongsAdded = 0;
+    let duplicatesSkipped = 0;
     const newSongs: CompleteSong[] = [];
 
     // Process each recent play
@@ -211,7 +212,7 @@ class DataMerger {
           existingSongsUpdated++;
           console.log(`🔄 Updated: "${play.name}" by ${play.artists[0]} (+1 play)`);
         } else {
-          console.log(`🔄 Skipped duplicate: "${play.name}" by ${play.artists[0]} (already exists at ${play.played_at})`);
+          duplicatesSkipped++;
         }
       } else {
         // Add new song (will be appended to end)
@@ -268,6 +269,9 @@ class DataMerger {
     console.log(`📊 Merge summary:`);
     console.log(`- Existing songs updated: ${existingSongsUpdated}`);
     console.log(`- New songs added: ${newSongsAdded}`);
+    if (duplicatesSkipped > 0) {
+      console.log(`- Duplicates skipped: ${duplicatesSkipped}`);
+    }
     console.log(`- Total recent plays processed: ${recentPlays.length}`);
     console.log(`- Total songs now: ${allSongs.length}`);
 
