@@ -386,27 +386,25 @@ export default function StatsPage() {
         <div className="space-y-6">
           {statsData ? (
             <>
-            {/* Yearly Top Items */}
-            {statsData.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && selectedYearData && (
+              {/* Yearly Top Items */}
+              {statsData.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && selectedYearData && (
                 <Card>
                   <CardHeader>
-                    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <CardTitle>Top Songs, Artists & Albums by Year</CardTitle>
-                      <div className="flex flex-wrap gap-2">
-                        {availableYears.map((year) => (
-                          <button
-                            key={year}
-                            onClick={() => setSelectedYear(year)}
-                            className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
-                              selectedYear === year
-                                ? 'bg-primary text-primary-foreground'
-                                : 'bg-muted text-muted-foreground hover:bg-muted/80'
-                            }`}
-                          >
-                            {year}
-                          </button>
-                        ))}
-                      </div>
+                    <CardTitle className="mb-4">Top Songs, Artists & Albums by Year</CardTitle>
+                    <div className="flex flex-wrap gap-2">
+                      {availableYears.map((year) => (
+                        <button
+                          key={year}
+                          onClick={() => setSelectedYear(year)}
+                          className={`px-3 py-1.5 rounded-md text-sm font-medium transition-colors ${
+                            selectedYear === year
+                              ? 'bg-primary text-primary-foreground'
+                              : 'bg-muted text-muted-foreground hover:bg-muted/80'
+                          }`}
+                        >
+                          {year}
+                        </button>
+                      ))}
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -430,21 +428,20 @@ export default function StatsPage() {
                                     {index + 1}
                                   </Badge>
                                   {songImage && (
-                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-muted">
+                                    <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden bg-muted">
                                       <Image
                                         src={songImage}
                                         alt={`${song.name} album cover`}
                                         fill
                                         className="object-cover"
-                                        sizes="48px"
+                                        sizes="64px"
                                       />
                                     </div>
                                   )}
                                   <div className="flex-1 min-w-0">
                                     <p className="font-medium text-sm break-words">{song.name}</p>
-                                    <p className="text-xs text-muted-foreground break-words">{song.artist}</p>
-                                    {/* Mobile: Show stats below */}
-                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                    <p className="text-xs text-muted-foreground break-words mb-2">{song.artist}</p>
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
                                       <div className="flex items-center gap-1">
                                         <Play className="w-3 h-3" />
                                         <span>{song.playCount}</span>
@@ -453,17 +450,6 @@ export default function StatsPage() {
                                         <Clock className="w-3 h-3" />
                                         <span>{formatDuration(song.totalListeningTimeMs)}</span>
                                       </div>
-                                    </div>
-                                  </div>
-                                  {/* Desktop: Show stats to the right */}
-                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                                    <div className="flex items-center gap-1">
-                                      <Play className="w-3 h-3" />
-                                      <span>{song.playCount}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Clock className="w-3 h-3" />
-                                      <span>{formatDuration(song.totalListeningTimeMs)}</span>
                                     </div>
                                   </div>
                                 </div>
@@ -492,21 +478,20 @@ export default function StatsPage() {
                                     {index + 1}
                                   </Badge>
                                   {artistImage && (
-                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-full overflow-hidden bg-muted">
+                                    <div className="relative w-16 h-16 flex-shrink-0 rounded-full overflow-hidden bg-muted">
                                       <Image
                                         src={artistImage}
                                         alt={`${artist.artistName} artist image`}
                                         fill
                                         className="object-cover"
-                                        sizes="48px"
+                                        sizes="64px"
                                       />
                                     </div>
                                   )}
                                   <div className="flex-1 min-w-0">
                                     <p className="font-medium text-sm break-words">{artist.artistName}</p>
-                                    <p className="text-xs text-muted-foreground">{artist.uniqueSongs} songs</p>
-                                    {/* Mobile: Show stats below */}
-                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                    <p className="text-xs text-muted-foreground mb-2">{artist.uniqueSongs} songs</p>
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
                                       <div className="flex items-center gap-1">
                                         <Play className="w-3 h-3" />
                                         <span>{artist.playCount}</span>
@@ -515,17 +500,6 @@ export default function StatsPage() {
                                         <Clock className="w-3 h-3" />
                                         <span>{formatDuration(artist.totalListeningTimeMs)}</span>
                                       </div>
-                                    </div>
-                                  </div>
-                                  {/* Desktop: Show stats to the right */}
-                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                                    <div className="flex items-center gap-1">
-                                      <Play className="w-3 h-3" />
-                                      <span>{artist.playCount}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Clock className="w-3 h-3" />
-                                      <span>{formatDuration(artist.totalListeningTimeMs)}</span>
                                     </div>
                                   </div>
                                 </div>
@@ -554,21 +528,20 @@ export default function StatsPage() {
                                     {index + 1}
                                   </Badge>
                                   {albumImage && (
-                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-muted">
+                                    <div className="relative w-16 h-16 flex-shrink-0 rounded-md overflow-hidden bg-muted">
                                       <Image
                                         src={albumImage}
                                         alt={`${album.albumName} album cover`}
                                         fill
                                         className="object-cover"
-                                        sizes="48px"
+                                        sizes="64px"
                                       />
                                     </div>
                                   )}
                                   <div className="flex-1 min-w-0">
                                     <p className="font-medium text-sm break-words">{album.albumName}</p>
-                                    <p className="text-xs text-muted-foreground break-words">{album.artist}</p>
-                                    {/* Mobile: Show stats below */}
-                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                    <p className="text-xs text-muted-foreground break-words mb-2">{album.artist}</p>
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground">
                                       <div className="flex items-center gap-1">
                                         <Play className="w-3 h-3" />
                                         <span>{album.playCount}</span>
@@ -577,17 +550,6 @@ export default function StatsPage() {
                                         <Clock className="w-3 h-3" />
                                         <span>{formatDuration(album.totalListeningTimeMs)}</span>
                                       </div>
-                                    </div>
-                                  </div>
-                                  {/* Desktop: Show stats to the right */}
-                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                                    <div className="flex items-center gap-1">
-                                      <Play className="w-3 h-3" />
-                                      <span>{album.playCount}</span>
-                                    </div>
-                                    <div className="flex items-center gap-1">
-                                      <Clock className="w-3 h-3" />
-                                      <span>{formatDuration(album.totalListeningTimeMs)}</span>
                                     </div>
                                   </div>
                                 </div>
