@@ -637,7 +637,7 @@
     },
     {
       "artistName": "Eddie Vedder",
-      "baseAlbumName": "Into The Wild",
+      "baseAlbumName": "Into The Wild (Music For The Motion Picture)",
       "variations": [
         "into the wild (music for the motion picture)",
         "music for the motion picture into the wild"
@@ -859,7 +859,7 @@
     },
     {
       "artistName": "A$AP Rocky",
-      "baseAlbumName": "LONG.LIVE.A$AP (Deluxe Version)",
+      "baseAlbumName": "LONG.LIVE.A$AP",
       "variations": [
         "long.live.a$ap (deluxe version)",
         "long.live.a$ap (deluxe version)"
@@ -1702,15 +1702,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Rubber Soul (Remastered)",
-      "variations": [
-        "rubber soul (remastered)",
-        "rubber soul (remastered)"
-      ]
-    },
-    {
-      "artistName": "The Beatles",
-      "baseAlbumName": "Abbey Road (Remastered)",
+      "baseAlbumName": "Abbey Road",
       "variations": [
         "abbey road (remastered)",
         "abbey road (remastered)"
@@ -5327,7 +5319,7 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "III (Deluxe Edition)",
+      "baseAlbumName": "III",
       "variations": [
         "iii (deluxe edition)",
         "iii (deluxe edition)"
@@ -5546,14 +5538,6 @@
       "variations": [
         "don't stop",
         "don't stop"
-      ]
-    },
-    {
-      "artistName": "A$AP Rocky",
-      "baseAlbumName": "LONG.LIVE.A$AP (Deluxe Version)",
-      "variations": [
-        "long.live.a$ap (deluxe version)",
-        "long.live.a$ap (deluxe version)"
       ]
     },
     {
@@ -6500,15 +6484,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Rubber Soul (Remastered)",
-      "variations": [
-        "rubber soul (remastered)",
-        "rubber soul (remastered)"
-      ]
-    },
-    {
-      "artistName": "The Beatles",
-      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band",
       "variations": [
         "sgt. pepper's lonely hearts club band (remastered)",
         "sgt. pepper's lonely hearts club band (remastered)"
@@ -6516,7 +6492,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Abbey Road (Remastered)",
+      "baseAlbumName": "Abbey Road",
       "variations": [
         "abbey road (remastered)",
         "abbey road (remastered)"
@@ -6524,7 +6500,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Revolver (Remastered)",
+      "baseAlbumName": "Revolver",
       "variations": [
         "revolver (remastered)",
         "revolver (remastered)"
@@ -9709,6 +9685,7 @@
       "artistName": "David Bowie",
       "baseAlbumName": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
       "variations": [
+        "the rise and fall of ziggy stardust and the spiders from mars",
         "the rise and fall of ziggy stardust and the spiders from mars (2012 remaster)",
         "the rise and fall of ziggy stardust and the spiders from mars (remastered version)"
       ]
@@ -9892,7 +9869,7 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "III (Deluxe Edition)",
+      "baseAlbumName": "III",
       "variations": [
         "iii (deluxe edition)",
         "iii (deluxe edition)",
@@ -10113,14 +10090,6 @@
       ]
     },
     {
-      "artistName": "Ben Howard",
-      "baseAlbumName": "Every Kingdom (Deluxe Version)",
-      "variations": [
-        "every kingdom (deluxe version)",
-        "every kingdom"
-      ]
-    },
-    {
       "artistName": "Shawn Mendes",
       "baseAlbumName": "Shawn Mendes",
       "variations": [
@@ -10196,7 +10165,7 @@
     },
     {
       "artistName": "Oasis",
-      "baseAlbumName": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
+      "baseAlbumName": "(What's The Story) Morning Glory?",
       "variations": [
         "(what's the story) morning glory? (deluxe remastered edition)",
         "(what's the story) morning glory? [remastered deluxe edition]",
@@ -10258,7 +10227,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "The Beatles (Remastered)",
+      "baseAlbumName": "The Beatles",
       "variations": [
         "the beatles (remastered)",
         "the beatles"
@@ -10266,7 +10235,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band",
       "variations": [
         "sgt. pepper's lonely hearts club band (remastered)",
         "sgt. pepper's lonely hearts club band (remastered)",
@@ -10275,7 +10244,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Revolver (Remastered)",
+      "baseAlbumName": "Revolver",
       "variations": [
         "revolver (remastered)",
         "revolver (remastered)",
@@ -12002,7 +11971,7 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "III (Deluxe Edition)",
+      "baseAlbumName": "III",
       "variations": [
         "iii (deluxe edition)",
         "iii (deluxe edition)"
@@ -12221,14 +12190,6 @@
       "variations": [
         "don't stop",
         "don't stop"
-      ]
-    },
-    {
-      "artistName": "A$AP Rocky",
-      "baseAlbumName": "LONG.LIVE.A$AP (Deluxe Version)",
-      "variations": [
-        "long.live.a$ap (deluxe version)",
-        "long.live.a$ap (deluxe version)"
       ]
     },
     {
@@ -13175,7 +13136,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Rubber Soul (Remastered)",
+      "baseAlbumName": "Rubber Soul",
       "variations": [
         "rubber soul (remastered)",
         "rubber soul (remastered)"
@@ -13183,7 +13144,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band",
       "variations": [
         "sgt. pepper's lonely hearts club band (remastered)",
         "sgt. pepper's lonely hearts club band (remastered)"
@@ -13191,7 +13152,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Abbey Road (Remastered)",
+      "baseAlbumName": "Abbey Road",
       "variations": [
         "abbey road (remastered)",
         "abbey road (remastered)"
@@ -13199,7 +13160,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Revolver (Remastered)",
+      "baseAlbumName": "Revolver",
       "variations": [
         "revolver (remastered)",
         "revolver (remastered)"
@@ -16542,7 +16503,7 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "Moderat - II",
+      "baseAlbumName": "II",
       "variations": [
         "ii",
         "ii",
@@ -16841,15 +16802,6 @@
       "variations": [
         "speaking in tongues (deluxe version)",
         "speaking in tongues"
-      ]
-    },
-    {
-      "artistName": "Oasis",
-      "baseAlbumName": "(What's The Story) Morning Glory?",
-      "variations": [
-        "(what's the story) morning glory? (deluxe remastered edition)",
-        "(what's the story) morning glory? [remastered deluxe edition]",
-        "(what's the story) morning glory?"
       ]
     },
     {
@@ -18834,14 +18786,6 @@
       ]
     },
     {
-      "artistName": "A$AP Rocky",
-      "baseAlbumName": "LONG.LIVE.A$AP (Deluxe Version)",
-      "variations": [
-        "long.live.a$ap (deluxe version)",
-        "long.live.a$ap (deluxe version)"
-      ]
-    },
-    {
       "artistName": "Milky Chance",
       "baseAlbumName": "Sadnecessary",
       "variations": [
@@ -19678,15 +19622,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Rubber Soul (Remastered)",
-      "variations": [
-        "rubber soul (remastered)",
-        "rubber soul (remastered)"
-      ]
-    },
-    {
-      "artistName": "The Beatles",
-      "baseAlbumName": "Abbey Road (Remastered)",
+      "baseAlbumName": "Abbey Road",
       "variations": [
         "abbey road (remastered)",
         "abbey road (remastered)"
@@ -23303,7 +23239,7 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "III (Deluxe Edition)",
+      "baseAlbumName": "III",
       "variations": [
         "iii (deluxe edition)",
         "iii (deluxe edition)"
@@ -23522,14 +23458,6 @@
       "variations": [
         "don't stop",
         "don't stop"
-      ]
-    },
-    {
-      "artistName": "A$AP Rocky",
-      "baseAlbumName": "LONG.LIVE.A$AP (Deluxe Version)",
-      "variations": [
-        "long.live.a$ap (deluxe version)",
-        "long.live.a$ap (deluxe version)"
       ]
     },
     {
@@ -24476,15 +24404,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Rubber Soul (Remastered)",
-      "variations": [
-        "rubber soul (remastered)",
-        "rubber soul (remastered)"
-      ]
-    },
-    {
-      "artistName": "The Beatles",
-      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band",
       "variations": [
         "sgt. pepper's lonely hearts club band (remastered)",
         "sgt. pepper's lonely hearts club band (remastered)"
@@ -24492,7 +24412,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Abbey Road (Remastered)",
+      "baseAlbumName": "Abbey Road",
       "variations": [
         "abbey road (remastered)",
         "abbey road (remastered)"
@@ -24500,7 +24420,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Revolver (Remastered)",
+      "baseAlbumName": "Revolver",
       "variations": [
         "revolver (remastered)",
         "revolver (remastered)"
@@ -28047,14 +27967,6 @@
       ]
     },
     {
-      "artistName": "Ben Howard",
-      "baseAlbumName": "Every Kingdom (Deluxe Version)",
-      "variations": [
-        "every kingdom (deluxe version)",
-        "every kingdom"
-      ]
-    },
-    {
       "artistName": "Shawn Mendes",
       "baseAlbumName": "Shawn Mendes",
       "variations": [
@@ -28130,15 +28042,6 @@
     },
     {
       "artistName": "Oasis",
-      "baseAlbumName": "(What's The Story) Morning Glory? (Deluxe Remastered Edition)",
-      "variations": [
-        "(what's the story) morning glory? (deluxe remastered edition)",
-        "(what's the story) morning glory? [remastered deluxe edition]",
-        "(what's the story) morning glory?"
-      ]
-    },
-    {
-      "artistName": "Oasis",
       "baseAlbumName": "Definitely Maybe (Deluxe Edition Remastered)",
       "variations": [
         "definitely maybe (deluxe edition remastered)",
@@ -28192,7 +28095,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "The Beatles (Remastered)",
+      "baseAlbumName": "The Beatles",
       "variations": [
         "the beatles (remastered)",
         "the beatles"
@@ -28200,7 +28103,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+      "baseAlbumName": "Sgt. Pepper's Lonely Hearts Club Band",
       "variations": [
         "sgt. pepper's lonely hearts club band (remastered)",
         "sgt. pepper's lonely hearts club band (remastered)",
@@ -28209,7 +28112,7 @@
     },
     {
       "artistName": "The Beatles",
-      "baseAlbumName": "Revolver (Remastered)",
+      "baseAlbumName": "Revolver",
       "variations": [
         "revolver (remastered)",
         "revolver (remastered)",

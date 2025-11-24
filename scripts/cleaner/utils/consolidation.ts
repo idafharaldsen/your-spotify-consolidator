@@ -178,7 +178,8 @@ export class Consolidator {
         } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
           if (album.count > existing.count || 
               (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
-            existing.album.name = album.album.name;
+            const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+            existing.album.name = baseName || album.album.name;
             existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
             existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
           }
@@ -300,7 +301,8 @@ export class Consolidator {
         } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
           if (album.count > existing.count || 
               (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
-            existing.album.name = album.album.name;
+            const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+            existing.album.name = baseName || album.album.name;
             existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
             existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
           }
