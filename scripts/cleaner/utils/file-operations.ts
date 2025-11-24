@@ -275,7 +275,7 @@ export class FileOperations {
         source: 'Merged Streaming History with Song Breakdown',
         totalListeningEvents: history.metadata.totalListeningEvents
       },
-      albums: albumsWithSongs.slice(0, 100)
+      albums: albumsWithSongs.slice(0, 500)
     }, null, 2));
 
     console.log(`\n📁 All cleaned files saved:`);

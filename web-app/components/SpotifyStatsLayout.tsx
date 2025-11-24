@@ -1,7 +1,7 @@
 import { ReactNode } from 'react'
 import SpotifyStatsNav from './SpotifyStatsNav'
 
-type SpotifyStatsPage = 'albums' | 'songs' | 'artists' | 'detailed' | 'stats'
+type SpotifyStatsPage = 'albums' | 'songs' | 'artists' | 'stats'
 
 interface SpotifyStatsLayoutProps {
   children: ReactNode

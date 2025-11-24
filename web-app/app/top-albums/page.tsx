@@ -4,7 +4,8 @@ import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Music, Play, X, Disc } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Search, Music, Play, X, Disc, Clock, ExternalLink } from 'lucide-react'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 
@@ -14,7 +15,23 @@ interface AlbumImage {
   width: number
 }
 
-interface Album {
+interface Song {
+  songId: string
+  name: string
+  duration_ms: number
+  track_number: number
+  disc_number: number
+  explicit: boolean
+  preview_url: string | null
+  external_urls: {
+    spotify: string
+  }
+  play_count: number
+  total_listening_time_ms: number
+  artists: string[]
+}
+
+interface AlbumInfo {
   name: string
   album_type: string
   artists: string[]
@@ -35,11 +52,15 @@ interface AlbumData {
   primaryAlbumId: string
   total_count: number
   total_duration_ms: number
-  album: Album
+  album: AlbumInfo
   consolidated_count: number
   original_albumIds: string[]
-  original_counts: number[]
+  original_counts?: number[]
   rank: number
+  total_songs?: number
+  played_songs?: number
+  unplayed_songs?: number
+  songs?: Song[]
 }
 
 interface AlbumsData {
@@ -49,12 +70,30 @@ interface AlbumsData {
     duplicatesRemoved: number
     consolidationRate: number
     timestamp: string
+    source?: string
+    totalListeningEvents?: number
   }
   albums: AlbumData[]
 }
 
+// Format duration helper
+const formatDuration = (durationMs: number) => {
+  const duration = durationMs || 0
+  const totalMinutes = Math.floor(duration / 60000)
+  const hours = Math.floor(totalMinutes / 60)
+  const minutes = totalMinutes % 60
+  return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+}
+
+// Format song duration helper
+const formatSongDuration = (durationMs: number) => {
+  const minutes = Math.floor(durationMs / 60000)
+  const seconds = Math.floor((durationMs % 60000) / 1000)
+  return `${minutes}:${seconds.toString().padStart(2, '0')}`
+}
+
 // Lazy loading image component
-const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: Album; rank: number; size?: 'default' | 'mobile' }) => {
+const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; rank: number; size?: 'default' | 'mobile' }) => {
   const [isLoaded, setIsLoaded] = useState(false)
   const [isInView, setIsInView] = useState(false)
   
@@ -124,11 +163,12 @@ export default function TopAlbumsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const response = await fetch('/api/data/albums', {
+        const response = await fetch('/api/data/albums-with-songs', {
           cache: 'no-cache' // Validate with server but allow short-term caching
         })
         if (!response.ok) {
@@ -150,6 +190,10 @@ export default function TopAlbumsPage() {
     album.album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     album.album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
+  
+  const handleAlbumClick = (album: AlbumData) => {
+    setSelectedAlbum(album)
+  }
   
   return (
     <SpotifyStatsLayout
@@ -191,7 +235,11 @@ export default function TopAlbumsPage() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {filteredAlbums.map((album) => (
-              <Card key={album.primaryAlbumId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card 
+                key={album.primaryAlbumId} 
+                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                onClick={() => handleAlbumClick(album)}
+              >
                 <CardContent className="p-3">
                   {/* Album Image */}
                   <div className="mb-3">
@@ -218,7 +266,10 @@ export default function TopAlbumsPage() {
                     
                     {/* Artist Name */}
                     <button
-                      onClick={() => setSearchTerm(album.album.artists[0])}
+                      onClick={(e) => {
+                        e.stopPropagation()
+                        setSearchTerm(album.album.artists[0])
+                      }}
                       className="text-xs text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
                     >
                       {album.album.artists[0]}
@@ -252,7 +303,11 @@ export default function TopAlbumsPage() {
             </div>
             
             {filteredAlbums.map((album) => (
-              <Card key={album.primaryAlbumId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card 
+                key={album.primaryAlbumId} 
+                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                onClick={() => handleAlbumClick(album)}
+              >
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
@@ -280,7 +335,10 @@ export default function TopAlbumsPage() {
                     {/* Artist Name */}
                     <div className="col-span-3">
                       <button
-                        onClick={() => setSearchTerm(album.album.artists[0])}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setSearchTerm(album.album.artists[0])
+                        }}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
                       >
                         {album.album.artists[0]}
@@ -332,7 +390,10 @@ export default function TopAlbumsPage() {
                       </h3>
                       
                       <button
-                        onClick={() => setSearchTerm(album.album.artists[0])}
+                        onClick={(e) => {
+                          e.stopPropagation()
+                          setSearchTerm(album.album.artists[0])
+                        }}
                         className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1"
                       >
                         {album.album.artists[0]}
@@ -361,6 +422,137 @@ export default function TopAlbumsPage() {
           )}
         </>
       )}
+      
+      {/* Album Details Modal */}
+      <Dialog open={!!selectedAlbum} onOpenChange={(open) => !open && setSelectedAlbum(null)}>
+        <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto p-4 sm:p-6">
+          {selectedAlbum && (
+            <>
+              <DialogHeader>
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-4">
+                  <div className="relative w-24 h-24 sm:w-32 sm:h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted mx-auto sm:mx-0">
+                    {selectedAlbum.album.images?.[0]?.url ? (
+                      <Image
+                        src={selectedAlbum.album.images[0].url}
+                        alt={`${selectedAlbum.album.name} album cover`}
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-muted flex items-center justify-center">
+                        <Music className="w-12 h-12 text-muted-foreground" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0 text-center sm:text-left">
+                    <DialogTitle className="text-xl sm:text-2xl font-bold mb-2">
+                      {selectedAlbum.album.name}
+                    </DialogTitle>
+                    <div className="space-y-2">
+                      <div className="flex items-center justify-center sm:justify-start gap-2 flex-wrap">
+                        <span className="text-muted-foreground">
+                          {selectedAlbum.album.artists.join(', ')}
+                        </span>
+                        <span className="text-muted-foreground">•</span>
+                        <span className="text-muted-foreground">
+                          {selectedAlbum.album.release_date}
+                        </span>
+                        {selectedAlbum.total_songs && (
+                          <>
+                            <span className="text-muted-foreground">•</span>
+                            <span className="text-muted-foreground">
+                              {selectedAlbum.total_songs} songs
+                            </span>
+                          </>
+                        )}
+                      </div>
+                      <div className="flex items-center justify-center sm:justify-start gap-4 text-sm flex-wrap">
+                        <div className="flex items-center gap-1">
+                          <Play className="w-4 h-4" />
+                          <span>{selectedAlbum.total_count} plays</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{formatDuration(selectedAlbum.total_duration_ms)}</span>
+                        </div>
+                        {selectedAlbum.played_songs !== undefined && selectedAlbum.total_songs !== undefined && (
+                          <div className="flex items-center gap-1">
+                            <Music className="w-4 h-4" />
+                            <span>{selectedAlbum.played_songs}/{selectedAlbum.total_songs} played</span>
+                          </div>
+                        )}
+                      </div>
+                      {selectedAlbum.album.external_urls?.spotify && (
+                        <div className="flex justify-center sm:justify-start">
+                          <a
+                            href={selectedAlbum.album.external_urls.spotify}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Open in Spotify
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </DialogHeader>
+              
+              {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
+                <div className="mt-6">
+                  <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                    Songs ({selectedAlbum.songs.length})
+                  </h4>
+                  <div className="space-y-2 max-h-[400px] overflow-y-auto">
+                    {selectedAlbum.songs
+                      .sort((a, b) => b.play_count - a.play_count)
+                      .map((song, index) => (
+                        <div
+                          key={song.songId}
+                          className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors"
+                        >
+                          <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
+                            {index + 1}
+                          </div>
+                          
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-center gap-2">
+                              <span className="font-medium text-sm truncate">{song.name}</span>
+                              {song.explicit && (
+                                <Badge variant="outline" className="text-xs px-1 py-0">
+                                  E
+                                </Badge>
+                              )}
+                            </div>
+                            <div className="text-xs text-muted-foreground">
+                              Track {song.track_number}
+                              {song.duration_ms > 0 ? ` • ${formatSongDuration(song.duration_ms)}` : ''}
+                            </div>
+                          </div>
+                          
+                          <div className="flex items-center gap-3 text-xs text-muted-foreground">
+                            <div className="flex items-center gap-1">
+                              <Play className="w-3 h-3" />
+                              <span>{song.play_count}</span>
+                            </div>
+                            <div className="flex items-center gap-1">
+                              <Clock className="w-3 h-3" />
+                              <span>{formatDuration(song.total_listening_time_ms)}</span>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                  </div>
+                </div>
+              )}
+            </>
+          )}
+        </DialogContent>
+      </Dialog>
     </SpotifyStatsLayout>
   )
 }
