@@ -386,91 +386,8 @@ export default function StatsPage() {
         <div className="space-y-6">
           {statsData ? (
             <>
-              {/* Yearly Listening Hours Chart */}
-              {statsData.stats?.yearlyListeningTime && statsData.stats.yearlyListeningTime.length > 0 ? (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Yearly Listening Hours</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-2 sm:px-6">
-                    <div className="w-full -mx-2 sm:mx-0">
-                      {mounted && (
-                        <HighchartsReact
-                          highcharts={Highcharts}
-                          options={getChartOptions()}
-                          ref={chartComponentRef}
-                        />
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Yearly Listening Hours</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground">
-                      {statsData.stats?.yearlyListeningTime ? 'No yearly data available' : 'Loading chart data...'}
-                    </p>
-                  </CardContent>
-                </Card>
-              )}
-
-              {/* Hourly Listening Distribution Chart */}
-              {statsData.stats?.hourlyListeningDistribution && statsData.stats.hourlyListeningDistribution.length > 0 ? (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>Hourly Listening Distribution</CardTitle>
-                  </CardHeader>
-                  <CardContent className="px-2 sm:px-6">
-                    <div className="w-full -mx-2 sm:mx-0">
-                      {mounted && (
-                        <HighchartsReact
-                          highcharts={Highcharts}
-                          options={getHourlyChartOptions()}
-                          ref={hourlyChartComponentRef}
-                        />
-                      )}
-                    </div>
-                  </CardContent>
-                </Card>
-              ) : null}
-
-              {/* Summary Stats */}
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {statsData.stats?.totalListeningHours && (
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Total Listening Hours</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-2xl font-bold">
-                        {statsData.stats.totalListeningHours.toLocaleString(undefined, {
-                          maximumFractionDigits: 2
-                        })}
-                      </p>
-                    </CardContent>
-                  </Card>
-                )}
-                {statsData.stats?.totalListeningDays && (
-                  <Card>
-                    <CardHeader>
-                      <CardTitle>Total Listening Days</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <p className="text-2xl font-bold">
-                        {statsData.stats.totalListeningDays.toLocaleString(undefined, {
-                          maximumFractionDigits: 2
-                        })}
-                      </p>
-                    </CardContent>
-                  </Card>
-                )}
-              </div>
-
-              {/* Yearly Top Items */}
-              {statsData.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && selectedYearData && (
+            {/* Yearly Top Items */}
+            {statsData.stats?.yearlyTopItems && statsData.stats.yearlyTopItems.length > 0 && selectedYearData && (
                 <Card>
                   <CardHeader>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
@@ -683,6 +600,88 @@ export default function StatsPage() {
                   </CardContent>
                 </Card>
               )}
+
+              {/* Summary Stats */}
+              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                {statsData.stats?.totalListeningHours && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Total Listening Hours</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold">
+                        {statsData.stats.totalListeningHours.toLocaleString(undefined, {
+                          maximumFractionDigits: 2
+                        })}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+                {statsData.stats?.totalListeningDays && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Total Listening Days</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold">
+                        {statsData.stats.totalListeningDays.toLocaleString(undefined, {
+                          maximumFractionDigits: 2
+                        })}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+              </div>
+              {/* Yearly Listening Hours Chart */}
+              {statsData.stats?.yearlyListeningTime && statsData.stats.yearlyListeningTime.length > 0 ? (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Yearly Listening Hours</CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-2 sm:px-6">
+                    <div className="w-full -mx-2 sm:mx-0">
+                      {mounted && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getChartOptions()}
+                          ref={chartComponentRef}
+                        />
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ) : (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Yearly Listening Hours</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <p className="text-muted-foreground">
+                      {statsData.stats?.yearlyListeningTime ? 'No yearly data available' : 'Loading chart data...'}
+                    </p>
+                  </CardContent>
+                </Card>
+              )}
+
+              {/* Hourly Listening Distribution Chart */}
+              {statsData.stats?.hourlyListeningDistribution && statsData.stats.hourlyListeningDistribution.length > 0 ? (
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Hourly Listening Distribution</CardTitle>
+                  </CardHeader>
+                  <CardContent className="px-2 sm:px-6">
+                    <div className="w-full -mx-2 sm:mx-0">
+                      {mounted && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getHourlyChartOptions()}
+                          ref={hourlyChartComponentRef}
+                        />
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
+              ) : null}
             </>
           ) : !loading ? (
             <div className="text-center py-12">
