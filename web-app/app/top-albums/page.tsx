@@ -129,9 +129,7 @@ export default function TopAlbumsPage() {
   useEffect(() => {
     const fetchAlbums = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
-        const blobUrl = `${baseUrl}/cleaned-albums.json`
-        const response = await fetch(blobUrl, {
+        const response = await fetch('/api/data/albums', {
           cache: 'no-cache' // Validate with server but allow short-term caching
         })
         if (!response.ok) {

@@ -115,9 +115,7 @@ export default function TopArtistsPage() {
   useEffect(() => {
     const fetchArtists = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
-        const blobUrl = `${baseUrl}/cleaned-artists.json`
-        const response = await fetch(blobUrl, {
+        const response = await fetch('/api/data/artists', {
           cache: 'no-cache' // Validate with server but allow short-term caching
         })
         if (!response.ok) {

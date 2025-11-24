@@ -93,9 +93,7 @@ export default function StatsPage() {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        const baseUrl = process.env.NEXT_PUBLIC_BLOB_STORAGE_URL || 'https://qcdjhj2hg6vos6cu.public.blob.vercel-storage.com'
-        const blobUrl = `${baseUrl}/detailed-stats.json`
-        const response = await fetch(blobUrl, {
+        const response = await fetch('/api/data/stats', {
           cache: 'no-cache'
         })
         if (!response.ok) {
