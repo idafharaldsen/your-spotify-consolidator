@@ -351,7 +351,7 @@ class CleanedFilesGenerator {
     albumsWithSongs.sort((a, b) => b.count - a.count);
     const originalCount = albumsWithSongs.length;
     const consolidatedAlbums = this.consolidator.consolidateAlbumsWithSongs(albumsWithSongs);
-    const rankedAlbums = consolidatedAlbums.slice(0, 100).map((album, index) => ({
+    const rankedAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => ({
       ...album,
       rank: index + 1
     }));
