@@ -171,15 +171,19 @@ export class Consolidator {
         existing.consolidated_count += album.count;
         existing.original_albumIds.push(album.primaryAlbumId);
         
+        // Always try to get the base album name for both existing and incoming albums
+        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist);
+        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+        const baseName = existingBaseName || incomingBaseName;
+        
+        if (baseName) {
+          existing.album.name = baseName;
+        }
+        
         const normalizedBaseName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
-        if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
-            normalizedBaseName === existing.album.name.toLowerCase().trim()) {
-          // Keep existing
-        } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
+        if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
           if (album.count > existing.count || 
               (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
-            const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
-            existing.album.name = baseName || album.album.name;
             existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
             existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
           }
@@ -258,6 +262,11 @@ export class Consolidator {
       const normalizedAlbumName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
       const key = `${normalizedAlbumName}|${firstArtist.toLowerCase().trim()}`;
       
+      // Debug logging for Eddie Vedder albums
+      if (firstArtist === 'Eddie Vedder' && (album.album.name.includes('Into The Wild') || album.album.name.includes('Into The Wild'))) {
+        console.log(`🔍 Debug: Album "${album.album.name}" -> normalized: "${normalizedAlbumName}", key: "${key}"`);
+      }
+      
       if (consolidationMap.has(key)) {
         const existing = consolidationMap.get(key)!;
         existing.count += album.count;
@@ -294,15 +303,19 @@ export class Consolidator {
           }
         }
         
+        // Always try to get the base album name for both existing and incoming albums
+        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist);
+        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+        const baseName = existingBaseName || incomingBaseName;
+        
+        if (baseName) {
+          existing.album.name = baseName;
+        }
+        
         const normalizedBaseName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
-        if (normalizedBaseName !== album.album.name.toLowerCase().trim() && 
-            normalizedBaseName === existing.album.name.toLowerCase().trim()) {
-          // Keep existing
-        } else if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
+        if (normalizedBaseName !== existing.album.name.toLowerCase().trim()) {
           if (album.count > existing.count || 
               (album.album.images && album.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
-            const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
-            existing.album.name = baseName || album.album.name;
             existing.album.images = album.album.images.length > 0 ? album.album.images : existing.album.images;
             existing.album.external_urls = Object.keys(album.album.external_urls).length > 0 ? album.album.external_urls : existing.album.external_urls;
           }
