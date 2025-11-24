@@ -46,6 +46,14 @@ interface YearlyTopItems {
     uniqueSongs: number
     images: ImageData[]
   }>
+  topAlbums: Array<{
+    albumName: string
+    artist: string
+    playCount: number
+    totalListeningTimeMs: number
+    uniqueSongs: number
+    images: ImageData[]
+  }>
 }
 
 interface StatsData {
@@ -466,7 +474,7 @@ export default function StatsPage() {
                 <Card>
                   <CardHeader>
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                      <CardTitle>Top Songs & Artists by Year</CardTitle>
+                      <CardTitle>Top Songs, Artists & Albums by Year</CardTitle>
                       <div className="flex flex-wrap gap-2">
                         {availableYears.map((year) => (
                           <button
@@ -485,7 +493,7 @@ export default function StatsPage() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <div className="grid gap-8 md:grid-cols-2">
+                    <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                       {/* Top Songs */}
                       <div>
                         <div className="flex items-center gap-2 mb-4">
@@ -601,6 +609,68 @@ export default function StatsPage() {
                                     <div className="flex items-center gap-1">
                                       <Clock className="w-3 h-3" />
                                       <span>{formatDuration(artist.totalListeningTimeMs)}</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            )
+                          })}
+                        </div>
+                      </div>
+
+                      {/* Top Albums */}
+                      <div>
+                        <div className="flex items-center gap-2 mb-4">
+                          <Music2 className="w-5 h-5 text-muted-foreground" />
+                          <h3 className="font-semibold text-lg">Top Albums</h3>
+                        </div>
+                        <div className="space-y-2">
+                          {selectedYearData.topAlbums?.map((album, index) => {
+                            const albumImage = album.images?.[0]?.url
+                            return (
+                              <div
+                                key={`${album.albumName}-${album.artist}`}
+                                className="p-2 rounded-md hover:bg-muted/50 transition-colors"
+                              >
+                                <div className="flex items-start gap-3">
+                                  <Badge variant="secondary" className="text-xs w-8 flex-shrink-0 justify-center mt-0.5">
+                                    {index + 1}
+                                  </Badge>
+                                  {albumImage && (
+                                    <div className="relative w-12 h-12 flex-shrink-0 rounded-md overflow-hidden bg-muted">
+                                      <Image
+                                        src={albumImage}
+                                        alt={`${album.albumName} album cover`}
+                                        fill
+                                        className="object-cover"
+                                        sizes="48px"
+                                      />
+                                    </div>
+                                  )}
+                                  <div className="flex-1 min-w-0">
+                                    <p className="font-medium text-sm break-words">{album.albumName}</p>
+                                    <p className="text-xs text-muted-foreground break-words">{album.artist}</p>
+                                    {/* Mobile: Show stats below */}
+                                    <div className="flex items-center gap-3 text-xs text-muted-foreground mt-2 md:hidden">
+                                      <div className="flex items-center gap-1">
+                                        <Play className="w-3 h-3" />
+                                        <span>{album.playCount}</span>
+                                      </div>
+                                      <div className="flex items-center gap-1">
+                                        <Clock className="w-3 h-3" />
+                                        <span>{formatDuration(album.totalListeningTimeMs)}</span>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  {/* Desktop: Show stats to the right */}
+                                  <div className="hidden md:flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                    <div className="flex items-center gap-1">
+                                      <Play className="w-3 h-3" />
+                                      <span>{album.playCount}</span>
+                                    </div>
+                                    <div className="flex items-center gap-1">
+                                      <Clock className="w-3 h-3" />
+                                      <span>{formatDuration(album.totalListeningTimeMs)}</span>
                                     </div>
                                   </div>
                                 </div>

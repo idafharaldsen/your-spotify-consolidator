@@ -16,6 +16,7 @@ import type {
   YearlyTopItems,
   TopSong,
   TopArtist,
+  TopAlbum,
   HourlyListeningDistribution
 } from './utils/types';
 
@@ -795,6 +796,7 @@ class CleanedFilesGenerator {
     const yearlyMap = new Map<string, { totalMs: number; playCount: number }>();
     const yearlySongsMap = new Map<string, Map<string, { playCount: number; totalMs: number; name: string; artist: string; images: Array<{ height: number; url: string; width: number }> }>>();
     const yearlyArtistsMap = new Map<string, Map<string, { playCount: number; totalMs: number; uniqueSongs: Set<string>; images: Array<{ height: number; url: string; width: number }>; representativeSongId: string | null }>>();
+    const yearlyAlbumsMap = new Map<string, Map<string, { playCount: number; totalMs: number; albumName: string; artist: string; uniqueSongs: Set<string>; images: Array<{ height: number; url: string; width: number }> }>>();
     
     // Array to track hourly listening distribution (0-23 hours)
     const hourlyMap = new Map<number, { totalMs: number; playCount: number }>();
@@ -881,6 +883,40 @@ class CleanedFilesGenerator {
             }
           }
         }
+        
+        // Track albums per year
+        if (!yearlyAlbumsMap.has(year)) {
+          yearlyAlbumsMap.set(year, new Map());
+        }
+        const yearAlbumsMap = yearlyAlbumsMap.get(year)!;
+        const albumName = song.album.name || 'Unknown Album';
+        const albumArtist = song.artist.name || song.artists[0] || 'Unknown Artist';
+        const albumKey = `${albumName}|${albumArtist}`;
+        if (!yearAlbumsMap.has(albumKey)) {
+          yearAlbumsMap.set(albumKey, {
+            playCount: 0,
+            totalMs: 0,
+            albumName: albumName,
+            artist: albumArtist,
+            uniqueSongs: new Set(),
+            images: song.album.images || []
+          });
+        }
+        const albumData = yearAlbumsMap.get(albumKey)!;
+        albumData.playCount += 1;
+        albumData.totalMs += event.msPlayed;
+        albumData.uniqueSongs.add(song.songId);
+        // Update images if we get better ones (non-empty images)
+        if (song.album.images && song.album.images.length > 0 && (!albumData.images || albumData.images.length === 0)) {
+          albumData.images = song.album.images;
+        } else if (song.album.images && song.album.images.length > 0) {
+          // Prefer images with higher resolution (larger height)
+          const currentMaxHeight = Math.max(...albumData.images.map(img => img.height));
+          const newMaxHeight = Math.max(...song.album.images.map(img => img.height));
+          if (newMaxHeight > currentMaxHeight) {
+            albumData.images = song.album.images;
+          }
+        }
       });
     });
     
@@ -894,7 +930,7 @@ class CleanedFilesGenerator {
       }))
       .sort((a, b) => a.year.localeCompare(b.year));
     
-    // Calculate top songs and artists per year
+    // Calculate top songs, artists, and albums per year
     const yearlyTopItems: YearlyTopItems[] = Array.from(yearlySongsMap.keys())
       .sort()
       .map(year => {
@@ -925,10 +961,25 @@ class CleanedFilesGenerator {
           .sort((a, b) => b.playCount - a.playCount)
           .slice(0, 5);
         
+        // Get top 5 albums for this year
+        const albumsMap = yearlyAlbumsMap.get(year)!;
+        const topAlbums: TopAlbum[] = Array.from(albumsMap.entries())
+          .map(([albumKey, data]) => ({
+            albumName: data.albumName,
+            artist: data.artist,
+            playCount: data.playCount,
+            totalListeningTimeMs: data.totalMs,
+            uniqueSongs: data.uniqueSongs.size,
+            images: data.images || []
+          }))
+          .sort((a, b) => b.playCount - a.playCount)
+          .slice(0, 5);
+        
         return {
           year,
           topSongs,
-          topArtists
+          topArtists,
+          topAlbums
         };
       });
     
@@ -1215,85 +1266,6 @@ class CleanedFilesGenerator {
       }
     }
     return detailedStats;
-  }
-
-  /**
-   * Check if there are new recent plays since last run
-   * Returns true if new tracks exist, false otherwise
-   */
-  private async checkForNewRecentPlays(): Promise<boolean> {
-    try {
-      console.log('🔍 Checking for new recent plays...');
-      
-      // Get the latest timestamp from merged streaming history
-      const historyFile = this.fileOps.findLatestCompleteHistoryFile();
-      if (!historyFile) {
-        console.log('ℹ️  No existing history found, will process all data');
-        return true; // No history means we should process
-      }
-
-      const history = this.fileOps.loadCompleteHistory(historyFile);
-      const latestTimestamp = history.metadata.dateRange.latest;
-      
-      if (!latestTimestamp) {
-        console.log('ℹ️  No timestamp found in history, will process all data');
-        return true;
-      }
-
-      const latestHistoryTime = new Date(latestTimestamp).getTime();
-      console.log(`📅 Latest track in history: ${latestTimestamp}`);
-
-      // Check API directly for new tracks
-      try {
-        const tokenManager = new SpotifyTokenManager();
-        const accessToken = await tokenManager.getValidAccessToken();
-        const isValid = await tokenManager.testToken(accessToken);
-        
-        if (!isValid) {
-          console.log('⚠️  Invalid token, cannot check for new tracks. Proceeding with processing...');
-          return true; // If we can't check, proceed to be safe
-        }
-
-        // Fetch just the most recent play to check timestamp
-        const response = await fetch('https://api.spotify.com/v1/me/player/recently-played?limit=1', {
-          headers: {
-            'Authorization': `Bearer ${accessToken}`
-          }
-        });
-
-        if (!response.ok) {
-          console.log('⚠️  Failed to fetch recent plays, proceeding with processing...');
-          return true; // If API fails, proceed to be safe
-        }
-
-        const data = await response.json() as { items: Array<{ played_at: string }> };
-        
-        if (data.items && data.items.length > 0) {
-          const latestApiPlay = new Date(data.items[0].played_at).getTime();
-          const latestApiTime = new Date(data.items[0].played_at).toISOString();
-          
-          console.log(`📅 Latest track from Spotify API: ${latestApiTime}`);
-          
-          if (latestApiPlay > latestHistoryTime) {
-            console.log('✅ New tracks found since last run!');
-            return true;
-          } else {
-            console.log('ℹ️  No new tracks since last run. Skipping expensive processing.');
-            return false;
-          }
-        } else {
-          console.log('ℹ️  No recent plays found in API response');
-          return false;
-        }
-      } catch (error) {
-        console.log(`⚠️  Error checking API: ${error}. Proceeding with processing to be safe...`);
-        return true; // If check fails, proceed to be safe
-      }
-    } catch (error) {
-      console.error('❌ Error checking for new recent plays:', error);
-      console.log('⚠️  Proceeding with processing to be safe...');
-      return true; // If check fails, proceed to be safe
-    }
   }
 
   /**

@@ -278,10 +278,24 @@ export interface TopArtist {
   }>;
 }
 
+export interface TopAlbum {
+  albumName: string;
+  artist: string;
+  playCount: number;
+  totalListeningTimeMs: number;
+  uniqueSongs: number;
+  images: Array<{
+    height: number;
+    url: string;
+    width: number;
+  }>;
+}
+
 export interface YearlyTopItems {
   year: string;
   topSongs: TopSong[];
   topArtists: TopArtist[];
+  topAlbums: TopAlbum[];
 }
 
 export interface HourlyListeningDistribution {
