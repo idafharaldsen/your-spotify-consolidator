@@ -33,6 +33,18 @@ class CleanedFilesGenerator {
   }
 
   /**
+   * Copy images from source to target if source has images
+   */
+  private copyImagesIfAvailable(
+    target: { images: Array<{ height: number; url: string; width: number }> | undefined },
+    source: { images: Array<{ height: number; url: string; width: number }> | undefined } | undefined | null
+  ): void {
+    if (source?.images && source.images.length > 0) {
+      target.images = source.images;
+    }
+  }
+
+  /**
    * Generate cleaned songs from complete history
    */
   private generateCleanedSongs(history: CompleteListeningHistory): { songs: CleanedSong[], originalCount: number, consolidatedCount: number } {
@@ -352,12 +364,15 @@ class CleanedFilesGenerator {
     
     const songsNeedingMetadata = songs.filter(song => {
       const existing = existingSongs.get(song.songId);
-      const needsMetadata = !song.song.preview_url || !song.song.external_urls || Object.keys(song.song.external_urls).length === 0 || 
-                           !song.album.images || song.album.images.length === 0;
-      if (existing && existing.album.images && existing.album.images.length > 0) {
-        song.album.images = existing.album.images;
-      }
-      return needsMetadata;
+      // Copy images from existing if available
+      this.copyImagesIfAvailable(song.album, existing?.album);
+      // Check if we have all metadata (from existing or already in song)
+      const hasAllMetadata = existing 
+        ? (existing.song.preview_url && existing.song.external_urls && Object.keys(existing.song.external_urls).length > 0 && 
+           existing.album.images && existing.album.images.length > 0)
+        : (song.song.preview_url && song.song.external_urls && Object.keys(song.song.external_urls).length > 0 && 
+           song.album.images && song.album.images.length > 0);
+      return !hasAllMetadata;
     });
 
     if (songsNeedingMetadata.length === 0) {
@@ -380,8 +395,15 @@ class CleanedFilesGenerator {
     songs.forEach(song => {
       const existing = existingSongs.get(song.songId);
       
-      if (existing && existing.album.images && existing.album.images.length > 0) {
-        song.album.images = existing.album.images;
+      // Copy all metadata from existing if available
+      if (existing) {
+        this.copyImagesIfAvailable(song.album, existing.album);
+        if (existing.song.preview_url) {
+          song.song.preview_url = existing.song.preview_url;
+        }
+        if (existing.song.external_urls && Object.keys(existing.song.external_urls).length > 0) {
+          song.song.external_urls = existing.song.external_urls;
+        }
       }
 
       const track = trackMap.get(song.songId);
@@ -416,13 +438,17 @@ class CleanedFilesGenerator {
       if (!existing && album.primaryAlbumId) {
         existing = existingAlbums.get(album.primaryAlbumId);
       }
-      if (existing && existing.album.images && existing.album.images.length > 0) {
-        album.album.images = existing.album.images;
-      }
-      const needsMetadata = !album.album.images || album.album.images.length === 0 ||
-                          !album.album.external_urls || Object.keys(album.album.external_urls).length === 0 ||
-                          !album.album.release_date || album.album.release_date === '';
-      return needsMetadata;
+      // Copy images from existing if available
+      this.copyImagesIfAvailable(album.album, existing?.album);
+      // Check if we have all metadata (from existing or already in album)
+      const hasAllMetadata = existing
+        ? (existing.album.images && existing.album.images.length > 0 &&
+           existing.album.external_urls && Object.keys(existing.album.external_urls).length > 0 &&
+           existing.album.release_date && existing.album.release_date !== '')
+        : (album.album.images && album.album.images.length > 0 &&
+           album.album.external_urls && Object.keys(album.album.external_urls).length > 0 &&
+           album.album.release_date && album.album.release_date !== '');
+      return !hasAllMetadata;
     });
 
     if (albumsNeedingMetadata.length === 0) {
@@ -462,8 +488,15 @@ class CleanedFilesGenerator {
         existing = existingAlbums.get(album.primaryAlbumId);
       }
       
-      if (existing && existing.album.images && existing.album.images.length > 0) {
-        album.album.images = existing.album.images;
+      // Copy all metadata from existing if available
+      if (existing) {
+        this.copyImagesIfAvailable(album.album, existing.album);
+        if (existing.album.external_urls && Object.keys(existing.album.external_urls).length > 0) {
+          album.album.external_urls = existing.album.external_urls;
+        }
+        if (existing.album.release_date && existing.album.release_date !== '') {
+          album.album.release_date = existing.album.release_date;
+        }
       }
 
       const track = trackMap.get(album.primaryAlbumId);
@@ -673,13 +706,17 @@ class CleanedFilesGenerator {
       if (!existing && artist.primaryArtistId) {
         existing = existingArtists.get(artist.primaryArtistId);
       }
-      if (existing && existing.artist.images && existing.artist.images.length > 0) {
-        artist.artist.images = existing.artist.images;
-      }
-      const needsMetadata = !artist.artist.images || artist.artist.images.length === 0 ||
-                           !artist.artist.external_urls || Object.keys(artist.artist.external_urls).length === 0 ||
-                           artist.artist.popularity === 0;
-      return needsMetadata;
+      // Copy images from existing if available
+      this.copyImagesIfAvailable(artist.artist, existing?.artist);
+      // Check if we have all metadata (from existing or already in artist)
+      const hasAllMetadata = existing
+        ? (existing.artist.images && existing.artist.images.length > 0 &&
+           existing.artist.external_urls && Object.keys(existing.artist.external_urls).length > 0 &&
+           existing.artist.popularity !== 0)
+        : (artist.artist.images && artist.artist.images.length > 0 &&
+           artist.artist.external_urls && Object.keys(artist.artist.external_urls).length > 0 &&
+           artist.artist.popularity !== 0);
+      return !hasAllMetadata;
     });
 
     if (artistsNeedingMetadata.length === 0) {
@@ -719,8 +756,21 @@ class CleanedFilesGenerator {
         existing = existingArtists.get(artist.primaryArtistId);
       }
       
-      if (existing && existing.artist.images && existing.artist.images.length > 0) {
-        artist.artist.images = existing.artist.images;
+      // Copy all metadata from existing if available
+      if (existing) {
+        this.copyImagesIfAvailable(artist.artist, existing.artist);
+        if (existing.artist.external_urls && Object.keys(existing.artist.external_urls).length > 0) {
+          artist.artist.external_urls = existing.artist.external_urls;
+        }
+        if (existing.artist.popularity !== 0) {
+          artist.artist.popularity = existing.artist.popularity;
+        }
+        if (existing.artist.followers && existing.artist.followers.total > 0) {
+          artist.artist.followers = existing.artist.followers;
+        }
+        if (existing.artist.genres && existing.artist.genres.length > 0) {
+          artist.artist.genres = existing.artist.genres;
+        }
       }
 
       const artistId = songIdToArtistId.get(artist.primaryArtistId);
@@ -1407,8 +1457,7 @@ class CleanedFilesGenerator {
         detailedStats = enrichedStats;
       }
       
-      const timestamp = await this.fileOps.saveCleanedFiles(songsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
-      await this.fileOps.saveDetailedStats(detailedStats, timestamp);
+      const timestamp = await this.fileOps.saveCleanedFiles(songsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history, detailedStats);
       
       console.log('');
       console.log('🎉 All cleaned files generated successfully!');

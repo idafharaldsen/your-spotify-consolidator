@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-25T16:04:17.091Z",
+    "timestamp": "2025-11-25T16:28:51.522Z",
     "source": "Merged Streaming History"
   },
   "stats": {
@@ -1384,23 +1384,7 @@
             "playCount": 42,
             "totalListeningTimeMs": 9642471,
             "uniqueSongs": 7,
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b2735061fad199e7b2bac55afd8d",
-                "height": 640,
-                "width": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e025061fad199e7b2bac55afd8d",
-                "height": 300,
-                "width": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d000048515061fad199e7b2bac55afd8d",
-                "height": 64,
-                "width": 64
-              }
-            ]
+            "images": []
           },
           {
             "albumName": "Fritt Liv",
@@ -1740,23 +1724,7 @@
             "playCount": 95,
             "totalListeningTimeMs": 18260088,
             "uniqueSongs": 16,
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b2733265ed162fa2dd5ec6434ee4",
-                "height": 640,
-                "width": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e023265ed162fa2dd5ec6434ee4",
-                "height": 300,
-                "width": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d000048513265ed162fa2dd5ec6434ee4",
-                "height": 64,
-                "width": 64
-              }
-            ]
+            "images": []
           },
           {
             "albumName": "Demon Days",
@@ -2468,7 +2436,23 @@
             "playCount": 100,
             "totalListeningTimeMs": 24513107,
             "uniqueSongs": 22,
-            "images": []
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f1a60f7b474da48c05ae29f7",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f1a60f7b474da48c05ae29f7",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f1a60f7b474da48c05ae29f7",
+                "height": 64,
+                "width": 64
+              }
+            ]
           },
           {
             "albumName": "Gold",

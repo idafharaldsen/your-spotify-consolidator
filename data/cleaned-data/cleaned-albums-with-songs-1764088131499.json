@@ -4,7 +4,7 @@
     "consolidatedTotalAlbums": 500,
     "duplicatesRemoved": 22839,
     "consolidationRate": 97.86,
-    "timestamp": "2025-11-25T16:04:13.426Z",
+    "timestamp": "2025-11-25T16:28:51.503Z",
     "source": "Merged Streaming History with Song Breakdown",
     "totalListeningEvents": 179993
   },
@@ -361,7 +361,7 @@
           "Neutral Milk Hotel"
         ],
         "release_date": "1998",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -675,7 +675,7 @@
       "total_count": 442,
       "total_duration_ms": 74066899,
       "album": {
-        "name": "Music For The Motion Picture Into The Wild",
+        "name": "Into The Wild (Music For The Motion Picture)",
         "album_type": "album",
         "artists": [
           "Eddie Vedder"
@@ -1019,7 +1019,7 @@
         ],
         "release_date": "2018-05-08",
         "release_date_precision": "day",
-        "popularity": 40,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735f19050327c81b2cdb5f38a9",
@@ -1706,7 +1706,7 @@
           "The Tallest Man On Earth"
         ],
         "release_date": "2008",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -2497,7 +2497,7 @@
         ],
         "release_date": "2018-02-23",
         "release_date_precision": "day",
-        "popularity": 56,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273da460bd80377420b21884053",
@@ -2765,7 +2765,7 @@
           "The Clash"
         ],
         "release_date": "1979",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -3375,7 +3375,7 @@
         ],
         "release_date": "2021-09-03",
         "release_date_precision": "day",
-        "popularity": 9,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b5bd3ebfbe07b9b7c89e68f0",
@@ -4233,7 +4233,7 @@
         ],
         "release_date": "2021-08-27",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a4499cf37a6fe4ff043dc9f2",
@@ -4798,7 +4798,7 @@
       "total_count": 358,
       "total_duration_ms": 68877366,
       "album": {
-        "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars (Remastered Version)",
+        "name": "The Rise and Fall of Ziggy Stardust and the Spiders from Mars",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -6490,7 +6490,7 @@
         ],
         "release_date": "2015-03-16",
         "release_date_precision": "day",
-        "popularity": 75,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273cdb645498cd3d8a2db4d05e1",
@@ -7600,7 +7600,7 @@
         ],
         "release_date": "2016-01-15",
         "release_date_precision": "day",
-        "popularity": 4,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735e149abf2d24cd29e40c6b84",
@@ -7920,7 +7920,7 @@
         ],
         "release_date": "2017-04-14",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739e0062560d8bcccca15d412a",
@@ -8441,7 +8441,7 @@
         ],
         "release_date": "2018-08-03",
         "release_date_precision": "day",
-        "popularity": 78,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273175c577a61aa13d4fb4b6534",
@@ -8710,7 +8710,7 @@
         ],
         "release_date": "2013-09-24",
         "release_date_precision": "day",
-        "popularity": 30,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ab6c683264ddc16e2b1bf47b",
@@ -9197,7 +9197,7 @@
         ],
         "release_date": "2001-03-12",
         "release_date_precision": "day",
-        "popularity": 79,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732c25dad9f8fd54652f7ba5df",
@@ -9717,7 +9717,7 @@
           "FIDLAR"
         ],
         "release_date": "2013",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -10273,7 +10273,7 @@
         ],
         "release_date": "2023-08-11",
         "release_date_precision": "day",
-        "popularity": 47,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f129a883e9c0ae41f89e4c6c",
@@ -10924,13 +10924,13 @@
       "total_duration_ms": 24354903,
       "album": {
         "name": "Collection 2",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Misfits"
         ],
         "release_date": "1995-01-01",
         "release_date_precision": "day",
-        "popularity": 55,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2733b5f421e03b66186de38c4ef",
@@ -12176,7 +12176,7 @@
         ],
         "release_date": "2025-02-28",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c869ee39447e201693129a43",
@@ -12445,7 +12445,7 @@
         ],
         "release_date": "2022-01-14",
         "release_date_precision": "day",
-        "popularity": 36,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27375786b3e7dd90f3e72ccd65f",
@@ -12697,7 +12697,7 @@
         ],
         "release_date": "2005-05-23",
         "release_date_precision": "day",
-        "popularity": 84,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27319d85a472f328a6ed9b704cf",
@@ -13245,14 +13245,14 @@
       "total_count": 227,
       "total_duration_ms": 41991468,
       "album": {
-        "name": "channel ORANGE (Explicit Version)",
+        "name": "channel ORANGE",
         "album_type": "album",
         "artists": [
           "Frank Ocean"
         ],
         "release_date": "2012-07-10",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f11f1c4ad183b7fa625f8534",
@@ -13801,13 +13801,13 @@
       "total_duration_ms": 48344810,
       "album": {
         "name": "The Very Best Of Nina Simone 1967-1972 - Sugar In My Bowl",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Nina Simone"
         ],
         "release_date": "1998-07-28",
         "release_date_precision": "day",
-        "popularity": 40,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a62f89ed451a7e568404b106",
@@ -15308,7 +15308,7 @@
         ],
         "release_date": "2007-12-28",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27334733f87148c2fbe0176abdb",
@@ -15526,7 +15526,7 @@
         ],
         "release_date": "2019-05-17",
         "release_date_precision": "day",
-        "popularity": 81,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27330a635de2bb0caa4e26f6abb",
@@ -15778,7 +15778,7 @@
         ],
         "release_date": "2017-06-09",
         "release_date_precision": "day",
-        "popularity": 54,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a0c4a585a7d73b4943b9bf13",
@@ -16108,14 +16108,14 @@
       "total_count": 219,
       "total_duration_ms": 38777410,
       "album": {
-        "name": "Graduation (Alternative Business Partners)",
+        "name": "Graduation",
         "album_type": "album",
         "artists": [
           "Kanye West"
         ],
         "release_date": "2007-09-11",
         "release_date_precision": "day",
-        "popularity": 2,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734130ca0ae4940ede1d5ec46c",
@@ -17310,7 +17310,7 @@
         ],
         "release_date": "2017-07-21",
         "release_date_precision": "day",
-        "popularity": 81,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738940ac99f49e44f59e6f7fb3",
@@ -17595,8 +17595,8 @@
           "Kate Bush"
         ],
         "release_date": "1985",
-        "release_date_precision": "year",
-        "popularity": 3,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27396ab64f52273635308b6bf27",
@@ -18413,7 +18413,7 @@
       "total_count": 201,
       "total_duration_ms": 37951222,
       "album": {
-        "name": "The College Dropout (Explicit)",
+        "name": "The College Dropout",
         "album_type": "album",
         "artists": [
           "Kanye West"
@@ -19734,7 +19734,7 @@
         ],
         "release_date": "2018-09-21",
         "release_date_precision": "day",
-        "popularity": 37,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b3cb5e220876d4b57f1312f7",
@@ -21099,7 +21099,7 @@
         ],
         "release_date": "2008-07-08",
         "release_date_precision": "day",
-        "popularity": 30,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273356342a8a7d325855f03eb6c",
@@ -22124,7 +22124,7 @@
         ],
         "release_date": "2010-01-01",
         "release_date_precision": "day",
-        "popularity": 2,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273019f5ca6f625cb7b06b995a5",
@@ -22386,7 +22386,7 @@
       "total_count": 187,
       "total_duration_ms": 48692549,
       "album": {
-        "name": "Kill 'Em All",
+        "name": "Kill 'Em All (Remastered)",
         "album_type": "album",
         "artists": [
           "Metallica"
@@ -22781,7 +22781,7 @@
         ],
         "release_date": "1977-02-04",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735e66bc0df2bd18e746dbb823",
@@ -23060,14 +23060,14 @@
       "total_count": 185,
       "total_duration_ms": 34885459,
       "album": {
-        "name": "Sempiternal (Expanded Edition)",
+        "name": "Sempiternal",
         "album_type": "album",
         "artists": [
           "Bring Me The Horizon"
         ],
         "release_date": "2013-04-01",
         "release_date_precision": "day",
-        "popularity": 74,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273566acaba72c5509e3887c4b0",
@@ -23278,7 +23278,7 @@
       "total_count": 185,
       "total_duration_ms": 37406465,
       "album": {
-        "name": "Hunky Dory",
+        "name": "Hunky Dory (2015 Remaster)",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -24193,7 +24193,7 @@
           "Turbonegro"
         ],
         "release_date": "1998",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -24868,7 +24868,7 @@
         ],
         "release_date": "2001-09-11",
         "release_date_precision": "day",
-        "popularity": 53,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27300c91ccec6800014b8513717",
@@ -25249,14 +25249,14 @@
       "total_count": 180,
       "total_duration_ms": 47409221,
       "album": {
-        "name": "good kid, m.A.A.d city (Deluxe)",
+        "name": "good kid, m.A.A.d city",
         "album_type": "album",
         "artists": [
           "Kendrick Lamar"
         ],
         "release_date": "2012-10-22",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27378de8b28de36a74afc0348b5",
@@ -25576,7 +25576,7 @@
         ],
         "release_date": "2020-01-17",
         "release_date_precision": "day",
-        "popularity": 73,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27326b7dd89810cc1a40ada642c",
@@ -25856,13 +25856,13 @@
       "total_duration_ms": 20472731,
       "album": {
         "name": "Collection",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Misfits"
         ],
         "release_date": "1986-01-01",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d5446acf2c34078e85f58de2",
@@ -26250,7 +26250,7 @@
         ],
         "release_date": "2005-01-01",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734c7dd2b7fc516356e037bf68",
@@ -27009,7 +27009,7 @@
         ],
         "release_date": "2016-05-27",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e71dd15fc5bdefd5bff70452",
@@ -27512,8 +27512,8 @@
           "Bad Religion"
         ],
         "release_date": "1989",
-        "release_date_precision": "year",
-        "popularity": 54,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e78b00ce2d5f0f7f437e61a0",
@@ -28504,7 +28504,7 @@
         ],
         "release_date": "2017-05-17",
         "release_date_precision": "day",
-        "popularity": 72,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731cc17bae5ee17cce117e198a",
@@ -29069,7 +29069,7 @@
       "total_count": 170,
       "total_duration_ms": 21887876,
       "album": {
-        "name": "Everything so Far",
+        "name": "Everything So Far",
         "album_type": "album",
         "artists": [
           "Pinegrove"
@@ -29481,7 +29481,7 @@
         ],
         "release_date": "2020-12-11",
         "release_date_precision": "day",
-        "popularity": 51,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b0b3bd1a5f3967705579e6f1",
@@ -29947,7 +29947,7 @@
       "total_count": 167,
       "total_duration_ms": 30793949,
       "album": {
-        "name": "Mellon Collie And The Infinite Sadness",
+        "name": "Mellon Collie And The Infinite Sadness (Remastered)",
         "album_type": "album",
         "artists": [
           "The Smashing Pumpkins"
@@ -30301,7 +30301,7 @@
       "total_count": 167,
       "total_duration_ms": 39342587,
       "album": {
-        "name": "Every Kingdom (Deluxe Version)",
+        "name": "Every Kingdom",
         "album_type": "album",
         "artists": [
           "Ben Howard"
@@ -30536,14 +30536,14 @@
       "total_count": 167,
       "total_duration_ms": 30812635,
       "album": {
-        "name": "LONG.LIVE.A$AP (Deluxe Version)",
+        "name": "LONG.LIVE.A$AP",
         "album_type": "album",
         "artists": [
           "A$AP Rocky"
         ],
         "release_date": "2013-01-11",
         "release_date_precision": "day",
-        "popularity": 2,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2733265ed162fa2dd5ec6434ee4",
@@ -30856,14 +30856,14 @@
       "total_count": 167,
       "total_duration_ms": 34696127,
       "album": {
-        "name": "\"Heroes\" (2017 Remaster)",
+        "name": "\"Heroes\"",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "1977",
-        "release_date_precision": "year",
-        "popularity": 65,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273204f41d52743c6a9efd62985",
@@ -31595,7 +31595,7 @@
       "total_count": 165,
       "total_duration_ms": 24296919,
       "album": {
-        "name": "Rubber Soul (Remastered)",
+        "name": "Rubber Soul",
         "album_type": "album",
         "artists": [
           "The Beatles"
@@ -32395,7 +32395,7 @@
         ],
         "release_date": "2019-09-13",
         "release_date_precision": "day",
-        "popularity": 52,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273be5fb0d9169e28ac819cee1d",
@@ -34162,7 +34162,7 @@
         ],
         "release_date": "2017-12-15",
         "release_date_precision": "day",
-        "popularity": 59,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ef51817e6a6563b6f7ce5872",
@@ -34458,7 +34458,7 @@
       "total_count": 156,
       "total_duration_ms": 33500941,
       "album": {
-        "name": "Kvelertak",
+        "name": "Kvelertak (Deluxe Edition)",
         "album_type": "album",
         "artists": [
           "Kvelertak"
@@ -35099,13 +35099,13 @@
       "total_duration_ms": 16386341,
       "album": {
         "name": "Songs About The Weather",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Basement"
         ],
         "release_date": "2010-08-10",
         "release_date_precision": "day",
-        "popularity": 33,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731aa925268b9c65b0d0565cf3",
@@ -35254,7 +35254,7 @@
           "Turbonegro"
         ],
         "release_date": "1996",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -35574,7 +35574,7 @@
           "The Good The Bad and The Zugly"
         ],
         "release_date": "2015",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -35844,7 +35844,7 @@
         ],
         "release_date": "1970-01-26",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738453b853c2cc9c077828eefb",
@@ -36072,7 +36072,7 @@
       "total_count": 151,
       "total_duration_ms": 27848257,
       "album": {
-        "name": "Diamond Dogs",
+        "name": "Diamond Dogs (2016 Remaster)",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -36729,7 +36729,7 @@
       "total_count": 150,
       "total_duration_ms": 28636006,
       "album": {
-        "name": "Unknown Pleasures",
+        "name": "Unknown Pleasures (Collector's Edition)",
         "album_type": "album",
         "artists": [
           "Joy Division"
@@ -37049,8 +37049,8 @@
       "total_count": 148,
       "total_duration_ms": 35595915,
       "album": {
-        "name": "Awake",
-        "album_type": "single",
+        "name": "Awake (Deluxe Version)",
+        "album_type": "album",
         "artists": [
           "Tycho"
         ],
@@ -37485,14 +37485,14 @@
       "total_count": 147,
       "total_duration_ms": 38646982,
       "album": {
-        "name": "Let's Dance (1999 Remaster)",
+        "name": "Let's Dance",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "1983-04-14",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734b4cc5866bd793ab9caa8bb5",
@@ -37812,7 +37812,7 @@
         ],
         "release_date": "1986-08-12",
         "release_date_precision": "day",
-        "popularity": 67,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e5855edffddef46b7feff49b",
@@ -38333,7 +38333,7 @@
         ],
         "release_date": "2017-08-25",
         "release_date_precision": "day",
-        "popularity": 56,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2737d15fb20303a589acc1ab98b",
@@ -38653,7 +38653,7 @@
         ],
         "release_date": "1987-01-01",
         "release_date_precision": "day",
-        "popularity": 37,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273211e1c0c21f223fd2954cf9e",
@@ -38922,7 +38922,7 @@
         ],
         "release_date": "1970-12-11",
         "release_date_precision": "day",
-        "popularity": 57,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2736462162d227ec2be2ebee12d",
@@ -39235,8 +39235,8 @@
       "total_count": 142,
       "total_duration_ms": 33975200,
       "album": {
-        "name": "Singles (US format)",
-        "album_type": "compilation",
+        "name": "Singles",
+        "album_type": "album",
         "artists": [
           "New Order"
         ],
@@ -39851,7 +39851,7 @@
         ],
         "release_date": "1971-06-22",
         "release_date_precision": "day",
-        "popularity": 61,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e79dc1438d650f426b5e99a7",
@@ -40069,7 +40069,7 @@
         ],
         "release_date": "2020-11-20",
         "release_date_precision": "day",
-        "popularity": 44,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b4eef77cb2fe4b49eeb43950",
@@ -40321,7 +40321,7 @@
         ],
         "release_date": "2019-10-25",
         "release_date_precision": "day",
-        "popularity": 46,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ecd1bb95b9c6316398db1abc",
@@ -40791,7 +40791,7 @@
         ],
         "release_date": "1980-07-25",
         "release_date_precision": "day",
-        "popularity": 81,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ff191d7fbdb5a13eaf84132b",
@@ -41009,7 +41009,7 @@
         ],
         "release_date": "1992-01-01",
         "release_date_precision": "day",
-        "popularity": 23,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273fbd9107a0883fef6bcd804c1",
@@ -41243,7 +41243,7 @@
           "Arctic Monkeys"
         ],
         "release_date": "2006",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -41506,7 +41506,7 @@
       "total_count": 138,
       "total_duration_ms": 34809587,
       "album": {
-        "name": "Moderat (Deluxe Version)",
+        "name": "Moderat",
         "album_type": "album",
         "artists": [
           "Moderat"
@@ -42348,13 +42348,13 @@
       "total_duration_ms": 29937981,
       "album": {
         "name": "Five Years (1969 - 1973)",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "2015-09-25",
         "release_date_precision": "day",
-        "popularity": 37,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a107e8bc5c8dbf65ddcf36f4",
@@ -43212,7 +43212,7 @@
       "total_duration_ms": 28194543,
       "album": {
         "name": "Everything Else Has Gone Wrong",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Bombay Bicycle Club"
         ],
@@ -43453,7 +43453,7 @@
         ],
         "release_date": "2020-04-10",
         "release_date_precision": "day",
-        "popularity": 76,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e3f1ba3de4659708c25d0f39",
@@ -43647,7 +43647,7 @@
       "total_count": 138,
       "total_duration_ms": 24943809,
       "album": {
-        "name": "Life In Your Glass World",
+        "name": "Life In Your Glass World (Deluxe Edition)",
         "album_type": "album",
         "artists": [
           "Citizen"
@@ -44036,13 +44036,13 @@
       "total_duration_ms": 22993163,
       "album": {
         "name": "Hits Back",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "The Clash"
         ],
         "release_date": "2013-08-26",
         "release_date_precision": "day",
-        "popularity": 57,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273254bb7a0ce0b74196f9a53a1",
@@ -44294,7 +44294,7 @@
         ],
         "release_date": "2016-12-09",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27309a51bd361845073cbd501b7",
@@ -45564,14 +45564,14 @@
       "total_count": 134,
       "total_duration_ms": 34554485,
       "album": {
-        "name": "Young Americans (2016 Remaster)",
+        "name": "Young Americans - 2016 Remaster",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "1975-03-07",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b3bd6493ad6e29dcd2ad5a37",
@@ -45755,7 +45755,7 @@
         ],
         "release_date": "2020-02-14",
         "release_date_precision": "day",
-        "popularity": 80,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27358267bd34420a00d5cf83a49",
@@ -46000,7 +46000,7 @@
       "total_count": 133,
       "total_duration_ms": 26228176,
       "album": {
-        "name": "Watching Movies with the Sound Off (Deluxe Edition)",
+        "name": "Watching Movies With The Sound Off (Deluxe Edition)",
         "album_type": "album",
         "artists": [
           "Mac Miller"
@@ -47034,8 +47034,8 @@
           "Oasis"
         ],
         "release_date": "1994",
-        "release_date_precision": "year",
-        "popularity": 70,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d86a1e021e7acc7c07c7d668",
@@ -47423,7 +47423,7 @@
         ],
         "release_date": "1997-02-25",
         "release_date_precision": "day",
-        "popularity": 62,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ea7ac80765aa4549d18a27b9",
@@ -48164,8 +48164,8 @@
           "Black Flag"
         ],
         "release_date": "1981",
-        "release_date_precision": "year",
-        "popularity": 49,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ba9fff4147e9e1656a5c33e1",
@@ -48713,7 +48713,7 @@
       "total_count": 130,
       "total_duration_ms": 28889577,
       "album": {
-        "name": "At Least For Now (Deluxe)",
+        "name": "At Least For Now",
         "album_type": "album",
         "artists": [
           "Benjamin Clementine"
@@ -49023,7 +49023,7 @@
         ],
         "release_date": "2018-05-25",
         "release_date_precision": "day",
-        "popularity": 70,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273269423eb6467e308c0fbce24",
@@ -49343,7 +49343,7 @@
         ],
         "release_date": "2022-02-11",
         "release_date_precision": "day",
-        "popularity": 64,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273608c444310857c06bdc65361",
@@ -49731,7 +49731,7 @@
         ],
         "release_date": "2010-03-03",
         "release_date_precision": "day",
-        "popularity": 79,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273661d019f34569f79eae9e985",
@@ -50044,8 +50044,8 @@
       "total_count": 128,
       "total_duration_ms": 19063481,
       "album": {
-        "name": "Promise Everything",
-        "album_type": "single",
+        "name": "Promise Everything (Deluxe)",
+        "album_type": "album",
         "artists": [
           "Basement"
         ],
@@ -50807,7 +50807,7 @@
         ],
         "release_date": "2013-05-28",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e467b41b79ca7f809c763a3f",
@@ -51109,7 +51109,7 @@
           "Bad Religion"
         ],
         "release_date": "1988",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -51934,7 +51934,7 @@
         ],
         "release_date": "2011-01-01",
         "release_date_precision": "day",
-        "popularity": 34,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739e62b7208a53ddce5c4c7d2d",
@@ -52367,7 +52367,7 @@
       "total_duration_ms": 18932280,
       "album": {
         "name": "Vandrer på solskinn",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "brenn."
         ],
@@ -52635,11 +52635,10 @@
       "total_count": 124,
       "total_duration_ms": 23332213,
       "album": {
-        "name": "The Velvet Underground & Nico 45th Anniversary (Super Deluxe Edition)",
+        "name": "The Velvet Underground & Nico 45th Anniversary",
         "album_type": "album",
         "artists": [
-          "The Velvet Underground",
-          "Nico"
+          "The Velvet Underground"
         ],
         "release_date": "1967-03-12",
         "release_date_precision": "day",
@@ -52888,7 +52887,7 @@
       "total_count": 124,
       "total_duration_ms": 26526590,
       "album": {
-        "name": "808s & Heartbreak (Softpak)",
+        "name": "808s & Heartbreak",
         "album_type": "album",
         "artists": [
           "Kanye West"
@@ -53164,7 +53163,7 @@
         ],
         "release_date": "2015-05-29",
         "release_date_precision": "day",
-        "popularity": 32,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735dfb897bb4acf678b9d5fcc3",
@@ -53382,7 +53381,7 @@
         ],
         "release_date": "2016-11-04",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273929dae46c6b93942c7499b7d",
@@ -54338,7 +54337,7 @@
           "American Football"
         ],
         "release_date": "1999",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -54635,14 +54634,14 @@
       "total_count": 122,
       "total_duration_ms": 18529076,
       "album": {
-        "name": "Humanz (Deluxe)",
+        "name": "Humanz",
         "album_type": "album",
         "artists": [
           "Gorillaz"
         ],
         "release_date": "2017-04-28",
         "release_date_precision": "day",
-        "popularity": 72,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a5952c0e2e649f588603b743",
@@ -55108,7 +55107,7 @@
       "total_count": 122,
       "total_duration_ms": 23202227,
       "album": {
-        "name": "Low (1999 Remaster)",
+        "name": "Low",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -55537,7 +55536,7 @@
         ],
         "release_date": "1983-05-02",
         "release_date_precision": "day",
-        "popularity": 57,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a0bb93884823982d57cb2004",
@@ -55721,7 +55720,7 @@
         ],
         "release_date": "2022-02-25",
         "release_date_precision": "day",
-        "popularity": 50,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2736453885de7085ee7848f6399",
@@ -55984,12 +55983,12 @@
       "total_duration_ms": 27059233,
       "album": {
         "name": "Stop The Clocks",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Oasis"
         ],
         "release_date": "2006",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -56344,7 +56343,7 @@
         ],
         "release_date": "2007-12-14",
         "release_date_precision": "day",
-        "popularity": 76,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738b32b139981e79f2ebe005eb",
@@ -56797,7 +56796,7 @@
         ],
         "release_date": "1966-06-16",
         "release_date_precision": "day",
-        "popularity": 61,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273bde8dfd1922129f3d9e3732f",
@@ -57717,7 +57716,7 @@
       "total_duration_ms": 26604591,
       "album": {
         "name": "Blood Bank",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Bon Iver"
         ],
@@ -57849,8 +57848,8 @@
       "total_count": 117,
       "total_duration_ms": 19076166,
       "album": {
-        "name": "The Sound Of The Smiths (Standard Digital Version)",
-        "album_type": "compilation",
+        "name": "The Sound of the Smiths (Deluxe; 2008 Remaster)",
+        "album_type": "album",
         "artists": [
           "The Smiths"
         ],
@@ -58649,7 +58648,7 @@
         ],
         "release_date": "2019-12-13",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a1e8b73748ee972a4c22be16",
@@ -58969,7 +58968,7 @@
         ],
         "release_date": "2024-08-23",
         "release_date_precision": "day",
-        "popularity": 72,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f69e28716be1331924f25f2e",
@@ -59399,7 +59398,7 @@
       "total_duration_ms": 18171279,
       "album": {
         "name": "On And On And Beyond",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Mac Miller"
         ],
@@ -60195,7 +60194,7 @@
         ],
         "release_date": "2009-01-01",
         "release_date_precision": "day",
-        "popularity": 68,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27393a1519118102a6d78164713",
@@ -60464,7 +60463,7 @@
         ],
         "release_date": "2016-10-14",
         "release_date_precision": "day",
-        "popularity": 42,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b774144cc3b0ce9ace3e7864",
@@ -60749,7 +60748,7 @@
           "Vince Guaraldi Trio"
         ],
         "release_date": "1965",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -61030,7 +61029,7 @@
       "total_duration_ms": 24627032,
       "album": {
         "name": "A Hero's Death",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Fontaines D.C."
         ],
@@ -62061,7 +62060,7 @@
         ],
         "release_date": "1986-01-01",
         "release_date_precision": "day",
-        "popularity": 31,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e0ad20ae0e6fa53707f1d114",
@@ -62279,7 +62278,7 @@
         ],
         "release_date": "2017-02-24",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27385c5e6c686ced3e43bae2748",
@@ -63238,7 +63237,7 @@
         ],
         "release_date": "2012-03-02",
         "release_date_precision": "day",
-        "popularity": 16,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a1e7a7f5cd2016200878febe",
@@ -63558,7 +63557,7 @@
         ],
         "release_date": "1968-10-25",
         "release_date_precision": "day",
-        "popularity": 67,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273522088789d49e216d9818292",
@@ -64109,12 +64108,11 @@
         "name": "No Life for Me",
         "album_type": "album",
         "artists": [
-          "Wavves",
-          "Cloud Nothings"
+          "Wavves"
         ],
         "release_date": "2015-06-29",
         "release_date_precision": "day",
-        "popularity": 25,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e8a25b2bd0524c4497b32223",
@@ -64298,7 +64296,7 @@
         ],
         "release_date": "2017-09-08",
         "release_date_precision": "day",
-        "popularity": 39,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2736c90b0141e0d4d48ea1c7f19",
@@ -64516,7 +64514,7 @@
         ],
         "release_date": "2017-10-17",
         "release_date_precision": "day",
-        "popularity": 34,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731397af58b2365b266e6fb5e5",
@@ -66354,7 +66352,7 @@
         ],
         "release_date": "2014-05-23",
         "release_date_precision": "day",
-        "popularity": 25,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d3bd6bd1c8e1085e669aead0",
@@ -67127,7 +67125,7 @@
         ],
         "release_date": "2021-07-30",
         "release_date_precision": "day",
-        "popularity": 83,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732a038d3bf875d23e4aeaa84e",
@@ -67458,12 +67456,12 @@
       "total_duration_ms": 22514061,
       "album": {
         "name": "Gold",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Marvin Gaye"
         ],
         "release_date": "2005",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -68084,13 +68082,13 @@
       "total_duration_ms": 13980414,
       "album": {
         "name": "Return of the Arsonist",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Blood Command"
         ],
         "release_date": "2019-04-12",
         "release_date_precision": "day",
-        "popularity": 24,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27317a7398e38c77ae3c20a84ef",
@@ -68458,7 +68456,7 @@
         ],
         "release_date": "2007-11-05",
         "release_date_precision": "day",
-        "popularity": 48,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ad7f95966b473742cd323de8",
@@ -68727,7 +68725,7 @@
         ],
         "release_date": "2009-01-01",
         "release_date_precision": "day",
-        "popularity": 68,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273713f297a7bdc1d48971062b2",
@@ -69378,13 +69376,13 @@
       "total_duration_ms": 18248342,
       "album": {
         "name": "The Best Of",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Joy Division"
         ],
         "release_date": "2008-03-20",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27365792edb445d4a107dbe97fd",
@@ -69636,7 +69634,7 @@
         ],
         "release_date": "2007-01-01",
         "release_date_precision": "day",
-        "popularity": 47,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2737e57062cc57739dbaae3ceeb",
@@ -69939,7 +69937,7 @@
         ],
         "release_date": "1975-08-25",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738c5b6f7dcdc5817dc5050b2a",
@@ -70123,7 +70121,7 @@
         ],
         "release_date": "1991-01-01",
         "release_date_precision": "day",
-        "popularity": 35,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273da7b7cd1430975b5d4486b7a",
@@ -70770,7 +70768,7 @@
       "total_count": 102,
       "total_duration_ms": 16062862,
       "album": {
-        "name": "The Beatles (Remastered)",
+        "name": "The Beatles",
         "album_type": "album",
         "artists": [
           "The Beatles"
@@ -72346,7 +72344,7 @@
         ],
         "release_date": "2019-08-02",
         "release_date_precision": "day",
-        "popularity": 32,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27333ccb60f9b2785ef691b2fbc",
@@ -72581,7 +72579,7 @@
         ],
         "release_date": "2013-05-20",
         "release_date_precision": "day",
-        "popularity": 77,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739b9b36b0e22870b9f542d937",
@@ -72850,7 +72848,7 @@
         ],
         "release_date": "2012-03-05",
         "release_date_precision": "day",
-        "popularity": 9,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27334450f4b1b86258efd286b7c",
@@ -72993,14 +72991,14 @@
       "total_count": 100,
       "total_duration_ms": 24513107,
       "album": {
-        "name": "Blissed Out (160)",
+        "name": "Blissed Out",
         "album_type": "album",
         "artists": [
           "Spotify"
         ],
         "release_date": "2015-05-20",
         "release_date_precision": "day",
-        "popularity": 3,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f1a60f7b474da48c05ae29f7",
@@ -73167,7 +73165,7 @@
         ],
         "release_date": "2018-09-07",
         "release_date_precision": "day",
-        "popularity": 60,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273fb8b2c04222171f2c970d6ac",
@@ -73379,7 +73377,7 @@
       "total_duration_ms": 21177653,
       "album": {
         "name": "Dark World",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Pity Sex"
         ],
@@ -73534,7 +73532,7 @@
           "Oasis"
         ],
         "release_date": "2002",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -73763,14 +73761,14 @@
       "total_count": 99,
       "total_duration_ms": 10897399,
       "album": {
-        "name": "Belongs To The Dead",
+        "name": "Belongs To The Dead (Remastered Version)",
         "album_type": "album",
         "artists": [
           "Tigers Jaw"
         ],
         "release_date": "2006-01-01",
         "release_date_precision": "day",
-        "popularity": 22,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739e3bdf6ebdcd41d9fb087394",
@@ -74175,7 +74173,7 @@
         ],
         "release_date": "1991-09-24",
         "release_date_precision": "day",
-        "popularity": 76,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273153d79816d853f2694b2cc70",
@@ -74832,7 +74830,7 @@
         ],
         "release_date": "2020-02-28",
         "release_date_precision": "day",
-        "popularity": 36,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273104244dbce084d044f396e8a",
@@ -75118,7 +75116,7 @@
         ],
         "release_date": "2020-09-25",
         "release_date_precision": "day",
-        "popularity": 71,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d4d4929a3a86fe2f9fadbd42",
@@ -75689,8 +75687,8 @@
           "Bloc Party"
         ],
         "release_date": "2005",
-        "release_date_precision": "year",
-        "popularity": 24,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e38879dd5254a050953c4065",
@@ -75839,7 +75837,7 @@
           "The Avalanches"
         ],
         "release_date": "2000",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -76262,7 +76260,7 @@
         ],
         "release_date": "2020-02-21",
         "release_date_precision": "day",
-        "popularity": 44,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dbf9e906fe08a375c307b65f",
@@ -76457,13 +76455,13 @@
       "total_duration_ms": 17675580,
       "album": {
         "name": "Greatest Hits",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Foo Fighters"
         ],
         "release_date": "2009-11-03",
         "release_date_precision": "day",
-        "popularity": 65,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273136d7250568820409f8fdd60",
@@ -76776,7 +76774,7 @@
       "total_count": 96,
       "total_duration_ms": 18080162,
       "album": {
-        "name": "Sex, Love and Rock 'n' Roll",
+        "name": "Sex, Love And Rock 'N' Roll",
         "album_type": "album",
         "artists": [
           "Social Distortion"
@@ -77029,13 +77027,13 @@
       "total_duration_ms": 17718954,
       "album": {
         "name": "Greatest Hits",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "The Cure"
         ],
         "release_date": "2001-01-01",
         "release_date_precision": "day",
-        "popularity": 57,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273041dc87f77396196f0f41c64",
@@ -78060,7 +78058,7 @@
         ],
         "release_date": "2012-04-23",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b4f8459b0f719f8a97ee1c8c",
@@ -79445,14 +79443,14 @@
       "total_count": 95,
       "total_duration_ms": 24548751,
       "album": {
-        "name": "Remain in Light (Deluxe Version)",
+        "name": "Remain in Light",
         "album_type": "album",
         "artists": [
           "Talking Heads"
         ],
         "release_date": "1980-10-08",
         "release_date_precision": "day",
-        "popularity": 59,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e56fa8c916dc6ce419dcf557",
@@ -79918,13 +79916,11 @@
         "name": "KIDS SEE GHOSTS",
         "album_type": "album",
         "artists": [
-          "KIDS SEE GHOSTS",
-          "Kanye West",
-          "Kid Cudi"
+          "KIDS SEE GHOSTS"
         ],
         "release_date": "2018-06-08",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273013c00ee367dd85396f79c82",
@@ -80091,7 +80087,7 @@
         ],
         "release_date": "1982-09-04",
         "release_date_precision": "day",
-        "popularity": 44,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273122008a0dc58104e8c5db8ca",
@@ -81079,7 +81075,7 @@
         ],
         "release_date": "1992-02-10",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27338906032688bb13b135ce19a",
@@ -81984,7 +81980,7 @@
           "Deer Tick"
         ],
         "release_date": "2007",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -82656,7 +82652,7 @@
         ],
         "release_date": "2019-10-04",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735833ba28cd7988a92baaed12",
@@ -83159,7 +83155,7 @@
         ],
         "release_date": "2011-09-13",
         "release_date_precision": "day",
-        "popularity": 10,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e7892117bb123556de7daab4",
@@ -83677,7 +83673,7 @@
         ],
         "release_date": "2004-06-08",
         "release_date_precision": "day",
-        "popularity": 77,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273cab7ae4868e9f9ce6bdfdf43",
@@ -83963,7 +83959,7 @@
         ],
         "release_date": "2016-02-25",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27317be70ce1bd38ac1ab54fe08",
@@ -84450,7 +84446,7 @@
         ],
         "release_date": "2018-11-30",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732b688ab63b1a5f281cfdf451",
@@ -85293,8 +85289,8 @@
           "Penguin Cafe Orchestra"
         ],
         "release_date": "1981",
-        "release_date_precision": "year",
-        "popularity": 38,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738310950027c6c393fa371ac0",
@@ -85590,7 +85586,7 @@
       "total_count": 91,
       "total_duration_ms": 25906740,
       "album": {
-        "name": "Sabbath Bloody Sabbath (2009 Remaster)",
+        "name": "Sabbath Bloody Sabbath",
         "album_type": "album",
         "artists": [
           "Black Sabbath"
@@ -86050,7 +86046,7 @@
         ],
         "release_date": "2001-03-26",
         "release_date_precision": "day",
-        "popularity": 74,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f6c46838e4425ea96e2562fe",
@@ -86380,7 +86376,7 @@
       "total_count": 90,
       "total_duration_ms": 16904138,
       "album": {
-        "name": "Overkill (Expanded Edition)",
+        "name": "Overkill",
         "album_type": "album",
         "artists": [
           "Motörhead"
@@ -86672,7 +86668,7 @@
           "Fugazi"
         ],
         "release_date": "1989",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -86942,7 +86938,7 @@
         ],
         "release_date": "1984-06-04",
         "release_date_precision": "day",
-        "popularity": 79,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a43a6482e327d623bb0c0f77",
@@ -87194,7 +87190,7 @@
         ],
         "release_date": "2016-09-16",
         "release_date_precision": "day",
-        "popularity": 74,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732e92f776279eaf45d14a33fd",
@@ -89298,7 +89294,7 @@
         ],
         "release_date": "1996-08-27",
         "release_date_precision": "day",
-        "popularity": 62,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27384be563c5931d7ef35706148",
@@ -90779,7 +90775,7 @@
         ],
         "release_date": "2017-10-20",
         "release_date_precision": "day",
-        "popularity": 53,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273483c2fc141fcb4efe4470fb7",
@@ -91243,13 +91239,13 @@
       "total_duration_ms": 14098141,
       "album": {
         "name": "Life Sux",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Wavves"
         ],
         "release_date": "2011-09-27",
         "release_date_precision": "day",
-        "popularity": 24,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c9d55f9317c9dd482fac54a7",
@@ -91382,7 +91378,7 @@
         ],
         "release_date": "2013-08-05",
         "release_date_precision": "day",
-        "popularity": 33,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738df36a732db6061088e4b767",
@@ -91634,7 +91630,7 @@
         ],
         "release_date": "1959-08-17",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2730ebc17239b6b18ba88cfb8ca",
@@ -91801,7 +91797,7 @@
         ],
         "release_date": "2018-06-01",
         "release_date_precision": "day",
-        "popularity": 37,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273cde1249adf25791fe48f4461",
@@ -92035,7 +92031,7 @@
           "NOFX"
         ],
         "release_date": "1994",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -92366,14 +92362,14 @@
       "total_count": 85,
       "total_duration_ms": 11854538,
       "album": {
-        "name": "Nirvana (International Version)",
-        "album_type": "compilation",
+        "name": "Nirvana",
+        "album_type": "album",
         "artists": [
           "Nirvana"
         ],
         "release_date": "2002-01-01",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f118d2074e050cbc2e4533a0",
@@ -92618,7 +92614,7 @@
       "total_count": 85,
       "total_duration_ms": 17748620,
       "album": {
-        "name": "Exile On Main Street (Deluxe Version)",
+        "name": "Exile On Main Street",
         "album_type": "album",
         "artists": [
           "The Rolling Stones"
@@ -93343,7 +93339,7 @@
       "total_count": 85,
       "total_duration_ms": 14258649,
       "album": {
-        "name": "Sgt. Pepper's Lonely Hearts Club Band (Remastered)",
+        "name": "Sgt. Pepper's Lonely Hearts Club Band",
         "album_type": "album",
         "artists": [
           "The Beatles"
@@ -94054,14 +94050,14 @@
       "total_count": 85,
       "total_duration_ms": 17960268,
       "album": {
-        "name": "Scary Monsters (And Super Creeps) [2017 Remaster]",
+        "name": "Scary Monsters (And Super Creeps)",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "1980",
-        "release_date_precision": "year",
-        "popularity": 57,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b62b49cec67e610f6f3d1221",
@@ -94507,14 +94503,14 @@
       "total_count": 85,
       "total_duration_ms": 15243987,
       "album": {
-        "name": "Cave World",
+        "name": "Cave World (Deluxe)",
         "album_type": "album",
         "artists": [
           "Viagra Boys"
         ],
         "release_date": "2022-07-08",
         "release_date_precision": "day",
-        "popularity": 54,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f77d64b0ee2dc42b32606faa",
@@ -95188,7 +95184,7 @@
         ],
         "release_date": "1969-01-12",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2736f2f499c1df1f210c9b34b32",
@@ -95559,7 +95555,7 @@
         ],
         "release_date": "2009-01-01",
         "release_date_precision": "day",
-        "popularity": 47,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734752007ac079453e3ceb8f35",
@@ -95787,14 +95783,14 @@
       "total_count": 84,
       "total_duration_ms": 12653189,
       "album": {
-        "name": "To Record Only Water For Ten Days (U.S. Version)",
+        "name": "To Record Only Water For Ten Days",
         "album_type": "album",
         "artists": [
           "John Frusciante"
         ],
         "release_date": "2001-02-12",
         "release_date_precision": "day",
-        "popularity": 45,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732212a5deaedc7b5060799d83",
@@ -96761,14 +96757,14 @@
       "total_count": 83,
       "total_duration_ms": 19171395,
       "album": {
-        "name": "Cracked Actor (Live, Los Angeles '74)",
+        "name": "Cracked Actor",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "2017-04-22",
         "release_date_precision": "day",
-        "popularity": 24,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2730d91cf5368982a1e84bf9673",
@@ -97156,7 +97152,7 @@
         ],
         "release_date": "2017-04-20",
         "release_date_precision": "day",
-        "popularity": 79,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ea3ef7697cfd5705b8f47521",
@@ -97507,7 +97503,7 @@
         ],
         "release_date": "1967-12-01",
         "release_date_precision": "day",
-        "popularity": 61,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27319dcd95d28b63d10164327f2",
@@ -97758,7 +97754,7 @@
           "Pearl Jam"
         ],
         "release_date": "1991",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -98447,7 +98443,7 @@
         ],
         "release_date": "2013-07-16",
         "release_date_precision": "day",
-        "popularity": 14,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e1f2437453a51df1c8324d32",
@@ -98665,7 +98661,7 @@
         ],
         "release_date": "2015-02-12",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735e371c9d44d7ab36d8969c81",
@@ -99900,7 +99896,7 @@
       "total_count": 81,
       "total_duration_ms": 14356596,
       "album": {
-        "name": "Signed And Sealed In Blood",
+        "name": "Signed and Sealed In Blood",
         "album_type": "album",
         "artists": [
           "Dropkick Murphys"
@@ -100707,8 +100703,8 @@
       "total_count": 81,
       "total_duration_ms": 17273741,
       "album": {
-        "name": "Territory",
-        "album_type": "single",
+        "name": "TERRITORY",
+        "album_type": "album",
         "artists": [
           "The Blaze"
         ],
@@ -100864,7 +100860,7 @@
         ],
         "release_date": "2018-09-21",
         "release_date_precision": "day",
-        "popularity": 48,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739f53f611acdab5215dd672ce",
@@ -101167,7 +101163,7 @@
         ],
         "release_date": "2019-05-31",
         "release_date_precision": "day",
-        "popularity": 62,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27348f2487a18a735f457404eb9",
@@ -101797,10 +101793,9 @@
       "total_duration_ms": 12960996,
       "album": {
         "name": "Mermaid Avenue: The Complete Sessions",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
-          "Billy Bragg",
-          "Wilco"
+          "Billy Bragg"
         ],
         "release_date": "2012-04-20",
         "release_date_precision": "day",
@@ -102608,7 +102603,7 @@
         ],
         "release_date": "2018-04-11",
         "release_date_precision": "day",
-        "popularity": 34,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e21252f94100e8e0227b05b9",
@@ -102928,7 +102923,7 @@
         ],
         "release_date": "1988-01-01",
         "release_date_precision": "day",
-        "popularity": 34,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27319329cd3ecae9c93507c09ed",
@@ -103766,7 +103761,7 @@
         ],
         "release_date": "2024-02-16",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273838fbd7f0f3d02d2235cd121",
@@ -103995,7 +103990,7 @@
       "total_duration_ms": 14953309,
       "album": {
         "name": "Who The F*** Are Arctic Monkeys?",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Arctic Monkeys"
         ],
@@ -104127,13 +104122,13 @@
       "total_count": 78,
       "total_duration_ms": 14087527,
       "album": {
-        "name": "Hot Fuss (Deluxe Edition)",
+        "name": "Hot Fuss",
         "album_type": "album",
         "artists": [
           "The Killers"
         ],
         "release_date": "2004",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -104754,7 +104749,7 @@
         ],
         "release_date": "2008-01-27",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27301e2ebfbf4f8147621c8a866",
@@ -105326,7 +105321,7 @@
         ],
         "release_date": "2016-02-05",
         "release_date_precision": "day",
-        "popularity": 25,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735097f5317bfec1e9215b83a6",
@@ -106031,7 +106026,7 @@
         ],
         "release_date": "2017-05-19",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2733229828ddbf08835866b5f47",
@@ -106232,7 +106227,7 @@
         ],
         "release_date": "2018-06-29",
         "release_date_precision": "day",
-        "popularity": 2,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f9a9abe8ed9ffaba55412384",
@@ -106467,7 +106462,7 @@
         ],
         "release_date": "2019-10-25",
         "release_date_precision": "day",
-        "popularity": 71,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731bb797bbfe2480650b6c2964",
@@ -106971,7 +106966,7 @@
         ],
         "release_date": "2014-05-27",
         "release_date_precision": "day",
-        "popularity": 31,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c03588434bc3d6b5ba2c4119",
@@ -107206,7 +107201,7 @@
         ],
         "release_date": "2002-04-15",
         "release_date_precision": "day",
-        "popularity": 56,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27338195e65555be2b7f9324e1c",
@@ -107812,7 +107807,7 @@
         ],
         "release_date": "2008-01-01",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273aa739a5e844220bb44a64adc",
@@ -108132,7 +108127,7 @@
         ],
         "release_date": "2021-08-20",
         "release_date_precision": "day",
-        "popularity": 32,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f5c6742fcfd9dd98ffd397ba",
@@ -108367,7 +108362,7 @@
         ],
         "release_date": "2024-02-16",
         "release_date_precision": "day",
-        "popularity": 39,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e6e35b7fe90e92130688ebdb",
@@ -108670,7 +108665,7 @@
         ],
         "release_date": "1996-07-30",
         "release_date_precision": "day",
-        "popularity": 49,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c4cb3ab94558b3893b1ccbd9",
@@ -108837,7 +108832,7 @@
         ],
         "release_date": "2003-10-28",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2730f35726025e0f025da4c688f",
@@ -109055,7 +109050,7 @@
         ],
         "release_date": "1956-03-23",
         "release_date_precision": "day",
-        "popularity": 58,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f6da52234df3b961de5b3ce5",
@@ -109307,7 +109302,7 @@
         ],
         "release_date": "2013-09-09",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734f669de38690faf2cf88c245",
@@ -109552,7 +109547,7 @@
       "total_count": 76,
       "total_duration_ms": 18233734,
       "album": {
-        "name": "The Dark Side Of The Moon (2011 Remastered Version)",
+        "name": "The Dark Side Of The Moon",
         "album_type": "album",
         "artists": [
           "Pink Floyd"
@@ -109947,7 +109942,7 @@
         ],
         "release_date": "2013-03-08",
         "release_date_precision": "day",
-        "popularity": 51,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273bcf2e51e254b5bdd336c6cd9",
@@ -110233,7 +110228,7 @@
         ],
         "release_date": "2018-05-25",
         "release_date_precision": "day",
-        "popularity": 56,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273263555eebbe2b375593aa31e",
@@ -110618,7 +110613,7 @@
         ],
         "release_date": "2011-02-14",
         "release_date_precision": "day",
-        "popularity": 36,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273dd3e6ebb68966851e511f350",
@@ -110870,7 +110865,7 @@
         ],
         "release_date": "2002-01-01",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739eec33b045d88f87b9b06e67",
@@ -111150,13 +111145,13 @@
       "total_duration_ms": 10317173,
       "album": {
         "name": "Friends",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "JOYLESS"
         ],
         "release_date": "2024-05-10",
         "release_date_precision": "day",
-        "popularity": 4,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2730c631d9e1cd77deaf489ec19",
@@ -111482,14 +111477,14 @@
       "total_count": 75,
       "total_duration_ms": 13828591,
       "album": {
-        "name": "Aladdin Sane (2013 Remaster)",
+        "name": "Aladdin Sane - 2013 Remaster",
         "album_type": "album",
         "artists": [
           "David Bowie"
         ],
         "release_date": "1973-04-13",
         "release_date_precision": "day",
-        "popularity": 55,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2735db6dbaca8678527e643a866",
@@ -111986,7 +111981,7 @@
       "total_count": 75,
       "total_duration_ms": 9378395,
       "album": {
-        "name": "Hi This Is Flume (Mixtape)",
+        "name": "Hi This Is Flume",
         "album_type": "album",
         "artists": [
           "Flume"
@@ -112330,7 +112325,7 @@
         ],
         "release_date": "2022-04-06",
         "release_date_precision": "day",
-        "popularity": 49,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27342c555f16074962799b70d70",
@@ -112565,7 +112560,7 @@
         ],
         "release_date": "2013-11-08",
         "release_date_precision": "day",
-        "popularity": 51,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f782f5b9c6c419e4fd261175",
@@ -112742,7 +112737,7 @@
       "total_count": 74,
       "total_duration_ms": 12912505,
       "album": {
-        "name": "Nevermind",
+        "name": "Nevermind (Remastered)",
         "album_type": "album",
         "artists": [
           "Nirvana"
@@ -113222,7 +113217,7 @@
         ],
         "release_date": "2003-08-26",
         "release_date_precision": "day",
-        "popularity": 40,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2736df42309b99aed47700c900b",
@@ -114345,8 +114340,8 @@
           "The Velvet Underground"
         ],
         "release_date": "1970",
-        "release_date_precision": "year",
-        "popularity": 55,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a6d589272dca67a07a00c8a8",
@@ -114683,7 +114678,7 @@
         ],
         "release_date": "2017-05-19",
         "release_date_precision": "day",
-        "popularity": 53,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27386e09ef3ccefded26c85bc8c",
@@ -115232,7 +115227,7 @@
       "total_duration_ms": 16647031,
       "album": {
         "name": "Skinty Fia",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Fontaines D.C."
         ],
@@ -115650,7 +115645,7 @@
       "total_duration_ms": 17847451,
       "album": {
         "name": "The Masterplan",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Oasis"
         ],
@@ -115881,13 +115876,13 @@
       "total_count": 73,
       "total_duration_ms": 14372512,
       "album": {
-        "name": "Home Again",
-        "album_type": "single",
+        "name": "Home Again (Deluxe Version)",
+        "album_type": "album",
         "artists": [
           "Michael Kiwanuka"
         ],
         "release_date": "2012",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -116185,13 +116180,13 @@
       "total_duration_ms": 12089293,
       "album": {
         "name": "(Rotten Apples) The Smashing Pumpkins Greatest Hits",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "The Smashing Pumpkins"
         ],
         "release_date": "2001-01-01",
         "release_date_precision": "day",
-        "popularity": 62,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c48f42fdafcffcedbdbce025",
@@ -116323,8 +116318,8 @@
           "The Clash"
         ],
         "release_date": "1978",
-        "release_date_precision": "year",
-        "popularity": 44,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27343d8db7a98aa8e5823b849fd",
@@ -116944,7 +116939,7 @@
         ],
         "release_date": "1995-07-04",
         "release_date_precision": "day",
-        "popularity": 60,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27352844939eaf38ec62110fcde",
@@ -117295,7 +117290,7 @@
         ],
         "release_date": "2007-11-19",
         "release_date_precision": "day",
-        "popularity": 63,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273673288fb985e5c194536ae27",
@@ -117564,7 +117559,7 @@
         ],
         "release_date": "2019-03-29",
         "release_date_precision": "day",
-        "popularity": 85,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27350a3147b4edd7701a876c6ce",
@@ -117843,7 +117838,7 @@
       "total_count": 72,
       "total_duration_ms": 14994277,
       "album": {
-        "name": "MTV Unplugged In New York",
+        "name": "MTV Unplugged In New York (25th Anniversary)",
         "album_type": "album",
         "artists": [
           "Nirvana"
@@ -118322,7 +118317,7 @@
           "Turbonegro"
         ],
         "release_date": "1992",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -118643,7 +118638,7 @@
         ],
         "release_date": "2014-05-16",
         "release_date_precision": "day",
-        "popularity": 31,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732a42ff0f75c85aa58a7a01b2",
@@ -118827,7 +118822,7 @@
         ],
         "release_date": "1983-05-31",
         "release_date_precision": "day",
-        "popularity": 65,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273e35e2e2a4bfa8a30a78fc532",
@@ -119719,7 +119714,7 @@
         ],
         "release_date": "2018-10-12",
         "release_date_precision": "day",
-        "popularity": 38,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273997ec16d6ee1b580e8c02e67",
@@ -119971,7 +119966,7 @@
         ],
         "release_date": "2022-07-22",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732e8e9d480a55d914e1c5ff3b",
@@ -120240,7 +120235,7 @@
         ],
         "release_date": "1990-01-01",
         "release_date_precision": "day",
-        "popularity": 32,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27368dc86599438712863c68579",
@@ -120485,7 +120480,7 @@
       "total_count": 71,
       "total_duration_ms": 17547099,
       "album": {
-        "name": "Paranoid",
+        "name": "Paranoid (2009 Remastered Version)",
         "album_type": "album",
         "artists": [
           "Black Sabbath"
@@ -121411,14 +121406,14 @@
       "total_count": 71,
       "total_duration_ms": 28593024,
       "album": {
-        "name": "SAS PLUS / SAS PUSSY (PAF VERSION)",
-        "album_type": "single",
+        "name": "SAS PLUS / SAS PUSSY",
+        "album_type": "album",
         "artists": [
           "Karpe"
         ],
         "release_date": "2019-02-22",
         "release_date_precision": "day",
-        "popularity": 28,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738ca33f5a4860fd795932d483",
@@ -121738,7 +121733,7 @@
         ],
         "release_date": "2019-07-12",
         "release_date_precision": "day",
-        "popularity": 38,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2738f38659c97d873d794e2c6dd",
@@ -121922,7 +121917,7 @@
         ],
         "release_date": "2004-04-05",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273cc68329bfbf34037df965dc1",
@@ -122072,7 +122067,7 @@
         ],
         "release_date": "2009-01-26",
         "release_date_precision": "day",
-        "popularity": 29,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273457bb3ff9cf7cb4adec045c3",
@@ -122181,15 +122176,14 @@
       "total_count": 70,
       "total_duration_ms": 11359950,
       "album": {
-        "name": "Watch The Throne",
+        "name": "Watch The Throne (Deluxe)",
         "album_type": "album",
         "artists": [
-          "JAY-Z",
-          "Kanye West"
+          "JAY-Z"
         ],
         "release_date": "2011-08-08",
         "release_date_precision": "day",
-        "popularity": 76,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27352e61456aa4995ba48d94e30",
@@ -122458,7 +122452,7 @@
         ],
         "release_date": "2002-01-01",
         "release_date_precision": "day",
-        "popularity": 41,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273054b59e46874fbaa87e87f0c",
@@ -122843,7 +122837,7 @@
         ],
         "release_date": "2013-05-28",
         "release_date_precision": "day",
-        "popularity": 43,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739ad23cad3ef037b00c1d2a20",
@@ -123010,7 +123004,7 @@
         ],
         "release_date": "2011-03-08",
         "release_date_precision": "day",
-        "popularity": 19,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27389fb1057ea64ba7781d509ca",
@@ -123239,7 +123233,7 @@
       "total_duration_ms": 11260221,
       "album": {
         "name": "Ultimate Sinatra",
-        "album_type": "compilation",
+        "album_type": "album",
         "artists": [
           "Frank Sinatra"
         ],
@@ -123650,7 +123644,7 @@
         ],
         "release_date": "1982-09-30",
         "release_date_precision": "day",
-        "popularity": 64,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2731e7af3a709aeac0c796ab542",
@@ -124099,9 +124093,7 @@
         "name": "Better Oblivion Community Center",
         "album_type": "album",
         "artists": [
-          "Better Oblivion Community Center",
-          "Phoebe Bridgers",
-          "Conor Oberst"
+          "Better Oblivion Community Center"
         ],
         "release_date": "2019-01-24",
         "release_date_precision": "day",
@@ -124558,7 +124550,7 @@
         ],
         "release_date": "2019-12-13",
         "release_date_precision": "day",
-        "popularity": 81,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27325180571abce9472f61bd722",
@@ -124804,13 +124796,13 @@
       "total_duration_ms": 12978050,
       "album": {
         "name": "NEVER ENOUGH",
-        "album_type": "single",
+        "album_type": "album",
         "artists": [
           "Turnstile"
         ],
         "release_date": "2025-04-08",
         "release_date_precision": "day",
-        "popularity": 42,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2732ec7851c38fcc0d6c55f5b6d",
@@ -125095,7 +125087,7 @@
           "Billy Bragg"
         ],
         "release_date": "1983",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -125539,7 +125531,7 @@
       "total_count": 69,
       "total_duration_ms": 13532167,
       "album": {
-        "name": "Tonight (1999 Remaster)",
+        "name": "Tonight",
         "album_type": "album",
         "artists": [
           "David Bowie"
@@ -126033,7 +126025,7 @@
         ],
         "release_date": "2019-06-17",
         "release_date_precision": "day",
-        "popularity": 60,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d9577b938f4ff10f5b136fe9",
@@ -126200,7 +126192,7 @@
         ],
         "release_date": "2022-10-07",
         "release_date_precision": "day",
-        "popularity": 64,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273be8e67d6db7bb17c437092fa",
@@ -126761,7 +126753,7 @@
       "total_count": 68,
       "total_duration_ms": 11645397,
       "album": {
-        "name": "In Utero (Explicit Version)",
+        "name": "In Utero",
         "album_type": "album",
         "artists": [
           "Nirvana"
@@ -127237,7 +127229,7 @@
           "Graveyard"
         ],
         "release_date": "2012",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -127504,7 +127496,7 @@
         ],
         "release_date": "2002-11-17",
         "release_date_precision": "day",
-        "popularity": 74,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273a7292b6863258e889b78d787",
@@ -127923,7 +127915,7 @@
         ],
         "release_date": "2015-10-09",
         "release_date_precision": "day",
-        "popularity": 53,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273d4d231e11ce86d2a6e6f9414",
@@ -128141,7 +128133,7 @@
         ],
         "release_date": "2017-02-24",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2739536e13edd9e2e08d2dae94b",
@@ -128403,7 +128395,7 @@
       "total_count": 68,
       "total_duration_ms": 11301634,
       "album": {
-        "name": "Masterpiece",
+        "name": "Masterpiece (2023 Remaster)",
         "album_type": "album",
         "artists": [
           "Big Thief"
@@ -128832,7 +128824,7 @@
         ],
         "release_date": "2021-09-10",
         "release_date_precision": "day",
-        "popularity": 51,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273727318aa69af60549ab3b728",
@@ -129101,7 +129093,7 @@
         ],
         "release_date": "2009-08-16",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273055437bf35e8ba027bed0882",
@@ -129335,8 +129327,8 @@
           "Jimmy Eat World"
         ],
         "release_date": "2001",
-        "release_date_precision": "year",
-        "popularity": 1,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273c42de59f6893457d392f4d88",
@@ -129806,7 +129798,7 @@
         ],
         "release_date": "1986-06-16",
         "release_date_precision": "day",
-        "popularity": 77,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273ada101c2e9e97feb8fae37a9",
@@ -130310,7 +130302,7 @@
         ],
         "release_date": "2013-03-25",
         "release_date_precision": "day",
-        "popularity": 66,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f07ef193e0bb6a238ea37f0a",
@@ -130493,7 +130485,7 @@
           "Slowdive"
         ],
         "release_date": "1993",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -130947,7 +130939,7 @@
         ],
         "release_date": "2014-09-01",
         "release_date_precision": "day",
-        "popularity": 15,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273b20537a80b31d2bc067be478",
@@ -131485,7 +131477,7 @@
         ],
         "release_date": "2019-03-22",
         "release_date_precision": "day",
-        "popularity": 37,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273161c304ab2954b568078ba8c",
@@ -131703,7 +131695,7 @@
         ],
         "release_date": "2022-05-13",
         "release_date_precision": "day",
-        "popularity": 5,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273f30764d5fa1e439ad6a7742f",
@@ -132057,7 +132049,7 @@
         ],
         "release_date": "2006-10-20",
         "release_date_precision": "day",
-        "popularity": 82,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27317f77fab7e8f18d5f9fee4a1",
@@ -133092,13 +133084,13 @@
       "total_count": 66,
       "total_duration_ms": 13066829,
       "album": {
-        "name": "Blodig Alvor Na Na Na Na Na",
+        "name": "Blodig Alvor Na Na Na Na Na (Remastered 2015)",
         "album_type": "album",
         "artists": [
           "Dumdum Boys"
         ],
         "release_date": "1988",
-        "release_date_precision": "year",
+        "release_date_precision": "day",
         "popularity": 0,
         "images": [
           {
@@ -133593,14 +133585,14 @@
       "total_count": 66,
       "total_duration_ms": 13062507,
       "album": {
-        "name": "Led Zeppelin IV",
+        "name": "Led Zeppelin IV (Remaster)",
         "album_type": "album",
         "artists": [
           "Led Zeppelin"
         ],
         "release_date": "1971-11-08",
         "release_date_precision": "day",
-        "popularity": 1,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273cd25ce73e3eddeedb995fcee",
@@ -134270,8 +134262,8 @@
           "The Clash"
         ],
         "release_date": "1982",
-        "release_date_precision": "year",
-        "popularity": 72,
+        "release_date_precision": "day",
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273280b72ca76b4734debfc190e",
@@ -134506,7 +134498,7 @@
         ],
         "release_date": "1994-04-19",
         "release_date_precision": "day",
-        "popularity": 69,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b27371d840defb002ed3b180f7cd",
@@ -134724,7 +134716,7 @@
         ],
         "release_date": "2016-10-07",
         "release_date_precision": "day",
-        "popularity": 42,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b2734642c36a135264c64e655376",
@@ -135381,7 +135373,7 @@
         ],
         "release_date": "2021-06-25",
         "release_date_precision": "day",
-        "popularity": 71,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273940aa635eea98719f6ca4ad9",
@@ -135701,7 +135693,7 @@
         ],
         "release_date": "1994-02-01",
         "release_date_precision": "day",
-        "popularity": 77,
+        "popularity": 0,
         "images": [
           {
             "url": "https://i.scdn.co/image/ab67616d0000b273db89b08034de626ebee6823d",

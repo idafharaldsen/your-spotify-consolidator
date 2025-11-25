@@ -174,9 +174,6 @@ export class FileOperations {
         }
       });
 
-      if (deletedCount > 0) {
-        console.log(`🧹 Cleaned up ${deletedCount} old cleaned data file(s)`);
-      }
     } catch (error) {
       console.error('⚠️  Error cleaning up old files:', error);
     }
@@ -191,6 +188,7 @@ export class FileOperations {
     albumsWithSongs: AlbumWithSongs[],
     originalAlbumsCount: number,
     history: CompleteListeningHistory,
+    detailedStats: DetailedStats,
     timestamp?: number
   ): Promise<number> {
     if (!fs.existsSync('data/cleaned-data')) {
@@ -243,52 +241,17 @@ export class FileOperations {
       albums: albumsWithSongs.slice(0, 500)
     }, null, 2));
 
-    console.log(`\n📁 All cleaned files saved:`);
-    console.log(`- Songs: ${songsFile}`);
-    console.log(`- Artists: ${artistsFile}`);
-    console.log(`- Albums with Songs: ${albumsWithSongsFile}`);
-
-    const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
-    if (shouldUpload) {
-      try {
-        console.log('\n☁️  Uploading files to Vercel Blob Storage...');
-        await cleanupOldBlobFiles();
-        
-        const filesToUpload = [
-          { filePath: songsFile, blobPath: 'cleaned-songs.json' },
-          { filePath: artistsFile, blobPath: 'cleaned-artists.json' },
-          { filePath: albumsWithSongsFile, blobPath: 'cleaned-albums-with-songs.json' }
-        ];
-        
-        const blobUrls = await uploadMultipleToVercelBlob(filesToUpload);
-
-        console.log('\n✅ All files uploaded to Vercel Blob Storage:');
-        blobUrls.forEach((url, index) => {
-          const fileNames = ['Songs', 'Artists', 'Albums with Songs'];
-          console.log(`- ${fileNames[index]}: ${url}`);
-        });
-      } catch (error) {
-        console.error('\n⚠️  Failed to upload files to Vercel Blob Storage:', error);
-        console.error('Files are still saved locally. Set UPLOAD_TO_VERCEL_BLOB=false to skip upload.');
-      }
-    } else {
-      console.log('\n⏭️  Skipping Vercel Blob Storage upload (UPLOAD_TO_VERCEL_BLOB=false)');
-    }
+    // Save detailed stats file
+    const statsFile = `data/cleaned-data/detailed-stats-${fileTimestamp}.json`;
+    fs.writeFileSync(statsFile, JSON.stringify({
+      metadata: {
+        timestamp: new Date().toISOString(),
+        source: 'Merged Streaming History'
+      },
+      stats: detailedStats
+    }, null, 2));
     
-    return fileTimestamp;
-  }
-
-  /**
-   * Save detailed statistics to JSON file
-   */
-  async saveDetailedStats(detailedStats: DetailedStats, timestamp: number): Promise<string> {
-    if (!fs.existsSync('data/cleaned-data')) {
-      fs.mkdirSync('data/cleaned-data', { recursive: true });
-    }
-    
-    const statsFile = `data/cleaned-data/detailed-stats-${timestamp}.json`;
-    
-    // Verify we have enriched data before saving
+    // Verify detailed stats file
     let songsWithImages = 0;
     let artistsWithImages = 0;
     detailedStats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
@@ -307,126 +270,42 @@ export class FileOperations {
     const totalSongs = detailedStats.yearlyTopItems.reduce((sum: number, year: YearlyTopItems) => sum + year.topSongs.length, 0);
     const totalArtists = detailedStats.yearlyTopItems.reduce((sum: number, year: YearlyTopItems) => sum + year.topArtists.length, 0);
     
-    console.log(`\n📊 Detailed Stats Summary:`);
-    console.log(`   Songs with images: ${songsWithImages} / ${totalSongs}`);
-    console.log(`   Artists with images: ${artistsWithImages} / ${totalArtists}`);
-    
-    const fileContent = JSON.stringify({
-      metadata: {
-        timestamp: new Date().toISOString(),
-        source: 'Merged Streaming History'
-      },
-      stats: detailedStats
-    }, null, 2);
-    
-    fs.writeFileSync(statsFile, fileContent);
-    
-    // Verify file was written correctly by checking it exists and has content
-    if (!fs.existsSync(statsFile)) {
-      throw new Error(`Failed to write detailed stats file: ${statsFile}`);
-    }
-    
-    // Verify the written file contains the enriched data
-    const writtenContent = fs.readFileSync(statsFile, 'utf8');
-    const writtenData = JSON.parse(writtenContent) as { stats?: DetailedStats };
-    let writtenSongsWithImages = 0;
-    let writtenArtistsWithImages = 0;
-    if (writtenData.stats && writtenData.stats.yearlyTopItems) {
-      writtenData.stats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
-        if (yearData.topSongs) {
-          yearData.topSongs.forEach((song: TopSong) => {
-            if (song.images && song.images.length > 0) {
-              writtenSongsWithImages++;
-            }
-          });
-        }
-        if (yearData.topArtists) {
-          yearData.topArtists.forEach((artist: TopArtist) => {
-            if (artist.images && artist.images.length > 0) {
-              writtenArtistsWithImages++;
-            }
-          });
-        }
-      });
-    }
-    
-    const fileSize = fs.statSync(statsFile).size;
-    console.log(`- Detailed Stats: ${statsFile} (${(fileSize / 1024).toFixed(2)} KB)`);
-    console.log(`   Verified: ${writtenSongsWithImages} songs and ${writtenArtistsWithImages} artists with images in saved file`);
-    
+    console.log(`\n📁 All cleaned files saved:`);
+    console.log(`- Songs: ${songsFile}`);
+    console.log(`- Artists: ${artistsFile}`);
+    console.log(`- Albums with Songs: ${albumsWithSongsFile}`);
+    console.log(`- Detailed Stats: ${statsFile}`);
+
     const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
     if (shouldUpload) {
       try {
-        // Delete old detailed-stats.json from blob storage before uploading new one
-        console.log('   Cleaning up old detailed-stats.json from blob storage...');
-        try {
-          await deleteFromVercelBlob('detailed-stats.json');
-          console.log('   ✅ Old file deleted successfully');
-          // Wait a bit for deletion to propagate
-          await new Promise(resolve => setTimeout(resolve, 1000));
-        } catch (error: any) {
-          // Check if it's a 404 (file doesn't exist) - that's fine
-          if (error?.status === 404 || error?.message?.includes('not found')) {
-            console.log('   ℹ️  Old detailed-stats.json not found (will upload new one)');
-          } else {
-            console.error('   ⚠️  Failed to delete old file, but continuing with upload:', error);
-          }
-        }
+        console.log('\n☁️  Uploading files to Vercel Blob Storage...');
+        await cleanupOldBlobFiles();
         
-        // Small delay to ensure file is fully flushed to disk
-        await new Promise(resolve => setTimeout(resolve, 200));
-        
-        // Verify file still exists and has content before uploading
-        if (!fs.existsSync(statsFile)) {
-          throw new Error(`Stats file disappeared before upload: ${statsFile}`);
-        }
-        
-        // Read the file again right before upload to ensure we're uploading the correct content
-        const fileToUpload = fs.readFileSync(statsFile, 'utf8');
-        const uploadData = JSON.parse(fileToUpload) as { metadata?: { timestamp?: string }, stats?: DetailedStats };
-        const uploadTimestamp = uploadData.metadata?.timestamp;
-        
-        // Verify the file we're about to upload has enriched data
-        let uploadSongsWithImages = 0;
-        let uploadArtistsWithImages = 0;
-        if (uploadData.stats && uploadData.stats.yearlyTopItems) {
-          uploadData.stats.yearlyTopItems.forEach((yearData: YearlyTopItems) => {
-            yearData.topSongs.forEach((song: TopSong) => {
-              if (song.images && song.images.length > 0) {
-                uploadSongsWithImages++;
-              }
-            });
-            yearData.topArtists.forEach((artist: TopArtist) => {
-              if (artist.images && artist.images.length > 0) {
-                uploadArtistsWithImages++;
-              }
-            });
-          });
-        }
-        
-        console.log(`   Uploading file with timestamp: ${uploadTimestamp}`);
-        console.log(`   File contains: ${uploadSongsWithImages} songs and ${uploadArtistsWithImages} artists with images`);
-        
-        if (uploadSongsWithImages === 0 && uploadArtistsWithImages === 0) {
-          console.error('⚠️  ERROR: File being uploaded has NO images! Aborting upload.');
-          console.error('   This indicates enrichment did not complete or failed.');
-          throw new Error('Cannot upload file without images - enrichment may have failed');
-        }
-        
-        // Upload the file - this should overwrite any existing file
-        await uploadMultipleToVercelBlob([
+        const filesToUpload = [
+          { filePath: songsFile, blobPath: 'cleaned-songs.json' },
+          { filePath: artistsFile, blobPath: 'cleaned-artists.json' },
+          { filePath: albumsWithSongsFile, blobPath: 'cleaned-albums-with-songs.json' },
           { filePath: statsFile, blobPath: 'detailed-stats.json' }
-        ]);
+        ];
         
-        // Verify upload succeeded
-        console.log('✅ Detailed stats uploaded to Vercel Blob Storage');
-        console.log(`   Successfully uploaded: ${uploadSongsWithImages} songs and ${uploadArtistsWithImages} artists with images`);
+        const blobUrls = await uploadMultipleToVercelBlob(filesToUpload);
+
+        console.log('\n✅ All files uploaded to Vercel Blob Storage:');
+        blobUrls.forEach((url, index) => {
+          const fileNames = ['Songs', 'Artists', 'Albums with Songs', 'Detailed Stats'];
+          console.log(`- ${fileNames[index]}: ${url}`);
+        });
       } catch (error) {
-        console.error('⚠️  Failed to upload detailed stats to Vercel Blob Storage:', error);
+        console.error('\n⚠️  Failed to upload files to Vercel Blob Storage:', error);
+        console.error('Files are still saved locally. Set UPLOAD_TO_VERCEL_BLOB=false to skip upload.');
       }
+    } else {
+      console.log('\n⏭️  Skipping Vercel Blob Storage upload (UPLOAD_TO_VERCEL_BLOB=false)');
     }
     
-    return statsFile;
+    return fileTimestamp;
   }
+
 }
 
