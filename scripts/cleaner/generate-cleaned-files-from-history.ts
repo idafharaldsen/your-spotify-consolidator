@@ -11,8 +11,6 @@ import type {
   AlbumWithSongs,
   AlbumSong,
   SpotifyTrack,
-  SpotifyAlbum,
-  SpotifyArtist,
   DetailedStats,
   YearlyListeningTime,
   YearlyTopItems,
@@ -28,11 +26,6 @@ class CleanedFilesGenerator {
   private rulesManager: ConsolidationRulesManager;
   private consolidator: Consolidator;
   private fileOps: FileOperations;
-  
-  // Shared caches to avoid duplicate API calls across enrichment functions
-  private trackCache = new Map<string, SpotifyTrack>();
-  private albumCache = new Map<string, SpotifyAlbum>();
-  private artistCache = new Map<string, SpotifyArtist>();
 
   constructor() {
     this.spotifyApiClient = new SpotifyApiClient();
@@ -401,147 +394,6 @@ class CleanedFilesGenerator {
   }
 
   /**
-   * Load cache from existing cleaned files
-   */
-  private loadCacheFromExistingFiles(existingFiles: { songs: Map<string, CleanedSong>, albums: Map<string, CleanedAlbum>, artists: Map<string, CleanedArtist>, albumsWithSongs: Map<string, AlbumWithSongs> }): void {
-    try {
-      
-      // Load tracks from cleaned songs
-      existingFiles.songs.forEach((song, songId) => {
-        if (songId && !this.trackCache.has(songId)) {
-          // Reconstruct partial SpotifyTrack from cleaned song data
-          this.trackCache.set(songId, {
-            id: songId,
-            name: song.song.name,
-            track_number: 0, // Not available in cleaned songs
-            disc_number: 1, // Not available in cleaned songs
-            explicit: false, // Not available in cleaned songs
-            preview_url: song.song.preview_url,
-            external_urls: song.song.external_urls,
-            album: {
-              id: '', // Not available, will be filled from albums if needed
-              name: song.album.name,
-              album_type: 'album', // Default
-              images: song.album.images,
-              release_date: '',
-              release_date_precision: 'day',
-              artists: [{
-                id: '',
-                name: song.artist.name
-              }],
-              external_urls: {}
-            },
-            artists: [{
-              id: '',
-              name: song.artist.name
-            }]
-          } as SpotifyTrack);
-        }
-      });
-      
-      // Load tracks from albums with songs (has track_number, disc_number, explicit)
-      existingFiles.albumsWithSongs.forEach((album) => {
-        if (album.songs) {
-          album.songs.forEach((albumSong) => {
-            if (albumSong.songId && !this.trackCache.has(albumSong.songId)) {
-              // Reconstruct SpotifyTrack from album song data (has more complete info)
-              this.trackCache.set(albumSong.songId, {
-                id: albumSong.songId,
-                name: albumSong.name,
-                track_number: albumSong.track_number,
-                disc_number: albumSong.disc_number,
-                explicit: albumSong.explicit,
-                preview_url: albumSong.preview_url,
-                external_urls: albumSong.external_urls,
-                album: {
-                  id: album.primaryAlbumId || '',
-                  name: album.album.name,
-                  album_type: album.album.album_type,
-                  images: album.album.images,
-                  release_date: album.album.release_date,
-                  release_date_precision: album.album.release_date_precision,
-                  artists: album.album.artists.map(name => ({ id: '', name })),
-                  external_urls: album.album.external_urls
-                },
-                artists: albumSong.artists.map(name => ({ id: '', name }))
-              } as SpotifyTrack);
-            } else if (albumSong.songId && this.trackCache.has(albumSong.songId)) {
-              // Update existing track with more complete data from album song
-              const existingTrack = this.trackCache.get(albumSong.songId)!;
-              if (existingTrack.track_number === 0 || existingTrack.disc_number === 1) {
-                existingTrack.track_number = albumSong.track_number;
-                existingTrack.disc_number = albumSong.disc_number;
-                existingTrack.explicit = albumSong.explicit;
-                // Update album info if we have better data
-                if (album.primaryAlbumId && !existingTrack.album.id) {
-                  existingTrack.album.id = album.primaryAlbumId;
-                }
-                if (album.album.images && album.album.images.length > 0 && (!existingTrack.album.images || existingTrack.album.images.length === 0)) {
-                  existingTrack.album.images = album.album.images;
-                }
-              }
-            }
-          });
-        }
-      });
-      
-      // Load albums from cleaned albums
-      existingFiles.albums.forEach((album, key) => {
-        // Only use primaryAlbumId if it's a valid Spotify ID (not empty and not a name-based key)
-        const albumId = album.primaryAlbumId && album.primaryAlbumId.length > 0 && !album.primaryAlbumId.includes('|') 
-          ? album.primaryAlbumId 
-          : null;
-        if (albumId && !this.albumCache.has(albumId)) {
-          this.albumCache.set(albumId, {
-            id: albumId,
-            name: album.album.name,
-            album_type: album.album.album_type,
-            artists: album.album.artists.map(name => ({ id: '', name })),
-            release_date: album.album.release_date,
-            release_date_precision: album.album.release_date_precision,
-            popularity: album.album.popularity,
-            images: album.album.images,
-            external_urls: album.album.external_urls,
-            genres: album.album.genres || []
-          } as SpotifyAlbum);
-        }
-      });
-      
-      // Load artists from cleaned artists
-      existingFiles.artists.forEach((artist, key) => {
-        // Only use primaryArtistId if it's a valid Spotify ID (not empty and not a name-based key)
-        const artistId = artist.primaryArtistId && artist.primaryArtistId.length > 0 && !artist.primaryArtistId.includes('|')
-          ? artist.primaryArtistId
-          : null;
-        if (artistId && !this.artistCache.has(artistId)) {
-          this.artistCache.set(artistId, {
-            id: artistId,
-            name: artist.artist.name,
-            popularity: artist.artist.popularity,
-            followers: artist.artist.followers,
-            images: artist.artist.images,
-            external_urls: artist.artist.external_urls,
-            genres: artist.artist.genres || []
-          } as SpotifyArtist);
-        }
-      });
-      
-      if (this.trackCache.size > 0 || this.albumCache.size > 0 || this.artistCache.size > 0) {
-        // Count tracks from albums with songs
-        let tracksFromAlbums = 0;
-        existingFiles.albumsWithSongs.forEach((album) => {
-          if (album.songs) {
-            tracksFromAlbums += album.songs.length;
-          }
-        });
-        console.log(`📦 Loaded cache from existing files: ${this.trackCache.size} tracks (from top songs + ${tracksFromAlbums} from album songs), ${this.albumCache.size} albums, ${this.artistCache.size} artists`);
-      }
-    } catch (error) {
-      console.log('ℹ️  Could not load cache from existing files (this is okay)');
-    }
-  }
-
-  /**
    * Initialize Spotify token manager
    */
   private async initializeSpotifyToken(): Promise<void> {
@@ -593,26 +445,12 @@ class CleanedFilesGenerator {
     const songIds = songsNeedingMetadata.map(song => song.songId).filter(id => id);
     const uniqueSongIds = Array.from(new Set(songIds));
 
-    // Filter out IDs already in cache
-    const uncachedIds = uniqueSongIds.filter(id => !this.trackCache.has(id));
-    const cachedCount = uniqueSongIds.length - uncachedIds.length;
+    console.log(`   Fetching ${uniqueSongIds.length} unique tracks (${songs.length - uniqueSongIds.length} already have metadata)...`);
+    const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uniqueSongIds);
+    console.log(`✅ Fetched ${tracks.length} tracks`);
 
-    if (uncachedIds.length > 0) {
-      console.log(`   Fetching ${uncachedIds.length} uncached tracks (${cachedCount} in cache, ${songs.length - uniqueSongIds.length} already have metadata)...`);
-      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedIds);
-      // Populate cache
-      tracks.forEach(track => this.trackCache.set(track.id, track));
-      console.log(`✅ Fetched ${tracks.length} tracks`);
-    } else {
-      console.log(`   All ${uniqueSongIds.length} tracks found in cache`);
-    }
-
-    // Build track map from cache
     const trackMap = new Map<string, SpotifyTrack>();
-    uniqueSongIds.forEach(id => {
-      const track = this.trackCache.get(id);
-      if (track) trackMap.set(id, track);
-    });
+    tracks.forEach(track => trackMap.set(track.id, track));
 
     let enrichedCount = 0;
     songs.forEach(song => {
@@ -672,56 +510,25 @@ class CleanedFilesGenerator {
     const songIds = albumsNeedingMetadata.map(album => album.primaryAlbumId).filter(id => id);
     const uniqueSongIds = Array.from(new Set(songIds));
 
-    // Filter out track IDs already in cache
-    const uncachedTrackIds = uniqueSongIds.filter(id => !this.trackCache.has(id));
-    const cachedTrackCount = uniqueSongIds.length - uncachedTrackIds.length;
+    console.log(`   Fetching ${uniqueSongIds.length} unique tracks to get album IDs (${albums.length - uniqueSongIds.length} already have metadata)...`);
+    const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uniqueSongIds);
+    console.log(`✅ Fetched ${tracks.length} tracks`);
 
-    // Fetch uncached tracks and populate cache
-    if (uncachedTrackIds.length > 0) {
-      console.log(`   Fetching ${uncachedTrackIds.length} uncached tracks to get album IDs (${cachedTrackCount} in cache, ${albums.length - uniqueSongIds.length} already have metadata)...`);
-      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedTrackIds);
-      tracks.forEach(track => this.trackCache.set(track.id, track));
-      console.log(`✅ Fetched ${tracks.length} tracks`);
-    } else {
-      console.log(`   All ${uniqueSongIds.length} tracks found in cache`);
-    }
-
-    // Build track map from cache and extract album IDs
-    const trackMap = new Map<string, SpotifyTrack>();
     const albumIds = new Set<string>();
     const songIdToAlbumId = new Map<string, string>();
-    
-    uniqueSongIds.forEach(id => {
-      const track = this.trackCache.get(id);
-      if (track) {
-        trackMap.set(track.id, track);
-        if (track.album && track.album.id) {
-          albumIds.add(track.album.id);
-          songIdToAlbumId.set(track.id, track.album.id);
-        }
+    tracks.forEach(track => {
+      if (track.album && track.album.id) {
+        albumIds.add(track.album.id);
+        songIdToAlbumId.set(track.id, track.album.id);
       }
     });
 
-    // Filter out album IDs already in cache
-    const uncachedAlbumIds = Array.from(albumIds).filter(id => !this.albumCache.has(id));
-    const cachedAlbumCount = albumIds.size - uncachedAlbumIds.length;
+    console.log(`   Found ${albumIds.size} unique album IDs`);
+    const albumsMap = await this.spotifyApiClient.fetchAlbums(accessToken, Array.from(albumIds));
+    console.log(`✅ Fetched ${albumsMap.size} albums`);
 
-    if (uncachedAlbumIds.length > 0) {
-      console.log(`   Found ${albumIds.size} unique album IDs (${cachedAlbumCount} in cache)`);
-      const albumsMap = await this.spotifyApiClient.fetchAlbums(accessToken, uncachedAlbumIds);
-      // Populate cache
-      albumsMap.forEach((album, id) => this.albumCache.set(id, album));
-      console.log(`✅ Fetched ${albumsMap.size} albums`);
-    } else {
-      console.log(`   All ${albumIds.size} albums found in cache`);
-    }
-
-    // Build albums map from cache
-    const albumsMap = new Map<string, SpotifyAlbum>();
-    albumIds.forEach(id => {
-      const album = this.albumCache.get(id);
-      if (album) albumsMap.set(id, album);
-    });
+    const trackMap = new Map<string, SpotifyTrack>();
+    tracks.forEach(track => trackMap.set(track.id, track));
 
     let enrichedCount = 0;
     albums.forEach(album => {
@@ -869,26 +676,21 @@ class CleanedFilesGenerator {
     const accessToken = await this.tokenManager.getValidAccessToken();
     const uniqueSongIds = Array.from(allSongIds);
     
-    // Filter out IDs already in cache
-    const uncachedIds = uniqueSongIds.filter(id => !this.trackCache.has(id));
-    const cachedCount = uniqueSongIds.length - uncachedIds.length;
-
-    if (uncachedIds.length > 0) {
-      console.log(`   Fetching ${uncachedIds.length} uncached tracks for track numbers (${cachedCount} in cache)...`);
-      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedIds);
-      // Populate cache
-      tracks.forEach(track => this.trackCache.set(track.id, track));
-      console.log(`✅ Fetched ${tracks.length} tracks`);
-    } else {
-      console.log(`   All ${uniqueSongIds.length} tracks found in cache`);
-    }
-
-    // Build track map from cache
+    console.log(`   Fetching ${uniqueSongIds.length} unique tracks for track numbers...`);
+    
     const trackMap = new Map<string, SpotifyTrack>();
-    uniqueSongIds.forEach(id => {
-      const track = this.trackCache.get(id);
-      if (track) trackMap.set(id, track);
-    });
+    const batchSize = 50;
+    for (let i = 0; i < uniqueSongIds.length; i += batchSize) {
+      const batch = uniqueSongIds.slice(i, i + batchSize);
+      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, batch);
+      tracks.forEach(track => trackMap.set(track.id, track));
+      
+      if (i + batchSize < uniqueSongIds.length) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+    }
+    
+    console.log(`✅ Fetched ${trackMap.size} tracks`);
 
     return albums.map(album => {
       const consolidatedSongs = this.consolidator.consolidateSongsInAlbum(album.songs);
@@ -965,27 +767,14 @@ class CleanedFilesGenerator {
     const songIds = artistsNeedingMetadata.map(artist => artist.primaryArtistId).filter(id => id);
     const uniqueSongIds = Array.from(new Set(songIds));
 
-    // Filter out track IDs already in cache
-    const uncachedTrackIds = uniqueSongIds.filter(id => !this.trackCache.has(id));
-    const cachedTrackCount = uniqueSongIds.length - uncachedTrackIds.length;
+    console.log(`   Fetching ${uniqueSongIds.length} unique tracks to get artist IDs (${artists.length - uniqueSongIds.length} already have metadata)...`);
+    const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uniqueSongIds);
+    console.log(`✅ Fetched ${tracks.length} tracks`);
 
-    // Fetch uncached tracks and populate cache
-    if (uncachedTrackIds.length > 0) {
-      console.log(`   Fetching ${uncachedTrackIds.length} uncached tracks to get artist IDs (${cachedTrackCount} in cache, ${artists.length - uniqueSongIds.length} already have metadata)...`);
-      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedTrackIds);
-      tracks.forEach(track => this.trackCache.set(track.id, track));
-      console.log(`✅ Fetched ${tracks.length} tracks`);
-    } else {
-      console.log(`   All ${uniqueSongIds.length} tracks found in cache`);
-    }
-
-    // Build track map from cache and extract artist IDs
     const artistIds = new Set<string>();
     const songIdToArtistId = new Map<string, string>();
-    
-    uniqueSongIds.forEach(id => {
-      const track = this.trackCache.get(id);
-      if (track && track.artists && track.artists.length > 0) {
+    tracks.forEach(track => {
+      if (track.artists && track.artists.length > 0) {
         const artistId = track.artists[0].id;
         if (artistId) {
           artistIds.add(artistId);
@@ -994,26 +783,9 @@ class CleanedFilesGenerator {
       }
     });
 
-    // Filter out artist IDs already in cache
-    const uncachedArtistIds = Array.from(artistIds).filter(id => !this.artistCache.has(id));
-    const cachedArtistCount = artistIds.size - uncachedArtistIds.length;
-
-    if (uncachedArtistIds.length > 0) {
-      console.log(`   Found ${artistIds.size} unique artist IDs (${cachedArtistCount} in cache)`);
-      const artistsMap = await this.spotifyApiClient.fetchArtists(accessToken, uncachedArtistIds);
-      // Populate cache
-      artistsMap.forEach((artist, id) => this.artistCache.set(id, artist));
-      console.log(`✅ Fetched ${artistsMap.size} artists`);
-    } else {
-      console.log(`   All ${artistIds.size} artists found in cache`);
-    }
-
-    // Build artists map from cache
-    const artistsMap = new Map<string, SpotifyArtist>();
-    artistIds.forEach(id => {
-      const artist = this.artistCache.get(id);
-      if (artist) artistsMap.set(id, artist);
-    });
+    console.log(`   Found ${artistIds.size} unique artist IDs`);
+    const artistsMap = await this.spotifyApiClient.fetchArtists(accessToken, Array.from(artistIds));
+    console.log(`✅ Fetched ${artistsMap.size} artists`);
 
     let enrichedCount = 0;
     artists.forEach(artist => {
@@ -1265,7 +1037,6 @@ class CleanedFilesGenerator {
       yearlyTopItems,
       totalListeningHours,
       totalListeningDays,
-      totalListeningEvents: history.metadata.totalListeningEvents,
       hourlyListeningDistribution
     };
   }
@@ -1356,62 +1127,35 @@ class CleanedFilesGenerator {
 
       if (songIdsToFetch.size > 0) {
         const accessToken = await this.tokenManager.getValidAccessToken();
-        const songIdsArray = Array.from(songIdsToFetch);
-        
-        // Filter out track IDs already in cache
-        const uncachedTrackIds = songIdsArray.filter(id => !this.trackCache.has(id));
-        const cachedTrackCount = songIdsArray.length - uncachedTrackIds.length;
+        console.log(`   Fetching ${songIdsToFetch.size} tracks to get artist IDs...`);
+        const tracks = await this.spotifyApiClient.fetchTracks(accessToken, Array.from(songIdsToFetch));
+        console.log(`✅ Fetched ${tracks.length} tracks`);
 
-        // Fetch uncached tracks and populate cache
-        if (uncachedTrackIds.length > 0) {
-          console.log(`   Fetching ${uncachedTrackIds.length} uncached tracks to get artist IDs (${cachedTrackCount} in cache)...`);
-          const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedTrackIds);
-          tracks.forEach(track => this.trackCache.set(track.id, track));
-          console.log(`✅ Fetched ${tracks.length} tracks`);
-        } else {
-          console.log(`   All ${songIdsArray.length} tracks found in cache`);
-        }
-
-        // Extract artist IDs from cached tracks
+        // Extract artist IDs from tracks
         const artistIds = new Set<string>();
         const artistNameToArtistId = new Map<string, string>();
         
-        songIdsArray.forEach(songId => {
-          const track = this.trackCache.get(songId);
-          if (track && track.artists && track.artists.length > 0) {
+        tracks.forEach(track => {
+          if (track.artists && track.artists.length > 0) {
             const artistId = track.artists[0].id;
+            const artistName = track.artists[0].name.toLowerCase().trim();
             if (artistId) {
               artistIds.add(artistId);
               // Find which artist name this corresponds to
-              const nameKey = artistNameToSongId.get(songId);
-              if (nameKey) {
-                artistNameToArtistId.set(nameKey, artistId);
+              for (const [nameKey, songId] of artistNameToSongId.entries()) {
+                if (songId === track.id) {
+                  artistNameToArtistId.set(nameKey, artistId);
+                  break;
+                }
               }
             }
           }
         });
 
         if (artistIds.size > 0) {
-          // Filter out artist IDs already in cache
-          const uncachedArtistIds = Array.from(artistIds).filter(id => !this.artistCache.has(id));
-          const cachedArtistCount = artistIds.size - uncachedArtistIds.length;
-
-          if (uncachedArtistIds.length > 0) {
-            console.log(`   Found ${artistIds.size} unique artist IDs (${cachedArtistCount} in cache), fetching artist metadata...`);
-            const artistsMap = await this.spotifyApiClient.fetchArtists(accessToken, uncachedArtistIds);
-            // Populate cache
-            artistsMap.forEach((artist, id) => this.artistCache.set(id, artist));
-            console.log(`✅ Fetched ${artistsMap.size} artists`);
-          } else {
-            console.log(`   All ${artistIds.size} artists found in cache`);
-          }
-
-          // Build artists map from cache
-          const artistsMap = new Map<string, SpotifyArtist>();
-          artistIds.forEach(id => {
-            const artist = this.artistCache.get(id);
-            if (artist) artistsMap.set(id, artist);
-          });
+          console.log(`   Found ${artistIds.size} unique artist IDs, fetching artist metadata...`);
+          const artistsMap = await this.spotifyApiClient.fetchArtists(accessToken, Array.from(artistIds));
+          console.log(`✅ Fetched ${artistsMap.size} artists`);
 
           // Map artist IDs back to artist names and store images
           artistNameToArtistId.forEach((artistId, artistNameKey) => {
@@ -1535,26 +1279,14 @@ class CleanedFilesGenerator {
     if (songsNeedingLookup.size > 0) {
       const accessToken = await this.tokenManager.getValidAccessToken();
       const songIdsArray = Array.from(songsNeedingLookup);
-      
-      // Filter out track IDs already in cache
-      const uncachedIds = songIdsArray.filter(id => !this.trackCache.has(id));
-      const cachedCount = songIdsArray.length - uncachedIds.length;
+      console.log(`   Fetching ${songIdsArray.length} tracks from Spotify API...`);
+      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, songIdsArray);
+      console.log(`✅ Fetched ${tracks.length} tracks`);
 
-      // Fetch uncached tracks and populate cache
-      if (uncachedIds.length > 0) {
-        console.log(`   Fetching ${uncachedIds.length} uncached tracks from Spotify API (${cachedCount} in cache)...`);
-        const tracks = await this.spotifyApiClient.fetchTracks(accessToken, uncachedIds);
-        tracks.forEach(track => this.trackCache.set(track.id, track));
-        console.log(`✅ Fetched ${tracks.length} tracks`);
-      } else {
-        console.log(`   All ${songIdsArray.length} tracks found in cache`);
-      }
-
-      // Extract album images from cached tracks for both songs and albums
+      // Extract album images from tracks for both songs and albums
       let tracksWithImages = 0;
       let tracksWithoutImages = 0;
-      songIdsArray.forEach(songId => {
-        const track = this.trackCache.get(songId);
+      tracks.forEach(track => {
         if (track && track.album && track.album.images && track.album.images.length > 0) {
           // Store album images for songs
           songIdToImages.set(track.id, track.album.images);
@@ -1575,14 +1307,14 @@ class CleanedFilesGenerator {
           tracksWithoutImages++;
           // Log some examples of tracks without images for debugging
           if (tracksWithoutImages <= 3) {
-            console.log(`   ⚠️  Track ${songId || 'unknown'} has no album images`);
+            console.log(`   ⚠️  Track ${track?.id || 'unknown'} has no album images`);
           }
         }
       });
       console.log(`   Found images for ${tracksWithImages} tracks, ${tracksWithoutImages} without images`);
       
       // Check if we're missing any songs (API might return null for some tracks)
-      const fetchedTrackIds = new Set(songIdsArray.filter(id => this.trackCache.has(id)));
+      const fetchedTrackIds = new Set(tracks.map(t => t.id));
       const missingTrackIds = songIdsArray.filter(id => !fetchedTrackIds.has(id));
       if (missingTrackIds.length > 0) {
         console.log(`   ⚠️  ${missingTrackIds.length} track IDs were not returned by API (may be invalid or unavailable)`);
@@ -1662,9 +1394,6 @@ class CleanedFilesGenerator {
       const albumsWithSongsResult = this.generateAlbumsWithSongs(history);
       
       const existingFiles = this.fileOps.loadExistingCleanedFiles();
-      
-      // Load cache from existing cleaned files to avoid duplicate API calls
-      this.loadCacheFromExistingFiles(existingFiles);
       
       await this.initializeSpotifyToken();
       

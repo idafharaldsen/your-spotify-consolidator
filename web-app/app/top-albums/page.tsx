@@ -8,6 +8,7 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/u
 import { Search, Music, Play, X, Disc, Clock, ExternalLink, Calendar } from 'lucide-react'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
+import SortToggle, { SortOption } from '@/components/SortToggle'
 
 interface AlbumImage {
   height: number
@@ -179,6 +180,7 @@ export default function TopAlbumsPage() {
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
+  const [sortBy, setSortBy] = useState<SortOption>('plays')
   
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -206,6 +208,17 @@ export default function TopAlbumsPage() {
     album.album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
+  // Sort filtered albums based on selected sort option
+  const sortedAlbums = [...filteredAlbums].sort((a, b) => {
+    switch (sortBy) {
+      case 'duration':
+        return (b.total_duration_ms || 0) - (a.total_duration_ms || 0)
+      case 'plays':
+      default:
+        return b.count - a.count
+    }
+  })
+  
   const handleAlbumClick = (album: AlbumData) => {
     setSelectedAlbum(album)
   }
@@ -215,7 +228,19 @@ export default function TopAlbumsPage() {
       title="My Top Albums"
       description={loading ? 'Loading...' : `From ${albumsData?.metadata.originalTotalAlbums} different albums from the past 15 years`}
       currentPage="albums"
-      additionalControls={<ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />}
+      additionalControls={
+        <div className="flex items-center gap-2">
+          <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
+          <SortToggle 
+            sortBy={sortBy} 
+            onSortChange={setSortBy}
+            options={[
+              { value: 'plays', label: 'Total Plays' },
+              { value: 'duration', label: 'Total Duration' },
+            ]}
+          />
+        </div>
+      }
     >
       {loading ? (
         <div className="flex items-center justify-center py-20">
@@ -249,7 +274,7 @@ export default function TopAlbumsPage() {
           {/* Albums Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredAlbums.map((album) => (
+            {sortedAlbums.map((album) => (
               <Card 
                 key={album.primaryAlbumId} 
                 className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
@@ -317,7 +342,7 @@ export default function TopAlbumsPage() {
               <div className="col-span-2">Duration</div>
             </div>
             
-            {filteredAlbums.map((album) => (
+            {sortedAlbums.map((album) => (
               <Card 
                 key={album.primaryAlbumId} 
                 className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
@@ -430,7 +455,7 @@ export default function TopAlbumsPage() {
           </div>
         )}
         
-          {filteredAlbums.length === 0 && searchTerm && (
+          {sortedAlbums.length === 0 && searchTerm && (
             <div className="text-center py-12">
               <p className="text-muted-foreground">No albums found matching &quot;{searchTerm}&quot;</p>
             </div>

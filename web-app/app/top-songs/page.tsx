@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Search, Music, Play, X } from 'lucide-react'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
+import SortToggle, { SortOption } from '@/components/SortToggle'
 
 interface AlbumImage {
   height: number
@@ -111,6 +112,7 @@ export default function TopSongsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [sortBy, setSortBy] = useState<SortOption>('plays')
   
   useEffect(() => {
     const fetchSongs = async () => {
@@ -139,12 +141,35 @@ export default function TopSongsPage() {
     song.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
   ) || []
   
+  // Sort filtered songs based on selected sort option
+  const sortedSongs = [...filteredSongs].sort((a, b) => {
+    switch (sortBy) {
+      case 'duration':
+        return (b.duration_ms || 0) - (a.duration_ms || 0)
+      case 'plays':
+      default:
+        return b.count - a.count
+    }
+  })
+  
   return (
     <SpotifyStatsLayout
       title="My Top Songs"
       description={loading ? 'Loading...' : `From ${songsData?.metadata.consolidatedTotalSongs} different songs from the past 15 years`}
       currentPage="songs"
-      additionalControls={<ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />}
+      additionalControls={
+        <div className="flex items-center gap-2">
+          <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
+          <SortToggle 
+            sortBy={sortBy} 
+            onSortChange={setSortBy}
+            options={[
+              { value: 'plays', label: 'Total Plays' },
+              { value: 'duration', label: 'Total Duration' },
+            ]}
+          />
+        </div>
+      }
     >
       {loading ? (
         <div className="flex items-center justify-center py-20">
@@ -178,7 +203,7 @@ export default function TopSongsPage() {
           {/* Songs Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredSongs.map((song) => (
+            {sortedSongs.map((song) => (
               <Card key={song.songId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3">
                   {/* Album Image */}
@@ -248,7 +273,7 @@ export default function TopSongsPage() {
               <div className="col-span-1">Duration</div>
             </div>
             
-            {filteredSongs.map((song) => (
+            {sortedSongs.map((song) => (
               <Card key={song.songId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
@@ -368,7 +393,7 @@ export default function TopSongsPage() {
           </div>
         )}
         
-          {filteredSongs.length === 0 && searchTerm && (
+          {sortedSongs.length === 0 && searchTerm && (
             <div className="text-center py-12">
               <p className="text-muted-foreground">No songs found matching &quot;{searchTerm}&quot;</p>
             </div>

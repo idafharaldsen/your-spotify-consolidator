@@ -7,6 +7,7 @@ import { Badge } from '@/components/ui/badge'
 import { Search, Play, X, Users } from 'lucide-react'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
+import SortToggle, { SortOption } from '@/components/SortToggle'
 
 interface ArtistImage {
   height: number
@@ -110,6 +111,7 @@ export default function TopArtistsPage() {
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [sortBy, setSortBy] = useState<SortOption>('plays')
   
   useEffect(() => {
     const fetchArtists = async () => {
@@ -137,12 +139,30 @@ export default function TopArtistsPage() {
     artist.artist.genres?.some(genre => genre.toLowerCase().includes(searchTerm.toLowerCase()))
   ) || []
   
+  // Sort filtered artists based on selected sort option
+  const sortedArtists = [...filteredArtists].sort((a, b) => {
+    switch (sortBy) {
+      case 'duration':
+        return (b.total_duration_ms || 0) - (a.total_duration_ms || 0)
+      case 'songs':
+        return b.differents - a.differents
+      case 'plays':
+      default:
+        return b.count - a.count
+    }
+  })
+  
   return (
     <SpotifyStatsLayout
       title="My Top Artists"
       description={loading ? 'Loading...' : `From ${artistsData?.metadata.consolidatedTotalArtists} different artists from the past 15 years`}
       currentPage="artists"
-      additionalControls={<ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />}
+      additionalControls={
+        <div className="flex items-center gap-2">
+          <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
+          <SortToggle sortBy={sortBy} onSortChange={setSortBy} />
+        </div>
+      }
     >
       {loading ? (
         <div className="flex items-center justify-center py-20">
@@ -176,7 +196,7 @@ export default function TopArtistsPage() {
           {/* Artists Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
-            {filteredArtists.map((artist) => (
+            {sortedArtists.map((artist) => (
               <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3">
                   {/* Artist Image */}
@@ -249,7 +269,7 @@ export default function TopArtistsPage() {
               <div className="col-span-2">Duration</div>
             </div>
             
-            {filteredArtists.map((artist) => (
+            {sortedArtists.map((artist) => (
               <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
@@ -374,7 +394,7 @@ export default function TopArtistsPage() {
           </div>
         )}
         
-          {filteredArtists.length === 0 && searchTerm && (
+          {sortedArtists.length === 0 && searchTerm && (
             <div className="text-center py-12">
               <p className="text-muted-foreground">No artists found matching &quot;{searchTerm}&quot;</p>
             </div>
