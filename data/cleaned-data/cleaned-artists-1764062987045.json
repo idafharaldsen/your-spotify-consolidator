@@ -4,7 +4,7 @@
     "consolidatedTotalArtists": 9025,
     "duplicatesRemoved": 6,
     "consolidationRate": 0.07,
-    "timestamp": "2025-11-25T08:38:48.382Z",
+    "timestamp": "2025-11-25T09:29:47.057Z",
     "source": "Merged Streaming History",
     "totalListeningEvents": 179922
   },
@@ -59,18 +59,15 @@
       "duration_ms": 0,
       "count": 1634,
       "differents": 324,
-      "primaryArtistId": "5K4W6rqBFWDnAN6FQUkS6x",
+      "primaryArtistId": "1inwRCAEYHy6e7J0y1nnHx",
       "total_count": 1634,
       "total_duration_ms": 299968465,
       "artist": {
         "name": "Kanye West",
-        "genres": [
-          "rap"
-        ],
-        "popularity": 91,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 31252763
+          "total": 0
         },
         "images": [
           {
@@ -89,13 +86,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5K4W6rqBFWDnAN6FQUkS6x"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1634,
       "original_artistIds": [
-        "5K4W6rqBFWDnAN6FQUkS6x"
+        "1inwRCAEYHy6e7J0y1nnHx"
       ]
     },
     {
@@ -145,18 +140,15 @@
       "duration_ms": 171400,
       "count": 1391,
       "differents": 292,
-      "primaryArtistId": "2RhgnQNC74QoBlaUvT4MEe",
+      "primaryArtistId": "18X4vn1UHaLRsmqDR24EVf",
       "total_count": 1391,
       "total_duration_ms": 248437874,
       "artist": {
         "name": "The Growlers",
-        "genres": [
-          "surf rock"
-        ],
-        "popularity": 58,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 663844
+          "total": 0
         },
         "images": [
           {
@@ -175,13 +167,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2RhgnQNC74QoBlaUvT4MEe"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1391,
       "original_artistIds": [
-        "2RhgnQNC74QoBlaUvT4MEe"
+        "18X4vn1UHaLRsmqDR24EVf"
       ]
     },
     {
@@ -234,16 +224,15 @@
       "duration_ms": 0,
       "count": 1299,
       "differents": 241,
-      "primaryArtistId": "4LLpKhyESsyAXpc4laK94U",
+      "primaryArtistId": "0GJtwvQGnnKfkCvENWsNRn",
       "total_count": 1299,
       "total_duration_ms": 260330879,
       "artist": {
         "name": "Mac Miller",
         "genres": [],
-        "popularity": 83,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 12231392
+          "total": 0
         },
         "images": [
           {
@@ -262,13 +251,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4LLpKhyESsyAXpc4laK94U"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1299,
       "original_artistIds": [
-        "4LLpKhyESsyAXpc4laK94U"
+        "0GJtwvQGnnKfkCvENWsNRn"
       ]
     },
     {
@@ -322,19 +309,15 @@
       "duration_ms": 0,
       "count": 1262,
       "differents": 281,
-      "primaryArtistId": "3Sz7ZnJQBIHsXLUSo0OQtM",
+      "primaryArtistId": "4keAoywVf4jxRvXU7ON0hV",
       "total_count": 1262,
       "total_duration_ms": 201156567,
       "artist": {
         "name": "Mac DeMarco",
-        "genres": [
-          "indie",
-          "lo-fi indie"
-        ],
-        "popularity": 81,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 8081596
+          "total": 0
         },
         "images": [
           {
@@ -353,13 +336,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3Sz7ZnJQBIHsXLUSo0OQtM"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1262,
       "original_artistIds": [
-        "3Sz7ZnJQBIHsXLUSo0OQtM"
+        "4keAoywVf4jxRvXU7ON0hV"
       ]
     },
     {
@@ -367,19 +348,15 @@
       "duration_ms": 0,
       "count": 1188,
       "differents": 199,
-      "primaryArtistId": "2YZyLoL8N0Wb9xBt1NhZWg",
+      "primaryArtistId": "2MYl0er3UZ1RlKwRb5LODh",
       "total_count": 1188,
       "total_duration_ms": 253615143,
       "artist": {
         "name": "Kendrick Lamar",
-        "genres": [
-          "hip hop",
-          "west coast hip hop"
-        ],
-        "popularity": 90,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 44990247
+          "total": 0
         },
         "images": [
           {
@@ -398,13 +375,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2YZyLoL8N0Wb9xBt1NhZWg"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1188,
       "original_artistIds": [
-        "2YZyLoL8N0Wb9xBt1NhZWg"
+        "2MYl0er3UZ1RlKwRb5LODh"
       ]
     },
     {
@@ -500,22 +475,15 @@
       "duration_ms": 0,
       "count": 1081,
       "differents": 184,
-      "primaryArtistId": "16QCJENzcdhwka9bTKYMVB",
+      "primaryArtistId": "3VIVHPg3lqLMPMHe1Bt9sx",
       "total_count": 1081,
       "total_duration_ms": 121500561,
       "artist": {
         "name": "Touché Amoré",
-        "genres": [
-          "melodic hardcore",
-          "post-hardcore",
-          "screamo",
-          "hardcore",
-          "midwest emo"
-        ],
-        "popularity": 43,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 195040
+          "total": 0
         },
         "images": [
           {
@@ -534,13 +502,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/16QCJENzcdhwka9bTKYMVB"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 1081,
       "original_artistIds": [
-        "16QCJENzcdhwka9bTKYMVB"
+        "3VIVHPg3lqLMPMHe1Bt9sx"
       ]
     },
     {
@@ -732,21 +698,15 @@
       "duration_ms": 0,
       "count": 820,
       "differents": 146,
-      "primaryArtistId": "6bUJpbekaIlq2fT5FMV2mQ",
+      "primaryArtistId": "3rqh7rZqvkMGN9GOAnBxoq",
       "total_count": 820,
       "total_duration_ms": 126153803,
       "artist": {
         "name": "Wavves",
-        "genres": [
-          "garage rock",
-          "surf rock",
-          "noise rock",
-          "indie punk"
-        ],
-        "popularity": 42,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 249322
+          "total": 0
         },
         "images": [
           {
@@ -765,13 +725,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6bUJpbekaIlq2fT5FMV2mQ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 820,
       "original_artistIds": [
-        "6bUJpbekaIlq2fT5FMV2mQ"
+        "3rqh7rZqvkMGN9GOAnBxoq"
       ]
     },
     {
@@ -847,22 +805,15 @@
       "duration_ms": 0,
       "count": 784,
       "differents": 143,
-      "primaryArtistId": "1cXi8ALPQCBHZbf0EgP4Ey",
+      "primaryArtistId": "0S8LgLoseDB6W2HWd1ym6P",
       "total_count": 784,
       "total_duration_ms": 83009380,
       "artist": {
         "name": "Misfits",
-        "genres": [
-          "horror punk",
-          "punk",
-          "psychobilly",
-          "hardcore punk",
-          "skate punk"
-        ],
-        "popularity": 64,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1678603
+          "total": 0
         },
         "images": [
           {
@@ -881,13 +832,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1cXi8ALPQCBHZbf0EgP4Ey"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 784,
       "original_artistIds": [
-        "1cXi8ALPQCBHZbf0EgP4Ey"
+        "0S8LgLoseDB6W2HWd1ym6P"
       ]
     },
     {
@@ -943,19 +892,15 @@
       "duration_ms": 0,
       "count": 770,
       "differents": 156,
-      "primaryArtistId": "6pmxr66tMAePxzOLfjGNcX",
+      "primaryArtistId": "3OxuCeQqFNGjLuZUlEXzZp",
       "total_count": 770,
       "total_duration_ms": 142259050,
       "artist": {
         "name": "Beirut",
-        "genres": [
-          "baroque pop",
-          "indie folk"
-        ],
-        "popularity": 55,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1031719
+          "total": 0
         },
         "images": [
           {
@@ -974,13 +919,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6pmxr66tMAePxzOLfjGNcX"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 770,
       "original_artistIds": [
-        "6pmxr66tMAePxzOLfjGNcX"
+        "3OxuCeQqFNGjLuZUlEXzZp"
       ]
     },
     {
@@ -988,16 +931,15 @@
       "duration_ms": 0,
       "count": 731,
       "differents": 116,
-      "primaryArtistId": "1Bl6wpkWCQ4KVgnASpvzzA",
+      "primaryArtistId": "2maEFaoAyNjQVv14Hm4esN",
       "total_count": 731,
       "total_duration_ms": 130466892,
       "artist": {
         "name": "BROCKHAMPTON",
         "genres": [],
-        "popularity": 62,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2274477
+          "total": 0
         },
         "images": [
           {
@@ -1016,13 +958,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1Bl6wpkWCQ4KVgnASpvzzA"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 731,
       "original_artistIds": [
-        "1Bl6wpkWCQ4KVgnASpvzzA"
+        "2maEFaoAyNjQVv14Hm4esN"
       ]
     },
     {
@@ -1030,16 +970,15 @@
       "duration_ms": 189021,
       "count": 725,
       "differents": 146,
-      "primaryArtistId": "3AA28KZvwAUcZuOKwyblJQ",
+      "primaryArtistId": "0d28khcov6AiegSCpG5TuT",
       "total_count": 725,
       "total_duration_ms": 130947420,
       "artist": {
         "name": "Gorillaz",
         "genres": [],
-        "popularity": 83,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 14697725
+          "total": 0
         },
         "images": [
           {
@@ -1058,13 +997,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3AA28KZvwAUcZuOKwyblJQ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 725,
       "original_artistIds": [
-        "3AA28KZvwAUcZuOKwyblJQ"
+        "0d28khcov6AiegSCpG5TuT"
       ]
     },
     {
@@ -1072,19 +1009,15 @@
       "duration_ms": 0,
       "count": 717,
       "differents": 113,
-      "primaryArtistId": "3pTE9iaJTkWns3mxpNQlJV",
+      "primaryArtistId": "5NtoPBmhY7WGdpsHmpy9Xh",
       "total_count": 717,
       "total_duration_ms": 142772595,
       "artist": {
         "name": "Bombay Bicycle Club",
-        "genres": [
-          "indie rock",
-          "indie"
-        ],
-        "popularity": 53,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 873137
+          "total": 0
         },
         "images": [
           {
@@ -1103,13 +1036,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3pTE9iaJTkWns3mxpNQlJV"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 717,
       "original_artistIds": [
-        "3pTE9iaJTkWns3mxpNQlJV"
+        "5NtoPBmhY7WGdpsHmpy9Xh"
       ]
     },
     {
@@ -1204,19 +1135,15 @@
       "duration_ms": 0,
       "count": 705,
       "differents": 25,
-      "primaryArtistId": "4FAHRqEgMiutvBnTeoXwyS",
+      "primaryArtistId": "1tLrzF59CpMBHLrGB21sFN",
       "total_count": 705,
       "total_duration_ms": 102211872,
       "artist": {
         "name": "JOYLESS",
-        "genres": [
-          "norsk rock",
-          "garage rock"
-        ],
-        "popularity": 6,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 797
+          "total": 0
         },
         "images": [
           {
@@ -1235,13 +1162,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4FAHRqEgMiutvBnTeoXwyS"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 705,
       "original_artistIds": [
-        "4FAHRqEgMiutvBnTeoXwyS"
+        "1tLrzF59CpMBHLrGB21sFN"
       ]
     },
     {
@@ -1383,22 +1308,15 @@
       "duration_ms": 0,
       "count": 688,
       "differents": 140,
-      "primaryArtistId": "0tLaqkKW7K6tc3QF9SM0M8",
+      "primaryArtistId": "0GDCi6biCoeq9J0aNYeKjB",
       "total_count": 688,
       "total_duration_ms": 109972401,
       "artist": {
         "name": "Tigers Jaw",
-        "genres": [
-          "midwest emo",
-          "emo",
-          "pop punk",
-          "math rock",
-          "indie punk"
-        ],
-        "popularity": 52,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 248129
+          "total": 0
         },
         "images": [
           {
@@ -1417,13 +1335,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0tLaqkKW7K6tc3QF9SM0M8"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 688,
       "original_artistIds": [
-        "0tLaqkKW7K6tc3QF9SM0M8"
+        "0GDCi6biCoeq9J0aNYeKjB"
       ]
     },
     {
@@ -1431,22 +1347,15 @@
       "duration_ms": 120706,
       "count": 687,
       "differents": 115,
-      "primaryArtistId": "2CnhqfjUG0qzsru0SMuhrk",
+      "primaryArtistId": "7DHX06mXYXQMgzMVelvX0Y",
       "total_count": 687,
       "total_duration_ms": 96704922,
       "artist": {
         "name": "Title Fight",
-        "genres": [
-          "midwest emo",
-          "shoegaze",
-          "post-hardcore",
-          "melodic hardcore",
-          "emo"
-        ],
-        "popularity": 65,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 640772
+          "total": 0
         },
         "images": [
           {
@@ -1465,13 +1374,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2CnhqfjUG0qzsru0SMuhrk"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 687,
       "original_artistIds": [
-        "2CnhqfjUG0qzsru0SMuhrk"
+        "7DHX06mXYXQMgzMVelvX0Y"
       ]
     },
     {
@@ -1616,19 +1523,15 @@
       "duration_ms": 0,
       "count": 632,
       "differents": 95,
-      "primaryArtistId": "5aYJ42REfDblMI9xc2c3qQ",
+      "primaryArtistId": "1otmhZinn0A8kzh3bEQUY7",
       "total_count": 632,
       "total_duration_ms": 91372296,
       "artist": {
         "name": "Jokke & Valentinerne",
-        "genres": [
-          "norsk rock",
-          "norwegian pop"
-        ],
-        "popularity": 39,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 27918
+          "total": 0
         },
         "images": [
           {
@@ -1647,13 +1550,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5aYJ42REfDblMI9xc2c3qQ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 632,
       "original_artistIds": [
-        "5aYJ42REfDblMI9xc2c3qQ"
+        "1otmhZinn0A8kzh3bEQUY7"
       ]
     },
     {
@@ -1882,20 +1783,15 @@
       "duration_ms": 0,
       "count": 582,
       "differents": 114,
-      "primaryArtistId": "0gLjJuczGWhqKVMmVpIT52",
+      "primaryArtistId": "7v5L1WQWYnUvnG8LkA6Fxv",
       "total_count": 582,
       "total_duration_ms": 106887720,
       "artist": {
         "name": "Turnover",
-        "genres": [
-          "midwest emo",
-          "dream pop",
-          "pop punk"
-        ],
-        "popularity": 53,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 375361
+          "total": 0
         },
         "images": [
           {
@@ -1914,13 +1810,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0gLjJuczGWhqKVMmVpIT52"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 582,
       "original_artistIds": [
-        "0gLjJuczGWhqKVMmVpIT52"
+        "7v5L1WQWYnUvnG8LkA6Fxv"
       ]
     },
     {
@@ -1928,19 +1822,15 @@
       "duration_ms": 0,
       "count": 565,
       "differents": 97,
-      "primaryArtistId": "28ZDQf2XF8nAaPotggxfiS",
+      "primaryArtistId": "5Tut5b28KogrTdaAJwCzoR",
       "total_count": 565,
       "total_duration_ms": 73873317,
       "artist": {
         "name": "Raga Rockers",
-        "genres": [
-          "norsk rock",
-          "norwegian pop"
-        ],
-        "popularity": 35,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 29870
+          "total": 0
         },
         "images": [
           {
@@ -1959,13 +1849,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/28ZDQf2XF8nAaPotggxfiS"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 565,
       "original_artistIds": [
-        "28ZDQf2XF8nAaPotggxfiS"
+        "5Tut5b28KogrTdaAJwCzoR"
       ]
     },
     {
@@ -2062,21 +1950,15 @@
       "duration_ms": 320937,
       "count": 551,
       "differents": 165,
-      "primaryArtistId": "7jy3rLJdDQY21OgRLCZ9sD",
+      "primaryArtistId": "43TxY9bYSyZ4QRPA0UJddL",
       "total_count": 551,
       "total_duration_ms": 98486286,
       "artist": {
         "name": "Foo Fighters",
-        "genres": [
-          "rock",
-          "post-grunge",
-          "alternative rock",
-          "grunge"
-        ],
-        "popularity": 77,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 13026259
+          "total": 0
         },
         "images": [
           {
@@ -2095,13 +1977,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7jy3rLJdDQY21OgRLCZ9sD"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 551,
       "original_artistIds": [
-        "7jy3rLJdDQY21OgRLCZ9sD"
+        "43TxY9bYSyZ4QRPA0UJddL"
       ]
     },
     {
@@ -2109,19 +1989,15 @@
       "duration_ms": 0,
       "count": 540,
       "differents": 66,
-      "primaryArtistId": "2ooIqOf4X2uz4mMptXCtie",
+      "primaryArtistId": "3ZbvdEDmVXpPgdBCef9gFe",
       "total_count": 540,
       "total_duration_ms": 91670680,
       "artist": {
         "name": "Neutral Milk Hotel",
-        "genres": [
-          "anti-folk",
-          "folk punk"
-        ],
-        "popularity": 57,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 794996
+          "total": 0
         },
         "images": [
           {
@@ -2140,13 +2016,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2ooIqOf4X2uz4mMptXCtie"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 540,
       "original_artistIds": [
-        "2ooIqOf4X2uz4mMptXCtie"
+        "3ZbvdEDmVXpPgdBCef9gFe"
       ]
     },
     {
@@ -2254,20 +2128,15 @@
       "duration_ms": 0,
       "count": 535,
       "differents": 128,
-      "primaryArtistId": "6rnbB5fuUuCSsspvFsxIpT",
+      "primaryArtistId": "0peGfIV0h1VpIpxdISGIvU",
       "total_count": 535,
       "total_duration_ms": 103826033,
       "artist": {
         "name": "Cloud Nothings",
-        "genres": [
-          "indie punk",
-          "garage rock",
-          "noise rock"
-        ],
-        "popularity": 37,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 172272
+          "total": 0
         },
         "images": [
           {
@@ -2286,13 +2155,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6rnbB5fuUuCSsspvFsxIpT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 535,
       "original_artistIds": [
-        "6rnbB5fuUuCSsspvFsxIpT"
+        "0peGfIV0h1VpIpxdISGIvU"
       ]
     },
     {
@@ -2440,21 +2307,15 @@
       "duration_ms": 0,
       "count": 502,
       "differents": 120,
-      "primaryArtistId": "0znuUIjvP0LXEslfaq0Nor",
+      "primaryArtistId": "6GIo0Ayw4jSdYxrT69giPN",
       "total_count": 502,
       "total_duration_ms": 82500396,
       "artist": {
         "name": "Citizen",
-        "genres": [
-          "midwest emo",
-          "pop punk",
-          "emo",
-          "post-hardcore"
-        ],
-        "popularity": 51,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 291225
+          "total": 0
         },
         "images": [
           {
@@ -2473,13 +2334,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0znuUIjvP0LXEslfaq0Nor"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 502,
       "original_artistIds": [
-        "0znuUIjvP0LXEslfaq0Nor"
+        "6GIo0Ayw4jSdYxrT69giPN"
       ]
     },
     {
@@ -2662,16 +2521,15 @@
       "duration_ms": 0,
       "count": 475,
       "differents": 67,
-      "primaryArtistId": "3jK9MiCrA42lLAdMGUZpwa",
+      "primaryArtistId": "6h5IlvRJ2ZNPloCOdzUmyW",
       "total_count": 475,
       "total_duration_ms": 95651890,
       "artist": {
         "name": "Anderson .Paak",
         "genres": [],
-        "popularity": 76,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2711958
+          "total": 0
         },
         "images": [
           {
@@ -2690,13 +2548,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3jK9MiCrA42lLAdMGUZpwa"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 475,
       "original_artistIds": [
-        "3jK9MiCrA42lLAdMGUZpwa"
+        "6h5IlvRJ2ZNPloCOdzUmyW"
       ]
     },
     {
@@ -2818,20 +2674,15 @@
       "duration_ms": 0,
       "count": 449,
       "differents": 16,
-      "primaryArtistId": "1sWWXO9dckUfAgKYJLZ8Nc",
+      "primaryArtistId": "6mHSCQ8OvdQ5MnuTNGsnOu",
       "total_count": 449,
       "total_duration_ms": 54007959,
       "artist": {
         "name": "Barnes Blvd.",
-        "genres": [
-          "lo-fi beats",
-          "lo-fi",
-          "lo-fi hip hop"
-        ],
-        "popularity": 42,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 32153
+          "total": 0
         },
         "images": [
           {
@@ -2850,13 +2701,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1sWWXO9dckUfAgKYJLZ8Nc"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 449,
       "original_artistIds": [
-        "1sWWXO9dckUfAgKYJLZ8Nc"
+        "6mHSCQ8OvdQ5MnuTNGsnOu"
       ]
     },
     {
@@ -2864,16 +2713,15 @@
       "duration_ms": 0,
       "count": 412,
       "differents": 79,
-      "primaryArtistId": "4qU7IJSReZnsLy5907Mtau",
+      "primaryArtistId": "4x1dWc1GgAfC04GcTlllax",
       "total_count": 412,
       "total_duration_ms": 66028756,
       "artist": {
         "name": "Richy Mitch & The Coal Miners",
         "genres": [],
-        "popularity": 68,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 319560
+          "total": 0
         },
         "images": [
           {
@@ -2892,13 +2740,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4qU7IJSReZnsLy5907Mtau"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 412,
       "original_artistIds": [
-        "4qU7IJSReZnsLy5907Mtau"
+        "4x1dWc1GgAfC04GcTlllax"
       ]
     },
     {
@@ -2906,20 +2752,15 @@
       "duration_ms": 0,
       "count": 407,
       "differents": 105,
-      "primaryArtistId": "3yY2gUcIsjMr8hjo51PoJ8",
+      "primaryArtistId": "3SVXhtxFCNJnA4MkWF7sJp",
       "total_count": 407,
       "total_duration_ms": 67960546,
       "artist": {
         "name": "The Smiths",
-        "genres": [
-          "new wave",
-          "madchester",
-          "jangle pop"
-        ],
-        "popularity": 79,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 7816032
+          "total": 0
         },
         "images": [
           {
@@ -2943,13 +2784,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3yY2gUcIsjMr8hjo51PoJ8"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 407,
       "original_artistIds": [
-        "3yY2gUcIsjMr8hjo51PoJ8"
+        "3SVXhtxFCNJnA4MkWF7sJp"
       ]
     },
     {
@@ -2957,21 +2796,15 @@
       "duration_ms": 0,
       "count": 407,
       "differents": 149,
-      "primaryArtistId": "36QJpDe2go2KgaRleHCDTp",
+      "primaryArtistId": "0yVs7eSL8mPnIu2CGKHpUQ",
       "total_count": 407,
       "total_duration_ms": 93794764,
       "artist": {
         "name": "Led Zeppelin",
-        "genres": [
-          "classic rock",
-          "rock",
-          "hard rock",
-          "rock and roll"
-        ],
-        "popularity": 77,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 16049965
+          "total": 0
         },
         "images": [
           {
@@ -2990,13 +2823,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/36QJpDe2go2KgaRleHCDTp"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 407,
       "original_artistIds": [
-        "36QJpDe2go2KgaRleHCDTp"
+        "0yVs7eSL8mPnIu2CGKHpUQ"
       ]
     },
     {
@@ -3291,19 +3122,15 @@
       "duration_ms": 0,
       "count": 387,
       "differents": 163,
-      "primaryArtistId": "6olE6TJLqED3rqDCT0FyPh",
+      "primaryArtistId": "47KVHb6cOVBZbmXQweE5p7",
       "total_count": 387,
       "total_duration_ms": 63658215,
       "artist": {
         "name": "Nirvana",
-        "genres": [
-          "grunge",
-          "rock"
-        ],
-        "popularity": 82,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 23600685
+          "total": 0
         },
         "images": [
           {
@@ -3327,13 +3154,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6olE6TJLqED3rqDCT0FyPh"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 387,
       "original_artistIds": [
-        "6olE6TJLqED3rqDCT0FyPh"
+        "47KVHb6cOVBZbmXQweE5p7"
       ]
     },
     {
@@ -3383,20 +3208,15 @@
       "duration_ms": 0,
       "count": 377,
       "differents": 91,
-      "primaryArtistId": "5oOhM2DFWab8XhSdQiITry",
+      "primaryArtistId": "6koWevx9MqN6efQ6qreIbm",
       "total_count": 377,
       "total_duration_ms": 90381845,
       "artist": {
         "name": "Tycho",
-        "genres": [
-          "chillwave",
-          "downtempo",
-          "idm"
-        ],
-        "popularity": 56,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 723143
+          "total": 0
         },
         "images": [
           {
@@ -3415,13 +3235,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5oOhM2DFWab8XhSdQiITry"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 377,
       "original_artistIds": [
-        "5oOhM2DFWab8XhSdQiITry"
+        "6koWevx9MqN6efQ6qreIbm"
       ]
     },
     {
@@ -3620,18 +3438,15 @@
       "duration_ms": 0,
       "count": 368,
       "differents": 103,
-      "primaryArtistId": "6zvul52xwTWzilBZl6BUbT",
+      "primaryArtistId": "5BP0oaQ1VhuaznT77CBXQp",
       "total_count": 368,
       "total_duration_ms": 56171050,
       "artist": {
         "name": "Pixies",
-        "genres": [
-          "alternative rock"
-        ],
-        "popularity": 70,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3577888
+          "total": 0
         },
         "images": [
           {
@@ -3650,13 +3465,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6zvul52xwTWzilBZl6BUbT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 368,
       "original_artistIds": [
-        "6zvul52xwTWzilBZl6BUbT"
+        "5BP0oaQ1VhuaznT77CBXQp"
       ]
     },
     {
@@ -3936,23 +3749,15 @@
       "duration_ms": 0,
       "count": 349,
       "differents": 82,
-      "primaryArtistId": "432R46LaYsJZV2Gmc4jUV5",
+      "primaryArtistId": "2JO3HwMRPeya8bXbtbyPcf",
       "total_count": 349,
       "total_duration_ms": 62487392,
       "artist": {
         "name": "Joy Division",
-        "genres": [
-          "post-punk",
-          "new wave",
-          "gothic rock",
-          "darkwave",
-          "madchester",
-          "cold wave"
-        ],
-        "popularity": 63,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2794035
+          "total": 0
         },
         "images": [
           {
@@ -3976,13 +3781,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/432R46LaYsJZV2Gmc4jUV5"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 349,
       "original_artistIds": [
-        "432R46LaYsJZV2Gmc4jUV5"
+        "2JO3HwMRPeya8bXbtbyPcf"
       ]
     },
     {
@@ -4079,22 +3882,15 @@
       "duration_ms": 371915,
       "count": 341,
       "differents": 59,
-      "primaryArtistId": "1HxXNvsraqrsgfmju1yKk8",
+      "primaryArtistId": "7hqboBA08HiOvLPd3Ahjod",
       "total_count": 341,
       "total_duration_ms": 45869048,
       "artist": {
         "name": "Modern Baseball",
-        "genres": [
-          "midwest emo",
-          "emo",
-          "pop punk",
-          "folk punk",
-          "math rock"
-        ],
-        "popularity": 64,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 665329
+          "total": 0
         },
         "images": [
           {
@@ -4113,13 +3909,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1HxXNvsraqrsgfmju1yKk8"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 341,
       "original_artistIds": [
-        "1HxXNvsraqrsgfmju1yKk8"
+        "7hqboBA08HiOvLPd3Ahjod"
       ]
     },
     {
@@ -4174,19 +3968,15 @@
       "duration_ms": 0,
       "count": 340,
       "differents": 59,
-      "primaryArtistId": "70cRZdQywnSFp9pnc2WTCE",
+      "primaryArtistId": "64gpgh5jBMxyh7iVJll23t",
       "total_count": 340,
       "total_duration_ms": 58160273,
       "artist": {
         "name": "Simon & Garfunkel",
-        "genres": [
-          "folk rock",
-          "folk"
-        ],
-        "popularity": 70,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 5917024
+          "total": 0
         },
         "images": [
           {
@@ -4210,13 +4000,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/70cRZdQywnSFp9pnc2WTCE"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 340,
       "original_artistIds": [
-        "70cRZdQywnSFp9pnc2WTCE"
+        "64gpgh5jBMxyh7iVJll23t"
       ]
     },
     {
@@ -4224,22 +4012,15 @@
       "duration_ms": 0,
       "count": 339,
       "differents": 110,
-      "primaryArtistId": "6xTk3EK5T9UzudENVvu9YB",
+      "primaryArtistId": "5kxxhOkxd7j57e7oL121gI",
       "total_count": 339,
       "total_duration_ms": 43331461,
       "artist": {
         "name": "Rancid",
-        "genres": [
-          "punk",
-          "ska punk",
-          "ska",
-          "skate punk",
-          "hardcore punk"
-        ],
-        "popularity": 57,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 972122
+          "total": 0
         },
         "images": [
           {
@@ -4258,13 +4039,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6xTk3EK5T9UzudENVvu9YB"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 339,
       "original_artistIds": [
-        "6xTk3EK5T9UzudENVvu9YB"
+        "5kxxhOkxd7j57e7oL121gI"
       ]
     },
     {
@@ -4318,20 +4097,15 @@
       "duration_ms": 0,
       "count": 333,
       "differents": 80,
-      "primaryArtistId": "2TM0qnbJH4QPhGMCdPt7fH",
+      "primaryArtistId": "6DTC7IOW4QWVIjIa0UHEhP",
       "total_count": 333,
       "total_duration_ms": 55728666,
       "artist": {
         "name": "Neck Deep",
-        "genres": [
-          "pop punk",
-          "punk",
-          "emo"
-        ],
-        "popularity": 64,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1774434
+          "total": 0
         },
         "images": [
           {
@@ -4350,13 +4124,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2TM0qnbJH4QPhGMCdPt7fH"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 333,
       "original_artistIds": [
-        "2TM0qnbJH4QPhGMCdPt7fH"
+        "6DTC7IOW4QWVIjIa0UHEhP"
       ]
     },
     {
@@ -4364,16 +4136,15 @@
       "duration_ms": 0,
       "count": 333,
       "differents": 90,
-      "primaryArtistId": "7n2wHs1TKAczGzO7Dd2rGr",
+      "primaryArtistId": "2QZ7WLBE8h2y1Y5Fb8RYbH",
       "total_count": 333,
       "total_duration_ms": 54769733,
       "artist": {
         "name": "Shawn Mendes",
         "genres": [],
-        "popularity": 83,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 45816443
+          "total": 0
         },
         "images": [
           {
@@ -4392,13 +4163,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7n2wHs1TKAczGzO7Dd2rGr"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 333,
       "original_artistIds": [
-        "7n2wHs1TKAczGzO7Dd2rGr"
+        "2QZ7WLBE8h2y1Y5Fb8RYbH"
       ]
     },
     {
@@ -4406,20 +4175,15 @@
       "duration_ms": 0,
       "count": 330,
       "differents": 92,
-      "primaryArtistId": "08GQAI4eElDnROBrJRGE0X",
+      "primaryArtistId": "0FeCO85RKW8fDRytwXof2x",
       "total_count": 330,
       "total_duration_ms": 62577045,
       "artist": {
         "name": "Fleetwood Mac",
-        "genres": [
-          "classic rock",
-          "yacht rock",
-          "soft rock"
-        ],
-        "popularity": 84,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 14095367
+          "total": 0
         },
         "images": [
           {
@@ -4438,13 +4202,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/08GQAI4eElDnROBrJRGE0X"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 330,
       "original_artistIds": [
-        "08GQAI4eElDnROBrJRGE0X"
+        "0FeCO85RKW8fDRytwXof2x"
       ]
     },
     {
@@ -4452,16 +4214,15 @@
       "duration_ms": 0,
       "count": 330,
       "differents": 95,
-      "primaryArtistId": "5QdyldG4Fl4TPiOIeMNpBZ",
+      "primaryArtistId": "1uP8UVMXcTJn28TbhfR2Wo",
       "total_count": 330,
       "total_duration_ms": 67839492,
       "artist": {
         "name": "Big Thief",
         "genres": [],
-        "popularity": 70,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1344235
+          "total": 0
         },
         "images": [
           {
@@ -4480,13 +4241,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5QdyldG4Fl4TPiOIeMNpBZ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 330,
       "original_artistIds": [
-        "5QdyldG4Fl4TPiOIeMNpBZ"
+        "1uP8UVMXcTJn28TbhfR2Wo"
       ]
     },
     {
@@ -4538,19 +4297,15 @@
       "duration_ms": 0,
       "count": 321,
       "differents": 89,
-      "primaryArtistId": "5PbpKlxQE0Ktl5lcNABoFf",
+      "primaryArtistId": "2os0aK782bakCPmjow0SU0",
       "total_count": 321,
       "total_duration_ms": 86766634,
       "artist": {
         "name": "Car Seat Headrest",
-        "genres": [
-          "midwest emo",
-          "indie rock"
-        ],
-        "popularity": 60,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 908280
+          "total": 0
         },
         "images": [
           {
@@ -4569,13 +4324,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5PbpKlxQE0Ktl5lcNABoFf"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 321,
       "original_artistIds": [
-        "5PbpKlxQE0Ktl5lcNABoFf"
+        "2os0aK782bakCPmjow0SU0"
       ]
     },
     {
@@ -4583,16 +4336,15 @@
       "duration_ms": 0,
       "count": 320,
       "differents": 85,
-      "primaryArtistId": "73sIBHcqh3Z3NyqHKZ7FOL",
+      "primaryArtistId": "4ms5iozKkRN7xCwujtXRTk",
       "total_count": 320,
       "total_duration_ms": 62923455,
       "artist": {
         "name": "Childish Gambino",
         "genres": [],
-        "popularity": 79,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 14636957
+          "total": 0
         },
         "images": [
           {
@@ -4611,13 +4363,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/73sIBHcqh3Z3NyqHKZ7FOL"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 320,
       "original_artistIds": [
-        "73sIBHcqh3Z3NyqHKZ7FOL"
+        "4ms5iozKkRN7xCwujtXRTk"
       ]
     },
     {
@@ -4850,19 +4600,15 @@
       "duration_ms": 0,
       "count": 306,
       "differents": 59,
-      "primaryArtistId": "40Yq4vzPs9VNUrIBG5Jr2i",
+      "primaryArtistId": "5KRRcT67VNIZUygEbMoIC1",
       "total_count": 306,
       "total_duration_ms": 55026183,
       "artist": {
         "name": "The Smashing Pumpkins",
-        "genres": [
-          "alternative rock",
-          "rock"
-        ],
-        "popularity": 75,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 6126692
+          "total": 0
         },
         "images": [
           {
@@ -4881,13 +4627,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/40Yq4vzPs9VNUrIBG5Jr2i"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 306,
       "original_artistIds": [
-        "40Yq4vzPs9VNUrIBG5Jr2i"
+        "5KRRcT67VNIZUygEbMoIC1"
       ]
     },
     {
@@ -4986,21 +4730,15 @@
       "duration_ms": 0,
       "count": 295,
       "differents": 82,
-      "primaryArtistId": "6v8FB84lnmJs434UJf2Mrm",
+      "primaryArtistId": "6XDdmCAuodZfXtEgJcxpS2",
       "total_count": 295,
       "total_duration_ms": 57373073,
       "artist": {
         "name": "Neil Young",
-        "genres": [
-          "classic rock",
-          "folk rock",
-          "singer-songwriter",
-          "roots rock"
-        ],
-        "popularity": 71,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3361816
+          "total": 0
         },
         "images": [
           {
@@ -5019,13 +4757,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6v8FB84lnmJs434UJf2Mrm"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 295,
       "original_artistIds": [
-        "6v8FB84lnmJs434UJf2Mrm"
+        "6XDdmCAuodZfXtEgJcxpS2"
       ]
     },
     {
@@ -5033,19 +4769,15 @@
       "duration_ms": 0,
       "count": 295,
       "differents": 72,
-      "primaryArtistId": "2x9SpqnPi8rlE9pjHBwmSC",
+      "primaryArtistId": "38Ngied9rBORlAbLYNCl4k",
       "total_count": 295,
       "total_duration_ms": 70155269,
       "artist": {
         "name": "Talking Heads",
-        "genres": [
-          "new wave",
-          "post-punk"
-        ],
-        "popularity": 70,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2870361
+          "total": 0
         },
         "images": [
           {
@@ -5064,13 +4796,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2x9SpqnPi8rlE9pjHBwmSC"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 295,
       "original_artistIds": [
-        "2x9SpqnPi8rlE9pjHBwmSC"
+        "38Ngied9rBORlAbLYNCl4k"
       ]
     },
     {
@@ -5125,19 +4855,15 @@
       "duration_ms": 0,
       "count": 292,
       "differents": 54,
-      "primaryArtistId": "7zYojeiCfuseHGA4IJ8qSk",
+      "primaryArtistId": "6tmmw08YHR0kyTtCE19Pqd",
       "total_count": 292,
       "total_duration_ms": 50464888,
       "artist": {
         "name": "Pity Sex",
-        "genres": [
-          "shoegaze",
-          "midwest emo"
-        ],
-        "popularity": 30,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 59213
+          "total": 0
         },
         "images": [
           {
@@ -5161,13 +4887,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7zYojeiCfuseHGA4IJ8qSk"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 292,
       "original_artistIds": [
-        "7zYojeiCfuseHGA4IJ8qSk"
+        "6tmmw08YHR0kyTtCE19Pqd"
       ]
     },
     {
@@ -5175,16 +4899,15 @@
       "duration_ms": 0,
       "count": 291,
       "differents": 84,
-      "primaryArtistId": "4wyNyxs74Ux8UIDopNjIai",
+      "primaryArtistId": "08ZsI74y3P6mQw8En1c6tQ",
       "total_count": 291,
       "total_duration_ms": 46851726,
       "artist": {
         "name": "King Krule",
         "genres": [],
-        "popularity": 60,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 968683
+          "total": 0
         },
         "images": [
           {
@@ -5203,13 +4926,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4wyNyxs74Ux8UIDopNjIai"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 291,
       "original_artistIds": [
-        "4wyNyxs74Ux8UIDopNjIai"
+        "08ZsI74y3P6mQw8En1c6tQ"
       ]
     },
     {
@@ -5659,21 +5380,15 @@
       "duration_ms": 0,
       "count": 273,
       "differents": 112,
-      "primaryArtistId": "62sC6lUEWRjbFqXpMmOk4G",
+      "primaryArtistId": "5FFowl1Ve4S5OehL6OywSg",
       "total_count": 273,
       "total_duration_ms": 44395985,
       "artist": {
         "name": "Fugazi",
-        "genres": [
-          "post-hardcore",
-          "punk",
-          "noise rock",
-          "hardcore punk"
-        ],
-        "popularity": 55,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 690016
+          "total": 0
         },
         "images": [
           {
@@ -5692,13 +5407,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/62sC6lUEWRjbFqXpMmOk4G"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 273,
       "original_artistIds": [
-        "62sC6lUEWRjbFqXpMmOk4G"
+        "5FFowl1Ve4S5OehL6OywSg"
       ]
     },
     {
@@ -5839,16 +5552,15 @@
       "duration_ms": 0,
       "count": 267,
       "differents": 62,
-      "primaryArtistId": "32aUoW94mJ7xTJI7fG0V1G",
+      "primaryArtistId": "1oy0UIGzuqIPBkOsjojeJ1",
       "total_count": 267,
       "total_duration_ms": 47433693,
       "artist": {
         "name": "Whitney",
         "genres": [],
-        "popularity": 54,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 283316
+          "total": 0
         },
         "images": [
           {
@@ -5867,13 +5579,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/32aUoW94mJ7xTJI7fG0V1G"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 267,
       "original_artistIds": [
-        "32aUoW94mJ7xTJI7fG0V1G"
+        "1oy0UIGzuqIPBkOsjojeJ1"
       ]
     },
     {
@@ -5881,22 +5591,15 @@
       "duration_ms": 0,
       "count": 264,
       "differents": 50,
-      "primaryArtistId": "5yXAFDZNUNyO92l5WTImkO",
+      "primaryArtistId": "64C00gcYOfCw2RWC28iW7B",
       "total_count": 264,
       "total_duration_ms": 44131447,
       "artist": {
         "name": "Billy Bragg",
-        "genres": [
-          "alt country",
-          "anti-folk",
-          "folk punk",
-          "singer-songwriter",
-          "americana"
-        ],
-        "popularity": 52,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 189338
+          "total": 0
         },
         "images": [
           {
@@ -5915,13 +5618,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5yXAFDZNUNyO92l5WTImkO"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 264,
       "original_artistIds": [
-        "5yXAFDZNUNyO92l5WTImkO"
+        "64C00gcYOfCw2RWC28iW7B"
       ]
     },
     {
@@ -5976,20 +5677,15 @@
       "duration_ms": 1267396,
       "count": 262,
       "differents": 43,
-      "primaryArtistId": "6e0QWfEFmK6AguLy02mlqi",
+      "primaryArtistId": "6xRjCoIDMlGLfykzfi9oPO",
       "total_count": 262,
       "total_duration_ms": 31355873,
       "artist": {
         "name": "Have Heart",
-        "genres": [
-          "hardcore",
-          "melodic hardcore",
-          "hardcore punk"
-        ],
-        "popularity": 42,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 103234
+          "total": 0
         },
         "images": [
           {
@@ -6008,13 +5704,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6e0QWfEFmK6AguLy02mlqi"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 262,
       "original_artistIds": [
-        "6e0QWfEFmK6AguLy02mlqi"
+        "6xRjCoIDMlGLfykzfi9oPO"
       ]
     },
     {
@@ -6195,18 +5889,15 @@
       "duration_ms": 0,
       "count": 254,
       "differents": 56,
-      "primaryArtistId": "6veTV9sF06FBf2KN0xAdvo",
+      "primaryArtistId": "2UxXVVfBiGZa0l2Nhi6WbW",
       "total_count": 254,
       "total_duration_ms": 45283332,
       "artist": {
         "name": "The Go! Team",
-        "genres": [
-          "alternative dance"
-        ],
-        "popularity": 39,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 94561
+          "total": 0
         },
         "images": [
           {
@@ -6225,13 +5916,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6veTV9sF06FBf2KN0xAdvo"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 254,
       "original_artistIds": [
-        "6veTV9sF06FBf2KN0xAdvo"
+        "2UxXVVfBiGZa0l2Nhi6WbW"
       ]
     },
     {
@@ -6329,19 +6018,15 @@
       "duration_ms": 0,
       "count": 248,
       "differents": 109,
-      "primaryArtistId": "0qzzGu8qpbXYpzgV52wOFT",
+      "primaryArtistId": "3JeT6Xcv6MlEHHylk8SKQ1",
       "total_count": 248,
       "total_duration_ms": 49174917,
       "artist": {
         "name": "Bibio",
-        "genres": [
-          "ambient folk",
-          "downtempo"
-        ],
-        "popularity": 52,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 275977
+          "total": 0
         },
         "images": [
           {
@@ -6360,13 +6045,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0qzzGu8qpbXYpzgV52wOFT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 248,
       "original_artistIds": [
-        "0qzzGu8qpbXYpzgV52wOFT"
+        "3JeT6Xcv6MlEHHylk8SKQ1"
       ]
     },
     {
@@ -6374,16 +6057,15 @@
       "duration_ms": 0,
       "count": 247,
       "differents": 57,
-      "primaryArtistId": "1hzfo8twXdOegF3xireCYs",
+      "primaryArtistId": "6vZdRrueM9ZEJjx6EWe1XQ",
       "total_count": 247,
       "total_duration_ms": 52886572,
       "artist": {
         "name": "Milky Chance",
         "genres": [],
-        "popularity": 71,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2079560
+          "total": 0
         },
         "images": [
           {
@@ -6402,13 +6084,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1hzfo8twXdOegF3xireCYs"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 247,
       "original_artistIds": [
-        "1hzfo8twXdOegF3xireCYs"
+        "6vZdRrueM9ZEJjx6EWe1XQ"
       ]
     },
     {
@@ -6416,16 +6096,15 @@
       "duration_ms": 0,
       "count": 247,
       "differents": 74,
-      "primaryArtistId": "246dkjvS1zLTtiykXe5h60",
+      "primaryArtistId": "5pWAuRZyAC3HIf36GfRcbz",
       "total_count": 247,
       "total_duration_ms": 44323451,
       "artist": {
         "name": "Post Malone",
         "genres": [],
-        "popularity": 87,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 47826801
+          "total": 0
         },
         "images": [
           {
@@ -6444,13 +6123,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/246dkjvS1zLTtiykXe5h60"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 247,
       "original_artistIds": [
-        "246dkjvS1zLTtiykXe5h60"
+        "5pWAuRZyAC3HIf36GfRcbz"
       ]
     },
     {
@@ -6458,19 +6135,15 @@
       "duration_ms": 0,
       "count": 246,
       "differents": 58,
-      "primaryArtistId": "0f49vykMeD4Nb8ONN6IMVJ",
+      "primaryArtistId": "1IV6Rd2goqq4e3agbpqZN3",
       "total_count": 246,
       "total_duration_ms": 38046127,
       "artist": {
         "name": "Gluecifer",
-        "genres": [
-          "norsk rock",
-          "punk"
-        ],
-        "popularity": 36,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 37194
+          "total": 0
         },
         "images": [
           {
@@ -6489,13 +6162,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0f49vykMeD4Nb8ONN6IMVJ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 246,
       "original_artistIds": [
-        "0f49vykMeD4Nb8ONN6IMVJ"
+        "1IV6Rd2goqq4e3agbpqZN3"
       ]
     },
     {
@@ -6549,23 +6220,15 @@
       "duration_ms": 0,
       "count": 238,
       "differents": 57,
-      "primaryArtistId": "3mvTAjG7rcyk7DQzLwauzV",
+      "primaryArtistId": "3T39EhrrrHe9PD00GN37qJ",
       "total_count": 238,
       "total_duration_ms": 31368253,
       "artist": {
         "name": "The Bouncing Souls",
-        "genres": [
-          "punk",
-          "skate punk",
-          "ska punk",
-          "ska",
-          "melodic hardcore",
-          "pop punk"
-        ],
-        "popularity": 47,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 225893
+          "total": 0
         },
         "images": [
           {
@@ -6584,13 +6247,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3mvTAjG7rcyk7DQzLwauzV"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 238,
       "original_artistIds": [
-        "3mvTAjG7rcyk7DQzLwauzV"
+        "3T39EhrrrHe9PD00GN37qJ"
       ]
     },
     {
@@ -6738,20 +6399,15 @@
       "duration_ms": 0,
       "count": 233,
       "differents": 52,
-      "primaryArtistId": "5LtAyeDVOVcydj65LvgICY",
+      "primaryArtistId": "3kRURM3BXkcSEGX7NrwXyG",
       "total_count": 233,
       "total_duration_ms": 35268064,
       "artist": {
         "name": "Bass Drum of Death",
-        "genres": [
-          "garage rock",
-          "surf rock",
-          "indie punk"
-        ],
-        "popularity": 40,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 121137
+          "total": 0
         },
         "images": [
           {
@@ -6770,13 +6426,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5LtAyeDVOVcydj65LvgICY"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 233,
       "original_artistIds": [
-        "5LtAyeDVOVcydj65LvgICY"
+        "3kRURM3BXkcSEGX7NrwXyG"
       ]
     },
     {
@@ -6837,20 +6491,15 @@
       "duration_ms": 0,
       "count": 231,
       "differents": 32,
-      "primaryArtistId": "3IYUhFvPQItj6xySrBmZkd",
+      "primaryArtistId": "0Ko737UNjXO17LK4Urdlwo",
       "total_count": 231,
       "total_duration_ms": 31026205,
       "artist": {
         "name": "Creedence Clearwater Revival",
-        "genres": [
-          "classic rock",
-          "southern rock",
-          "country rock"
-        ],
-        "popularity": 78,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 7997352
+          "total": 0
         },
         "images": [
           {
@@ -6869,13 +6518,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3IYUhFvPQItj6xySrBmZkd"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 231,
       "original_artistIds": [
-        "3IYUhFvPQItj6xySrBmZkd"
+        "0Ko737UNjXO17LK4Urdlwo"
       ]
     },
     {
@@ -6883,18 +6530,15 @@
       "duration_ms": 0,
       "count": 228,
       "differents": 36,
-      "primaryArtistId": "0SwO7SWeDHJijQ3XNS7xEE",
+      "primaryArtistId": "1jJci4qxiYcOHhQR247rEU",
       "total_count": 228,
       "total_duration_ms": 48719343,
       "artist": {
         "name": "MGMT",
-        "genres": [
-          "indie"
-        ],
-        "popularity": 74,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3591844
+          "total": 0
         },
         "images": [
           {
@@ -6913,13 +6557,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0SwO7SWeDHJijQ3XNS7xEE"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 228,
       "original_artistIds": [
-        "0SwO7SWeDHJijQ3XNS7xEE"
+        "1jJci4qxiYcOHhQR247rEU"
       ]
     },
     {
@@ -6927,18 +6569,15 @@
       "duration_ms": 0,
       "count": 227,
       "differents": 40,
-      "primaryArtistId": "13ubrt8QOOCPljQ2FL1Kca",
+      "primaryArtistId": "22Mme5vsZ688TMUieIHdx3",
       "total_count": 227,
       "total_duration_ms": 39752241,
       "artist": {
         "name": "A$AP Rocky",
-        "genres": [
-          "rap"
-        ],
-        "popularity": 83,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 17440298
+          "total": 0
         },
         "images": [
           {
@@ -6957,13 +6596,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/13ubrt8QOOCPljQ2FL1Kca"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 227,
       "original_artistIds": [
-        "13ubrt8QOOCPljQ2FL1Kca"
+        "22Mme5vsZ688TMUieIHdx3"
       ]
     },
     {
@@ -7060,21 +6697,15 @@
       "duration_ms": 0,
       "count": 224,
       "differents": 52,
-      "primaryArtistId": "3kzwYV3OCB010YfXMF0Avt",
+      "primaryArtistId": "3XpXhVtZwqh2eM5d9ieXT5",
       "total_count": 224,
       "total_duration_ms": 38855505,
       "artist": {
         "name": "Alvvays",
-        "genres": [
-          "dream pop",
-          "shoegaze",
-          "jangle pop",
-          "indie"
-        ],
-        "popularity": 57,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 628855
+          "total": 0
         },
         "images": [
           {
@@ -7093,13 +6724,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3kzwYV3OCB010YfXMF0Avt"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 224,
       "original_artistIds": [
-        "3kzwYV3OCB010YfXMF0Avt"
+        "3XpXhVtZwqh2eM5d9ieXT5"
       ]
     },
     {
@@ -7342,22 +6971,15 @@
       "duration_ms": 0,
       "count": 214,
       "differents": 55,
-      "primaryArtistId": "5Mhs3Eu8lU6sRCtRYsmABV",
+      "primaryArtistId": "4kFfFe38CRVnTsakUTL4E4",
       "total_count": 214,
       "total_duration_ms": 23675528,
       "artist": {
         "name": "Black Flag",
-        "genres": [
-          "punk",
-          "hardcore punk",
-          "skate punk",
-          "hardcore",
-          "proto-punk"
-        ],
-        "popularity": 48,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 704100
+          "total": 0
         },
         "images": [
           {
@@ -7376,13 +6998,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5Mhs3Eu8lU6sRCtRYsmABV"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 214,
       "original_artistIds": [
-        "5Mhs3Eu8lU6sRCtRYsmABV"
+        "4kFfFe38CRVnTsakUTL4E4"
       ]
     },
     {
@@ -7621,18 +7241,15 @@
       "duration_ms": 0,
       "count": 208,
       "differents": 37,
-      "primaryArtistId": "7ia4FaCVsbXvhVwagCJk7l",
+      "primaryArtistId": "18OB8P9DAP4aF6mq9vMYp8",
       "total_count": 208,
       "total_duration_ms": 30612406,
       "artist": {
         "name": "The Orwells",
-        "genres": [
-          "garage rock"
-        ],
-        "popularity": 39,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 109364
+          "total": 0
         },
         "images": [
           {
@@ -7651,13 +7268,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7ia4FaCVsbXvhVwagCJk7l"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 208,
       "original_artistIds": [
-        "7ia4FaCVsbXvhVwagCJk7l"
+        "18OB8P9DAP4aF6mq9vMYp8"
       ]
     },
     {
@@ -7884,20 +7499,15 @@
       "duration_ms": 0,
       "count": 202,
       "differents": 42,
-      "primaryArtistId": "2SrSdSvpminqmStGELCSNd",
+      "primaryArtistId": "2LPUvD5DDOO4UYGkWgjI2C",
       "total_count": 202,
       "total_duration_ms": 37174122,
       "artist": {
         "name": "Stormzy",
-        "genres": [
-          "grime",
-          "uk grime",
-          "uk drill"
-        ],
-        "popularity": 70,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3187833
+          "total": 0
         },
         "images": [
           {
@@ -7916,13 +7526,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2SrSdSvpminqmStGELCSNd"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 202,
       "original_artistIds": [
-        "2SrSdSvpminqmStGELCSNd"
+        "2LPUvD5DDOO4UYGkWgjI2C"
       ]
     },
     {
@@ -7998,19 +7606,15 @@
       "duration_ms": 0,
       "count": 195,
       "differents": 33,
-      "primaryArtistId": "5schNIzWdI9gJ1QRK8SBnc",
+      "primaryArtistId": "3gqP2hxwgi6mb8FhtEe4zU",
       "total_count": 195,
       "total_duration_ms": 45090960,
       "artist": {
         "name": "Ben Howard",
-        "genres": [
-          "indie folk",
-          "folk pop"
-        ],
-        "popularity": 64,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2002579
+          "total": 0
         },
         "images": [
           {
@@ -8029,13 +7633,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5schNIzWdI9gJ1QRK8SBnc"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 195,
       "original_artistIds": [
-        "5schNIzWdI9gJ1QRK8SBnc"
+        "3gqP2hxwgi6mb8FhtEe4zU"
       ]
     },
     {
@@ -8331,19 +7933,15 @@
       "duration_ms": 0,
       "count": 188,
       "differents": 40,
-      "primaryArtistId": "0lFeNF8DzUsRuGVbwy7lNE",
+      "primaryArtistId": "0pjZ5dlIRLyzpDJ1zk7Y4G",
       "total_count": 188,
       "total_duration_ms": 33440239,
       "artist": {
         "name": "Jokke med Tourettes",
-        "genres": [
-          "norsk rock",
-          "norwegian pop"
-        ],
-        "popularity": 29,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 9641
+          "total": 0
         },
         "images": [
           {
@@ -8362,13 +7960,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0lFeNF8DzUsRuGVbwy7lNE"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 188,
       "original_artistIds": [
-        "0lFeNF8DzUsRuGVbwy7lNE"
+        "0pjZ5dlIRLyzpDJ1zk7Y4G"
       ]
     },
     {
@@ -8460,21 +8056,15 @@
       "duration_ms": 3162169,
       "count": 186,
       "differents": 24,
-      "primaryArtistId": "7Ht57YadlBXcFJDK3plmhO",
+      "primaryArtistId": "1bAZV1EBTRi9t1cVg75i8t",
       "total_count": 186,
       "total_duration_ms": 34568461,
       "artist": {
         "name": "The Microphones",
-        "genres": [
-          "slowcore",
-          "lo-fi indie",
-          "anti-folk",
-          "indie folk"
-        ],
-        "popularity": 47,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 239177
+          "total": 0
         },
         "images": [
           {
@@ -8493,13 +8083,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7Ht57YadlBXcFJDK3plmhO"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 186,
       "original_artistIds": [
-        "7Ht57YadlBXcFJDK3plmhO"
+        "1bAZV1EBTRi9t1cVg75i8t"
       ]
     },
     {
@@ -8554,16 +8142,15 @@
       "duration_ms": 0,
       "count": 185,
       "differents": 40,
-      "primaryArtistId": "3iOvXCl6edW5Um0fXEBRXy",
+      "primaryArtistId": "6rxEjkoar48SssZePbtb2x",
       "total_count": 185,
       "total_duration_ms": 32815141,
       "artist": {
         "name": "The xx",
         "genres": [],
-        "popularity": 66,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3791267
+          "total": 0
         },
         "images": [
           {
@@ -8582,13 +8169,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3iOvXCl6edW5Um0fXEBRXy"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 185,
       "original_artistIds": [
-        "3iOvXCl6edW5Um0fXEBRXy"
+        "6rxEjkoar48SssZePbtb2x"
       ]
     },
     {
@@ -8955,16 +8540,15 @@
       "duration_ms": 0,
       "count": 180,
       "differents": 25,
-      "primaryArtistId": "2XddLUPFBmTonCFy8uB3uc",
+      "primaryArtistId": "5r9LyVW7mKuLaGN0ofWU7c",
       "total_count": 180,
       "total_duration_ms": 32612379,
       "artist": {
         "name": "Swim Deep",
         "genres": [],
-        "popularity": 30,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 84153
+          "total": 0
         },
         "images": [
           {
@@ -8983,13 +8567,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2XddLUPFBmTonCFy8uB3uc"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 180,
       "original_artistIds": [
-        "2XddLUPFBmTonCFy8uB3uc"
+        "5r9LyVW7mKuLaGN0ofWU7c"
       ]
     },
     {
@@ -9043,20 +8625,15 @@
       "duration_ms": 0,
       "count": 179,
       "differents": 65,
-      "primaryArtistId": "0wNZvrIMNUCs24G0wFg2D6",
+      "primaryArtistId": "3g4BQQ1icPpH1Evll2kbec",
       "total_count": 179,
       "total_duration_ms": 27034264,
       "artist": {
         "name": "Jeff Rosenstock",
-        "genres": [
-          "folk punk",
-          "indie punk",
-          "power pop"
-        ],
-        "popularity": 47,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 157270
+          "total": 0
         },
         "images": [
           {
@@ -9075,13 +8652,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0wNZvrIMNUCs24G0wFg2D6"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 179,
       "original_artistIds": [
-        "0wNZvrIMNUCs24G0wFg2D6"
+        "3g4BQQ1icPpH1Evll2kbec"
       ]
     },
     {
@@ -9245,19 +8820,15 @@
       "duration_ms": 169386,
       "count": 174,
       "differents": 48,
-      "primaryArtistId": "21egYD1eInY6bGFcniCRT1",
+      "primaryArtistId": "4r9MqJ7MG26TFyxqr7PK01",
       "total_count": 174,
       "total_duration_ms": 35108325,
       "artist": {
         "name": "First Aid Kit",
-        "genres": [
-          "indie folk",
-          "folk"
-        ],
-        "popularity": 61,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1262816
+          "total": 0
         },
         "images": [
           {
@@ -9276,13 +8847,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/21egYD1eInY6bGFcniCRT1"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 174,
       "original_artistIds": [
-        "21egYD1eInY6bGFcniCRT1"
+        "4r9MqJ7MG26TFyxqr7PK01"
       ]
     },
     {
@@ -9335,20 +8904,15 @@
       "duration_ms": 0,
       "count": 174,
       "differents": 36,
-      "primaryArtistId": "4XpPveeg7RuYS3CgLo75t9",
+      "primaryArtistId": "6l3A2EWZSOA8LTMmzRCyD3",
       "total_count": 174,
       "total_duration_ms": 49432582,
       "artist": {
         "name": "Deafheaven",
-        "genres": [
-          "black metal",
-          "shoegaze",
-          "post-rock"
-        ],
-        "popularity": 49,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 302369
+          "total": 0
         },
         "images": [
           {
@@ -9367,13 +8931,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4XpPveeg7RuYS3CgLo75t9"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 174,
       "original_artistIds": [
-        "4XpPveeg7RuYS3CgLo75t9"
+        "6l3A2EWZSOA8LTMmzRCyD3"
       ]
     },
     {
@@ -9560,19 +9122,15 @@
       "duration_ms": 0,
       "count": 170,
       "differents": 47,
-      "primaryArtistId": "3VCEssbb6wxzv65MHsHfdg",
+      "primaryArtistId": "3N9WaSYTZOz0d9sraD9rvQ",
       "total_count": 170,
       "total_duration_ms": 29817190,
       "artist": {
         "name": "Skambankt",
-        "genres": [
-          "norsk rock",
-          "norwegian pop"
-        ],
-        "popularity": 33,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 23971
+          "total": 0
         },
         "images": [
           {
@@ -9591,13 +9149,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3VCEssbb6wxzv65MHsHfdg"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 170,
       "original_artistIds": [
-        "3VCEssbb6wxzv65MHsHfdg"
+        "3N9WaSYTZOz0d9sraD9rvQ"
       ]
     },
     {
@@ -9765,20 +9321,15 @@
       "duration_ms": 0,
       "count": 166,
       "differents": 40,
-      "primaryArtistId": "5ictveRyhWRs8Gt8Dvt1hS",
+      "primaryArtistId": "4AQ4tIKGLXeBQQsybOKTmv",
       "total_count": 166,
       "total_duration_ms": 28901197,
       "artist": {
         "name": "The Front Bottoms",
-        "genres": [
-          "midwest emo",
-          "folk punk",
-          "emo"
-        ],
-        "popularity": 61,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 886813
+          "total": 0
         },
         "images": [
           {
@@ -9797,13 +9348,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5ictveRyhWRs8Gt8Dvt1hS"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 166,
       "original_artistIds": [
-        "5ictveRyhWRs8Gt8Dvt1hS"
+        "4AQ4tIKGLXeBQQsybOKTmv"
       ]
     },
     {
@@ -9972,7 +9521,7 @@
       "duration_ms": 0,
       "count": 164,
       "differents": 17,
-      "primaryArtistId": "4M0n6TdRkiMKrryyho9q0t",
+      "primaryArtistId": "26ldiX3y5I9dtLdGm6ekV5",
       "total_count": 164,
       "total_duration_ms": 27077652,
       "artist": {
@@ -9980,17 +9529,14 @@
         "genres": [],
         "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 119
+          "total": 0
         },
         "images": [],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4M0n6TdRkiMKrryyho9q0t"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 164,
       "original_artistIds": [
-        "4M0n6TdRkiMKrryyho9q0t"
+        "26ldiX3y5I9dtLdGm6ekV5"
       ]
     },
     {
@@ -10042,16 +9588,15 @@
       "duration_ms": 0,
       "count": 164,
       "differents": 27,
-      "primaryArtistId": "7rN3Agir6FaZNfhf5V7mfN",
+      "primaryArtistId": "7vxlM6ouhpJy5WMEZqU7vV",
       "total_count": 164,
       "total_duration_ms": 28397238,
       "artist": {
         "name": "John Frusciante",
         "genres": [],
-        "popularity": 51,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 648395
+          "total": 0
         },
         "images": [
           {
@@ -10075,13 +9620,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7rN3Agir6FaZNfhf5V7mfN"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 164,
       "original_artistIds": [
-        "7rN3Agir6FaZNfhf5V7mfN"
+        "7vxlM6ouhpJy5WMEZqU7vV"
       ]
     },
     {
@@ -10089,20 +9632,15 @@
       "duration_ms": 0,
       "count": 161,
       "differents": 43,
-      "primaryArtistId": "5bCNJ1ICzdnzK0yoCIP2Ip",
+      "primaryArtistId": "7pyrmDJ8l3O14xVtxTL8Wf",
       "total_count": 161,
       "total_duration_ms": 28848562,
       "artist": {
         "name": "The World Is A Beautiful Place & I Am No Longer Afraid To Die",
-        "genres": [
-          "midwest emo",
-          "math rock",
-          "emo"
-        ],
-        "popularity": 38,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 141780
+          "total": 0
         },
         "images": [
           {
@@ -10121,13 +9659,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5bCNJ1ICzdnzK0yoCIP2Ip"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 161,
       "original_artistIds": [
-        "5bCNJ1ICzdnzK0yoCIP2Ip"
+        "7pyrmDJ8l3O14xVtxTL8Wf"
       ]
     },
     {
@@ -10284,19 +9820,15 @@
       "duration_ms": 0,
       "count": 160,
       "differents": 52,
-      "primaryArtistId": "0HMLp79IAd9Z8zMgxqpyxn",
+      "primaryArtistId": "3dOYfnK4ZIL9YFlKdHpGce",
       "total_count": 160,
       "total_duration_ms": 18242605,
       "artist": {
         "name": "Radiator Hospital",
-        "genres": [
-          "midwest emo",
-          "anti-folk"
-        ],
-        "popularity": 41,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 67867
+          "total": 0
         },
         "images": [
           {
@@ -10315,13 +9847,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0HMLp79IAd9Z8zMgxqpyxn"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 160,
       "original_artistIds": [
-        "0HMLp79IAd9Z8zMgxqpyxn"
+        "3dOYfnK4ZIL9YFlKdHpGce"
       ]
     },
     {
@@ -10329,20 +9859,15 @@
       "duration_ms": 0,
       "count": 157,
       "differents": 62,
-      "primaryArtistId": "1LyYIhqdjG9R9VdIRSftBb",
+      "primaryArtistId": "3h2IRgTZrU4hSNCePszT23",
       "total_count": 157,
       "total_duration_ms": 26632690,
       "artist": {
         "name": "UNDERGRUNN",
-        "genres": [
-          "norwegian hip hop",
-          "norwegian pop",
-          "russelåter"
-        ],
-        "popularity": 53,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 96038
+          "total": 0
         },
         "images": [
           {
@@ -10361,13 +9886,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1LyYIhqdjG9R9VdIRSftBb"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 157,
       "original_artistIds": [
-        "1LyYIhqdjG9R9VdIRSftBb"
+        "3h2IRgTZrU4hSNCePszT23"
       ]
     },
     {
@@ -10565,16 +10088,15 @@
       "duration_ms": 0,
       "count": 154,
       "differents": 34,
-      "primaryArtistId": "7dLkuQHF2ijbK6jiLFyIWM",
+      "primaryArtistId": "4pzI8SApuiCnpabEU1f6m4",
       "total_count": 154,
       "total_duration_ms": 26024918,
       "artist": {
         "name": "SWMRS",
         "genres": [],
-        "popularity": 38,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 144264
+          "total": 0
         },
         "images": [
           {
@@ -10593,13 +10115,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7dLkuQHF2ijbK6jiLFyIWM"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 154,
       "original_artistIds": [
-        "7dLkuQHF2ijbK6jiLFyIWM"
+        "4pzI8SApuiCnpabEU1f6m4"
       ]
     },
     {
@@ -10651,19 +10171,15 @@
       "duration_ms": 0,
       "count": 153,
       "differents": 37,
-      "primaryArtistId": "05C3EDw4Rf0qMhrdjFKncL",
+      "primaryArtistId": "2K6Zk9lKbzAGjjfZbg59Ia",
       "total_count": 153,
       "total_duration_ms": 34022789,
       "artist": {
         "name": "Fucked Up",
-        "genres": [
-          "hardcore punk",
-          "punk"
-        ],
-        "popularity": 29,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 69529
+          "total": 0
         },
         "images": [
           {
@@ -10682,13 +10198,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/05C3EDw4Rf0qMhrdjFKncL"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 153,
       "original_artistIds": [
-        "05C3EDw4Rf0qMhrdjFKncL"
+        "2K6Zk9lKbzAGjjfZbg59Ia"
       ]
     },
     {
@@ -10828,19 +10342,15 @@
       "duration_ms": 177826,
       "count": 151,
       "differents": 54,
-      "primaryArtistId": "5LfGQac0EIXyAN8aUwmNAQ",
+      "primaryArtistId": "3jNyatJv1JxuIlwKoYlo7Y",
       "total_count": 151,
       "total_duration_ms": 17921216,
       "artist": {
         "name": "The Offspring",
-        "genres": [
-          "punk",
-          "skate punk"
-        ],
-        "popularity": 77,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 6707655
+          "total": 0
         },
         "images": [
           {
@@ -10859,13 +10369,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5LfGQac0EIXyAN8aUwmNAQ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 151,
       "original_artistIds": [
-        "5LfGQac0EIXyAN8aUwmNAQ"
+        "3jNyatJv1JxuIlwKoYlo7Y"
       ]
     },
     {
@@ -10918,18 +10426,15 @@
       "duration_ms": 0,
       "count": 149,
       "differents": 40,
-      "primaryArtistId": "7zHIrsSBL7A0gEJfzv1m7z",
+      "primaryArtistId": "40OlGm3HCmU4qu4tYmQF2U",
       "total_count": 149,
       "total_duration_ms": 33597164,
       "artist": {
         "name": "Benjamin Clementine",
-        "genres": [
-          "art pop"
-        ],
-        "popularity": 44,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 401571
+          "total": 0
         },
         "images": [
           {
@@ -10948,13 +10453,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7zHIrsSBL7A0gEJfzv1m7z"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 149,
       "original_artistIds": [
-        "7zHIrsSBL7A0gEJfzv1m7z"
+        "40OlGm3HCmU4qu4tYmQF2U"
       ]
     },
     {
@@ -11240,18 +10743,15 @@
       "duration_ms": 0,
       "count": 145,
       "differents": 64,
-      "primaryArtistId": "6RWjTQqILL7a1tQ0VapyLK",
+      "primaryArtistId": "6UGpcXcENaUqQKPc6oqOe4",
       "total_count": 145,
       "total_duration_ms": 20866393,
       "artist": {
         "name": "The Magnetic Fields",
-        "genres": [
-          "anti-folk"
-        ],
-        "popularity": 58,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 286679
+          "total": 0
         },
         "images": [
           {
@@ -11270,13 +10770,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6RWjTQqILL7a1tQ0VapyLK"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 145,
       "original_artistIds": [
-        "6RWjTQqILL7a1tQ0VapyLK"
+        "6UGpcXcENaUqQKPc6oqOe4"
       ]
     },
     {
@@ -11422,16 +10920,15 @@
       "duration_ms": 0,
       "count": 144,
       "differents": 72,
-      "primaryArtistId": "10JcyTp9YTVK1zQSbApoJC",
+      "primaryArtistId": "1CHudUHUunnar8qFWfLl8r",
       "total_count": 144,
       "total_duration_ms": 18566245,
       "artist": {
         "name": "Jocko Willink",
         "genres": [],
-        "popularity": 30,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 66301
+          "total": 0
         },
         "images": [
           {
@@ -11450,13 +10947,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/10JcyTp9YTVK1zQSbApoJC"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 144,
       "original_artistIds": [
-        "10JcyTp9YTVK1zQSbApoJC"
+        "1CHudUHUunnar8qFWfLl8r"
       ]
     },
     {
@@ -11641,21 +11136,15 @@
       "duration_ms": 0,
       "count": 143,
       "differents": 39,
-      "primaryArtistId": "60df5JBRRPcnSpsIMxxwQm",
+      "primaryArtistId": "2fCOgrM5x9RhUC72ha3tHx",
       "total_count": 143,
       "total_duration_ms": 22938137,
       "artist": {
         "name": "Otis Redding",
-        "genres": [
-          "soul",
-          "motown",
-          "classic soul",
-          "soul blues"
-        ],
-        "popularity": 69,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2550705
+          "total": 0
         },
         "images": [
           {
@@ -11679,13 +11168,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/60df5JBRRPcnSpsIMxxwQm"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 143,
       "original_artistIds": [
-        "60df5JBRRPcnSpsIMxxwQm"
+        "2fCOgrM5x9RhUC72ha3tHx"
       ]
     },
     {
@@ -11777,24 +11264,15 @@
       "duration_ms": 0,
       "count": 142,
       "differents": 41,
-      "primaryArtistId": "0kbYTNQb4Pb1rPbbaF0pT4",
+      "primaryArtistId": "4vLYewWIvqHfKtJDk8c8tq",
       "total_count": 142,
       "total_duration_ms": 42943622,
       "artist": {
         "name": "Miles Davis",
-        "genres": [
-          "jazz",
-          "cool jazz",
-          "hard bop",
-          "bebop",
-          "jazz fusion",
-          "free jazz",
-          "jazz blues"
-        ],
-        "popularity": 64,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2746395
+          "total": 0
         },
         "images": [
           {
@@ -11818,13 +11296,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0kbYTNQb4Pb1rPbbaF0pT4"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 142,
       "original_artistIds": [
-        "0kbYTNQb4Pb1rPbbaF0pT4"
+        "4vLYewWIvqHfKtJDk8c8tq"
       ]
     },
     {
@@ -11878,22 +11354,15 @@
       "duration_ms": 0,
       "count": 141,
       "differents": 32,
-      "primaryArtistId": "3VgH8bHZdsRIPo7Kj0miPa",
+      "primaryArtistId": "6Js3o59wygqJjx45nyFYEc",
       "total_count": 141,
       "total_duration_ms": 28991707,
       "artist": {
         "name": "More Than Life",
-        "genres": [
-          "melodic hardcore",
-          "hardcore",
-          "post-hardcore",
-          "hardcore punk",
-          "screamo"
-        ],
-        "popularity": 28,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 34100
+          "total": 0
         },
         "images": [
           {
@@ -11912,13 +11381,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3VgH8bHZdsRIPo7Kj0miPa"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 141,
       "original_artistIds": [
-        "3VgH8bHZdsRIPo7Kj0miPa"
+        "6Js3o59wygqJjx45nyFYEc"
       ]
     },
     {
@@ -12016,16 +11483,15 @@
       "duration_ms": 0,
       "count": 139,
       "differents": 17,
-      "primaryArtistId": "4sSSkVtrCTzENCgm2vokiY",
+      "primaryArtistId": "6ELapy2KKGdQZRFOvZ5ZRY",
       "total_count": 139,
       "total_duration_ms": 27238058,
       "artist": {
         "name": "Roots Manuva",
         "genres": [],
-        "popularity": 49,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 171496
+          "total": 0
         },
         "images": [
           {
@@ -12044,13 +11510,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4sSSkVtrCTzENCgm2vokiY"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 139,
       "original_artistIds": [
-        "4sSSkVtrCTzENCgm2vokiY"
+        "6ELapy2KKGdQZRFOvZ5ZRY"
       ]
     },
     {
@@ -12058,19 +11522,15 @@
       "duration_ms": 0,
       "count": 139,
       "differents": 32,
-      "primaryArtistId": "3rT8xTwSOMDURtWpPyoKIO",
+      "primaryArtistId": "0NLsb9IEoq1Ji0IOfj1Sum",
       "total_count": 139,
       "total_duration_ms": 21762861,
       "artist": {
         "name": "Deer Tick",
-        "genres": [
-          "alt country",
-          "americana"
-        ],
-        "popularity": 43,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 166671
+          "total": 0
         },
         "images": [
           {
@@ -12089,13 +11549,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3rT8xTwSOMDURtWpPyoKIO"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 139,
       "original_artistIds": [
-        "3rT8xTwSOMDURtWpPyoKIO"
+        "0NLsb9IEoq1Ji0IOfj1Sum"
       ]
     },
     {
@@ -12103,20 +11561,15 @@
       "duration_ms": 0,
       "count": 139,
       "differents": 23,
-      "primaryArtistId": "5sXaGoRLSpd7VeyZrLkKwt",
+      "primaryArtistId": "5AeoHJUx0PJXAzN425xryh",
       "total_count": 139,
       "total_duration_ms": 26881869,
       "artist": {
         "name": "Gregory Alan Isakov",
-        "genres": [
-          "indie folk",
-          "folk",
-          "folk pop"
-        ],
-        "popularity": 72,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1161065
+          "total": 0
         },
         "images": [
           {
@@ -12135,13 +11588,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5sXaGoRLSpd7VeyZrLkKwt"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 139,
       "original_artistIds": [
-        "5sXaGoRLSpd7VeyZrLkKwt"
+        "5AeoHJUx0PJXAzN425xryh"
       ]
     },
     {
@@ -12284,20 +11735,15 @@
       "duration_ms": 0,
       "count": 137,
       "differents": 33,
-      "primaryArtistId": "41SQP16hv1TioVYqdckmxT",
+      "primaryArtistId": "5OBb8hxS8BLpyXl7KUM8hJ",
       "total_count": 137,
       "total_duration_ms": 27230211,
       "artist": {
         "name": "Real Estate",
-        "genres": [
-          "jangle pop",
-          "dream pop",
-          "surf rock"
-        ],
-        "popularity": 46,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 409202
+          "total": 0
         },
         "images": [
           {
@@ -12316,13 +11762,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/41SQP16hv1TioVYqdckmxT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 137,
       "original_artistIds": [
-        "41SQP16hv1TioVYqdckmxT"
+        "5OBb8hxS8BLpyXl7KUM8hJ"
       ]
     },
     {
@@ -12330,19 +11774,15 @@
       "duration_ms": 0,
       "count": 137,
       "differents": 33,
-      "primaryArtistId": "3cn7Ujrlj3rdyuqmOYhBJT",
+      "primaryArtistId": "2luJ055CDIvQToqSJNSukm",
       "total_count": 137,
       "total_duration_ms": 19689111,
       "artist": {
         "name": "HARU NEMURI",
-        "genres": [
-          "j-rock",
-          "japanese indie"
-        ],
-        "popularity": 36,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 87411
+          "total": 0
         },
         "images": [
           {
@@ -12361,13 +11801,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3cn7Ujrlj3rdyuqmOYhBJT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 137,
       "original_artistIds": [
-        "3cn7Ujrlj3rdyuqmOYhBJT"
+        "2luJ055CDIvQToqSJNSukm"
       ]
     },
     {
@@ -12719,20 +12157,15 @@
       "duration_ms": 0,
       "count": 132,
       "differents": 36,
-      "primaryArtistId": "5FwydyGVcsQllnM4xM6jw4",
+      "primaryArtistId": "51R5mPcJjOnfv9lKY1u5sW",
       "total_count": 132,
       "total_duration_ms": 27627947,
       "artist": {
         "name": "American Football",
-        "genres": [
-          "midwest emo",
-          "math rock",
-          "emo"
-        ],
-        "popularity": 55,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 467951
+          "total": 0
         },
         "images": [
           {
@@ -12751,13 +12184,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5FwydyGVcsQllnM4xM6jw4"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 132,
       "original_artistIds": [
-        "5FwydyGVcsQllnM4xM6jw4"
+        "51R5mPcJjOnfv9lKY1u5sW"
       ]
     },
     {
@@ -12902,16 +12333,15 @@
       "duration_ms": 0,
       "count": 131,
       "differents": 37,
-      "primaryArtistId": "6qgnBH6iDM91ipVXv28OMu",
+      "primaryArtistId": "33pDmPx2pkJ7JCAQpRDQ9B",
       "total_count": 131,
       "total_duration_ms": 25502157,
       "artist": {
         "name": "KAYTRANADA",
         "genres": [],
-        "popularity": 72,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1842643
+          "total": 0
         },
         "images": [
           {
@@ -12930,13 +12360,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6qgnBH6iDM91ipVXv28OMu"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 131,
       "original_artistIds": [
-        "6qgnBH6iDM91ipVXv28OMu"
+        "33pDmPx2pkJ7JCAQpRDQ9B"
       ]
     },
     {
@@ -13127,20 +12555,15 @@
       "duration_ms": 0,
       "count": 127,
       "differents": 38,
-      "primaryArtistId": "0EdvGhlC1FkGItLOWQzG4J",
+      "primaryArtistId": "7BY45SLc8OHLkTJv8TwO8z",
       "total_count": 127,
       "total_duration_ms": 18556655,
       "artist": {
         "name": "Sublime",
-        "genres": [
-          "reggae rock",
-          "ska punk",
-          "ska"
-        ],
-        "popularity": 72,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3416736
+          "total": 0
         },
         "images": [
           {
@@ -13159,13 +12582,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0EdvGhlC1FkGItLOWQzG4J"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 127,
       "original_artistIds": [
-        "0EdvGhlC1FkGItLOWQzG4J"
+        "7BY45SLc8OHLkTJv8TwO8z"
       ]
     },
     {
@@ -13173,16 +12594,15 @@
       "duration_ms": 0,
       "count": 127,
       "differents": 45,
-      "primaryArtistId": "1Xyo4u8uXC1ZmMpatF05PJ",
+      "primaryArtistId": "5ijr4mcVJokrKmtBy1XRPY",
       "total_count": 127,
       "total_duration_ms": 20468444,
       "artist": {
         "name": "The Weeknd",
         "genres": [],
-        "popularity": 95,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 114144399
+          "total": 0
         },
         "images": [
           {
@@ -13201,13 +12621,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1Xyo4u8uXC1ZmMpatF05PJ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 127,
       "original_artistIds": [
-        "1Xyo4u8uXC1ZmMpatF05PJ"
+        "5ijr4mcVJokrKmtBy1XRPY"
       ]
     },
     {
@@ -13215,23 +12633,15 @@
       "duration_ms": 0,
       "count": 127,
       "differents": 22,
-      "primaryArtistId": "6s42sZbLh06iCqpdOs1J2Y",
+      "primaryArtistId": "7Dec1Iw3vWaYrkwvOgKkV6",
       "total_count": 127,
       "total_duration_ms": 19447460,
       "artist": {
         "name": "Old Gray",
-        "genres": [
-          "midwest emo",
-          "spoken word",
-          "screamo",
-          "math rock",
-          "melodic hardcore",
-          "emo"
-        ],
-        "popularity": 34,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 60468
+          "total": 0
         },
         "images": [
           {
@@ -13250,13 +12660,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6s42sZbLh06iCqpdOs1J2Y"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 127,
       "original_artistIds": [
-        "6s42sZbLh06iCqpdOs1J2Y"
+        "7Dec1Iw3vWaYrkwvOgKkV6"
       ]
     },
     {
@@ -13354,19 +12762,15 @@
       "duration_ms": 0,
       "count": 125,
       "differents": 21,
-      "primaryArtistId": "0uCCBpmg6MrPb1KY2msceF",
+      "primaryArtistId": "6evpAJCR5GeeHDGgv3aXb3",
       "total_count": 125,
       "total_duration_ms": 28384988,
       "artist": {
         "name": "Burial",
-        "genres": [
-          "idm",
-          "ambient"
-        ],
-        "popularity": 50,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 516711
+          "total": 0
         },
         "images": [
           {
@@ -13385,13 +12789,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0uCCBpmg6MrPb1KY2msceF"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 125,
       "original_artistIds": [
-        "0uCCBpmg6MrPb1KY2msceF"
+        "6evpAJCR5GeeHDGgv3aXb3"
       ]
     },
     {
@@ -13445,21 +12847,15 @@
       "duration_ms": 0,
       "count": 124,
       "differents": 15,
-      "primaryArtistId": "4cxBQR2C44tnfQ74lpFN7N",
+      "primaryArtistId": "3kMV2txor1yrRnbbAO5jdF",
       "total_count": 124,
       "total_duration_ms": 10512056,
       "artist": {
         "name": "Frenzal Rhomb",
-        "genres": [
-          "skate punk",
-          "punk",
-          "melodic hardcore",
-          "ska punk"
-        ],
-        "popularity": 38,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 63676
+          "total": 0
         },
         "images": [
           {
@@ -13478,13 +12874,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4cxBQR2C44tnfQ74lpFN7N"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 124,
       "original_artistIds": [
-        "4cxBQR2C44tnfQ74lpFN7N"
+        "3kMV2txor1yrRnbbAO5jdF"
       ]
     },
     {
@@ -13492,16 +12886,15 @@
       "duration_ms": 0,
       "count": 124,
       "differents": 28,
-      "primaryArtistId": "4frXpPxQQZwbCu3eTGnZEw",
+      "primaryArtistId": "5YQaBBIKKsmTkWaCJGrxPO",
       "total_count": 124,
       "total_duration_ms": 18573681,
       "artist": {
         "name": "Thundercat",
         "genres": [],
-        "popularity": 69,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1537635
+          "total": 0
         },
         "images": [
           {
@@ -13520,13 +12913,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4frXpPxQQZwbCu3eTGnZEw"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 124,
       "original_artistIds": [
-        "4frXpPxQQZwbCu3eTGnZEw"
+        "5YQaBBIKKsmTkWaCJGrxPO"
       ]
     },
     {
@@ -13687,25 +13078,22 @@
       "duration_ms": 0,
       "count": 123,
       "differents": 18,
-      "primaryArtistId": "2zEUiBsWw7DAOo5UR1FnTX",
+      "primaryArtistId": "0H9YXbKY1Gaz6FD3mNz5JI",
       "total_count": 123,
       "total_duration_ms": 22659148,
       "artist": {
         "name": "Gnom",
         "genres": [],
-        "popularity": 1,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1201
+          "total": 0
         },
         "images": [],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2zEUiBsWw7DAOo5UR1FnTX"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 123,
       "original_artistIds": [
-        "2zEUiBsWw7DAOo5UR1FnTX"
+        "0H9YXbKY1Gaz6FD3mNz5JI"
       ]
     },
     {
@@ -13713,18 +13101,15 @@
       "duration_ms": 0,
       "count": 123,
       "differents": 16,
-      "primaryArtistId": "1uQXG73H5lbcxVXcCHSjZ5",
+      "primaryArtistId": "5lnOifvD9NZKbvB0g7VfcR",
       "total_count": 123,
       "total_duration_ms": 20983509,
       "artist": {
         "name": "Transit",
-        "genres": [
-          "pop punk"
-        ],
-        "popularity": 33,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 67747
+          "total": 0
         },
         "images": [
           {
@@ -13743,13 +13128,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1uQXG73H5lbcxVXcCHSjZ5"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 123,
       "original_artistIds": [
-        "1uQXG73H5lbcxVXcCHSjZ5"
+        "5lnOifvD9NZKbvB0g7VfcR"
       ]
     },
     {
@@ -13892,16 +13275,15 @@
       "duration_ms": 0,
       "count": 122,
       "differents": 37,
-      "primaryArtistId": "4mLJ3XfOM5FPjSAWdQ2Jk7",
+      "primaryArtistId": "0UV5zxRMz6AO4ZwUOZNIKI",
       "total_count": 122,
       "total_duration_ms": 24448988,
       "artist": {
         "name": "Dr. Dog",
         "genres": [],
-        "popularity": 63,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 653271
+          "total": 0
         },
         "images": [
           {
@@ -13920,13 +13302,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4mLJ3XfOM5FPjSAWdQ2Jk7"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 122,
       "original_artistIds": [
-        "4mLJ3XfOM5FPjSAWdQ2Jk7"
+        "0UV5zxRMz6AO4ZwUOZNIKI"
       ]
     },
     {
@@ -14556,16 +13936,15 @@
       "duration_ms": 0,
       "count": 113,
       "differents": 32,
-      "primaryArtistId": "5UUG83KSlqPhrBssrducWV",
+      "primaryArtistId": "10gsTFYy7nNUjgaaCT2JhL",
       "total_count": 113,
       "total_duration_ms": 27410946,
       "artist": {
         "name": "Spotify",
         "genres": [],
-        "popularity": 17,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 33545
+          "total": 0
         },
         "images": [
           {
@@ -14584,13 +13963,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5UUG83KSlqPhrBssrducWV"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 113,
       "original_artistIds": [
-        "5UUG83KSlqPhrBssrducWV"
+        "10gsTFYy7nNUjgaaCT2JhL"
       ]
     },
     {
@@ -14824,16 +14201,15 @@
       "duration_ms": 0,
       "count": 110,
       "differents": 19,
-      "primaryArtistId": "7giUHu5pv6YTZgSkxxCcgh",
+      "primaryArtistId": "10ViidwjGLCfVtGPfdcszR",
       "total_count": 110,
       "total_duration_ms": 21987655,
       "artist": {
         "name": "Edward Sharpe & The Magnetic Zeros",
         "genres": [],
-        "popularity": 62,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1082444
+          "total": 0
         },
         "images": [
           {
@@ -14852,13 +14228,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7giUHu5pv6YTZgSkxxCcgh"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 110,
       "original_artistIds": [
-        "7giUHu5pv6YTZgSkxxCcgh"
+        "10ViidwjGLCfVtGPfdcszR"
       ]
     },
     {
@@ -14866,18 +14240,15 @@
       "duration_ms": 0,
       "count": 110,
       "differents": 24,
-      "primaryArtistId": "6rAZ6OYwAXqykSlPxqGy8E",
+      "primaryArtistId": "0Lm3loChnSsNS37nxvLYcN",
       "total_count": 110,
       "total_duration_ms": 22556560,
       "artist": {
         "name": "Penguin Cafe Orchestra",
-        "genres": [
-          "minimalism"
-        ],
-        "popularity": 40,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 146578
+          "total": 0
         },
         "images": [
           {
@@ -14896,13 +14267,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6rAZ6OYwAXqykSlPxqGy8E"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 110,
       "original_artistIds": [
-        "6rAZ6OYwAXqykSlPxqGy8E"
+        "0Lm3loChnSsNS37nxvLYcN"
       ]
     },
     {
@@ -15222,20 +14591,15 @@
       "duration_ms": 0,
       "count": 107,
       "differents": 26,
-      "primaryArtistId": "1yAwtBaoHLEDWAnWR87hBT",
+      "primaryArtistId": "2lwwrWVKdf3LR9lbbhnr6R",
       "total_count": 107,
       "total_duration_ms": 22530993,
       "artist": {
         "name": "Modest Mouse",
-        "genres": [
-          "indie rock",
-          "indie",
-          "alternative rock"
-        ],
-        "popularity": 63,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1577096
+          "total": 0
         },
         "images": [
           {
@@ -15254,13 +14618,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1yAwtBaoHLEDWAnWR87hBT"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 107,
       "original_artistIds": [
-        "1yAwtBaoHLEDWAnWR87hBT"
+        "2lwwrWVKdf3LR9lbbhnr6R"
       ]
     },
     {
@@ -15412,18 +14774,15 @@
       "duration_ms": 0,
       "count": 106,
       "differents": 36,
-      "primaryArtistId": "0bzfPKdbXL5ezYW2z3UGQj",
+      "primaryArtistId": "60yAKwBX4c3hm4uubwzvD2",
       "total_count": 106,
       "total_duration_ms": 21785018,
       "artist": {
         "name": "Michael Kiwanuka",
-        "genres": [
-          "soul"
-        ],
-        "popularity": 67,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1669332
+          "total": 0
         },
         "images": [
           {
@@ -15442,13 +14801,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0bzfPKdbXL5ezYW2z3UGQj"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 106,
       "original_artistIds": [
-        "0bzfPKdbXL5ezYW2z3UGQj"
+        "60yAKwBX4c3hm4uubwzvD2"
       ]
     },
     {
@@ -15617,19 +14974,15 @@
       "duration_ms": 0,
       "count": 105,
       "differents": 30,
-      "primaryArtistId": "4OrizGCKhOrW6iDDJHN9xd",
+      "primaryArtistId": "4QDbzpmRA6atTEEE2W7j7k",
       "total_count": 105,
       "total_duration_ms": 20295960,
       "artist": {
         "name": "DIIV",
-        "genres": [
-          "shoegaze",
-          "dream pop"
-        ],
-        "popularity": 48,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 413557
+          "total": 0
         },
         "images": [
           {
@@ -15648,13 +15001,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/4OrizGCKhOrW6iDDJHN9xd"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 105,
       "original_artistIds": [
-        "4OrizGCKhOrW6iDDJHN9xd"
+        "4QDbzpmRA6atTEEE2W7j7k"
       ]
     },
     {
@@ -15752,16 +15103,15 @@
       "duration_ms": 0,
       "count": 105,
       "differents": 19,
-      "primaryArtistId": "41pd7r1XBRsvdxY3vHEgib",
+      "primaryArtistId": "1YYK8zYkBKxVaANQ7CkgYu",
       "total_count": 105,
       "total_duration_ms": 18726766,
       "artist": {
         "name": "Wunderhorse",
         "genres": [],
-        "popularity": 60,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 225004
+          "total": 0
         },
         "images": [
           {
@@ -15780,13 +15130,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/41pd7r1XBRsvdxY3vHEgib"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 105,
       "original_artistIds": [
-        "41pd7r1XBRsvdxY3vHEgib"
+        "1YYK8zYkBKxVaANQ7CkgYu"
       ]
     },
     {
@@ -16103,20 +15451,15 @@
       "duration_ms": 0,
       "count": 102,
       "differents": 8,
-      "primaryArtistId": "63tsqC2vaBhnOSdVth9yeK",
+      "primaryArtistId": "3jTXoI1PUIlHOZLztVo5m0",
       "total_count": 102,
       "total_duration_ms": 13037259,
       "artist": {
         "name": "Our Time Down Here",
-        "genres": [
-          "horror punk",
-          "melodic hardcore",
-          "hardcore punk"
-        ],
-        "popularity": 5,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1758
+          "total": 0
         },
         "images": [
           {
@@ -16135,13 +15478,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/63tsqC2vaBhnOSdVth9yeK"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 102,
       "original_artistIds": [
-        "63tsqC2vaBhnOSdVth9yeK"
+        "3jTXoI1PUIlHOZLztVo5m0"
       ]
     },
     {
@@ -16196,16 +15537,15 @@
       "duration_ms": 0,
       "count": 101,
       "differents": 16,
-      "primaryArtistId": "3MM8mtgFzaEJsqbjZBSsHJ",
+      "primaryArtistId": "2pKmJqcVJ4FX8WFniDNaaB",
       "total_count": 101,
       "total_duration_ms": 19076240,
       "artist": {
         "name": "Bloc Party",
         "genres": [],
-        "popularity": 61,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1217426
+          "total": 0
         },
         "images": [
           {
@@ -16224,13 +15564,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/3MM8mtgFzaEJsqbjZBSsHJ"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 101,
       "original_artistIds": [
-        "3MM8mtgFzaEJsqbjZBSsHJ"
+        "2pKmJqcVJ4FX8WFniDNaaB"
       ]
     },
     {
@@ -16670,23 +16008,15 @@
       "duration_ms": 0,
       "count": 98,
       "differents": 26,
-      "primaryArtistId": "0hU5urLse5h1Z0b4zQkovL",
+      "primaryArtistId": "50hahpi1RfncfVCnlsXLbl",
       "total_count": 98,
       "total_duration_ms": 21445806,
       "artist": {
         "name": "Graveyard",
-        "genres": [
-          "stoner rock",
-          "stoner metal",
-          "sludge metal",
-          "blues rock",
-          "space rock",
-          "doom metal"
-        ],
-        "popularity": 43,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 215038
+          "total": 0
         },
         "images": [
           {
@@ -16705,13 +16035,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0hU5urLse5h1Z0b4zQkovL"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 98,
       "original_artistIds": [
-        "0hU5urLse5h1Z0b4zQkovL"
+        "50hahpi1RfncfVCnlsXLbl"
       ]
     },
     {
@@ -16998,7 +16326,7 @@
       "duration_ms": 0,
       "count": 97,
       "differents": 11,
-      "primaryArtistId": "30hkb9R5u8qdkMhyGCfbB7",
+      "primaryArtistId": "6Y4l6sSTtIkd7bw7LiilB8",
       "total_count": 97,
       "total_duration_ms": 10369036,
       "artist": {
@@ -17006,17 +16334,14 @@
         "genres": [],
         "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 99
+          "total": 0
         },
         "images": [],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/30hkb9R5u8qdkMhyGCfbB7"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 97,
       "original_artistIds": [
-        "30hkb9R5u8qdkMhyGCfbB7"
+        "6Y4l6sSTtIkd7bw7LiilB8"
       ]
     },
     {
@@ -17198,18 +16523,15 @@
       "duration_ms": 0,
       "count": 96,
       "differents": 35,
-      "primaryArtistId": "51Eq6WMVEOjjx9KQMAnneG",
+      "primaryArtistId": "3ufbsUF0fpOjHmBOGjYSQ0",
       "total_count": 96,
       "total_duration_ms": 15040025,
       "artist": {
         "name": "The Cribs",
-        "genres": [
-          "indie"
-        ],
-        "popularity": 44,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 204910
+          "total": 0
         },
         "images": [
           {
@@ -17228,13 +16550,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/51Eq6WMVEOjjx9KQMAnneG"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 96,
       "original_artistIds": [
-        "51Eq6WMVEOjjx9KQMAnneG"
+        "3ufbsUF0fpOjHmBOGjYSQ0"
       ]
     },
     {
@@ -17288,16 +16608,15 @@
       "duration_ms": 0,
       "count": 95,
       "differents": 8,
-      "primaryArtistId": "2hPgGN4uhvXAxiXQBIXOmE",
+      "primaryArtistId": "3aUFrxO1B8EW63QchEl3wX",
       "total_count": 95,
       "total_duration_ms": 18664524,
       "artist": {
         "name": "KIDS SEE GHOSTS",
         "genres": [],
-        "popularity": 56,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1005713
+          "total": 0
         },
         "images": [
           {
@@ -17316,13 +16635,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/2hPgGN4uhvXAxiXQBIXOmE"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 95,
       "original_artistIds": [
-        "2hPgGN4uhvXAxiXQBIXOmE"
+        "3aUFrxO1B8EW63QchEl3wX"
       ]
     },
     {
@@ -17462,19 +16779,15 @@
       "duration_ms": 0,
       "count": 94,
       "differents": 32,
-      "primaryArtistId": "6zHRqvws8dVeqL8D31ponr",
+      "primaryArtistId": "4wVziiCDtgX39cglWWQDqm",
       "total_count": 94,
       "total_duration_ms": 18946300,
       "artist": {
         "name": "Tim Buckley",
-        "genres": [
-          "folk rock",
-          "folk"
-        ],
-        "popularity": 47,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 283325
+          "total": 0
         },
         "images": [
           {
@@ -17498,13 +16811,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6zHRqvws8dVeqL8D31ponr"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 94,
       "original_artistIds": [
-        "6zHRqvws8dVeqL8D31ponr"
+        "4wVziiCDtgX39cglWWQDqm"
       ]
     },
     {
@@ -17687,18 +16998,15 @@
       "duration_ms": 0,
       "count": 92,
       "differents": 33,
-      "primaryArtistId": "1NyswKLrbbWby73lOfJRZH",
+      "primaryArtistId": "3ciKBZL0RAKgtHCpacI0IA",
       "total_count": 92,
       "total_duration_ms": 16305617,
       "artist": {
         "name": "Turbowolf",
-        "genres": [
-          "stoner rock"
-        ],
-        "popularity": 36,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 50248
+          "total": 0
         },
         "images": [
           {
@@ -17717,13 +17025,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1NyswKLrbbWby73lOfJRZH"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 92,
       "original_artistIds": [
-        "1NyswKLrbbWby73lOfJRZH"
+        "3ciKBZL0RAKgtHCpacI0IA"
       ]
     },
     {
@@ -17731,19 +17037,15 @@
       "duration_ms": 0,
       "count": 92,
       "differents": 27,
-      "primaryArtistId": "5BvJzeQpmsdsFp4HGUYUEx",
+      "primaryArtistId": "5dKBaysNJtfpyNTRa5lqDb",
       "total_count": 92,
       "total_duration_ms": 13931713,
       "artist": {
         "name": "Vampire Weekend",
-        "genres": [
-          "indie",
-          "baroque pop"
-        ],
-        "popularity": 62,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 2035219
+          "total": 0
         },
         "images": [
           {
@@ -17762,13 +17064,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5BvJzeQpmsdsFp4HGUYUEx"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 92,
       "original_artistIds": [
-        "5BvJzeQpmsdsFp4HGUYUEx"
+        "5dKBaysNJtfpyNTRa5lqDb"
       ]
     },
     {
@@ -18431,20 +17731,15 @@
       "duration_ms": 0,
       "count": 87,
       "differents": 11,
-      "primaryArtistId": "7v3ZMFl1E6X4isdEaOSnk3",
+      "primaryArtistId": "298kZlqIGfhiHsmui7x5SN",
       "total_count": 87,
       "total_duration_ms": 14776593,
       "artist": {
         "name": "Tim Armstrong",
-        "genres": [
-          "ska",
-          "ska punk",
-          "rocksteady"
-        ],
-        "popularity": 38,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 95132
+          "total": 0
         },
         "images": [
           {
@@ -18468,13 +17763,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/7v3ZMFl1E6X4isdEaOSnk3"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 87,
       "original_artistIds": [
-        "7v3ZMFl1E6X4isdEaOSnk3"
+        "298kZlqIGfhiHsmui7x5SN"
       ]
     },
     {
@@ -18571,21 +17864,15 @@
       "duration_ms": 842956,
       "count": 87,
       "differents": 14,
-      "primaryArtistId": "6vCs4rj3rvYAX3l7dEiPq9",
+      "primaryArtistId": "7byFRN5ZHLK5iyabQ0nTAz",
       "total_count": 87,
       "total_duration_ms": 18637750,
       "artist": {
         "name": "Marietta",
-        "genres": [
-          "midwest emo",
-          "math rock",
-          "emo",
-          "screamo"
-        ],
-        "popularity": 48,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 95219
+          "total": 0
         },
         "images": [
           {
@@ -18604,13 +17891,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6vCs4rj3rvYAX3l7dEiPq9"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 87,
       "original_artistIds": [
-        "6vCs4rj3rvYAX3l7dEiPq9"
+        "7byFRN5ZHLK5iyabQ0nTAz"
       ]
     },
     {
@@ -18945,16 +18230,15 @@
       "duration_ms": 0,
       "count": 86,
       "differents": 13,
-      "primaryArtistId": "1sgVcCMCarG7yWGmkP9wMb",
+      "primaryArtistId": "1bF3goxrIPcdeTrSx7B0o6",
       "total_count": 86,
       "total_duration_ms": 15148667,
       "artist": {
         "name": "John Vincent III",
         "genres": [],
-        "popularity": 55,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 160091
+          "total": 0
         },
         "images": [
           {
@@ -18973,13 +18257,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/1sgVcCMCarG7yWGmkP9wMb"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 86,
       "original_artistIds": [
-        "1sgVcCMCarG7yWGmkP9wMb"
+        "1bF3goxrIPcdeTrSx7B0o6"
       ]
     },
     {
@@ -19031,16 +18313,15 @@
       "duration_ms": 0,
       "count": 84,
       "differents": 23,
-      "primaryArtistId": "5yV1qdnmxyIYiSFB02wpDj",
+      "primaryArtistId": "0LEsGGRUrZZhLPFoxeioHr",
       "total_count": 84,
       "total_duration_ms": 18107209,
       "artist": {
         "name": "The Postal Service",
         "genres": [],
-        "popularity": 53,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 637363
+          "total": 0
         },
         "images": [
           {
@@ -19064,13 +18345,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/5yV1qdnmxyIYiSFB02wpDj"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 84,
       "original_artistIds": [
-        "5yV1qdnmxyIYiSFB02wpDj"
+        "0LEsGGRUrZZhLPFoxeioHr"
       ]
     },
     {
@@ -19355,18 +18634,15 @@
       "duration_ms": 0,
       "count": 83,
       "differents": 18,
-      "primaryArtistId": "6YWdHD3R863Apw1hkx3BwC",
+      "primaryArtistId": "6smJr4cmKlPE7EQrN8XItq",
       "total_count": 83,
       "total_duration_ms": 16010511,
       "artist": {
         "name": "Dan Auerbach",
-        "genres": [
-          "blues rock"
-        ],
-        "popularity": 54,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 373883
+          "total": 0
         },
         "images": [
           {
@@ -19385,13 +18661,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/6YWdHD3R863Apw1hkx3BwC"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 83,
       "original_artistIds": [
-        "6YWdHD3R863Apw1hkx3BwC"
+        "6smJr4cmKlPE7EQrN8XItq"
       ]
     },
     {
@@ -20099,16 +19373,15 @@
       "duration_ms": 0,
       "count": 80,
       "differents": 11,
-      "primaryArtistId": "0ONHkAv9pCAFxb0zJwDNTy",
+      "primaryArtistId": "6bGwKHXHNLmTy6yt147FPh",
       "total_count": 80,
       "total_duration_ms": 13499159,
       "artist": {
         "name": "Pusha T",
         "genres": [],
-        "popularity": 74,
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 3060068
+          "total": 0
         },
         "images": [
           {
@@ -20127,13 +19400,11 @@
             "width": 160
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0ONHkAv9pCAFxb0zJwDNTy"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 80,
       "original_artistIds": [
-        "0ONHkAv9pCAFxb0zJwDNTy"
+        "6bGwKHXHNLmTy6yt147FPh"
       ]
     },
     {
@@ -20938,18 +20209,15 @@
       "duration_ms": 0,
       "count": 76,
       "differents": 18,
-      "primaryArtistId": "34c4iQ5tkaZKu6Sv28BTde",
+      "primaryArtistId": "59Xo3BICqRNDdvNquirBot",
       "total_count": 76,
       "total_duration_ms": 14117660,
       "artist": {
         "name": "Danzig",
-        "genres": [
-          "horror punk"
-        ],
-        "popularity": 59,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1074217
+          "total": 0
         },
         "images": [
           {
@@ -20973,13 +20241,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/34c4iQ5tkaZKu6Sv28BTde"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 76,
       "original_artistIds": [
-        "34c4iQ5tkaZKu6Sv28BTde"
+        "59Xo3BICqRNDdvNquirBot"
       ]
     },
     {
@@ -21662,20 +20928,15 @@
       "duration_ms": 0,
       "count": 70,
       "differents": 8,
-      "primaryArtistId": "0Mz5XE0kb1GBnbLQm2VbcO",
+      "primaryArtistId": "2OsGdZYDdTK4pxDMsK0Blv",
       "total_count": 70,
       "total_duration_ms": 13945434,
       "artist": {
         "name": "Mos Def",
-        "genres": [
-          "east coast hip hop",
-          "old school hip hop",
-          "hip hop"
-        ],
-        "popularity": 66,
+        "genres": [],
+        "popularity": 0,
         "followers": {
-          "href": null,
-          "total": 1638629
+          "total": 0
         },
         "images": [
           {
@@ -21699,13 +20960,11 @@
             "width": 64
           }
         ],
-        "external_urls": {
-          "spotify": "https://open.spotify.com/artist/0Mz5XE0kb1GBnbLQm2VbcO"
-        }
+        "external_urls": {}
       },
       "consolidated_count": 70,
       "original_artistIds": [
-        "0Mz5XE0kb1GBnbLQm2VbcO"
+        "2OsGdZYDdTK4pxDMsK0Blv"
       ]
     },
     {

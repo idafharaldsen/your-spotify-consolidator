@@ -66,6 +66,7 @@ interface StatsData {
     yearlyTopItems: YearlyTopItems[]
     totalListeningHours: number
     totalListeningDays: number
+    totalListeningEvents?: number
     hourlyListeningDistribution?: HourlyListeningDistribution[]
   }
 }
@@ -589,6 +590,18 @@ export default function StatsPage() {
                         {statsData.stats.totalListeningDays.toLocaleString(undefined, {
                           maximumFractionDigits: 2
                         })}
+                      </p>
+                    </CardContent>
+                  </Card>
+                )}
+                {statsData.stats?.totalListeningEvents && (
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>Total Songs Played</CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-2xl font-bold">
+                        {statsData.stats.totalListeningEvents.toLocaleString()}
                       </p>
                     </CardContent>
                   </Card>

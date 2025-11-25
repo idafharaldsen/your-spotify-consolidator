@@ -172,8 +172,10 @@ export class Consolidator {
         existing.original_albumIds.push(album.primaryAlbumId);
         
         // Always try to get the base album name for both existing and incoming albums
-        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist);
-        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist) ||
+                                 this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(existing.album.name, firstArtist), firstArtist);
+        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist) ||
+                                this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(album.album.name, firstArtist), firstArtist);
         const baseName = existingBaseName || incomingBaseName;
         
         if (baseName) {
@@ -262,11 +264,6 @@ export class Consolidator {
       const normalizedAlbumName = this.rulesManager.normalizeAlbumName(album.album.name, firstArtist);
       const key = `${normalizedAlbumName}|${firstArtist.toLowerCase().trim()}`;
       
-      // Debug logging for Eddie Vedder albums
-      if (firstArtist === 'Eddie Vedder' && (album.album.name.includes('Into The Wild') || album.album.name.includes('Into The Wild'))) {
-        console.log(`🔍 Debug: Album "${album.album.name}" -> normalized: "${normalizedAlbumName}", key: "${key}"`);
-      }
-      
       if (consolidationMap.has(key)) {
         const existing = consolidationMap.get(key)!;
         existing.count += album.count;
@@ -304,8 +301,10 @@ export class Consolidator {
         }
         
         // Always try to get the base album name for both existing and incoming albums
-        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist);
-        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+        const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist) ||
+                                 this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(existing.album.name, firstArtist), firstArtist);
+        const incomingBaseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist) ||
+                                this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(album.album.name, firstArtist), firstArtist);
         const baseName = existingBaseName || incomingBaseName;
         
         if (baseName) {
@@ -323,7 +322,9 @@ export class Consolidator {
         duplicatesRemoved++;
       } else {
         const finalAlbum = { ...album };
-        const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist);
+        // Try to get base name from the album name, or from the normalized name
+        const baseName = this.rulesManager.getBaseAlbumName(album.album.name, firstArtist) ||
+                        this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(album.album.name, firstArtist), firstArtist);
         if (baseName) {
           finalAlbum.album.name = baseName;
         }

@@ -311,6 +311,7 @@ export interface DetailedStats {
   yearlyTopItems: YearlyTopItems[];
   totalListeningHours: number;
   totalListeningDays: number;
+  totalListeningEvents?: number;
   hourlyListeningDistribution: HourlyListeningDistribution[];
 }
 
