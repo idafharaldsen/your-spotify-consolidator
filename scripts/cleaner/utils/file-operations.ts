@@ -88,7 +88,6 @@ export class FileOperations {
 
     try {
       const songsFiles = glob.sync('data/cleaned-data/cleaned-songs-*.json');
-      const albumsFiles = glob.sync('data/cleaned-data/cleaned-albums-*.json');
       const artistsFiles = glob.sync('data/cleaned-data/cleaned-artists-*.json');
       const albumsWithSongsFiles = glob.sync('data/cleaned-data/cleaned-albums-with-songs-*.json');
 
@@ -102,24 +101,6 @@ export class FileOperations {
         if (data.songs) {
           data.songs.forEach((song: CleanedSong) => {
             result.songs.set(song.songId, song);
-          });
-        }
-      }
-
-      if (albumsFiles.length > 0) {
-        albumsFiles.sort((a, b) => {
-          const tsA = parseInt(a.match(/cleaned-albums-(\d+)\.json/)?.[1] || '0');
-          const tsB = parseInt(b.match(/cleaned-albums-(\d+)\.json/)?.[1] || '0');
-          return tsB - tsA;
-        });
-        const data = JSON.parse(fs.readFileSync(albumsFiles[0], 'utf8'));
-        if (data.albums) {
-          data.albums.forEach((album: CleanedAlbum) => {
-            const nameKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
-            result.albums.set(nameKey, album);
-            if (album.primaryAlbumId) {
-              result.albums.set(album.primaryAlbumId, album);
-            }
           });
         }
       }
@@ -179,7 +160,6 @@ export class FileOperations {
       const files = fs.readdirSync(cleanedDataDir);
       const patterns = [
         /^cleaned-songs-\d+\.json$/,
-        /^cleaned-albums-\d+\.json$/,
         /^cleaned-artists-\d+\.json$/,
         /^cleaned-albums-with-songs-\d+\.json$/,
         /^detailed-stats-\d+\.json$/
@@ -207,7 +187,6 @@ export class FileOperations {
    */
   async saveCleanedFiles(
     songsResult: { songs: CleanedSong[], originalCount: number, consolidatedCount: number },
-    albumsResult: { albums: CleanedAlbum[], originalCount: number, consolidatedCount: number },
     artistsResult: { artists: CleanedArtist[], originalCount: number, consolidatedCount: number },
     albumsWithSongs: AlbumWithSongs[],
     originalAlbumsCount: number,
@@ -234,20 +213,6 @@ export class FileOperations {
         totalListeningEvents: history.metadata.totalListeningEvents
       },
       songs: songsResult.songs.slice(0, 500)
-    }, null, 2));
-
-    const albumsFile = `data/cleaned-data/cleaned-albums-${fileTimestamp}.json`;
-    fs.writeFileSync(albumsFile, JSON.stringify({
-      metadata: {
-        originalTotalAlbums: albumsResult.originalCount,
-        consolidatedTotalAlbums: albumsResult.consolidatedCount,
-        duplicatesRemoved: albumsResult.originalCount - albumsResult.consolidatedCount,
-        consolidationRate: Math.round(((albumsResult.originalCount - albumsResult.consolidatedCount) / albumsResult.originalCount) * 100 * 100) / 100,
-        timestamp: new Date().toISOString(),
-        source: 'Merged Streaming History',
-        totalListeningEvents: history.metadata.totalListeningEvents
-      },
-      albums: albumsResult.albums.slice(0, 500)
     }, null, 2));
 
     const artistsFile = `data/cleaned-data/cleaned-artists-${fileTimestamp}.json`;
@@ -280,7 +245,6 @@ export class FileOperations {
 
     console.log(`\n📁 All cleaned files saved:`);
     console.log(`- Songs: ${songsFile}`);
-    console.log(`- Albums: ${albumsFile}`);
     console.log(`- Artists: ${artistsFile}`);
     console.log(`- Albums with Songs: ${albumsWithSongsFile}`);
 
@@ -290,16 +254,17 @@ export class FileOperations {
         console.log('\n☁️  Uploading files to Vercel Blob Storage...');
         await cleanupOldBlobFiles();
         
-        const blobUrls = await uploadMultipleToVercelBlob([
+        const filesToUpload = [
           { filePath: songsFile, blobPath: 'cleaned-songs.json' },
-          { filePath: albumsFile, blobPath: 'cleaned-albums.json' },
           { filePath: artistsFile, blobPath: 'cleaned-artists.json' },
           { filePath: albumsWithSongsFile, blobPath: 'cleaned-albums-with-songs.json' }
-        ]);
+        ];
+        
+        const blobUrls = await uploadMultipleToVercelBlob(filesToUpload);
 
         console.log('\n✅ All files uploaded to Vercel Blob Storage:');
         blobUrls.forEach((url, index) => {
-          const fileNames = ['Songs', 'Albums', 'Artists', 'Albums with Songs'];
+          const fileNames = ['Songs', 'Artists', 'Albums with Songs'];
           console.log(`- ${fileNames[index]}: ${url}`);
         });
       } catch (error) {

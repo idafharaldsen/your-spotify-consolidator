@@ -1,6 +1,6 @@
 {
   "metadata": {
-    "timestamp": "2025-11-25T15:31:49.499Z",
+    "timestamp": "2025-11-25T16:04:17.091Z",
     "source": "Merged Streaming History"
   },
   "stats": {
@@ -1384,7 +1384,23 @@
             "playCount": 42,
             "totalListeningTimeMs": 9642471,
             "uniqueSongs": 7,
-            "images": []
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735061fad199e7b2bac55afd8d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025061fad199e7b2bac55afd8d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515061fad199e7b2bac55afd8d",
+                "height": 64,
+                "width": 64
+              }
+            ]
           },
           {
             "albumName": "Fritt Liv",
@@ -2848,23 +2864,7 @@
             "playCount": 47,
             "totalListeningTimeMs": 8375120,
             "uniqueSongs": 19,
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b273628103d0e62602f00408345d",
-                "height": 640,
-                "width": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e02628103d0e62602f00408345d",
-                "height": 300,
-                "width": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00004851628103d0e62602f00408345d",
-                "height": 64,
-                "width": 64
-              }
-            ]
+            "images": []
           },
           {
             "albumName": "Illmatic",
@@ -3212,23 +3212,7 @@
             "playCount": 166,
             "totalListeningTimeMs": 31791343,
             "uniqueSongs": 16,
-            "images": [
-              {
-                "url": "https://i.scdn.co/image/ab67616d0000b2730539c9985a36d4ab1d7b61d0",
-                "height": 640,
-                "width": 640
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d00001e020539c9985a36d4ab1d7b61d0",
-                "height": 300,
-                "width": 300
-              },
-              {
-                "url": "https://i.scdn.co/image/ab67616d000048510539c9985a36d4ab1d7b61d0",
-                "height": 64,
-                "width": 64
-              }
-            ]
+            "images": []
           },
           {
             "albumName": "Discovery",

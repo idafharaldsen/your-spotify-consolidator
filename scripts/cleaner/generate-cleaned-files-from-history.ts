@@ -23,14 +23,12 @@ import type {
 class CleanedFilesGenerator {
   private tokenManager: SpotifyTokenManager | null = null;
   private spotifyApiClient: SpotifyApiClient;
-  private rulesManager: ConsolidationRulesManager;
   private consolidator: Consolidator;
   private fileOps: FileOperations;
 
   constructor() {
     this.spotifyApiClient = new SpotifyApiClient();
-    this.rulesManager = new ConsolidationRulesManager();
-    this.consolidator = new Consolidator(this.rulesManager);
+    this.consolidator = new Consolidator(new ConsolidationRulesManager());
     this.fileOps = new FileOperations();
   }
 
@@ -73,80 +71,6 @@ class CleanedFilesGenerator {
       songs: topSongs,
       originalCount: songs.length,
       consolidatedCount: consolidatedSongs.length
-    };
-  }
-
-  /**
-   * Generate cleaned albums from complete history
-   */
-  private generateCleanedAlbums(history: CompleteListeningHistory): { albums: CleanedAlbum[], originalCount: number, consolidatedCount: number } {
-    console.log('💿 Generating cleaned albums...');
-
-    const albumMap = new Map<string, {
-      songs: CompleteSong[];
-      totalPlayCount: number;
-      totalListeningTime: number;
-      differentSongs: Set<string>;
-    }>();
-
-    history.songs.forEach(song => {
-      const albumKey = `${song.album.name}|${song.artists[0] || 'Unknown Artist'}`;
-      
-      if (!albumMap.has(albumKey)) {
-        albumMap.set(albumKey, {
-          songs: [],
-          totalPlayCount: 0,
-          totalListeningTime: 0,
-          differentSongs: new Set()
-        });
-      }
-      
-      const albumData = albumMap.get(albumKey)!;
-      albumData.songs.push(song);
-      albumData.totalPlayCount += song.playCount;
-      albumData.totalListeningTime += song.totalListeningTime;
-      albumData.differentSongs.add(song.songId);
-    });
-
-    const albums: CleanedAlbum[] = Array.from(albumMap.entries()).map(([albumKey, data]) => {
-      const firstSong = data.songs[0];
-      const primaryAlbumId = firstSong.songId;
-      
-      return {
-        rank: 0,
-        duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
-        count: data.totalPlayCount,
-        differents: data.differentSongs.size,
-        primaryAlbumId: primaryAlbumId,
-        total_count: data.totalPlayCount,
-        total_duration_ms: data.totalListeningTime,
-        album: {
-          name: firstSong.album.name,
-          album_type: 'album',
-          artists: firstSong.artists,
-          release_date: '',
-          release_date_precision: 'day',
-          popularity: 0,
-          images: firstSong.album.images,
-          external_urls: {},
-          genres: firstSong.artist.genres
-        },
-        consolidated_count: data.totalPlayCount,
-        original_albumIds: data.songs.map(song => song.album.id).filter(id => id !== '')
-      };
-    });
-
-    albums.sort((a, b) => b.count - a.count);
-    const consolidatedAlbums = this.consolidator.consolidateAlbums(albums);
-    const topAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => ({
-      ...album,
-      rank: index + 1
-    }));
-    
-    return {
-      albums: topAlbums,
-      originalCount: albums.length,
-      consolidatedCount: consolidatedAlbums.length
     };
   }
 
@@ -1394,7 +1318,6 @@ class CleanedFilesGenerator {
       let detailedStats = this.calculateDetailedStats(history);
       
       const songsResult = this.generateCleanedSongs(history);
-      const albumsResult = this.generateCleanedAlbums(history);
       const artistsResult = this.generateCleanedArtists(history);
       const albumsWithSongsResult = this.generateAlbumsWithSongs(history);
       
@@ -1405,9 +1328,47 @@ class CleanedFilesGenerator {
       if (this.tokenManager) {
         console.log('\n🎵 Enriching cleaned files with Spotify metadata...');
         songsResult.songs = await this.enrichSongsWithMetadata(songsResult.songs, existingFiles.songs);
-        albumsResult.albums = await this.enrichAlbumsWithMetadata(albumsResult.albums, existingFiles.albums);
         artistsResult.artists = await this.enrichArtistsWithMetadata(artistsResult.artists, existingFiles.artists);
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
+        
+        // Create a map of enriched albums for lookup (from albumsWithSongs) for detailed stats enrichment
+        const enrichedAlbumsMap = new Map<string, CleanedAlbum>();
+        albumsWithSongsResult.albums.forEach(album => {
+          const nameKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
+          const cleanedAlbum: CleanedAlbum = {
+            rank: album.rank,
+            duration_ms: album.duration_ms,
+            count: album.count,
+            differents: album.differents,
+            primaryAlbumId: album.primaryAlbumId,
+            total_count: album.total_count,
+            total_duration_ms: album.total_duration_ms,
+            album: album.album,
+            consolidated_count: album.consolidated_count,
+            original_albumIds: album.original_albumIds
+          };
+          enrichedAlbumsMap.set(nameKey, cleanedAlbum);
+          if (album.primaryAlbumId) {
+            enrichedAlbumsMap.set(album.primaryAlbumId, cleanedAlbum);
+          }
+        });
+        // Also include existing albums from albumsWithSongs as fallback
+        existingFiles.albumsWithSongs.forEach((album, key) => {
+          if (!enrichedAlbumsMap.has(key)) {
+            enrichedAlbumsMap.set(key, {
+              rank: album.rank,
+              duration_ms: album.duration_ms,
+              count: album.count,
+              differents: album.differents,
+              primaryAlbumId: album.primaryAlbumId,
+              total_count: album.total_count,
+              total_duration_ms: album.total_duration_ms,
+              album: album.album,
+              consolidated_count: album.consolidated_count,
+              original_albumIds: album.original_albumIds
+            });
+          }
+        });
         
         // Enrich detailed stats with actual artist and song images
         // Use the newly enriched songs/artists, not just the existing files
@@ -1442,27 +1403,11 @@ class CleanedFilesGenerator {
           }
         });
         
-        // Create a map of enriched albums for lookup
-        const enrichedAlbumsMap = new Map<string, CleanedAlbum>();
-        albumsResult.albums.forEach(album => {
-          const nameKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
-          enrichedAlbumsMap.set(nameKey, album);
-          if (album.primaryAlbumId) {
-            enrichedAlbumsMap.set(album.primaryAlbumId, album);
-          }
-        });
-        // Also include existing albums as fallback
-        existingFiles.albums.forEach((album, key) => {
-          if (!enrichedAlbumsMap.has(key)) {
-            enrichedAlbumsMap.set(key, album);
-          }
-        });
-        
         enrichedStats = await this.enrichDetailedStatsWithSongImages(enrichedStats, enrichedSongsMap, enrichedAlbumsMap);
         detailedStats = enrichedStats;
       }
       
-      const timestamp = await this.fileOps.saveCleanedFiles(songsResult, albumsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
+      const timestamp = await this.fileOps.saveCleanedFiles(songsResult, artistsResult, albumsWithSongsResult.albums, albumsWithSongsResult.originalCount, history);
       await this.fileOps.saveDetailedStats(detailedStats, timestamp);
       
       console.log('');
@@ -1470,15 +1415,14 @@ class CleanedFilesGenerator {
       console.log('');
       console.log('📊 Summary:');
       console.log(`- Generated ${songsResult.songs.length} top songs (${songsResult.originalCount} → ${songsResult.consolidatedCount} consolidated)`);
-      console.log(`- Generated ${albumsResult.albums.length} top albums (${albumsResult.originalCount} → ${albumsResult.consolidatedCount} consolidated)`);
+      console.log(`- Generated ${albumsWithSongsResult.albums.length} albums with songs (${albumsWithSongsResult.originalCount} → ${albumsWithSongsResult.albums.length} consolidated)`);
       console.log(`- Generated ${artistsResult.artists.length} top artists (${artistsResult.originalCount} → ${artistsResult.consolidatedCount} consolidated)`);
-      console.log(`- Generated ${albumsWithSongsResult.albums.length} albums with songs`);
       console.log(`- Total listening time: ${detailedStats.totalListeningHours.toLocaleString()} hours (${detailedStats.totalListeningDays.toLocaleString()} days)`);
       console.log(`- Processed ${history.metadata.totalListeningEvents.toLocaleString()} listening events`);
       
       const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
       if (shouldUpload) {
-        console.log(`- Uploaded to Vercel Blob: cleaned-songs.json, cleaned-albums.json, cleaned-artists.json, cleaned-albums-with-songs.json, detailed-stats.json`);
+        console.log(`- Uploaded to Vercel Blob: cleaned-songs.json, cleaned-artists.json, cleaned-albums-with-songs.json, detailed-stats.json`);
       }
       
     } catch (error) {
