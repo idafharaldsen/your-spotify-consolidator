@@ -1022,6 +1022,10 @@ class CleanedFilesGenerator {
     const totalListeningHours = Math.round((totalListeningTimeMs / (1000 * 60 * 60)) * 100) / 100;
     const totalListeningDays = Math.round((totalListeningHours / 24) * 100) / 100;
     
+    // Calculate total listening events (use metadata if available, otherwise count from events)
+    const totalListeningEvents = history.metadata?.totalListeningEvents ?? 
+      history.songs.reduce((sum, song) => sum + (song.listeningEvents?.length || 0), 0);
+    
     // Convert hourly map to array sorted by hour (0-23)
     const hourlyListeningDistribution: HourlyListeningDistribution[] = Array.from(hourlyMap.entries())
       .map(([hour, data]) => ({
@@ -1037,6 +1041,7 @@ class CleanedFilesGenerator {
       yearlyTopItems,
       totalListeningHours,
       totalListeningDays,
+      totalListeningEvents,
       hourlyListeningDistribution
     };
   }
