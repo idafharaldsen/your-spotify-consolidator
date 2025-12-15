@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Search, Music, Play, X, Disc, Clock, ExternalLink, Calendar } from 'lucide-react'
+import { Search, Music, Play, X, Disc, Clock, ExternalLink, Calendar, ChevronDown, ChevronUp } from 'lucide-react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
@@ -198,11 +198,28 @@ export default function TopAlbumsPage() {
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [mounted, setMounted] = useState(false)
+  const [yearlyPlayTimeExpanded, setYearlyPlayTimeExpanded] = useState(true)
+  const [songsExpanded, setSongsExpanded] = useState(true)
+  const [isMobile, setIsMobile] = useState(false)
   const yearlyChartRef = useRef<HighchartsReact.RefObject>(null)
   
   useEffect(() => {
     setMounted(true)
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640)
+    }
+    checkMobile()
+    window.addEventListener('resize', checkMobile)
+    return () => window.removeEventListener('resize', checkMobile)
   }, [])
+  
+  // Reset expanded state when album changes
+  useEffect(() => {
+    if (selectedAlbum) {
+      setYearlyPlayTimeExpanded(true)
+      setSongsExpanded(true)
+    }
+  }, [selectedAlbum])
   
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -251,7 +268,7 @@ export default function TopAlbumsPage() {
       return {
         chart: {
           type: 'column',
-          height: 300
+          height: 250
         },
         title: {
           text: 'No data available'
@@ -278,11 +295,14 @@ export default function TopAlbumsPage() {
     const borderColor = border ? `rgb(${border})` : '#e5e7eb'
     const primaryColor = primary ? `rgb(${primary})` : '#4f46e5'
 
+    // Calculate responsive height - use state if available, otherwise check window
+    const chartHeight = 250
+
     return {
       chart: {
         type: 'column',
         backgroundColor: 'transparent',
-        height: 300,
+        height: chartHeight,
         style: {
           fontFamily: 'inherit'
         },
@@ -692,11 +712,25 @@ export default function TopAlbumsPage() {
               {/* Yearly Play Time Section */}
               {selectedAlbum.yearly_play_time && selectedAlbum.yearly_play_time.length > 0 && (
                 <div className="mt-4 flex-shrink-0 border-t pt-4">
-                  <h4 className="font-medium text-sm text-muted-foreground mb-3">
-                    Play Time by Year
-                  </h4>
-                  <div className="w-full -mx-2 sm:mx-0">
-                    {mounted && (
+                  <button
+                    onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
+                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                  >
+                    <h4 className="font-medium text-sm text-muted-foreground">
+                      Play Time by Year
+                    </h4>
+                    {yearlyPlayTimeExpanded ? (
+                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    )}
+                  </button>
+                  <div 
+                    className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                      yearlyPlayTimeExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    {mounted && yearlyPlayTimeExpanded && (
                       <HighchartsReact
                         highcharts={Highcharts}
                         options={getYearlyPlayTimeChartOptions()}
@@ -709,13 +743,29 @@ export default function TopAlbumsPage() {
               
               {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
                 <div className="mt-2 flex-1 min-h-0 flex flex-col overflow-hidden">
-                  <h4 className="font-medium text-sm text-muted-foreground mb-3 flex-shrink-0">
-                    Songs ({selectedAlbum.songs.length})
-                  </h4>
-                  <div className="space-y-2 flex-1 overflow-y-auto min-h-0">
-                    {selectedAlbum.songs
-                      .sort((a, b) => b.play_count - a.play_count)
-                      .map((song, index) => (
+                  <button
+                    onClick={() => setSongsExpanded(!songsExpanded)}
+                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity flex-shrink-0"
+                  >
+                    <h4 className="font-medium text-sm text-muted-foreground">
+                      Songs ({selectedAlbum.songs.length})
+                    </h4>
+                    {songsExpanded ? (
+                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    )}
+                  </button>
+                  <div 
+                    className={`transition-all duration-300 ease-in-out ${
+                      songsExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                    }`}
+                  >
+                    {songsExpanded && (
+                      <div className="space-y-2 flex-1 overflow-y-auto min-h-0">
+                        {selectedAlbum.songs
+                          .sort((a, b) => b.play_count - a.play_count)
+                          .map((song, index) => (
                         <div
                           key={song.songId}
                           className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
@@ -750,7 +800,9 @@ export default function TopAlbumsPage() {
                             </div>
                           </div>
                         </div>
-                      ))}
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
