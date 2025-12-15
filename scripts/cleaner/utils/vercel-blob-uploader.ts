@@ -41,8 +41,12 @@ export async function listBlobsByPrefix(prefix: string): Promise<string[]> {
   try {
     const { blobs } = await list({ prefix });
     return blobs.map(blob => blob.pathname);
-  } catch (error) {
-    console.error(`⚠️  Failed to list blobs with prefix ${prefix}:`, error);
+  } catch (error: any) {
+    const errorMessage = error?.message || String(error);
+    // Don't log errors for missing tokens - this is expected when running locally
+    if (!errorMessage.includes('No token found')) {
+      console.error(`⚠️  Failed to list blobs with prefix ${prefix}:`, error);
+    }
     throw error;
   }
 }
@@ -79,8 +83,12 @@ export async function uploadToVercelBlob(
 
     console.log(`✅ Uploaded to Vercel Blob: ${blob.url}`);
     return blob.url;
-  } catch (error) {
-    console.error(`❌ Failed to upload ${filePath} to Vercel Blob:`, error);
+  } catch (error: any) {
+    const errorMessage = error?.message || String(error);
+    // Don't log errors for missing tokens - this is expected when running locally
+    if (!errorMessage.includes('No token found')) {
+      console.error(`❌ Failed to upload ${filePath} to Vercel Blob:`, error);
+    }
     throw error;
   }
 }
@@ -122,9 +130,13 @@ export async function cleanupOldBlobFiles(): Promise<void> {
     } else {
       console.log('✅ No old files to clean up');
     }
-  } catch (error) {
-    console.error('⚠️  Failed to cleanup old blob files:', error);
+  } catch (error: any) {
+    const errorMessage = error?.message || String(error);
+    // Don't log errors for missing tokens - this is expected when running locally
     // Don't throw - cleanup failure shouldn't stop the upload
+    if (!errorMessage.includes('No token found')) {
+      console.error('⚠️  Failed to cleanup old blob files:', error);
+    }
   }
 }
 

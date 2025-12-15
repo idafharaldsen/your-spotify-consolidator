@@ -145,6 +145,10 @@ export interface AlbumWithSongs extends CleanedAlbum {
   unplayed_songs: number;
   songs: AlbumSong[];
   earliest_played_at?: string; // ISO 8601 date string of the earliest play time
+  yearly_play_time?: Array<{
+    year: string;
+    totalListeningTimeMs: number;
+  }>; // Yearly play time since first year the album was played
 }
 
 // Spotify API interfaces

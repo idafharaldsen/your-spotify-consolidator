@@ -216,6 +216,8 @@ class CleanedFilesGenerator {
       
       // Find the earliest play time across all listening events for this album
       let earliestPlayedAt: string | undefined;
+      // Calculate yearly play time
+      const yearlyPlayTimeMap = new Map<string, number>();
       validSongs.forEach(song => {
         if (song.listeningEvents && song.listeningEvents.length > 0) {
           song.listeningEvents.forEach(event => {
@@ -223,10 +225,23 @@ class CleanedFilesGenerator {
               if (!earliestPlayedAt || event.playedAt < earliestPlayedAt) {
                 earliestPlayedAt = event.playedAt;
               }
+              // Extract year from playedAt timestamp
+              const eventDate = new Date(event.playedAt);
+              const year = eventDate.getFullYear().toString();
+              // Sum msPlayed for each year
+              yearlyPlayTimeMap.set(year, (yearlyPlayTimeMap.get(year) || 0) + event.msPlayed);
             }
           });
         }
       });
+      
+      // Convert yearly play time map to sorted array
+      const yearlyPlayTime = Array.from(yearlyPlayTimeMap.entries())
+        .map(([year, totalListeningTimeMs]) => ({
+          year,
+          totalListeningTimeMs
+        }))
+        .sort((a, b) => a.year.localeCompare(b.year));
 
       const albumSongs: AlbumSong[] = validSongs.map(song => ({
         songId: song.songId,
@@ -314,7 +329,8 @@ class CleanedFilesGenerator {
         played_songs: playedSongs,
         unplayed_songs: validSongs.length - playedSongs,
         songs: albumSongs.sort((a, b) => b.play_count - a.play_count),
-        earliest_played_at: earliestPlayedAt
+        earliest_played_at: earliestPlayedAt,
+        yearly_play_time: yearlyPlayTime.length > 0 ? yearlyPlayTime : undefined
       };
     });
 
@@ -1470,7 +1486,7 @@ class CleanedFilesGenerator {
       console.log(`- Processed ${history.metadata.totalListeningEvents.toLocaleString()} listening events`);
       
       const shouldUpload = process.env.UPLOAD_TO_VERCEL_BLOB !== 'false';
-      if (shouldUpload) {
+      if (shouldUpload && process.env.BLOB_READ_WRITE_TOKEN) {
         console.log(`- Uploaded to Vercel Blob: cleaned-songs.json, cleaned-artists.json, cleaned-albums-with-songs.json, detailed-stats.json`);
       }
       

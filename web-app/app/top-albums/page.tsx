@@ -1,11 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
 import { Search, Music, Play, X, Disc, Clock, ExternalLink, Calendar } from 'lucide-react'
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import SortToggle, { SortOption } from '@/components/SortToggle'
@@ -46,6 +48,11 @@ interface AlbumInfo {
   genres: string[]
 }
 
+interface YearlyPlayTime {
+  year: string
+  totalListeningTimeMs: number
+}
+
 interface AlbumData {
   duration_ms: number
   count: number
@@ -63,6 +70,7 @@ interface AlbumData {
   unplayed_songs?: number
   songs?: Song[]
   earliest_played_at?: string
+  yearly_play_time?: YearlyPlayTime[]
 }
 
 interface AlbumsData {
@@ -106,6 +114,14 @@ const formatDate = (dateString: string) => {
   } catch {
     return dateString
   }
+}
+
+// Helper function to get computed CSS variable value
+const getCSSVariable = (variable: string): string => {
+  if (typeof window === 'undefined') return ''
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(variable)
+    .trim()
 }
 
 // Lazy loading image component
@@ -181,6 +197,12 @@ export default function TopAlbumsPage() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('plays')
+  const [mounted, setMounted] = useState(false)
+  const yearlyChartRef = useRef<HighchartsReact.RefObject>(null)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
   
   useEffect(() => {
     const fetchAlbums = async () => {
@@ -221,6 +243,125 @@ export default function TopAlbumsPage() {
   
   const handleAlbumClick = (album: AlbumData) => {
     setSelectedAlbum(album)
+  }
+  
+  // Prepare chart options for yearly play time
+  const getYearlyPlayTimeChartOptions = (): Highcharts.Options => {
+    if (!selectedAlbum?.yearly_play_time || selectedAlbum.yearly_play_time.length === 0) {
+      return {
+        chart: {
+          type: 'column',
+          height: 300
+        },
+        title: {
+          text: 'No data available'
+        }
+      }
+    }
+
+    const categories = selectedAlbum.yearly_play_time.map(item => item.year)
+    const data = selectedAlbum.yearly_play_time.map(item => {
+      // Convert milliseconds to hours
+      return Math.round((item.totalListeningTimeMs / (1000 * 60 * 60)) * 100) / 100
+    })
+
+    // Get theme colors
+    const foreground = getCSSVariable('--foreground')
+    const mutedForeground = getCSSVariable('--muted-foreground')
+    const card = getCSSVariable('--card')
+    const border = getCSSVariable('--border')
+    const primary = getCSSVariable('--primary')
+    
+    const foregroundColor = foreground ? `rgb(${foreground})` : '#1f2937'
+    const mutedColor = mutedForeground ? `rgb(${mutedForeground})` : '#6b7280'
+    const cardColor = card ? `rgb(${card})` : '#ffffff'
+    const borderColor = border ? `rgb(${border})` : '#e5e7eb'
+    const primaryColor = primary ? `rgb(${primary})` : '#4f46e5'
+
+    return {
+      chart: {
+        type: 'column',
+        backgroundColor: 'transparent',
+        height: 300,
+        style: {
+          fontFamily: 'inherit'
+        },
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        categories: categories,
+        title: {
+          text: 'Year',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          }
+        },
+        lineColor: borderColor,
+        tickColor: borderColor,
+        minPadding: 0,
+        maxPadding: 0
+      },
+      yAxis: {
+        title: {
+          text: 'Hours',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          }
+        },
+        gridLineColor: borderColor
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        backgroundColor: cardColor,
+        borderColor: borderColor,
+        style: {
+          color: foregroundColor
+        },
+        formatter: function(this: Highcharts.Point) {
+          const pointIndex = typeof this.x === 'number' ? this.x : (this.index ?? 0)
+          const year = categories[pointIndex] || String(this.x)
+          const hours = this.y || 0
+          const totalHours = Math.floor(hours)
+          const minutes = Math.floor((hours - totalHours) * 60)
+          return `<b>${year}</b><br/>${totalHours > 0 ? `${totalHours}h ` : ''}${minutes}m`
+        }
+      },
+      plotOptions: {
+        column: {
+          color: primaryColor,
+          borderRadius: 4,
+          dataLabels: {
+            enabled: false
+          },
+          pointPadding: 0.1,
+          groupPadding: 0.15
+        }
+      },
+      series: [{
+        name: 'Play Time',
+        data: data,
+        type: 'column'
+      }],
+      credits: {
+        enabled: false
+      }
+    }
   }
   
   return (
@@ -547,6 +688,24 @@ export default function TopAlbumsPage() {
                   </div>
                 </div>
               </DialogHeader>
+              
+              {/* Yearly Play Time Section */}
+              {selectedAlbum.yearly_play_time && selectedAlbum.yearly_play_time.length > 0 && (
+                <div className="mt-4 flex-shrink-0 border-t pt-4">
+                  <h4 className="font-medium text-sm text-muted-foreground mb-3">
+                    Play Time by Year
+                  </h4>
+                  <div className="w-full -mx-2 sm:mx-0">
+                    {mounted && (
+                      <HighchartsReact
+                        highcharts={Highcharts}
+                        options={getYearlyPlayTimeChartOptions()}
+                        ref={yearlyChartRef}
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
               
               {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
                 <div className="mt-2 flex-1 min-h-0 flex flex-col overflow-hidden">

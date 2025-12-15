@@ -300,6 +300,35 @@ export class Consolidator {
           }
         }
         
+        // Merge yearly play time
+        if (album.yearly_play_time && album.yearly_play_time.length > 0) {
+          const yearlyPlayTimeMap = new Map<string, number>();
+          
+          // Add existing yearly play time
+          if (existing.yearly_play_time && existing.yearly_play_time.length > 0) {
+            existing.yearly_play_time.forEach(yearData => {
+              yearlyPlayTimeMap.set(yearData.year, yearData.totalListeningTimeMs);
+            });
+          }
+          
+          // Merge new yearly play time
+          album.yearly_play_time.forEach(yearData => {
+            const existingMs = yearlyPlayTimeMap.get(yearData.year) || 0;
+            yearlyPlayTimeMap.set(yearData.year, existingMs + yearData.totalListeningTimeMs);
+          });
+          
+          // Convert back to sorted array
+          existing.yearly_play_time = Array.from(yearlyPlayTimeMap.entries())
+            .map(([year, totalListeningTimeMs]) => ({
+              year,
+              totalListeningTimeMs
+            }))
+            .sort((a, b) => a.year.localeCompare(b.year));
+        } else if (!existing.yearly_play_time && album.yearly_play_time) {
+          // If existing doesn't have yearly play time but new one does, use the new one
+          existing.yearly_play_time = album.yearly_play_time;
+        }
+        
         // Always try to get the base album name for both existing and incoming albums
         const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist) ||
                                  this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(existing.album.name, firstArtist), firstArtist);
