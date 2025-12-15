@@ -1,10 +1,13 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { Search, Play, X, Users } from 'lucide-react'
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
+import { Search, Play, X, Users, Clock, ExternalLink, ChevronDown, ChevronUp, Music } from 'lucide-react'
+import Highcharts from 'highcharts'
+import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import SortToggle, { SortOption } from '@/components/SortToggle'
@@ -28,6 +31,11 @@ interface Artist {
   }
 }
 
+interface YearlyPlayTime {
+  year: string
+  totalListeningTimeMs: number
+}
+
 interface ArtistData {
   duration_ms: number
   count: number
@@ -40,6 +48,7 @@ interface ArtistData {
   original_artistIds: (string | null)[]
   original_counts: number[]
   rank: number
+  yearly_play_time?: YearlyPlayTime[]
 }
 
 interface ArtistsData {
@@ -106,12 +115,44 @@ const LazyArtistImage = ({ artist, rank, size = 'default' }: { artist: Artist; r
   )
 }
 
+// Format duration helper
+const formatDuration = (durationMs: number) => {
+  const duration = durationMs || 0
+  const totalMinutes = Math.floor(duration / 60000)
+  const hours = Math.floor(totalMinutes / 60)
+  const minutes = totalMinutes % 60
+  return hours > 0 ? `${hours}h ${minutes}m` : `${minutes}m`
+}
+
+// Helper function to get computed CSS variable value
+const getCSSVariable = (variable: string): string => {
+  if (typeof window === 'undefined') return ''
+  return getComputedStyle(document.documentElement)
+    .getPropertyValue(variable)
+    .trim()
+}
+
 export default function TopArtistsPage() {
   const [artistsData, setArtistsData] = useState<ArtistsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
   const [sortBy, setSortBy] = useState<SortOption>('plays')
+  const [selectedArtist, setSelectedArtist] = useState<ArtistData | null>(null)
+  const [mounted, setMounted] = useState(false)
+  const [yearlyPlayTimeExpanded, setYearlyPlayTimeExpanded] = useState(true)
+  const yearlyChartRef = useRef<HighchartsReact.RefObject>(null)
+  
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  // Reset expanded state when artist changes
+  useEffect(() => {
+    if (selectedArtist) {
+      setYearlyPlayTimeExpanded(true)
+    }
+  }, [selectedArtist])
   
   useEffect(() => {
     const fetchArtists = async () => {
@@ -151,6 +192,131 @@ export default function TopArtistsPage() {
         return b.count - a.count
     }
   })
+  
+  const handleArtistClick = (artist: ArtistData) => {
+    setSelectedArtist(artist)
+  }
+  
+  // Prepare chart options for yearly play time
+  const getYearlyPlayTimeChartOptions = (): Highcharts.Options => {
+    if (!selectedArtist?.yearly_play_time || selectedArtist.yearly_play_time.length === 0) {
+      return {
+        chart: {
+          type: 'column',
+          height: 250
+        },
+        title: {
+          text: 'No data available'
+        }
+      }
+    }
+
+    const categories = selectedArtist.yearly_play_time.map(item => item.year)
+    const data = selectedArtist.yearly_play_time.map(item => {
+      // Convert milliseconds to hours
+      return Math.round((item.totalListeningTimeMs / (1000 * 60 * 60)) * 100) / 100
+    })
+
+    // Get theme colors
+    const foreground = getCSSVariable('--foreground')
+    const mutedForeground = getCSSVariable('--muted-foreground')
+    const card = getCSSVariable('--card')
+    const border = getCSSVariable('--border')
+    const primary = getCSSVariable('--primary')
+    
+    const foregroundColor = foreground ? `rgb(${foreground})` : '#1f2937'
+    const mutedColor = mutedForeground ? `rgb(${mutedForeground})` : '#6b7280'
+    const cardColor = card ? `rgb(${card})` : '#ffffff'
+    const borderColor = border ? `rgb(${border})` : '#e5e7eb'
+    const primaryColor = primary ? `rgb(${primary})` : '#4f46e5'
+
+    const chartHeight = 250
+
+    return {
+      chart: {
+        type: 'column',
+        backgroundColor: 'transparent',
+        height: chartHeight,
+        style: {
+          fontFamily: 'inherit'
+        },
+        spacingLeft: 0,
+        spacingRight: 0
+      },
+      title: {
+        text: ''
+      },
+      xAxis: {
+        categories: categories,
+        title: {
+          text: 'Year',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          }
+        },
+        lineColor: borderColor,
+        tickColor: borderColor,
+        minPadding: 0,
+        maxPadding: 0
+      },
+      yAxis: {
+        title: {
+          text: 'Hours',
+          style: {
+            color: mutedColor
+          }
+        },
+        labels: {
+          style: {
+            color: mutedColor
+          }
+        },
+        gridLineColor: borderColor
+      },
+      legend: {
+        enabled: false
+      },
+      tooltip: {
+        backgroundColor: cardColor,
+        borderColor: borderColor,
+        style: {
+          color: foregroundColor
+        },
+        formatter: function(this: Highcharts.Point) {
+          const pointIndex = typeof this.x === 'number' ? this.x : (this.index ?? 0)
+          const year = categories[pointIndex] || String(this.x)
+          const hours = this.y || 0
+          const totalHours = Math.floor(hours)
+          const minutes = Math.floor((hours - totalHours) * 60)
+          return `<b>${year}</b><br/>${totalHours > 0 ? `${totalHours}h ` : ''}${minutes}m`
+        }
+      },
+      plotOptions: {
+        column: {
+          color: primaryColor,
+          borderRadius: 4,
+          dataLabels: {
+            enabled: false
+          },
+          pointPadding: 0.1,
+          groupPadding: 0.15
+        }
+      },
+      series: [{
+        name: 'Play Time',
+        data: data,
+        type: 'column'
+      }],
+      credits: {
+        enabled: false
+      }
+    }
+  }
   
   return (
     <SpotifyStatsLayout
@@ -197,7 +363,11 @@ export default function TopArtistsPage() {
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
             {sortedArtists.map((artist) => (
-              <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card 
+                key={artist.primaryArtistId} 
+                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                onClick={() => handleArtistClick(artist)}
+              >
                 <CardContent className="p-3">
                   {/* Artist Image */}
                   <div className="mb-3">
@@ -270,7 +440,11 @@ export default function TopArtistsPage() {
             </div>
             
             {sortedArtists.map((artist) => (
-              <Card key={artist.primaryArtistId} className="group hover:shadow-lg transition-shadow duration-200">
+              <Card 
+                key={artist.primaryArtistId} 
+                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                onClick={() => handleArtistClick(artist)}
+              >
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
@@ -401,6 +575,111 @@ export default function TopArtistsPage() {
           )}
         </>
       )}
+      
+      {/* Artist Details Modal */}
+      <Dialog open={!!selectedArtist} onOpenChange={(open) => !open && setSelectedArtist(null)}>
+        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col overflow-hidden">
+          {selectedArtist && (
+            <div className="flex flex-col overflow-hidden h-full">
+              <DialogHeader className="flex-shrink-0">
+                <div className="flex flex-col items-center gap-4 mb-2">
+                  <div className="relative w-32 h-32 flex-shrink-0 rounded-full overflow-hidden bg-muted">
+                    {selectedArtist.artist.images?.[0]?.url ? (
+                      <Image
+                        src={selectedArtist.artist.images[0].url}
+                        alt={`${selectedArtist.artist.name} artist image`}
+                        fill
+                        className="object-cover"
+                        sizes="128px"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-muted flex items-center justify-center">
+                        <Users className="w-12 h-12 text-muted-foreground" />
+                      </div>
+                    )}
+                  </div>
+                  <div className="flex-1 min-w-0 text-center w-full">
+                    <DialogTitle className="text-xl sm:text-2xl font-bold mb-2">
+                      {selectedArtist.artist.name}
+                    </DialogTitle>
+                    <div className="space-y-2">
+                      {selectedArtist.artist.genres && selectedArtist.artist.genres.length > 0 && (
+                        <div className="flex items-center justify-center gap-2 flex-wrap">
+                          {selectedArtist.artist.genres.slice(0, 5).map((genre, index) => (
+                            <Badge key={index} variant="outline" className="text-xs">
+                              {genre}
+                            </Badge>
+                          ))}
+                        </div>
+                      )}
+                      <div className="flex items-center justify-center gap-4 text-sm flex-wrap">
+                        <div className="flex items-center gap-1">
+                          <Play className="w-4 h-4" />
+                          <span>{selectedArtist.total_count} plays</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Music className="w-4 h-4" />
+                          <span>{selectedArtist.differents} songs</span>
+                        </div>
+                        <div className="flex items-center gap-1">
+                          <Clock className="w-4 h-4" />
+                          <span>{formatDuration(selectedArtist.total_duration_ms)}</span>
+                        </div>
+                      </div>
+                      {selectedArtist.artist.external_urls?.spotify && (
+                        <div className="flex justify-center">
+                          <a
+                            href={selectedArtist.artist.external_urls.spotify}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 text-sm text-primary hover:underline"
+                            onClick={(e) => e.stopPropagation()}
+                          >
+                            Open in Spotify
+                            <ExternalLink className="w-3 h-3" />
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              </DialogHeader>
+              
+              {/* Yearly Play Time Section */}
+              {selectedArtist.yearly_play_time && selectedArtist.yearly_play_time.length > 0 && (
+                <div className="mt-4 flex-shrink-0 border-t pt-4">
+                  <button
+                    onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
+                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                  >
+                    <h4 className="font-medium text-sm text-muted-foreground">
+                      Play Time by Year
+                    </h4>
+                    {yearlyPlayTimeExpanded ? (
+                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                    ) : (
+                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                    )}
+                  </button>
+                  <div 
+                    className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                      yearlyPlayTimeExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
+                    }`}
+                  >
+                    {mounted && yearlyPlayTimeExpanded && (
+                      <HighchartsReact
+                        highcharts={Highcharts}
+                        options={getYearlyPlayTimeChartOptions()}
+                        ref={yearlyChartRef}
+                      />
+                    )}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
     </SpotifyStatsLayout>
   )
 }

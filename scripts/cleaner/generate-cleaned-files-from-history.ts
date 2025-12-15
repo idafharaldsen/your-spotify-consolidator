@@ -50,27 +50,50 @@ class CleanedFilesGenerator {
   private generateCleanedSongs(history: CompleteListeningHistory): { songs: CleanedSong[], originalCount: number, consolidatedCount: number } {
     console.log('🎵 Generating cleaned songs...');
 
-    const songs: CleanedSong[] = history.songs.map(song => ({
-      rank: 0,
-      duration_ms: song.totalListeningTime,
-      count: song.playCount,
-      songId: song.songId,
-      song: {
-        name: song.name,
-        preview_url: song.preview_url,
-        external_urls: song.external_urls
-      },
-      album: {
-        name: song.album.name,
-        images: song.album.images
-      },
-      artist: {
-        name: song.artist.name,
-        genres: song.artist.genres
-      },
-      consolidated_count: song.playCount,
-      original_songIds: [song.songId]
-    }));
+    const songs: CleanedSong[] = history.songs.map(song => {
+      // Calculate yearly play time
+      const yearlyPlayTimeMap = new Map<string, number>();
+      if (song.listeningEvents && song.listeningEvents.length > 0) {
+        song.listeningEvents.forEach(event => {
+          if (event.playedAt) {
+            const eventDate = new Date(event.playedAt);
+            const year = eventDate.getFullYear().toString();
+            yearlyPlayTimeMap.set(year, (yearlyPlayTimeMap.get(year) || 0) + event.msPlayed);
+          }
+        });
+      }
+      
+      // Convert yearly play time map to sorted array
+      const yearlyPlayTime = Array.from(yearlyPlayTimeMap.entries())
+        .map(([year, totalListeningTimeMs]) => ({
+          year,
+          totalListeningTimeMs
+        }))
+        .sort((a, b) => a.year.localeCompare(b.year));
+
+      return {
+        rank: 0,
+        duration_ms: song.totalListeningTime,
+        count: song.playCount,
+        songId: song.songId,
+        song: {
+          name: song.name,
+          preview_url: song.preview_url,
+          external_urls: song.external_urls
+        },
+        album: {
+          name: song.album.name,
+          images: song.album.images
+        },
+        artist: {
+          name: song.artist.name,
+          genres: song.artist.genres
+        },
+        consolidated_count: song.playCount,
+        original_songIds: [song.songId],
+        yearly_play_time: yearlyPlayTime.length > 0 ? yearlyPlayTime : undefined
+      };
+    });
 
     songs.sort((a, b) => b.count - a.count);
     const consolidatedSongs = this.consolidator.consolidateSongs(songs);
@@ -121,6 +144,28 @@ class CleanedFilesGenerator {
     const artists: CleanedArtist[] = Array.from(artistMap.entries()).map(([artistName, data]) => {
       const firstSong = data.songs[0];
       
+      // Calculate yearly play time across all songs for this artist
+      const yearlyPlayTimeMap = new Map<string, number>();
+      data.songs.forEach(song => {
+        if (song.listeningEvents && song.listeningEvents.length > 0) {
+          song.listeningEvents.forEach(event => {
+            if (event.playedAt) {
+              const eventDate = new Date(event.playedAt);
+              const year = eventDate.getFullYear().toString();
+              yearlyPlayTimeMap.set(year, (yearlyPlayTimeMap.get(year) || 0) + event.msPlayed);
+            }
+          });
+        }
+      });
+      
+      // Convert yearly play time map to sorted array
+      const yearlyPlayTime = Array.from(yearlyPlayTimeMap.entries())
+        .map(([year, totalListeningTimeMs]) => ({
+          year,
+          totalListeningTimeMs
+        }))
+        .sort((a, b) => a.year.localeCompare(b.year));
+      
       return {
         rank: 0,
         duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
@@ -140,7 +185,8 @@ class CleanedFilesGenerator {
           external_urls: {}
         },
         consolidated_count: data.totalPlayCount,
-        original_artistIds: [firstSong.songId]
+        original_artistIds: [firstSong.songId],
+        yearly_play_time: yearlyPlayTime.length > 0 ? yearlyPlayTime : undefined
       };
     });
 

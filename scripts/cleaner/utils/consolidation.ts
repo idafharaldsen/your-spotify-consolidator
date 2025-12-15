@@ -123,6 +123,36 @@ export class Consolidator {
         existing.consolidated_count += song.count;
         existing.duration_ms += song.duration_ms;
         existing.original_songIds.push(song.songId);
+        
+        // Merge yearly play time
+        if (song.yearly_play_time && song.yearly_play_time.length > 0) {
+          const yearlyPlayTimeMap = new Map<string, number>();
+          
+          // Add existing yearly play time
+          if (existing.yearly_play_time && existing.yearly_play_time.length > 0) {
+            existing.yearly_play_time.forEach(yearData => {
+              yearlyPlayTimeMap.set(yearData.year, yearData.totalListeningTimeMs);
+            });
+          }
+          
+          // Merge new yearly play time
+          song.yearly_play_time.forEach(yearData => {
+            const existingMs = yearlyPlayTimeMap.get(yearData.year) || 0;
+            yearlyPlayTimeMap.set(yearData.year, existingMs + yearData.totalListeningTimeMs);
+          });
+          
+          // Convert back to sorted array
+          existing.yearly_play_time = Array.from(yearlyPlayTimeMap.entries())
+            .map(([year, totalListeningTimeMs]) => ({
+              year,
+              totalListeningTimeMs
+            }))
+            .sort((a, b) => a.year.localeCompare(b.year));
+        } else if (!existing.yearly_play_time && song.yearly_play_time) {
+          // If existing doesn't have yearly play time but new one does, use the new one
+          existing.yearly_play_time = song.yearly_play_time;
+        }
+        
         duplicatesRemoved++;
       } else {
         const finalSong = {
@@ -234,6 +264,36 @@ export class Consolidator {
         existing.differents += artist.differents;
         existing.consolidated_count += artist.count;
         existing.original_artistIds.push(artist.primaryArtistId);
+        
+        // Merge yearly play time
+        if (artist.yearly_play_time && artist.yearly_play_time.length > 0) {
+          const yearlyPlayTimeMap = new Map<string, number>();
+          
+          // Add existing yearly play time
+          if (existing.yearly_play_time && existing.yearly_play_time.length > 0) {
+            existing.yearly_play_time.forEach(yearData => {
+              yearlyPlayTimeMap.set(yearData.year, yearData.totalListeningTimeMs);
+            });
+          }
+          
+          // Merge new yearly play time
+          artist.yearly_play_time.forEach(yearData => {
+            const existingMs = yearlyPlayTimeMap.get(yearData.year) || 0;
+            yearlyPlayTimeMap.set(yearData.year, existingMs + yearData.totalListeningTimeMs);
+          });
+          
+          // Convert back to sorted array
+          existing.yearly_play_time = Array.from(yearlyPlayTimeMap.entries())
+            .map(([year, totalListeningTimeMs]) => ({
+              year,
+              totalListeningTimeMs
+            }))
+            .sort((a, b) => a.year.localeCompare(b.year));
+        } else if (!existing.yearly_play_time && artist.yearly_play_time) {
+          // If existing doesn't have yearly play time but new one does, use the new one
+          existing.yearly_play_time = artist.yearly_play_time;
+        }
+        
         duplicatesRemoved++;
       } else {
         consolidationMap.set(key, {

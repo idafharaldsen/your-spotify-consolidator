@@ -69,6 +69,10 @@ export interface CleanedSong {
   };
   consolidated_count: number;
   original_songIds: string[];
+  yearly_play_time?: Array<{
+    year: string;
+    totalListeningTimeMs: number;
+  }>; // Yearly play time since first year the song was played
 }
 
 export interface CleanedAlbum {
@@ -122,6 +126,10 @@ export interface CleanedArtist {
   };
   consolidated_count: number;
   original_artistIds: string[];
+  yearly_play_time?: Array<{
+    year: string;
+    totalListeningTimeMs: number;
+  }>; // Yearly play time since first year the artist was played
 }
 
 // Song within album (for detailed album view)
