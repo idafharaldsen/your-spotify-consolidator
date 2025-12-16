@@ -11,6 +11,7 @@ import type {
   AlbumWithSongs,
   AlbumSong,
   SpotifyTrack,
+  SpotifyAlbum,
   DetailedStats,
   YearlyListeningTime,
   YearlyTopItems,
@@ -951,6 +952,27 @@ class CleanedFilesGenerator {
         if (existing.artist.genres && existing.artist.genres.length > 0) {
           artist.artist.genres = existing.artist.genres;
         }
+        // Copy top_songs and top_albums images from existing if available
+        if (existing.top_songs && artist.top_songs) {
+          existing.top_songs.forEach((existingSong, index) => {
+            if (index < artist.top_songs!.length && 
+                existingSong.songId === artist.top_songs![index].songId &&
+                existingSong.album.images && existingSong.album.images.length > 0 &&
+                (!artist.top_songs![index].album.images || artist.top_songs![index].album.images.length === 0)) {
+              artist.top_songs![index].album.images = existingSong.album.images;
+            }
+          });
+        }
+        if (existing.top_albums && artist.top_albums) {
+          existing.top_albums.forEach((existingAlbum, index) => {
+            if (index < artist.top_albums!.length && 
+                existingAlbum.primaryAlbumId === artist.top_albums![index].primaryAlbumId &&
+                existingAlbum.images && existingAlbum.images.length > 0 &&
+                (!artist.top_albums![index].images || artist.top_albums![index].images.length === 0)) {
+              artist.top_albums![index].images = existingAlbum.images;
+            }
+          });
+        }
       }
 
       const artistId = songIdToArtistId.get(artist.primaryArtistId);
@@ -971,6 +993,175 @@ class CleanedFilesGenerator {
     });
 
     console.log(`✅ Enriched ${enrichedCount} artists with metadata`);
+    return artists;
+  }
+
+  /**
+   * Enrich top songs and albums for artists with album images from Spotify API
+   */
+  private async enrichArtistTopSongsAndAlbums(artists: CleanedArtist[], existingArtists: Map<string, CleanedArtist>): Promise<CleanedArtist[]> {
+    if (!this.tokenManager) {
+      console.log('ℹ️  Skipping artist top songs/albums enrichment (Spotify tokens not available)');
+      return artists;
+    }
+
+    console.log('\n📥 Enriching artist top songs and albums with album images...');
+    
+    // First, copy images from existing artists if available
+    artists.forEach(artist => {
+      const nameKey = artist.artist.name.toLowerCase().trim();
+      let existing = existingArtists.get(nameKey);
+      if (!existing && artist.primaryArtistId) {
+        existing = existingArtists.get(artist.primaryArtistId);
+      }
+      
+      if (existing) {
+        // Copy top_songs images from existing if available
+        if (existing.top_songs && artist.top_songs) {
+          existing.top_songs.forEach((existingSong, index) => {
+            if (index < artist.top_songs!.length && 
+                existingSong.songId === artist.top_songs![index].songId &&
+                existingSong.album.images && existingSong.album.images.length > 0 &&
+                (!artist.top_songs![index].album.images || artist.top_songs![index].album.images.length === 0)) {
+              artist.top_songs![index].album.images = existingSong.album.images;
+            }
+          });
+        }
+        // Copy top_albums images from existing if available
+        if (existing.top_albums && artist.top_albums) {
+          existing.top_albums.forEach((existingAlbum, index) => {
+            if (index < artist.top_albums!.length && 
+                existingAlbum.primaryAlbumId === artist.top_albums![index].primaryAlbumId &&
+                existingAlbum.images && existingAlbum.images.length > 0 &&
+                (!artist.top_albums![index].images || artist.top_albums![index].images.length === 0)) {
+              artist.top_albums![index].images = existingAlbum.images;
+            }
+          });
+        }
+      }
+    });
+    
+    // Collect all song IDs from top_songs and album IDs (which might be song IDs) from top_albums
+    const songIdsToFetch = new Set<string>();
+    
+    artists.forEach(artist => {
+      if (artist.top_songs) {
+        artist.top_songs.forEach(song => {
+          // Only fetch if images are still missing after copying from existing
+          if (!song.album.images || song.album.images.length === 0) {
+            songIdsToFetch.add(song.songId);
+          }
+        });
+      }
+      if (artist.top_albums) {
+        artist.top_albums.forEach(album => {
+          // Only fetch if images are still missing after copying from existing
+          if (!album.images || album.images.length === 0) {
+            // primaryAlbumId might be a song ID, so we'll fetch it as a track first
+            songIdsToFetch.add(album.primaryAlbumId);
+          }
+        });
+      }
+    });
+
+    if (songIdsToFetch.size === 0) {
+      console.log('✅ All top songs and albums already have images, skipping API calls');
+      return artists;
+    }
+
+    const accessToken = await this.tokenManager.getValidAccessToken();
+    const uniqueSongIds = Array.from(songIdsToFetch);
+    
+    console.log(`   Fetching ${uniqueSongIds.length} tracks to get album images...`);
+    
+    // Fetch tracks in batches
+    const trackMap = new Map<string, SpotifyTrack>();
+    const batchSize = 50;
+    for (let i = 0; i < uniqueSongIds.length; i += batchSize) {
+      const batch = uniqueSongIds.slice(i, i + batchSize);
+      const tracks = await this.spotifyApiClient.fetchTracks(accessToken, batch);
+      tracks.forEach(track => trackMap.set(track.id, track));
+      
+      if (i + batchSize < uniqueSongIds.length) {
+        await new Promise(resolve => setTimeout(resolve, 100));
+      }
+    }
+    
+    console.log(`✅ Fetched ${trackMap.size} tracks`);
+
+    // Collect album IDs from tracks for top_albums
+    const albumIdSet = new Set<string>();
+    const songIdToAlbumId = new Map<string, string>();
+    trackMap.forEach(track => {
+      if (track.album && track.album.id) {
+        albumIdSet.add(track.album.id);
+        songIdToAlbumId.set(track.id, track.album.id);
+      }
+    });
+
+    // Fetch albums if we have album IDs
+    const albumsMap = new Map<string, SpotifyAlbum>();
+    if (albumIdSet.size > 0) {
+      console.log(`   Fetching ${albumIdSet.size} albums...`);
+      const fetchedAlbums = await this.spotifyApiClient.fetchAlbums(accessToken, Array.from(albumIdSet));
+      fetchedAlbums.forEach((album, id) => albumsMap.set(id, album));
+      console.log(`✅ Fetched ${albumsMap.size} albums`);
+    }
+
+    // Update artists with enriched images
+    let enrichedSongsCount = 0;
+    let enrichedAlbumsCount = 0;
+    
+    artists.forEach(artist => {
+      // Enrich top_songs
+      if (artist.top_songs) {
+        artist.top_songs.forEach(song => {
+          if (!song.album.images || song.album.images.length === 0) {
+            const track = trackMap.get(song.songId);
+            if (track && track.album && track.album.images && track.album.images.length > 0) {
+              song.album.images = track.album.images;
+              enrichedSongsCount++;
+            }
+          }
+        });
+      }
+
+      // Enrich top_albums
+      if (artist.top_albums) {
+        artist.top_albums.forEach(album => {
+          if (!album.images || album.images.length === 0) {
+            // Try to get album ID from the track first
+            const track = trackMap.get(album.primaryAlbumId);
+            let albumId: string | undefined;
+            
+            if (track && track.album && track.album.id) {
+              albumId = track.album.id;
+            } else {
+              // primaryAlbumId might already be an album ID
+              albumId = album.primaryAlbumId;
+            }
+
+            // Try to get images from album first, then from track
+            if (albumId) {
+              const spotifyAlbum = albumsMap.get(albumId);
+              if (spotifyAlbum && spotifyAlbum.images && spotifyAlbum.images.length > 0) {
+                album.images = spotifyAlbum.images;
+                enrichedAlbumsCount++;
+              } else if (track && track.album && track.album.images && track.album.images.length > 0) {
+                album.images = track.album.images;
+                enrichedAlbumsCount++;
+              }
+            } else if (track && track.album && track.album.images && track.album.images.length > 0) {
+              album.images = track.album.images;
+              enrichedAlbumsCount++;
+            }
+          }
+        });
+      }
+    });
+
+    console.log(`✅ Enriched ${enrichedSongsCount} top songs with album images`);
+    console.log(`✅ Enriched ${enrichedAlbumsCount} top albums with images`);
     return artists;
   }
 
@@ -1559,6 +1750,7 @@ class CleanedFilesGenerator {
         console.log('\n🎵 Enriching cleaned files with Spotify metadata...');
         songsResult.songs = await this.enrichSongsWithMetadata(songsResult.songs, existingFiles.songs);
         artistsResult.artists = await this.enrichArtistsWithMetadata(artistsResult.artists, existingFiles.artists);
+        artistsResult.artists = await this.enrichArtistTopSongsAndAlbums(artistsResult.artists, existingFiles.artists);
         albumsWithSongsResult.albums = await this.enrichAlbumsWithSongsMetadata(albumsWithSongsResult.albums, existingFiles.albumsWithSongs);
         
         // Create a map of enriched albums for lookup (from albumsWithSongs) for detailed stats enrichment
