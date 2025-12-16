@@ -736,7 +736,9 @@ export default function TopArtistsPage() {
                     >
                       {topSongsExpanded && (
                         <div className="space-y-2">
-                          {selectedArtist.top_songs.map((song, index) => (
+                          {[...selectedArtist.top_songs]
+                            .sort((a, b) => b.play_count - a.play_count)
+                            .map((song, index) => (
                             <div
                               key={song.songId}
                               className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
@@ -812,7 +814,9 @@ export default function TopArtistsPage() {
                     >
                       {topAlbumsExpanded && (
                         <div className="space-y-2">
-                          {selectedArtist.top_albums.map((album, index) => (
+                          {[...selectedArtist.top_albums]
+                            .sort((a, b) => b.play_count - a.play_count)
+                            .map((album, index) => (
                             <div
                               key={album.primaryAlbumId}
                               className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
