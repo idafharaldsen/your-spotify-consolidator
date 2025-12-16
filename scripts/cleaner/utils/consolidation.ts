@@ -124,6 +124,11 @@ export class Consolidator {
         existing.duration_ms += song.duration_ms;
         existing.original_songIds.push(song.songId);
         
+        // Merge 30-days-ago count
+        const existingCount30DaysAgo = existing.count_30_days_ago || 0;
+        const songCount30DaysAgo = song.count_30_days_ago || 0;
+        existing.count_30_days_ago = existingCount30DaysAgo + songCount30DaysAgo;
+        
         // Merge yearly play time
         if (song.yearly_play_time && song.yearly_play_time.length > 0) {
           const yearlyPlayTimeMap = new Map<string, number>();
@@ -201,6 +206,11 @@ export class Consolidator {
         existing.consolidated_count += album.count;
         existing.original_albumIds.push(album.primaryAlbumId);
         
+        // Merge 30-days-ago count
+        const existingCount30DaysAgo = existing.count_30_days_ago || 0;
+        const albumCount30DaysAgo = album.count_30_days_ago || 0;
+        existing.count_30_days_ago = existingCount30DaysAgo + albumCount30DaysAgo;
+        
         // Always try to get the base album name for both existing and incoming albums
         const existingBaseName = this.rulesManager.getBaseAlbumName(existing.album.name, firstArtist) ||
                                  this.rulesManager.getBaseAlbumName(this.rulesManager.normalizeAlbumName(existing.album.name, firstArtist), firstArtist);
@@ -264,6 +274,11 @@ export class Consolidator {
         existing.differents += artist.differents;
         existing.consolidated_count += artist.count;
         existing.original_artistIds.push(artist.primaryArtistId);
+        
+        // Merge 30-days-ago count
+        const existingCount30DaysAgo = existing.count_30_days_ago || 0;
+        const artistCount30DaysAgo = artist.count_30_days_ago || 0;
+        existing.count_30_days_ago = existingCount30DaysAgo + artistCount30DaysAgo;
         
         // Merge yearly play time
         if (artist.yearly_play_time && artist.yearly_play_time.length > 0) {
@@ -414,6 +429,11 @@ export class Consolidator {
         existing.total_duration_ms += album.total_duration_ms;
         existing.consolidated_count += album.consolidated_count;
         existing.original_albumIds.push(...album.original_albumIds);
+        
+        // Merge 30-days-ago count
+        const existingCount30DaysAgo = existing.count_30_days_ago || 0;
+        const albumCount30DaysAgo = album.count_30_days_ago || 0;
+        existing.count_30_days_ago = existingCount30DaysAgo + albumCount30DaysAgo;
         
         const songMap = new Map<string, AlbumSong>();
         existing.songs.forEach((song: AlbumSong) => {

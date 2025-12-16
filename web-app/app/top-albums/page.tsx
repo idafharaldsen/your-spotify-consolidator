@@ -11,6 +11,7 @@ import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import SortToggle, { SortOption } from '@/components/SortToggle'
+import RankingMovement from '@/components/RankingMovement'
 
 interface AlbumImage {
   height: number
@@ -71,6 +72,8 @@ interface AlbumData {
   songs?: Song[]
   earliest_played_at?: string
   yearly_play_time?: YearlyPlayTime[]
+  rank_30_days_ago?: number
+  count_30_days_ago?: number
 }
 
 interface AlbumsData {
@@ -451,9 +454,18 @@ export default function TopAlbumsPage() {
                   <div className="space-y-2">
                     {/* Rank Badge */}
                     <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="text-xs">
-                        #{album.rank}
-                      </Badge>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary" className="text-xs">
+                          #{album.rank}
+                        </Badge>
+                        <RankingMovement
+                          currentRank={album.rank}
+                          rank30DaysAgo={album.rank_30_days_ago}
+                          currentCount={album.count}
+                          count30DaysAgo={album.count_30_days_ago}
+                          size="sm"
+                        />
+                      </div>
                       <div className="flex items-center text-xs text-muted-foreground">
                         <Play className="w-3 h-3 mr-1" />
                         {album.count}
@@ -514,9 +526,18 @@ export default function TopAlbumsPage() {
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
                     {/* Rank */}
                     <div className="col-span-1">
-                      <Badge variant="secondary" className="text-xs">
-                        #{album.rank}
-                      </Badge>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary" className="text-xs">
+                          #{album.rank}
+                        </Badge>
+                        <RankingMovement
+                          currentRank={album.rank}
+                          rank30DaysAgo={album.rank_30_days_ago}
+                          currentCount={album.count}
+                          count30DaysAgo={album.count_30_days_ago}
+                          size="sm"
+                        />
+                      </div>
                     </div>
                     
                     {/* Album Image */}
@@ -577,9 +598,18 @@ export default function TopAlbumsPage() {
                     {/* Album Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-1">
-                        <Badge variant="secondary" className="text-xs">
-                          #{album.rank}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          <Badge variant="secondary" className="text-xs">
+                            #{album.rank}
+                          </Badge>
+                          <RankingMovement
+                            currentRank={album.rank}
+                            rank30DaysAgo={album.rank_30_days_ago}
+                            currentCount={album.count}
+                            count30DaysAgo={album.count_30_days_ago}
+                            size="sm"
+                          />
+                        </div>
                         <div className="flex items-center text-xs text-muted-foreground">
                           <Play className="w-3 h-3 mr-1" />
                           {album.count}

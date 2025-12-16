@@ -53,7 +53,19 @@ class CleanedFilesGenerator {
   private generateCleanedSongs(history: CompleteListeningHistory): { songs: CleanedSong[], originalCount: number, consolidatedCount: number } {
     console.log('🎵 Generating cleaned songs...');
 
+    // Calculate cutoff date for 30 days ago
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const cutoffTimestamp = thirtyDaysAgo.getTime();
+
     const songs: CleanedSong[] = history.songs.map(song => {
+      // Filter events from 30+ days ago
+      const events30DaysAgo = song.listeningEvents.filter(event => {
+        const eventDate = new Date(event.playedAt).getTime();
+        return eventDate < cutoffTimestamp;
+      });
+      const count30DaysAgo = events30DaysAgo.length;
+
       // Calculate yearly play time
       const yearlyPlayTimeMap = new Map<string, number>();
       if (song.listeningEvents && song.listeningEvents.length > 0) {
@@ -78,6 +90,7 @@ class CleanedFilesGenerator {
         rank: 0,
         duration_ms: song.totalListeningTime,
         count: song.playCount,
+        count_30_days_ago: count30DaysAgo,
         songId: song.songId,
         song: {
           name: song.name,
@@ -100,10 +113,50 @@ class CleanedFilesGenerator {
 
     songs.sort((a, b) => b.count - a.count);
     const consolidatedSongs = this.consolidator.consolidateSongs(songs);
-    const topSongs = consolidatedSongs.slice(0, 500).map((song, index) => ({
-      ...song,
-      rank: index + 1
-    }));
+    
+    // Calculate 30-days-ago rankings
+    // Create a copy of consolidated songs with 30-days-ago counts for ranking
+    const songs30DaysAgo = consolidatedSongs
+      .map(song => ({
+        ...song,
+        count: song.count_30_days_ago || 0
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 500);
+    
+    // Create a map of songId -> rank for 30 days ago
+    const rankMap30DaysAgo = new Map<string, number>();
+    songs30DaysAgo.forEach((song, index) => {
+      // For consolidated songs, we need to check all original_songIds
+      song.original_songIds.forEach(songId => {
+        rankMap30DaysAgo.set(songId, index + 1);
+      });
+      // Also use the primary songId
+      rankMap30DaysAgo.set(song.songId, index + 1);
+    });
+    
+    // Assign current ranks and add 30-days-ago ranks
+    const topSongs = consolidatedSongs.slice(0, 500).map((song, index) => {
+      // Find the rank 30 days ago by checking the songId or any of its original_songIds
+      let rank30DaysAgo: number | undefined;
+      if (rankMap30DaysAgo.has(song.songId)) {
+        rank30DaysAgo = rankMap30DaysAgo.get(song.songId);
+      } else {
+        // Check original_songIds
+        for (const originalId of song.original_songIds) {
+          if (rankMap30DaysAgo.has(originalId)) {
+            rank30DaysAgo = rankMap30DaysAgo.get(originalId);
+            break;
+          }
+        }
+      }
+      
+      return {
+        ...song,
+        rank: index + 1,
+        rank_30_days_ago: rank30DaysAgo
+      };
+    });
     
     return {
       songs: topSongs,
@@ -118,21 +171,35 @@ class CleanedFilesGenerator {
   private generateCleanedArtists(history: CompleteListeningHistory): { artists: CleanedArtist[], originalCount: number, consolidatedCount: number } {
     console.log('👤 Generating cleaned artists...');
 
+    // Calculate cutoff date for 30 days ago
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const cutoffTimestamp = thirtyDaysAgo.getTime();
+
     const artistMap = new Map<string, {
       songs: CompleteSong[];
       totalPlayCount: number;
       totalListeningTime: number;
+      totalPlayCount30DaysAgo: number;
       differentSongs: Set<string>;
     }>();
 
     history.songs.forEach(song => {
       const artistName = song.artist.name;
       
+      // Calculate play count 30 days ago for this song
+      const events30DaysAgo = song.listeningEvents.filter(event => {
+        const eventDate = new Date(event.playedAt).getTime();
+        return eventDate < cutoffTimestamp;
+      });
+      const count30DaysAgo = events30DaysAgo.length;
+      
       if (!artistMap.has(artistName)) {
         artistMap.set(artistName, {
           songs: [],
           totalPlayCount: 0,
           totalListeningTime: 0,
+          totalPlayCount30DaysAgo: 0,
           differentSongs: new Set()
         });
       }
@@ -141,6 +208,7 @@ class CleanedFilesGenerator {
       artistData.songs.push(song);
       artistData.totalPlayCount += song.playCount;
       artistData.totalListeningTime += song.totalListeningTime;
+      artistData.totalPlayCount30DaysAgo += count30DaysAgo;
       artistData.differentSongs.add(song.songId);
     });
 
@@ -287,6 +355,7 @@ class CleanedFilesGenerator {
         rank: 0,
         duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
         count: data.totalPlayCount,
+        count_30_days_ago: data.totalPlayCount30DaysAgo,
         differents: data.differentSongs.size,
         primaryArtistId: firstSong.songId,
         total_count: data.totalPlayCount,
@@ -311,10 +380,44 @@ class CleanedFilesGenerator {
 
     artists.sort((a, b) => b.count - a.count);
     const consolidatedArtists = this.consolidator.consolidateArtists(artists);
-    const topArtists = consolidatedArtists.slice(0, 500).map((artist, index) => ({
-      ...artist,
-      rank: index + 1
-    }));
+    
+    // Calculate 30-days-ago rankings
+    const artists30DaysAgo = consolidatedArtists
+      .map(artist => ({
+        ...artist,
+        count: artist.count_30_days_ago || 0
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 500);
+    
+    // Create a map of artist name -> rank for 30 days ago
+    const rankMap30DaysAgo = new Map<string, number>();
+    artists30DaysAgo.forEach((artist, index) => {
+      const artistNameKey = artist.artist.name.toLowerCase().trim();
+      rankMap30DaysAgo.set(artistNameKey, index + 1);
+      // Also check by primaryArtistId
+      if (artist.primaryArtistId) {
+        rankMap30DaysAgo.set(artist.primaryArtistId, index + 1);
+      }
+    });
+    
+    // Assign current ranks and add 30-days-ago ranks
+    const topArtists = consolidatedArtists.slice(0, 500).map((artist, index) => {
+      const artistNameKey = artist.artist.name.toLowerCase().trim();
+      let rank30DaysAgo: number | undefined;
+      
+      if (rankMap30DaysAgo.has(artistNameKey)) {
+        rank30DaysAgo = rankMap30DaysAgo.get(artistNameKey);
+      } else if (artist.primaryArtistId && rankMap30DaysAgo.has(artist.primaryArtistId)) {
+        rank30DaysAgo = rankMap30DaysAgo.get(artist.primaryArtistId);
+      }
+      
+      return {
+        ...artist,
+        rank: index + 1,
+        rank_30_days_ago: rank30DaysAgo
+      };
+    });
     
     return {
       artists: topArtists,
@@ -328,6 +431,11 @@ class CleanedFilesGenerator {
    */
   private generateAlbumsWithSongs(history: CompleteListeningHistory): { albums: AlbumWithSongs[], originalCount: number } {
     console.log('💿🎵 Generating albums with songs...');
+
+    // Calculate cutoff date for 30 days ago
+    const thirtyDaysAgo = new Date();
+    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+    const cutoffTimestamp = thirtyDaysAgo.getTime();
 
     const albumMap = new Map<string, CompleteSong[]>();
     history.songs.forEach(song => {
@@ -378,6 +486,18 @@ class CleanedFilesGenerator {
       const totalPlayCount = validSongs.reduce((sum, song) => sum + song.playCount, 0);
       const totalListeningTime = validSongs.reduce((sum, song) => sum + song.totalListeningTime, 0);
       const playedSongs = validSongs.filter(song => song.playCount > 0).length;
+      
+      // Calculate play count 30 days ago for this album
+      let totalPlayCount30DaysAgo = 0;
+      validSongs.forEach(song => {
+        if (song.listeningEvents && song.listeningEvents.length > 0) {
+          const events30DaysAgo = song.listeningEvents.filter(event => {
+            const eventDate = new Date(event.playedAt).getTime();
+            return eventDate < cutoffTimestamp;
+          });
+          totalPlayCount30DaysAgo += events30DaysAgo.length;
+        }
+      });
       
       // Find the earliest play time across all listening events for this album
       let earliestPlayedAt: string | undefined;
@@ -473,6 +593,7 @@ class CleanedFilesGenerator {
         rank: 0,
         duration_ms: totalListeningTime,
         count: totalPlayCount,
+        count_30_days_ago: totalPlayCount30DaysAgo,
         differents: validSongs.length,
         primaryAlbumId: representativeSongForAlbum.songId || validSongs[0]?.songId || '',
         total_count: totalPlayCount,
@@ -502,10 +623,44 @@ class CleanedFilesGenerator {
     albumsWithSongs.sort((a, b) => b.count - a.count);
     const originalCount = albumsWithSongs.length;
     const consolidatedAlbums = this.consolidator.consolidateAlbumsWithSongs(albumsWithSongs);
-    const rankedAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => ({
-      ...album,
-      rank: index + 1
-    }));
+    
+    // Calculate 30-days-ago rankings
+    const albums30DaysAgo = consolidatedAlbums
+      .map(album => ({
+        ...album,
+        count: album.count_30_days_ago || 0
+      }))
+      .sort((a, b) => b.count - a.count)
+      .slice(0, 500);
+    
+    // Create a map of album key -> rank for 30 days ago
+    const rankMap30DaysAgo = new Map<string, number>();
+    albums30DaysAgo.forEach((album, index) => {
+      const albumKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
+      rankMap30DaysAgo.set(albumKey, index + 1);
+      // Also check by primaryAlbumId
+      if (album.primaryAlbumId) {
+        rankMap30DaysAgo.set(album.primaryAlbumId, index + 1);
+      }
+    });
+    
+    // Assign current ranks and add 30-days-ago ranks
+    const rankedAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => {
+      const albumKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
+      let rank30DaysAgo: number | undefined;
+      
+      if (rankMap30DaysAgo.has(albumKey)) {
+        rank30DaysAgo = rankMap30DaysAgo.get(albumKey);
+      } else if (album.primaryAlbumId && rankMap30DaysAgo.has(album.primaryAlbumId)) {
+        rank30DaysAgo = rankMap30DaysAgo.get(album.primaryAlbumId);
+      }
+      
+      return {
+        ...album,
+        rank: index + 1,
+        rank_30_days_ago: rank30DaysAgo
+      };
+    });
     
     return { albums: rankedAlbums, originalCount };
   }

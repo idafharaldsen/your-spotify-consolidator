@@ -11,6 +11,7 @@ import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import SortToggle, { SortOption } from '@/components/SortToggle'
+import RankingMovement from '@/components/RankingMovement'
 
 interface ArtistImage {
   height: number
@@ -79,6 +80,8 @@ interface ArtistData {
   yearly_play_time?: YearlyPlayTime[]
   top_songs?: ArtistTopSong[]
   top_albums?: ArtistTopAlbum[]
+  rank_30_days_ago?: number
+  count_30_days_ago?: number
 }
 
 interface ArtistsData {
@@ -412,9 +415,18 @@ export default function TopArtistsPage() {
                   <div className="space-y-2">
                     {/* Rank Badge */}
                     <div className="flex items-center justify-between">
-                      <Badge variant="secondary" className="text-xs">
-                        #{artist.rank}
-                      </Badge>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary" className="text-xs">
+                          #{artist.rank}
+                        </Badge>
+                        <RankingMovement
+                          currentRank={artist.rank}
+                          rank30DaysAgo={artist.rank_30_days_ago}
+                          currentCount={artist.count}
+                          count30DaysAgo={artist.count_30_days_ago}
+                          size="sm"
+                        />
+                      </div>
                       <div className="flex items-center text-xs text-muted-foreground">
                         <Play className="w-3 h-3 mr-1" />
                         {artist.count}
@@ -484,9 +496,18 @@ export default function TopArtistsPage() {
                   <div className="hidden md:grid grid-cols-12 gap-4 items-center">
                     {/* Rank */}
                     <div className="col-span-1">
-                      <Badge variant="secondary" className="text-xs">
-                        #{artist.rank}
-                      </Badge>
+                      <div className="flex items-center gap-2">
+                        <Badge variant="secondary" className="text-xs">
+                          #{artist.rank}
+                        </Badge>
+                        <RankingMovement
+                          currentRank={artist.rank}
+                          rank30DaysAgo={artist.rank_30_days_ago}
+                          currentCount={artist.count}
+                          count30DaysAgo={artist.count_30_days_ago}
+                          size="sm"
+                        />
+                      </div>
                     </div>
                     
                     {/* Artist Image */}
@@ -557,9 +578,18 @@ export default function TopArtistsPage() {
                     {/* Artist Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-1">
-                        <Badge variant="secondary" className="text-xs">
-                          #{artist.rank}
-                        </Badge>
+                        <div className="flex items-center gap-2">
+                          <Badge variant="secondary" className="text-xs">
+                            #{artist.rank}
+                          </Badge>
+                          <RankingMovement
+                            currentRank={artist.rank}
+                            rank30DaysAgo={artist.rank_30_days_ago}
+                            currentCount={artist.count}
+                            count30DaysAgo={artist.count_30_days_ago}
+                            size="sm"
+                          />
+                        </div>
                         <div className="flex items-center text-xs text-muted-foreground">
                           <Play className="w-3 h-3 mr-1" />
                           {artist.count}

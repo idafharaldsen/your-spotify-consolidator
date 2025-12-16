@@ -73,6 +73,8 @@ export interface CleanedSong {
     year: string;
     totalListeningTimeMs: number;
   }>; // Yearly play time since first year the song was played
+  rank_30_days_ago?: number; // Rank 30 days ago (undefined if not in top 500)
+  count_30_days_ago?: number; // Play count 30 days ago
 }
 
 export interface CleanedAlbum {
@@ -100,6 +102,8 @@ export interface CleanedAlbum {
   };
   consolidated_count: number;
   original_albumIds: string[];
+  rank_30_days_ago?: number; // Rank 30 days ago (undefined if not in top 500)
+  count_30_days_ago?: number; // Play count 30 days ago
 }
 
 export interface ArtistTopSong {
@@ -160,6 +164,8 @@ export interface CleanedArtist {
   }>; // Yearly play time since first year the artist was played
   top_songs?: ArtistTopSong[]; // Top 5 songs by play time
   top_albums?: ArtistTopAlbum[]; // Top 5 albums by play time
+  rank_30_days_ago?: number; // Rank 30 days ago (undefined if not in top 500)
+  count_30_days_ago?: number; // Play count 30 days ago
 }
 
 // Song within album (for detailed album view)
