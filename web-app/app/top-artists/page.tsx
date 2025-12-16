@@ -169,7 +169,12 @@ export default function TopArtistsPage() {
   const [artistsData, setArtistsData] = useState<ArtistsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768 ? 'list' : 'grid'
+    }
+    return 'grid'
+  })
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [selectedArtist, setSelectedArtist] = useState<ArtistData | null>(null)
   const [mounted, setMounted] = useState(false)
@@ -381,7 +386,7 @@ export default function TopArtistsPage() {
             <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
             <input
               type="text"
-              placeholder="Search artists or genres..."
+              placeholder="Search artists..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
@@ -438,20 +443,6 @@ export default function TopArtistsPage() {
                       {artist.artist.name}
                     </h3>
                     
-                    {/* Genres */}
-                    <div className="flex flex-wrap gap-1">
-                      {artist.artist.genres.slice(0, 2).map((genre, index) => (
-                        <Badge key={index} variant="outline" className="text-xs">
-                          {genre}
-                        </Badge>
-                      ))}
-                      {artist.artist.genres.length > 2 && (
-                        <Badge variant="outline" className="text-xs">
-                          +{artist.artist.genres.length - 2}
-                        </Badge>
-                      )}
-                    </div>
-                    
                     {/* Different Songs */}
                     <p className="text-xs text-muted-foreground">
                       {artist.differents} songs
@@ -478,11 +469,10 @@ export default function TopArtistsPage() {
             <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
               <div className="col-span-1">Rank</div>
               <div className="col-span-1"></div>
-              <div className="col-span-3">Artist</div>
-              <div className="col-span-3">Genres</div>
+              <div className="col-span-5">Artist</div>
               <div className="col-span-1">Plays</div>
               <div className="col-span-1">Songs</div>
-              <div className="col-span-2">Duration</div>
+              <div className="col-span-3">Duration</div>
             </div>
             
             {sortedArtists.map((artist) => (
@@ -518,26 +508,10 @@ export default function TopArtistsPage() {
                     </div>
                     
                     {/* Artist Name */}
-                    <div className="col-span-3">
+                    <div className="col-span-5">
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
                         {artist.artist.name}
                       </h3>
-                    </div>
-                    
-                    {/* Genres */}
-                    <div className="col-span-3">
-                      <div className="flex flex-wrap gap-1">
-                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
-                          <Badge key={index} variant="outline" className="text-xs">
-                            {genre}
-                          </Badge>
-                        ))}
-                        {artist.artist.genres.length > 2 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{artist.artist.genres.length - 2}
-                          </Badge>
-                        )}
-                      </div>
                     </div>
                     
                     {/* Play Count */}
@@ -556,7 +530,7 @@ export default function TopArtistsPage() {
                     </div>
                     
                     {/* Duration */}
-                    <div className="col-span-2">
+                    <div className="col-span-3">
                       <p className="text-sm text-muted-foreground">
                         {(() => {
                           const totalMinutes = Math.floor(artist.total_duration_ms / 60000)
@@ -599,19 +573,6 @@ export default function TopArtistsPage() {
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
                         {artist.artist.name}
                       </h3>
-                      
-                      <div className="flex flex-wrap gap-1 mb-1">
-                        {artist.artist.genres.slice(0, 2).map((genre, index) => (
-                          <Badge key={index} variant="outline" className="text-xs">
-                            {genre}
-                          </Badge>
-                        ))}
-                        {artist.artist.genres.length > 2 && (
-                          <Badge variant="outline" className="text-xs">
-                            +{artist.artist.genres.length - 2}
-                          </Badge>
-                        )}
-                      </div>
                       
                       <div className="flex items-center justify-between text-xs text-muted-foreground">
                         <span>{artist.differents} songs</span>

@@ -197,7 +197,12 @@ export default function TopAlbumsPage() {
   const [albumsData, setAlbumsData] = useState<AlbumsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768 ? 'list' : 'grid'
+    }
+    return 'grid'
+  })
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [mounted, setMounted] = useState(false)

@@ -140,7 +140,12 @@ export default function TopSongsPage() {
   const [songsData, setSongsData] = useState<SongsData | null>(null)
   const [searchTerm, setSearchTerm] = useState('')
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid')
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
+    if (typeof window !== 'undefined') {
+      return window.innerWidth < 768 ? 'list' : 'grid'
+    }
+    return 'grid'
+  })
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [selectedSong, setSelectedSong] = useState<SongData | null>(null)
   const [mounted, setMounted] = useState(false)
