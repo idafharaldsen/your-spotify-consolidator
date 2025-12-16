@@ -36,6 +36,34 @@ interface YearlyPlayTime {
   totalListeningTimeMs: number
 }
 
+interface ArtistTopSong {
+  songId: string
+  name: string
+  play_count: number
+  total_listening_time_ms: number
+  album: {
+    name: string
+    images: Array<{
+      height: number
+      url: string
+      width: number
+    }>
+  }
+}
+
+interface ArtistTopAlbum {
+  primaryAlbumId: string
+  name: string
+  play_count: number
+  total_listening_time_ms: number
+  images: Array<{
+    height: number
+    url: string
+    width: number
+  }>
+  artists: string[]
+}
+
 interface ArtistData {
   duration_ms: number
   count: number
@@ -49,6 +77,8 @@ interface ArtistData {
   original_counts: number[]
   rank: number
   yearly_play_time?: YearlyPlayTime[]
+  top_songs?: ArtistTopSong[]
+  top_albums?: ArtistTopAlbum[]
 }
 
 interface ArtistsData {
@@ -141,6 +171,8 @@ export default function TopArtistsPage() {
   const [selectedArtist, setSelectedArtist] = useState<ArtistData | null>(null)
   const [mounted, setMounted] = useState(false)
   const [yearlyPlayTimeExpanded, setYearlyPlayTimeExpanded] = useState(true)
+  const [topSongsExpanded, setTopSongsExpanded] = useState(true)
+  const [topAlbumsExpanded, setTopAlbumsExpanded] = useState(true)
   const yearlyChartRef = useRef<HighchartsReact.RefObject>(null)
   
   useEffect(() => {
@@ -151,6 +183,8 @@ export default function TopArtistsPage() {
   useEffect(() => {
     if (selectedArtist) {
       setYearlyPlayTimeExpanded(true)
+      setTopSongsExpanded(true)
+      setTopAlbumsExpanded(true)
     }
   }, [selectedArtist])
   
@@ -578,10 +612,10 @@ export default function TopArtistsPage() {
       
       {/* Artist Details Modal */}
       <Dialog open={!!selectedArtist} onOpenChange={(open) => !open && setSelectedArtist(null)}>
-        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col overflow-hidden">
+        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col">
           {selectedArtist && (
-            <div className="flex flex-col overflow-hidden h-full">
-              <DialogHeader className="flex-shrink-0">
+            <div className="flex flex-col h-full min-h-0">
+              <DialogHeader className="flex-shrink-0 pb-4">
                 <div className="flex flex-col items-center gap-4 mb-2">
                   <div className="relative w-32 h-32 flex-shrink-0 rounded-full overflow-hidden bg-muted">
                     {selectedArtist.artist.images?.[0]?.url ? (
@@ -645,37 +679,192 @@ export default function TopArtistsPage() {
                 </div>
               </DialogHeader>
               
-              {/* Yearly Play Time Section */}
-              {selectedArtist.yearly_play_time && selectedArtist.yearly_play_time.length > 0 && (
-                <div className="mt-4 flex-shrink-0 border-t pt-4">
-                  <button
-                    onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
-                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
-                  >
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Play Time by Year
-                    </h4>
-                    {yearlyPlayTimeExpanded ? (
-                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                    )}
-                  </button>
-                  <div 
-                    className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
-                      yearlyPlayTimeExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    {mounted && yearlyPlayTimeExpanded && (
-                      <HighchartsReact
-                        highcharts={Highcharts}
-                        options={getYearlyPlayTimeChartOptions()}
-                        ref={yearlyChartRef}
-                      />
-                    )}
+              {/* Scrollable Content Area */}
+              <div className="flex-1 overflow-y-auto min-h-0 space-y-4">
+                {/* Yearly Play Time Section */}
+                {selectedArtist.yearly_play_time && selectedArtist.yearly_play_time.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Play Time by Year
+                      </h4>
+                      {yearlyPlayTimeExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                        yearlyPlayTimeExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      {mounted && yearlyPlayTimeExpanded && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getYearlyPlayTimeChartOptions()}
+                          ref={yearlyChartRef}
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+                
+                {/* Top Songs Section */}
+                {selectedArtist.top_songs && selectedArtist.top_songs.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setTopSongsExpanded(!topSongsExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Top Songs ({selectedArtist.top_songs.length})
+                      </h4>
+                      {topSongsExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`transition-all duration-300 ease-in-out ${
+                        topSongsExpanded ? 'opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                      }`}
+                    >
+                      {topSongsExpanded && (
+                        <div className="space-y-2">
+                          {selectedArtist.top_songs.map((song, index) => (
+                            <div
+                              key={song.songId}
+                              className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
+                            >
+                              <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
+                                {index + 1}
+                              </div>
+                              
+                              {/* Album Image */}
+                              <div className="flex-shrink-0 w-12 h-12 rounded overflow-hidden bg-muted">
+                                {song.album.images && song.album.images.length > 0 ? (
+                                  <Image
+                                    src={song.album.images[0].url}
+                                    alt={`${song.album.name} album cover`}
+                                    width={48}
+                                    height={48}
+                                    className="object-cover w-full h-full"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center">
+                                    <Music className="w-5 h-5 text-muted-foreground" />
+                                  </div>
+                                )}
+                              </div>
+                              
+                              <div className="flex-1 min-w-0 overflow-hidden">
+                                <div className="flex items-center gap-2 min-w-0 w-full">
+                                  <span className="font-medium text-sm truncate min-w-0 flex-1 whitespace-nowrap">{song.name}</span>
+                                </div>
+                                <div className="text-xs text-muted-foreground truncate whitespace-nowrap">
+                                  {song.album.name}
+                                </div>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Play className="w-3 h-3" />
+                                  <span>{song.play_count}</span>
+                                </div>
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Clock className="w-3 h-3" />
+                                  <span>{formatDuration(song.total_listening_time_ms)}</span>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+                
+                {/* Top Albums Section */}
+                {selectedArtist.top_albums && selectedArtist.top_albums.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setTopAlbumsExpanded(!topAlbumsExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Top Albums ({selectedArtist.top_albums.length})
+                      </h4>
+                      {topAlbumsExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`transition-all duration-300 ease-in-out ${
+                        topAlbumsExpanded ? 'opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                      }`}
+                    >
+                      {topAlbumsExpanded && (
+                        <div className="space-y-2">
+                          {selectedArtist.top_albums.map((album, index) => (
+                            <div
+                              key={album.primaryAlbumId}
+                              className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
+                            >
+                              <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
+                                {index + 1}
+                              </div>
+                              
+                              {/* Album Image */}
+                              <div className="flex-shrink-0 w-12 h-12 rounded overflow-hidden bg-muted">
+                                {album.images && album.images.length > 0 ? (
+                                  <Image
+                                    src={album.images[0].url}
+                                    alt={`${album.name} album cover`}
+                                    width={48}
+                                    height={48}
+                                    className="object-cover w-full h-full"
+                                  />
+                                ) : (
+                                  <div className="w-full h-full flex items-center justify-center">
+                                    <Music className="w-5 h-5 text-muted-foreground" />
+                                  </div>
+                                )}
+                              </div>
+                              
+                              <div className="flex-1 min-w-0 overflow-hidden">
+                                <div className="flex items-center gap-2 min-w-0 w-full">
+                                  <span className="font-medium text-sm truncate min-w-0 flex-1 whitespace-nowrap">{album.name}</span>
+                                </div>
+                                <div className="text-xs text-muted-foreground truncate whitespace-nowrap">
+                                  {album.artists.join(', ')}
+                                </div>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Play className="w-3 h-3" />
+                                  <span>{album.play_count}</span>
+                                </div>
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Clock className="w-3 h-3" />
+                                  <span>{formatDuration(album.total_listening_time_ms)}</span>
+                                </div>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           )}
         </DialogContent>

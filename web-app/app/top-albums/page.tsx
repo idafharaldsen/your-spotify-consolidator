@@ -626,10 +626,10 @@ export default function TopAlbumsPage() {
       
       {/* Album Details Modal */}
       <Dialog open={!!selectedAlbum} onOpenChange={(open) => !open && setSelectedAlbum(null)}>
-        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col overflow-hidden">
+        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col">
           {selectedAlbum && (
-            <div className="flex flex-col overflow-hidden h-full">
-              <DialogHeader className="flex-shrink-0">
+            <div className="flex flex-col h-full min-h-0">
+              <DialogHeader className="flex-shrink-0 pb-4">
                 <div className="flex flex-col items-center gap-4 mb-2">
                   <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted">
                     {selectedAlbum.album.images?.[0]?.url ? (
@@ -709,103 +709,107 @@ export default function TopAlbumsPage() {
                 </div>
               </DialogHeader>
               
-              {/* Yearly Play Time Section */}
-              {selectedAlbum.yearly_play_time && selectedAlbum.yearly_play_time.length > 0 && (
-                <div className="mt-4 flex-shrink-0 border-t pt-4">
-                  <button
-                    onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
-                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
-                  >
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Play Time by Year
-                    </h4>
-                    {yearlyPlayTimeExpanded ? (
-                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                    )}
-                  </button>
-                  <div 
-                    className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
-                      yearlyPlayTimeExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    {mounted && yearlyPlayTimeExpanded && (
-                      <HighchartsReact
-                        highcharts={Highcharts}
-                        options={getYearlyPlayTimeChartOptions()}
-                        ref={yearlyChartRef}
-                      />
-                    )}
+              {/* Scrollable Content Area */}
+              <div className="flex-1 overflow-y-auto min-h-0 space-y-4">
+                {/* Yearly Play Time Section */}
+                {selectedAlbum.yearly_play_time && selectedAlbum.yearly_play_time.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Play Time by Year
+                      </h4>
+                      {yearlyPlayTimeExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                        yearlyPlayTimeExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      {mounted && yearlyPlayTimeExpanded && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getYearlyPlayTimeChartOptions()}
+                          ref={yearlyChartRef}
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
-              
-              {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
-                <div className="mt-2 flex-1 min-h-0 flex flex-col overflow-hidden">
-                  <button
-                    onClick={() => setSongsExpanded(!songsExpanded)}
-                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity flex-shrink-0"
-                  >
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Songs ({selectedAlbum.songs.length})
-                    </h4>
-                    {songsExpanded ? (
-                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                    )}
-                  </button>
-                  <div 
-                    className={`transition-all duration-300 ease-in-out ${
-                      songsExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
-                    }`}
-                  >
-                    {songsExpanded && (
-                      <div className="space-y-2 flex-1 overflow-y-auto min-h-0">
-                        {selectedAlbum.songs
-                          .sort((a, b) => b.play_count - a.play_count)
-                          .map((song, index) => (
-                        <div
-                          key={song.songId}
-                          className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
-                        >
-                          <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
-                            {index + 1}
-                          </div>
-                          
-                          <div className="flex-1 min-w-0 overflow-hidden">
-                            <div className="flex items-center gap-2 min-w-0 w-full">
-                              <span className="font-medium text-sm truncate min-w-0 flex-1 whitespace-nowrap">{song.name}</span>
-                              {song.explicit && (
-                                <Badge variant="outline" className="text-xs px-1 py-0 flex-shrink-0">
-                                  E
-                                </Badge>
-                              )}
+                )}
+                
+                {/* Songs Section */}
+                {selectedAlbum.songs && selectedAlbum.songs.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setSongsExpanded(!songsExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Songs ({selectedAlbum.songs.length})
+                      </h4>
+                      {songsExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`transition-all duration-300 ease-in-out ${
+                        songsExpanded ? 'opacity-100' : 'max-h-0 opacity-0 overflow-hidden'
+                      }`}
+                    >
+                      {songsExpanded && (
+                        <div className="space-y-2">
+                          {selectedAlbum.songs
+                            .sort((a, b) => b.play_count - a.play_count)
+                            .map((song, index) => (
+                            <div
+                              key={song.songId}
+                              className="flex items-center gap-3 p-2 rounded-md hover:bg-muted/50 transition-colors min-w-0 w-full flex-shrink-0"
+                            >
+                              <div className="flex-shrink-0 w-6 text-xs text-muted-foreground text-center">
+                                {index + 1}
+                              </div>
+                              
+                              <div className="flex-1 min-w-0 overflow-hidden">
+                                <div className="flex items-center gap-2 min-w-0 w-full">
+                                  <span className="font-medium text-sm truncate min-w-0 flex-1 whitespace-nowrap">{song.name}</span>
+                                  {song.explicit && (
+                                    <Badge variant="outline" className="text-xs px-1 py-0 flex-shrink-0">
+                                      E
+                                    </Badge>
+                                  )}
+                                </div>
+                                <div className="text-xs text-muted-foreground truncate whitespace-nowrap">
+                                  Track {song.track_number}
+                                  {song.duration_ms > 0 ? ` • ${formatSongDuration(song.duration_ms)}` : ''}
+                                </div>
+                              </div>
+                              
+                              <div className="flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Play className="w-3 h-3" />
+                                  <span>{song.play_count}</span>
+                                </div>
+                                <div className="flex items-center gap-1 whitespace-nowrap">
+                                  <Clock className="w-3 h-3" />
+                                  <span>{formatDuration(song.total_listening_time_ms)}</span>
+                                </div>
+                              </div>
                             </div>
-                            <div className="text-xs text-muted-foreground truncate whitespace-nowrap">
-                              Track {song.track_number}
-                              {song.duration_ms > 0 ? ` • ${formatSongDuration(song.duration_ms)}` : ''}
-                            </div>
-                          </div>
-                          
-                          <div className="flex items-center gap-3 text-xs text-muted-foreground flex-shrink-0">
-                            <div className="flex items-center gap-1 whitespace-nowrap">
-                              <Play className="w-3 h-3" />
-                              <span>{song.play_count}</span>
-                            </div>
-                            <div className="flex items-center gap-1 whitespace-nowrap">
-                              <Clock className="w-3 h-3" />
-                              <span>{formatDuration(song.total_listening_time_ms)}</span>
-                            </div>
-                          </div>
+                            ))}
                         </div>
-                        ))}
-                      </div>
-                    )}
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           )}
         </DialogContent>

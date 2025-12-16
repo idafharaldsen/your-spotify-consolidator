@@ -102,6 +102,34 @@ export interface CleanedAlbum {
   original_albumIds: string[];
 }
 
+export interface ArtistTopSong {
+  songId: string;
+  name: string;
+  play_count: number;
+  total_listening_time_ms: number;
+  album: {
+    name: string;
+    images: Array<{
+      height: number;
+      url: string;
+      width: number;
+    }>;
+  };
+}
+
+export interface ArtistTopAlbum {
+  primaryAlbumId: string;
+  name: string;
+  play_count: number;
+  total_listening_time_ms: number;
+  images: Array<{
+    height: number;
+    url: string;
+    width: number;
+  }>;
+  artists: string[];
+}
+
 export interface CleanedArtist {
   rank: number;
   duration_ms: number;
@@ -130,6 +158,8 @@ export interface CleanedArtist {
     year: string;
     totalListeningTimeMs: number;
   }>; // Yearly play time since first year the artist was played
+  top_songs?: ArtistTopSong[]; // Top 5 songs by play time
+  top_albums?: ArtistTopAlbum[]; // Top 5 albums by play time
 }
 
 // Song within album (for detailed album view)

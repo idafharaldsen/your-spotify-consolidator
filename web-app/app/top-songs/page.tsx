@@ -577,10 +577,10 @@ export default function TopSongsPage() {
       
       {/* Song Details Modal */}
       <Dialog open={!!selectedSong} onOpenChange={(open) => !open && setSelectedSong(null)}>
-        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col overflow-hidden">
+        <DialogContent className="max-w-2xl p-4 sm:p-6 sm:max-h-[90vh] flex flex-col">
           {selectedSong && (
-            <div className="flex flex-col overflow-hidden h-full">
-              <DialogHeader className="flex-shrink-0">
+            <div className="flex flex-col h-full min-h-0">
+              <DialogHeader className="flex-shrink-0 pb-4">
                 <div className="flex flex-col items-center gap-4 mb-2">
                   <div className="relative w-32 h-32 flex-shrink-0 rounded-lg overflow-hidden bg-muted">
                     {selectedSong.album.images?.[0]?.url ? (
@@ -640,37 +640,40 @@ export default function TopSongsPage() {
                 </div>
               </DialogHeader>
               
-              {/* Yearly Play Time Section */}
-              {selectedSong.yearly_play_time && selectedSong.yearly_play_time.length > 0 && (
-                <div className="mt-4 flex-shrink-0 border-t pt-4">
-                  <button
-                    onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
-                    className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
-                  >
-                    <h4 className="font-medium text-sm text-muted-foreground">
-                      Play Time by Year
-                    </h4>
-                    {yearlyPlayTimeExpanded ? (
-                      <ChevronUp className="w-4 h-4 text-muted-foreground" />
-                    ) : (
-                      <ChevronDown className="w-4 h-4 text-muted-foreground" />
-                    )}
-                  </button>
-                  <div 
-                    className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
-                      yearlyPlayTimeExpanded ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'
-                    }`}
-                  >
-                    {mounted && yearlyPlayTimeExpanded && (
-                      <HighchartsReact
-                        highcharts={Highcharts}
-                        options={getYearlyPlayTimeChartOptions()}
-                        ref={yearlyChartRef}
-                      />
-                    )}
+              {/* Scrollable Content Area */}
+              <div className="flex-1 overflow-y-auto min-h-0">
+                {/* Yearly Play Time Section */}
+                {selectedSong.yearly_play_time && selectedSong.yearly_play_time.length > 0 && (
+                  <div className="border-t pt-4">
+                    <button
+                      onClick={() => setYearlyPlayTimeExpanded(!yearlyPlayTimeExpanded)}
+                      className="flex items-center justify-between w-full mb-3 hover:opacity-80 transition-opacity"
+                    >
+                      <h4 className="font-medium text-sm text-muted-foreground">
+                        Play Time by Year
+                      </h4>
+                      {yearlyPlayTimeExpanded ? (
+                        <ChevronUp className="w-4 h-4 text-muted-foreground" />
+                      ) : (
+                        <ChevronDown className="w-4 h-4 text-muted-foreground" />
+                      )}
+                    </button>
+                    <div 
+                      className={`w-full -mx-2 sm:mx-0 overflow-hidden transition-all duration-300 ease-in-out ${
+                        yearlyPlayTimeExpanded ? 'opacity-100' : 'max-h-0 opacity-0'
+                      }`}
+                    >
+                      {mounted && yearlyPlayTimeExpanded && (
+                        <HighchartsReact
+                          highcharts={Highcharts}
+                          options={getYearlyPlayTimeChartOptions()}
+                          ref={yearlyChartRef}
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
-              )}
+                )}
+              </div>
             </div>
           )}
         </DialogContent>

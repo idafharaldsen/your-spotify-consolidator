@@ -17,7 +17,9 @@ import type {
   TopSong,
   TopArtist,
   TopAlbum,
-  HourlyListeningDistribution
+  HourlyListeningDistribution,
+  ArtistTopSong,
+  ArtistTopAlbum
 } from './utils/types';
 
 class CleanedFilesGenerator {
@@ -166,6 +168,120 @@ class CleanedFilesGenerator {
         }))
         .sort((a, b) => a.year.localeCompare(b.year));
       
+      // Calculate top songs for this artist (consolidated by song name)
+      const songMap = new Map<string, {
+        songId: string;
+        name: string;
+        playCount: number;
+        totalListeningTime: number;
+        album: {
+          name: string;
+          images: Array<{ height: number; url: string; width: number }>;
+        };
+      }>();
+      
+      data.songs.forEach(song => {
+        const songKey = song.name.toLowerCase().trim();
+        if (songMap.has(songKey)) {
+          const existing = songMap.get(songKey)!;
+          existing.playCount += song.playCount;
+          existing.totalListeningTime += song.totalListeningTime;
+          // Use song with more plays as representative
+          if (song.playCount > existing.playCount || 
+              (song.album.images && song.album.images.length > 0 && (!existing.album.images || existing.album.images.length === 0))) {
+            existing.songId = song.songId;
+            existing.name = song.name;
+            if (song.album.images && song.album.images.length > 0) {
+              existing.album.images = song.album.images;
+            }
+          }
+        } else {
+          songMap.set(songKey, {
+            songId: song.songId,
+            name: song.name,
+            playCount: song.playCount,
+            totalListeningTime: song.totalListeningTime,
+            album: {
+              name: song.album.name,
+              images: song.album.images || []
+            }
+          });
+        }
+      });
+      
+      const topSongs: ArtistTopSong[] = Array.from(songMap.values())
+        .sort((a, b) => b.totalListeningTime - a.totalListeningTime)
+        .slice(0, 5)
+        .map(song => ({
+          songId: song.songId,
+          name: song.name,
+          play_count: song.playCount,
+          total_listening_time_ms: song.totalListeningTime,
+          album: {
+            name: song.album.name,
+            images: song.album.images
+          }
+        }));
+      
+      // Calculate top albums for this artist (consolidated by album name using consolidation rules)
+      const albumMap = new Map<string, {
+        primaryAlbumId: string;
+        name: string;
+        playCount: number;
+        totalListeningTime: number;
+        images: Array<{ height: number; url: string; width: number }>;
+        artists: string[];
+      }>();
+      
+      data.songs.forEach(song => {
+        if (!song.album.name || song.album.name.trim() === '') {
+          return;
+        }
+        
+        const albumName = song.album.name.trim();
+        // Normalize album name using consolidation rules
+        const normalizedAlbumName = this.consolidator.normalizeAlbumNameForGrouping(albumName, artistName);
+        const albumKey = normalizedAlbumName.toLowerCase();
+        
+        if (albumMap.has(albumKey)) {
+          const existing = albumMap.get(albumKey)!;
+          existing.playCount += song.playCount;
+          existing.totalListeningTime += song.totalListeningTime;
+          // Use album with more plays or better images as representative
+          if (song.playCount > existing.playCount || 
+              (song.album.images && song.album.images.length > 0 && (!existing.images || existing.images.length === 0))) {
+            existing.primaryAlbumId = song.songId; // Use songId as album identifier
+            const baseName = this.consolidator.getBaseAlbumNameForGrouping(albumName, artistName);
+            existing.name = baseName || albumName;
+            if (song.album.images && song.album.images.length > 0) {
+              existing.images = song.album.images;
+            }
+          }
+        } else {
+          const baseName = this.consolidator.getBaseAlbumNameForGrouping(albumName, artistName);
+          albumMap.set(albumKey, {
+            primaryAlbumId: song.songId,
+            name: baseName || albumName,
+            playCount: song.playCount,
+            totalListeningTime: song.totalListeningTime,
+            images: song.album.images || [],
+            artists: song.artists.length > 0 ? song.artists : [artistName]
+          });
+        }
+      });
+      
+      const topAlbums: ArtistTopAlbum[] = Array.from(albumMap.values())
+        .sort((a, b) => b.totalListeningTime - a.totalListeningTime)
+        .slice(0, 5)
+        .map(album => ({
+          primaryAlbumId: album.primaryAlbumId,
+          name: album.name,
+          play_count: album.playCount,
+          total_listening_time_ms: album.totalListeningTime,
+          images: album.images,
+          artists: album.artists
+        }));
+      
       return {
         rank: 0,
         duration_ms: data.songs.reduce((sum, song) => sum + song.duration_ms, 0),
@@ -186,7 +302,9 @@ class CleanedFilesGenerator {
         },
         consolidated_count: data.totalPlayCount,
         original_artistIds: [firstSong.songId],
-        yearly_play_time: yearlyPlayTime.length > 0 ? yearlyPlayTime : undefined
+        yearly_play_time: yearlyPlayTime.length > 0 ? yearlyPlayTime : undefined,
+        top_songs: topSongs.length > 0 ? topSongs : undefined,
+        top_albums: topAlbums.length > 0 ? topAlbums : undefined
       };
     });
 

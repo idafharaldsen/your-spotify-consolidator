@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import type { CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, AlbumSong, ConsolidationRules, ConsolidationRule } from './types';
+import type { CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, AlbumSong, ConsolidationRules, ConsolidationRule, ArtistTopSong, ArtistTopAlbum } from './types';
 
 /**
  * Consolidation rules manager
@@ -292,6 +292,90 @@ export class Consolidator {
         } else if (!existing.yearly_play_time && artist.yearly_play_time) {
           // If existing doesn't have yearly play time but new one does, use the new one
           existing.yearly_play_time = artist.yearly_play_time;
+        }
+        
+        // Merge top songs
+        if (artist.top_songs && artist.top_songs.length > 0) {
+          const songMap = new Map<string, ArtistTopSong>();
+          
+          // Add existing top songs
+          if (existing.top_songs && existing.top_songs.length > 0) {
+            existing.top_songs.forEach(song => {
+              const songKey = song.name.toLowerCase().trim();
+              songMap.set(songKey, { ...song });
+            });
+          }
+          
+          // Merge new top songs
+          artist.top_songs.forEach(song => {
+            const songKey = song.name.toLowerCase().trim();
+            if (songMap.has(songKey)) {
+              const existingSong = songMap.get(songKey)!;
+              existingSong.play_count += song.play_count;
+              existingSong.total_listening_time_ms += song.total_listening_time_ms;
+              // Use song with better images if available
+              if (song.album.images && song.album.images.length > 0 && 
+                  (!existingSong.album.images || existingSong.album.images.length === 0)) {
+                existingSong.album.images = song.album.images;
+              }
+            } else {
+              songMap.set(songKey, { ...song });
+            }
+          });
+          
+          // Get top 5 by total listening time
+          existing.top_songs = Array.from(songMap.values())
+            .sort((a, b) => b.total_listening_time_ms - a.total_listening_time_ms)
+            .slice(0, 5);
+        } else if (!existing.top_songs && artist.top_songs) {
+          existing.top_songs = artist.top_songs;
+        }
+        
+        // Merge top albums
+        if (artist.top_albums && artist.top_albums.length > 0) {
+          const albumMap = new Map<string, ArtistTopAlbum>();
+          const artistName = existing.artist.name;
+          
+          // Add existing top albums
+          if (existing.top_albums && existing.top_albums.length > 0) {
+            existing.top_albums.forEach(album => {
+              const albumKey = this.rulesManager.normalizeAlbumName(album.name, artistName).toLowerCase();
+              albumMap.set(albumKey, { ...album });
+            });
+          }
+          
+          // Merge new top albums
+          artist.top_albums.forEach(album => {
+            const albumKey = this.rulesManager.normalizeAlbumName(album.name, artistName).toLowerCase();
+            if (albumMap.has(albumKey)) {
+              const existingAlbum = albumMap.get(albumKey)!;
+              existingAlbum.play_count += album.play_count;
+              existingAlbum.total_listening_time_ms += album.total_listening_time_ms;
+              // Use album with better images if available
+              if (album.images && album.images.length > 0 && 
+                  (!existingAlbum.images || existingAlbum.images.length === 0)) {
+                existingAlbum.images = album.images;
+              }
+              // Get base name from consolidation rules
+              const baseName = this.rulesManager.getBaseAlbumName(album.name, artistName);
+              if (baseName) {
+                existingAlbum.name = baseName;
+              }
+            } else {
+              const baseName = this.rulesManager.getBaseAlbumName(album.name, artistName);
+              if (baseName) {
+                album.name = baseName;
+              }
+              albumMap.set(albumKey, { ...album });
+            }
+          });
+          
+          // Get top 5 by total listening time
+          existing.top_albums = Array.from(albumMap.values())
+            .sort((a, b) => b.total_listening_time_ms - a.total_listening_time_ms)
+            .slice(0, 5);
+        } else if (!existing.top_albums && artist.top_albums) {
+          existing.top_albums = artist.top_albums;
         }
         
         duplicatesRemoved++;
