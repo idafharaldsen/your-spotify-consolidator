@@ -3,6 +3,20 @@ import * as path from 'path';
 import type { CleanedSong, CleanedAlbum, CleanedArtist, AlbumWithSongs, AlbumSong, ConsolidationRules, ConsolidationRule, ArtistTopSong, ArtistTopAlbum } from './types';
 
 /**
+ * Normalize dash variants to standard hyphen (U+002D)
+ * Handles en dash (U+2013), em dash (U+2014), and hyphen-minus (U+002D)
+ */
+function normalizeDashes(text: string): string {
+  return text
+    .replace(/\u2013/g, '-') // En dash → hyphen
+    .replace(/\u2014/g, '-') // Em dash → hyphen
+    .replace(/\u2015/g, '-') // Horizontal bar → hyphen
+    .replace(/\u2212/g, '-') // Minus sign → hyphen
+    .replace(/\uFE63/g, '-') // Small hyphen-minus → hyphen
+    .replace(/\uFF0D/g, '-'); // Fullwidth hyphen-minus → hyphen
+}
+
+/**
  * Consolidation rules manager
  */
 export class ConsolidationRulesManager {
@@ -27,11 +41,11 @@ export class ConsolidationRulesManager {
         this.consolidationRulesData = rulesData;
         
         rulesData.rules.forEach((rule: ConsolidationRule) => {
-          const artistKey = rule.artistName.toLowerCase().trim();
-          const baseAlbumName = rule.baseAlbumName.toLowerCase().trim();
+          const artistKey = normalizeDashes(rule.artistName.toLowerCase().trim());
+          const baseAlbumName = normalizeDashes(rule.baseAlbumName.toLowerCase().trim());
           
           rule.variations.forEach((variation: string) => {
-            const variationKey = variation.toLowerCase().trim();
+            const variationKey = normalizeDashes(variation.toLowerCase().trim());
             const mapKey = `${artistKey}|${variationKey}`;
             rulesMap.set(mapKey, baseAlbumName);
           });
@@ -57,14 +71,17 @@ export class ConsolidationRulesManager {
    */
   normalizeAlbumName(albumName: string, artistName: string): string {
     const rules = this.loadConsolidationRules();
-    const key = `${artistName.toLowerCase().trim()}|${albumName.toLowerCase().trim()}`;
+    // Normalize dashes in both album name and artist name before lookup
+    const normalizedAlbumName = normalizeDashes(albumName.toLowerCase().trim());
+    const normalizedArtistName = normalizeDashes(artistName.toLowerCase().trim());
+    const key = `${normalizedArtistName}|${normalizedAlbumName}`;
     const normalized = rules.get(key);
     
     if (normalized) {
       return normalized;
     }
     
-    return albumName.toLowerCase().trim();
+    return normalizedAlbumName;
   }
 
   /**
@@ -76,9 +93,12 @@ export class ConsolidationRulesManager {
     }
     
     const normalized = this.normalizeAlbumName(albumName, artistName);
+    // Normalize dashes when comparing with rules
+    const normalizedArtistName = normalizeDashes(artistName.toLowerCase().trim());
+    const normalizedBaseAlbumName = normalizeDashes(normalized);
     const rule = this.consolidationRulesData.rules.find((r: ConsolidationRule) => 
-      r.artistName.toLowerCase().trim() === artistName.toLowerCase().trim() &&
-      r.baseAlbumName.toLowerCase().trim() === normalized
+      normalizeDashes(r.artistName.toLowerCase().trim()) === normalizedArtistName &&
+      normalizeDashes(r.baseAlbumName.toLowerCase().trim()) === normalizedBaseAlbumName
     );
     
     return rule ? rule.baseAlbumName : null;
