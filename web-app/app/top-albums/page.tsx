@@ -10,7 +10,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
-import SortToggle, { SortOption } from '@/components/SortToggle'
+import FilterSortToggle, { SortOption } from '@/components/FilterSortToggle'
 import RankingMovement from '@/components/RankingMovement'
 
 interface AlbumImage {
@@ -205,6 +205,7 @@ export default function TopAlbumsPage() {
   })
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('plays')
+  const [showNewOnly, setShowNewOnly] = useState(false)
   const [mounted, setMounted] = useState(false)
   const [yearlyPlayTimeExpanded, setYearlyPlayTimeExpanded] = useState(true)
   const [songsExpanded, setSongsExpanded] = useState(true)
@@ -250,16 +251,68 @@ export default function TopAlbumsPage() {
     fetchAlbums()
   }, [])
   
-  const filteredAlbums = albumsData?.albums.filter(album => 
-    album.album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    album.album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
-  ) || []
+  // Helper function to get plays in past 30 days
+  const getPlays30Days = (album: AlbumData): number => {
+    return album.count - (album.count_30_days_ago || 0)
+  }
+
+  // Helper function to check if album is new in past 30 days
+  const isNewInPast30Days = (album: AlbumData): boolean => {
+    // An item is "new" if it wasn't in the top 500, 30 days ago
+    // rank_30_days_ago is undefined if the item wasn't ranked 30 days ago
+    return album.rank_30_days_ago === undefined && album.count > 0
+  }
+
+  const filteredAlbums = albumsData?.albums.filter(album => {
+    // Search filter
+    const matchesSearch = album.album.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      album.album.artists?.some(artist => artist.toLowerCase().includes(searchTerm.toLowerCase()))
+    
+    // New filter
+    const matchesNewFilter = !showNewOnly || isNewInPast30Days(album)
+    
+    return matchesSearch && matchesNewFilter
+  }) || []
   
+  // Helper function to compare release dates
+  const compareReleaseDates = (a: AlbumData, b: AlbumData, ascending: boolean): number => {
+    const dateA = new Date(a.album.release_date).getTime()
+    const dateB = new Date(b.album.release_date).getTime()
+    // Handle invalid dates
+    if (isNaN(dateA) && isNaN(dateB)) return 0
+    if (isNaN(dateA)) return 1
+    if (isNaN(dateB)) return -1
+    return ascending ? dateA - dateB : dateB - dateA
+  }
+
+  // Helper function to compare first played dates
+  const compareFirstPlayedDates = (a: AlbumData, b: AlbumData): number => {
+    const dateA = a.earliest_played_at ? new Date(a.earliest_played_at).getTime() : NaN
+    const dateB = b.earliest_played_at ? new Date(b.earliest_played_at).getTime() : NaN
+    // Handle missing dates - put them at the end
+    if (isNaN(dateA) && isNaN(dateB)) return 0
+    if (isNaN(dateA)) return 1
+    if (isNaN(dateB)) return -1
+    // Sort earliest first (oldest first played dates first)
+    return dateA - dateB
+  }
+
   // Sort filtered albums based on selected sort option
   const sortedAlbums = [...filteredAlbums].sort((a, b) => {
     switch (sortBy) {
       case 'duration':
         return (b.total_duration_ms || 0) - (a.total_duration_ms || 0)
+      case 'plays_30_days':
+        return getPlays30Days(b) - getPlays30Days(a)
+      case 'release_date':
+        // Sort by release date, newest first
+        return compareReleaseDates(a, b, false)
+      case 'release_date_old':
+        // Sort by release date, oldest first
+        return compareReleaseDates(a, b, true)
+      case 'first_played':
+        // Sort by first played date, earliest first
+        return compareFirstPlayedDates(a, b)
       case 'plays':
       default:
         return b.count - a.count
@@ -400,12 +453,18 @@ export default function TopAlbumsPage() {
       additionalControls={
         <div className="flex items-center gap-2">
           <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
-          <SortToggle 
-            sortBy={sortBy} 
+          <FilterSortToggle
+            sortBy={sortBy}
             onSortChange={setSortBy}
-            options={[
+            showNewOnly={showNewOnly}
+            onFilterToggle={setShowNewOnly}
+            sortOptions={[
               { value: 'plays', label: 'Total Plays' },
+              { value: 'plays_30_days', label: 'Plays (30d)' },
               { value: 'duration', label: 'Total Duration' },
+              { value: 'release_date', label: 'Release Date (new to old)' },
+              { value: 'release_date_old', label: 'Release Date (old to new)' },
+              { value: 'first_played', label: 'First Played' },
             ]}
           />
         </div>

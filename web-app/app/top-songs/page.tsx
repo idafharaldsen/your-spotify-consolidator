@@ -10,7 +10,7 @@ import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
-import SortToggle, { SortOption } from '@/components/SortToggle'
+import FilterSortToggle, { SortOption } from '@/components/FilterSortToggle'
 import RankingMovement from '@/components/RankingMovement'
 
 interface AlbumImage {
@@ -147,6 +147,7 @@ export default function TopSongsPage() {
     return 'grid'
   })
   const [sortBy, setSortBy] = useState<SortOption>('plays')
+  const [showNewOnly, setShowNewOnly] = useState(false)
   const [selectedSong, setSelectedSong] = useState<SongData | null>(null)
   const [mounted, setMounted] = useState(false)
   const [yearlyPlayTimeExpanded, setYearlyPlayTimeExpanded] = useState(true)
@@ -184,17 +185,37 @@ export default function TopSongsPage() {
     fetchSongs()
   }, [])
   
-  const filteredSongs = songsData?.songs.filter(song => 
-    song.song.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    song.album.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-    song.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
-  ) || []
+  // Helper function to get plays in past 30 days
+  const getPlays30Days = (song: SongData): number => {
+    return song.count - (song.count_30_days_ago || 0)
+  }
+
+  // Helper function to check if song is new in past 30 days
+  const isNewInPast30Days = (song: SongData): boolean => {
+    // An item is "new" if it wasn't in the top 500, 30 days ago
+    // rank_30_days_ago is undefined if the item wasn't ranked 30 days ago
+    return song.rank_30_days_ago === undefined && song.count > 0
+  }
+
+  const filteredSongs = songsData?.songs.filter(song => {
+    // Search filter
+    const matchesSearch = song.song.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      song.album.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      song.artist.name.toLowerCase().includes(searchTerm.toLowerCase())
+    
+    // New filter
+    const matchesNewFilter = !showNewOnly || isNewInPast30Days(song)
+    
+    return matchesSearch && matchesNewFilter
+  }) || []
   
   // Sort filtered songs based on selected sort option
   const sortedSongs = [...filteredSongs].sort((a, b) => {
     switch (sortBy) {
       case 'duration':
         return (b.duration_ms || 0) - (a.duration_ms || 0)
+      case 'plays_30_days':
+        return getPlays30Days(b) - getPlays30Days(a)
       case 'plays':
       default:
         return b.count - a.count
@@ -334,11 +355,14 @@ export default function TopSongsPage() {
       additionalControls={
         <div className="flex items-center gap-2">
           <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
-          <SortToggle 
-            sortBy={sortBy} 
+          <FilterSortToggle
+            sortBy={sortBy}
             onSortChange={setSortBy}
-            options={[
+            showNewOnly={showNewOnly}
+            onFilterToggle={setShowNewOnly}
+            sortOptions={[
               { value: 'plays', label: 'Total Plays' },
+              { value: 'plays_30_days', label: 'Plays (30d)' },
               { value: 'duration', label: 'Total Duration' },
             ]}
           />
