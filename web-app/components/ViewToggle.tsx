@@ -11,14 +11,14 @@ interface ViewToggleProps {
 
 export default function ViewToggle({ viewMode, onViewModeChange }: ViewToggleProps) {
   return (
-    <div className="inline-flex items-center border border-input rounded-md bg-background p-1">
+    <div className="inline-flex items-center border border-white/10 rounded-md bg-card/40 backdrop-blur-sm p-1">
       <Button
         variant={viewMode === 'grid' ? 'default' : 'ghost'}
         size="sm"
         onClick={() => onViewModeChange('grid')}
         className={cn(
           'h-8 px-3',
-          viewMode === 'grid' && 'bg-primary text-primary-foreground'
+          viewMode === 'grid' && 'bg-primary/20 text-primary border border-primary/30'
         )}
         aria-label="Grid view"
       >
@@ -30,7 +30,7 @@ export default function ViewToggle({ viewMode, onViewModeChange }: ViewTogglePro
         onClick={() => onViewModeChange('list')}
         className={cn(
           'h-8 px-3',
-          viewMode === 'list' && 'bg-primary text-primary-foreground'
+          viewMode === 'list' && 'bg-primary/20 text-primary border border-primary/30'
         )}
         aria-label="List view"
       >

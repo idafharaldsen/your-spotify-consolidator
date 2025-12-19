@@ -45,17 +45,19 @@ export default function FilterSortToggle({
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button 
-          variant="outline" 
-          size="sm"
-          className={cn(
-            'h-8 px-3',
-            showNewOnly && 'bg-primary/10 border-primary/20'
-          )}
-        >
-          <ArrowUpDown className="w-4 h-4 mr-2" />
-          Filter & Sort
-        </Button>
+        <div className="inline-flex items-center border border-white/10 rounded-md bg-card/40 backdrop-blur-sm p-1">
+          <Button 
+            variant="outline" 
+            size="sm"
+            className={cn(
+              'h-8 px-3 border-0 bg-transparent',
+              showNewOnly && 'bg-primary/20 text-primary'
+            )}
+          >
+            <ArrowUpDown className="w-4 h-4 mr-2" />
+            Filter & Sort
+          </Button>
+        </div>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="w-56">
         {/* Filter Section */}

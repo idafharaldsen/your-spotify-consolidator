@@ -13,18 +13,18 @@ export default function SpotifyStatsNav({ currentPage }: SpotifyStatsNavProps) {
     const isActive = currentPage === page
     
     if (isActive) {
-      return `${baseClasses} bg-primary text-primary-foreground`
+      return `${baseClasses} bg-primary/20 text-primary border border-primary/30`
     }
     
     const borderClasses = isFirst 
       ? '' 
-      : 'border-t sm:border-t-0 sm:border-l border-input'
+      : 'border-t sm:border-t-0 sm:border-l border-white/10'
     
-    return `${baseClasses} text-muted-foreground hover:text-foreground ${borderClasses}`
+    return `${baseClasses} text-muted-foreground hover:text-foreground hover:bg-surface-800/30 ${borderClasses}`
   }
 
   return (
-    <div className="flex flex-col sm:flex-row border border-input rounded-md bg-background w-full sm:w-fit overflow-hidden">
+    <div className="flex flex-col sm:flex-row border border-white/10 rounded-md bg-card/40 backdrop-blur-sm w-full sm:w-fit overflow-hidden">
       <Link
         href="/"
         className={`${getLinkClasses('stats', true)} sm:rounded-l-md`}

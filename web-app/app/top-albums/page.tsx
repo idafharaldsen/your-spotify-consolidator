@@ -480,23 +480,25 @@ export default function TopAlbumsPage() {
       ) : (
         <>
           {/* Search Bar */}
-          <div className="relative max-w-md mx-auto mb-8">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4" />
-            <input
-              type="text"
-              placeholder="Search albums or artists..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="w-full pl-10 pr-10 py-2 border border-input rounded-md bg-background text-foreground focus:outline-none focus:ring-2 focus:ring-ring"
-            />
-            {searchTerm && (
-              <button
-                onClick={() => setSearchTerm('')}
-                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors"
-              >
-                <X className="w-4 h-4" />
-              </button>
-            )}
+          <div className="relative max-w-md mx-auto mt-4 mb-8">
+            <div className="relative backdrop-blur-sm bg-card/40 border border-white/10 rounded-md">
+              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4 z-10" />
+              <input
+                type="text"
+                placeholder="Search albums or artists..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="w-full pl-10 pr-10 py-2 bg-transparent text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30 transition-all rounded-md"
+              />
+              {searchTerm && (
+                <button
+                  onClick={() => setSearchTerm('')}
+                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors z-10"
+                >
+                  <X className="w-4 h-4" />
+                </button>
+              )}
+            </div>
           </div>
           
           {/* Albums Display */}
@@ -505,7 +507,7 @@ export default function TopAlbumsPage() {
             {sortedAlbums.map((album) => (
               <Card 
                 key={album.primaryAlbumId} 
-                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                className="group backdrop-blur-md bg-card/70 border-white/10 shadow-md hover:shadow-xl hover:bg-card/85 hover:border-white/20 transition-all duration-200 cursor-pointer"
                 onClick={() => handleAlbumClick(album)}
               >
                 <CardContent className="p-3">
@@ -582,7 +584,7 @@ export default function TopAlbumsPage() {
             {sortedAlbums.map((album) => (
               <Card 
                 key={album.primaryAlbumId} 
-                className="group hover:shadow-lg transition-shadow duration-200 cursor-pointer"
+                className="group backdrop-blur-md bg-card/70 border-white/10 shadow-md hover:shadow-xl hover:bg-card/85 hover:border-white/20 transition-all duration-200 cursor-pointer"
                 onClick={() => handleAlbumClick(album)}
               >
                 <CardContent className="p-3 md:p-2">
