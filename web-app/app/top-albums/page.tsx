@@ -517,23 +517,23 @@ export default function TopAlbumsPage() {
                   {/* Album Info */}
                   <div className="space-y-2">
                     {/* Rank Badge */}
-                    <div className="flex items-center justify-between">
-                      <div className="flex items-center gap-2">
-                        <Badge variant="secondary" className="text-xs">
-                          #{album.rank}
-                        </Badge>
-                        <RankingMovement
-                          currentRank={album.rank}
-                          rank30DaysAgo={album.rank_30_days_ago}
-                          currentCount={album.count}
-                          count30DaysAgo={album.count_30_days_ago}
-                          size="sm"
-                        />
-                      </div>
-                      <div className="flex items-center text-xs text-muted-foreground">
-                        <Play className="w-3 h-3 mr-1" />
-                        {album.count}
-                      </div>
+                    <div className="flex flex-col gap-1 items-start">
+                      <RankingMovement
+                        currentRank={album.rank}
+                        rank30DaysAgo={album.rank_30_days_ago}
+                        currentCount={album.count}
+                        count30DaysAgo={album.count_30_days_ago}
+                        size="sm"
+                        type="rank"
+                      />
+                      <RankingMovement
+                        currentRank={album.rank}
+                        rank30DaysAgo={album.rank_30_days_ago}
+                        currentCount={album.count}
+                        count30DaysAgo={album.count_30_days_ago}
+                        size="sm"
+                        type="playCount"
+                      />
                     </div>
                     
                     {/* Album Name */}
@@ -570,7 +570,7 @@ export default function TopAlbumsPage() {
         ) : (
           <div className="space-y-1">
             {/* Header - Hidden on mobile */}
-            <div className="hidden md:grid grid-cols-12 gap-4 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
+            <div className="hidden md:grid grid-cols-12 gap-2 px-4 py-1 text-xs font-medium text-muted-foreground border-b">
               <div className="col-span-1">Rank</div>
               <div className="col-span-1"></div>
               <div className="col-span-4">Album</div>
@@ -587,21 +587,17 @@ export default function TopAlbumsPage() {
               >
                 <CardContent className="p-3 md:p-2">
                   {/* Desktop Layout */}
-                  <div className="hidden md:grid grid-cols-12 gap-4 items-center">
+                  <div className="hidden md:grid grid-cols-12 gap-2 items-center">
                     {/* Rank */}
                     <div className="col-span-1">
-                      <div className="flex items-center gap-2">
-                        <Badge variant="secondary" className="text-xs">
-                          #{album.rank}
-                        </Badge>
-                        <RankingMovement
-                          currentRank={album.rank}
-                          rank30DaysAgo={album.rank_30_days_ago}
-                          currentCount={album.count}
-                          count30DaysAgo={album.count_30_days_ago}
-                          size="sm"
-                        />
-                      </div>
+                      <RankingMovement
+                        currentRank={album.rank}
+                        rank30DaysAgo={album.rank_30_days_ago}
+                        currentCount={album.count}
+                        count30DaysAgo={album.count_30_days_ago}
+                        size="sm"
+                        type="rank"
+                      />
                     </div>
                     
                     {/* Album Image */}
@@ -633,10 +629,14 @@ export default function TopAlbumsPage() {
                     
                     {/* Play Count */}
                     <div className="col-span-1">
-                      <div className="flex items-center text-sm text-muted-foreground">
-                        <Play className="w-3 h-3 mr-1" />
-                        {album.count}
-                      </div>
+                      <RankingMovement
+                        currentRank={album.rank}
+                        rank30DaysAgo={album.rank_30_days_ago}
+                        currentCount={album.count}
+                        count30DaysAgo={album.count_30_days_ago}
+                        size="sm"
+                        type="playCount"
+                      />
                     </div>
                     
                     {/* Duration */}
@@ -662,22 +662,22 @@ export default function TopAlbumsPage() {
                     {/* Album Info */}
                     <div className="flex-1 min-w-0">
                       <div className="flex items-center justify-between mb-1">
-                        <div className="flex items-center gap-2">
-                          <Badge variant="secondary" className="text-xs">
-                            #{album.rank}
-                          </Badge>
-                          <RankingMovement
-                            currentRank={album.rank}
-                            rank30DaysAgo={album.rank_30_days_ago}
-                            currentCount={album.count}
-                            count30DaysAgo={album.count_30_days_ago}
-                            size="sm"
-                          />
-                        </div>
-                        <div className="flex items-center text-xs text-muted-foreground">
-                          <Play className="w-3 h-3 mr-1" />
-                          {album.count}
-                        </div>
+                        <RankingMovement
+                          currentRank={album.rank}
+                          rank30DaysAgo={album.rank_30_days_ago}
+                          currentCount={album.count}
+                          count30DaysAgo={album.count_30_days_ago}
+                          size="sm"
+                          type="rank"
+                        />
+                        <RankingMovement
+                          currentRank={album.rank}
+                          rank30DaysAgo={album.rank_30_days_ago}
+                          currentCount={album.count}
+                          count30DaysAgo={album.count_30_days_ago}
+                          size="sm"
+                          type="playCount"
+                        />
                       </div>
                       
                       <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">

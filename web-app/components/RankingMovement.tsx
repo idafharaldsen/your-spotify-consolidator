@@ -1,6 +1,6 @@
 'use client'
 
-import { ArrowUp, ArrowDown, Plus } from 'lucide-react'
+import { ArrowUp, ArrowDown, Plus, Play } from 'lucide-react'
 import { Badge } from '@/components/ui/badge'
 
 interface RankingMovementProps {
@@ -9,6 +9,7 @@ interface RankingMovementProps {
   currentCount: number
   count30DaysAgo?: number
   size?: 'sm' | 'md'
+  type?: 'rank' | 'playCount'
 }
 
 export default function RankingMovement({
@@ -16,7 +17,8 @@ export default function RankingMovement({
   rank30DaysAgo,
   currentCount,
   count30DaysAgo,
-  size = 'md'
+  size = 'md',
+  type
 }: RankingMovementProps) {
   // Calculate rank change
   const rankChange = rank30DaysAgo !== undefined 
@@ -34,44 +36,70 @@ export default function RankingMovement({
   const textSize = size === 'sm' ? 'text-xs' : 'text-sm'
   const iconSize = size === 'sm' ? 'w-3 h-3' : 'w-4 h-4'
 
-  return (
-    <div className="flex items-center gap-1.5 flex-wrap">
-      {/* Rank Movement */}
-      {rankChange !== null && rankChange !== 0 && (
-        <Badge 
-          variant={rankChange > 0 ? 'default' : 'destructive'}
-          className={`${textSize} font-medium flex items-center gap-1`}
-        >
-          {rankChange > 0 ? (
+  // If type is specified, render only that type
+  if (type === 'rank') {
+    return (
+      <Badge variant="secondary" className={`${textSize} relative inline-flex w-fit`}>
+        #{currentRank}
+        {rankChange !== null && rankChange > 0 && (
+          <span className="ml-1.5 flex items-center gap-0.5 text-green-600 font-semibold">
             <ArrowUp className={iconSize} />
-          ) : (
+            {rankChange}
+          </span>
+        )}
+        {rankChange !== null && rankChange < 0 && (
+          <span className="ml-1.5 flex items-center gap-0.5 text-white font-semibold">
             <ArrowDown className={iconSize} />
-          )}
-          {Math.abs(rankChange)}
-        </Badge>
+            {Math.abs(rankChange)}
+          </span>
+        )}
+        {isNewEntry && (
+          <span className="ml-1.5 flex items-center gap-0.5 text-green-600 font-semibold">
+            <Plus className={iconSize} />
+            NEW
+          </span>
+        )}
+      </Badge>
+    )
+  }
+
+  if (type === 'playCount') {
+    return (
+      <div className={`flex items-center ${textSize} text-muted-foreground`}>
+        <Play className={`${iconSize} mr-1`} />
+        <span>{currentCount}</span>
+        {playsAdded !== null && playsAdded > 0 && (
+          <span className="ml-1.5 flex items-center gap-0.5 text-green-600 font-semibold">
+            <Plus className={iconSize} />
+            {playsAdded}
+          </span>
+        )}
+      </div>
+    )
+  }
+
+  // Default: return rank badge (for backward compatibility)
+  return (
+    <Badge variant="secondary" className={`${textSize} relative inline-flex w-fit`}>
+      #{currentRank}
+      {rankChange !== null && rankChange > 0 && (
+        <span className="ml-1.5 flex items-center gap-0.5 text-green-600 font-semibold">
+          <ArrowUp className={iconSize} />
+          {rankChange}
+        </span>
       )}
-      
-      {/* New Entry Indicator */}
+      {rankChange !== null && rankChange < 0 && (
+        <span className="ml-1.5 flex items-center gap-0.5 text-white font-semibold">
+          <ArrowDown className={iconSize} />
+          {Math.abs(rankChange)}
+        </span>
+      )}
       {isNewEntry && (
-        <Badge 
-          variant="default"
-          className={`${textSize} font-medium flex items-center gap-1 bg-green-600 hover:bg-green-700`}
-        >
+        <span className="ml-1.5 flex items-center gap-0.5 text-green-600 font-semibold">
           <Plus className={iconSize} />
           NEW
-        </Badge>
+        </span>
       )}
-      
-      {/* Plays Added */}
-      {playsAdded !== null && playsAdded > 0 && (
-        <Badge 
-          variant="outline"
-          className={`${textSize} font-medium flex items-center gap-1 text-green-600 border-green-600`}
-        >
-          <Plus className={iconSize} />
-          {playsAdded}
-        </Badge>
-      )}
-    </div>
+    </Badge>
   )
 }
