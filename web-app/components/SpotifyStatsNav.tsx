@@ -1,5 +1,8 @@
+'use client'
+
 import Link from 'next/link'
-import { Disc, Music2, Users, BarChart3 } from 'lucide-react'
+import { Disc, Music2, Users, BarChart3, Search, X } from 'lucide-react'
+import { useSearch } from './SearchContext'
 
 type SpotifyStatsPage = 'albums' | 'songs' | 'artists' | 'stats'
 
@@ -8,6 +11,9 @@ interface SpotifyStatsNavProps {
 }
 
 export default function SpotifyStatsNav({ currentPage }: SpotifyStatsNavProps) {
+  const { searchTerm, setSearchTerm } = useSearch()
+  const showSearch = currentPage !== 'stats'
+
   const getLinkClasses = (page: SpotifyStatsPage, isFirst: boolean) => {
     const baseClasses = 'flex items-center gap-2 px-3 py-2 text-sm transition-colors'
     const isActive = currentPage === page
@@ -23,36 +29,76 @@ export default function SpotifyStatsNav({ currentPage }: SpotifyStatsNavProps) {
     return `${baseClasses} text-muted-foreground hover:text-foreground hover:bg-surface-800/30 ${borderClasses}`
   }
 
+  const getSearchPlaceholder = () => {
+    switch (currentPage) {
+      case 'songs':
+        return 'Search songs, albums, or artists...'
+      case 'albums':
+        return 'Search albums or artists...'
+      case 'artists':
+        return 'Search artists...'
+      default:
+        return 'Search...'
+    }
+  }
+
   return (
-    <div className="flex flex-col sm:flex-row border border-white/10 rounded-md bg-card/40 backdrop-blur-sm w-full sm:w-fit overflow-hidden">
-      <Link
-        href="/"
-        className={`${getLinkClasses('stats', true)} sm:rounded-l-md`}
-      >
-        <BarChart3 className="w-4 h-4" />
-        Stats
-      </Link>
-      <Link
-        href="/top-albums"
-        className={getLinkClasses('albums', false)}
-      >
-        <Disc className="w-4 h-4" />
-        Albums
-      </Link>
-      <Link
-        href="/top-songs"
-        className={getLinkClasses('songs', false)}
-      >
-        <Music2 className="w-4 h-4" />
-        Songs
-      </Link>
-      <Link
-        href="/top-artists"
-        className={`${getLinkClasses('artists', false)} sm:rounded-r-md`}
-      >
-        <Users className="w-4 h-4" />
-        Artists
-      </Link>
+    <div className="space-y-4 w-full max-w-md mx-auto">
+      <div className="flex justify-center">
+        <div className="flex flex-col sm:flex-row border border-white/10 rounded-md bg-card/40 backdrop-blur-sm w-full sm:w-fit overflow-hidden">
+          <Link
+            href="/"
+            className={`${getLinkClasses('stats', true)} sm:rounded-l-md`}
+          >
+            <BarChart3 className="w-4 h-4" />
+            Stats
+          </Link>
+          <Link
+            href="/top-albums"
+            className={getLinkClasses('albums', false)}
+          >
+            <Disc className="w-4 h-4" />
+            Albums
+          </Link>
+          <Link
+            href="/top-songs"
+            className={getLinkClasses('songs', false)}
+          >
+            <Music2 className="w-4 h-4" />
+            Songs
+          </Link>
+          <Link
+            href="/top-artists"
+            className={`${getLinkClasses('artists', false)} sm:rounded-r-md`}
+          >
+            <Users className="w-4 h-4" />
+            Artists
+          </Link>
+        </div>
+      </div>
+      
+      {showSearch && (
+        <div className="relative w-full">
+          <div className="relative backdrop-blur-sm bg-card/40 border border-white/10 rounded-md">
+            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4 z-10" />
+            <input
+              type="text"
+              placeholder={getSearchPlaceholder()}
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="w-full pl-10 pr-10 py-2 bg-transparent text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30 transition-all rounded-md"
+            />
+            {searchTerm && (
+              <button
+                onClick={() => setSearchTerm('')}
+                className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors z-10"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
+          </div>
+        </div>
+      )}
     </div>
   )
 }

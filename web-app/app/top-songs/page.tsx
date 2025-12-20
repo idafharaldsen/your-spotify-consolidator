@@ -5,13 +5,15 @@ import Image from 'next/image'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog'
-import { Search, Music, Play, X, Clock, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
+import { Music, Play, Clock, ExternalLink, ChevronDown, ChevronUp } from 'lucide-react'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import FilterSortToggle, { SortOption } from '@/components/FilterSortToggle'
 import RankingMovement from '@/components/RankingMovement'
+import { useSearch } from '@/components/SearchContext'
+import { GridSkeleton, ListSkeleton } from '@/components/SkeletonLoader'
 
 interface AlbumImage {
   height: number
@@ -138,7 +140,7 @@ const getCSSVariable = (variable: string): string => {
 
 export default function TopSongsPage() {
   const [songsData, setSongsData] = useState<SongsData | null>(null)
-  const [searchTerm, setSearchTerm] = useState('')
+  const { searchTerm, setSearchTerm } = useSearch()
   const [loading, setLoading] = useState(true)
   const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
     if (typeof window !== 'undefined') {
@@ -156,6 +158,10 @@ export default function TopSongsPage() {
   useEffect(() => {
     setMounted(true)
   }, [])
+  
+  // Use a consistent viewMode for skeleton to avoid hydration mismatch
+  // Always use 'grid' until mounted to match server render
+  const skeletonViewMode = mounted ? viewMode : 'grid'
   
   // Reset expanded state when song changes
   useEffect(() => {
@@ -354,7 +360,7 @@ export default function TopSongsPage() {
       currentPage="songs"
       additionalControls={
         <div className="flex items-center gap-2">
-          <ViewToggle viewMode={viewMode} onViewModeChange={setViewMode} />
+          <ViewToggle viewMode={mounted ? viewMode : 'grid'} onViewModeChange={setViewMode} />
           <FilterSortToggle
             sortBy={sortBy}
             onSortChange={setSortBy}
@@ -370,36 +376,13 @@ export default function TopSongsPage() {
       }
     >
       {loading ? (
-        <div className="flex items-center justify-center py-20">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-muted-foreground">Loading your top songs...</p>
-          </div>
-        </div>
+        skeletonViewMode === 'grid' ? (
+          <GridSkeleton count={12} />
+        ) : (
+          <ListSkeleton count={10} />
+        )
       ) : (
         <>
-          {/* Search Bar */}
-          <div className="relative max-w-md mx-auto mt-4 mb-8">
-            <div className="relative backdrop-blur-sm bg-card/40 border border-white/10 rounded-md">
-              <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground w-4 h-4 z-10" />
-              <input
-                type="text"
-                placeholder="Search songs, albums, or artists..."
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="w-full pl-10 pr-10 py-2 bg-transparent text-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary/30 transition-all rounded-md"
-              />
-              {searchTerm && (
-                <button
-                  onClick={() => setSearchTerm('')}
-                  className="absolute right-3 top-1/2 transform -translate-y-1/2 text-muted-foreground hover:text-foreground transition-colors z-10"
-                >
-                  <X className="w-4 h-4" />
-                </button>
-              )}
-            </div>
-          </div>
-          
           {/* Songs Display */}
         {viewMode === 'grid' ? (
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4">
@@ -515,27 +498,27 @@ export default function TopSongsPage() {
                     </div>
                     
                     {/* Song Name */}
-                    <div className="col-span-3">
-                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors">
+                    <div className="col-span-3 min-w-0">
+                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors break-words">
                         {song.song.name}
                       </h3>
                     </div>
                     
                     {/* Artist Name */}
-                    <div className="col-span-2">
+                    <div className="col-span-2 min-w-0">
                       <button
                         onClick={() => setSearchTerm(song.artist.name)}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left"
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left break-words"
                       >
                         {song.artist.name}
                       </button>
                     </div>
                     
                     {/* Album Name */}
-                    <div className="col-span-3">
+                    <div className="col-span-3 min-w-0">
                       <button
                         onClick={() => setSearchTerm(song.album.name)}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left"
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors line-clamp-1 text-left break-words"
                       >
                         {song.album.name}
                       </button>
@@ -594,20 +577,20 @@ export default function TopSongsPage() {
                         />
                       </div>
                       
-                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1">
+                      <h3 className="font-semibold text-sm leading-tight group-hover:text-primary transition-colors mb-1 break-words">
                         {song.song.name}
                       </h3>
                       
                       <button
                         onClick={() => setSearchTerm(song.artist.name)}
-                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1"
+                        className="text-sm text-muted-foreground hover:text-primary transition-colors text-left mb-1 break-words"
                       >
                         {song.artist.name}
                       </button>
                       
                       <button
                         onClick={() => setSearchTerm(song.album.name)}
-                        className="text-xs text-muted-foreground hover:text-primary transition-colors mb-1 line-clamp-1 text-left"
+                        className="text-xs text-muted-foreground hover:text-primary transition-colors mb-1 line-clamp-1 text-left break-words"
                       >
                         {song.album.name}
                       </button>

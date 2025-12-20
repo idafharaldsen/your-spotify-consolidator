@@ -8,6 +8,7 @@ import SpotifyStatsLayout from '../components/SpotifyStatsLayout'
 import Highcharts from 'highcharts'
 import HighchartsReact from 'highcharts-react-official'
 import { Music2, Users, Play, Clock } from 'lucide-react'
+import { StatsSkeleton } from '@/components/SkeletonLoader'
 
 interface YearlyListeningTime {
   year: string
@@ -375,12 +376,7 @@ export default function StatsPage() {
       currentPage="stats"
     >
       {loading ? (
-        <div className="flex items-center justify-center py-20">
-          <div className="text-center">
-            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
-            <p className="text-muted-foreground">Loading stats...</p>
-          </div>
-        </div>
+        <StatsSkeleton />
       ) : (
         <>
           {/* Stats Display */}
