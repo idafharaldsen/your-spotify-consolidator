@@ -6732,6 +6732,14 @@
     },
     {
       "artistName": "The Velvet Underground",
+      "baseAlbumName": "Loaded",
+      "variations": [
+        "loaded",
+        "loaded: the fully loaded edition"
+      ]
+    },
+    {
+      "artistName": "The Velvet Underground",
       "baseAlbumName": "The Velvet Underground & Nico 45th Anniversary",
       "variations": [
         "the velvet underground & nico 45th anniversary",
@@ -9974,7 +9982,7 @@
       "variations": [
         "stoney",
         "stoney (deluxe)",
-        "stoney (deluxe)"
+        "stoney - deluxe"
       ]
     },
     {

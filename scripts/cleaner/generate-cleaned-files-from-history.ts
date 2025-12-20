@@ -213,12 +213,26 @@ class CleanedFilesGenerator {
     });
 
     const artists: CleanedArtist[] = Array.from(artistMap.entries()).map(([artistName, data]) => {
-      const firstSong = data.songs[0];
-      
-      // Calculate yearly play time across all songs for this artist
+      // Find the song with the most recent listening event to use as the representative song
+      // This avoids issues with old tracks that may have incorrect metadata (e.g., covers now filed under "Various Artists")
+      // We combine this with the yearly play time calculation to avoid an extra iteration
+      let representativeSong = data.songs[0]; // Fallback to first song
+      let mostRecentPlayTime = 0;
       const yearlyPlayTimeMap = new Map<string, number>();
+      
       data.songs.forEach(song => {
         if (song.listeningEvents && song.listeningEvents.length > 0) {
+          // Events are sorted (earliest first), so the last event is the most recent
+          const lastEvent = song.listeningEvents[song.listeningEvents.length - 1];
+          const lastEventTime = new Date(lastEvent.playedAt).getTime();
+          
+          // Track the most recent song for artist metadata lookup
+          if (lastEventTime > mostRecentPlayTime) {
+            mostRecentPlayTime = lastEventTime;
+            representativeSong = song;
+          }
+          
+          // Calculate yearly play time (already iterating, so do it here)
           song.listeningEvents.forEach(event => {
             if (event.playedAt) {
               const eventDate = new Date(event.playedAt);
@@ -228,6 +242,8 @@ class CleanedFilesGenerator {
           });
         }
       });
+      
+      const firstSong = representativeSong; // Keep variable name for compatibility with rest of code
       
       // Convert yearly play time map to sorted array
       const yearlyPlayTime = Array.from(yearlyPlayTimeMap.entries())
