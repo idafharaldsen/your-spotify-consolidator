@@ -4970,8 +4970,8 @@
       "baseAlbumName": "Kvelertak",
       "variations": [
         "kvelertak",
-        "kvelertak",
-        "kvelertak"
+        "kvelertak (deluxe edition)",
+        "kvelertak - deluxe edition"
       ]
     },
     {
@@ -5317,14 +5317,6 @@
       "variations": [
         "180",
         "180"
-      ]
-    },
-    {
-      "artistName": "Moderat",
-      "baseAlbumName": "III",
-      "variations": [
-        "iii (deluxe edition)",
-        "iii (deluxe edition)"
       ]
     },
     {
@@ -9825,16 +9817,6 @@
       ]
     },
     {
-      "artistName": "Kvelertak",
-      "baseAlbumName": "Kvelertak (Deluxe Edition)",
-      "variations": [
-        "kvelertak (deluxe edition)",
-        "kvelertak",
-        "kvelertak",
-        "kvelertak"
-      ]
-    },
-    {
       "artistName": "Bon Iver",
       "baseAlbumName": "Bon Iver",
       "variations": [
@@ -9867,15 +9849,6 @@
       "variations": [
         "the difference",
         "the difference (jon hopkins remix)"
-      ]
-    },
-    {
-      "artistName": "Moderat",
-      "baseAlbumName": "III",
-      "variations": [
-        "iii (deluxe edition)",
-        "iii (deluxe edition)",
-        "iii (instrumentals)"
       ]
     },
     {
@@ -10421,15 +10394,6 @@
         "black sabbath (2009 remastered version)",
         "black sabbath",
         "black sabbath (deluxe edition)"
-      ]
-    },
-    {
-      "artistName": "Nirvana",
-      "baseAlbumName": "In Utero",
-      "variations": [
-        "in utero",
-        "in utero (deluxe edition)",
-        "in utero (super deluxe edition)"
       ]
     },
     {
@@ -11616,15 +11580,6 @@
       "variations": [
         "splid",
         "splid"
-      ]
-    },
-    {
-      "artistName": "Kvelertak",
-      "baseAlbumName": "Kvelertak",
-      "variations": [
-        "kvelertak",
-        "kvelertak",
-        "kvelertak"
       ]
     },
     {
@@ -16451,16 +16406,6 @@
       ]
     },
     {
-      "artistName": "Kvelertak",
-      "baseAlbumName": "Kvelertak",
-      "variations": [
-        "kvelertak (deluxe edition)",
-        "kvelertak",
-        "kvelertak",
-        "kvelertak"
-      ]
-    },
-    {
       "artistName": "Bon Iver",
       "baseAlbumName": "Bon Iver",
       "variations": [
@@ -16493,15 +16438,6 @@
       "variations": [
         "the difference",
         "the difference (jon hopkins remix)"
-      ]
-    },
-    {
-      "artistName": "Moderat",
-      "baseAlbumName": "III",
-      "variations": [
-        "iii (deluxe edition)",
-        "iii (deluxe edition)",
-        "iii (instrumentals)"
       ]
     },
     {
@@ -17054,15 +16990,6 @@
         "black sabbath (2009 remastered version)",
         "black sabbath",
         "black sabbath (deluxe edition)"
-      ]
-    },
-    {
-      "artistName": "Nirvana",
-      "baseAlbumName": "In Utero",
-      "variations": [
-        "in utero",
-        "in utero (deluxe edition)",
-        "in utero (super deluxe edition)"
       ]
     },
     {
@@ -22889,15 +22816,6 @@
       ]
     },
     {
-      "artistName": "Kvelertak",
-      "baseAlbumName": "Kvelertak",
-      "variations": [
-        "kvelertak",
-        "kvelertak",
-        "kvelertak"
-      ]
-    },
-    {
       "artistName": "Honningbarna",
       "baseAlbumName": "Voldelig lyd",
       "variations": [
@@ -27705,16 +27623,6 @@
       ]
     },
     {
-      "artistName": "Kvelertak",
-      "baseAlbumName": "Kvelertak (Deluxe Edition)",
-      "variations": [
-        "kvelertak (deluxe edition)",
-        "kvelertak",
-        "kvelertak",
-        "kvelertak"
-      ]
-    },
-    {
       "artistName": "Bon Iver",
       "baseAlbumName": "Bon Iver",
       "variations": [
@@ -27734,11 +27642,12 @@
     },
     {
       "artistName": "Moderat",
-      "baseAlbumName": "III (Deluxe Edition)",
+      "baseAlbumName": "III",
       "variations": [
         "iii (deluxe edition)",
         "iii (deluxe edition)",
-        "iii (instrumentals)"
+        "iii (instrumentals)",
+        "iii"
       ]
     },
     {
@@ -28300,7 +28209,10 @@
       "variations": [
         "in utero",
         "in utero (deluxe edition)",
-        "in utero (super deluxe edition)"
+        "in utero (super deluxe edition)",
+        "in utero - 20th anniversary - deluxe edition",
+        "in utero - 20th anniversary super deluxe",
+        "in utero - 20th anniversary remaster"
       ]
     },
     {
