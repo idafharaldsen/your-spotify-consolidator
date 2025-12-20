@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { Disc, Music2, Users, BarChart3, Search, X } from 'lucide-react'
-import { useSearch } from './SearchContext'
+import { useSpotifyStats } from './SpotifyStatsContext'
 
 type SpotifyStatsPage = 'albums' | 'songs' | 'artists' | 'stats'
 
@@ -11,7 +11,7 @@ interface SpotifyStatsNavProps {
 }
 
 export default function SpotifyStatsNav({ currentPage }: SpotifyStatsNavProps) {
-  const { searchTerm, setSearchTerm } = useSearch()
+  const { searchTerm, setSearchTerm } = useSpotifyStats()
   const showSearch = currentPage !== 'stats'
 
   const getLinkClasses = (page: SpotifyStatsPage, isFirst: boolean) => {

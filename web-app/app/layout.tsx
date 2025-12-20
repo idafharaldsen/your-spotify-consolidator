@@ -1,5 +1,5 @@
 import './globals.css';
-import { SearchProvider } from '../components/SearchContext';
+import { SpotifyStatsProvider } from '../components/SpotifyStatsContext';
 
 export default function RootLayout({
   children,
@@ -9,9 +9,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-gradient-to-br from-dark-surface via-dark-surfaceHover to-surface-800">
-        <SearchProvider>
+        <SpotifyStatsProvider>
           {children}
-        </SearchProvider>
+        </SpotifyStatsProvider>
       </body>
     </html>
   );

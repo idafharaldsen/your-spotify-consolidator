@@ -12,7 +12,7 @@ import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import FilterSortToggle, { SortOption } from '@/components/FilterSortToggle'
 import RankingMovement from '@/components/RankingMovement'
-import { useSearch } from '@/components/SearchContext'
+import { useSpotifyStats } from '@/components/SpotifyStatsContext'
 import { GridSkeleton, ListSkeleton } from '@/components/SkeletonLoader'
 
 interface AlbumImage {
@@ -140,14 +140,8 @@ const getCSSVariable = (variable: string): string => {
 
 export default function TopSongsPage() {
   const [songsData, setSongsData] = useState<SongsData | null>(null)
-  const { searchTerm, setSearchTerm } = useSearch()
+  const { searchTerm, setSearchTerm, viewMode, setViewMode } = useSpotifyStats()
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth < 768 ? 'list' : 'grid'
-    }
-    return 'grid'
-  })
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [showNewOnly, setShowNewOnly] = useState(false)
   const [selectedSong, setSelectedSong] = useState<SongData | null>(null)

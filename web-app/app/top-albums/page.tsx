@@ -12,7 +12,7 @@ import SpotifyStatsLayout from '../../components/SpotifyStatsLayout'
 import ViewToggle from '@/components/ViewToggle'
 import FilterSortToggle, { SortOption } from '@/components/FilterSortToggle'
 import RankingMovement from '@/components/RankingMovement'
-import { useSearch } from '@/components/SearchContext'
+import { useSpotifyStats } from '@/components/SpotifyStatsContext'
 import { GridSkeleton, ListSkeleton } from '@/components/SkeletonLoader'
 
 interface AlbumImage {
@@ -197,14 +197,8 @@ const LazyAlbumImage = ({ album, rank, size = 'default' }: { album: AlbumInfo; r
 
 export default function TopAlbumsPage() {
   const [albumsData, setAlbumsData] = useState<AlbumsData | null>(null)
-  const { searchTerm, setSearchTerm } = useSearch()
+  const { searchTerm, setSearchTerm, viewMode, setViewMode } = useSpotifyStats()
   const [loading, setLoading] = useState(true)
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>(() => {
-    if (typeof window !== 'undefined') {
-      return window.innerWidth < 768 ? 'list' : 'grid'
-    }
-    return 'grid'
-  })
   const [selectedAlbum, setSelectedAlbum] = useState<AlbumData | null>(null)
   const [sortBy, setSortBy] = useState<SortOption>('plays')
   const [showNewOnly, setShowNewOnly] = useState(false)

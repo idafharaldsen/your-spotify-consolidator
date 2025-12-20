@@ -58,6 +58,12 @@ class CleanedFilesGenerator {
     thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
     const cutoffTimestamp = thirtyDaysAgo.getTime();
 
+    // Create a map of songId -> CompleteSong for later lookup
+    const songIdToCompleteSong = new Map<string, CompleteSong>();
+    history.songs.forEach(song => {
+      songIdToCompleteSong.set(song.songId, song);
+    });
+
     const songs: CleanedSong[] = history.songs.map(song => {
       // Filter events from 30+ days ago
       const events30DaysAgo = song.listeningEvents.filter(event => {
@@ -114,9 +120,55 @@ class CleanedFilesGenerator {
     songs.sort((a, b) => b.count - a.count);
     const consolidatedSongs = this.consolidator.consolidateSongs(songs);
     
+    // Update consolidated songs to use the most recently played song's metadata
+    const updatedConsolidatedSongs = consolidatedSongs.map(consolidatedSong => {
+      // Find the most recently played song from all original_songIds
+      let mostRecentSong: CompleteSong | null = null;
+      let mostRecentPlayTime = 0;
+      
+      // Check all original song IDs (including the primary songId)
+      const allSongIds = [consolidatedSong.songId, ...consolidatedSong.original_songIds];
+      for (const songId of allSongIds) {
+        const completeSong = songIdToCompleteSong.get(songId);
+        if (completeSong && completeSong.listeningEvents && completeSong.listeningEvents.length > 0) {
+          // Events are sorted (earliest first), so the last event is the most recent
+          const lastEvent = completeSong.listeningEvents[completeSong.listeningEvents.length - 1];
+          const lastEventTime = new Date(lastEvent.playedAt).getTime();
+          
+          if (lastEventTime > mostRecentPlayTime) {
+            mostRecentPlayTime = lastEventTime;
+            mostRecentSong = completeSong;
+          }
+        }
+      }
+      
+      // If we found a more recent song, update the metadata
+      if (mostRecentSong !== null && mostRecentSong.songId !== consolidatedSong.songId) {
+        return {
+          ...consolidatedSong,
+          songId: mostRecentSong.songId,
+          song: {
+            name: mostRecentSong.name,
+            preview_url: mostRecentSong.preview_url,
+            external_urls: mostRecentSong.external_urls
+          },
+          album: {
+            name: mostRecentSong.album.name,
+            images: mostRecentSong.album.images
+          },
+          artist: {
+            name: mostRecentSong.artist.name,
+            genres: mostRecentSong.artist.genres
+          }
+        };
+      }
+      
+      return consolidatedSong;
+    });
+    
     // Calculate 30-days-ago rankings
     // Create a copy of consolidated songs with 30-days-ago counts for ranking
-    const songs30DaysAgo = consolidatedSongs
+    const songs30DaysAgo = updatedConsolidatedSongs
       .map(song => ({
         ...song,
         count: song.count_30_days_ago || 0
@@ -136,7 +188,7 @@ class CleanedFilesGenerator {
     });
     
     // Assign current ranks and add 30-days-ago ranks
-    const topSongs = consolidatedSongs.slice(0, 500).map((song, index) => {
+    const topSongs = updatedConsolidatedSongs.slice(0, 500).map((song, index) => {
       // Find the rank 30 days ago by checking the songId or any of its original_songIds
       let rank30DaysAgo: number | undefined;
       if (rankMap30DaysAgo.has(song.songId)) {
@@ -161,7 +213,7 @@ class CleanedFilesGenerator {
     return {
       songs: topSongs,
       originalCount: songs.length,
-      consolidatedCount: consolidatedSongs.length
+      consolidatedCount: updatedConsolidatedSongs.length
     };
   }
 
@@ -397,8 +449,69 @@ class CleanedFilesGenerator {
     artists.sort((a, b) => b.count - a.count);
     const consolidatedArtists = this.consolidator.consolidateArtists(artists);
     
+    // Update consolidated artists to use the most recently played artist's metadata
+    // Create a map of primaryArtistId -> CleanedArtist for lookup
+    const primaryArtistIdToArtist = new Map<string, CleanedArtist>();
+    artists.forEach(artist => {
+      primaryArtistIdToArtist.set(artist.primaryArtistId, artist);
+    });
+    
+    // Create a map of songId -> CompleteSong for finding most recent play time
+    const songIdToCompleteSong = new Map<string, CompleteSong>();
+    history.songs.forEach(song => {
+      songIdToCompleteSong.set(song.songId, song);
+    });
+    
+    const updatedConsolidatedArtists = consolidatedArtists.map(consolidatedArtist => {
+      // Find the most recently played artist from all original_artistIds
+      let mostRecentArtist: CleanedArtist | null = null;
+      let mostRecentPlayTime = 0;
+      
+      // Check all original artist IDs (including the primaryArtistId)
+      const allArtistIds = [consolidatedArtist.primaryArtistId, ...(consolidatedArtist.original_artistIds || [])];
+      for (const artistId of allArtistIds) {
+        const originalArtist = primaryArtistIdToArtist.get(artistId);
+        if (originalArtist) {
+          // Find the most recent play time from the representative song
+          const completeSong = songIdToCompleteSong.get(originalArtist.primaryArtistId);
+          if (completeSong && completeSong.listeningEvents && completeSong.listeningEvents.length > 0) {
+            // Events are sorted (earliest first), so the last event is the most recent
+            const lastEvent = completeSong.listeningEvents[completeSong.listeningEvents.length - 1];
+            const lastEventTime = new Date(lastEvent.playedAt).getTime();
+            
+            if (lastEventTime > mostRecentPlayTime) {
+              mostRecentPlayTime = lastEventTime;
+              mostRecentArtist = originalArtist;
+            }
+          }
+        }
+      }
+      
+      // If we found a more recent artist, update the metadata
+      if (mostRecentArtist !== null && mostRecentArtist.primaryArtistId !== consolidatedArtist.primaryArtistId) {
+        return {
+          ...consolidatedArtist,
+          primaryArtistId: mostRecentArtist.primaryArtistId,
+          artist: {
+            ...consolidatedArtist.artist,
+            name: mostRecentArtist.artist.name,
+            genres: mostRecentArtist.artist.genres.length > 0 ? mostRecentArtist.artist.genres : consolidatedArtist.artist.genres,
+            images: mostRecentArtist.artist.images.length > 0 ? mostRecentArtist.artist.images : consolidatedArtist.artist.images,
+            external_urls: Object.keys(mostRecentArtist.artist.external_urls).length > 0 ? mostRecentArtist.artist.external_urls : consolidatedArtist.artist.external_urls,
+            popularity: mostRecentArtist.artist.popularity || consolidatedArtist.artist.popularity,
+            followers: mostRecentArtist.artist.followers || consolidatedArtist.artist.followers
+          },
+          // Also update top_songs and top_albums if the most recent artist has them
+          top_songs: mostRecentArtist.top_songs || consolidatedArtist.top_songs,
+          top_albums: mostRecentArtist.top_albums || consolidatedArtist.top_albums
+        };
+      }
+      
+      return consolidatedArtist;
+    });
+    
     // Calculate 30-days-ago rankings
-    const artists30DaysAgo = consolidatedArtists
+    const artists30DaysAgo = updatedConsolidatedArtists
       .map(artist => ({
         ...artist,
         count: artist.count_30_days_ago || 0
@@ -418,7 +531,7 @@ class CleanedFilesGenerator {
     });
     
     // Assign current ranks and add 30-days-ago ranks
-    const topArtists = consolidatedArtists.slice(0, 500).map((artist, index) => {
+    const topArtists = updatedConsolidatedArtists.slice(0, 500).map((artist, index) => {
       const artistNameKey = artist.artist.name.toLowerCase().trim();
       let rank30DaysAgo: number | undefined;
       
@@ -438,7 +551,7 @@ class CleanedFilesGenerator {
     return {
       artists: topArtists,
       originalCount: artists.length,
-      consolidatedCount: consolidatedArtists.length
+      consolidatedCount: updatedConsolidatedArtists.length
     };
   }
 
@@ -489,9 +602,22 @@ class CleanedFilesGenerator {
         }
       });
       
-      const representativeSong = songs.find(song => 
-        (song.artists[0] || song.artist.name || '').toLowerCase().trim() === mostCommonArtist
-      ) || songs[0];
+      // Find the most recently played song to use as representative
+      let representativeSong: CompleteSong = songs[0];
+      let mostRecentPlayTime = 0;
+      
+      songs.forEach(song => {
+        if (song.listeningEvents && song.listeningEvents.length > 0) {
+          // Events are sorted (earliest first), so the last event is the most recent
+          const lastEvent = song.listeningEvents[song.listeningEvents.length - 1];
+          const lastEventTime = new Date(lastEvent.playedAt).getTime();
+          
+          if (lastEventTime > mostRecentPlayTime) {
+            mostRecentPlayTime = lastEventTime;
+            representativeSong = song;
+          }
+        }
+      });
       
       const matchingSongs = songs.filter(song => {
         const songArtist = (song.artists[0] || song.artist.name || '').toLowerCase().trim();
@@ -601,9 +727,43 @@ class CleanedFilesGenerator {
           : representativeSongForAlbum.album.name;
       }
       
-      const representativeSongForAlbum = validSongs.find(song => 
-        (song.album.name || '').toLowerCase().trim() === finalAlbumName.toLowerCase().trim()
-      ) || validSongs[0] || representativeSong;
+      // Find the most recently played song that matches the final album name, or use the most recent overall
+      let representativeSongForAlbum: CompleteSong = representativeSong;
+      let mostRecentPlayTimeForAlbum = 0;
+      
+      // First try to find most recent song matching the final album name
+      for (const song of validSongs) {
+        if ((song.album.name || '').toLowerCase().trim() === finalAlbumName.toLowerCase().trim()) {
+          if (song.listeningEvents && song.listeningEvents.length > 0) {
+            const lastEvent = song.listeningEvents[song.listeningEvents.length - 1];
+            const lastEventTime = new Date(lastEvent.playedAt).getTime();
+            if (lastEventTime > mostRecentPlayTimeForAlbum) {
+              mostRecentPlayTimeForAlbum = lastEventTime;
+              representativeSongForAlbum = song;
+            }
+          }
+        }
+      }
+      
+      // If we didn't find a match, use the most recently played song overall
+      if (representativeSongForAlbum === representativeSong) {
+        let mostRecentPlayTimeOverall = 0;
+        for (const song of validSongs) {
+          if (song.listeningEvents && song.listeningEvents.length > 0) {
+            const lastEvent = song.listeningEvents[song.listeningEvents.length - 1];
+            const lastEventTime = new Date(lastEvent.playedAt).getTime();
+            if (lastEventTime > mostRecentPlayTimeOverall) {
+              mostRecentPlayTimeOverall = lastEventTime;
+              representativeSongForAlbum = song;
+            }
+          }
+        }
+      }
+      
+      // Fallback to first song if no events found
+      if (!representativeSongForAlbum) {
+        representativeSongForAlbum = validSongs[0] || representativeSong;
+      }
 
       return {
         rank: 0,
@@ -640,8 +800,71 @@ class CleanedFilesGenerator {
     const originalCount = albumsWithSongs.length;
     const consolidatedAlbums = this.consolidator.consolidateAlbumsWithSongs(albumsWithSongs);
     
+    // Update consolidated albums to use the most recently played album's metadata
+    // Create a map of primaryAlbumId -> AlbumWithSongs for lookup
+    const primaryAlbumIdToAlbum = new Map<string, AlbumWithSongs>();
+    albumsWithSongs.forEach(album => {
+      primaryAlbumIdToAlbum.set(album.primaryAlbumId, album);
+    });
+    
+    // Create a map of songId -> CompleteSong for finding most recent play time
+    const songIdToCompleteSong = new Map<string, CompleteSong>();
+    history.songs.forEach(song => {
+      songIdToCompleteSong.set(song.songId, song);
+    });
+    
+    const updatedConsolidatedAlbums = consolidatedAlbums.map(consolidatedAlbum => {
+      // Find the most recently played album from all original_albumIds
+      let mostRecentAlbum: AlbumWithSongs | null = null;
+      let mostRecentPlayTime = 0;
+      
+      // Check all original album IDs (including the primaryAlbumId)
+      const allAlbumIds = [consolidatedAlbum.primaryAlbumId, ...(consolidatedAlbum.original_albumIds || [])];
+      for (const albumId of allAlbumIds) {
+        // primaryAlbumId is actually a songId, so we can use it directly
+        const originalAlbum = primaryAlbumIdToAlbum.get(albumId);
+        if (originalAlbum) {
+          // Find the most recent play time from all songs in this album
+          let albumMostRecentTime = 0;
+          for (const albumSong of originalAlbum.songs) {
+            const completeSong = songIdToCompleteSong.get(albumSong.songId);
+            if (completeSong && completeSong.listeningEvents && completeSong.listeningEvents.length > 0) {
+              const lastEvent = completeSong.listeningEvents[completeSong.listeningEvents.length - 1];
+              const lastEventTime = new Date(lastEvent.playedAt).getTime();
+              if (lastEventTime > albumMostRecentTime) {
+                albumMostRecentTime = lastEventTime;
+              }
+            }
+          }
+          
+          if (albumMostRecentTime > mostRecentPlayTime) {
+            mostRecentPlayTime = albumMostRecentTime;
+            mostRecentAlbum = originalAlbum;
+          }
+        }
+      }
+      
+      // If we found a more recent album, update the metadata
+      if (mostRecentAlbum !== null && mostRecentAlbum.primaryAlbumId !== consolidatedAlbum.primaryAlbumId) {
+        return {
+          ...consolidatedAlbum,
+          primaryAlbumId: mostRecentAlbum.primaryAlbumId,
+          album: {
+            ...consolidatedAlbum.album,
+            name: mostRecentAlbum.album.name,
+            images: mostRecentAlbum.album.images.length > 0 ? mostRecentAlbum.album.images : consolidatedAlbum.album.images,
+            external_urls: Object.keys(mostRecentAlbum.album.external_urls).length > 0 ? mostRecentAlbum.album.external_urls : consolidatedAlbum.album.external_urls,
+            release_date: mostRecentAlbum.album.release_date || consolidatedAlbum.album.release_date,
+            genres: mostRecentAlbum.album.genres || consolidatedAlbum.album.genres
+          }
+        };
+      }
+      
+      return consolidatedAlbum;
+    });
+    
     // Calculate 30-days-ago rankings
-    const albums30DaysAgo = consolidatedAlbums
+    const albums30DaysAgo = updatedConsolidatedAlbums
       .map(album => ({
         ...album,
         count: album.count_30_days_ago || 0
@@ -661,7 +884,7 @@ class CleanedFilesGenerator {
     });
     
     // Assign current ranks and add 30-days-ago ranks
-    const rankedAlbums = consolidatedAlbums.slice(0, 500).map((album, index) => {
+    const rankedAlbums = updatedConsolidatedAlbums.slice(0, 500).map((album, index) => {
       const albumKey = `${album.album.name.toLowerCase().trim()}|${(album.album.artists[0] || '').toLowerCase().trim()}`;
       let rank30DaysAgo: number | undefined;
       
