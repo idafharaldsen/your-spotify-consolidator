@@ -1,0 +1,5298 @@
+{
+  "metadata": {
+    "timestamp": "2026-01-03T04:58:43.757Z",
+    "source": "Merged Streaming History"
+  },
+  "stats": {
+    "yearlyListeningTime": [
+      {
+        "year": "2013",
+        "totalListeningTimeMs": 467183500,
+        "totalListeningHours": 129.77,
+        "playCount": 2711
+      },
+      {
+        "year": "2014",
+        "totalListeningTimeMs": 2334040167,
+        "totalListeningHours": 648.34,
+        "playCount": 11953
+      },
+      {
+        "year": "2015",
+        "totalListeningTimeMs": 2617455950,
+        "totalListeningHours": 727.07,
+        "playCount": 10881
+      },
+      {
+        "year": "2016",
+        "totalListeningTimeMs": 4699473036,
+        "totalListeningHours": 1305.41,
+        "playCount": 22772
+      },
+      {
+        "year": "2017",
+        "totalListeningTimeMs": 2949529682,
+        "totalListeningHours": 819.31,
+        "playCount": 15765
+      },
+      {
+        "year": "2018",
+        "totalListeningTimeMs": 2683820205,
+        "totalListeningHours": 745.51,
+        "playCount": 14325
+      },
+      {
+        "year": "2019",
+        "totalListeningTimeMs": 3220590363,
+        "totalListeningHours": 894.61,
+        "playCount": 15633
+      },
+      {
+        "year": "2020",
+        "totalListeningTimeMs": 2115718895,
+        "totalListeningHours": 587.7,
+        "playCount": 10727
+      },
+      {
+        "year": "2021",
+        "totalListeningTimeMs": 2159266497,
+        "totalListeningHours": 599.8,
+        "playCount": 10790
+      },
+      {
+        "year": "2022",
+        "totalListeningTimeMs": 2063036483,
+        "totalListeningHours": 573.07,
+        "playCount": 11132
+      },
+      {
+        "year": "2023",
+        "totalListeningTimeMs": 2242935498,
+        "totalListeningHours": 623.04,
+        "playCount": 12147
+      },
+      {
+        "year": "2024",
+        "totalListeningTimeMs": 1926268141,
+        "totalListeningHours": 535.07,
+        "playCount": 10092
+      },
+      {
+        "year": "2025",
+        "totalListeningTimeMs": 2120010928,
+        "totalListeningHours": 588.89,
+        "playCount": 11146
+      },
+      {
+        "year": "2026",
+        "totalListeningTimeMs": 6100092,
+        "totalListeningHours": 1.69,
+        "playCount": 29
+      }
+    ],
+    "yearlyTopItems": [
+      {
+        "year": "2013",
+        "topSongs": [
+          {
+            "songId": "3MqGxCA7NNrLKA2us9jAns",
+            "name": "I Wish (feat. T.I.)",
+            "artist": "Cher Lloyd",
+            "playCount": 53,
+            "totalListeningTimeMs": 12057913,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273203343bf5fa0524fc8708cd9",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02203343bf5fa0524fc8708cd9",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851203343bf5fa0524fc8708cd9",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1SayqEg8HKK2IeIEWjdYxY",
+            "name": "Down The Road",
+            "artist": "C2C",
+            "playCount": 39,
+            "totalListeningTimeMs": 7446880,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27344f4da79f1a43a9793928161",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0244f4da79f1a43a9793928161",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485144f4da79f1a43a9793928161",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0rdkQgKx8gNyOeZogIhGec",
+            "name": "Hold You In My Arms",
+            "artist": "Ray LaMontagne",
+            "playCount": 24,
+            "totalListeningTimeMs": 6276497,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732bf3ab58aa976c6319131b32",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022bf3ab58aa976c6319131b32",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512bf3ab58aa976c6319131b32",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "33e9HtOfO1ye1h8xQ7Foc9",
+            "name": "The Cave",
+            "artist": "Mumford & Sons",
+            "playCount": 24,
+            "totalListeningTimeMs": 4625449,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273cd874e988ed15f2859705217",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02cd874e988ed15f2859705217",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851cd874e988ed15f2859705217",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "3Q4XRpk21TVZD98QsRJgDR",
+            "name": "Resolution",
+            "artist": "Matt Corby",
+            "playCount": 24,
+            "totalListeningTimeMs": 5532291,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ead40478c0cb2a719b16e431",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ead40478c0cb2a719b16e431",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ead40478c0cb2a719b16e431",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Karpe",
+            "playCount": 73,
+            "totalListeningTimeMs": 13178486,
+            "uniqueSongs": 15,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd658554b9a612384267544ee",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174d658554b9a612384267544ee",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178d658554b9a612384267544ee",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "One Direction",
+            "playCount": 62,
+            "totalListeningTimeMs": 12894969,
+            "uniqueSongs": 6,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/5bb443424a1ad71603c43d67f5af1a04da6bb3c8",
+                "height": 1000,
+                "width": 1000
+              },
+              {
+                "url": "https://i.scdn.co/image/289c7f686f5b78ceeb224453cf9a15697a678a79",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/45741ba38b51130bb96e00c0e24d17ba311a9293",
+                "height": 200,
+                "width": 200
+              },
+              {
+                "url": "https://i.scdn.co/image/6c89c662ad0ab75bc2af9a3ae2b16f811daced50",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "artistName": "Cher Lloyd",
+            "playCount": 53,
+            "totalListeningTimeMs": 12057913,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb471c1c9f9570c9b3d9df1e39",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174471c1c9f9570c9b3d9df1e39",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178471c1c9f9570c9b3d9df1e39",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Hans Zimmer",
+            "playCount": 50,
+            "totalListeningTimeMs": 10032728,
+            "uniqueSongs": 5,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb371632043a8c12bb7eeeaf9d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174371632043a8c12bb7eeeaf9d",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178371632043a8c12bb7eeeaf9d",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Ray LaMontagne",
+            "playCount": 49,
+            "totalListeningTimeMs": 12540372,
+            "uniqueSongs": 4,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb44ede429cd4a7a2bda7e6156",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517444ede429cd4a7a2bda7e6156",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17844ede429cd4a7a2bda7e6156",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "I Wish (feat. T.I.)",
+            "artist": "Cher Lloyd",
+            "playCount": 53,
+            "totalListeningTimeMs": 12057913,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273203343bf5fa0524fc8708cd9",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02203343bf5fa0524fc8708cd9",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851203343bf5fa0524fc8708cd9",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Fauré: Requiem",
+            "artist": "Accentus",
+            "playCount": 44,
+            "totalListeningTimeMs": 8669874,
+            "uniqueSongs": 9,
+            "images": []
+          },
+          {
+            "albumName": "Tetra",
+            "artist": "C2C",
+            "playCount": 42,
+            "totalListeningTimeMs": 7541802,
+            "uniqueSongs": 3,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27344f4da79f1a43a9793928161",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0244f4da79f1a43a9793928161",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485144f4da79f1a43a9793928161",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Up All Night",
+            "artist": "One Direction",
+            "playCount": 39,
+            "totalListeningTimeMs": 8385381,
+            "uniqueSongs": 3,
+            "images": []
+          },
+          {
+            "albumName": "Sigh No More",
+            "artist": "Mumford & Sons",
+            "playCount": 30,
+            "totalListeningTimeMs": 5440790,
+            "uniqueSongs": 2,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273cd874e988ed15f2859705217",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02cd874e988ed15f2859705217",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851cd874e988ed15f2859705217",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2014",
+        "topSongs": [
+          {
+            "songId": "09TcIuH1ZO7i4vicWKoaN2",
+            "name": "Papaoutai",
+            "artist": "Stromae",
+            "playCount": 299,
+            "totalListeningTimeMs": 68893596,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738a6bb98baff4c9b15f9972fc",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028a6bb98baff4c9b15f9972fc",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518a6bb98baff4c9b15f9972fc",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4z70Px77quweOupQRiaG2Q",
+            "name": "Formidable",
+            "artist": "Stromae",
+            "playCount": 160,
+            "totalListeningTimeMs": 34488095,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738a6bb98baff4c9b15f9972fc",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028a6bb98baff4c9b15f9972fc",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518a6bb98baff4c9b15f9972fc",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "27jdUE1EYDSXZqhjuNxLem",
+            "name": "Magic",
+            "artist": "Coldplay",
+            "playCount": 147,
+            "totalListeningTimeMs": 40031478,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b363c268f794a4f04951e0ad",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b363c268f794a4f04951e0ad",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b363c268f794a4f04951e0ad",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "6Qhn22tuohdHjRxCvMiZeV",
+            "name": "Online",
+            "artist": "Mathea-Mari",
+            "playCount": 83,
+            "totalListeningTimeMs": 15418839,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732615b3880fae98297cc9261e",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022615b3880fae98297cc9261e",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512615b3880fae98297cc9261e",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "3s4U7OHV7gnj42VV72eSZ6",
+            "name": "Rather Be (feat. Jess Glynne)",
+            "artist": "Clean Bandit",
+            "playCount": 75,
+            "totalListeningTimeMs": 14568104,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737e519297d9876b6afff2ab7b",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027e519297d9876b6afff2ab7b",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517e519297d9876b6afff2ab7b",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Stromae",
+            "playCount": 505,
+            "totalListeningTimeMs": 111367925,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebcc129f1c9b5047760d66aae2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174cc129f1c9b5047760d66aae2",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178cc129f1c9b5047760d66aae2",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Coldplay",
+            "playCount": 321,
+            "totalListeningTimeMs": 77829373,
+            "uniqueSongs": 32,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1ba8fc5f5c73e7e9313cc6eb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781ba8fc5f5c73e7e9313cc6eb",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Beyoncé",
+            "playCount": 305,
+            "totalListeningTimeMs": 60523524,
+            "uniqueSongs": 68,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7eaa373538359164b843f7c0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747eaa373538359164b843f7c0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787eaa373538359164b843f7c0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Justin Timberlake",
+            "playCount": 297,
+            "totalListeningTimeMs": 91577254,
+            "uniqueSongs": 34,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7a5cfe2597665a3d160e805e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747a5cfe2597665a3d160e805e",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787a5cfe2597665a3d160e805e",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Justin Bieber",
+            "playCount": 258,
+            "totalListeningTimeMs": 51030014,
+            "uniqueSongs": 61,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebaf20f7db5288bce9beede034",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174af20f7db5288bce9beede034",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178af20f7db5288bce9beede034",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "racine carrée",
+            "artist": "Stromae",
+            "playCount": 500,
+            "totalListeningTimeMs": 110470815,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ab580fab750cc9baf0d52b5c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ab580fab750cc9baf0d52b5c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ab580fab750cc9baf0d52b5c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "The Essential Paul Simon",
+            "artist": "Paul Simon",
+            "playCount": 181,
+            "totalListeningTimeMs": 38965912,
+            "uniqueSongs": 36,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a561ebb45326bae60310f10f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a561ebb45326bae60310f10f",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a561ebb45326bae60310f10f",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Magic",
+            "artist": "Coldplay",
+            "playCount": 147,
+            "totalListeningTimeMs": 40031478,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b363c268f794a4f04951e0ad",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b363c268f794a4f04951e0ad",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b363c268f794a4f04951e0ad",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "The 20/20 Experience - 2 of 2 (Deluxe)",
+            "artist": "Justin Timberlake",
+            "playCount": 119,
+            "totalListeningTimeMs": 34745978,
+            "uniqueSongs": 11,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ef074183c3e34d4f80348e98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ef074183c3e34d4f80348e98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ef074183c3e34d4f80348e98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "The 20/20 Experience (Deluxe Version)",
+            "artist": "Justin Timberlake",
+            "playCount": 112,
+            "totalListeningTimeMs": 40689855,
+            "uniqueSongs": 4,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27356d5fb0cc9cec001d8ae0c8c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0256d5fb0cc9cec001d8ae0c8c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485156d5fb0cc9cec001d8ae0c8c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2015",
+        "topSongs": [
+          {
+            "songId": "52izjvF7wwveRG1rDJsGWe",
+            "name": "Love Myself",
+            "artist": "Hailee Steinfeld",
+            "playCount": 91,
+            "totalListeningTimeMs": 19747324,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ab6ac7e7c31b2c37771268f5",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ab6ac7e7c31b2c37771268f5",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ab6ac7e7c31b2c37771268f5",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4ROMNTA4EJPuznRnLmhzBf",
+            "name": "Never Let You Down",
+            "artist": "Jamie",
+            "playCount": 76,
+            "totalListeningTimeMs": 24137353,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273bfc9c5695522163e4843224f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02bfc9c5695522163e4843224f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851bfc9c5695522163e4843224f",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4kCmfCnNjca59NowllKhzV",
+            "name": "Light It Up (feat. Nyla & Fuse ODG) - Remix",
+            "artist": "Major Lazer",
+            "playCount": 69,
+            "totalListeningTimeMs": 11302846,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27325c6801ca3d3b7630519649e",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0225c6801ca3d3b7630519649e",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485125c6801ca3d3b7630519649e",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "5lvWMdqnA8kKt5qeZVk7yZ",
+            "name": "Skin",
+            "artist": "Jamie Woon",
+            "playCount": 69,
+            "totalListeningTimeMs": 12738385,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27313d800016bde6504c692403a",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0213d800016bde6504c692403a",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485113d800016bde6504c692403a",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "2H8LPaY3NSjmOFMH2Rygnz",
+            "name": "Running Out",
+            "artist": "Matoma",
+            "playCount": 68,
+            "totalListeningTimeMs": 14404926,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273edd0b8fdbf7fa74d320cadd8",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02edd0b8fdbf7fa74d320cadd8",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851edd0b8fdbf7fa74d320cadd8",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Sam Smith",
+            "playCount": 366,
+            "totalListeningTimeMs": 65722245,
+            "uniqueSongs": 19,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb3262e01b79152c4f8007f3ac",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051743262e01b79152c4f8007f3ac",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1783262e01b79152c4f8007f3ac",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Beyoncé",
+            "playCount": 259,
+            "totalListeningTimeMs": 81478721,
+            "uniqueSongs": 47,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7eaa373538359164b843f7c0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747eaa373538359164b843f7c0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787eaa373538359164b843f7c0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Kanye West",
+            "playCount": 234,
+            "totalListeningTimeMs": 56950852,
+            "uniqueSongs": 32,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6e835a500e791bf9c27a422a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746e835a500e791bf9c27a422a",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786e835a500e791bf9c27a422a",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Justin Bieber",
+            "playCount": 220,
+            "totalListeningTimeMs": 42809404,
+            "uniqueSongs": 33,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebaf20f7db5288bce9beede034",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174af20f7db5288bce9beede034",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178af20f7db5288bce9beede034",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Coldplay",
+            "playCount": 202,
+            "totalListeningTimeMs": 44666968,
+            "uniqueSongs": 47,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1ba8fc5f5c73e7e9313cc6eb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781ba8fc5f5c73e7e9313cc6eb",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "In The Lonely Hour",
+            "artist": "Sam Smith",
+            "playCount": 348,
+            "totalListeningTimeMs": 62485968,
+            "uniqueSongs": 14,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fe5d69bf1aa9f9d88837cbb6",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fe5d69bf1aa9f9d88837cbb6",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fe5d69bf1aa9f9d88837cbb6",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "BEYONCÉ [Platinum Edition]",
+            "artist": "Beyoncé",
+            "playCount": 180,
+            "totalListeningTimeMs": 64960952,
+            "uniqueSongs": 20,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2730d1d6e9325275f104f8e33f3",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e020d1d6e9325275f104f8e33f3",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048510d1d6e9325275f104f8e33f3",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Late Registration",
+            "artist": "Kanye West",
+            "playCount": 163,
+            "totalListeningTimeMs": 41830106,
+            "uniqueSongs": 21,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273428d2255141c2119409a31b2",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02428d2255141c2119409a31b2",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851428d2255141c2119409a31b2",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Listen",
+            "artist": "David Guetta",
+            "playCount": 112,
+            "totalListeningTimeMs": 39110792,
+            "uniqueSongs": 5,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2733862d62a50dc6b928651bdeb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e023862d62a50dc6b928651bdeb",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048513862d62a50dc6b928651bdeb",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Chaos And The Calm",
+            "artist": "James Bay",
+            "playCount": 104,
+            "totalListeningTimeMs": 22681823,
+            "uniqueSongs": 12,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273066483b34a405583429b8049",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02066483b34a405583429b8049",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851066483b34a405583429b8049",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2016",
+        "topSongs": [
+          {
+            "songId": "6eH4102qd85iYCSEKtzd4M",
+            "name": "Sometimes",
+            "artist": "Ariana Grande",
+            "playCount": 161,
+            "totalListeningTimeMs": 36250803,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737227f5854239a059af211d5b",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027227f5854239a059af211d5b",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517227f5854239a059af211d5b",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4sw7dHjD6EsGs0d57AHgdy",
+            "name": "oui",
+            "artist": "Jeremih",
+            "playCount": 152,
+            "totalListeningTimeMs": 34454055,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738ca2982736fe67dc8614e169",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028ca2982736fe67dc8614e169",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518ca2982736fe67dc8614e169",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4d0JSX5Niid4wPVXk3EVrt",
+            "name": "Work - R3hab Remix",
+            "artist": "Rihanna",
+            "playCount": 133,
+            "totalListeningTimeMs": 27297464,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ec8d3f872c631af5cc900ebd",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ec8d3f872c631af5cc900ebd",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ec8d3f872c631af5cc900ebd",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0IKK48xF4eEdfofyaeKWWO",
+            "name": "PILLOWTALK",
+            "artist": "ZAYN",
+            "playCount": 130,
+            "totalListeningTimeMs": 26021878,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e8d106a01a8ba670867cd6cd",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e8d106a01a8ba670867cd6cd",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e8d106a01a8ba670867cd6cd",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1ixphys4A3NEXp6MDScfih",
+            "name": "Be the One",
+            "artist": "Dua Lipa",
+            "playCount": 127,
+            "totalListeningTimeMs": 24936346,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e314ae1248044b8b84842c3c",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e314ae1248044b8b84842c3c",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e314ae1248044b8b84842c3c",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Ariana Grande",
+            "playCount": 1079,
+            "totalListeningTimeMs": 235940745,
+            "uniqueSongs": 25,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6725802588d7dc1aba076ca5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746725802588d7dc1aba076ca5",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786725802588d7dc1aba076ca5",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Coldplay",
+            "playCount": 388,
+            "totalListeningTimeMs": 92266248,
+            "uniqueSongs": 51,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1ba8fc5f5c73e7e9313cc6eb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781ba8fc5f5c73e7e9313cc6eb",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Rihanna",
+            "playCount": 367,
+            "totalListeningTimeMs": 72071393,
+            "uniqueSongs": 59,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebcb565a8e684e3be458d329ac",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174cb565a8e684e3be458d329ac",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178cb565a8e684e3be458d329ac",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "No. 4",
+            "playCount": 359,
+            "totalListeningTimeMs": 68520993,
+            "uniqueSongs": 14,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb07fabfc48d788ce91ccb98dc",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517407fabfc48d788ce91ccb98dc",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17807fabfc48d788ce91ccb98dc",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Beyoncé",
+            "playCount": 337,
+            "totalListeningTimeMs": 73582603,
+            "uniqueSongs": 58,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7eaa373538359164b843f7c0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747eaa373538359164b843f7c0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787eaa373538359164b843f7c0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Dangerous Woman",
+            "artist": "Ariana Grande",
+            "playCount": 939,
+            "totalListeningTimeMs": 207332051,
+            "uniqueSongs": 16,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27333342c57a9b2c4e04c97b3f5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0233342c57a9b2c4e04c97b3f5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Henda i været",
+            "artist": "No. 4",
+            "playCount": 352,
+            "totalListeningTimeMs": 67529301,
+            "uniqueSongs": 12,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27385e9ca3e96fe6d4f819fbabe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0285e9ca3e96fe6d4f819fbabe",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485185e9ca3e96fe6d4f819fbabe",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Destiny Fulfilled",
+            "artist": "Destiny's Child",
+            "playCount": 205,
+            "totalListeningTimeMs": 49302453,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735a4df8a804866955ab8c4def",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025a4df8a804866955ab8c4def",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515a4df8a804866955ab8c4def",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Late Nights: The Album",
+            "artist": "Jeremih",
+            "playCount": 186,
+            "totalListeningTimeMs": 40424842,
+            "uniqueSongs": 4,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273262c8e955ad5c60b1d0abf53",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02262c8e955ad5c60b1d0abf53",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851262c8e955ad5c60b1d0abf53",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Views",
+            "artist": "Drake",
+            "playCount": 158,
+            "totalListeningTimeMs": 31212657,
+            "uniqueSongs": 7,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739416ed64daf84936d89e671c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029416ed64daf84936d89e671c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519416ed64daf84936d89e671c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2017",
+        "topSongs": [
+          {
+            "songId": "6uNFvdRGAtUuVIP6IOMlRs",
+            "name": "Words",
+            "artist": "Naaz",
+            "playCount": 104,
+            "totalListeningTimeMs": 14377501,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b092e3e86d541819b5b16f6b",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b092e3e86d541819b5b16f6b",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b092e3e86d541819b5b16f6b",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "74BGCq2L25uHnxC7Zwgp8q",
+            "name": "Under Your Skin",
+            "artist": "Seeb",
+            "playCount": 97,
+            "totalListeningTimeMs": 16618456,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fac200ded38d552b58c40e57",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fac200ded38d552b58c40e57",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fac200ded38d552b58c40e57",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4hiUYb2nb6NlfTP9CD38Pe",
+            "name": "On My Way",
+            "artist": "Tiësto",
+            "playCount": 93,
+            "totalListeningTimeMs": 15808046,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273af38f0147a9afb520e0d3d9d",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02af38f0147a9afb520e0d3d9d",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851af38f0147a9afb520e0d3d9d",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4kAo2BE0CZNkBxQViWWV2x",
+            "name": "Alene",
+            "artist": "Arif Murakami",
+            "playCount": 89,
+            "totalListeningTimeMs": 17292387,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2737ea2f582ead161fef3835463",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e027ea2f582ead161fef3835463",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048517ea2f582ead161fef3835463",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "6EcTjceNc3WhEqrWzXIFwA",
+            "name": "Fy Faen",
+            "artist": "Hkeem",
+            "playCount": 82,
+            "totalListeningTimeMs": 15447214,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273038de86e6773155b45112b8a",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02038de86e6773155b45112b8a",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851038de86e6773155b45112b8a",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Rihanna",
+            "playCount": 322,
+            "totalListeningTimeMs": 49864039,
+            "uniqueSongs": 54,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebcb565a8e684e3be458d329ac",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174cb565a8e684e3be458d329ac",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178cb565a8e684e3be458d329ac",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Calvin Harris",
+            "playCount": 263,
+            "totalListeningTimeMs": 56101401,
+            "uniqueSongs": 20,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1e4bcd2bef1896648762dd6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741e4bcd2bef1896648762dd6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781e4bcd2bef1896648762dd6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Alina Baraz",
+            "playCount": 254,
+            "totalListeningTimeMs": 53782752,
+            "uniqueSongs": 30,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb04bd5a6bee2cdd5536651e77",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517404bd5a6bee2cdd5536651e77",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17804bd5a6bee2cdd5536651e77",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Ariana Grande",
+            "playCount": 193,
+            "totalListeningTimeMs": 38681726,
+            "uniqueSongs": 30,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6725802588d7dc1aba076ca5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746725802588d7dc1aba076ca5",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786725802588d7dc1aba076ca5",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Beyoncé",
+            "playCount": 157,
+            "totalListeningTimeMs": 34420485,
+            "uniqueSongs": 47,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7eaa373538359164b843f7c0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747eaa373538359164b843f7c0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787eaa373538359164b843f7c0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "ANTI",
+            "artist": "Rihanna",
+            "playCount": 243,
+            "totalListeningTimeMs": 34695831,
+            "uniqueSongs": 29,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736be9bac15995f089579074de",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026be9bac15995f089579074de",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516be9bac15995f089579074de",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Urban Flora",
+            "artist": "Alina Baraz",
+            "playCount": 207,
+            "totalListeningTimeMs": 44288803,
+            "uniqueSongs": 19,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f22b74b25d79b7b99fb845b8",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f22b74b25d79b7b99fb845b8",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f22b74b25d79b7b99fb845b8",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Funk Wav Bounces Vol.1",
+            "artist": "Calvin Harris",
+            "playCount": 182,
+            "totalListeningTimeMs": 38939638,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Dangerous Woman",
+            "artist": "Ariana Grande",
+            "playCount": 175,
+            "totalListeningTimeMs": 34993620,
+            "uniqueSongs": 20,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27333342c57a9b2c4e04c97b3f5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0233342c57a9b2c4e04c97b3f5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "99.9%",
+            "artist": "KAYTRANADA",
+            "playCount": 153,
+            "totalListeningTimeMs": 33234448,
+            "uniqueSongs": 15,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b2f893f4215f2930e7320355",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b2f893f4215f2930e7320355",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b2f893f4215f2930e7320355",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2018",
+        "topSongs": [
+          {
+            "songId": "2FC79lHLOOBhIkdxmQtYAT",
+            "name": "jeg føler meg som tshawe",
+            "artist": "MARS",
+            "playCount": 110,
+            "totalListeningTimeMs": 23510946,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a1377cb192da55e7fa832932",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a1377cb192da55e7fa832932",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a1377cb192da55e7fa832932",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "7k7JKDjCd9zuL0iF7iWaNs",
+            "name": "Empty Cups",
+            "artist": "Charlie Puth",
+            "playCount": 109,
+            "totalListeningTimeMs": 18317863,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02897f73256b9128a9d70eaf66",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851897f73256b9128a9d70eaf66",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "3E6Ydoy1H8ePoigc10Mgsa",
+            "name": "Snowman",
+            "artist": "Sia",
+            "playCount": 80,
+            "totalListeningTimeMs": 13147168,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273afbd1af8351227e15279d127",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02afbd1af8351227e15279d127",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851afbd1af8351227e15279d127",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "7GbUWl6qLW1gdngbEV2WDJ",
+            "name": "Monster",
+            "artist": "EXO",
+            "playCount": 74,
+            "totalListeningTimeMs": 16993435,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27315a67578922d65121b12073d",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0215a67578922d65121b12073d",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485115a67578922d65121b12073d",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "3Ld2YbZ2zFKZ0SqBPjZNC4",
+            "name": "Body",
+            "artist": "LÉON",
+            "playCount": 68,
+            "totalListeningTimeMs": 13904347,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ac499ab42b2326f701fd8854",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ac499ab42b2326f701fd8854",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ac499ab42b2326f701fd8854",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Ariana Grande",
+            "playCount": 636,
+            "totalListeningTimeMs": 122593313,
+            "uniqueSongs": 93,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6725802588d7dc1aba076ca5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746725802588d7dc1aba076ca5",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786725802588d7dc1aba076ca5",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Charlie Puth",
+            "playCount": 430,
+            "totalListeningTimeMs": 75480703,
+            "uniqueSongs": 33,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6721f541fb123145d4cb3ace",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746721f541fb123145d4cb3ace",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786721f541fb123145d4cb3ace",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Calvin Harris",
+            "playCount": 315,
+            "totalListeningTimeMs": 61382573,
+            "uniqueSongs": 29,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1e4bcd2bef1896648762dd6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741e4bcd2bef1896648762dd6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781e4bcd2bef1896648762dd6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Sia",
+            "playCount": 286,
+            "totalListeningTimeMs": 50227254,
+            "uniqueSongs": 55,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb91c19888fe2fa3d5066199d1",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517491c19888fe2fa3d5066199d1",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17891c19888fe2fa3d5066199d1",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Yusuf / Cat Stevens",
+            "playCount": 277,
+            "totalListeningTimeMs": 49755141,
+            "uniqueSongs": 77,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb2f193c74ab4203899bc8771a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051742f193c74ab4203899bc8771a",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1782f193c74ab4203899bc8771a",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Voicenotes",
+            "artist": "Charlie Puth",
+            "playCount": 369,
+            "totalListeningTimeMs": 64894773,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02897f73256b9128a9d70eaf66",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851897f73256b9128a9d70eaf66",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Sweetener",
+            "artist": "Ariana Grande",
+            "playCount": 238,
+            "totalListeningTimeMs": 42136490,
+            "uniqueSongs": 15,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273c3af0c2355c24ed7023cd394",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02c3af0c2355c24ed7023cd394",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851c3af0c2355c24ed7023cd394",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Dangerous Woman",
+            "artist": "Ariana Grande",
+            "playCount": 235,
+            "totalListeningTimeMs": 46077833,
+            "uniqueSongs": 30,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27333342c57a9b2c4e04c97b3f5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0233342c57a9b2c4e04c97b3f5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485133342c57a9b2c4e04c97b3f5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "MARS",
+            "artist": "MARS",
+            "playCount": 235,
+            "totalListeningTimeMs": 43266675,
+            "uniqueSongs": 4,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734b5b32332ca95d6f93196aed",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024b5b32332ca95d6f93196aed",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514b5b32332ca95d6f93196aed",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Funk Wav Bounces Vol.1",
+            "artist": "Calvin Harris",
+            "playCount": 210,
+            "totalListeningTimeMs": 43537225,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2019",
+        "topSongs": [
+          {
+            "songId": "7i5I4h7r2vkI2r9tgKjy0x",
+            "name": "Pays imaginaire",
+            "artist": "Polo & Pan",
+            "playCount": 224,
+            "totalListeningTimeMs": 62750865,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ee9468123f381eb8d5e05bb",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ee9468123f381eb8d5e05bb",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ee9468123f381eb8d5e05bb",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1atrCmFrGEN5QvjoEWFRHo",
+            "name": "SAS PLUS / SAS PUSSY",
+            "artist": "Karpe",
+            "playCount": 74,
+            "totalListeningTimeMs": 95492590,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738ca33f5a4860fd795932d483",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028ca33f5a4860fd795932d483",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518ca33f5a4860fd795932d483",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0Psz3az3RIYfJpnsajBT8N",
+            "name": "Nanã",
+            "artist": "Polo & Pan",
+            "playCount": 70,
+            "totalListeningTimeMs": 12248275,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ee9468123f381eb8d5e05bb",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ee9468123f381eb8d5e05bb",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ee9468123f381eb8d5e05bb",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "5N5k9nd479b1xpDZ4usjrg",
+            "name": "Promises (with Sam Smith)",
+            "artist": "Calvin Harris",
+            "playCount": 63,
+            "totalListeningTimeMs": 12938567,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ccdcbd450e42fc7b27a82a1f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ccdcbd450e42fc7b27a82a1f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ccdcbd450e42fc7b27a82a1f",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0yzlC42NFT5cXeHTUyEQAi",
+            "name": "Flåklypa",
+            "artist": "Various Artists",
+            "playCount": 62,
+            "totalListeningTimeMs": 23931085,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e21165c5997e3e83c04b9bd0",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e21165c5997e3e83c04b9bd0",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e21165c5997e3e83c04b9bd0",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Polo & Pan",
+            "playCount": 465,
+            "totalListeningTimeMs": 114082446,
+            "uniqueSongs": 31,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebb3a1dfb61289ad814c46d564",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174b3a1dfb61289ad814c46d564",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178b3a1dfb61289ad814c46d564",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Calvin Harris",
+            "playCount": 403,
+            "totalListeningTimeMs": 83601674,
+            "uniqueSongs": 24,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1e4bcd2bef1896648762dd6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741e4bcd2bef1896648762dd6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781e4bcd2bef1896648762dd6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Karpe",
+            "playCount": 334,
+            "totalListeningTimeMs": 152008166,
+            "uniqueSongs": 52,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd658554b9a612384267544ee",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174d658554b9a612384267544ee",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178d658554b9a612384267544ee",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Deep Sleep Hypnosis Masters",
+            "playCount": 334,
+            "totalListeningTimeMs": 72821655,
+            "uniqueSongs": 50,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebc52109444e70881b82efbc35",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174c52109444e70881b82efbc35",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178c52109444e70881b82efbc35",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Various Artists",
+            "playCount": 321,
+            "totalListeningTimeMs": 130860357,
+            "uniqueSongs": 7,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6b134287e3095d2c84b7932a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746b134287e3095d2c84b7932a",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786b134287e3095d2c84b7932a",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Caravelle",
+            "artist": "Polo & Pan",
+            "playCount": 443,
+            "totalListeningTimeMs": 107507312,
+            "uniqueSongs": 28,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734ee9468123f381eb8d5e05bb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024ee9468123f381eb8d5e05bb",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514ee9468123f381eb8d5e05bb",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "50 Insomnia Cure Sounds: Music for Trouble Sleeping, Healing Delta Waves, Deep Sleep Therapy, Meditation Relaxation",
+            "artist": "Deep Sleep Hypnosis Masters",
+            "playCount": 334,
+            "totalListeningTimeMs": 72821655,
+            "uniqueSongs": 50,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273421930d815998efa6f4e13dc",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02421930d815998efa6f4e13dc",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851421930d815998efa6f4e13dc",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Flåklypa Grand Prix",
+            "artist": "Various Artists",
+            "playCount": 321,
+            "totalListeningTimeMs": 130860357,
+            "uniqueSongs": 7,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e21165c5997e3e83c04b9bd0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e21165c5997e3e83c04b9bd0",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e21165c5997e3e83c04b9bd0",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Funk Wav Bounces Vol.1",
+            "artist": "Calvin Harris",
+            "playCount": 242,
+            "totalListeningTimeMs": 51247142,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Mio, min Mio",
+            "artist": "Astrid Lindgren",
+            "playCount": 148,
+            "totalListeningTimeMs": 38947787,
+            "uniqueSongs": 48,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735ece54c1cbaa1fef2b2c1c42",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025ece54c1cbaa1fef2b2c1c42",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515ece54c1cbaa1fef2b2c1c42",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2020",
+        "topSongs": [
+          {
+            "songId": "6NqbN00vLmWfrQSx2wjD4z",
+            "name": "Hurry",
+            "artist": "Teyana Taylor",
+            "playCount": 63,
+            "totalListeningTimeMs": 10762135,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273abca6b34e370af95f3b926bd",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02abca6b34e370af95f3b926bd",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851abca6b34e370af95f3b926bd",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0Gpq0lllEPZf98gVo9C4uS",
+            "name": "Heavy, California",
+            "artist": "Jungle",
+            "playCount": 52,
+            "totalListeningTimeMs": 9383141,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ed7161514b659102e49bb589",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ed7161514b659102e49bb589",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ed7161514b659102e49bb589",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1seF5FpRtNXsmNxlEDDxuN",
+            "name": "Lola's Theme",
+            "artist": "The Shapeshifters",
+            "playCount": 51,
+            "totalListeningTimeMs": 15525098,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2739e451bcbb633976f94a1691d",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e029e451bcbb633976f94a1691d",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048519e451bcbb633976f94a1691d",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4jAIqgrPjKLTY9Gbez25Qb",
+            "name": "Lights Up",
+            "artist": "Harry Styles",
+            "playCount": 47,
+            "totalListeningTimeMs": 7817157,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27325180571abce9472f61bd722",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0225180571abce9472f61bd722",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485125180571abce9472f61bd722",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "37kEJJkPM9auTyvVhJX8Y4",
+            "name": "Tenker på deg",
+            "artist": "Gabrielle",
+            "playCount": 46,
+            "totalListeningTimeMs": 11888378,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273a947c256fa3d0925f5d712f6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02a947c256fa3d0925f5d712f6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851a947c256fa3d0925f5d712f6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Astrid Lindgren",
+            "playCount": 536,
+            "totalListeningTimeMs": 149707780,
+            "uniqueSongs": 74,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb118b1b41e6040555fe3a0f6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174118b1b41e6040555fe3a0f6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178118b1b41e6040555fe3a0f6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Emilie Nicolas",
+            "playCount": 462,
+            "totalListeningTimeMs": 84357145,
+            "uniqueSongs": 38,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb223747f61f63f186f35e53f5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174223747f61f63f186f35e53f5",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178223747f61f63f186f35e53f5",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Coldplay",
+            "playCount": 197,
+            "totalListeningTimeMs": 39391406,
+            "uniqueSongs": 46,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1ba8fc5f5c73e7e9313cc6eb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781ba8fc5f5c73e7e9313cc6eb",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Jungle",
+            "playCount": 172,
+            "totalListeningTimeMs": 33083358,
+            "uniqueSongs": 22,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Karpe",
+            "playCount": 146,
+            "totalListeningTimeMs": 38549907,
+            "uniqueSongs": 34,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd658554b9a612384267544ee",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174d658554b9a612384267544ee",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178d658554b9a612384267544ee",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Ronja Rövardotter",
+            "artist": "Astrid Lindgren",
+            "playCount": 515,
+            "totalListeningTimeMs": 146639911,
+            "uniqueSongs": 57,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27393c05ca2833203568ced2d5a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0293c05ca2833203568ced2d5a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485193c05ca2833203568ced2d5a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Tranquille Emile",
+            "artist": "Emilie Nicolas",
+            "playCount": 201,
+            "totalListeningTimeMs": 35929960,
+            "uniqueSongs": 11,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273cde1249adf25791fe48f4461",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02cde1249adf25791fe48f4461",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851cde1249adf25791fe48f4461",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Let Her Breathe",
+            "artist": "Emilie Nicolas",
+            "playCount": 151,
+            "totalListeningTimeMs": 26784473,
+            "uniqueSongs": 11,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273452e85fefc4fe819e63d4e6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02452e85fefc4fe819e63d4e6b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851452e85fefc4fe819e63d4e6b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 140,
+            "totalListeningTimeMs": 27086120,
+            "uniqueSongs": 14,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Mylo Xyloto",
+            "artist": "Coldplay",
+            "playCount": 120,
+            "totalListeningTimeMs": 22308805,
+            "uniqueSongs": 14,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273de0cd11d7b31c3bd1fd5983d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02de0cd11d7b31c3bd1fd5983d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851de0cd11d7b31c3bd1fd5983d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2021",
+        "topSongs": [
+          {
+            "songId": "0z4zZNViQ01puQOlAFGGUy",
+            "name": "Dollar",
+            "artist": "Electric Guest",
+            "playCount": 116,
+            "totalListeningTimeMs": 22845974,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27396bf76f872054e6e1195402e",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0296bf76f872054e6e1195402e",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485196bf76f872054e6e1195402e",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "34wcz4mpAActEc6gtqX3wz",
+            "name": "Heavy, California",
+            "artist": "Jungle",
+            "playCount": 84,
+            "totalListeningTimeMs": 14723586,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "5MjAFPcmrR1DYCgZrXCN4d",
+            "name": "Turnin' Me Up",
+            "artist": "BJ The Chicago Kid",
+            "playCount": 81,
+            "totalListeningTimeMs": 20209372,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27368548627cc4f09e4f06ee009",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0268548627cc4f09e4f06ee009",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485168548627cc4f09e4f06ee009",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "3LH6EfPCeySeuymuK2gWAO",
+            "name": "Bedroom",
+            "artist": "Litany",
+            "playCount": 78,
+            "totalListeningTimeMs": 14483160,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736b7517a142479ef7e6be12d4",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026b7517a142479ef7e6be12d4",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516b7517a142479ef7e6be12d4",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4iJyoBOLtHqaGxP12qzhQI",
+            "name": "Peaches (feat. Daniel Caesar & Giveon)",
+            "artist": "Justin Bieber",
+            "playCount": 67,
+            "totalListeningTimeMs": 12485081,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e6f407c7f3a0ec98845e4431",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Jungle",
+            "playCount": 479,
+            "totalListeningTimeMs": 93144195,
+            "uniqueSongs": 25,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Astrid Lindgren",
+            "playCount": 440,
+            "totalListeningTimeMs": 121168333,
+            "uniqueSongs": 135,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb118b1b41e6040555fe3a0f6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174118b1b41e6040555fe3a0f6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178118b1b41e6040555fe3a0f6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Calvin Harris",
+            "playCount": 208,
+            "totalListeningTimeMs": 43758910,
+            "uniqueSongs": 25,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1e4bcd2bef1896648762dd6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741e4bcd2bef1896648762dd6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781e4bcd2bef1896648762dd6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Electric Guest",
+            "playCount": 203,
+            "totalListeningTimeMs": 38158728,
+            "uniqueSongs": 15,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb27f9d4b1787f1e468991281e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517427f9d4b1787f1e468991281e",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17827f9d4b1787f1e468991281e",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Polo & Pan",
+            "playCount": 183,
+            "totalListeningTimeMs": 43662537,
+            "uniqueSongs": 21,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebb3a1dfb61289ad814c46d564",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174b3a1dfb61289ad814c46d564",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178b3a1dfb61289ad814c46d564",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 454,
+            "totalListeningTimeMs": 88461596,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Ronja Rövardotter",
+            "artist": "Astrid Lindgren",
+            "playCount": 316,
+            "totalListeningTimeMs": 86831052,
+            "uniqueSongs": 57,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27393c05ca2833203568ced2d5a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0293c05ca2833203568ced2d5a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485193c05ca2833203568ced2d5a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "KIN",
+            "artist": "Electric Guest",
+            "playCount": 164,
+            "totalListeningTimeMs": 31689216,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27396bf76f872054e6e1195402e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0296bf76f872054e6e1195402e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485196bf76f872054e6e1195402e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Funk Wav Bounces Vol.1",
+            "artist": "Calvin Harris",
+            "playCount": 151,
+            "totalListeningTimeMs": 32173293,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Justice",
+            "artist": "Justin Bieber",
+            "playCount": 130,
+            "totalListeningTimeMs": 22976472,
+            "uniqueSongs": 11,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273e6f407c7f3a0ec98845e4431",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02e6f407c7f3a0ec98845e4431",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851e6f407c7f3a0ec98845e4431",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2022",
+        "topSongs": [
+          {
+            "songId": "0d8anwJJGti8jE79Y4tXUD",
+            "name": "Know Myself",
+            "artist": "Justine Skye",
+            "playCount": 94,
+            "totalListeningTimeMs": 15692931,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27307ab9fe1dc9606f0677509a8",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0207ab9fe1dc9606f0677509a8",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485107ab9fe1dc9606f0677509a8",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "77CbBhyQwjWgF5EWT76cPY",
+            "name": "SALMALAKS",
+            "artist": "Karpe",
+            "playCount": 88,
+            "totalListeningTimeMs": 17922109,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27320ec8d9fafbf02523ded79a4",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0220ec8d9fafbf02523ded79a4",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485120ec8d9fafbf02523ded79a4",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "69uxyAqqPIsUyTO8txoP2M",
+            "name": "Adventure of a Lifetime",
+            "artist": "Coldplay",
+            "playCount": 85,
+            "totalListeningTimeMs": 21335238,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2738ff7c3580d429c8212b9a3b6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e028ff7c3580d429c8212b9a3b6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048518ff7c3580d429c8212b9a3b6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "762B4bOcXF7I2Y8UlKTyTy",
+            "name": "Chiquitita",
+            "artist": "ABBA",
+            "playCount": 78,
+            "totalListeningTimeMs": 23399253,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273aa22899360d8ba6704732dec",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02aa22899360d8ba6704732dec",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851aa22899360d8ba6704732dec",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0y60itmpH0aPKsFiGxmtnh",
+            "name": "Wait a Minute!",
+            "artist": "WILLOW",
+            "playCount": 68,
+            "totalListeningTimeMs": 12929672,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736ee651e65c3766d80e7fcab7",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026ee651e65c3766d80e7fcab7",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516ee651e65c3766d80e7fcab7",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Karpe",
+            "playCount": 399,
+            "totalListeningTimeMs": 79236275,
+            "uniqueSongs": 64,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd658554b9a612384267544ee",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174d658554b9a612384267544ee",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178d658554b9a612384267544ee",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Jungle",
+            "playCount": 241,
+            "totalListeningTimeMs": 48345085,
+            "uniqueSongs": 19,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Coldplay",
+            "playCount": 195,
+            "totalListeningTimeMs": 42765181,
+            "uniqueSongs": 41,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1ba8fc5f5c73e7e9313cc6eb",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741ba8fc5f5c73e7e9313cc6eb",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781ba8fc5f5c73e7e9313cc6eb",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Big Wild",
+            "playCount": 179,
+            "totalListeningTimeMs": 31773466,
+            "uniqueSongs": 22,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb989a743a1e2b4dc8e8db7658",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174989a743a1e2b4dc8e8db7658",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178989a743a1e2b4dc8e8db7658",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Arild Nyquist",
+            "playCount": 159,
+            "totalListeningTimeMs": 29339782,
+            "uniqueSongs": 22,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273990c615353bbb2e40ee8e37d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02990c615353bbb2e40ee8e37d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851990c615353bbb2e40ee8e37d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 233,
+            "totalListeningTimeMs": 46799723,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Omar Sheriff",
+            "artist": "Karpe",
+            "playCount": 227,
+            "totalListeningTimeMs": 44122001,
+            "uniqueSongs": 6,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27320ec8d9fafbf02523ded79a4",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0220ec8d9fafbf02523ded79a4",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485120ec8d9fafbf02523ded79a4",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "I sans og samling",
+            "artist": "Arild Nyquist",
+            "playCount": 154,
+            "totalListeningTimeMs": 28832311,
+            "uniqueSongs": 17,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273990c615353bbb2e40ee8e37d",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02990c615353bbb2e40ee8e37d",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851990c615353bbb2e40ee8e37d",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Superdream",
+            "artist": "Big Wild",
+            "playCount": 144,
+            "totalListeningTimeMs": 25892860,
+            "uniqueSongs": 12,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273da45750734ba67831abf4f76",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02da45750734ba67831abf4f76",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851da45750734ba67831abf4f76",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "PCD",
+            "artist": "The Pussycat Dolls",
+            "playCount": 127,
+            "totalListeningTimeMs": 23782775,
+            "uniqueSongs": 14,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2735d9edaa7b844f929a5b2973e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e025d9edaa7b844f929a5b2973e",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048515d9edaa7b844f929a5b2973e",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2023",
+        "topSongs": [
+          {
+            "songId": "0dAy0Cq4PwkJ3wG0uOjwj6",
+            "name": "Gåsehud",
+            "artist": "Jesper Jenset",
+            "playCount": 148,
+            "totalListeningTimeMs": 21124915,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2731f336dbc9f5112c10108e6a5",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e021f336dbc9f5112c10108e6a5",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048511f336dbc9f5112c10108e6a5",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "2WigMwGJysIh9fRnSJvpjn",
+            "name": "KU LO SA - A COLORS SHOW",
+            "artist": "Oxlade",
+            "playCount": 107,
+            "totalListeningTimeMs": 15159767,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ec7aebef1b8c1622e35babf6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ec7aebef1b8c1622e35babf6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ec7aebef1b8c1622e35babf6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "2qyhy9ndo8tTGMzXeHTisR",
+            "name": "So High",
+            "artist": "Doja Cat",
+            "playCount": 86,
+            "totalListeningTimeMs": 16451032,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273b6d713c27625220479563dd5",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02b6d713c27625220479563dd5",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851b6d713c27625220479563dd5",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "6xagjcywpcyNFghafZPQJv",
+            "name": "Banana Clip",
+            "artist": "Miguel",
+            "playCount": 83,
+            "totalListeningTimeMs": 16710747,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ee1ae7d44f10961722736148",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ee1ae7d44f10961722736148",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ee1ae7d44f10961722736148",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "6BTqkUxJRluSfyWXICpuVF",
+            "name": "(Åh) Tåmy, Tåmy - Rifla x Sheriff",
+            "artist": "Arif Murakami",
+            "playCount": 68,
+            "totalListeningTimeMs": 12246324,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2732f9617ee5f987447957bcfec",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e022f9617ee5f987447957bcfec",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048512f9617ee5f987447957bcfec",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Jungle",
+            "playCount": 224,
+            "totalListeningTimeMs": 41989443,
+            "uniqueSongs": 45,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Doja Cat",
+            "playCount": 199,
+            "totalListeningTimeMs": 37720471,
+            "uniqueSongs": 15,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb8a0644455ebfa7d3976f5101",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051748a0644455ebfa7d3976f5101",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1788a0644455ebfa7d3976f5101",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Karpe",
+            "playCount": 194,
+            "totalListeningTimeMs": 40162021,
+            "uniqueSongs": 30,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebd658554b9a612384267544ee",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174d658554b9a612384267544ee",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178d658554b9a612384267544ee",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Jesper Jenset",
+            "playCount": 164,
+            "totalListeningTimeMs": 23546752,
+            "uniqueSongs": 8,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eba681e7d1d269ce01b9131e0f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174a681e7d1d269ce01b9131e0f",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178a681e7d1d269ce01b9131e0f",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Rihanna",
+            "playCount": 156,
+            "totalListeningTimeMs": 27960288,
+            "uniqueSongs": 35,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebcb565a8e684e3be458d329ac",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174cb565a8e684e3be458d329ac",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178cb565a8e684e3be458d329ac",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Gåsehud",
+            "artist": "Jesper Jenset",
+            "playCount": 148,
+            "totalListeningTimeMs": 21124915,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2731f336dbc9f5112c10108e6a5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e021f336dbc9f5112c10108e6a5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048511f336dbc9f5112c10108e6a5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Omar Sheriff",
+            "artist": "Karpe",
+            "playCount": 136,
+            "totalListeningTimeMs": 28708859,
+            "uniqueSongs": 6,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27320ec8d9fafbf02523ded79a4",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0220ec8d9fafbf02523ded79a4",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485120ec8d9fafbf02523ded79a4",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "KU LO SA - A COLORS SHOW",
+            "artist": "Oxlade",
+            "playCount": 107,
+            "totalListeningTimeMs": 15159767,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ec7aebef1b8c1622e35babf6",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ec7aebef1b8c1622e35babf6",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ec7aebef1b8c1622e35babf6",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 101,
+            "totalListeningTimeMs": 20809826,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "War & Leisure",
+            "artist": "Miguel",
+            "playCount": 95,
+            "totalListeningTimeMs": 19260699,
+            "uniqueSongs": 9,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ee1ae7d44f10961722736148",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ee1ae7d44f10961722736148",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ee1ae7d44f10961722736148",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2024",
+        "topSongs": [
+          {
+            "songId": "7gaA3wERFkFkgivjwbSvkG",
+            "name": "yes, and?",
+            "artist": "Ariana Grande",
+            "playCount": 82,
+            "totalListeningTimeMs": 17416348,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736b0b6e20fdb1ee07de7e92d6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026b0b6e20fdb1ee07de7e92d6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516b0b6e20fdb1ee07de7e92d6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "2WigMwGJysIh9fRnSJvpjn",
+            "name": "KU LO SA - A COLORS SHOW",
+            "artist": "Oxlade",
+            "playCount": 78,
+            "totalListeningTimeMs": 10799791,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273ec7aebef1b8c1622e35babf6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02ec7aebef1b8c1622e35babf6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851ec7aebef1b8c1622e35babf6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4KaIJ1FWXUoAAnOts1YWjD",
+            "name": "Prayers Up (feat. Travis Scott & A-Trak)",
+            "artist": "Calvin Harris",
+            "playCount": 58,
+            "totalListeningTimeMs": 11581100,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0TjldtyoH2js24XQEu8S4M",
+            "name": "Superstar",
+            "artist": "Bianca Ingrosso",
+            "playCount": 52,
+            "totalListeningTimeMs": 9431384,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f641f6f45f666bbe996f2a74",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f641f6f45f666bbe996f2a74",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f641f6f45f666bbe996f2a74",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "2pmN85k5m9nO1rWaCDdrNE",
+            "name": "Let Love Rule",
+            "artist": "Lenny Kravitz",
+            "playCount": 50,
+            "totalListeningTimeMs": 17105676,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27339cc367cdb271ae005d61def",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0239cc367cdb271ae005d61def",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485139cc367cdb271ae005d61def",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "Jungle",
+            "playCount": 480,
+            "totalListeningTimeMs": 89416169,
+            "uniqueSongs": 45,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Ariana Grande",
+            "playCount": 254,
+            "totalListeningTimeMs": 48647521,
+            "uniqueSongs": 60,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6725802588d7dc1aba076ca5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746725802588d7dc1aba076ca5",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786725802588d7dc1aba076ca5",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Beyoncé",
+            "playCount": 247,
+            "totalListeningTimeMs": 50419879,
+            "uniqueSongs": 77,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7eaa373538359164b843f7c0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747eaa373538359164b843f7c0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787eaa373538359164b843f7c0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "C.Gambino",
+            "playCount": 223,
+            "totalListeningTimeMs": 29457211,
+            "uniqueSongs": 22,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb2ca8fb9c2fa5dd6e9a9233d0",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051742ca8fb9c2fa5dd6e9a9233d0",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1782ca8fb9c2fa5dd6e9a9233d0",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Calvin Harris",
+            "playCount": 170,
+            "totalListeningTimeMs": 34022661,
+            "uniqueSongs": 18,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb1e4bcd2bef1896648762dd6b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051741e4bcd2bef1896648762dd6b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1781e4bcd2bef1896648762dd6b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 321,
+            "totalListeningTimeMs": 61250883,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Ronja Rövardotter",
+            "artist": "Astrid Lindgren",
+            "playCount": 149,
+            "totalListeningTimeMs": 40795294,
+            "uniqueSongs": 51,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27393c05ca2833203568ced2d5a",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0293c05ca2833203568ced2d5a",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485193c05ca2833203568ced2d5a",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Funk Wav Bounces Vol.1",
+            "artist": "Calvin Harris",
+            "playCount": 148,
+            "totalListeningTimeMs": 29983870,
+            "uniqueSongs": 10,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2734d3fa5ce7ba599f4fd7803ef",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e024d3fa5ce7ba599f4fd7803ef",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048514d3fa5ce7ba599f4fd7803ef",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "In Memory Of Some Stand Up Guys",
+            "artist": "C.Gambino",
+            "playCount": 131,
+            "totalListeningTimeMs": 17115327,
+            "uniqueSongs": 12,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273026f4ebbc9d6a553a76536c5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02026f4ebbc9d6a553a76536c5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851026f4ebbc9d6a553a76536c5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "B'Day Deluxe Edition",
+            "artist": "Beyoncé",
+            "playCount": 115,
+            "totalListeningTimeMs": 24350825,
+            "uniqueSongs": 18,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273026e88f624dfb96f2e1ef10b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02026e88f624dfb96f2e1ef10b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851026e88f624dfb96f2e1ef10b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2025",
+        "topSongs": [
+          {
+            "songId": "1UHS8Rf6h5Ar3CDWRd3wjF",
+            "name": "Bed Chem",
+            "artist": "Sabrina Carpenter",
+            "playCount": 64,
+            "totalListeningTimeMs": 10994379,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fd8d7a8d96871e791cb1f626",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fd8d7a8d96871e791cb1f626",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fd8d7a8d96871e791cb1f626",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "7JgNAnCjJvL8hBR1kmCOFF",
+            "name": "Worth It.",
+            "artist": "RAYE",
+            "playCount": 51,
+            "totalListeningTimeMs": 12064745,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1MrlEIrhYErisWifaabP7h",
+            "name": "Close But Not Quite",
+            "artist": "Everything Is Recorded",
+            "playCount": 49,
+            "totalListeningTimeMs": 9554748,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2731e6e1f943ad930f60565e1f6",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e021e6e1f943ad930f60565e1f6",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048511e6e1f943ad930f60565e1f6",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0iO2iCAjtX0t5duvczNQt6",
+            "name": "Oscar Winning Tears.",
+            "artist": "RAYE",
+            "playCount": 48,
+            "totalListeningTimeMs": 8762312,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4OGeWgHHgWmnOllev6Q9hp",
+            "name": "Bad Chick",
+            "artist": "SoMo",
+            "playCount": 47,
+            "totalListeningTimeMs": 8005816,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fc992a3c4ac60b159f882a0f",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fc992a3c4ac60b159f882a0f",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fc992a3c4ac60b159f882a0f",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "LEISURE",
+            "playCount": 266,
+            "totalListeningTimeMs": 56577724,
+            "uniqueSongs": 44,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebf6589d1d011c7568f9d8c113",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174f6589d1d011c7568f9d8c113",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178f6589d1d011c7568f9d8c113",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Jungle",
+            "playCount": 235,
+            "totalListeningTimeMs": 43420017,
+            "uniqueSongs": 32,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb21f6e9ccd576bb2ef541a3fe",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517421f6e9ccd576bb2ef541a3fe",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17821f6e9ccd576bb2ef541a3fe",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "RAYE",
+            "playCount": 156,
+            "totalListeningTimeMs": 31461600,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebde2e2ac1d53fdf9518354798",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174de2e2ac1d53fdf9518354798",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178de2e2ac1d53fdf9518354798",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Charlie Puth",
+            "playCount": 155,
+            "totalListeningTimeMs": 27767070,
+            "uniqueSongs": 19,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6721f541fb123145d4cb3ace",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746721f541fb123145d4cb3ace",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786721f541fb123145d4cb3ace",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Matt Corby",
+            "playCount": 149,
+            "totalListeningTimeMs": 31283213,
+            "uniqueSongs": 25,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb06745aff591555fa909ea178",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000517406745aff591555fa909ea178",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f17806745aff591555fa909ea178",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "Voicenotes",
+            "artist": "Charlie Puth",
+            "playCount": 148,
+            "totalListeningTimeMs": 26745076,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273897f73256b9128a9d70eaf66",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02897f73256b9128a9d70eaf66",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851897f73256b9128a9d70eaf66",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "For Ever",
+            "artist": "Jungle",
+            "playCount": 131,
+            "totalListeningTimeMs": 25193042,
+            "uniqueSongs": 13,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273010b80d6675af7c9c60c4d98",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02010b80d6675af7c9c60c4d98",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851010b80d6675af7c9c60c4d98",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "My 21st Century Blues",
+            "artist": "RAYE",
+            "playCount": 118,
+            "totalListeningTimeMs": 24652557,
+            "uniqueSongs": 5,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Short n' Sweet",
+            "artist": "Sabrina Carpenter",
+            "playCount": 93,
+            "totalListeningTimeMs": 16137016,
+            "uniqueSongs": 9,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273fd8d7a8d96871e791cb1f626",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02fd8d7a8d96871e791cb1f626",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851fd8d7a8d96871e791cb1f626",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "Play",
+            "artist": "Moby",
+            "playCount": 86,
+            "totalListeningTimeMs": 16301524,
+            "uniqueSongs": 18,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273f675ddc7a8c113362f983f8b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02f675ddc7a8c113362f983f8b",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851f675ddc7a8c113362f983f8b",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "year": "2026",
+        "topSongs": [
+          {
+            "songId": "6VnpKLtfNH4Dk09YSGPSyR",
+            "name": "It Ain't Over 'Til It's Over",
+            "artist": "Lenny Kravitz",
+            "playCount": 1,
+            "totalListeningTimeMs": 242640,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273bfc19627a4a3a604c0a195e5",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02bfc19627a4a3a604c0a195e5",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851bfc19627a4a3a604c0a195e5",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4rHZZAmHpZrA3iH5zx8frV",
+            "name": "Mirrors",
+            "artist": "Justin Timberlake",
+            "playCount": 1,
+            "totalListeningTimeMs": 485598,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27356d5fb0cc9cec001d8ae0c8c",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0256d5fb0cc9cec001d8ae0c8c",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485156d5fb0cc9cec001d8ae0c8c",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "4tCtwWceOPWzenK2HAIJSb",
+            "name": "Work from Home (feat. Ty Dolla $ign)",
+            "artist": "Fifth Harmony",
+            "playCount": 1,
+            "totalListeningTimeMs": 214477,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27382db43e5091301205076d6ab",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0282db43e5091301205076d6ab",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485182db43e5091301205076d6ab",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "1oHClQEgDmmbcEx12Kc5nZ",
+            "name": "4 Minutes (feat. Justin Timberlake & Timbaland)",
+            "artist": "Madonna",
+            "playCount": 1,
+            "totalListeningTimeMs": 189693,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b2736b44fa8f5415cc4c945117be",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e026b44fa8f5415cc4c945117be",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d000048516b44fa8f5415cc4c945117be",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          },
+          {
+            "songId": "0Oqc0kKFsQ6MhFOLBNZIGX",
+            "name": "Doin' Time",
+            "artist": "Lana Del Rey",
+            "playCount": 1,
+            "totalListeningTimeMs": 202192,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273879e9318cb9f4e05ee552ac9",
+                "width": 640,
+                "height": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02879e9318cb9f4e05ee552ac9",
+                "width": 300,
+                "height": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851879e9318cb9f4e05ee552ac9",
+                "width": 64,
+                "height": 64
+              }
+            ]
+          }
+        ],
+        "topArtists": [
+          {
+            "artistName": "RAYE",
+            "playCount": 9,
+            "totalListeningTimeMs": 1909304,
+            "uniqueSongs": 9,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebde2e2ac1d53fdf9518354798",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174de2e2ac1d53fdf9518354798",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178de2e2ac1d53fdf9518354798",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Lenny Kravitz",
+            "playCount": 1,
+            "totalListeningTimeMs": 242640,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5ebe0cf058473839f1c9f49937e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616100005174e0cf058473839f1c9f49937e",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f178e0cf058473839f1c9f49937e",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Justin Timberlake",
+            "playCount": 1,
+            "totalListeningTimeMs": 485598,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb7a5cfe2597665a3d160e805e",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051747a5cfe2597665a3d160e805e",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1787a5cfe2597665a3d160e805e",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Fifth Harmony",
+            "playCount": 1,
+            "totalListeningTimeMs": 214477,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb5acb3cb0a8b87d3952738b97",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051745acb3cb0a8b87d3952738b97",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1785acb3cb0a8b87d3952738b97",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          },
+          {
+            "artistName": "Madonna",
+            "playCount": 1,
+            "totalListeningTimeMs": 189693,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab6761610000e5eb6ccc1215f5b205aa6b34b48b",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab676161000051746ccc1215f5b205aa6b34b48b",
+                "height": 320,
+                "width": 320
+              },
+              {
+                "url": "https://i.scdn.co/image/ab6761610000f1786ccc1215f5b205aa6b34b48b",
+                "height": 160,
+                "width": 160
+              }
+            ]
+          }
+        ],
+        "topAlbums": [
+          {
+            "albumName": "My 21st Century Blues",
+            "artist": "RAYE",
+            "playCount": 4,
+            "totalListeningTimeMs": 902132,
+            "uniqueSongs": 4,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27394e5237ce925531dbb38e75f",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0294e5237ce925531dbb38e75f",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485194e5237ce925531dbb38e75f",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "WHERE IS MY HUSBAND!",
+            "artist": "RAYE",
+            "playCount": 2,
+            "totalListeningTimeMs": 352253,
+            "uniqueSongs": 2,
+            "images": []
+          },
+          {
+            "albumName": "Mama Said",
+            "artist": "Lenny Kravitz",
+            "playCount": 1,
+            "totalListeningTimeMs": 242640,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b273bfc19627a4a3a604c0a195e5",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e02bfc19627a4a3a604c0a195e5",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00004851bfc19627a4a3a604c0a195e5",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "The 20/20 Experience (Deluxe Version)",
+            "artist": "Justin Timberlake",
+            "playCount": 1,
+            "totalListeningTimeMs": 485598,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27356d5fb0cc9cec001d8ae0c8c",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0256d5fb0cc9cec001d8ae0c8c",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485156d5fb0cc9cec001d8ae0c8c",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          },
+          {
+            "albumName": "7/27",
+            "artist": "Fifth Harmony",
+            "playCount": 1,
+            "totalListeningTimeMs": 214477,
+            "uniqueSongs": 1,
+            "images": [
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000b27382db43e5091301205076d6ab",
+                "height": 640,
+                "width": 640
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d00001e0282db43e5091301205076d6ab",
+                "height": 300,
+                "width": 300
+              },
+              {
+                "url": "https://i.scdn.co/image/ab67616d0000485182db43e5091301205076d6ab",
+                "height": 64,
+                "width": 64
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "totalListeningHours": 8779.29,
+    "totalListeningDays": 365.8,
+    "totalListeningEvents": 160103,
+    "hourlyListeningDistribution": [
+      {
+        "hour": 0,
+        "totalListeningTimeMs": 639355329,
+        "totalListeningHours": 177.6,
+        "playCount": 3066
+      },
+      {
+        "hour": 1,
+        "totalListeningTimeMs": 451733546,
+        "totalListeningHours": 125.48,
+        "playCount": 2009
+      },
+      {
+        "hour": 2,
+        "totalListeningTimeMs": 360668670,
+        "totalListeningHours": 100.19,
+        "playCount": 1501
+      },
+      {
+        "hour": 3,
+        "totalListeningTimeMs": 259773935,
+        "totalListeningHours": 72.16,
+        "playCount": 1058
+      },
+      {
+        "hour": 4,
+        "totalListeningTimeMs": 353743631,
+        "totalListeningHours": 98.26,
+        "playCount": 1635
+      },
+      {
+        "hour": 5,
+        "totalListeningTimeMs": 806450085,
+        "totalListeningHours": 224.01,
+        "playCount": 3912
+      },
+      {
+        "hour": 6,
+        "totalListeningTimeMs": 1222563464,
+        "totalListeningHours": 339.6,
+        "playCount": 6135
+      },
+      {
+        "hour": 7,
+        "totalListeningTimeMs": 1205016483,
+        "totalListeningHours": 334.73,
+        "playCount": 6299
+      },
+      {
+        "hour": 8,
+        "totalListeningTimeMs": 1167744334,
+        "totalListeningHours": 324.37,
+        "playCount": 5803
+      },
+      {
+        "hour": 9,
+        "totalListeningTimeMs": 1197539176,
+        "totalListeningHours": 332.65,
+        "playCount": 6036
+      },
+      {
+        "hour": 10,
+        "totalListeningTimeMs": 1349127596,
+        "totalListeningHours": 374.76,
+        "playCount": 6978
+      },
+      {
+        "hour": 11,
+        "totalListeningTimeMs": 1708089204,
+        "totalListeningHours": 474.47,
+        "playCount": 8924
+      },
+      {
+        "hour": 12,
+        "totalListeningTimeMs": 1856221361,
+        "totalListeningHours": 515.62,
+        "playCount": 9634
+      },
+      {
+        "hour": 13,
+        "totalListeningTimeMs": 2001526375,
+        "totalListeningHours": 555.98,
+        "playCount": 10550
+      },
+      {
+        "hour": 14,
+        "totalListeningTimeMs": 2238954763,
+        "totalListeningHours": 621.93,
+        "playCount": 11818
+      },
+      {
+        "hour": 15,
+        "totalListeningTimeMs": 2295013640,
+        "totalListeningHours": 637.5,
+        "playCount": 12060
+      },
+      {
+        "hour": 16,
+        "totalListeningTimeMs": 2557905741,
+        "totalListeningHours": 710.53,
+        "playCount": 11457
+      },
+      {
+        "hour": 17,
+        "totalListeningTimeMs": 2008805530,
+        "totalListeningHours": 558,
+        "playCount": 10321
+      },
+      {
+        "hour": 18,
+        "totalListeningTimeMs": 1766790973,
+        "totalListeningHours": 490.78,
+        "playCount": 9040
+      },
+      {
+        "hour": 19,
+        "totalListeningTimeMs": 1514703959,
+        "totalListeningHours": 420.75,
+        "playCount": 7899
+      },
+      {
+        "hour": 20,
+        "totalListeningTimeMs": 1448402336,
+        "totalListeningHours": 402.33,
+        "playCount": 7429
+      },
+      {
+        "hour": 21,
+        "totalListeningTimeMs": 1287106058,
+        "totalListeningHours": 357.53,
+        "playCount": 6676
+      },
+      {
+        "hour": 22,
+        "totalListeningTimeMs": 1069174419,
+        "totalListeningHours": 296.99,
+        "playCount": 5652
+      },
+      {
+        "hour": 23,
+        "totalListeningTimeMs": 839018829,
+        "totalListeningHours": 233.06,
+        "playCount": 4211
+      }
+    ]
+  }
+}
